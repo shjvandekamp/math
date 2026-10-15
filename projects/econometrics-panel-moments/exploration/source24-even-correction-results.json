@@ -1,0 +1,3133 @@
+{
+  "status": "Locally implemented exact finite-field checks of the even-correction candidate; no general theorem.",
+  "formulas": "E1-E7 dual pencil; E8 physical lambda0; E14 actual pair-coordinate incoming; E15 six-column difference; actual OY=Z and B mapping.",
+  "independent_check": "Physical polar sectors are built from the original source residues at actual old-new points and solved with separate precision-tracked Laurent arithmetic. No downloaded code is used.",
+  "limitations": "Only two finite fixtures. No all-even-m independence or transversality statement. Modular rank deficiencies are not real rank upper bounds; nonzero minors lift after denominator clearing. E16 is not tested.",
+  "elapsed_seconds": 0.833708375,
+  "maximum_rss_bytes": 22282240,
+  "cases": [
+    {
+      "m": 2,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          1,
+          11,
+          13
+        ]
+      ],
+      "old_time_factors": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "geometry": {
+        "cross_line_points": 9,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "expected_external_ranks": {
+        "O": 18,
+        "B": 14,
+        "Z_even": 7,
+        "mapped_B_OinvZ": 6,
+        "correction": 6,
+        "Gamma": 2
+      },
+      "observed_ranks": {
+        "O": 18,
+        "B": 14,
+        "Z_even": 7,
+        "mapped_B_OinvZ": 6,
+        "correction": 6,
+        "Gamma": 2
+      },
+      "external_ranks_reproduced": true,
+      "certificates": {
+        "O": {
+          "rows": 18,
+          "columns": 18,
+          "sha256": "023a1a99d10f63e60220124d24c89cd6a06ec49d1e2260aad2702539803d1c14",
+          "rank_certificate": {
+            "rank": 18,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 18,
+              "rows": [
+                1,
+                3,
+                5,
+                7,
+                9,
+                11,
+                13,
+                15,
+                17,
+                0,
+                6,
+                12,
+                2,
+                8,
+                14,
+                4,
+                10,
+                16
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+              ],
+              "determinant_mod_prime": 756279,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 756279
+          }
+        },
+        "B": {
+          "rows": 18,
+          "columns": 18,
+          "sha256": "fe769d097cd1c71828823192ce2bc125f091ff31f7614b290ad6e99abb9056c1",
+          "rank_certificate": {
+            "rank": 14,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 14,
+              "rows": [
+                0,
+                1,
+                9,
+                3,
+                4,
+                6,
+                7,
+                10,
+                11,
+                2,
+                5,
+                8,
+                12,
+                13
+              ],
+              "columns": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                10,
+                11,
+                12,
+                13,
+                14,
+                16,
+                17
+              ],
+              "determinant_mod_prime": 120677,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "M": {
+          "rows": 4,
+          "columns": 4,
+          "sha256": "b9383907da6df0695c4d70e3dab6ad32e1dc74fb0d697d5872fa408713e2ddb6",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                0,
+                1
+              ],
+              "determinant_mod_prime": 365054,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "Gamma": {
+          "rows": 2,
+          "columns": 2,
+          "sha256": "524e121c31e241e357be0c3c7493f16376c8f9401090b63a49ced730b2301600",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                0,
+                1
+              ],
+              "determinant_mod_prime": 39130,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 39130
+          }
+        },
+        "q": {
+          "rows": 6,
+          "columns": 6,
+          "sha256": "0d01370d482fb60d162f20e7e927c2f4446a0d9fc0fb3a16257f9c3f22c4d724",
+          "rank_certificate": {
+            "rank": 4,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 4,
+              "rows": [
+                1,
+                2,
+                0,
+                3
+              ],
+              "columns": [
+                1,
+                2,
+                4,
+                5
+              ],
+              "determinant_mod_prime": 655788,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "theta": {
+          "rows": 2,
+          "columns": 6,
+          "sha256": "42b212176dbc960cae7da514cec613684a467ebabecc6ec5f12a66844da57421",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                1,
+                2
+              ],
+              "determinant_mod_prime": 348917,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "ell": {
+          "rows": 2,
+          "columns": 6,
+          "sha256": "f542ebbbb0f8167545c906138532167e266b653117a63c19660704966edc2957",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                1,
+                2
+              ],
+              "determinant_mod_prime": 114589,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "kappa": {
+          "rows": 4,
+          "columns": 6,
+          "sha256": "f18fc011a5c7e1de19296c75d7a706c2fed923c76ee15fa012e40936405680fc",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                1,
+                2
+              ],
+              "determinant_mod_prime": 348917,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "lambda0": {
+          "rows": 18,
+          "columns": 18,
+          "sha256": "065d8f9ce49aba20089147c1a0189a892fc4055ba46e9b5b783ab0bdaf5648e6",
+          "rank_certificate": {
+            "rank": 12,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 12,
+              "rows": [
+                0,
+                3,
+                6,
+                1,
+                4,
+                7,
+                2,
+                5,
+                8,
+                9,
+                12,
+                15
+              ],
+              "columns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+              ],
+              "determinant_mod_prime": 945722,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "Z_even": {
+          "rows": 18,
+          "columns": 18,
+          "sha256": "2cfe0409a97039fcbd3233b220b954194ddced6e6e8886a590d59e2c3907d734",
+          "rank_certificate": {
+            "rank": 7,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 7,
+              "rows": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10,
+                12
+              ],
+              "columns": [
+                0,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 881642,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "Z_sparse": {
+          "rows": 18,
+          "columns": 18,
+          "sha256": "8322709a50e897226f1585ccec7de9aad7bdf0aae477062d84a80be605a19551",
+          "rank_certificate": {
+            "rank": 5,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 5,
+              "rows": [
+                0,
+                6,
+                12,
+                3,
+                4
+              ],
+              "columns": [
+                0,
+                3,
+                4,
+                12,
+                13
+              ],
+              "determinant_mod_prime": 253468,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "correction": {
+          "rows": 18,
+          "columns": 18,
+          "sha256": "1148efc2188608b356f4b944dfb4037d04e3a591d7711fd9745e5e32e20faa2b",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                2,
+                6,
+                4,
+                8,
+                10
+              ],
+              "columns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 165942,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "correction_basis": {
+          "rows": 18,
+          "columns": 6,
+          "sha256": "79bad63ed8b5c4818b7b4bdd0414ac8ffe5ec80ddb4e41f3d75482225eea5086",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "determinant_mod_prime": 355076,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "correction_coefficients": {
+          "rows": 6,
+          "columns": 18,
+          "sha256": "c453fd991cc353c8d7adad6a2d7f6f409d5f7b38d8d6e56f83b9ee8e35ce5da7",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                2,
+                4,
+                1,
+                3,
+                5
+              ],
+              "columns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 729914,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "actual_OinvZ": {
+          "rows": 18,
+          "columns": 18,
+          "sha256": "b6b82d3141b355964166b50c6e1dad1f6530e6e24fd5a34293c302f3f3fe7cfe",
+          "rank_certificate": {
+            "rank": 7,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 7,
+              "rows": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "columns": [
+                0,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 46878,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "mapped_B_OinvZ": {
+          "rows": 18,
+          "columns": 18,
+          "sha256": "0c22ec2b24f0dd71decc35219034bd1dc291181f84c218f8d8ce5ca8beed0864",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                1,
+                0,
+                3,
+                4,
+                6,
+                9
+              ],
+              "columns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 251102,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        }
+      },
+      "actual_old_source_solve": {
+        "invertible": true,
+        "size": 18,
+        "determinant_mod_prime": 756279,
+        "pivot_rows": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          0,
+          6,
+          12,
+          2,
+          8,
+          14,
+          4,
+          10,
+          16
+        ],
+        "old_source_equation_verified": true,
+        "old_source_matrix_sha256": "023a1a99d10f63e60220124d24c89cd6a06ec49d1e2260aad2702539803d1c14"
+      },
+      "pencil_row_column_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "incoming_labels": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ]
+      ],
+      "shared_lambda_labels": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ]
+      ],
+      "right_kernel": [
+        [
+          983334,
+          291668
+        ],
+        [
+          694444,
+          13889
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "left_kernel": [
+        [
+          541674,
+          568185,
+          1,
+          0
+        ],
+        [
+          489993,
+          100000,
+          0,
+          1
+        ]
+      ],
+      "Gamma": [
+        [
+          967356,
+          460526
+        ],
+        [
+          93572,
+          956224
+        ]
+      ],
+      "Gamma_inverse": [
+        [
+          118655,
+          141108
+        ],
+        [
+          948991,
+          161487
+        ]
+      ],
+      "Gamma_inverse_certificate": {
+        "size": 2,
+        "determinant_mod_prime": 39130,
+        "pivot_rows_in_original_order": [
+          0,
+          1
+        ],
+        "pivot_columns": [
+          0,
+          1
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "6681ddd9e5a0171323fe0d74af726a1108f1adc064c4c0f0add2dd923bffa2db"
+      },
+      "right_kernel_free_columns": [
+        2,
+        3
+      ],
+      "left_kernel_free_columns": [
+        2,
+        3
+      ],
+      "H4_constants": [
+        {
+          "t": 2,
+          "A": 0,
+          "first_old_block": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 2,
+          "A": 1,
+          "first_old_block": 3,
+          "c_tA": 312501
+        },
+        {
+          "t": 2,
+          "A": 2,
+          "first_old_block": 3,
+          "c_tA": 325001
+        },
+        {
+          "t": 3,
+          "A": 0,
+          "first_old_block": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 3,
+          "A": 1,
+          "first_old_block": 2,
+          "c_tA": 677780
+        },
+        {
+          "t": 3,
+          "A": 2,
+          "first_old_block": 2,
+          "c_tA": 129630
+        }
+      ],
+      "theta": [
+        [
+          0,
+          186547,
+          321707,
+          0,
+          389261,
+          994354
+        ],
+        [
+          0,
+          647782,
+          539253,
+          0,
+          894604,
+          496459
+        ]
+      ],
+      "ell": [
+        [
+          0,
+          824910,
+          927000,
+          0,
+          980080,
+          110261
+        ],
+        [
+          0,
+          774982,
+          234406,
+          0,
+          830403,
+          69344
+        ]
+      ],
+      "kappa": [
+        [
+          0,
+          170952,
+          854264,
+          0,
+          4549,
+          932111
+        ],
+        [
+          0,
+          73437,
+          488137,
+          0,
+          272608,
+          395979
+        ],
+        [
+          0,
+          186547,
+          321707,
+          0,
+          389261,
+          994354
+        ],
+        [
+          0,
+          647782,
+          539253,
+          0,
+          894604,
+          496459
+        ]
+      ],
+      "identities_verified": {
+        "E4_constant_block_form": true,
+        "E5_constant_residue_entries": 36,
+        "binary_right_and_left_kernel_equations": true,
+        "q0_equals_D_cvec": true,
+        "M_kappa_zero": true,
+        "D_ell_plus_E_kappa_equals_q0": true,
+        "projected_first_order_equation": true,
+        "physical_constant_for_A0_is_zero": true,
+        "E15_exact_six_column_correction": true,
+        "actual_O_Y_equals_Z": true
+      },
+      "core_seconds": 0.007980416000000004,
+      "independent_physical_lambda": {
+        "equal_entrywise": true,
+        "mismatched_entries": 0,
+        "first_mismatch": null
+      },
+      "physical_lambda0": {
+        "rows": 18,
+        "columns": 18,
+        "sha256": "065d8f9ce49aba20089147c1a0189a892fc4055ba46e9b5b783ab0bdaf5648e6",
+        "rank_certificate": {
+          "rank": 12,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 12,
+            "rows": [
+              0,
+              3,
+              6,
+              1,
+              4,
+              7,
+              2,
+              5,
+              8,
+              9,
+              12,
+              15
+            ],
+            "columns": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "determinant_mod_prime": 945722,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "physical_sectors": [
+        {
+          "new_line_state": 0,
+          "polar_inverse": {
+            "leading_rank": 4,
+            "leading_nullity": 2,
+            "normalized_constant_determinant_mod_prime": 450423,
+            "normalized_matrix_minimum_precision": 5,
+            "inverse_minimum_precision": 5
+          },
+          "physical_lambda_minimum_precision": 5,
+          "original_polar_equation_verified_through_known_cutoff": true
+        },
+        {
+          "new_line_state": 1,
+          "polar_inverse": {
+            "leading_rank": 4,
+            "leading_nullity": 2,
+            "normalized_constant_determinant_mod_prime": 918473,
+            "normalized_matrix_minimum_precision": 5,
+            "inverse_minimum_precision": 5
+          },
+          "physical_lambda_minimum_precision": 5,
+          "original_polar_equation_verified_through_known_cutoff": true
+        },
+        {
+          "new_line_state": 2,
+          "polar_inverse": {
+            "leading_rank": 4,
+            "leading_nullity": 2,
+            "normalized_constant_determinant_mod_prime": 267312,
+            "normalized_matrix_minimum_precision": 5,
+            "inverse_minimum_precision": 5
+          },
+          "physical_lambda_minimum_precision": 5,
+          "original_polar_equation_verified_through_known_cutoff": true
+        }
+      ],
+      "physical_check_seconds": 0.06560274999999999,
+      "independent_check_scope": "Original source polar residues at full old-new intersections, separate Laurent solve and physical normalization; all lambda0 entries compared. E14 Z is not independently reconstructed by a full regular Laurent solve.",
+      "elapsed_seconds": 0.07366870799999999
+    },
+    {
+      "m": 4,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          1,
+          11,
+          13
+        ]
+      ],
+      "old_time_factors": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          13,
+          43
+        ]
+      ],
+      "geometry": {
+        "cross_line_points": 54,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "expected_external_ranks": {
+        "O": 108,
+        "B": 36,
+        "Z_even": 36,
+        "mapped_B_OinvZ": 36,
+        "correction": 6,
+        "Gamma": 2
+      },
+      "observed_ranks": {
+        "O": 108,
+        "B": 36,
+        "Z_even": 36,
+        "mapped_B_OinvZ": 36,
+        "correction": 6,
+        "Gamma": 2
+      },
+      "external_ranks_reproduced": true,
+      "certificates": {
+        "O": {
+          "rows": 108,
+          "columns": 108,
+          "sha256": "118323a2a42eb4c6ae0e482e0b8ccfcdd838069b4190e699b64aca94e7815dd0",
+          "rank_certificate": {
+            "rank": 108,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 108,
+              "rows": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10,
+                12,
+                14,
+                16,
+                5,
+                3,
+                1,
+                9,
+                7,
+                11,
+                15,
+                13,
+                17,
+                18,
+                19,
+                20,
+                24,
+                25,
+                26,
+                30,
+                31,
+                32,
+                21,
+                28,
+                33,
+                22,
+                27,
+                34,
+                23,
+                29,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89,
+                90,
+                91,
+                92,
+                93,
+                94,
+                95,
+                96,
+                97,
+                98,
+                99,
+                100,
+                101,
+                102,
+                103,
+                104,
+                105,
+                106,
+                107
+              ],
+              "determinant_mod_prime": 871860,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 871860
+          }
+        },
+        "B": {
+          "rows": 36,
+          "columns": 108,
+          "sha256": "f23cfb6d465bc46c8c374de21f108f0d6b2a1a2471135ca4d60c72b4c651a75c",
+          "rank_certificate": {
+            "rank": 36,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 36,
+              "rows": [
+                0,
+                1,
+                9,
+                3,
+                4,
+                6,
+                7,
+                18,
+                12,
+                15,
+                21,
+                24,
+                2,
+                27,
+                14,
+                16,
+                8,
+                5,
+                10,
+                19,
+                28,
+                17,
+                30,
+                33,
+                11,
+                25,
+                13,
+                22,
+                31,
+                20,
+                23,
+                26,
+                34,
+                29,
+                32,
+                35
+              ],
+              "columns": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                7,
+                8,
+                12,
+                13,
+                14,
+                16,
+                17,
+                19,
+                21,
+                22,
+                23,
+                25,
+                26,
+                28,
+                31,
+                32,
+                34,
+                35,
+                40,
+                46,
+                49,
+                50,
+                52,
+                53,
+                55,
+                58,
+                61,
+                73,
+                82,
+                85,
+                88
+              ],
+              "determinant_mod_prime": 319187,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "M": {
+          "rows": 8,
+          "columns": 8,
+          "sha256": "20a416739867ce766cb85a977c47c20a97dd252241ca2d03e1d5a683f6a88970",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                1,
+                4,
+                5,
+                2,
+                3
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "determinant_mod_prime": 57926,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "Gamma": {
+          "rows": 2,
+          "columns": 2,
+          "sha256": "078ea9067e21782cb220ed3b0e0dccd909659ed6a7f03b28fb338232433822e7",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                0,
+                1
+              ],
+              "determinant_mod_prime": 398103,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 398103
+          }
+        },
+        "q": {
+          "rows": 12,
+          "columns": 12,
+          "sha256": "41ed7257f7174c5bf0f21c14577468f4f2e598b01110b0e2e220e5e1fa64817e",
+          "rank_certificate": {
+            "rank": 5,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 5,
+              "rows": [
+                1,
+                4,
+                0,
+                5,
+                6
+              ],
+              "columns": [
+                1,
+                2,
+                4,
+                5,
+                7
+              ],
+              "determinant_mod_prime": 370811,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "theta": {
+          "rows": 2,
+          "columns": 12,
+          "sha256": "ff4b7d85e42fe9f5e53a8966e7c99d7dc25ae12edad1a7ce265caea3f59aee0d",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                1,
+                2
+              ],
+              "determinant_mod_prime": 660550,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "ell": {
+          "rows": 4,
+          "columns": 12,
+          "sha256": "8ea41f4fe248d53a21156d7fc5b118b7cb08debc1664a36d295cb2af6b3d5101",
+          "rank_certificate": {
+            "rank": 4,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 4,
+              "rows": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "columns": [
+                1,
+                2,
+                4,
+                5
+              ],
+              "determinant_mod_prime": 54470,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "kappa": {
+          "rows": 8,
+          "columns": 12,
+          "sha256": "dffa413f190437e8cb0f07cdb4de453972bb193ce2d2144fd8b8e5452b93ff91",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                1,
+                2
+              ],
+              "determinant_mod_prime": 55625,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "lambda0": {
+          "rows": 36,
+          "columns": 36,
+          "sha256": "0dff70fc13b5ff29f95ad456750a59b4853a0a83a1011455bb6101e3255590d8",
+          "rank_certificate": {
+            "rank": 12,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 12,
+              "rows": [
+                0,
+                3,
+                6,
+                1,
+                4,
+                7,
+                2,
+                5,
+                8,
+                9,
+                12,
+                15
+              ],
+              "columns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+              ],
+              "determinant_mod_prime": 844041,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "Z_even": {
+          "rows": 108,
+          "columns": 36,
+          "sha256": "4c275a81e057088fe57b4f1b64cce990ba3baf971e945f8638d26067b0da9aca",
+          "rank_certificate": {
+            "rank": 36,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 36,
+              "rows": [
+                0,
+                18,
+                54,
+                3,
+                4,
+                6,
+                8,
+                10,
+                12,
+                20,
+                22,
+                56,
+                14,
+                16,
+                24,
+                26,
+                28,
+                30,
+                32,
+                34,
+                58,
+                36,
+                38,
+                60,
+                40,
+                62,
+                64,
+                66,
+                68,
+                70,
+                72,
+                74,
+                76,
+                78,
+                80,
+                82
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "determinant_mod_prime": 505346,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "Z_sparse": {
+          "rows": 108,
+          "columns": 36,
+          "sha256": "aadee0e45575488543382a512732a423db96e68cd7eccd807a9eb1e5db904d39",
+          "rank_certificate": {
+            "rank": 36,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 36,
+              "rows": [
+                0,
+                18,
+                54,
+                6,
+                12,
+                20,
+                22,
+                24,
+                26,
+                28,
+                30,
+                56,
+                4,
+                3,
+                60,
+                36,
+                38,
+                62,
+                40,
+                58,
+                64,
+                66,
+                68,
+                70,
+                72,
+                74,
+                76,
+                78,
+                80,
+                82,
+                84,
+                86,
+                88,
+                90,
+                92,
+                94
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "determinant_mod_prime": 584508,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "correction": {
+          "rows": 108,
+          "columns": 36,
+          "sha256": "5e65584f02896fa8f3030de4cb03a6b83cd9105083c24984c7bbb4adec5f85b6",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                2,
+                6,
+                4,
+                8,
+                10
+              ],
+              "columns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 771230,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "correction_basis": {
+          "rows": 108,
+          "columns": 6,
+          "sha256": "08c2e03b684349671b05ae2e2f11feb0acc2a40f3674c78431fbdcc858fca0ae",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                2,
+                4,
+                6,
+                8,
+                10
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "determinant_mod_prime": 296016,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "correction_coefficients": {
+          "rows": 6,
+          "columns": 36,
+          "sha256": "ed44b00ddcdd453bbb1ca21a2ef51633b8292fa3577e199d083ce6c72feab5a7",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                2,
+                4,
+                1,
+                3,
+                5
+              ],
+              "columns": [
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 654530,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "actual_OinvZ": {
+          "rows": 108,
+          "columns": 36,
+          "sha256": "9a39c92d0ec452a0cfb834e85d20469b3059d892979537ef566c79f8d15cecd3",
+          "rank_certificate": {
+            "rank": 36,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 36,
+              "rows": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "determinant_mod_prime": 913875,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "mapped_B_OinvZ": {
+          "rows": 36,
+          "columns": 36,
+          "sha256": "fbc444f2fff2ba6439c55e0304b616f1d104340ff6cf002c80157e0edd52e4d4",
+          "rank_certificate": {
+            "rank": 36,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 36,
+              "rows": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "determinant_mod_prime": 242976,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 242976
+          }
+        }
+      },
+      "actual_old_source_solve": {
+        "invertible": true,
+        "size": 108,
+        "determinant_mod_prime": 871860,
+        "pivot_rows": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          5,
+          3,
+          1,
+          9,
+          7,
+          11,
+          15,
+          13,
+          17,
+          18,
+          19,
+          20,
+          24,
+          25,
+          26,
+          30,
+          31,
+          32,
+          21,
+          28,
+          33,
+          22,
+          27,
+          34,
+          23,
+          29,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107
+        ],
+        "old_source_equation_verified": true,
+        "old_source_matrix_sha256": "118323a2a42eb4c6ae0e482e0b8ccfcdd838069b4190e699b64aca94e7815dd0"
+      },
+      "pencil_row_column_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "incoming_labels": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          2
+        ],
+        [
+          5,
+          2,
+          0
+        ],
+        [
+          5,
+          2,
+          1
+        ],
+        [
+          5,
+          2,
+          2
+        ]
+      ],
+      "shared_lambda_labels": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          2
+        ],
+        [
+          5,
+          2,
+          0
+        ],
+        [
+          5,
+          2,
+          1
+        ],
+        [
+          5,
+          2,
+          2
+        ]
+      ],
+      "right_kernel": [
+        [
+          892586,
+          899683
+        ],
+        [
+          333341,
+          508297
+        ],
+        [
+          564785,
+          0
+        ],
+        [
+          0,
+          180995
+        ],
+        [
+          883722,
+          0
+        ],
+        [
+          0,
+          538461
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "left_kernel": [
+        [
+          325045,
+          432483,
+          805410,
+          847751,
+          843138,
+          649337,
+          1,
+          0
+        ],
+        [
+          480045,
+          224669,
+          804129,
+          492849,
+          165013,
+          273212,
+          0,
+          1
+        ]
+      ],
+      "Gamma": [
+        [
+          181148,
+          989126
+        ],
+        [
+          795715,
+          416950
+        ]
+      ],
+      "Gamma_inverse": [
+        [
+          271723,
+          276889
+        ],
+        [
+          448740,
+          618071
+        ]
+      ],
+      "Gamma_inverse_certificate": {
+        "size": 2,
+        "determinant_mod_prime": 398103,
+        "pivot_rows_in_original_order": [
+          0,
+          1
+        ],
+        "pivot_columns": [
+          0,
+          1
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "f99f06299b4236c2c5927ed1d7ca30d7f90c067b6e5c79df983e884f0a218c79"
+      },
+      "right_kernel_free_columns": [
+        6,
+        7
+      ],
+      "left_kernel_free_columns": [
+        6,
+        7
+      ],
+      "H4_constants": [
+        {
+          "t": 2,
+          "A": 0,
+          "first_old_block": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 2,
+          "A": 1,
+          "first_old_block": 3,
+          "c_tA": 312501
+        },
+        {
+          "t": 2,
+          "A": 2,
+          "first_old_block": 3,
+          "c_tA": 325001
+        },
+        {
+          "t": 3,
+          "A": 0,
+          "first_old_block": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 3,
+          "A": 1,
+          "first_old_block": 2,
+          "c_tA": 677780
+        },
+        {
+          "t": 3,
+          "A": 2,
+          "first_old_block": 2,
+          "c_tA": 129630
+        },
+        {
+          "t": 4,
+          "A": 0,
+          "first_old_block": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 4,
+          "A": 1,
+          "first_old_block": 2,
+          "c_tA": 858546
+        },
+        {
+          "t": 4,
+          "A": 2,
+          "first_old_block": 2,
+          "c_tA": 800656
+        },
+        {
+          "t": 5,
+          "A": 0,
+          "first_old_block": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 5,
+          "A": 1,
+          "first_old_block": 2,
+          "c_tA": 996127
+        },
+        {
+          "t": 5,
+          "A": 2,
+          "first_old_block": 2,
+          "c_tA": 431824
+        }
+      ],
+      "theta": [
+        [
+          0,
+          972754,
+          234630,
+          0,
+          311928,
+          774115,
+          0,
+          797628,
+          188906,
+          0,
+          175806,
+          947875
+        ],
+        [
+          0,
+          955898,
+          396297,
+          0,
+          767410,
+          683502,
+          0,
+          990417,
+          435787,
+          0,
+          833422,
+          850041
+        ]
+      ],
+      "ell": [
+        [
+          0,
+          770245,
+          478854,
+          0,
+          270629,
+          161215,
+          0,
+          679972,
+          957050,
+          0,
+          320875,
+          977576
+        ],
+        [
+          0,
+          771567,
+          434495,
+          0,
+          183533,
+          995492,
+          0,
+          112804,
+          569497,
+          0,
+          230644,
+          998962
+        ],
+        [
+          0,
+          105032,
+          557354,
+          0,
+          225794,
+          378440,
+          0,
+          66410,
+          19331,
+          0,
+          49511,
+          10409
+        ],
+        [
+          0,
+          508796,
+          892148,
+          0,
+          748040,
+          594521,
+          0,
+          572954,
+          826225,
+          0,
+          366052,
+          598737
+        ]
+      ],
+      "kappa": [
+        [
+          0,
+          597380,
+          429130,
+          0,
+          390303,
+          423571,
+          0,
+          114795,
+          324388,
+          0,
+          859340,
+          559287
+        ],
+        [
+          0,
+          446412,
+          536098,
+          0,
+          110071,
+          467917,
+          0,
+          797082,
+          486251,
+          0,
+          803499,
+          646444
+        ],
+        [
+          0,
+          219705,
+          107005,
+          0,
+          726967,
+          228654,
+          0,
+          978522,
+          955140,
+          0,
+          293834,
+          975846
+        ],
+        [
+          0,
+          239474,
+          560334,
+          0,
+          956262,
+          73360,
+          0,
+          987138,
+          31440,
+          0,
+          762358,
+          709239
+        ],
+        [
+          0,
+          531465,
+          70819,
+          0,
+          809048,
+          403730,
+          0,
+          296779,
+          887315,
+          0,
+          163843,
+          477785
+        ],
+        [
+          0,
+          248842,
+          838750,
+          0,
+          116353,
+          66308,
+          0,
+          328340,
+          599848,
+          0,
+          897253,
+          553765
+        ],
+        [
+          0,
+          972754,
+          234630,
+          0,
+          311928,
+          774115,
+          0,
+          797628,
+          188906,
+          0,
+          175806,
+          947875
+        ],
+        [
+          0,
+          955898,
+          396297,
+          0,
+          767410,
+          683502,
+          0,
+          990417,
+          435787,
+          0,
+          833422,
+          850041
+        ]
+      ],
+      "identities_verified": {
+        "E4_constant_block_form": true,
+        "E5_constant_residue_entries": 144,
+        "binary_right_and_left_kernel_equations": true,
+        "q0_equals_D_cvec": true,
+        "M_kappa_zero": true,
+        "D_ell_plus_E_kappa_equals_q0": true,
+        "projected_first_order_equation": true,
+        "physical_constant_for_A0_is_zero": true,
+        "E15_exact_six_column_correction": true,
+        "actual_O_Y_equals_Z": true
+      },
+      "core_seconds": 0.25047820800000004,
+      "independent_physical_lambda": {
+        "equal_entrywise": true,
+        "mismatched_entries": 0,
+        "first_mismatch": null
+      },
+      "physical_lambda0": {
+        "rows": 36,
+        "columns": 36,
+        "sha256": "0dff70fc13b5ff29f95ad456750a59b4853a0a83a1011455bb6101e3255590d8",
+        "rank_certificate": {
+          "rank": 12,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 12,
+            "rows": [
+              0,
+              3,
+              6,
+              1,
+              4,
+              7,
+              2,
+              5,
+              8,
+              9,
+              12,
+              15
+            ],
+            "columns": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "determinant_mod_prime": 844041,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "physical_sectors": [
+        {
+          "new_line_state": 0,
+          "polar_inverse": {
+            "leading_rank": 10,
+            "leading_nullity": 2,
+            "normalized_constant_determinant_mod_prime": 265020,
+            "normalized_matrix_minimum_precision": 5,
+            "inverse_minimum_precision": 5
+          },
+          "physical_lambda_minimum_precision": 5,
+          "original_polar_equation_verified_through_known_cutoff": true
+        },
+        {
+          "new_line_state": 1,
+          "polar_inverse": {
+            "leading_rank": 10,
+            "leading_nullity": 2,
+            "normalized_constant_determinant_mod_prime": 48313,
+            "normalized_matrix_minimum_precision": 5,
+            "inverse_minimum_precision": 5
+          },
+          "physical_lambda_minimum_precision": 5,
+          "original_polar_equation_verified_through_known_cutoff": true
+        },
+        {
+          "new_line_state": 2,
+          "polar_inverse": {
+            "leading_rank": 10,
+            "leading_nullity": 2,
+            "normalized_constant_determinant_mod_prime": 588817,
+            "normalized_matrix_minimum_precision": 5,
+            "inverse_minimum_precision": 5
+          },
+          "physical_lambda_minimum_precision": 5,
+          "original_polar_equation_verified_through_known_cutoff": true
+        }
+      ],
+      "physical_check_seconds": 0.508970833,
+      "independent_check_scope": "Original source polar residues at full old-new intersections, separate Laurent solve and physical normalization; all lambda0 entries compared. E14 Z is not independently reconstructed by a full regular Laurent solve.",
+      "elapsed_seconds": 0.759629583
+    }
+  ]
+}

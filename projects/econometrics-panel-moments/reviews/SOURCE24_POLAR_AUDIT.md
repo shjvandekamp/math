@@ -188,3 +188,21 @@ rank by 18m. The saved stacked minors with incidence have sizes 105 and 132
 at m=4 and 5, exceeding 72 and 90, so generic incidence factorization through
 all three axes fails at those lengths. The m=3 result alone is a finite
 fixture obstruction. None of these checks decides source independence.
+
+### Even physical constant correction
+
+Two independent local reviewers checked E1–E16 in
+`research/SOURCE24_EVEN_CORRECTION.md`: one checked the kernel/cokernel
+constant solve, basis invariance, and rank-at-most-six update; the other
+checked the actual physical normalization, sector-zero scaling, A=0
+vanishing, and signs of the incoming correction. The formula assumes
+nonzero line/binary factors, binary corank two, and first-jet completion.
+The identification of its 2-by-2 Gamma with the physical projected first
+jet allows the earlier polar hypotheses to be used.
+
+The primary researcher reviewed the derivations and the newly written
+exact script. Independent physical Laurent sector solves reproduce all
+lambda0 entries at the two saved m=2/4 fixtures; actual OY=Z and the
+six-column update are checked separately. Full regular Laurent reconstruction
+of Z was not repeated, and E16 received mathematical review only.
+No all-length incoming or mapped-rank conclusion is accepted.

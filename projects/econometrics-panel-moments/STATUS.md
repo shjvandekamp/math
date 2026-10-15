@@ -71,7 +71,9 @@ step in these coordinates. Polynomial kernel matrices now clear the actual
 ordered products and all reduced columns using one distinct-block denominator.
 Positive evaluation and common-denominator scaling are injective, so Lean
 also proves the equivalent polynomial-column induction criterion. The
-algebraic residue interpretation remains to be formalized.
+algebraic residue interpretation remains to be formalized. The cleared
+components are now also proved divisible by their output coordinates,
+with exact polynomial quotient identities and no positivity assumption.
 
 The empty-prefix columns now have an exact reversible reduction to
 single-block columns. Lean proves span and independence equivalence, then
@@ -95,7 +97,8 @@ Two homogeneous-coordinate modules subsequently passed focused compilation
 and 32 further axiom checks. The extended aggregate now checks 286 declarations
 in a 28-module closure. Two further polynomial modules passed focused
 compilation and add 29 axiom checks; the current extended aggregate checks
-315 declarations in a 30-module closure. The earlier 24-module clean build
+325 declarations in a 31-module closure, including the subsequent ten
+output-coordinate divisibility results. The earlier 24-module clean build
 is preserved separately; the extended aggregate reuses that compiled closure.
 
 Further exact discovery separates identities from rank evidence. The
@@ -206,10 +209,22 @@ map without the large old-source inverse, while preserving the actual
 ordered-product incidence data; see
 [the quotient formulation](research/SOURCE24_COMPLETION_QUOTIENT.md).
 Its remaining condition is explicit complementarity of two spaces, not a
-proved determinant. Trying to recover incidence from all three axes also
+proved determinant. The binary part now has an explicit 6m-dimensional
+quotient with actual polynomial annihilator conditions and a directly
+constructed zero-sum incoming representative; see
+[the binary quotient note](research/SOURCE24_BINARY_QUOTIENT.md). Its
+incoming spanning condition remains open. Trying to recover incidence from all three axes also
 fails: universal observation rank bounds are 72 and 90 at m=4,5, while
-saved stacked minors with incidence have sizes 105 and 132. The even-m
-regular calculation and full regular determinant remain open. None of the new results establishes all-T source independence.
+saved stacked minors with incidence have sizes 105 and 132.
+
+The even physical constant correction now has an audited formula: one
+2-by-2 kernel/cokernel solve plus a diagonal solve, under the established
+polar hypotheses. It gives an explicit correction of rank at most six to
+the sparse-shaped incoming family. Independent local Laurent polar solves
+verify every constant coefficient at m=2 and m=4; the actual mapped ranks
+are 6 and 36 there. See [the even correction note](research/SOURCE24_EVEN_CORRECTION.md).
+All-length rank of this corrected even input and the full regular determinant
+remain open. None of the new results establishes all-T source independence.
 
 ## Finite theorem
 
@@ -289,7 +304,8 @@ silently assumed by either proved theorem, and no result below is claimed.
    now formalized. The paper deletion induction and odd incoming-rank theorem
    are audited; their external k=4 base certificate still needs Lean checking.
    Prove injectivity of the subsequent old-source map on the incoming image,
-   and handle the even-length regular operator.
+   and prove the remaining rank statements for the now-explicit even-length
+   correction and regular operator.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final

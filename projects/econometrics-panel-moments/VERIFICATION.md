@@ -126,15 +126,16 @@ The continuation verifier passed its clean 24-module rebuild and all
 [source-family-axioms.txt](formal/source-family-axioms.txt). The only diagnostic
 was an existing stylistic linter warning in `BasisCertificate.lean`.
 
-The subsequent six modules passed focused source compilation and add 95
+The subsequent seven modules passed focused source compilation and add 105
 axiom checks, without warnings in the final runs. They include the actual
 binary matrix rank, the actual three-state homogeneous representation,
-and polynomial clearing with the equivalent conditional induction criterion.
-The extended aggregate checks all 315 requested declarations against the
-compiled 30-module closure; its
+polynomial clearing with the equivalent conditional induction criterion,
+and exact output-coordinate factors of the cleared source columns.
+The extended aggregate checks all 325 requested declarations against the
+compiled 31-module closure; its
 output is [source-family-extended-axioms.txt](formal/source-family-extended-axioms.txt).
-The reproducible verifier now includes all six new modules. This extended check
-reuses the earlier compiled closure; it is not a new clean 30-module rebuild.
+The reproducible verifier now includes all seven new modules. This extended check
+reuses the earlier compiled closure; it is not a new clean 31-module rebuild.
 The audited deletion-word induction remains a paper proof whose k=4 base
 is the external certificate in `exploration/source24-deletion-word-results.json`;
 it is not covered by the Lean verifier.
@@ -185,3 +186,11 @@ and seed-decomposition formulas at m=3 and m=5, including actual OY=Z
 solves and the projected incoming equation OY0=z0. It completed in 1.12
 seconds with 20.6 MiB maximum RSS. This external modular diagnostic is
 separate from the Lean checks and proves no uniform transversality claim.
+
+The even physical correction E1–E16 passed separate algebraic and physical
+normalization reviews. The new exact implementation reproduced all m=2/4
+fixture ranks and compared every predicted constant coefficient to a separate
+original-source Laurent polar solve, through absolute precision at least five.
+It also verified actual OY=Z and the six-column correction factorization.
+The full regular Laurent reconstruction of Z and a computational E16 check
+were not run; the uniform rank claims remain open.

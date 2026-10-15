@@ -687,3 +687,31 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduced' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceCoordinateFactors.dvd_matrix_mul_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedKernel_dvd_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedWordProduct_dvd_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedEmptyVector_dvd_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedSingletonVector_dvd_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedSingleBlockVector_dvd_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedSourceColumn_dvd_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedReducedColumn_dvd_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedSourceColumn_eq_coordinate_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCoordinateFactors.clearedReducedColumn_eq_coordinate_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

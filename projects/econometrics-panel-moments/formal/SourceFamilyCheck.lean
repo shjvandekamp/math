@@ -1,3 +1,4 @@
+import PanelMoments.SourceCoordinateFactors
 import PanelMoments.SourcePolynomialKernels
 import PanelMoments.SourcePolynomialCriterion
 import PanelMoments.SourceFamily
@@ -399,3 +400,14 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourcePolynomialCriterion.linearIndependent_clearedReduced_iff
 #print axioms PanelMoments.SourcePolynomialCriterion.linearIndependent_newJoint_iff_clearedReduced
 #print axioms PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduced
+
+#print axioms PanelMoments.SourceCoordinateFactors.dvd_matrix_mul_entry
+#print axioms PanelMoments.SourceCoordinateFactors.clearedKernel_dvd_output
+#print axioms PanelMoments.SourceCoordinateFactors.clearedWordProduct_dvd_output
+#print axioms PanelMoments.SourceCoordinateFactors.clearedEmptyVector_dvd_output
+#print axioms PanelMoments.SourceCoordinateFactors.clearedSingletonVector_dvd_output
+#print axioms PanelMoments.SourceCoordinateFactors.clearedSingleBlockVector_dvd_output
+#print axioms PanelMoments.SourceCoordinateFactors.clearedSourceColumn_dvd_output
+#print axioms PanelMoments.SourceCoordinateFactors.clearedReducedColumn_dvd_output
+#print axioms PanelMoments.SourceCoordinateFactors.clearedSourceColumn_eq_coordinate_mul
+#print axioms PanelMoments.SourceCoordinateFactors.clearedReducedColumn_eq_coordinate_mul

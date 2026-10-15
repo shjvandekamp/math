@@ -2344,3 +2344,9 @@ the corresponding feedback-zero decomposition. The latter also exhibits
 three exact rational-zero relations at deletion length k=3; these are
 distinct from the nonzero single-pole quotient examples above. Neither
 refinement proves the remaining all-length transversality statement.
+
+`SOURCE24_BINARY_QUOTIENT.md` gives the actual binary-output quotient and
+an explicit zero-sum representative of its incoming classes.
+`SOURCE24_EVEN_CORRECTION.md` supplies the even physical constant correction
+and corrected incoming scalar family under the established polar hypotheses.
+The corresponding all-length rank conditions remain open.
