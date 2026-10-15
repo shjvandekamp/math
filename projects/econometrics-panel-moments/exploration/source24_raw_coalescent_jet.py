@@ -72,11 +72,18 @@ def coalesced_matching(A0, ANinv, columns):
     return rows
 
 
-def calculate(q):
+def calculate(q, old_directions=None):
+    """Optional {source block: (tau, nu)} map; old source blocks are 2,...,q+1."""
     N, blocks = q + 2, list(range(2, q + 3))
     A0 = [[list(row) for row in G] for _ in range(q + 3)]
     A0[N] = [[row[0], 2 * row[1], 3 * row[2]] for row in G]
-    directions = {t: (t - 1, (t - 1) ** 2) for t in blocks if t != N}
+    if old_directions is None:
+        directions = {t: (t - 1, (t - 1) ** 2) for t in blocks if t != N}
+    else:
+        assert set(old_directions) == set(blocks[:-1])
+        directions = {t: tuple(old_directions[t]) for t in blocks[:-1]}
+        assert all(len(pair) == 2 and all(isinstance(x, int) for x in pair)
+                   for pair in directions.values())
     A = {t: [[(G[a][j] % P, G[a][j] * (0, *directions[t])[j] % P)
               for j in range(3)] for a in range(3)] for t in directions}
     A[N] = const(A0[N])

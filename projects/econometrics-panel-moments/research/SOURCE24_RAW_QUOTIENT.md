@@ -992,3 +992,52 @@ this direct sum of local constraints. Hence (RQ44), (RQ46), and (RQ50)
 provide explicit coefficient maps and a possible lower-pole filtration,
 but not a triangular basis on the domain of (RQ40). Uniform injectivity
 of that constrained map remains open.
+
+### Finite coefficient profiles and a common time direction
+
+`source24_edge_filtration.py` applies the actual RQ39 derivatives to
+the 15-dimensional kernels in RQ36 at q=3,4. It records exact Laurent
+coefficients on the new lines and coordinate axes. Every profile uses
+the same 18 common leading columns B and computes
+rank[B|D]−rank B; combining channels therefore requires one shared
+leading correction. The time increments remain the actual (1,2k+1).
+
+| q | Cumulative gains, old pole orders q down to 1 | With fixed new-axis poles | Complete gain |
+|---:|---|---:|---:|
+| 3 | 6, 12, 27 | 30 | 30 |
+| 4 | 6, 12, 27, 42 | 45 | 45 |
+
+At each of the two highest layers, the new-line channel and the axis
+channel separately have zero induced gain. Their combined gains are
+nevertheless 6 and 12. This is an explicit example of the necessary
+cross-channel compatibility of the leading correction, rather than a
+sum of separate ranks. At both fixtures the old-pole coefficients leave
+three directions; fixed new-axis poles supply them. The polynomial
+remainders add no further directions there. No triangular separation
+of the local edge kernels is inferred.
+
+The code verifies the path-incidence signs and coverage of the joint
+leading kernel. It checks 6,048 components against separately multiplied
+actual dual words, 2,997 rational reconstruction components and 4,536
+excess-order coefficients. Laurent tails retain their precision; the
+minimum certified cutoff is 5. New-line polynomial remainders have
+degree at most two and axis remainders are constant, so the saved
+principal coefficients and remainders describe the entire restrictions.
+The run took 1.3405 seconds with maximum RSS 21,413,888 bytes. The
+primary researcher and independent deletion-induction reviewer checked
+the implementation and saved `source24-edge-filtration-results.json`.
+
+A separate bounded run asks whether varying the direction with k is
+necessary at these two fixtures. In `source24_raw_coalescent_jet.py`,
+the optional direction map sets old factors to
+(1+epsilon*t,1+3*epsilon*t), so every increment is U+3V. The mixed
+leading rank and derivative gain are again 24+30=54 at q=3 and
+27+45=72 at q=4. Its exact inputs and certificates are saved separately
+in `source24-raw-common-direction-results.json`; the default quadratic
+direction and its record are unchanged. The primary researcher checked
+the small parameterization and the saved result. This run took 0.6238
+seconds with maximum RSS 17,580,032 bytes.
+
+These are finite lower-bound certificates and fixture profiles. In
+particular, common increments suffice at these two witnesses, but
+neither arbitrary common directions nor all-q injectivity is proved.

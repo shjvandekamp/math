@@ -331,6 +331,19 @@ differences by their distance from the endpoints. It also identifies
 why the highest coefficients alone cannot separate interior edges.
 Applying that filtration to the varying time directions and the local
 matching constraints remains unfinished.
+Exact coefficient profiles at q=3,4 expose cross-channel coupling:
+the highest layers give zero gain in either channel alone but positive
+gain with a shared leading correction. Old-pole coefficients leave
+three directions, resolved by fixed new-axis residues at those fixtures.
+A common increment U+3V also gives full mixed rank at q=3,4, supplying
+a simpler finite witness for the next uniform attempt.
+The audited [axis and matching recurrence](research/SOURCE24_AXIS_RECURSION.md)
+reduces the axis identities to two coupled polynomial recurrences on
+each axis and gives explicit matching equations at three fixed spectral
+values. It retains the rational-pole conditions, endpoint terms and
+the common leading correction. The forcing still depends on the
+original source coefficients; eliminating it with the new-line
+observations is unfinished.
 The full 18q-column append proof and the further source-family
 transversality remain open.
 
@@ -371,9 +384,17 @@ restores all six missing directions for every even n. Thus the outgoing
 transverse block is generically full rank at every length. The proof
 retains state-zero pivots and uses a positive common-alpha conic witness;
 it is a paper result, not Lean formalized. Exact dual-number checks at
-n=2,3,4,6 corroborate the normalization. The remaining regular Schur
-matrix keeps both old-node corrections and its determinant is still
-open; the singular conic O3 also requires a separate base step.
+n=2,3,4,6 corroborate the normalization. The audited
+[regular leading-operator reduction](research/SOURCE24_CONIC_REGULAR_LEADING.md)
+now cancels both departure and final factors and identifies the scaled
+Schur limit as U_n O_n^{-1} D_n Z_0, retaining both old-node corrections.
+An independently reconstructed exact certificate makes its determinant
+nonzero at n=5. With the asymptotic proof, this gives generic conic O6
+nonvanishing for sufficiently small positive appended times. It is an
+auxiliary pair-source result with an external finite certificate, not
+an all-length or full source-family theorem. Uniform nonvanishing of
+the leading determinant remains open; the singular conic O3 also
+requires a separate base step.
 That singular step now has an exact 27-square criterion using its
 51-dimensional old complement and three explicit longitudinal kernel
 pivots. A separate suffix lemma shows that two appended blocks recover
@@ -463,14 +484,19 @@ silently assumed by either proved theorem, and no result below is claimed.
    Prove injectivity of the subsequent old-source map on the incoming image,
    and prove the remaining rank statements for the regular operator.
    The conic outgoing transverse block now has an audited paper proof for
-   both parities; its regular/longitudinal Schur block remains open, with
-   both old-node corrections retained. Formalizing the transverse proof
+   both parities. Its regular/longitudinal Schur block now has an audited
+   leading-operator formula and a finite five-to-six-block witness;
+   prove uniform nonvanishing of U_n O_n^{-1} D_n Z_0 with both old-node
+   corrections retained. Formalizing the transverse proof
    is also unfinished. The raw append alternative has an exact ambient
    quotient, a uniform 18-column subfamily and a uniform rank-3q
    matching map with a fixed cyclic minor. Prove full rank of the
    resulting (15q+3)-by-(15q−6) reduced matrix, or prove that the first
    derivative is injective on the q−1 local 15-dimensional pieces of
-   the joint leading kernel. Both targets and subsequent source
+   the joint leading kernel. The axis/matching recurrence and the
+   common-increment finite witnesses narrow that second target;
+   the coupled new-line equations must still be resolved.
+   Both targets and subsequent source
    transversality remain open.
    The conditional terminal annihilator supplies explicit boundary rows;
    prove their pairing with the incoming columns is nonsingular while
