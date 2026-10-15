@@ -5,6 +5,9 @@ import PanelMoments.SourceLifts
 import PanelMoments.SourceNewIndices
 import PanelMoments.SourceConditional
 import PanelMoments.SourceJointImage
+import PanelMoments.SourceTransfer
+import PanelMoments.KernelProducts
+import PanelMoments.SourceTransferOrders
 import PanelMoments.BinaryTransferAlgebra
 import PanelMoments.BinaryTransferSpan
 import PanelMoments.BinaryTransferEndpoints
@@ -207,3 +210,55 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.BinaryTransferRank.finrank_wordSpan_even
 #print axioms PanelMoments.BinaryTransferRank.finrank_wordSpan_odd
 #print axioms PanelMoments.BinaryTransferRank.finrank_wordSpan_parity
+
+#print axioms PanelMoments.SourceTransfer.prefixWeightedChain_eq
+#print axioms PanelMoments.SourceTransfer.jointFirst_sourceMoment
+#print axioms PanelMoments.SourceTransfer.sum_kernelMarginal
+#print axioms PanelMoments.SourceTransfer.sum_kernelMarginal_eq_prefix
+#print axioms PanelMoments.SourceTransfer.sharedPrefix_kernelMarginal_sum
+#print axioms PanelMoments.SourceTransfer.kernelMarginal_of_fixed
+#print axioms PanelMoments.SourceTransfer.jointFirst_sourceFamily
+#print axioms PanelMoments.SourceTransfer.normalized_jointFirst
+#print axioms PanelMoments.SourceTransfer.sourceKernelImage_sum_eq_zero
+#print axioms PanelMoments.SourceTransfer.sourceKernelImage_newIndex
+#print axioms PanelMoments.SourceTransfer.firstGeneratedState_empty
+#print axioms PanelMoments.SourceTransfer.firstGeneratedState_singleton
+#print axioms PanelMoments.SourceTransfer.sourcePrefixMass_empty
+#print axioms PanelMoments.SourceTransfer.sourcePrefixMass_singleton
+#print axioms PanelMoments.SourceTransfer.normalized_jointFirst_empty
+#print axioms PanelMoments.SourceTransfer.normalized_jointFirst_singleton
+
+#print axioms PanelMoments.KernelProducts.dropTable_apply
+#print axioms PanelMoments.KernelProducts.transitionProduct_eq_list_prod
+#print axioms PanelMoments.KernelProducts.terminal_eq_last
+#print axioms PanelMoments.KernelProducts.endpoint_sum
+#print axioms PanelMoments.KernelProducts.fixedPrefix_endpoint_sum
+#print axioms PanelMoments.KernelProducts.pathPrefix_comp
+#print axioms PanelMoments.KernelProducts.kernelMarginal_eq_product
+#print axioms PanelMoments.KernelProducts.secondOrder_penultimate
+#print axioms PanelMoments.KernelProducts.secondOrder_prefixMass
+#print axioms PanelMoments.KernelProducts.newTransferProduct_eq_list_prod
+#print axioms PanelMoments.KernelProducts.kernelMarginal_secondOrder
+#print axioms PanelMoments.KernelProducts.sourceKernelImage_newIndex_eq_product
+#print axioms PanelMoments.KernelProducts.normalized_jointFirst_newIndex
+#print axioms PanelMoments.KernelProducts.normalized_jointFirst_empty_product
+#print axioms PanelMoments.KernelProducts.normalized_jointFirst_singleton_product
+
+#print axioms PanelMoments.SourceTransferOrders.middleSlots_length
+#print axioms PanelMoments.SourceTransferOrders.middleSlot_bound
+#print axioms PanelMoments.SourceTransferOrders.secondOrder_middle
+#print axioms PanelMoments.SourceTransferOrders.generationTable_middle
+#print axioms PanelMoments.SourceTransferOrders.newTransferProduct_eq_middleSlots
+#print axioms PanelMoments.SourceTransferOrders.remaining_empty
+#print axioms PanelMoments.SourceTransferOrders.remaining_singleton
+#print axioms PanelMoments.SourceTransferOrders.middleSlots_empty
+#print axioms PanelMoments.SourceTransferOrders.middleSlots_singleton
+#print axioms PanelMoments.SourceTransferOrders.map_succ_product
+#print axioms PanelMoments.SourceTransferOrders.newTransferProduct_empty
+#print axioms PanelMoments.SourceTransferOrders.newTransferProduct_singleton
+#print axioms PanelMoments.SourceTransferOrders.emptyWord_nodup
+#print axioms PanelMoments.SourceTransferOrders.singletonWord_nodup
+#print axioms PanelMoments.SourceTransferOrders.mem_emptyWord
+#print axioms PanelMoments.SourceTransferOrders.mem_singletonWord
+#print axioms PanelMoments.SourceTransferOrders.normalized_jointFirst_empty_word
+#print axioms PanelMoments.SourceTransferOrders.normalized_jointFirst_singleton_word

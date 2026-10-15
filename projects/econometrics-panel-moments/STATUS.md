@@ -57,11 +57,17 @@ the expected kernel, and Lean proves that shorter-family independence plus
 independence of the new conditional images implies full source independence.
 That last hypothesis remains unresolved. The joint first-state image is now
 proved equivalent to the tail map by injective multiplication by the positive
-first transition. Its identification with the research note's rational
-transfer formulas remains unformalized.
+first transition. Lean now identifies the actual source joint images with
+normalized ordered transition-matrix products: the empty and singleton
+cases have the prescribed effect factor, prefix transition, and delta-minus-
+product form. The proofs use the actual canonical source orders and finite
+Markov path sums. Lean also proves that the selected block comes first,
+followed by the other blocks in ascending order, with the shared block
+omitted in the singleton case. The homogeneous residue interpretation
+remains to be formalized.
 
-The dedicated verifier rebuilt all 19 modules in this closure and checked
-151 declarations; its axiom checks report only the three permitted foundational
+The dedicated verifier rebuilt all 22 modules in this closure and checked
+200 declarations; its axiom checks report only the three permitted foundational
 axioms. Evidence is in
 `formal/source-family-clean-build.log` and `formal/source-family-axioms.txt`,
 with independent statement reviews in `reviews/SOURCE24_FOUNDATIONS_AUDIT.md`
@@ -108,6 +114,19 @@ stacked minors have sizes 54 and 75 at m=3,4, exceeding the observation
 row counts 30 and 39. This rules out that proposed factorization on a generic
 parameter set. It does not disprove source independence or richer methods.
 The reproducible obstruction is in the source24-axis-jet-incidence files.
+
+A precision-tracked Laurent computation now follows the regular Schur matrix
+as the new time factors tend to (epsilon, epsilon^3). Over the recorded prime,
+the epsilon^-3 coefficient has ranks 6, 21, and 36 at m=2,3,4; the last
+is full rank. Certified determinant valuations are -24, -75, and -108.
+At m=3 the direct term contributes nothing at order -3, and the incoming
+old-residue matrix already has rank 21; the subsequent old-block map preserves
+that rank. An independently audited conditional paper argument proves the
+leading-operator factorization and the sparse odd-length polar coefficients;
+exact entrywise checks corroborate both formulas. These finite modular results imply
+nonzero rational determinants after denominator clearing, not their real
+leading valuations or an all-length theorem. The script and certificates
+are the source24-regular-laurent exploration files.
 
 ## Finite theorem
 
@@ -176,8 +195,9 @@ silently assumed by either proved theorem, and no result below is claimed.
    The general-T indexing, validity and cardinality are now formalized.
    The exact recursive index bijection, source-lift equality, new-index
    parameterization, and conditional induction criterion are now proved.
-   The joint/conditional map equivalence is now proved. Next formalize its
-   rational transfer and residue formulas and the audited polar theorem.
+   The joint/conditional map equivalence and actual ordered matrix-product
+   formulas, including the explicit sorted-index forms, are now proved.
+   Next formalize the homogeneous residue formulas and the audited polar theorem.
    The auxiliary binary independence and rank lemmas are now formalized.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,

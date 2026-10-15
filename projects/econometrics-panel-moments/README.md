@@ -39,8 +39,10 @@ arbitrary T, and refresh the novelty audit before seeking external review.
 These are future tasks, not additional verified claims.
 
 The active equation-(24) continuation has Lean-checked general validity,
-exact index counts, actual source-function recursion, and a conditional
-induction criterion, plus external exact full-rank checks at
+exact index counts, actual source-function recursion, a conditional
+induction criterion, and the normalized matrix-product images with their exact
+selected-first, ascending-remainder orders,
+plus external exact full-rank checks at
 T=5,6, and a quadratic-size residue reduction checked by exact computation
 through T=8. The original conic witness
 has an exact T5 residue failure; a perturbed economic witness passes the finite

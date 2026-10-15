@@ -3,8 +3,9 @@
 Research note, 15 October 2026. The algebraic arguments below reduce the
 three-choice independence problem to explicit finite determinants and prove
 generic nonvanishing of the shared-new polar half. Some supporting source
-recursion statements and the actual binary moved-word rank theorem are now
-formalized in Lean; [STATUS.md](../STATUS.md) gives the exact scope. The
+recursion statements, the actual source-to-ordered-product identities, and
+the binary moved-word rank theorem are now formalized in Lean;
+[STATUS.md](../STATUS.md) gives the exact scope. The
 polar theorem is a paper proof. Nonvanishing of the remaining regular Schur
 half for every panel length remains unproved, so the complete all-length
 source-independence claim remains open.
@@ -600,6 +601,161 @@ columns. The zeroth-order normalized family is necessarily deficient for
 first order a chain can enter state 2 and then propagate through additional
 denominators involving \(Z\). No higher-order rank bound or nonvanishing
 claim has been established for this degeneration.
+
+## The leading regular operator at a small new time factor
+
+The following conditional paper lemmas have passed an independent algebra
+audit. Their incoming-operator formulas have also passed the separate
+finite check described below. None of these statements proves generic
+nonvanishing of the regular determinant for all lengths.
+
+Use \(m\ge2\) old blocks \(A_t=G\operatorname{diag}(1,u_t,v_t)\),
+where \(G\) has first column all ones, and put
+\(A_N=G\operatorname{diag}(1,\varepsilon,\varepsilon^3)\).
+Assume the old cross-points have nonzero coordinates, all old lines meet
+\(X_0=0\) at distinct points with both other coordinates nonzero,
+and the binary restrictions used below are invertible. Assume also that
+the old residue matrix \(O=R_m\) is invertible. For the normalized
+polar matrix, impose the conclusions established in the polar argument:
+for odd \(m\) its constant term is invertible; for even \(m\)
+its leading kernel is supported on initial states \(1,2\), and
+the first kernel derivatives complete its rank. These hypotheses imply
+that its inverse has at worst a simple pole, whose coefficient has zero
+initial-state-zero rows.
+
+There are two shared-new column normalizations to distinguish. Call
+\(F_{N,s,a,b}/A_N(a,b)\) the **physical normalization** here.
+The polar normalization divides this further by
+\(\varepsilon^{[a=0]+[b=0]}\). Let \(\bar D,\bar P,\bar R\)
+denote the blocks in physical normalization, and let
+\(\lambda=\bar P^{-1}Q\). Transport the old-old residue rows by
+\(K_N^{-1}\), so that their old block is the constant \(O\),
+and divide beta row \((u,c,d)\) by its nonzero canonical factor
+\(J_{ucd}=-A_u(c,d)X_c(P_{uc;N,d})X_d(P_{uc;N,d})\).
+All blocks in the remainder of this section use these row conventions.
+
+Here \(\lambda\) is analytic at \(\varepsilon=0\). To verify
+this and the needed valuation bounds, choose the old-new cross-point
+representatives analytically. Their coordinate zero is of order
+\(\varepsilon\), while their other coordinates have nonzero limits.
+The old residue vector \(U\) and the scaled new vector
+\(V/\varepsilon\) form an invertible limiting basis of zero-sum
+rows: their limits point along \((0,-1,1)\) and \((-1,1,0)\).
+An old product residue has coordinate zero of order
+\(\varepsilon\). Multiplying such a product or residue on the
+left by \(V\) gives a row of order \(\varepsilon\), with
+coordinate zero of order \(\varepsilon^2\). Consequently both
+its \(U,V\) coordinates are of order \(\varepsilon\).
+
+For a first-new source column \((t,N,A,B)\), the block \(Q\)
+is supported on new line \(B\), and has order at least
+\(\varepsilon^{1+[A=0]+[B=0]}\). Multiplying by the normalized
+polar inverse and then undoing its column scaling proves analyticity
+of \(\lambda\): its possible inverse pole is supported on the
+binary initial states, whereas the extra factor for initial state zero
+is canceled by the regularity of those inverse rows. Every physical
+coefficient has order at least \([A=0]\).
+
+The same cross-point calculation gives the direct beta bounds
+\[
+ \operatorname{val}(S)\ge0,\qquad
+ \operatorname{val}(\bar R)\ge-1. \tag{H1}
+\]
+In detail, a beta row indexed by old state \(c\) and new state
+\(a\) is divided by a factor of order \([c=0]+[a=0]\).
+A shared-new column contributes order at least \([a=0]+[b=0]\),
+so its resulting order is at least \([b=0]-[c=0]\).
+A first-new column contributes order at least
+\(1+[A=0]+[B=0]\), so its resulting order is at least
+\(1+[A=0]-[c=0]\). These bounds include the matching old state
+zero case; they do not assume that its vanishing coordinate is invertible
+at the limit.
+
+The normalized old-feedback block has the exact form
+\[
+ B_\varepsilon=J_{\rm inc}-T_\varepsilon,\qquad
+ T_\varepsilon[(u,c,d),F]
+ =\left.
+ \frac{\operatorname{Res}_{L_{uc}}(F_d/X_d)}
+      {A_u(c,d)X_c}\right|_{P_{uc;N,d}}, \tag{H2}
+\]
+where \(F\) is the shorter source column and \(J_{\rm inc}\)
+adds its coefficients over the first slot at fixed shared labels.
+The incidence term comes from the old-source graph identity preceding (S6).
+The quotient in (H2) is regular at the matching coordinate base point:
+the cleared coefficient polynomial of \(F_d/X_d\) vanishes there.
+Thus \(B_\varepsilon\) is analytic, including old state zero.
+At the common limiting point \(P_{uc}=\{L_{uc}=X_0=0\}\),
+the three rows of \(T_0\) satisfy
+\(\sum_d A_u(c,d)X_d(P_{uc})T_0[(u,c,d),F]=0\).
+Hence \(\operatorname{rank}T_0\le6m\). This does not bound
+\(B_0=J_{\rm inc}-T_0\) by \(6m\).
+
+Put \(w=e_2G^{-1}\). At fixed old cross-points,
+\[
+ \varepsilon^3K_N^{-1}\longrightarrow
+       (X_0/X_2)e_2w.
+\]
+Thus \(E,\bar D\) have valuation at least \(-3\). Define
+\(Z=E-\bar D\lambda\). Equations (H1)--(H2) and analyticity
+of \(\lambda\) give the exact leading-operator identity
+\[
+ H_{-3}=-B_0 O^{-1}Z_{-3}. \tag{H3}
+\]
+Indeed, \(H=S-\bar R\lambda-B_\varepsilon O^{-1}Z\),
+and the first two terms have valuation at least \(-1\).
+Every old cross-point residue in \(Z_{-3}\) is a scalar multiple
+of the same row \(w\). In particular
+\(\operatorname{rank}Z_{-3}\le9\binom m2\); no equality
+or full-rank conclusion is implied.
+
+For odd \(m\ge3\), the constant polar coefficients are explicit.
+For a first-new column \((t,N,A,B)\), let
+\(r=\min(\{1,\ldots,m\}\setminus\{t\})\), let
+\(P^t\) be the ascending old product with \(t\) omitted,
+and let \(P_r\) be the old move-\(r\)-first product.
+Write \(d_t\) for the determinant of the binary restriction of
+\(K_t\) on \(X_0=0\), and set
+\[
+ c_{t0}=0,\qquad
+ c_{tA}=\left.\frac{X_A}{L_{tA}d_t}\right|_{X_0=L_{r0}=0}
+ \quad(A=1,2). \tag{H4}
+\]
+Then \(\lambda_0\) is supported only at the shared-new column
+\((N,r,B,0)\), where its coefficient is
+\(A_t(A,B)c_{tA}\). Analyticity and invertibility of the odd
+leading polar block make every physical binary coefficient vanish to
+positive order. The remaining initial-zero coefficients are fixed by
+their distinct old row-zero poles. Such a pole occurs only at the first
+old transition, since every later transition has zero column zero on
+the limiting axis. The first-new word starts at \(r\), while the
+shared-new word with that pole contains the one extra block \(t\).
+Its binary zero-sum residue is multiplied by \(d_t\), giving
+exactly (H4). When \(A=0\), the extra vanishing source factor
+instead gives \(\lambda_0=0\).
+
+It follows that the \((t,A,B)\) column of \(Z_{-3}\) is the
+old double-residue vector of
+\[
+ A_t(A,B)\frac{X_BX_0}{X_2}
+ \left[-\frac{X_A}{L_{tA}}(P^t)_{02}
+                +c_{tA}(P_r)_{02}\right]w. \tag{H5}
+\]
+The omitted identity terms have at most one old pole and therefore no
+old double residues. Thus (H5) is a scalar rational interpolation
+problem followed by the old source inverse and the explicit operator
+\(B_0\); replacing that inverse by a new basis has not been justified.
+
+The optional leading-operator diagnostic in
+`exploration/source24_regular_laurent.py` checks (H3)--(H5) entrywise
+at its \(m=3\), \(G_{30}\) fixture. There
+\(\operatorname{rank}B_0=27\),
+\(\operatorname{rank}(B_0-J_{\rm inc})=18\), and
+\(Z_{-3}\), \(O^{-1}Z_{-3}\), and
+\(B_0O^{-1}Z_{-3}\) all have rank 21 modulo the test prime.
+The six missing leading directions therefore already occur in the
+incoming matrix in that finite calculation. These ranks do not establish
+a real upper bound or an all-length parity rule.
 
 ## A proved bridge to scalar covariates
 
@@ -1420,3 +1576,94 @@ establish a universal rank upper bound, rule out higher-order excursions,
 or prove an all-length source determinant. The exact identities and the
 binary parity proof above remain separate from these
 finite diagnostics.
+
+## Rank-one transition filtration: a local result and a leading obstruction
+
+The following paper calculation concerns constant-coefficient independence
+of rational functions, with Laurent column operations in a parameter
+\(\delta\). It does not establish the remaining regular determinant.
+Let
+\[
+ G_\delta=\mathbf1\mathbf1^\top+\delta I,\qquad
+ Y_{ti}=B_{ti}X_i,\quad l_t=\sum_iY_{ti},\quad
+ \pi_t=Y_t/l_t,\quad
+ \Sigma_t=\operatorname{diag}(\pi_t)-\pi_t^\top\pi_t.
+\]
+Then \(K_t=\mathbf1\pi_t+\delta\Sigma_t+O(\delta^2)\).
+Right multiplication by \(K_t\) sends a zero-sum row to a row
+divisible by \(\delta\). In particular, the dependence of a
+length-\(q\) product on its initial state starts at order
+\(\delta^q\).
+
+Number the blocks \(1,\ldots,n\), fix \(t<k<n\), and compare
+the two words on the blocks other than \(t\) that move \(k\),
+respectively \(k+1\), to the front. Denote their products by
+\(P_k,P_{k+1}\). They have a common suffix of length
+\(r=n-k-1\), so
+\[
+ \delta^{-r}(P_k-P_{k+1})=\mathbf1u_k+O(\delta),\qquad
+ u_k=(\pi_{k+1}-\pi_k)\Sigma_{k+2}\cdots\Sigma_n.
+ \tag{R1}
+\]
+Their differing prefixes have length \(k\ge2\). Thus both the
+constant and first coefficients in (R1) are independent of the
+initial row. Divide each source column by its nonzero parameter-only
+factor \(A_t(a,b)\), take the indicated adjacent word difference,
+and divide by \(\delta^r\). Its leading coefficient is
+\(X_aX_bu_k/l_t\). Taking the difference of its \((a,b)\)
+and \((b,a)\) columns and dividing once more by \(\delta\)
+has leading coefficient
+\[
+ \frac{X_aX_b(Y_{tb}-Y_{ta})}{l_t^2}\,u_k,
+ \qquad a<b. \tag{R2}
+\]
+The cancellation of the common first coefficient in (R1) is essential
+here; arbitrary stacks of derivatives would not be a rank certificate.
+
+For this one fixed \((t,k)\), the six symmetric leading columns
+and the three columns (R2) are independent. To see this, put
+\(y_i=B_{ti}X_i\). Modulo \(l_t=y_0+y_1+y_2\), the three
+cubic numerators are nonzero constant multiples of
+\(y_0y_1(y_1-y_0)\), \(y_0y_2(y_2-y_0)\), and
+\(y_1y_2(y_2-y_1)\). After substituting
+\(y_2=-y_0-y_1\), the latter two have distinct nonzero pure
+cubic terms, while the first has none. Their classes are independent.
+The remaining six quadratic monomials are independent as well.
+The common row \(u_k\) does not invalidate this argument:
+\(\Sigma_j\) is invertible on zero-sum rows whenever all
+\(X_i,l_j\) are nonzero, and \(\pi_{k+1}-\pi_k\ne0\)
+there when the two time vectors are nonproportional. If the total lines
+are distinct, these conditions hold at a generic point of \(l_t=0\).
+Consequently this nine-column subfamily admits a nonzero leading minor
+after the specified constant-in-\(X\) Laurent elimination.
+
+There are nevertheless additional leading relations across shared
+times. Write \(J_0=I-\mathbf1\mathbf1^\top/3\). On zero-sum
+rows,
+\(\Sigma_j^{-1}=l_j\operatorname{diag}(1/Y_j)J_0\).
+Applying the same injective right multiplication
+\((\Sigma_1\cdots\Sigma_n)^{-1}\) to every leading row gives
+\[
+ u_k(\Sigma_1\cdots\Sigma_n)^{-1}
+ =-l_{k+1}\!\prod_{j<k}l_j\,
+ \left(B_{ki}/B_{k+1,i}\right)_{i=0}^2J_0
+ \operatorname{diag}(1/Y_k)J_0\cdots
+ \operatorname{diag}(1/Y_1)J_0. \tag{R3}
+\]
+For fixed \(k\), the \(6(k-1)\) symmetric leading columns
+with \(t<k\) therefore share a row factor and have scalar
+polynomial factors in
+\[
+ \sum_{t<k}h_t\operatorname{Sym}^2(X_0,X_1,X_2),
+ \qquad h_t=\prod_{\substack{j<k\\j\ne t}}l_j.
+\]
+This space has dimension at most \(3k\). Indeed, putting
+\(r=k-1\), the \(r-1\) identities
+\(l_t h_t=l_rh_r\), multiplied by arbitrary linear forms,
+give \(3(r-1)\) independent coefficient relations among the
+\(6r\) generators. For every \(k\ge3\),
+\(3k<6(k-1)\). Thus the local nine-column calculation cannot be
+assembled into global independence by only eliminating the three
+outcome skews in each block. Further parameter orders and the additional
+cross-time kernel would have to be controlled. No such global rank
+claim is made here.

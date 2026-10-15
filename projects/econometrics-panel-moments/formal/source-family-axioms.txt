@@ -379,3 +379,66 @@ PanelMoments.BinaryTransferRank.finrank_wordSpan_parity (ρ : ℝ) (cs : List �
 'PanelMoments.BinaryTransferRank.finrank_wordSpan_even' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PanelMoments.BinaryTransferRank.finrank_wordSpan_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PanelMoments.BinaryTransferRank.finrank_wordSpan_parity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.prefixWeightedChain_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.jointFirst_sourceMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.sum_kernelMarginal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.sum_kernelMarginal_eq_prefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.sharedPrefix_kernelMarginal_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.kernelMarginal_of_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.jointFirst_sourceFamily' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.normalized_jointFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.sourceKernelImage_sum_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.sourceKernelImage_newIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.firstGeneratedState_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.firstGeneratedState_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.sourcePrefixMass_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.sourcePrefixMass_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.normalized_jointFirst_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransfer.normalized_jointFirst_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.dropTable_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.transitionProduct_eq_list_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.terminal_eq_last' depends on axioms: [propext]
+'PanelMoments.KernelProducts.endpoint_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.fixedPrefix_endpoint_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.pathPrefix_comp' does not depend on any axioms
+'PanelMoments.KernelProducts.kernelMarginal_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.secondOrder_penultimate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.secondOrder_prefixMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.newTransferProduct_eq_list_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.kernelMarginal_secondOrder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.sourceKernelImage_newIndex_eq_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.KernelProducts.normalized_jointFirst_newIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.KernelProducts.normalized_jointFirst_empty_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.KernelProducts.normalized_jointFirst_singleton_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTransferOrders.middleSlots_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.middleSlot_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.secondOrder_middle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.generationTable_middle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.newTransferProduct_eq_middleSlots' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTransferOrders.remaining_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.remaining_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.middleSlots_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.middleSlots_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.map_succ_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.newTransferProduct_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.newTransferProduct_singleton' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTransferOrders.emptyWord_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.singletonWord_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.mem_emptyWord' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.mem_singletonWord' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTransferOrders.normalized_jointFirst_empty_word' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTransferOrders.normalized_jointFirst_singleton_word' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

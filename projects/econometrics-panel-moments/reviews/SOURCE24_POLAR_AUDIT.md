@@ -76,3 +76,32 @@ correction sign explicitly.
 This gives complete coordinates for the remaining regular quotient. It does
 not prove independence of the specified source columns in those coordinates
 or nonsingularity of their Schur matrix.
+
+## Follow-up: leading regular operator and rank-one degeneration
+
+A further independent read-only algebra review passed (H1)–(H5), conditional
+on the displayed geometric separation, old residue-matrix invertibility,
+and polar inverse hypotheses. Physical polar coefficients are analytic:
+the possible inverse pole is supported on binary initial states, while the
+initial-zero inverse rows are regular. The direct beta bounds include the
+vanishing coordinate in matching old-state-zero rows.
+
+Every cleared coefficient of the shorter source row vanishes at the
+matching old base point. This makes the divided residue in (H2) regular
+even when the old state is zero. Thus the feedback block is analytic, and
+the valuation bounds justify the coefficient identity
+`H_-3 = -B_0 O^-1 Z_-3`. In odd length, distinct initial-zero poles determine
+the sparse constant polar coefficients; the extra omitted binary block
+contributes its determinant. The inverse-transition limit then yields (H5).
+Only terms with at most one old pole are discarded in that formula.
+
+These are operator identities, not a rank or nonvanishing theorem. In the
+recorded m=3 modular fixture the incoming matrix and its image both have
+rank 21 of 27. That finite deficiency is not an all-length law or a real
+upper bound.
+
+The same review checked (R1)–(R3). The common suffix contributes the claimed
+power; the first two prefix coefficients are independent of the initial
+row. The local three cubic and six quadratic classes are independent, but
+the displayed cross-time relations prevent inferring global independence
+from this local nine-column calculation. The note preserves that limitation.

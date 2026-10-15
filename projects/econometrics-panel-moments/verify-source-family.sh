@@ -47,7 +47,7 @@ PY
 # Lake resolves the environment, then exits before any compiler starts.
 LEAN_PATH=$(lake env printenv LEAN_PATH)
 export LEAN_PATH
-source_modules='Model Polynomial SourceMoments BasisCertificate PermutationMoments MomentLifts SourceFamily SourceCounting PermutationLifts SourceRecursion SourceLifts SourceNewIndices SourceConditional SourceJointImage BinaryTransferAlgebra BinaryTransferSpan BinaryTransferEndpoints BinaryTransferIndependence BinaryTransferRank'
+source_modules='Model Polynomial SourceMoments BasisCertificate PermutationMoments MomentLifts SourceFamily SourceCounting PermutationLifts SourceRecursion SourceLifts SourceNewIndices SourceConditional SourceJointImage SourceTransfer KernelProducts SourceTransferOrders BinaryTransferAlgebra BinaryTransferSpan BinaryTransferEndpoints BinaryTransferIndependence BinaryTransferRank'
 if [ "$clean_outputs" = true ]; then
   for module_name in $source_modules; do
     output_path=".lake/build/lib/lean/PanelMoments/$module_name"
