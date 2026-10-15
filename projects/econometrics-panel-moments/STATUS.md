@@ -355,6 +355,17 @@ leave two directions that first-slot differences must remove. The later
 now removes those directions uniformly: T2(N) has rank 3m for all m>=3.
 It uses two coprime quadratic differences followed by Laurent endpoint
 elimination. The full pair-plus-axis component-two spanning remains open.
+The new [actual-source normal restriction theorem](research/SOURCE24_NORMAL_RESTRICTIONS.md)
+now gives every first normal coefficient and every second normal
+coefficient from a subfamily with zero first coefficient, for all m>=4.
+Its two append arguments preserve the prefix and the actual word order;
+four independently reconstructed exact base minors are nonzero. After
+axis elimination it supplies at least 5m−1 independent pair directions,
+so the actual component-two image has dimension at least 8m−1.
+This is an audited paper theorem with external finite certificates.
+The remaining pair-weight space has dimension at most
+9 choose(m,2)−(5m−1). Higher normal layers still require a compatible
+lifting argument; the first two layers do not imply full spanning.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -501,7 +512,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    The conditional terminal annihilator supplies explicit boundary rows;
    prove their pairing with the incoming columns is nonsingular while
    retaining the full old-node commutator. Alternatively, prove spanning
-   in the explicit binary quotient. Neither route is yet complete.
+   in the explicit binary quotient. Its first and second normal layers
+   now have uniform actual-source spanning proofs; extend them with
+   a higher-normal lifting theorem that retains the coupled row and
+   prefix coefficients. Neither route is yet complete.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final
