@@ -29,8 +29,14 @@ The bounded prior-art audit found **no matching public proof as of
 Read [THEOREM.md](THEOREM.md) for precise statements and domains,
 [MANUSCRIPT.md](MANUSCRIPT.md) for the mathematical argument, and
 [DEPENDENCIES.md](DEPENDENCIES.md) for the formal dependency map.
-[STATUS.md](STATUS.md) records completion and remaining questions outside the
-proved claims. The original request is preserved in [BRIEF.txt](BRIEF.txt).
+[STATUS.md](STATUS.md) records the confirmed results and
+[next steps that are not completed](STATUS.md#next-steps--not-completed).
+The original request is preserved in [BRIEF.txt](BRIEF.txt).
+
+The next work is to test the combined verifier and dependency bootstrap in a
+fresh environment, prove the particular source family's basis property for
+arbitrary T, and refresh the novelty audit before seeking external review.
+These are future tasks, not additional verified claims.
 
 ## Verification
 
@@ -54,6 +60,8 @@ The exact exploration uses Python's standard library. External calculations
 supply discovery data; every certificate used by a theorem is checked by
 Lean's kernel. Dependency sources and compiled caches are not vendored.
 
-All work remains local under `/Volumes/2tb/math/.worktrees/` in the isolated
-branch `research/econometrics-panel-moments-20261015-01a13f56`. Nothing has
-been published or sent to the source authors.
+The GitHub branch is
+[`research/econometrics-panel-moments-20261015-01a13f56`](https://github.com/shjvandekamp/math/tree/research/econometrics-panel-moments-20261015-01a13f56/projects/econometrics-panel-moments).
+Development used an isolated worktree under `/Volumes/2tb/math/.worktrees/`.
+This repository snapshot is not a journal publication; no source authors have
+been contacted.
