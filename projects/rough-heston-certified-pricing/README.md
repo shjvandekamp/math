@@ -1,4 +1,4 @@
-# Rough-Heston certified pricing research
+# Rough-Heston: Adams Fourier obstruction and deterministic cutoff repair
 
 **Incomplete pricing project. Global deterministic Riccati existence, convergence and the Fourier-tail obstruction are Lean-checked.**
 
@@ -29,4 +29,4 @@ The clean check passed on 2026-10-15 with Lean 4.34.1 and Mathlib d13f23b723b8a8
 
 The main paper's executable was not located. The theorem specifies its referenced standard PECE method and published trapezoidal exponent; it is not byte-level verification of that executable or a refutation with every antecedent of the conditional conjecture established. Existing literature already reports Adams instability; novelty is limited to the exact all-finite-mesh mechanism and its domination consequence, provisionally assessed.
 
-Local integration branch: research/rough-heston-certified-pricing-20261015. This project was developed in an isolated worktree inside /Volumes/2tb/math. No remote push, publication, trade, or market-data purchase was performed.
+Research branch: research/rough-heston-certified-pricing-20261015. This project was developed in an isolated worktree inside /Volumes/2tb/math. The GitHub checkpoint includes the proof sources, pinned dependencies, verification evidence, research notes, source snapshots and continuation steps in STATUS.md.

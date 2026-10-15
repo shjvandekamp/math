@@ -55,4 +55,4 @@ The next nonduplicate mathematical target is the singular stochastic convolution
 
 Worktree: /Volumes/2tb/math/.worktrees/rough-heston-certified-pricing-20261015. Branch: research/rough-heston-certified-pricing-20261015. All changes remain inside projects/rough-heston-certified-pricing. One low-priority, single-threaded Lean process at a time; the shared wrapper enforces a 2 GiB process-tree RSS limit. Run ./verify.sh for the clean project build and axiom audit.
 
-No remote push, publication, trading, author contact, purchase or automation was performed. This checkpoint does not imply work continues after the active session.
+This deterministic research checkpoint is prepared for the user-authorized GitHub upload, including the remaining obligations and next executable step above. No trading, author contact, purchase or automation was performed. This checkpoint does not imply work continues after the active session.
