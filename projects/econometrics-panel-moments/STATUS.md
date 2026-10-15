@@ -313,6 +313,17 @@ Its specified square minor, omitting the nine new/old rows incident
 to the last old block, is now certified nonzero at q=2,...,6; the exact
 bordered determinant identity is checked at each fixture. This selects
 a consistent candidate minor for a uniform proof without claiming one.
+The audited [outgoing-pole reduction](research/SOURCE24_OUTGOING_POLE_REDUCTION.md)
+now proves a uniform 9(q−1)-column pivot on exactly the retained
+new/old rows. It combines a rational interpolation argument with explicit
+binary-word determinants for both parities. After the same six row-sum
+pivots, the specified determinant is equivalent to a square matrix of
+size 9q+3 whose three diagonal state blocks are zero. All outgoing,
+matching and axis corrections remain present. The reduced determinant
+is certified nonzero at q=2,...,6, but its uniform nonvanishing remains
+open. A further cycle reduction applies conditionally when three
+off-diagonal blocks are invertible; this holds at the q=3,...,6 fixtures,
+while each such block has rank 5 of 7 at the q=2 fixture.
 The raw-quotient exploration files preserve the finite certificates.
 The first old-time derivative also reaches the expected new-pole and
 axis ranks in all five fixtures. A mixed construction retains the
@@ -508,8 +519,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    corrections retained. Formalizing the transverse proof
    is also unfinished. The raw append alternative has an exact ambient
    quotient, a uniform 18-column subfamily and a uniform rank-3q
-   matching map with a fixed cyclic minor. Prove full rank of the
-   resulting (15q+3)-by-(15q−6) reduced matrix, or prove that the first
+   matching map with a fixed cyclic minor. The specified minor of its
+   (15q+3)-by-(15q−6) reduced matrix now has a uniform outgoing-pole
+   pivot. Prove nonvanishing of the remaining (9q+3)-square matrix with
+   zero diagonal state blocks, retaining the omitted-old-block pole
+   contributions to its axis observations. Alternatively, prove that the first
    derivative is injective on the q−1 local 15-dimensional pieces of
    the joint leading kernel. The axis/matching recurrence and the
    common-increment finite witnesses narrow that second target;
