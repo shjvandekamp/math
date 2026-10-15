@@ -103,16 +103,17 @@ It checks the exact general family, universal moment validity, exact source
 recursion, the cardinality and empty/singleton parameterization of the actual
 indices, the conditional-tail induction criterion, and its joint-image
 equivalence. It also checks the auxiliary binary identities and constant-real
-span parity/baseline theorems. It does not discharge
-the criterion's new-image independence hypothesis, prove binary rank or the
-new polar theorem, or validate the external rank
-certificates. Its independent statement review is in
+span parity/baseline theorems, polynomial endpoint separation, paired-defect
+independence, and the rank formula for the actual move-first binary words.
+It does not discharge the criterion's new-image independence hypothesis,
+prove the new polar theorem, or validate the external rank certificates.
+The source-foundation and recursion statement reviews are in
 [SOURCE24_FOUNDATIONS_AUDIT.md](reviews/SOURCE24_FOUNDATIONS_AUDIT.md) and
 [SOURCE24_RECURSION_AUDIT.md](reviews/SOURCE24_RECURSION_AUDIT.md).
 The original two-theorem `verify.sh` entry point is unchanged.
 
-The continuation verifier passed its clean 16-module rebuild and all
-109 axiom checks with exit zero. Evidence:
+The continuation verifier passed its clean 19-module rebuild and all
+151 axiom checks with exit zero. Evidence:
 [source-family-clean-build.log](formal/source-family-clean-build.log) and
 [source-family-axioms.txt](formal/source-family-axioms.txt). The only diagnostic
 was an existing stylistic linter warning in `BasisCertificate.lean`.

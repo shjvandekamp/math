@@ -7,8 +7,11 @@ import PanelMoments.SourceConditional
 import PanelMoments.SourceJointImage
 import PanelMoments.BinaryTransferAlgebra
 import PanelMoments.BinaryTransferSpan
+import PanelMoments.BinaryTransferEndpoints
+import PanelMoments.BinaryTransferIndependence
+import PanelMoments.BinaryTransferRank
 
-/- These checks cover source recursion and auxiliary constant-span algebra;
+/- These checks cover source recursion and the auxiliary binary rank theorem;
    arbitrary-period source independence is not asserted. -/
 
 #check PanelMoments.PermutationMoments.sourceMoment_isMoment
@@ -149,3 +152,58 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.BinaryTransferSpan.baselineR_outer_peel
 #print axioms PanelMoments.BinaryTransferSpan.baselineQ_sub_parity_mem
 #print axioms PanelMoments.BinaryTransferSpan.baselineR_sub_parity_mem
+
+#check PanelMoments.BinaryTransferEndpoints.defectPolynomial_eval
+#check PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_zero
+#check PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_top
+#check PanelMoments.BinaryTransferEndpoints.separate_actual_pair
+#print axioms PanelMoments.BinaryTransferEndpoints.factorPolynomial_eval
+#print axioms PanelMoments.BinaryTransferEndpoints.pairPolynomial_eval
+#print axioms PanelMoments.BinaryTransferEndpoints.defectPolynomial_eval
+#print axioms PanelMoments.BinaryTransferEndpoints.defectPolynomial_natDegree_le
+#print axioms PanelMoments.BinaryTransferEndpoints.prefixProduct_coeff_zero
+#print axioms PanelMoments.BinaryTransferEndpoints.prefixProduct_coeff_top
+#print axioms PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_zero
+#print axioms PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_top
+#print axioms PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_zero_ne_zero
+#print axioms PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_top_ne_zero
+#print axioms PanelMoments.BinaryTransferEndpoints.defectPolynomial_natDegree
+#print axioms PanelMoments.BinaryTransferEndpoints.separate_endpoints
+#print axioms PanelMoments.BinaryTransferEndpoints.evaluation_injective
+#print axioms PanelMoments.BinaryTransferEndpoints.defectPolynomial_as_function
+#print axioms PanelMoments.BinaryTransferEndpoints.separate_actual_pair
+
+#check PanelMoments.BinaryTransferIndependence.pairedSpan_le_clearedSpace
+#check PanelMoments.BinaryTransferIndependence.linearIndependent_pairedDefect
+#check PanelMoments.BinaryTransferIndependence.affine_mem_pairedSpan_iff
+#print axioms PanelMoments.BinaryTransferIndependence.clearedSpace_mono
+#print axioms PanelMoments.BinaryTransferIndependence.mulZ_mem_clearedSpace
+#print axioms PanelMoments.BinaryTransferIndependence.prefixDefect_mem_clearedSpace
+#print axioms PanelMoments.BinaryTransferIndependence.pairedSpan_le_clearedSpace
+#print axioms PanelMoments.BinaryTransferIndependence.affine_mem_clearedSpace
+#print axioms PanelMoments.BinaryTransferIndependence.affine_eq_zero_iff
+#print axioms PanelMoments.BinaryTransferIndependence.slot_relation_with_affine
+#print axioms PanelMoments.BinaryTransferIndependence.pairedSpan_eq_span_pairedDefect
+#print axioms PanelMoments.BinaryTransferIndependence.paired_sum_eq_slot_sum
+#print axioms PanelMoments.BinaryTransferIndependence.paired_relation_with_affine
+#print axioms PanelMoments.BinaryTransferIndependence.linearIndependent_pairedDefect
+#print axioms PanelMoments.BinaryTransferIndependence.affine_mem_pairedSpan_iff
+
+#check PanelMoments.BinaryTransferRank.wordSpan_even
+#check PanelMoments.BinaryTransferRank.wordSpan_odd
+#check PanelMoments.BinaryTransferRank.finrank_wordSpan_parity
+#print axioms PanelMoments.BinaryTransferRank.wordQ_sub_baseline
+#print axioms PanelMoments.BinaryTransferRank.wordR_sub_baseline
+#print axioms PanelMoments.BinaryTransferRank.wordSpan_eq_paired_sup_baseline
+#print axioms PanelMoments.BinaryTransferRank.wordSpan_even
+#print axioms PanelMoments.BinaryTransferRank.wordSpan_odd
+#print axioms PanelMoments.BinaryTransferRank.block_combination_eq_affine
+#print axioms PanelMoments.BinaryTransferRank.block_coefficients_eq_zero
+#print axioms PanelMoments.BinaryTransferRank.linearIndependent_augmentedColumn
+#print axioms PanelMoments.BinaryTransferRank.card_activeSlot
+#print axioms PanelMoments.BinaryTransferRank.card_pairIndex
+#print axioms PanelMoments.BinaryTransferRank.finrank_pairedSpan
+#print axioms PanelMoments.BinaryTransferRank.finrank_augmentedSpan
+#print axioms PanelMoments.BinaryTransferRank.finrank_wordSpan_even
+#print axioms PanelMoments.BinaryTransferRank.finrank_wordSpan_odd
+#print axioms PanelMoments.BinaryTransferRank.finrank_wordSpan_parity

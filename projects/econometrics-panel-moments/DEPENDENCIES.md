@@ -31,8 +31,10 @@ recorded in VERIFICATION.md.
 | Exact empty/singleton coordinates for every new index | Omitted-zero shared-set classification and explicit inverse constructors | Lean checked: SourceNewIndices |
 | Conditional induction from shorter families and new images | Actual tail-expectation kernel and index partition | Lean checked: SourceConditional; new-image independence is an explicit unresolved hypothesis |
 | Joint and conditional image independence agree | Positive first-transition multiplier is injective | Lean checked: SourceJointImage |
-| Auxiliary binary scalar parity and baseline remainders | Actual prefix identities and constant-real span induction | Lean checked: BinaryTransferAlgebra, BinaryTransferSpan; rank not asserted |
-| Auxiliary binary parity rank and shared-new polar nonvanishing | Laurent endpoint separation and explicit even-kernel perturbation | Paper proofs and internal audit; not Lean checked; regular Schur half remains open |
+| Auxiliary binary scalar parity and baseline remainders | Actual prefix identities and constant-real span induction | Lean checked: BinaryTransferAlgebra, BinaryTransferSpan |
+| Auxiliary binary rank for the actual move-first words | Polynomial endpoint separation, paired-defect independence, actual word identities and parity spans | Lean checked: BinaryTransferEndpoints, BinaryTransferIndependence, BinaryTransferRank |
+| Shared-new polar nonvanishing at every length | Binary rank and explicit even-kernel perturbation | Paper proof and internal audit; not Lean checked; regular Schur half remains open |
+| Explicit regular quotient coordinates and Schur equivalence | Divided old-line residues, coordinate-edge evaluations and transformed single-block correction | Paper proof and internal audit; finite exact entrywise checks; no source determinant assertion |
 | Quotient reduction to a quadratic-size residue determinant | Conditional sums, line residues and local-pair coordinates | Mathematical derivation in research/SOURCE24_INDUCTION.md; not Lean checked |
 | Arbitrary-T independence of the source’s particular family | A separate argument beyond dimension | Open; not claimed by the structural theorem |
 

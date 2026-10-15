@@ -52,3 +52,27 @@ comparisons. Results are saved in
 [binary-polar-derivative-results.json](../exploration/binary-polar-derivative-results.json).
 Those finite checks corroborate the derivation and do not substitute for
 its all-length argument. No Lean process was run by the reviewer.
+
+## Follow-up: regular quotient coordinates
+
+A subsequent read-only review checked the note's equations (S3)–(S7).
+The no-new-pole space decomposes as the untransformed old space, the regular
+canonical columns C, and the three polynomial rows H. The coordinate-edge
+functionals annihilate the old and polynomial parts and give, for each old
+line, an invertible diagonal scaling of the transpose of the new table's
+inverse. The matching component's divided residue exists by the old
+base-point vanishing condition. The proof must require every coordinate-edge
+point to avoid every other old and new denominator line.
+
+The transformed old single-block moments have a nonzero C correction; the
+raw edge functionals do not annihilate them. The corrected Delta coordinates
+do. After old-old double residues and new polar residues have been eliminated,
+the divided old-line residue is a homogeneous linear zero-sum row. Its unique
+decomposition into the three H rows and the old residue row defines Delta.
+These coordinates are the identity on C and zero on transformed old
+single-block and polynomial rows. The review checked this uniqueness and the
+correction sign explicitly.
+
+This gives complete coordinates for the remaining regular quotient. It does
+not prove independence of the specified source columns in those coordinates
+or nonsingularity of their Schur matrix.

@@ -44,8 +44,9 @@ induction criterion, plus external exact full-rank checks at
 T=5,6, and a quadratic-size residue reduction checked by exact computation
 through T=8. The original conic witness
 has an exact T5 residue failure; a perturbed economic witness passes the finite
-checks. An auxiliary binary parity proof and an audited perturbation argument now
-prove nonvanishing of the shared-new polar half at every length on the
+checks. The auxiliary binary parity rank theorem is now Lean checked for
+the actual reordered transfer words. Together with an audited paper perturbation
+argument, it proves nonvanishing of the shared-new polar half at every length on the
 common-G, independent-time family. The regular Schur half and the all-T
 determinant proof remain open. See
 [the continuation note](research/SOURCE24_INDUCTION.md) and

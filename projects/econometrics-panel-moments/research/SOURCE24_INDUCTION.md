@@ -3,7 +3,7 @@
 Research note, 15 October 2026. The algebraic arguments below reduce the
 three-choice independence problem to explicit finite determinants and prove
 generic nonvanishing of the shared-new polar half. Some supporting source
-recursion statements and the binary scalar-span parity recurrence are now
+recursion statements and the actual binary moved-word rank theorem are now
 formalized in Lean; [STATUS.md](../STATUS.md) gives the exact scope. The
 polar theorem is a paper proof. Nonvanishing of the remaining regular Schur
 half for every panel length remains unproved, so the complete all-length
@@ -433,6 +433,157 @@ image has dimension \(9m\), and its kernel has dimension
 without identifying them as independent coordinates for the specified
 long-suffix source columns. That last inference remains open.
 
+The regular part also has explicit coordinates at the intersections with
+coordinate axes. These are paper linear-algebra lemmas, not a proof of
+nonvanishing of (S2). Define the homogeneous linear zero-sum rows
+
+\[
+ H_b(X)=e_bA_N^{-1}\operatorname{diag}(L_N)-X_be_b,
+ \qquad
+ C_{t,a,b}=B_{t,N,a,b}K_N^{-1}
+       =A_t(a,b)\frac{X_a}{L_{ta}}H_b(X). \tag{S3}
+\]
+
+Let \(\mathcal N\) be the no-new-pole space described above. In
+addition to the earlier structural assumptions, require that every
+coordinate-edge intersection
+\(P_{t,a;i}=\{L_{ta}=X_i=0\}\), for all \(i\), lies on no
+other old or new denominator line. This follows from the cross-block
+coordinate nonvanishing assumption for lines in different blocks and
+must also hold for the remaining within-block incidences. Retain all
+nonzero coefficients used below; in particular the off-diagonal entries
+of \(A_N\) are nonzero. Then
+
+\[
+ \mathcal N=W_m\oplus\operatorname{span}\{C_{t,a,b}\}
+                    \oplus\operatorname{span}\{H_0,H_1,H_2\}.
+ \tag{S4}
+\]
+
+Here \(W_m\) is the untransformed old space. It belongs to
+\(\mathcal N\): its component \(i\) has a factor \(X_i\),
+so the extra condition at \(R_{Ni}\) holds. The \(H_b\) belong
+to \(\mathcal N\) because \(H_b=E_{N,b}K_N^{-1}\).
+For a direct coordinate proof of (S4), write
+\(\mathcal R_{ta}(g)=(L_{ta}g)|_{L_{ta}=0}\). For \(i\ne a\)
+define
+
+\[
+ \Gamma_{t,a;i}(g)=
+  \frac{\mathcal R_{ta}(g)_i(P_{t,a;i})}
+       {X_a(P_{t,a;i})L_{Ni}(P_{t,a;i})},
+\]
+
+and for \(i=a\) first divide \(\mathcal R_{ta}(g)_a\) by
+\(X_a\) on the old line, then evaluate at \(P_{t,a;a}\) and
+divide by \(L_{Na}(P_{t,a;a})\). This divided residue is well
+defined: if \(g=f/D_{\mathrm{old}}\in\mathcal N\), then
+\(f_a\) vanishes at the matching old base point, and the other
+old denominator factors are nonzero there. Thus its restriction to
+the line has the factor \(X_a\).
+
+All three \(\Gamma\) functionals vanish on \(W_m\). For
+\(i\ne a\) this is the component's factor \(X_i\); for
+\(i=a\), after dividing that factor, the remaining old coefficient
+vanishes at its base point. They also vanish on the polynomial \(H_b\).
+On the regular columns they give the diagonal-by-old-line blocks
+
+\[
+ \Gamma_{t,a;i}(C_{t,a,b})=A_t(a,b)(A_N^{-1})_{bi},
+ \qquad
+ \Gamma_{t,a;i}(C_{u,c,b})=0\quad((u,c)\ne(t,a)). \tag{S5}
+\]
+
+These three-by-three blocks are invertible. The \(H_b\) are
+independent: if \(d=cA_N^{-1}\), the coefficient of \(X_j\),
+\(j\ne i\), in component \(i\) of \(\sum_b c_bH_b\)
+is \(d_iA_N(i,j)\), forcing \(d=0\) and \(c=0\).
+Also \(W_m\) contains no nonzero homogeneous linear polynomial
+row. Coprimality of each \(X_i\) and \(D_{\mathrm{old}}\)
+would force such a row's components to be \(c_iX_i\), and row-sum
+zero forces every \(c_i=0\). Hence the displayed sum is direct.
+Its dimension is the previously established
+\(\dim W_m+9m+3=\dim\mathcal N\), proving exhaustion.
+
+These coordinates expose the graph terms of the transformed old source
+columns. For old \(t,s\), and also for the single-block vectors,
+
+\[
+ F^B_{t,s,a,b}K_N^{-1}
+       =F^{B\setminus\{N\}}_{t,s,a,b}+C_{t,a,b},
+\]
+\[
+ E_{t,a}K_N^{-1}=E_{t,a}+H_a-\sum_b C_{t,a,b}. \tag{S6}
+\]
+
+Thus a long old source column's regular correction depends only on
+\((t,a,b)\), independently of \(s\), whereas an old single-block
+column has the correction \(-\sum_bC_{t,a,b}\). The latter
+cannot be ignored merely because double residues discard single-block
+columns. In particular, \(\Gamma\) by itself does not annihilate
+the transformed old source space.
+
+There is an exact correction after the old-old residues and the new
+polar residues have been eliminated. By (S4), and the old canonical
+basis whose double residues isolate every old local pair, the remaining
+space is
+\(\operatorname{span}\{E_{t,a},C_{t,a,b},H_b\}\).
+For each old line its divided residue
+\(r=\mathcal R_{ta}(g)/X_a\) is therefore a homogeneous linear
+zero-sum row on that line. Put
+
+\[
+ \eta_i=\frac{r_i(P_{t,a;i})}{L_{Ni}(P_{t,a;i})},\qquad
+ \gamma=\eta A_N.
+\]
+
+The row \(r-\sum_b\gamma_bH_b\) has component \(i\)
+vanishing at \(X_i=0\) on the old line. Hence its components are
+\(k_iX_i\) on that line; row-sum zero implies
+\((k_i)_i=\lambda(A_t(a,i))_i\) for a unique scalar \(\lambda\).
+Equivalently there is a unique decomposition
+
+\[
+ r=\sum_b\gamma_bH_b+\lambda v_{ta}.
+\]
+
+The resulting three regular coordinates are
+
+\[
+ \Delta_{t,a;b}(g)=\frac{\gamma_b}{A_t(a,b)}-\lambda.
+ \tag{S7}
+\]
+
+They give the identity on the three columns \(C_{t,a,b}\), and
+vanish on the new polynomial \(H_b\). For the transformed old
+single-block column (S6), its divided residue is
+\(-v_{ta}-\sum_b A_t(a,b)H_b\), so
+\(\gamma_b/A_t(a,b)=-1\) and \(\lambda=-1\); (S7) therefore
+vanishes as required. All evaluations and the extraction of \(\lambda\)
+at a fixed nonzero component on the line are constant-linear operations.
+The \(9m\) coordinates (S7) consequently give a complete coordinate
+system on the remaining quotient by the transformed old single-block
+columns and new polynomial columns. Applied after the eliminations in
+(S1), they provide an equivalent description of the unresolved regular
+matrix \(H\). No nonvanishing assertion for that source matrix
+follows merely from this canonical coordinate lemma.
+
+A proposed way to recover the old coefficient-sum incidence map from
+axis-normal restrictions and one matching-basepoint normal jet per old
+line fails. The observations are the complete functions
+\((F_i/X_i)|_{X_i=0}\), represented by \(2m+1\) evaluations
+per axis, together with the \(3m\) specified scalar jets. In
+`exploration/source24_axis_jet_incidence.py` and
+`exploration/source24-axis-jet-incidence-results.json`,
+the \(m=3\) observation matrix has 30 rows while stacking the
+incidence map underneath has rank 54; at \(m=4\) the corresponding
+numbers are 39 and 75. The nonzero modular minors exceed the universal
+observation row counts. After clearing the verified denominators, they
+therefore certify nonfactorization over the reals at these rational
+fixtures and generically, rather than merely a deficient modular rank.
+This rules out that particular recovery of the incidence map. It does
+not prove singularity of the regular matrix \(H\).
+
 A simple absorbing-state limit also does not settle the determinant.
 For \(G_h=((1,1,1),(1,2,4),(1,4,h))\), put
 \(\varepsilon=h^{-1}\) and change effect coordinates to
@@ -799,8 +950,12 @@ Assume \(\rho\ne0,1\), all \(c_i\ne0\), and consecutive
 \(c_i\)'s distinct. The rank means linear independence over constant
 real coefficients, for rational functions of \(z\); it is not rank
 over \(\mathbb R(z)\). Lean now proves the scalar-span parity
-recurrence and both baseline remainders below; the Laurent endpoint
-independence and full rank formula are not yet formalized.
+recurrence, both baseline remainders, Laurent endpoint independence,
+and the rank theorem for the actual nonempty moved-word family of
+normalized \(Q/R\) prefix sums under the displayed assumptions.
+Identifying those sums with the matrix-product columns \(q(P_s),zr(P_s)\)
+after division by the common determinant product remains a paper
+argument, as does the later polar perturbation.
 
 Let \(Q^{(k)},R^{(k)}\) be the ascending prefix sums for the first
 \(k\) blocks, with empty sums zero, and write

@@ -60,8 +60,8 @@ proved equivalent to the tail map by injective multiplication by the positive
 first transition. Its identification with the research note's rational
 transfer formulas remains unformalized.
 
-The dedicated verifier rebuilt all 16 modules in this closure and checked
-109 declarations; its axiom checks report only the three permitted foundational
+The dedicated verifier rebuilt all 19 modules in this closure and checked
+151 declarations; its axiom checks report only the three permitted foundational
 axioms. Evidence is in
 `formal/source-family-clean-build.log` and `formal/source-family-axioms.txt`,
 with independent statement reviews in `reviews/SOURCE24_FOUNDATIONS_AUDIT.md`
@@ -74,9 +74,13 @@ their nonzero curvature is not a full determinant. The tested constant-time
 and normalized sparse witnesses give deficient modular evaluation matrices.
 For the absorbing-state degeneration, a legitimate first-jet elimination
 reaches full rank at n=2 but only 51 of 63 columns at n=3. The auxiliary
-binary family now has a general paper proof of rank 2m for odd m and 2m−2 for even m. Lean proves the actual scalar-span parity recurrence
-and both baseline remainders using constant real coefficients; Laurent endpoint
-independence and the rank formula are not yet formalized.
+binary family now has a Lean proof of rank 2m for odd m and 2m−2 for even m.
+It treats the actual move-first Q/R words, proves their relation to the prefix
+defects, and establishes endpoint separation, paired-defect independence,
+and the parity span identities over constant real coefficients. The theorem
+assumes a nonempty coefficient list, rho different from zero and one, nonzero
+entries, and adjacent distinctness. It is an auxiliary binary result, not
+equation-(24) source independence.
 
 The next paper argument restores the two missing directions at even length
 by an asymmetric last-block perturbation. Its explicit two-dimensional
@@ -92,6 +96,18 @@ The exact block elimination now isolates a regular matrix H of size
 9(T−3). Six finite asymmetric fixtures give full H ranks 18, 27, and 36
 for T=5,6,7, with determinant factors checked; these are recorded in
 `exploration/source24-schur-results.json`, not an all-T proof.
+
+The regular quotient now has explicit constant-linear coordinates Delta.
+They annihilate the transformed old single-block moments, give the identity
+on the regular canonical columns, and reproduce the Schur matrix after a
+nonzero diagonal row scaling. The derivation was independently reviewed;
+`exploration/source24_regular_coordinates.py` checks these identities at
+four finite fixtures. An attempted recovery of the old incidence coefficient
+sums from axis restrictions and 3m matching normal derivatives fails: exact
+stacked minors have sizes 54 and 75 at m=3,4, exceeding the observation
+row counts 30 and 39. This rules out that proposed factorization on a generic
+parameter set. It does not disprove source independence or richer methods.
+The reproducible obstruction is in the source24-axis-jet-incidence files.
 
 ## Finite theorem
 
@@ -161,8 +177,9 @@ silently assumed by either proved theorem, and no result below is claimed.
    The exact recursive index bijection, source-lift equality, new-index
    parameterization, and conditional induction criterion are now proved.
    The joint/conditional map equivalence is now proved. Next formalize its
-   rational transfer and residue formulas, the remaining binary independence
-   lemmas, and the audited polar theorem. The full Schur complement has size
+   rational transfer and residue formulas and the audited polar theorem.
+   The auxiliary binary independence and rank lemmas are now formalized.
+   The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final
    nonvanishing on the common-G family and apply the scalar-covariate bridge.

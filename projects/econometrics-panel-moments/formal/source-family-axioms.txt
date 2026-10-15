@@ -256,3 +256,126 @@ PanelMoments.BinaryTransferSpan.baselineR_sub_parity_mem (ρ d : ℝ) (cs : List
 'PanelMoments.BinaryTransferSpan.baselineR_outer_peel' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PanelMoments.BinaryTransferSpan.baselineQ_sub_parity_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PanelMoments.BinaryTransferSpan.baselineR_sub_parity_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+PanelMoments.BinaryTransferEndpoints.defectPolynomial_eval (ρ c z : ℝ) (cs : List ℝ) (hρ : ρ ≠ 1) (hc : c ≠ 0)
+  (hz : z ≠ 0) (hcs : ∀ e ∈ cs, e ≠ 0) :
+  Polynomial.eval z (PanelMoments.BinaryTransferEndpoints.defectPolynomial ρ cs c) =
+    z ^ cs.length * PanelMoments.BinaryTransferAlgebra.moveFirst ρ cs c z
+PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_zero (ρ e c : ℝ) (cs : List ℝ) :
+  (PanelMoments.BinaryTransferEndpoints.defectPolynomial ρ (cs ++ [e]) c).coeff 0 =
+    (List.map (fun d => 1 / ((ρ - 1) * d)) cs).prod * PanelMoments.BinaryTransferEndpoints.pairScale ρ e c
+PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_top (ρ e c : ℝ) (cs : List ℝ) :
+  (PanelMoments.BinaryTransferEndpoints.defectPolynomial ρ (cs ++ [e]) c).coeff (2 * (cs.length + 1)) =
+    (List.map (fun d => ρ * d / (ρ - 1)) cs).prod * (PanelMoments.BinaryTransferEndpoints.pairScale ρ e c * ρ * e * c)
+PanelMoments.BinaryTransferEndpoints.separate_actual_pair (ρ e c : ℝ) (cs : List ℝ) (p : Polynomial ℝ) (a b : ℝ)
+  (f : PanelMoments.BinaryTransferSpan.FunctionSpace) (hρ0 : ρ ≠ 0) (hρ : ρ ≠ 1) (hcs : ∀ d ∈ cs, d ≠ 0) (he : e ≠ 0)
+  (hc : c ≠ 0) (hec : e ≠ c) (hp : p.natDegree ≤ 2 * cs.length + 1)
+  (hrep : ∀ (z : PanelMoments.BinaryTransferSpan.NonzeroReal), Polynomial.eval (↑z) p = ↑z ^ cs.length * f z)
+  (hrel :
+    a • PanelMoments.BinaryTransferSpan.defect ρ (cs ++ [e]) c +
+          b • PanelMoments.BinaryTransferSpan.mulZ (PanelMoments.BinaryTransferSpan.defect ρ (cs ++ [e]) c) +
+        f =
+      0) :
+  a = 0 ∧ b = 0 ∧ f = 0
+'PanelMoments.BinaryTransferEndpoints.factorPolynomial_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.pairPolynomial_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.defectPolynomial_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.defectPolynomial_natDegree_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.prefixProduct_coeff_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.prefixProduct_coeff_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_top' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_zero_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.defectPolynomial_coeff_top_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.defectPolynomial_natDegree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.separate_endpoints' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.evaluation_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.defectPolynomial_as_function' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferEndpoints.separate_actual_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+PanelMoments.BinaryTransferIndependence.pairedSpan_le_clearedSpace (ρ : ℝ) (cs : List ℝ) (k : ℕ)
+  (hsize : cs.length ≤ k + 1) (hρ : ρ ≠ 1) (hcs : ∀ c ∈ cs, c ≠ 0) :
+  PanelMoments.BinaryTransferSpan.pairedSpan ρ cs ≤ PanelMoments.BinaryTransferIndependence.clearedSpace k (2 * k + 1)
+PanelMoments.BinaryTransferIndependence.linearIndependent_pairedDefect (ρ : ℝ) (cs : List ℝ) (hρ0 : ρ ≠ 0) (hρ : ρ ≠ 1)
+  (hcs : ∀ c ∈ cs, c ≠ 0) (hadj : List.IsChain (fun x y => x ≠ y) cs) :
+  LinearIndependent ℝ (PanelMoments.BinaryTransferIndependence.pairedDefect ρ cs)
+PanelMoments.BinaryTransferIndependence.affine_mem_pairedSpan_iff (ρ : ℝ) (cs : List ℝ) (a b : ℝ) (hρ0 : ρ ≠ 0)
+  (hρ : ρ ≠ 1) (hcs : ∀ c ∈ cs, c ≠ 0) (hadj : List.IsChain (fun x y => x ≠ y) cs) :
+  PanelMoments.BinaryTransferIndependence.affine a b ∈ PanelMoments.BinaryTransferSpan.pairedSpan ρ cs ↔ a = 0 ∧ b = 0
+'PanelMoments.BinaryTransferIndependence.clearedSpace_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferIndependence.mulZ_mem_clearedSpace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.prefixDefect_mem_clearedSpace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.pairedSpan_le_clearedSpace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.affine_mem_clearedSpace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.affine_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferIndependence.slot_relation_with_affine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.pairedSpan_eq_span_pairedDefect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.paired_sum_eq_slot_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.paired_relation_with_affine' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.linearIndependent_pairedDefect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferIndependence.affine_mem_pairedSpan_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+PanelMoments.BinaryTransferRank.wordSpan_even (ρ c : ℝ) (cs : List ℝ) (hρ : ρ ≠ 1) (hcs : ∀ d ∈ cs, d ≠ 0) (hc : c ≠ 0)
+  (hadj : List.IsChain (fun x y => x ≠ y) (cs ++ [c])) (heven : (cs.length + 1) % 2 = 0) :
+  PanelMoments.BinaryTransferRank.wordSpan ρ (cs ++ [c]) = PanelMoments.BinaryTransferSpan.pairedSpan ρ (cs ++ [c])
+PanelMoments.BinaryTransferRank.wordSpan_odd (ρ c : ℝ) (cs : List ℝ) (hρ : ρ ≠ 1) (hcs : ∀ d ∈ cs, d ≠ 0) (hc : c ≠ 0)
+  (hadj : List.IsChain (fun x y => x ≠ y) (cs ++ [c])) (hodd : (cs.length + 1) % 2 = 1) :
+  PanelMoments.BinaryTransferRank.wordSpan ρ (cs ++ [c]) = PanelMoments.BinaryTransferRank.augmentedSpan ρ (cs ++ [c]) c
+PanelMoments.BinaryTransferRank.finrank_wordSpan_parity (ρ : ℝ) (cs : List ℝ) (hne : cs ≠ []) (hρ0 : ρ ≠ 0) (hρ : ρ ≠ 1)
+  (hcs : ∀ c ∈ cs, c ≠ 0) (hadj : List.IsChain (fun x y => x ≠ y) cs) :
+  Module.finrank ℝ ↥(PanelMoments.BinaryTransferRank.wordSpan ρ cs) =
+    if cs.length % 2 = 1 then 2 * cs.length else 2 * cs.length - 2
+'PanelMoments.BinaryTransferRank.wordQ_sub_baseline' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.wordR_sub_baseline' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.wordSpan_eq_paired_sup_baseline' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferRank.wordSpan_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.wordSpan_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.block_combination_eq_affine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.block_coefficients_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.linearIndependent_augmentedColumn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferRank.card_activeSlot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.card_pairIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.finrank_pairedSpan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.finrank_augmentedSpan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.finrank_wordSpan_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.finrank_wordSpan_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferRank.finrank_wordSpan_parity' depends on axioms: [propext, Classical.choice, Quot.sound]
