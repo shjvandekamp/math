@@ -30,6 +30,9 @@ recorded in VERIFICATION.md.
 | Actual source-index and moment-function recursion | Shared-slot insertion, canonical order transport, and first-scale cancellation | Lean checked: PermutationLifts, SourceRecursion, SourceLifts |
 | Exact empty/singleton coordinates for every new index | Omitted-zero shared-set classification and explicit inverse constructors | Lean checked: SourceNewIndices |
 | Conditional induction from shorter families and new images | Actual tail-expectation kernel and index partition | Lean checked: SourceConditional; new-image independence is an explicit unresolved hypothesis |
+| Joint and conditional image independence agree | Positive first-transition multiplier is injective | Lean checked: SourceJointImage |
+| Auxiliary binary scalar parity and baseline remainders | Actual prefix identities and constant-real span induction | Lean checked: BinaryTransferAlgebra, BinaryTransferSpan; rank not asserted |
+| Auxiliary binary parity rank and shared-new polar nonvanishing | Laurent endpoint separation and explicit even-kernel perturbation | Paper proofs and internal audit; not Lean checked; regular Schur half remains open |
 | Quotient reduction to a quadratic-size residue determinant | Conditional sums, line residues and local-pair coordinates | Mathematical derivation in research/SOURCE24_INDUCTION.md; not Lean checked |
 | Arbitrary-T independence of the source’s particular family | A separate argument beyond dimension | Open; not claimed by the structural theorem |
 

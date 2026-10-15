@@ -1,10 +1,13 @@
 # Equation (24): an induction and a quadratic-size residue test
 
-Research note, 15 October 2026. The algebraic arguments below establish a
-reduction of the three-choice independence problem to explicit finite
-determinants. They are mathematical proofs and derivations, **not new Lean
-theorems**. Nonvanishing of those determinants for every panel length on the
-economic parameter family remains unproved.
+Research note, 15 October 2026. The algebraic arguments below reduce the
+three-choice independence problem to explicit finite determinants and prove
+generic nonvanishing of the shared-new polar half. Some supporting source
+recursion statements and the binary scalar-span parity recurrence are now
+formalized in Lean; [STATUS.md](../STATUS.md) gives the exact scope. The
+polar theorem is a paper proof. Nonvanishing of the remaining regular Schur
+half for every panel length remains unproved, so the complete all-length
+source-independence claim remains open.
 
 ## Exact split of the source family
 
@@ -344,6 +347,54 @@ invertible two-dimensional coordinate changes at the old cross-points,
 whenever those \(K_N(P)\) are invertible. This gives a Schur-complement
 reduction with \(18(n-1)\) new rows and columns. It does not prove that the
 Schur complement is nonsingular.
+
+The remaining determinant can be isolated more precisely. Put
+\(m=n-1\). At each old-new cross-point, expand the residue vector
+in the basis \((v_{\mathrm{old}},v_N)\), and call its two scalar
+coordinates \(\alpha,\beta\), respectively. Order the rows as
+old-old residues, old-new \(\alpha\), old-new \(\beta\), and
+the columns as old-old source pairs, pairs with \(t=N\), and pairs
+with \(s=N\). The exact block matrix is
+
+\[
+ R_n\sim
+ \begin{pmatrix}
+ O&D&E\\
+ 0&P&Q\\
+ B&R&S
+ \end{pmatrix}. \tag{S1}
+\]
+
+Here \(O\) is the transported old residue matrix just described,
+and each of the last two row or column groups has size \(9m\).
+The zero block is exact: in every old-old source column, \(K_N\)
+is last in the word, and its new-line residue is parallel to \(v_N\).
+The polar theorem below proves that \(P\) is generically invertible
+on the common-\(G\), independent-time family. Assuming also that
+\(O\) is invertible, ordinary constant-matrix elimination leaves
+the single \(9m\)-square target
+
+\[
+ H=S-BO^{-1}E-(R-BO^{-1}D)P^{-1}Q. \tag{S2}
+\]
+
+In the displayed row and column orders,
+\(\det R_n=\det O\det P\det H\), with the coordinate-change
+and permutation factors restored when comparing to the original
+matrix. Proving generic nonvanishing of \(H\) for every \(m\)
+is the remaining regular-half problem; the polar theorem alone does
+not prove it.
+
+The independent finite calculation `exploration/source24_schur.py`,
+recorded in `exploration/source24-schur-results.json`, verifies (S1),
+(S2), the transported old block, and the determinant factors with
+permutation signs at six asymmetric positive fixtures. They use
+\(G=\left(\begin{smallmatrix}1&1&1\\1&30&10\\1&3&2\end{smallmatrix}\right)\),
+\(m=2,3,4\), economic old time factors, and new factors
+\((1,\varepsilon,\varepsilon^3)\) at
+\(\varepsilon=1/7,2/11\). In these exact modular checks the
+regular matrices have full ranks \(18,27,36\), respectively.
+These are finite witnesses, not an all-length proof for (S2).
 
 The two halves of the inverse-matrix filtration can be described exactly.
 Write \(n=m+1\), let \(D_{\mathrm{old}}\) be the product of the old lines,
@@ -736,54 +787,113 @@ rules out that particular simple leading block, not the complete
 Schur complement: the other new columns and higher powers of
 \(\varepsilon\) have not been eliminated or shown dependent.
 
-There is nevertheless a complete nonvanishing argument for this binary
-subproblem when \(m\) is odd. Fix \(c>0\) and \(\rho>0\),
-\(\rho\ne1\), and set \(c_i=c+\delta\xi_i\), with consecutive
-\(\xi_i\)'s distinct. Use the constant column transformation to the
-two ascending baseline columns and \(h_s,z h_s\), then divide each
-difference column by the parameter \(\delta\). At \(\delta=0\),
-put
+In fact the binary rank has an exact parity law for every length:
 
 \[
- H=\frac{(1+cz)(1+\rho cz)}{(\rho-1)cz},\qquad
- J=z^{-1}+2\rho c+\rho c^2z=c(\rho-1)(H+1).
+ \operatorname{rank}\{q(P_s),zr(P_s):1\le s\le m\}
+ =\begin{cases}2m,&m\text{ odd},\\2m-2,&m\text{ even}.
+ \end{cases} \tag{L2}
 \]
 
-The limits of \(h_s/\delta\) are triangular nondegenerate combinations
-of \(JH^j\), \(0\le j\le s-2\): the coefficient of the last
-power is proportional to \(\xi_{s-1}-\xi_s\). The Laurent space
-supported on \(1-m,\ldots,m\) has the basis
-\(H^j,zH^j\), \(0\le j\le m-1\), as follows by successively
-peeling its two outer powers. The limiting difference columns therefore
-span exactly
+Assume \(\rho\ne0,1\), all \(c_i\ne0\), and consecutive
+\(c_i\)'s distinct. The rank means linear independence over constant
+real coefficients, for rational functions of \(z\); it is not rank
+over \(\mathbb R(z)\). Lean now proves the scalar-span parity
+recurrence and both baseline remainders below; the Laurent endpoint
+independence and full rank formula are not yet formalized.
+
+Let \(Q^{(k)},R^{(k)}\) be the ascending prefix sums for the first
+\(k\) blocks, with empty sums zero, and write
 
 \[
- (H+1)\{p(H)+zq(H):\deg p,\deg q\le m-2\}.
+ A^{(k)}=\prod_{i\le k}H_i=1+Q^{(k)}+R^{(k)}/z.
 \]
 
-In the remaining two-dimensional quotient, evaluation at \(H=-1\)
-leaves the basis \(1,z\). The baseline columns limit to
-\(Q S_m(H)\), \(R S_m(H)\), where
-\(S_m(H)=1+H+\cdots+H^{m-1}\). For odd \(m\),
-\(S_m(-1)=1\), and the coefficient determinant of the two linear
-polynomials \(Q=(1+\rho cz)/(\rho-1)\) and
-\(R=(1+cz)/((\rho-1)c)\) is \(-1/(\rho-1)\ne0\).
-Thus the entire limiting coefficient matrix is nonsingular. This proves
-generic binary independence for every odd \(m\), with a nonzero
-leading determinant of order \(\delta^{2m-2}\) before the difference
-columns were rescaled. It is a Laurent determinant argument, rather
-than an inference from stacked jets.
+For an appended odds parameter \(c\), write
+\(h_{k+1}(c)=(R_cQ^{(k)}-Q_cR^{(k)})/z\), and set \(h_1=0\).
+Define the scalar Laurent polynomial
 
-For even \(m\), both baseline quotient classes vanish in this
-coalescence. That fact alone does not prove a generic even-length
-deficiency. Exact finite checks in `exploration/binary_laurent.py`
-and `exploration/binary-laurent-results.json` give ranks
+\[
+ \Phi_k(c)=-\frac{1+\rho cz}{z}R^{(k)},\qquad \Phi_0=0.
+\]
+
+With \(e=c_k\), direct substitution gives the exact recurrence
+
+\[
+ \Phi_k(c)=1-\Phi_{k-1}(e)
+       +\frac{\rho-1}{e-c}
+          \bigl(eh_k-ch_{k+1}(c)\bigr). \tag{L3}
+\]
+
+To check it, substitute
+\(Q^{(k)}=U+A^{(k-1)}Q_e\),
+\(R^{(k)}=V+A^{(k-1)}R_e\), where
+\(A^{(k-1)}=1+U+V/z\). The only two-block identity needed is
+
+\[
+ (1+cz)Q_e-e(1+\rho cz)R_e=(e-c)z.
+\]
+
+After multiplying (L3) by \((e-c)z\), the remaining expression is
+\((e-c)z(A^{(k-1)}-1-U-V/z)=0\).
+Induction in (L3) proves that \(\Phi_k(c)\), modulo the scalar
+span of \(h_2,\ldots,h_{k+1}(c)\), is one for odd \(k\) and
+zero for even \(k\).
+
+It remains to connect this scalar recurrence to the two baseline
+columns. For \(m\ge2\), put \(c=c_{m-1}\), \(d=c_m\),
+\(U=Q^{(m-2)}\), \(V=R^{(m-2)}\), and
+
+\[
+ v_Q=\frac{d(1+\rho cz)}{c-d},\qquad
+ v_R=\frac{1+cz}{c-d}.
+\]
+
+The exact outer-column elimination is
+
+\[
+ Q^{(m)}-v_Qh_m=Q_d S,\qquad
+ R^{(m)}-v_Rh_m=R_d S, \tag{L4}
+\]
+
+where
+
+\[
+ S=\frac{d(1+\rho cz)V-(1+cz)U}{(c-d)z}
+   =\Phi_{m-2}(c)-\frac{c(\rho-1)}{c-d}h_{m-1}.
+\]
+
+Although \(v_Q,v_R\) are linear polynomials in \(z\), (L4) uses
+only constant multiples of the already available columns \(h_m,z h_m\).
+For an explicit verification, put \(A=1+U+V/z\). Then
+\(Q^{(m)}=U+A Q_{cd}\), \(R^{(m)}=V+A R_{cd}\), and
+\(h_m=(R_dU-Q_dV)/z+A h_{cd}\). The two-block factorization gives
+\(Q_{cd}=v_Qh_{cd}\), \(R_{cd}=v_Rh_{cd}\), while
+\(R_dv_Q-Q_dv_R=z\). Subtraction proves (L4).
+
+By (L3), \(S\) is congruent to the parity of \(m\) modulo the
+scalar span of the earlier \(h\)'s. Multiplication by the linear
+polynomials \(Q_d,R_d\) puts the discarded terms in the paired span
+of \(h_s,z h_s\). Thus the two baseline remainders are exactly
+\(Q_m,R_m\) for odd \(m\), and both zero for even \(m\).
+The independent paired columns have no nonzero combination supported
+only on \(1,z\), by the same outer-power elimination used above.
+Finally, the coefficient determinant of \(Q_m,R_m\) in that central
+basis is \(-1/(\rho-1)\ne0\). This proves (L2), including \(m=1\).
+
+Under the separate generic assumptions making the row-zero pole block
+nonzero and disjoint from the binary poles, the leading shared-\(N\)
+polar half consequently has rank \(9m\) for odd \(m\), and
+\(9m-6\) for even \(m\): there are three independent new-line
+blocks, each consisting of \(m\) row-zero poles plus the binary rank
+in (L2). These are ranks of this particular leading boundary block.
+They are not ranks of the full Schur complement at general parameters.
+
+The finite calculations in `exploration/binary_laurent.py` and
+`exploration/binary-laurent-results.json` agree with (L2): ranks
 \(2,2,6,6,10,10\) for \(m=1,\ldots,6\), using
-\(\rho=2,-1\) and \(c_i=i\) or \(2^{i-1}\). Their even-length
-baseline remainders are zero; their odd-length remainders are precisely
-\(Q_m,R_m\). These are evidence for a stronger parity identity,
-not yet a proved general even-length statement. The \(m=2\)
-deficiency above is already proved symbolically.
+\(\rho=2,-1\) and \(c_i=i\) or \(2^{i-1}\). The proof above
+establishes the general parity law independently of those checks.
 
 The exact binary kernel can also guide a correction away from the
 boundary. At \(m=2\), write \(A_{12}=P_{12}(1,2)\) and
@@ -799,12 +909,341 @@ The two constant relations at \(X_0=0\) are
 \]
 
 Differentiating these relations gives candidates for the two lost
-directions on each new line. A complete Schur derivative must also
-differentiate the inverse-matrix row functional, the chosen line
-coordinates, and the scalar normalizations, or prove their contributions
-vanish in the quotient. No such complete derivative determinant has been
-established here. The rank-two boundary obstruction must not be promoted
-to singularity of the generic shared-\(N\) polar half.
+directions on each new line. Choosing \(B\ge3\) controls the other
+terms in this derivative: in (L1), the scaled inverse's row two is its
+displayed limit plus \(O(\varepsilon^{B-1})\), and rows zero and one
+are \(O(\varepsilon^{B-1})\). Also
+\(X_0/\varepsilon=-\alpha_a+O(\varepsilon^{B-1})\). Thus the
+inverse-matrix functional and the normalized coordinate prefactors have
+zero first derivative. Only the old transition matrices vary at first
+order, through \(X_0'=-\alpha_a\). A moving old cross-point adds
+\(z'\partial_z\) of a zeroth-order nullrelation, which is zero because
+that relation vanishes identically as a rational function.
+
+More explicitly, at \(X_0=0\) write
+\(k_i=(\eta,1,\rho)_i\), where
+\(\eta=\beta_0\alpha_1/(\alpha_0\beta_1)\). Then
+
+\[
+ K_t^0(i)=\left(0,\frac1{1+k_ic_tz},
+                       \frac{k_ic_tz}{1+k_ic_tz}\right),\qquad
+ \left.\frac{\partial K_t(i)}{\partial X_0}\right|_0
+ =\frac{e_0-K_t^0(i)}{\alpha_i u_t(1+k_ic_tz)}.
+\]
+
+Product differentiation therefore specifies the actual first kernel
+derivatives. Their row-zero pole parts can be removed using the leading
+row-zero columns. The even-length calculation below identifies a
+nonzero coefficient for the two remaining directions. In particular,
+the boundary obstruction does not imply singularity of the generic
+shared-\(N\) polar half.
+
+There is useful remaining parameter freedom. Keeping all \(c_t\) fixed
+while varying \(u_t\), and choosing \(v_t\) accordingly, preserves
+every leading transition matrix and the leading column kernel. Each
+transition derivative has the scalar factor \(1/u_t\). Thus the first
+kernel-derivative matrix after the fixed leading elimination is linear in
+the independent parameters \(1/u_t\); its two-dimensional missing
+determinant on each new line is quadratic in those parameters. A nonzero
+coefficient suffices for this polar correction, but still leaves the
+separate regular half of the full Schur complement.
+
+## An explicit even-length polar first-order coefficient
+
+This section proves an algebraic lemma over constant real column
+coefficients and connects it to the full shared-\(N\) polar block.
+The paper proof received an independent internal audit in
+[SOURCE24_POLAR_AUDIT.md](../reviews/SOURCE24_POLAR_AUDIT.md).
+It is not a proof of independence of the whole source family: the other
+half of the Schur complement is still open. The polar argument has not
+been formalized in Lean.
+
+Let \(m\ge2\) be even, retain \(\rho\ne0,1\), and put
+\(c=c_{m-1}\), \(d=c_m\), \(e=c_1\). Assume all
+\(c_t\ne0\), adjacent \(c_t\)'s are distinct, and write
+
+\[
+ D=\prod_{t=1}^m d_t,\qquad
+ I_m=\operatorname{span}_{\mathbb R}\{h_s,zh_s:2\le s\le m\},
+ \qquad V_m=\operatorname{span}_{\mathbb R}\{z^{1-m},\ldots,z^m\}.
+\]
+
+The parity theorem says \(V_m=I_m\oplus\operatorname{span}\{1,z\}\).
+Write \(\Pi:V_m\to\operatorname{span}\{1,z\}\) for this
+constant-linear projection. For a move-first word \(P_s\), use scalar
+columns \(A_s=q(P_s)\), \(B_s=zr(P_s)\); an overall minus
+sign in the original first column is immaterial.
+
+The row-zero columns must be included in the same scalar quotient.
+If their row odds are \(\eta c_tz\), direct binary propagation gives
+
+\[
+ \frac{P_s(0,2)}D=Q_{\mathrm{word}\ s}+Z_s,\qquad
+ Z_s=\frac{\eta-1}{\rho-1}\frac{1+\rho c_sz}{1+\eta c_sz}.
+ \tag{P1}
+\]
+
+Here \(Q_{\mathrm{word}\ s}=A_s/D\). Since \(m\) is even,
+each such Laurent column belongs to \(I_m\), so the full leading
+scalar span is exactly
+\(I_m+\operatorname{span}\{Z_1,\ldots,Z_m\}\).
+Assume \(\eta\ne0,1,\rho\), and that the poles
+\(-1/(\eta c_s)\) are distinct and disjoint from all binary poles
+\(-1/c_t,-1/(\rho c_t)\). Each \(Z_s\) then has its own
+nonzero pole and the sum is direct. This removal of the Laurent part
+of a row-zero column uses constant combinations of the binary columns.
+
+The two-dimensional binary column kernel can be parametrized by its
+last-word coefficients \((p,q)\), those of \((A_m,B_m)\).
+To see this, let \(S_A,S_B\) be the total coefficients of the two
+column types in a relation. The outer \(h_m,zh_m\) terms in (L4)
+give
+
+\[
+ p=-\frac{dS_A+S_B}{c-d},\qquad
+ q=\frac{\rho cdS_A+cS_B}{c-d}.
+ \tag{P2}
+\]
+
+Their determinant is \(cd(\rho-1)/(c-d)^2\ne0\). The earlier
+paired \(h\) columns determine the other coefficients uniquely.
+Thus choose a constant kernel basis with last coefficients
+\((1,0)\), \((0,1)\). If \(C_A,C_B\) denote the sums over
+the earlier words in any relation, its endpoints give
+
+\[
+ dC_A+C_B=-cp-q,\qquad
+ C_A+\frac{C_B}{\rho d}=-p-\frac q{\rho c}.
+ \tag{P3}
+\]
+
+Indeed the last block is \(m\) for every earlier word and \(m-1\)
+for the last word; at zero the two columns have leading terms
+\(c_{\mathrm{last}}z,z\), and at infinity they have limits
+\(1,1/(\rho c_{\mathrm{last}})\).
+
+Keep every \(c_t\) fixed and isolate the derivative coefficient
+with only \(w_m=1/u_m\) nonzero. Normalize it to one. For now also
+take the boundary \(1/\alpha_1=0\), \(1/\alpha_2=1\).
+The attainable positive-parameter limit justifying this choice is
+given below. The derivative of the last transition then has binary
+row factors \(h_1=0\), \(h_2=r_d=1/(1+\rho dz)\).
+All earlier words end with this transition. If their preceding binary
+distribution is \(\pi\), the derivative of its final probability
+of state two is \(w_1+(w_2-w_1)\pi_2\), where
+\(w_i=-h_iB_m(i,2)\). Consequently
+
+\[
+ A_s'=\lambda A_s+k_A,\quad B_s'=\lambda B_s+k_B\quad(s<m),
+\]
+\[
+ \lambda=-\frac{\rho(1+dz)}{(\rho-1)(1+\rho dz)},\qquad
+ k_A=dk_B,\qquad k_B=\frac{\rho z}{(\rho-1)(1+\rho dz)}.
+ \tag{P4}
+\]
+
+For the last word, let \(q_0=(K_1^0\cdots K_{m-1}^0)_{02}\).
+The exceptional transition is first, so
+\(A_m'=0\) and
+\(B_m'=zr_d(1-q_0)-r_dB_m\).
+Subtracting \(\lambda\) times the identically zero original kernel
+relation, and applying (P3), gives its two derivative defects
+
+\[
+ N_p=\frac{\rho}{(\rho-1)(1+\rho dz)}
+                \bigl((1+dz)A_m-cz\bigr),\qquad
+ N_q=\frac{B_m-zr_d}{\rho-1}-zr_dq_0.
+ \tag{P5}
+\]
+
+Using an effect-dependent multiplier on an identity that is already
+zero here is only a way to compute its derivative; it is not an
+effect-dependent change of source columns. The kernel basis and the
+subsequent quotient operations all have constant coefficients.
+
+Set \(U=Q^{(m-1)}\), \(V=R^{(m-1)}\). The product identities are
+
+\[
+ A_m/D=Q_d+H_dU,\quad B_m/D=R_d+H_dV,\quad
+ q_0/D=H_d(U+Z_1),\quad D^{-1}=H_d(1+U+V/z).
+\]
+
+Substitution in (P5) gives the useful closed forms
+
+\[
+ \frac{N_p}D=\frac{\rho(1+dz)}{(\rho-1)^2dz}
+       \bigl((1+(d-c)z)U-cV+(d-c)z\bigr),
+ \tag{P6}
+\]
+\[
+ \frac{N_q}D=\frac{\rho R_d}{\rho-1}(dV-U)-R_dZ_1.
+ \tag{P7}
+\]
+
+All four shifted Laurent reductions needed for (P6)--(P7) follow
+from the scalar recurrence, without treating a vector-space quotient
+as a ring. Since the prefix length \(m-1\) is odd,
+\(\Pi U=Q_c\), \(\Pi V=R_c\). Also
+\(\Phi_{m-1}(d)=-V/z-\rho dV\) is one modulo the scalar span
+of \(h_2,\ldots,h_m\). Applying this identity and its product by
+\(z\), whose discarded terms are available \(zh_s\) columns,
+gives the last two of
+
+\[
+ \begin{aligned}
+ \Pi(U/z)&=-d-dQ_c,&\quad \Pi(zU)&=-z-Q_c/d,\\
+ \Pi(V/z)&=-1-\rho dR_c,& \Pi(zV)&=-z/(\rho d)-R_c/(\rho d).
+ \end{aligned} \tag{P8}
+\]
+
+The first two follow in the same way from the exact identity
+\((\rho-1)dh_m=U/z+dU+d\Phi_{m-1}(d)\) and its product
+by \(z\). Thus every removal in (P8) uses a constant combination
+of the displayed paired columns.
+
+Expanding (P6) and applying (P8) now yields
+
+\[
+ \Pi(N_p/D)=P(z)=\frac{\rho}{(\rho-1)^2}(1+cz).
+ \tag{P9}
+\]
+
+The Laurent part of (P7) reduces to \(Q_c/((\rho-1)c)\).
+To reduce the positive factor \(R_dZ_1\), remove its row-zero
+pole by subtracting the constant \(R_d(z_0)\) times \(Z_1\),
+with \(z_0=-1/(\eta e)\):
+
+\[
+ (R_d(z)-R_d(z_0))Z_1
+   =\frac{\eta-1}{(\rho-1)^2\eta e}(1+\rho ez).
+ \tag{P10}
+\]
+
+Retaining the minus sign of \(-R_dZ_1\) in (P7), the second
+class modulo the entire leading scalar span is therefore
+
+\[
+ Q(z)=\frac1{(\rho-1)^2}
+       \left(\frac1c-\frac{\eta-1}{\eta e}+\frac\rho\eta z\right).
+ \tag{P11}
+\]
+
+The coefficient determinant of \(P,Q\) in the basis \(1,z\) is
+
+\[
+ \det(P,Q)=\frac{\rho}{\eta(\rho-1)^4}
+       \left(\rho-\eta+\frac ce(\eta-1)\right).
+ \tag{P12}
+\]
+
+It is nonzero for every even \(m\ge2\) at
+\(\rho=2\), \(\eta=3\), \(c_t=5^{t-1}\): the bracket
+is \(-1+2\cdot5^{m-2}>0\). Multipliers \(1,2,3\) times
+different powers of five also give distinct binary and row-zero poles.
+
+Here is how this coefficient is attained in the common-transition
+parameter space. More generally take
+
+\[
+ G_M=\begin{pmatrix}1&1&1\\1&M&M/\eta\\1&b&\rho b/\eta\end{pmatrix},
+ \qquad
+ A_t\sim G_M\operatorname{diag}(w_t,1,\eta c_t),
+ \tag{P13}
+\]
+
+where the table equivalence is multiplication by the nonzero scalar
+\(1/u_t\), and \(w_t=1/u_t\). For positive \(w_t\) this is
+exactly the original table with \(v_t/u_t=\eta c_t\).
+Every leading transition is independent of \(M,w_t\), while its
+row derivative has factor \(w_t/\alpha_i\). Set \(w_m=1\),
+earlier \(w_t=0\), and let \(M\to+\infty\). The row-one
+derivative vanishes and the row-two derivative has the common factor
+\(1/b\). The row-zero transition derivative never enters a binary
+kernel relation: before the last block the leading distribution is
+binary, and in the last word its initial state is binary. Thus (P6)--(P12)
+are precisely this limiting coefficient after division by \(1/b\).
+Restoring it multiplies (P12) by \(1/b^2\).
+
+For the new table choose \(A_N=G_M\operatorname{diag}(1,\varepsilon,
+\varepsilon^B)\) with integer \(B\ge3\). On new line \(a\),
+the derivative also has common factor \(-\alpha_a\). Before
+taking the \(M\) limit, divide by this nonzero factor, normalize
+the explicit coordinate factors, and identify the nonzero inverse row
+functional from (L1) with a scalar. Explicitly its constant row vector
+is
+\(e_2G_M^{-1}\operatorname{diag}(\alpha_j-\alpha_a)\),
+up to the common rational factor \(1/z\). If the \(\alpha_j\)
+are distinct it is nonzero: the nonzero row \(e_2G_M^{-1}\) sums
+to zero because the first column of \(G_M\) is all ones, and
+therefore has at least two nonzero entries. Some component other than
+\(a\) survives. The resulting scalar normalization is constant in
+\(z\), apart from a common injective rational multiplication.
+The scaled inverse functional and normalized coordinate factors have
+zero first \(\varepsilon\) derivative for \(B\ge3\), as shown
+above. This normalization is necessary when \(\alpha_1=M\) grows.
+
+For the explicit choice \(\rho=2,\eta=3,b=3\),
+\(\det G_M=M/3+1\ne0\), and all entries are positive for
+finite positive \(M\). The nonzero limiting rational coefficient
+therefore persists at sufficiently large finite \(M\), and then
+at small positive earlier \(w_t\). This supplies positive finite
+old time factors, with one common positive invertible \(G_M\).
+The same coefficient, up to the described nonzero factors, works on
+all three new lines simultaneously. For each finite choice, sufficiently
+small positive \(\varepsilon\) realizes the nonzero leading minor.
+
+For completeness, independence of the scalar rational functions detects
+the required old-new pole residues. Before division by \(D\), the
+leading functions \(q(P_s),zr(P_s),P_s(0,2)\) vanish at zero and
+are bounded at infinity. Their allowed finite poles are precisely the
+distinct old restricted lines. The two kernel derivatives in (P5)
+have the same endpoint properties and only simple allowed poles.
+For \(N_p\), \(A_m\) has no pole at the last row-two denominator;
+for \(N_q\), use \(B_m-zr_d=d_m\,zr(P_{\mathrm{prefix}})\)
+in (P5). These identities exclude an extra double pole at the last
+transition. Equivalently, moving-pole differentiation of an identically
+zero leading relation has double-pole coefficient equal to the pole
+velocity times its zero residue. A function in this span with all finite
+residues zero is pole-free and bounded at infinity, hence constant,
+and its value at zero makes it zero. Thus the residue map is injective
+on the leading pivots and these derivative columns. The inverse's common
+\(1/z\) factor is nonzero at every allowed pole and only rescales
+the corresponding residue rows. A moving old cross-point contributes
+\(z'\partial_z\) of the leading nullrelation, which is identically
+zero.
+
+This proves the following conditional paper lemma. Under the displayed
+pole assumptions, for even \(m\), if
+\(\rho-\eta+(c/e)(\eta-1)\ne0\), the normalized last-block
+perturbation has two independent first kernel derivatives on each new
+line. Hence the \(3m\)-column block on that line has a nonzero
+leading minor after constant kernel elimination. For odd \(m\), the
+corresponding leading block already has rank \(3m\). The three
+new-line blocks are separate, so together their shared-new polar half
+has a nonzero \(9m\)-column minor at positive finite perturbations
+of the common-\(G\) family (P13).
+
+In particular, the explicit powers-of-five choice proves that the
+shared-new polar determinant is not identically zero on the common-
+\(G\), independent-time parameter space for every \(m\ge1\).
+Additional generic line-incidence conditions used elsewhere can be
+imposed by a small perturbation inside this nonzero-minor neighborhood
+whenever their polynomial factors are not identically zero on that same
+parameter space. The scalar-covariate substitution discussed earlier
+then applies to the resulting nonzero polynomial in independent time
+factors. These conclusions do not supply the unproved regular half of
+the full Schur complement.
+
+The separate finite check `exploration/binary_polar_derivative.py`, with
+results in `exploration/binary-polar-derivative-results.json`, verifies
+eight exact rational fixtures: \(m=2,4,6,8\), each with
+\((\rho,\eta)=(2,3),(3,2)\). It solves the actual constant
+Laurent column kernel with prescribed last-word coefficients, checks
+the four reductions coefficientwise, compares (P6)--(P7) to actual
+three-state product derivatives at three rational points, and checks
+the row-zero subtraction and (P12). These finite diagnostics support
+the all-length algebra above; they do not replace it or certify full
+source independence.
 
 ## Additional finite degeneration diagnostics
 
@@ -824,5 +1263,5 @@ are in `exploration/absorbing-firstjet-results.json`. The latter case
 does not furnish the required first-order witness. The tests do not
 establish a universal rank upper bound, rule out higher-order excursions,
 or prove an all-length source determinant. The exact identities and the
-odd-length binary nonvanishing proof above remain separate from these
+binary parity proof above remain separate from these
 finite diagnostics.

@@ -14,6 +14,9 @@ Checking PanelMoments.SourceRecursion
 Checking PanelMoments.SourceLifts
 Checking PanelMoments.SourceNewIndices
 Checking PanelMoments.SourceConditional
+Checking PanelMoments.SourceJointImage
+Checking PanelMoments.BinaryTransferAlgebra
+Checking PanelMoments.BinaryTransferSpan
 PanelMoments.PermutationMoments.sourceMoment_isMoment {Q N k : ℕ} {A : PanelMoments.Table Q}
   (hA : PanelMoments.PositiveTable A) (r : PanelMoments.State Q) (hk : k ≤ N) (o₁ o₂ : Equiv.Perm (Fin (N + 1)))
   (hlast₁ : o₁ (Fin.last N) = Fin.last N) (hlast₂ : o₂ (Fin.last N) = Fin.last N)
@@ -159,5 +162,118 @@ PanelMoments.SourceConditional.linearIndependent_source_of_conditional {N : ℕ}
 'PanelMoments.SourceConditional.linearIndependent_source_of_newParameters' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-77 source-family foundation declarations use only permitted foundational axioms.
+'PanelMoments.SourceJointImage.jointFirst_eq_path_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceJointImage.jointFirst_eq_scaled_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceJointImage.transitionScale_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceJointImage.jointFirst_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceJointImage.linearIndependent_jointFirst_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceJointImage.linearIndependent_source_of_jointImages' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@PanelMoments.BinaryTransferAlgebra.prefixH_eq_one_add_prefixQ_add_prefixR : ∀ {K : Type u_1} [inst : Field K] (ρ z : K)
+  (cs : List K),
+  ρ ≠ 1 →
+    z ≠ 0 →
+      (∀ c ∈ cs, c ≠ 0) →
+        PanelMoments.BinaryTransferAlgebra.prefixH ρ cs z =
+          1 + PanelMoments.BinaryTransferAlgebra.prefixQ ρ cs z + PanelMoments.BinaryTransferAlgebra.prefixR ρ cs z / z
+@PanelMoments.BinaryTransferAlgebra.prefixF_append : ∀ {K : Type u_1} [inst : Field K] (ρ z e c : K) (cs : List K),
+  ρ ≠ 1 →
+    e ≠ 0 →
+      c ≠ 0 →
+        z ≠ 0 →
+          e ≠ c →
+            (∀ d ∈ cs, d ≠ 0) →
+              PanelMoments.BinaryTransferAlgebra.prefixF ρ (cs ++ [e]) c z =
+                1 - PanelMoments.BinaryTransferAlgebra.prefixF ρ cs e z +
+                  (ρ - 1) / (e - c) *
+                    (e * PanelMoments.BinaryTransferAlgebra.moveFirst ρ cs e z -
+                      c * PanelMoments.BinaryTransferAlgebra.moveFirst ρ (cs ++ [e]) c z)
+@PanelMoments.BinaryTransferAlgebra.outer_peel_Q : ∀ {K : Type u_1} [inst : Field K] (ρ U V c d z : K),
+  ρ ≠ 1 →
+    c ≠ 0 →
+      d ≠ 0 →
+        z ≠ 0 →
+          c ≠ d →
+            U +
+                  (1 + U + V / z) *
+                    (PanelMoments.BinaryTransferAlgebra.Q ρ c z +
+                      PanelMoments.BinaryTransferAlgebra.H ρ c z * PanelMoments.BinaryTransferAlgebra.Q ρ d z) -
+                d * (1 + ρ * c * z) / (c - d) *
+                  PanelMoments.BinaryTransferAlgebra.moveDefect ρ (PanelMoments.BinaryTransferAlgebra.appendQ ρ U V c z)
+                    (PanelMoments.BinaryTransferAlgebra.appendR ρ U V c z) d z =
+              PanelMoments.BinaryTransferAlgebra.Q ρ d z * PanelMoments.BinaryTransferAlgebra.outerS ρ U V c d z
+@PanelMoments.BinaryTransferAlgebra.outer_peel_R : ∀ {K : Type u_1} [inst : Field K] (ρ U V c d z : K),
+  ρ ≠ 1 →
+    c ≠ 0 →
+      d ≠ 0 →
+        z ≠ 0 →
+          c ≠ d →
+            V +
+                  (1 + U + V / z) *
+                    (PanelMoments.BinaryTransferAlgebra.R ρ c z +
+                      PanelMoments.BinaryTransferAlgebra.H ρ c z * PanelMoments.BinaryTransferAlgebra.R ρ d z) -
+                (1 + c * z) / (c - d) *
+                  PanelMoments.BinaryTransferAlgebra.moveDefect ρ (PanelMoments.BinaryTransferAlgebra.appendQ ρ U V c z)
+                    (PanelMoments.BinaryTransferAlgebra.appendR ρ U V c z) d z =
+              PanelMoments.BinaryTransferAlgebra.R ρ d z * PanelMoments.BinaryTransferAlgebra.outerS ρ U V c d z
+@PanelMoments.BinaryTransferAlgebra.outerS_eq_F_sub_moveDefect : ∀ {K : Type u_1} [inst : Field K] (ρ U V c d z : K),
+  ρ ≠ 1 →
+    c ≠ 0 →
+      z ≠ 0 →
+        c ≠ d →
+          PanelMoments.BinaryTransferAlgebra.outerS ρ U V c d z =
+            PanelMoments.BinaryTransferAlgebra.F ρ V c z -
+              c * (ρ - 1) / (c - d) * PanelMoments.BinaryTransferAlgebra.moveDefect ρ U V c z
+'PanelMoments.BinaryTransferAlgebra.H_eq_one_add_Q_add_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.prefixQ_append' depends on axioms: [propext, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.prefixR_append' depends on axioms: [propext, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.prefixH_eq_one_add_prefixQ_add_prefixR' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.move_Q_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.move_R_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.prefixQ_moveFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.prefixR_moveFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.F_append_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.prefixF_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.prefixF_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.outer_peel_Q' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.outer_peel_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferAlgebra.outerS_eq_F_sub_moveDefect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+PanelMoments.BinaryTransferSpan.prefixF_sub_parity_mem (ρ c : ℝ) (cs : List ℝ) (hρ : ρ ≠ 1) (hcs : ∀ d ∈ cs, d ≠ 0)
+  (hc : c ≠ 0) (hadj : List.IsChain (fun x y => x ≠ y) (cs ++ [c])) :
+  PanelMoments.BinaryTransferSpan.prefixF ρ cs c - PanelMoments.BinaryTransferSpan.constant ↑(cs.length % 2) ∈
+    PanelMoments.BinaryTransferSpan.defectSpan ρ (cs ++ [c])
+PanelMoments.BinaryTransferSpan.baselineQ_sub_parity_mem (ρ d : ℝ) (cs : List ℝ) (hρ : ρ ≠ 1) (hcs : ∀ e ∈ cs, e ≠ 0)
+  (hd : d ≠ 0) (hadj : List.IsChain (fun x y => x ≠ y) (cs ++ [d])) :
+  PanelMoments.BinaryTransferSpan.baselineQ ρ (cs ++ [d]) -
+      ↑((cs.length + 1) % 2) • PanelMoments.BinaryTransferSpan.blockQ ρ d ∈
+    PanelMoments.BinaryTransferSpan.pairedSpan ρ (cs ++ [d])
+PanelMoments.BinaryTransferSpan.baselineR_sub_parity_mem (ρ d : ℝ) (cs : List ℝ) (hρ : ρ ≠ 1) (hcs : ∀ e ∈ cs, e ≠ 0)
+  (hd : d ≠ 0) (hadj : List.IsChain (fun x y => x ≠ y) (cs ++ [d])) :
+  PanelMoments.BinaryTransferSpan.baselineR ρ (cs ++ [d]) -
+      ↑((cs.length + 1) % 2) • PanelMoments.BinaryTransferSpan.blockR ρ d ∈
+    PanelMoments.BinaryTransferSpan.pairedSpan ρ (cs ++ [d])
+'PanelMoments.BinaryTransferSpan.defectSpan_le_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.defect_mem_append_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.defectSpan_eq_span_noninitial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferSpan.prefixF_append' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.prefixF_sub_parity_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.mulZ_mem_pairedSpan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.affine_mul_mem_pairedSpan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.outerRemainder_sub_parity_mem' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.BinaryTransferSpan.baselineQ_outer_peel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.baselineR_outer_peel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.baselineQ_sub_parity_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.BinaryTransferSpan.baselineR_sub_parity_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+109 source-family foundation declarations use only permitted foundational axioms.
 Serial source-family foundation verification completed; arbitrary-T independence is not asserted.

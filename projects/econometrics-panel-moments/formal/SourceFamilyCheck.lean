@@ -4,8 +4,12 @@ import PanelMoments.SourceCounting
 import PanelMoments.SourceLifts
 import PanelMoments.SourceNewIndices
 import PanelMoments.SourceConditional
+import PanelMoments.SourceJointImage
+import PanelMoments.BinaryTransferAlgebra
+import PanelMoments.BinaryTransferSpan
 
-/- This checks general validity, lifts and index counts, not source independence. -/
+/- These checks cover source recursion and auxiliary constant-span algebra;
+   arbitrary-period source independence is not asserted. -/
 
 #check PanelMoments.PermutationMoments.sourceMoment_isMoment
 #check PanelMoments.SourceFamily.SourceIndex
@@ -102,3 +106,46 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceConditional.conditionalTail_zeroIndex_eq_zero
 #print axioms PanelMoments.SourceConditional.linearIndependent_source_of_conditional
 #print axioms PanelMoments.SourceConditional.linearIndependent_source_of_newParameters
+
+#print axioms PanelMoments.SourceJointImage.jointFirst_eq_path_sum
+#print axioms PanelMoments.SourceJointImage.jointFirst_eq_scaled_tail
+#print axioms PanelMoments.SourceJointImage.transitionScale_injective
+#print axioms PanelMoments.SourceJointImage.jointFirst_eq_zero_iff
+#print axioms PanelMoments.SourceJointImage.linearIndependent_jointFirst_iff
+#print axioms PanelMoments.SourceJointImage.linearIndependent_source_of_jointImages
+
+#check @PanelMoments.BinaryTransferAlgebra.prefixH_eq_one_add_prefixQ_add_prefixR
+#check @PanelMoments.BinaryTransferAlgebra.prefixF_append
+#check @PanelMoments.BinaryTransferAlgebra.outer_peel_Q
+#check @PanelMoments.BinaryTransferAlgebra.outer_peel_R
+#check @PanelMoments.BinaryTransferAlgebra.outerS_eq_F_sub_moveDefect
+#print axioms PanelMoments.BinaryTransferAlgebra.H_eq_one_add_Q_add_R
+#print axioms PanelMoments.BinaryTransferAlgebra.prefixQ_append
+#print axioms PanelMoments.BinaryTransferAlgebra.prefixR_append
+#print axioms PanelMoments.BinaryTransferAlgebra.prefixH_eq_one_add_prefixQ_add_prefixR
+#print axioms PanelMoments.BinaryTransferAlgebra.move_Q_identity
+#print axioms PanelMoments.BinaryTransferAlgebra.move_R_identity
+#print axioms PanelMoments.BinaryTransferAlgebra.prefixQ_moveFirst
+#print axioms PanelMoments.BinaryTransferAlgebra.prefixR_moveFirst
+#print axioms PanelMoments.BinaryTransferAlgebra.F_append_identity
+#print axioms PanelMoments.BinaryTransferAlgebra.prefixF_append
+#print axioms PanelMoments.BinaryTransferAlgebra.prefixF_singleton
+#print axioms PanelMoments.BinaryTransferAlgebra.outer_peel_Q
+#print axioms PanelMoments.BinaryTransferAlgebra.outer_peel_R
+#print axioms PanelMoments.BinaryTransferAlgebra.outerS_eq_F_sub_moveDefect
+
+#check PanelMoments.BinaryTransferSpan.prefixF_sub_parity_mem
+#check PanelMoments.BinaryTransferSpan.baselineQ_sub_parity_mem
+#check PanelMoments.BinaryTransferSpan.baselineR_sub_parity_mem
+#print axioms PanelMoments.BinaryTransferSpan.defectSpan_le_append
+#print axioms PanelMoments.BinaryTransferSpan.defect_mem_append_span
+#print axioms PanelMoments.BinaryTransferSpan.defectSpan_eq_span_noninitial
+#print axioms PanelMoments.BinaryTransferSpan.prefixF_append
+#print axioms PanelMoments.BinaryTransferSpan.prefixF_sub_parity_mem
+#print axioms PanelMoments.BinaryTransferSpan.mulZ_mem_pairedSpan
+#print axioms PanelMoments.BinaryTransferSpan.affine_mul_mem_pairedSpan
+#print axioms PanelMoments.BinaryTransferSpan.outerRemainder_sub_parity_mem
+#print axioms PanelMoments.BinaryTransferSpan.baselineQ_outer_peel
+#print axioms PanelMoments.BinaryTransferSpan.baselineR_outer_peel
+#print axioms PanelMoments.BinaryTransferSpan.baselineQ_sub_parity_mem
+#print axioms PanelMoments.BinaryTransferSpan.baselineR_sub_parity_mem

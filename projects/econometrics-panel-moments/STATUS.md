@@ -55,11 +55,13 @@ indicator lifts are now proved. Every non-inherited index has explicit empty
 or singleton coordinates. The actual conditional-tail expectation map has
 the expected kernel, and Lean proves that shorter-family independence plus
 independence of the new conditional images implies full source independence.
-That last hypothesis remains unresolved; the tail-map normalization to the
-research note's rational images is also not yet formalized.
+That last hypothesis remains unresolved. The joint first-state image is now
+proved equivalent to the tail map by injective multiplication by the positive
+first transition. Its identification with the research note's rational
+transfer formulas remains unformalized.
 
-The dedicated verifier rebuilt all 13 modules in this closure and checked
-77 declarations; its axiom checks report only the three permitted foundational
+The dedicated verifier rebuilt all 16 modules in this closure and checked
+109 declarations; its axiom checks report only the three permitted foundational
 axioms. Evidence is in
 `formal/source-family-clean-build.log` and `formal/source-family-axioms.txt`,
 with independent statement reviews in `reviews/SOURCE24_FOUNDATIONS_AUDIT.md`
@@ -71,13 +73,25 @@ coalescent triangle and grid identities match direct rational series checks;
 their nonzero curvature is not a full determinant. The tested constant-time
 and normalized sparse witnesses give deficient modular evaluation matrices.
 For the absorbing-state degeneration, a legitimate first-jet elimination
-reaches full rank at n=2 but only 51 of 63 columns at n=3. A binary Laurent
-subproblem gives ranks 2,2,6,6,10,10 at m=1,...,6 in the tested rational
-specializations; its m=2 deficiency is also established symbolically. These
-diagnostics are external calculations. The research note additionally proves
-generic full rank of that auxiliary binary Laurent family for every odd m
-by a nonzero leading determinant. This partial mathematical result is not
-Lean formalized and does not settle the three-choice determinant.
+reaches full rank at n=2 but only 51 of 63 columns at n=3. The auxiliary
+binary family now has a general paper proof of rank 2m for odd m and 2m−2 for even m. Lean proves the actual scalar-span parity recurrence
+and both baseline remainders using constant real coefficients; Laurent endpoint
+independence and the rank formula are not yet formalized.
+
+The next paper argument restores the two missing directions at even length
+by an asymmetric last-block perturbation. Its explicit two-dimensional
+determinant is nonzero for every even length. Combined with the odd-length
+leading calculation, this proves generic nonvanishing of the shared-new
+polar half on the common-G, independent-time family. The independent internal
+audit is [reviews/SOURCE24_POLAR_AUDIT.md](reviews/SOURCE24_POLAR_AUDIT.md).
+The separate regular Schur half remains open, so this is not all-T source
+independence. The polar theorem is not Lean formalized. Exact rational checks
+and positive asymmetric finite first-jet witnesses are recorded in the
+binary-polar-derivative and shared-new-polar-firstjet exploration files.
+The exact block elimination now isolates a regular matrix H of size
+9(T−3). Six finite asymmetric fixtures give full H ranks 18, 27, and 36
+for T=5,6,7, with determinant factors checked; these are recorded in
+`exploration/source24-schur-results.json`, not an all-T proof.
 
 ## Finite theorem
 
@@ -146,12 +160,14 @@ silently assumed by either proved theorem, and no result below is claimed.
    The general-T indexing, validity and cardinality are now formalized.
    The exact recursive index bijection, source-lift equality, new-index
    parameterization, and conditional induction criterion are now proved.
-   Next formalize the joint-map normalization and quotient/residue formulas,
-   then prove nonvanishing of the remaining
-   determinant on the economic family for every T. The remaining Schur
-   complement has size 18(T−3); its nonvanishing is not assumed by any
-   completed theorem. Combine independence with the proved moment-space
-   dimension to obtain spanning. The completed source-basis theorem remains
+   The joint/conditional map equivalence is now proved. Next formalize its
+   rational transfer and residue formulas, the remaining binary independence
+   lemmas, and the audited polar theorem. The full Schur complement has size
+   18(T−3); its shared-new polar half now has a paper nonvanishing proof,
+   while the regular half after those pivots remains open. Prove that final
+   nonvanishing on the common-G family and apply the scalar-covariate bridge.
+   None of these open claims is assumed by a completed theorem. Combine
+   independence with the proved moment-space dimension to obtain spanning. The completed source-basis theorem remains
    T=4; neither the dimension theorem nor the index count supplies independence.
 3. **Refresh prior art and obtain external research review.**
    Check later versions and resolve the inaccessible searches recorded in
