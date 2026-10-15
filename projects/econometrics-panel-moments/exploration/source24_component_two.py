@@ -8,7 +8,9 @@ long empty rows, and selected output-zero rows. The long empty rows include
 their local E term, whose pair residues vanish and whose axis value is -1.
 
 The empty-row observations are independently computed from the complete
-ordered transition word. All certificates are finite-field statements at
+ordered transition word. Also check B25--B37's parity block, seed subtraction,
+odd inverse projection, and even left-kernel residual directions. All
+certificates are finite-field statements at
 the specified m=3,4,5 fixtures, not an all-length rank theorem or a proof of
 the separate identification of the observation kernel with W01.
 
@@ -148,6 +150,146 @@ def check_empty_axis(m, A, lines, pair_count, N_observations, empty_indices):
     return checks, derivative_checks
 
 
+def long_empty_blocks(m, A, lines, BL):
+    """B27/B28 and the actual two-state residue scaling B29."""
+    old = list(range(2, m + 2))
+    index = {line: j for j, line in enumerate(lines)}
+    D, jet_checks = [], 0
+    for u in old:
+        X = (0, 1, -A[u][0][1] * pow(A[u][0][2], -1, P) % P)
+        diagonal = -1
+        for t in old:
+            if t != u:
+                K = residue.ordinary_kernel(A, t, X, P)
+                determinant = (K[1][1] * K[2][2] - K[1][2] * K[2][1]) % P
+                assert determinant
+                diagonal = diagonal * determinant % P
+        assert diagonal
+        D.append(diagonal)
+        for t in old:
+            assert BL[index[u, 0]][index[t, 0]] == diagonal * int(u == t) % P
+            for c in (1, 2):
+                assert BL[index[u, c]][index[t, 0]] == 0
+
+        # B28 uses its stated chart X0=x, X2=1, with L_(u,0)=0 exactly.
+        inverse_a1 = pow(A[u][0][1], -1, P)
+        Xjet = [(0, 1),
+                (-A[u][0][2] * inverse_a1 % P, -inverse_a1 % P), dual.ONE]
+        regular.geometry_at_point(A, (u, 0), Xjet)
+        kernels = {t: regular.kernel_or_residue(A, t, (u, 0), Xjet, False) for t in old}
+        for t in old:
+            product = dual.identity()
+            for block in residue.ordered_word(old, t):
+                product = dual.mmul(product, kernels[block])
+            for a in (1, 2):
+                numerator = dual.mul(Xjet[a], product[a][2])
+                assert numerator[0] == 0
+                value = -numerator[1] * pow(A[u][0][2], -1, P) % P
+                assert value == BL[index[u, 0]][index[t, a]], ('B28 row-zero jet mismatch.', m, u, t, a)
+                jet_checks += 1
+
+    binary_labels = [(t, a) for t in old for a in (1, 2)]
+    Mres, checks = [], 0
+    for u, c in binary_labels:
+        z = -A[u][c][1] * pow(A[u][c][2], -1, P) % P
+        kernels = {}
+        for t in old:
+            rows = []
+            for a in (1, 2):
+                numerator = [A[t][a][1] % P, A[t][a][2] * z % P]
+                if t == u:
+                    rows.append(numerator if a == c else [0, 0])
+                else:
+                    inverse = pow(sum(numerator) % P, -1, P)
+                    rows.append([x * inverse % P for x in numerator])
+            kernels[t] = rows
+        products = {}
+        for t in old:
+            product = [[1, 0], [0, 1]]
+            for block in residue.ordered_word(old, t):
+                product = residue.matmul(product, kernels[block], P)
+            products[t] = product
+        row = []
+        for t, a in binary_labels:
+            value = (1 if a == 1 else z) * products[t][a - 1][1] % P
+            row.append(value)
+            denominator = A[u][c][2] * (1 if c == 1 else z) * z % P
+            assert -value * pow(denominator, -1, P) % P == BL[index[u, c]][index[t, a]], ('B29 binary residue scaling failed.', m, u, c, t, a)
+            checks += 1
+        Mres.append(row)
+    return dict(B27_nonzero_diagonal=D, B27_lower_left_zero=True,
+                B28_row_zero_chart_first_jet_entries=jet_checks,
+                B29_binary_residue_entries=checks,
+                actual_binary_residue_matrix=incoming.matrix_certificate(Mres),
+                binary_row_and_column_labels=binary_labels)
+
+
+def parity_reduction(m, A, observations, N_observations, labels, lines, pair_count, empty_indices, full_rank):
+    """Keep the actual selected rows and local-E correction in B25--B37."""
+    empty_columns = [empty_indices[line] for line in lines]
+    selected = {(label['t'], label['a']): j for j, label in enumerate(labels)
+                if label['kind'] == 'selected_output_zero'}
+    diff_columns = [j for j, label in enumerate(labels) if label['kind'] == 'first_slot_difference']
+    AL = [[row[j] for j in empty_columns] for row in N_observations[:pair_count]]
+    BL = [[row[j] for j in empty_columns] for row in N_observations[pair_count:]]
+    BLcertificate = incoming.matrix_certificate(BL)
+    expected_rank = 3 * m if m % 2 else 3 * m - 2
+    assert BLcertificate['rank_certificate']['rank'] == expected_rank, ('B30 long-empty parity failed.', m)
+    block_checks = long_empty_blocks(m, A, lines, BL)
+    assert block_checks['actual_binary_residue_matrix']['rank_certificate']['rank'] == expected_rank - m
+
+    seed_coefficients, _, seed_labels, constants = differences.seed_coefficients(m, A)
+    assert seed_labels == lines and all(row[0] == 1 for table in A[2:] for row in table)
+    by_label = {(entry['t'], entry['A']): entry for entry in constants}
+    seed_observations = []
+    for row in N_observations:
+        seed_observations.append([(row[selected[t, a]] - by_label[t, a]['c_tA']
+                                   * row[empty_indices[by_label[t, a]['r'], 0]]) % P for t, a in lines])
+    rho2_U = schur.matrix_product(observations[:pair_count], seed_coefficients)
+    assert seed_observations[:pair_count] == rho2_U
+    assert seed_observations[pair_count:] == [[0] * (3 * m) for _ in lines], 'B32 seed T2 cancellation failed.'
+    result = dict(B_L=BLcertificate, expected_B_L_parity_rank=expected_rank,
+                  A_L_sha256=residue.matrix_hash(AL), block_checks=block_checks,
+                  selected_minus_c_long_empty_T2_zero=True,
+                  selected_minus_c_long_empty_pair_equals_actual_rho2_U=True,
+                  rho2_U_sha256=residue.matrix_hash(rho2_U), seed_constants=constants)
+    axis_differences = [[row[j] for j in diff_columns] for row in N_observations[pair_count:]]
+    if m % 2:
+        inverse, inverse_certificate = schur.invert(BL)
+        projection_correction = schur.matrix_product(schur.matrix_product(AL, inverse), N_observations[pair_count:])
+        projected = schur.matrix_difference(N_observations[:pair_count], projection_correction)
+        assert all(row[j] == 0 for row in projected for j in empty_columns)
+        assert [[row[selected[line]] for line in lines] for row in projected] == rho2_U
+        remaining = [seed_row + [row[j] for j in diff_columns] for seed_row, row in zip(rho2_U, projected)]
+        certificate = incoming.matrix_certificate(remaining)
+        assert full_rank == 3 * m + certificate['rank_certificate']['rank'], 'B35 exact elimination rank identity failed.'
+        result.update(odd_B_L_inverse=inverse_certificate,
+                      odd_projected_all_generators_sha256=residue.matrix_hash(projected),
+                      odd_projected_empty_columns_zero=True,
+                      odd_projected_selected_columns_equal_rho2_U=True,
+                      B35_remaining_matrix=certificate, B35_rank_identity_verified=True,
+                      B35_expected_remaining_rank=full_rank - 3 * m)
+    else:
+        right_pivots, right_free, right_vectors = dual.rref_kernel(BL)
+        left_pivots, left_free, left_vectors = dual.rref_kernel([list(row) for row in zip(*BL)])
+        assert len(right_vectors) == len(left_vectors) == 2
+        RL = [list(row) for row in zip(*right_vectors)]
+        compatibility = schur.matrix_product(AL, RL)
+        residual = schur.matrix_product(left_vectors, axis_differences)
+        residual_certificate = incoming.matrix_certificate(residual)
+        assert residual_certificate['rank_certificate']['rank'] == 2, 'B37 pure-axis directions were not resolved at this fixture.'
+        selected_axis = [[row[selected[line]] for line in lines] for row in N_observations[pair_count:]]
+        assert schur.matrix_product(left_vectors, selected_axis) == [[0] * (3 * m) for _ in range(2)]
+        result.update(even_right_kernel_vectors=right_vectors, even_right_free_columns=right_free,
+                      even_left_kernel_vectors=left_vectors, even_left_free_columns=left_free,
+                      even_kernel_dimensions_verified=True,
+                      B36_A_L_times_right_kernel=incoming.matrix_certificate(compatibility),
+                      B37_left_kernel_times_difference_axis=residual_certificate,
+                      even_selected_columns_leave_left_kernel_directions_unconstrained=True,
+                      even_first_slot_differences_resolve_both_axis_directions=True)
+    return result
+
+
 def calculate(m):
     started = time.monotonic()
     times = sparse.factors(m, 'economic')
@@ -176,6 +318,7 @@ def calculate(m):
     assert old_rank == n, 'This fixture does not have independent actual old source columns.'
     assert coefficient_rank == k, 'Listed N generators do not have independent source coefficients.'
     full = rank == target
+    parity = parity_reduction(m, A, observations, N_observations, labels, lines, pair_count, empty_indices, rank)
     result = dict(m=m, prime=P, G=G, time_fixture='economic', time_factors=times,
                   geometry=geometry, actual_source_geometry=source_geometry,
                   actual_source_matrix=old_certificate, N_source_coefficient_matrix=coefficient_certificate,
@@ -193,6 +336,7 @@ def calculate(m):
                   direct_empty_word_axis_component_checks=axis_checks,
                   removable_X0_first_jet_checks=derivative_checks,
                   local_E_axis_correction_included=True,
+                  parity_annihilator_reduction=parity,
                   pair_row_labels=pair_labels, axis_row_labels=lines, N_generator_labels=labels,
                   interpretation='The displayed kernel dimension is over F_p for the actual N coefficient map. Identifying it with N intersect W01 uses the separate observation-kernel theorem.',
                   elapsed_seconds=time.monotonic() - started)
@@ -200,6 +344,9 @@ def calculate(m):
         assert k - rank == pair_count - 6 * m
     print(json.dumps(dict(m=m, source_rank=old_rank, N_generators=k, observation_rank=rank,
                           target=target, kernel_dimension=k - rank, full_row_rank=full,
+                          long_empty_axis_rank=parity['B_L']['rank_certificate']['rank'],
+                          odd_remaining_rank=parity.get('B35_expected_remaining_rank'),
+                          even_axis_residual_rank=parity.get('B37_left_kernel_times_difference_axis', {}).get('rank_certificate', {}).get('rank'),
                           seconds=result['elapsed_seconds'])), flush=True)
     return result
 
@@ -231,6 +378,7 @@ def main():
     result = dict(status='Exact modular component-two observation certificates on actual N generators; no all-length theorem.',
                   normalization='Pair rows use raw component 2 at the same oriented cross points as O; axis rows use T_(i,2) from feedback_limit. Long empty rows include T_(i,2)(E_ta)=-delta_(i,(t,a)).',
                   independent_check='Every long-empty pair and axis observation is independently evaluated from its full t-first ordered transition word, including the removable X0 first jet.',
+                  parity_checks='B27 triangular block and B28 chart jets; actual binary residue scaling B29 and rank B30; seed identity B32; odd projection and rank identity B33--B35; even kernel compatibility and residual rank B36--B37.',
                   limitations='Nonzero minors lift after clearing denominators. Modular deficiencies alone are not real rank upper bounds. W01 identification and uniform surjectivity are not proved here.',
                   elapsed_seconds=time.monotonic() - started, maximum_rss_bytes=incoming.maximum_rss_bytes(),
                   bounded_limitation=limitation, cases=cases)

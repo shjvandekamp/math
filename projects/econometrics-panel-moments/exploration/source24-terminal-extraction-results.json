@@ -347,6 +347,10 @@
         }
       },
       "boundary_binary_rank": 12,
+      "first_old_shared_group_generators": 18,
+      "first_old_shared_group_binary_rank": 12,
+      "first_old_shared_group_spans_all_binary_outputs": true,
+      "first_old_shared_group_evidence": "Existing nonzero minor uses exactly columns 0 through 11, within the first 18 generators; no new computation.",
       "binary_output_dimension": 12,
       "boundary_binary_cokernel_dimension": 0,
       "native_component_one_binary_extraction": {
@@ -1182,6 +1186,10 @@
         }
       },
       "boundary_binary_rank": 18,
+      "first_old_shared_group_generators": 27,
+      "first_old_shared_group_binary_rank": 18,
+      "first_old_shared_group_spans_all_binary_outputs": true,
+      "first_old_shared_group_evidence": "Existing nonzero minor uses exactly columns 0 through 17, within the first 27 generators; no new computation.",
       "binary_output_dimension": 18,
       "boundary_binary_cokernel_dimension": 0,
       "native_component_one_binary_extraction": {
@@ -2378,6 +2386,10 @@
         }
       },
       "boundary_binary_rank": 24,
+      "first_old_shared_group_generators": 36,
+      "first_old_shared_group_binary_rank": 24,
+      "first_old_shared_group_spans_all_binary_outputs": true,
+      "first_old_shared_group_evidence": "Existing nonzero minor uses exactly columns 0 through 23, within the first 36 generators; no new computation.",
       "binary_output_dimension": 24,
       "boundary_binary_cokernel_dimension": 0,
       "native_component_one_binary_extraction": {
@@ -3544,6 +3556,10 @@
       },
       "boundary_binary_rank": 18,
       "binary_output_dimension": 18,
+      "first_old_shared_group_generators": 27,
+      "first_old_shared_group_binary_rank": 18,
+      "first_old_shared_group_spans_all_binary_outputs": true,
+      "first_old_shared_group_evidence": "Existing nonzero minor uses exactly columns 0 through 17, within the first 27 generators; no new computation.",
       "boundary_binary_cokernel_dimension": 0,
       "native_component_one_binary_extraction": {
         "rows": 18,

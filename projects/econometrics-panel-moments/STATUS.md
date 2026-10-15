@@ -289,6 +289,33 @@ minors give h=6q at q=2,3,4, with an independent q=3 fixture. Thus all
 extraction outputs are already spanned by the boundary there, and the
 remaining 6m quotient dimensions require the other part of the elimination.
 
+A separate [raw completed-row route](research/SOURCE24_RAW_APPEND.md)
+removes 6m+3 explicit row-sum constraints and proposes independence of the
+new raw boundary modulo the entire appended old ambient space. Exact
+finite minors establish this stronger sufficient condition at q=2,3,4;
+the q=4 test required more effect points because row-sum relations limit
+the number of independent evaluation rows. A uniform append proof and
+the further source-family transversality remain open.
+
+The binary quotient note also gives a parity-aware component-two reduction:
+long-empty axis observations have rank 3m for odd m and 3m−2 for even m.
+Odd lengths eliminate all axis annihilator coefficients; even lengths
+leave two directions that first-slot differences must remove. This does
+not yet prove component-two spanning for every length.
+
+An actual ordered-path factorization now proves that the component-two
+rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
+this gives generic rank exactly 27 and explains the nine-dimensional
+deficiency. Its cleared cubic products provide a new route to investigate
+larger lengths; their actual N coefficient combinations still matter.
+
+The audited [conic transverse reduction](research/SOURCE24_CONIC_TRANSVERSE.md)
+isolates a uniform 9n−6 pivot block. The binary parity theorem raises the
+leading outgoing rank to 9n for odd n; even n retain six missing directions.
+The remaining Schur matrix keeps both old-node corrections. Its determinant
+and the even conic correction remain open; the singular conic O3 also
+requires a separate base step.
+
 ## Finite theorem
 
 `PanelMoments.three_choice_four_period_generic_completeness` proves that the

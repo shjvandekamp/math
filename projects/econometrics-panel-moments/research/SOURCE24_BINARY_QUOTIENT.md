@@ -294,7 +294,8 @@ At the recorded prime and full-old-source economic fixtures it finds:
 The full row minors at m=4,5 lift to characteristic zero after clearing
 denominators, so the conditional scalar representation (B24) is realized
 at those rational fixtures and generically at those two fixed lengths.
-The m=3 modular deficiency is not an upper-bound proof over the reals.
+The m=3 modular deficiency alone is not an upper-bound proof over the reals;
+the path factorization B38–B42 below now supplies that upper bound.
 The run took 0.597 seconds and 21,217,280 bytes maximum RSS; results are
 in `exploration/source24-component-two-results.json`. The primary
 researcher reviewed the implementation. No all-length surjectivity follows.
@@ -320,6 +321,222 @@ Any polynomial functional factoring only through \(\Psi\) and annihilating
 the completed products therefore vanishes on the entire completion space.
 Row-sum conditions alone cannot provide nonzero completion annihilators.
 
+## A parity-aware component-two annihilator reduction
+
+Let Lcol collect the 3m long-empty rows F_ta, distinct from local E_ta.
+Set
+
+\[
+ A_L=\rho_2(\mathrm{Lcol}),\qquad B_L=T_2(\mathrm{Lcol}). \tag{B25}
+\]
+
+Assume m>=3, the full old-line geometry, positive normalized
+G=(1,alpha,beta), and alpha1 beta2−alpha2 beta1 !=0. Retain the
+binary theorem's nonzero, adjacent-distinct time parameters and distinct
+binary poles, including distinctness from each row-zero axis point.
+For the actual move-t-first product P_t,
+
+\[
+ (B_L)_{(u,c),(t,a)}=-\left[
+ \frac{X_a\operatorname{Res}_{L_{uc}}(P_t)_{a2}}
+      {A_u(c,2)X_cX_2}\right]_{Q_{uc,0}}. \tag{B26}
+\]
+
+Use the regular extension when c=0. Ordering state-zero rows and columns
+first gives
+
+\[
+ B_L=\begin{pmatrix}D&H\\0&\widetilde M\end{pmatrix},\qquad
+ D_{ut}=-\delta_{ut}\prod_{j\ne t}d_j(Q_{t0,0}), \tag{B27}
+\]
+
+where d_j is the determinant of the binary restriction of K_j. In the
+lower-left block the initial X0 factor remains after matching division,
+so the value is zero. In the upper-left block a later row-zero pole has
+an additional X0 from entering state zero. Only the first pole survives;
+its binary zero-sum residue is multiplied by each later determinant.
+All factors in D are nonzero under the assumptions.
+
+For the upper-right block, parametrize L_u0 by X0=x, X2=1 and
+X1=−(x+A_u(0,2))/A_u(0,1). For a=1,2 the exact entry is
+
+\[
+ H_{u,(t,a)}=-\frac1{A_u(0,2)}
+   \left.\frac{d}{dx}\left[X_a(x)
+          \operatorname{Res}_{L_{u0}}(P_t)_{a2}(x)\right]\right|_{x=0}.
+ \tag{B28}
+\]
+
+The differentiated numerator vanishes at zero. If u=t its residue is
+identically zero because the initial state is not zero. No rank assumption
+on H is needed.
+
+To identify the remaining block, set X0=0, X1=1, X2=z,
+c_t=beta1 v_t/(alpha1 u_t), and rho=alpha1 beta2/(alpha2 beta1).
+The binary kernels are
+
+\[
+ \overline K_t(z)=\begin{pmatrix}
+ (1+c_tz)^{-1}&c_tz(1+c_tz)^{-1}\\
+ (1+\rho c_tz)^{-1}&\rho c_tz(1+\rho c_tz)^{-1}
+ \end{pmatrix}.
+\]
+
+Use the actual move-first order in Pbar_t, and put
+phi_t1=(Pbar_t)_12, phi_t2=z(Pbar_t)_22. For c=1,2 let
+z_uc=−A_u(c,1)/A_u(c,2), and
+Mres_((u,c),(t,a))=[(A_u(c,1)+A_u(c,2)z) phi_ta(z)] at z_uc.
+Equation B26 gives the exact row scaling
+
+\[
+ \widetilde M_{(u,c),(t,a)}=
+ -\frac{M^{\rm res}_{(u,c),(t,a)}}
+ {A_u(c,2)X_c(0,1,z_{uc})z_{uc}}. \tag{B29}
+\]
+
+Write q_t=(Pbar_t)_12 and r_t=(Pbar_t)_21. The second family is
+phi_t2=z−z r_t, so its residues equal those of −z r_t.
+Both q_t and z r_t vanish at zero, are bounded at infinity, and have
+only the stated simple poles. Their residue map is injective: vanishing
+residues leave a bounded pole-free function, hence a constant, and its
+value at zero makes it zero. The established binary rank theorem gives
+
+\[
+ \operatorname{rank}B_L=
+ \begin{cases}3m,&m\text{ odd},\\3m-2,&m\text{ even}.\end{cases} \tag{B30}
+\]
+
+This uses no old-source inverse. For an annihilator
+Lambda(R)=a^T rho2 R+beta^T T2 R, long-empty constraints are
+
+\[
+ a^TA_L+\beta^TB_L=0. \tag{B31}
+\]
+
+The exact seed identity F_t,r(t),A,0=U_tA+c_tA F_r(t),0 and T2 U=0
+then reduces all selected output-zero constraints, in either parity, to
+
+\[
+ a^T\rho_2U_{tA}=0. \tag{B32}
+\]
+
+For odd m, eliminate every axis coefficient using
+beta^T=−a^T A_L B_L^-1 and define
+
+\[
+ \mathcal P_2(F)=\rho_2F-A_LB_L^{-1}T_2F. \tag{B33}
+\]
+
+The remaining conditions are exactly B32 and
+
+\[
+ a^T\mathcal P_2(F_{t,s,A,b}-F_{t,r(t),A,b})=0. \tag{B34}
+\]
+
+Equivalently,
+
+\[
+ \operatorname{rank}\mathscr C_2(N)=3m+
+ \operatorname{rank}[\rho_2(U)\mid
+   \mathcal P_2(F_{t,s,A,b}-F_{t,r(t),A,b})]. \tag{B35}
+\]
+
+The remaining matrix has r=9 choose(m,2) rows. No full-row-rank assertion
+is supplied by this elimination.
+
+For even m choose full two-column and two-row kernel bases R_L,L_L of
+B_L. Equation B31 is solvable for beta exactly when
+
+\[
+ a^T A_LR_L=0. \tag{B36}
+\]
+
+Its solutions then have the form beta^T=beta_particular^T(a)+nu^T L_L.
+The selected output-zero rows do not constrain these two remaining
+axis coefficients. A necessary condition for surjectivity is therefore
+
+\[
+ \operatorname{rank}[L_LT_2(F_{t,s,A,b}-F_{t,r(t),A,b})]=2. \tag{B37}
+\]
+
+Otherwise a nonzero pure-axis annihilator survives every generator of N.
+First-slot differences are essential to remove this ambiguity. Neither
+B35 nor B37 proves uniform surjectivity or the observed m=3 deficiency.
+
+The extended exact script checks B27's triangular block, B28's matching
+first derivatives, B29's binary residue scaling and B32's seed subtraction.
+At m=3,4,5 it finds long-empty ranks 9,10,15 respectively. The odd
+remaining matrices have ranks 18 and 90; at m=4 the difference columns
+remove both pure-axis directions in B37. The complete extended run took
+0.719 seconds and 23,363,584 bytes maximum RSS. The primary researcher
+reviewed these additions; all statements remain fixed-fixture certificates.
+
+## A path factorization explains the three-block deficiency
+
+For a state assignment a=(a_1,...,a_m), define
+
+\[
+ \phi_a=X_2\prod_{t=1}^m\frac{X_{a_t}}{L_{t,a_t}},\qquad
+ c_\omega(a)=\left(\prod_{j=1}^{m-1}
+ A_{\omega_j}(a_{\omega_j},a_{\omega_{j+1}})\right)
+ A_{\omega_m}(a_{\omega_m},2). \tag{B38}
+\]
+
+Expanding the actual transition word, without commuting any factors, gives
+
+\[
+ (\widehat Q_{t,s,a,b})_2=
+ \sum_{\substack{\mathbf a_t=a\\\mathbf a_s=b}}
+ c_{(t,s,\mathrm{ascending\ remainder})}(\mathbf a)\phi_{\mathbf a}.
+ \tag{B39}
+\]
+
+The analogous expansion of X_a e_a P_t restricts only the initial state
+at block t. For every order the all-two coefficient is the same number
+C=prod_t A_t(2,2). Replace just that path by
+
+\[
+ \psi_a=\phi_a\quad(a\ne(2,\ldots,2)),\qquad
+ \psi_{(2,\ldots,2)}=\phi_{(2,\ldots,2)}-X_2/C. \tag{B40}
+\]
+
+Every component-two generator of N is a parameter-only combination of
+these 3^m functions. For selected output-zero sources the prefix component
+is zero and the all-two path is absent. For first-slot differences the
+prefixes cancel, as do the identical all-two coefficients. For long-empty
+rows the term delta_(a,2) X2 is exactly the correction supplied by B40.
+This establishes the factorization for the three actual generator types,
+including their signs and complete word orders.
+
+By B23, the observation map C2 has precisely the kernel R2=0, so its
+rank on N equals the dimension of the scalar component-two image. Hence
+
+\[
+ \operatorname{rank}\mathscr C_2(N)
+ \le\min\{9\tbinom m2+3m,\ 3^m\}. \tag{B41}
+\]
+
+This needs neither a conic specialization nor an old-source inverse.
+At m=3 it proves the upper bound 27. The existing nonzero 27-minor then
+proves generic rank exactly 27 and a structural deficiency of nine in the
+36-dimensional observation target. At m=4 the bound 81 exceeds the target
+66, so this particular obstruction no longer prevents surjectivity.
+
+For a polynomial formulation put D=prod_(t,a) L_ta and
+f_ta=X_a prod_(b!=a) L_tb. Clearing B40 and dividing by X2 gives
+
+\[
+ \frac{D\psi_a}{X_2}=\prod_t f_{t,a_t}
+       -\boldsymbol1_{a=(2,\ldots,2)}D/C. \tag{B42}
+\]
+
+These degree-3m forms vanish at each block's three line intersections,
+at its three matching points L_ta=X_a=0, and at e2. The formula offers
+a polynomial spanning problem, but counting these 6m+1 points alone
+does not prove their independent conditions or that the path products
+span every form satisfying them. Even full path spanning would leave
+the rank of the actual N coefficient combinations to establish.
+
 ## Review and remaining work
 
 An independent Astra researcher derived B1–B14; the primary researcher
@@ -330,6 +547,12 @@ The primary researcher also checked the lift and constant formula.
 The primary researcher derived B20–B24; an independent Astra reviewer
 checked the coordinate factors, pair basis, observation kernel, and
 dimension argument. B24 is explicitly conditional on surjectivity for N.
+An independent Astra researcher derived B25–B37; the primary researcher
+checked the matching zero, binary residue scaling, parity hypotheses,
+and annihilator elimination against the established binary theorem.
+The same independent researcher derived B38–B41. The primary researcher
+checked the ordered-path coefficients, all-two normalization and rank
+factorization, and derived the explicit clearing formula B42.
 
 The unresolved target is rank \(6m\) of the pairing between (B13) and
 the incoming polynomials \(\Phi(F^*)\), followed by the remaining output-zero

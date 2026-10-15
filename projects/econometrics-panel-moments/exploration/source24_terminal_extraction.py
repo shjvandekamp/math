@@ -382,6 +382,15 @@ def calculate(q, mode):
     Jbinary = [boundary[row] for row in binary]
     certificate = incoming.matrix_certificate(Jbinary)
     h = certificate['rank_certificate']['rank']
+    pivot_columns = certificate['rank_certificate']['nonzero_minor']['columns']
+    first_group_spans = h == 6 * q and all(col < 9 * q for col in pivot_columns)
+    if first_group_spans:
+        selected = (f'exactly columns 0 through {6 * q - 1}' if pivot_columns == list(range(6 * q))
+                    else f'columns {pivot_columns}')
+        first_group_evidence = (f'Existing nonzero minor uses {selected}, within the first {9 * q} '
+                                'generators; no new computation.')
+    else:
+        first_group_evidence = 'The existing full-matrix minor does not certify surjectivity of this subgroup.'
     native_binary = [[native[j][row] for row in binary] for j in range(2)]
     assert all((x + y) % P == 0 for row0, row1 in zip(*native_binary) for x, y in zip(row0, row1))
     O, source_geometry = residue.residue_matrix(m + 2, A, P)
@@ -399,6 +408,10 @@ def calculate(q, mode):
                   boundary_generator_count=len(labels), boundary_source_coefficients=Ccertificate,
                   actual_boundary_pair_matrix_sha256=residue.matrix_hash(boundary_pair),
                   boundary_binary_extraction=certificate, boundary_binary_rank=h, binary_output_dimension=6 * q,
+                  first_old_shared_group_generators=9 * q,
+                  first_old_shared_group_binary_rank=6 * q if first_group_spans else None,
+                  first_old_shared_group_spans_all_binary_outputs=first_group_spans,
+                  first_old_shared_group_evidence=first_group_evidence,
                   boundary_binary_cokernel_dimension=6 * q - h,
                   native_component_one_binary_extraction=incoming.matrix_certificate(native_binary[0]),
                   native_component_two_binary_sha256=residue.matrix_hash(native_binary[1]),
