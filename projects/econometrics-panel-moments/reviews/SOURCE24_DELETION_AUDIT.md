@@ -53,3 +53,16 @@ This is an audited paper proof with an external computational base case, not
 a Lean theorem. It does not establish injectivity of \(B_0O^{-1}\) on the
 incoming image, nonvanishing of the full regular determinant, or independence
 of the specified source family for every horizon.
+
+
+## Separate background corroboration
+
+The user-authorized [GPT-6 Pro deletion discussion](https://chatgpt.com/c/6ad11f62-f2e8-83ed-9801-fec48eb48e94)
+independently returned a prepend-block induction with a different five-row
+first-derivative minor. It also supplied an alternate base: G rows
+(1,2,3),(1,5,7),(1,11,13), times (17,19),(23,29),(31,37),(41,43), prime127.
+Using the local residue constructor, the primary researcher reproduced
+rank39 and determinant125 with eleven row swaps on one-based rows
+1,2,3,4,7,10,11,12,13,16,19,20,21,28,...,53. This is separate external
+corroboration; the saved induction continues to use the original base
+certificate, and this AI discussion is not external peer review.

@@ -554,3 +554,59 @@ PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_parity (ρ : ℝ) (cs
 'PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_even' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+PanelMoments.SourceHomogeneousCriterion.linearIndependent_source_of_homogeneousReduced {N : ℕ}
+  {A : PanelMoments.Table 2} (hA : PanelMoments.PositiveTable A) (r : PanelMoments.State 2) (hN : 2 ≤ N)
+  (hshort :
+    ∀ (a : PanelMoments.State 2), LinearIndependent ℝ (PanelMoments.SourceFamily.sourceMoment (PanelMoments.shift A) a))
+  (hnew : LinearIndependent ℝ (PanelMoments.SourceHomogeneousCriterion.homogeneousReducedColumn A)) :
+  LinearIndependent ℝ (PanelMoments.SourceFamily.sourceMoment A r)
+'PanelMoments.SourceHomogeneous.normalizedEffects_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.effect_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.coordinate_mul_effect' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.rowForm_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.denominator_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.transition_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.kernel_eq_transitionMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.kernel_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.kernel_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.positiveCoordinates_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.normalizedEffects_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.rowForm_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.kernel_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.homogeneousWordProduct_eq_wordProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceHomogeneous.homogeneousWordProduct_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.emptyColumn_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.singletonColumn_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.singleBlockColumn_homogeneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceHomogeneous.sourceColumn_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.reducedColumn_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.emptyVector_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.singletonVector_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.singleBlockVector_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.sourceColumn_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneous.reducedColumn_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceHomogeneousCriterion.normalizedPoint_section' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceHomogeneousCriterion.homogeneousLift_section' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceHomogeneousCriterion.homogeneousLift_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceHomogeneousCriterion.homogeneousLift_reducedColumn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceHomogeneousCriterion.linearIndependent_homogeneousReduced_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceHomogeneousCriterion.linearIndependent_newJoint_iff_homogeneousReduced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceHomogeneousCriterion.linearIndependent_source_of_homogeneousReduced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

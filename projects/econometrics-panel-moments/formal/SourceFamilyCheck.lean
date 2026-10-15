@@ -10,6 +10,8 @@ import PanelMoments.KernelProducts
 import PanelMoments.SourceTransferOrders
 import PanelMoments.SourceSingleBlock
 import PanelMoments.SourceReducedCriterion
+import PanelMoments.SourceHomogeneous
+import PanelMoments.SourceHomogeneousCriterion
 import PanelMoments.BinaryTransferAlgebra
 import PanelMoments.BinaryTransferSpan
 import PanelMoments.BinaryTransferEndpoints
@@ -327,3 +329,39 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_parity
 #print axioms PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_odd
 #print axioms PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_even
+
+#check PanelMoments.SourceHomogeneousCriterion.linearIndependent_source_of_homogeneousReduced
+
+#print axioms PanelMoments.SourceHomogeneous.normalizedEffects_pos
+#print axioms PanelMoments.SourceHomogeneous.effect_normalized
+#print axioms PanelMoments.SourceHomogeneous.coordinate_mul_effect
+#print axioms PanelMoments.SourceHomogeneous.rowForm_pos
+#print axioms PanelMoments.SourceHomogeneous.denominator_normalized
+#print axioms PanelMoments.SourceHomogeneous.transition_normalized
+#print axioms PanelMoments.SourceHomogeneous.kernel_eq_transitionMatrix
+#print axioms PanelMoments.SourceHomogeneous.kernel_pos
+#print axioms PanelMoments.SourceHomogeneous.kernel_row_sum
+#print axioms PanelMoments.SourceHomogeneous.positiveCoordinates_smul
+#print axioms PanelMoments.SourceHomogeneous.normalizedEffects_smul
+#print axioms PanelMoments.SourceHomogeneous.rowForm_smul
+#print axioms PanelMoments.SourceHomogeneous.kernel_smul
+#print axioms PanelMoments.SourceHomogeneous.homogeneousWordProduct_eq_wordProduct
+#print axioms PanelMoments.SourceHomogeneous.homogeneousWordProduct_smul
+#print axioms PanelMoments.SourceHomogeneous.emptyColumn_homogeneous
+#print axioms PanelMoments.SourceHomogeneous.singletonColumn_homogeneous
+#print axioms PanelMoments.SourceHomogeneous.singleBlockColumn_homogeneous
+#print axioms PanelMoments.SourceHomogeneous.sourceColumn_homogeneous
+#print axioms PanelMoments.SourceHomogeneous.reducedColumn_homogeneous
+#print axioms PanelMoments.SourceHomogeneous.emptyVector_smul
+#print axioms PanelMoments.SourceHomogeneous.singletonVector_smul
+#print axioms PanelMoments.SourceHomogeneous.singleBlockVector_smul
+#print axioms PanelMoments.SourceHomogeneous.sourceColumn_smul
+#print axioms PanelMoments.SourceHomogeneous.reducedColumn_smul
+
+#print axioms PanelMoments.SourceHomogeneousCriterion.normalizedPoint_section
+#print axioms PanelMoments.SourceHomogeneousCriterion.homogeneousLift_section
+#print axioms PanelMoments.SourceHomogeneousCriterion.homogeneousLift_injective
+#print axioms PanelMoments.SourceHomogeneousCriterion.homogeneousLift_reducedColumn
+#print axioms PanelMoments.SourceHomogeneousCriterion.linearIndependent_homogeneousReduced_iff
+#print axioms PanelMoments.SourceHomogeneousCriterion.linearIndependent_newJoint_iff_homogeneousReduced
+#print axioms PanelMoments.SourceHomogeneousCriterion.linearIndependent_source_of_homogeneousReduced

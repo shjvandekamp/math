@@ -63,8 +63,12 @@ cases have the prescribed effect factor, prefix transition, and delta-minus-
 product form. The proofs use the actual canonical source orders and finite
 Markov path sums. Lean also proves that the selected block comes first,
 followed by the other blocks in ascending order, with the shared block
-omitted in the singleton case. The homogeneous residue interpretation
-remains to be formalized.
+omitted in the singleton case. Lean now also proves the positive homogeneous kernel identity and the exact
+X0 scaling of all source/reduced columns. An injective lift with section
+X=(1,eta) makes homogeneous reduced-column independence equivalent to the
+actual new-image premise, and gives the full conditional source-induction
+step in these coordinates. The algebraic residue interpretation remains to
+be formalized.
 
 The empty-prefix columns now have an exact reversible reduction to
 single-block columns. Lean proves span and independence equivalence, then
@@ -84,8 +88,10 @@ independence of the additional source rows.
 Two further modules now connect the binary transfer functions to the actual
 ordered stochastic matrices and restrict their rank theorem to positive
 arguments. Their focused source checks and 34 additional axiom checks passed.
-The extended aggregate checks 254 declarations; the reproducible closure now
-contains 26 modules. The earlier 24-module clean build is preserved separately.
+Two homogeneous-coordinate modules subsequently passed focused compilation
+and 32 further axiom checks. The extended aggregate now checks 286 declarations
+in a 28-module closure. The earlier 24-module clean build is preserved
+separately; the extended aggregate reuses that compiled closure.
 
 Further exact discovery separates identities from rank evidence. The
 coalescent triangle and grid identities match direct rational series checks;
@@ -169,9 +175,24 @@ are in the source24-deletion-word files. Direct checks also verify full incoming
 and mapped ranks 45 at m=5 and 63 at m=7, including the actual old-source
 equation OY=Z and polar hypotheses, in the source24-odd-incoming files.
 
+A further audited calculation shows that B0 has generic rank exactly one on
+the 3m unmultiplied auxiliary source rows underlying the incoming formula.
+It records the exact support and surviving coefficient, with four finite
+fixtures checking the formulas. The actual incoming construction also selects
+one component, multiplies by X_B/X_2 and changes the row direction. Those
+operations are essential; the rank-one result gives no rank bound for the
+actual incoming or mapped matrices.
+
 The next unresolved step is proving that B0 O^-1 is injective on this incoming
-image. The even-m regular calculation and the full regular determinant also
-remain open. None of the new results establishes all-T source independence.
+image. An independently audited completion-space construction now expresses this
+map without the large old-source inverse, while preserving the actual
+ordered-product incidence data; see
+[the quotient formulation](research/SOURCE24_COMPLETION_QUOTIENT.md).
+Its remaining condition is explicit complementarity of two spaces, not a
+proved determinant. Trying to recover incidence from all three axes also
+fails: universal observation rank bounds are 72 and 90 at m=4,5, while
+saved stacked minors with incidence have sizes 105 and 132. The even-m
+regular calculation and full regular determinant remain open. None of the new results establishes all-T source independence.
 
 ## Finite theorem
 
@@ -242,7 +263,9 @@ silently assumed by either proved theorem, and no result below is claimed.
    parameterization, and conditional induction criterion are now proved.
    The joint/conditional map equivalence and actual ordered matrix-product
    formulas, including the explicit sorted-index forms, are now proved.
-   Next formalize the homogeneous residue formulas and the audited polar theorem.
+   The positive homogeneous representation and conditional induction bridge
+   are now proved. Next formalize the algebraic residue formulas and audited
+   polar theorem.
    The auxiliary binary independence and rank lemmas are now formalized.
    The actual new-image normalization and reversible single-block reduction
    are also proved. The actual binary matrix rank on the positive domain is

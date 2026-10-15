@@ -1297,6 +1297,132 @@ family with the actual incoming operator. It does not show that
 \(B_0O^{-1}\) is injective on this image. That is still the
 remaining transversality problem in the leading regular operator.
 
+The inverse-map hypothesis should be separated from this incoming result.
+The deletion theorem and the auxiliary incoming-rank argument do not use
+\(O\). Identifying the auxiliary family with \(Z_{-3}\) by (H5)
+uses the odd polar inverse and (H4), but likewise does not require
+\(O\) to be invertible. Old-source invertibility enters only when
+forming \(O^{-1}Z_{-3}\) and applying (H3). Thus the new incoming
+nonvanishing statement is not conditional on already proving the old
+source independence.
+
+### Feedback on the unmultiplied auxiliary rows
+
+The following paper calculation has passed both the primary researcher's
+check and a separate independent audit; it is not formalized in Lean. It describes
+the \(3m\) old moment rows underlying (H8), not the actual
+\(9m\)-column incoming image. Define, for \(m\ge3\),
+\[
+ U_{tA}=F_{t,r,A,0}/A_t(A,0)-c_{tA}F_{r,0},\qquad
+ r=\min(\{1,\ldots,m\}\setminus\{t\}). \tag{U1}
+\]
+Here \(F_{r,0}=X_0e_0(I-P_r)\) is the long zeroth-level word,
+and \(E_{r,0}=X_0e_0(I-K_r)\) is the local single-block row.
+Our normalized common-\(G\) family has \(A_t(A,0)=1\).
+
+Extend the incidence map to local singles by
+\(J_{\rm inc}(E_{u,c})=-\sum_{d=0}^2e_{(u,c,d)}\).
+The feedback map satisfies the identical formula on these rows:
+\(T_0(E_{u,c})=-\sum_{d=0}^2e_{(u,c,d)}\), directly from
+\(\operatorname{Res}_{L_{uc}}E_{u,c}=-X_cv_{uc}\).
+Thus \(B_0(E_{u,c})=0\). In particular the correction applies
+to **all three output indices**, not only output zero. If
+\(s=\min(\{1,\ldots,m\}\setminus\{r\})\), the exact identity
+\[
+ F_{r,0}=E_{r,0}+\sum_{b=0}^2F_{r,s,0,b}
+\]
+gives \(J_{\rm inc}(F_{r,0})=0\). Hence
+\(J_{\rm inc}(U_{tA})=e_{(t,A,0)}\).
+
+All binary-output rows of \(T_0(U_{tA})\) vanish. To check this,
+let \(P_{r0}=\{X_0=L_{r0}=0\}\), with a fixed projective
+representative, and evaluate all the following binary determinants
+at that point. For output \(d=1,2\), the only potentially
+nonzero feedback row of either constituent in (U1) is \((r,0,d)\).
+Every other row retains a factor \(X_0\), including a later
+visit to state zero. At the first row-zero pole the two values are
+\[
+ -\frac{X_A}{L_{tA}}\prod_{j\ne r,t}d_j,
+ \qquad -\prod_{j\ne r}d_j,
+\]
+respectively. Equation (H4) cancels them. Therefore
+\(J_{\rm inc}(U_{tA})\) and \(T_0(U_{tA})\) both have zero
+binary-output rows, and so does \(B_0(U_{tA})\).
+
+For output zero, the direct incidence term cancels the simple
+\(X_A/L_{tA}\) term. The remaining exact expression is
+\[
+ B_0[(u,c,0),U_{tA}]
+ =\left.
+  \frac{\operatorname{Res}_{L_{uc}}
+    \left[(X_A/L_{tA})(P^t)_{00}-c_{tA}(P_r)_{00}\right]}
+       {X_c}\right|_{X_0=L_{uc}=0}. \tag{U2}
+\]
+The matching division by \(X_c\) uses the regular extension
+already established in (H2). If \(c\ne0\), the final output
+zero supplies an uncanceled factor \(X_0\), so (U2) vanishes.
+If \(c=0\), divide by that factor first. A product then has a
+row-zero pole only at its first block: an intermediate transition
+into state zero would supply a second factor of \(X_0\). Thus
+only \(u=r\) can remain. When \(t<m\), both words have the
+same last block \(m\). Their first-pole normal residues differ
+by the binary determinant \(d_t\), canceled again by (H4).
+When \(A=0\), its extra factor \(X_A=X_0\) also makes the
+remaining expression zero. Consequently
+\[
+ B_0(U_{tA})=0\quad(t<m\text{ or }A=0),\qquad
+ \operatorname{supp}B_0(U_{mA})\subseteq\{(1,0,0)\}.
+ \tag{U3}
+\]
+
+There is an explicit formula for the possible surviving entry. Fix
+the point \(P_{10}=\{X_0=L_{10}=0\}\), and evaluate every
+quantity in the next display at this same point. Put
+\(\theta_j=1/L_{j1}-1/L_{j2}\). Stripping the last transition
+before taking its output-zero normal component gives
+\[
+ B_0[(1,0,0),U_{mA}]
+ =\frac{X_A}{L_{mA}}(v_{10})_1
+     \left(\prod_{j=2}^{m-1}d_j\right)
+      \left[\frac{\theta_{m-1}}{d_{m-1}}
+                        -\frac{\theta_m}{d_m}\right]. \tag{U4}
+\]
+Write \(\alpha_i=G_{i1}\), \(\beta_i=G_{i2}\), and
+\(\Delta=\alpha_1\beta_2-\alpha_2\beta_1\ne0\). On the
+axis,
+\[
+ \frac{\theta_j}{d_j}
+ =\frac1\Delta\left[
+    \frac{\alpha_2-\alpha_1}{v_jX_2}
+       +\frac{\beta_2-\beta_1}{u_jX_1}\right]. \tag{U5}
+\]
+The bracket in (U4) is therefore generically nonzero for independent
+time factors. The common-\(G\) feedback matrix on the \(3m\)
+columns \(U_{tA}\) has generic rank exactly one. This is a
+symbolic support and nonvanishing statement, not merely a deficient
+modular computation.
+
+The separate finite check
+`exploration/source24_auxiliary_feedback.py`, with results in
+`exploration/source24-auxiliary-feedback-results.json`, verifies
+the extended incidence convention, \(B_0=J_{\rm inc}-T_0\),
+and the support/rank assertion at \(m=3,5\), for both independent
+and economic time factors with \(G_{30}\). Each case has rank
+one, supported only at \((1,0,0)\) and the two columns
+\((m,1),(m,2)\).
+
+This does not give a rank bound for the incoming or mapped matrices.
+By (H8), the actual incoming column is the double-residue vector of
+\[
+ A_t(A,B)\frac{X_B}{X_2}(U_{tA})_2\,w. \tag{U6}
+\]
+Selecting component two, multiplying by \(X_B/X_2\), and replacing
+its row direction by \(w\) are not constant coefficient changes
+of the old source columns. Their effects on \(B_0O^{-1}\) are
+precisely what remains to be controlled. The rank-one result rules
+out bypassing that operation by applying \(B_0\) directly to
+the unmultiplied auxiliary rows.
+
 ## A proved bridge to scalar covariates
 
 One need not insist on slopes \((0,1,2)\) when searching for a generic

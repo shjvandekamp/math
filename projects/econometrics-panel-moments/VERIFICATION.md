@@ -126,12 +126,14 @@ The continuation verifier passed its clean 24-module rebuild and all
 [source-family-axioms.txt](formal/source-family-axioms.txt). The only diagnostic
 was an existing stylistic linter warning in `BasisCertificate.lean`.
 
-The subsequent two-module extension passed focused source compilation and
-34 additional axiom checks, without warnings. The extended aggregate checks
-all 254 requested declarations against the compiled 26-module closure; its
+The subsequent four modules passed focused source compilation and 66
+additional axiom checks, without warnings. They include the actual binary
+matrix rank and the actual three-state homogeneous representation/criterion.
+The extended aggregate checks all 286 requested declarations against the
+compiled 28-module closure; its
 output is [source-family-extended-axioms.txt](formal/source-family-extended-axioms.txt).
-The reproducible verifier now includes both new modules. This extended check
-reuses the earlier compiled closure; it is not a new clean 26-module rebuild.
+The reproducible verifier now includes all four new modules. This extended check
+reuses the earlier compiled closure; it is not a new clean 28-module rebuild.
 The audited deletion-word induction remains a paper proof whose k=4 base
 is the external certificate in `exploration/source24-deletion-word-results.json`;
 it is not covered by the Lean verifier.

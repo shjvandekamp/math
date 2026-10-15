@@ -151,3 +151,40 @@ characteristic-zero valuation -75 at that fixture. At m=4 the entrywise
 order bound and nonzero leading determinant similarly give exact order -108.
 The m=2 order -24 remains modular-only. None of these conclusions is a Lean
 certificate or an arbitrary-length independence theorem.
+
+
+## Follow-up: deletion induction and auxiliary feedback
+
+The separate review in `SOURCE24_DELETION_AUDIT.md` subsequently checked the
+deletion induction and completed the odd incoming-rank argument. That result
+does not depend on old-source invertibility: the odd polar formula identifies
+the incoming operator, and the old inverse is used only in its subsequent map.
+
+An independent read-only review also passed U1–U6. The incidence extension on
+local single-block rows applies to all three output indices and cancels their
+feedback. For the unmultiplied auxiliary rows, the binary-output feedback
+vanishes. The output-zero normal derivative depends only on the leading
+binary prefix, because the final transition's zero column vanishes on the
+axis; an intermediate visit to state zero contributes another vanishing
+factor. Equal final blocks give cancellation for every earlier deleted block.
+Deleting the final block instead gives exactly U4, with the stated sign.
+Formula U5 proves generic nonvanishing within the common-transition family.
+
+Thus the feedback on these 3m unmultiplied auxiliary rows has generic rank
+exactly one for m>=3. This is an audited paper statement, not a Lean theorem.
+It gives no rank bound for the actual incoming or mapped matrices: their
+component selection, multiplication by X_B/X_2, and replacement of the row
+direction are essential and are not constant changes of source coefficients.
+
+### All-three-axis incidence check
+
+The primary researcher reviewed `source24_three_axis_incidence.py` and
+reproduced every saved certificate entry, excluding runtime and RSS. The
+axis-zero implementation agrees entrywise with the existing feedback
+operator. For each line and axis, zero-sum rows give the nonzero relation
+`sum_d A_u(c,d) X_d T_d = 0`, including the regular extension at `c=axis`.
+The disjoint three-row groups bound each axis rank by 6m, and the combined
+rank by 18m. The saved stacked minors with incidence have sizes 105 and 132
+at m=4 and 5, exceeding 72 and 90, so generic incidence factorization through
+all three axes fails at those lengths. The m=3 result alone is a finite
+fixture obstruction. None of these checks decides source independence.

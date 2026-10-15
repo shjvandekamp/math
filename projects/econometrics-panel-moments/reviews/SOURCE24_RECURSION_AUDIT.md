@@ -36,7 +36,12 @@ or generic source independence for arbitrary panel length.
   The `newParameters` version only reindexes that hypothesis. No independence
   assumption is concealed in a definition.
 
-## Remaining bridges
+## Remaining bridges at the time of this review
+
+The following paragraphs record the scope of the original review. The joint
+map, actual normalization, ordered matrix products and reversible reduction
+have since been proved in the continuation modules listed in STATUS.md.
+The original review is not a retroactive audit of those later modules.
 
 For fixed initial state `r`, the joint first-state image is coordinatewise
 `transition A η 0 r a` times `conditionalTail A m a η`. This multiplier is
