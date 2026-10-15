@@ -746,3 +746,126 @@ are legitimate cokernel observations of the derivative. A corresponding
 minor has nonzero leading coefficient, giving full scalar ambient rank
 \(d_{q+1}\) for generic positive \(\varepsilon\). Surjectivity of
 \(\Theta\), and uniform boundary spanning, remain unproved.
+
+### A canonical inherited subfamily of the boundary kernel
+
+Some genuine boundary relations can be constructed entirely from old
+rows. Let R be an old zero-prefix combination with scalar component
+R2 identically zero. Its zero row sum gives
+\(R=R_1(e_1-e_0)\). Componentwise coordinate divisibility implies
+\(R_1=X_0X_1f\), with \(D_qf\) a polynomial of degree
+\(3q-1\). The same formal source coefficients append R to RK_n.
+Rows 0 and 1 of the boundary kernel coincide, so this appended vector
+vanishes identically at \(\varepsilon=0\).
+
+For nonzero epsilon the exact difference of their outcome-2 entries is
+\(-\varepsilon vX_1X_2/(L_{n0}L_{n1})\). Consequently
+
+\[
+ D_nh(RK_n)=-\varepsilon vX_1L_{n2}D_qR_1,
+ \qquad
+ \Theta(RK_n)=v^3(D_qf)|_\ell.
+ \tag{ZP37}
+\]
+
+This uses a true old scalar-kernel vector; individually vanishing
+new-output-1 source columns do not supply these relations.
+
+The condition can be expressed without first choosing an old kernel
+basis. On every old zero-prefix row define
+
+\[
+ B_v(R)=-\frac1v\,
+       \frac{(D_qR_1/X_1)|_\ell}{X_2}
+       \in\mathbb R[X_1,X_2]_{3q-1}.
+ \tag{ZP38}
+\]
+
+The first coordinate division is removable by component divisibility.
+The second is removable because R vanishes at e1, so its restricted
+numerator vanishes at X2=0. On R2=0, (ZP38) equals
+\((D_qf)|_\ell\). If A is the coefficient matrix of the old
+cleared scalar component-two map and B is that of (ZP38), both on the
+same original generator columns, then
+
+\[
+ \operatorname{rank}(\Theta\text{ on inherited relations})
+ =\operatorname{rank}\begin{pmatrix}A\\B\end{pmatrix}
+       -\operatorname{rank}A.
+ \tag{ZP39}
+\]
+
+Thus, assuming old scalar rank dq, the augmented rank dq+3q is
+equivalent to surjectivity from this inherited subfamily. Scalar full
+span alone does not imply that joint condition. It controls the
+projection to component two but does not determine where its kernel
+lies relative to the other component's restriction. All coefficient
+couplings in (ZP39) must be retained.
+
+### Exact finite splitting certificates
+
+`exploration/source24_zero_prefix_split_jet.py` applies the first derivative
+to the systematic kernel in the original source coordinates, at the saved
+boundary fixtures. It checks the old six-condition schemes and the boundary
+interpolation hypotheses over the same field, of prime order 1,000,003.
+The boundary ranks saturate (ZP33), so the computed evaluation kernels are
+the actual polynomial kernels over that field.
+
+The new kernel is never inverted on the merged line. At
+\(X=(-v,x,1)\), direct differentiation of the polynomial matrix
+\((L_{n0}L_{n1}L_{n2})K_n\) gives
+
+\[
+ J_n=\begin{pmatrix}
+ 2xv(-v)&0&2xv^2\\
+ xv(-v)&0&xv^2\\
+ 0&0&0
+ \end{pmatrix}.
+ \tag{ZP40}
+\]
+
+Inserting this matrix at the actual position of the new block computes
+the derivative without a singular rational evaluation. Independent dual
+arithmetic on the actual rational words checks the cleared derivative at
+ordinary points. The verifier then applies the original-coordinate kernel,
+divides its trace by x squared, and interpolates its 3q coefficients.
+Six additional points check each interpolation; the degree bound is (ZP35),
+not an extrapolation from those checks.
+
+| New length n | Boundary rank | Induced trace rank | Combined rank | Mixed minor mod p |
+| --- | ---: | ---: | ---: | ---: |
+| 4 | 57 | 9 | 66 | 244881 |
+| 5 | 93 | 12 | 105 | 60146 |
+| 6 | 138 | 15 | 153 | 468890 |
+
+The mixed matrix uses independent boundary columns followed by selected
+original-coordinate kernel vectors. Its upper-right block is zero, and
+its determinant is checked against the product of the two pivot minors.
+These are genuine leading coefficients of minors of the source family
+along the new-u curve: the lower observations are restrictions of cleared
+numerators to ell, whose constant terms vanish for every source column.
+After dividing those observation rows by epsilon, their limits are exactly
+the derivative observations used in the certificate.
+
+A nonzero minor over the rational-function field in epsilon modulo p
+witnesses a nonzero characteristic-zero polynomial minor after clearing
+denominators. This lifting argument does not lift each modular kernel
+vector as a characteristic-zero relation. It lifts the nonvanishing of
+the resulting source minor. Consequently, for each of n=4,5,6 the actual
+zero-prefix scalar image, and therefore the N scalar image, generically
+fills the ambient space at fixed G*. In particular, the new n=6 case has
+generic scalar rank 153. A positive value of the new u can be chosen away
+from the finitely many roots of that minor.
+
+For q=4,5, the inherited old scalar kernels alone have trace ranks 12 and
+15. The verifier checks their inclusion in the new boundary kernel and
+both identities (ZP37), using independent component-one evaluations of the
+old words. It does not use the unsaturated sampled q=3 kernel.
+
+All matrices, source coefficients, kernel bases, selected minors, geometry
+checks, and hashes of the referenced boundary matrices are saved in
+`exploration/source24-zero-prefix-split-jet-results.json`. The run exited
+zero in 2.477699792 seconds, with maximum RSS 66,535,424 bytes and no
+resource guard hit. These are external exact finite certificates with
+the paper lifting argument above. They are not Lean certificates, and
+they do not prove uniform trace surjectivity.

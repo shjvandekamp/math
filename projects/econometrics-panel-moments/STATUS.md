@@ -407,6 +407,19 @@ restriction of the derivative to the merged line is divisible by
 X1² X2², leaving binary forms of degree 3q−1. Surjectivity of this
 3q-dimensional map, together with boundary spanning, would give the
 full scalar rank after splitting the new lines.
+The exact splitting calculation now fills that target at n=4,5,6:
+the induced kernel-jet ranks are 9,12,15 and the combined ranks are
+66,105,153. The saved mixed determinants are 244881,60146,468890
+modulo 1,000,003. The paper leading-minor argument therefore gives
+generic scalar spanning at each of these three lengths for fixed G*;
+these are external certificates, not Lean proofs. The actual inherited
+old scalar kernels already supply all 12 and 15 trace directions at
+q=4,5. Uniform inherited-jet surjectivity is equivalent to the joint
+rank of the old scalar map and a specified other-component restriction
+on a generic line. Scalar spanning alone does not imply this joint
+condition. The verifier, original source-coordinate kernels, and
+independent derivative controls are in the source24-zero-prefix-split-jet
+files; the run used 2.48 seconds and 66.5 MB RSS.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -579,6 +592,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    that the actual zero-prefix image fills it uniformly, then recover
    the remaining 3q directions by proving the explicit first-jet map
    onto on the actual boundary coefficient kernel.
+   Finite splitting certificates now succeed at n=4,5,6, including
+   full scalar rank 153 at n=6. Prove the inherited scalar-kernel
+   criterion uniformly by retaining the joint old scalar map and
+   its other-component restriction; the finite q=4,5 checks are
+   bases to investigate, not an induction theorem.
    Neither route is yet complete.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
