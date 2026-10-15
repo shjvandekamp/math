@@ -366,6 +366,13 @@ This is an audited paper theorem with external finite certificates.
 The remaining pair-weight space has dimension at most
 9 choose(m,2)−(5m−1). Higher normal layers still require a compatible
 lifting argument; the first two layers do not imply full spanning.
+The remaining space is now identified exactly: S_m=p2(N)+F^3 S_m,
+where F^3 consists of polynomials divisible by X0 cubed. A locally
+proved ten-point cubic interpolation lemma gives the ambient normal-layer
+dimensions through order m. Exact coupled kernel bases at m=4,5 isolate
+the remaining 35- and 66-dimensional polynomial spaces and fill every
+later layer at those fixtures. These finite profiles do not extend
+the actual-source spanning theorem to general m.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -515,7 +522,9 @@ silently assumed by either proved theorem, and no result below is claimed.
    in the explicit binary quotient. Its first and second normal layers
    now have uniform actual-source spanning proofs; extend them with
    a higher-normal lifting theorem that retains the coupled row and
-   prefix coefficients. Neither route is yet complete.
+   prefix coefficients. The next concrete target is J3 on the actual
+   source combinations in F^3 S_m; finite coupled bases are saved at
+   m=4,5. Neither route is yet complete.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final

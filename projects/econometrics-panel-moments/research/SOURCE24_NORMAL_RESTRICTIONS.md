@@ -411,3 +411,152 @@ enough independent coefficients at the next order under (NR23).
 The first- and second-normal results do not imply this, and they do
 not assert closure of N under multiplication by \(X_0\). This append
 obstruction and the retained-state formula were independently checked.
+
+## The precise ambient filtration and the remaining third-order kernel
+
+There is a useful geometric description of the target for higher normal
+coefficients. Work with the cleared polynomial space S_m of degree 3m
+and put
+
+\[
+ F^k S_m=S_m\cap X_0^k\mathbb K[X_0,X_1,X_2]_{3m-k}.
+ \tag{NR24}
+\]
+
+The block points on X0=0 are exactly the m matching points Q_t0;
+the additional point e2 is on that line as well. For k at least one,
+their vanishing is automatic. The five remaining points of block t are
+
+\[
+ Z'_t=\{P_{t01},P_{t02},P_{t12},Q_{t1},Q_{t2}\},\qquad
+ F^k S_m=X_0^k I\!\left(\bigcup_tZ'_t\right)_{3m-k}.
+ \tag{NR25}
+\]
+
+Here P_tab is the intersection of the two indicated lines in block t.
+All five points are off X0=0 under the generic geometry hypotheses.
+
+The conic C_t=L_t1 L_t2 vanishes at all five points. It is their only
+vanishing quadratic up to a scalar: three distinct points lie on L_t1
+and three on L_t2, so a quadratic vanishing there must contain both
+lines. Evaluation of the six-dimensional quadratic space at these five
+points therefore has rank five. Choose a quadratic separator for a
+point in Z'_t and multiply it by the C_s for all s other than t.
+Cross-block nonincidence makes its value at the target nonzero.
+These separators interpolate all 5m points in degree 2m.
+
+One degree can be saved generically for m at least two. It suffices
+that each pair of blocks admits cubic interpolation at its ten points:
+multiply a cubic separator for that pair by the C_s from the other
+m−2 blocks, obtaining degree 2m−1. Here is a direct common-G witness
+for the two-block interpolation claim:
+
+\[
+ G=\begin{pmatrix}1&0&0\\1&1&1\\1&2&3\end{pmatrix},\qquad
+ (u_1,v_1)=(1,1),\quad(u_2,v_2)=(2,4).
+\]
+
+At this boundary specialization, four of the ten points lie on X0=0,
+with distinct ratios X2/X1 equal to −1, −2/3, −1/2, −1/3. A cubic
+vanishing at all ten points must therefore be X0 times a quadratic.
+In the chart X0=1, the other six points are
+(0,−1), (−1/2,0), (−2,1), (0,−1/4), (−1/4,0), (−1,1/4).
+A quadratic vanishing at the four points on the two coordinate axes
+has the form
+
+\[
+ A(8x^2+4y^2+6x+5y+1)+Bxy.
+\]
+
+The other two values give 30A−2B=0 and (9/2)A−B/4=0, so A=B=0.
+Thus the ten-point cubic evaluation matrix is invertible. This boundary
+witness certifies a nonzero polynomial minor; its invertibility persists
+at positive nearby parameters. The separate nonincidence conditions
+can also be imposed generically. For any fixed m, the finitely many
+required pair minors belong to the same common-G parameter ring;
+their product with those geometric factors is nonzero.
+
+It follows that all 5m off-axis points admit interpolation in degree
+2m−1. Multiplication by powers of X0 extends it to every higher degree.
+Consequently, generically for m at least two,
+
+\[
+ \dim F^kS_m=\binom{3m-k+2}{2}-5m\quad(1\le k\le m+1),
+ \qquad
+ \dim(F^kS_m/F^{k+1}S_m)=3m-k+1
+                 \quad(1\le k\le m).
+ \tag{NR26}
+\]
+
+The zeroth layer has dimension 2m. The ambient kth normal target in
+the range of (NR26), after division by D and in the chart X2=1, is
+exactly
+
+\[
+ \left\{\frac{p(x)}{E_m(x)}:\deg p\le3m-k\right\}.
+ \tag{NR27}
+\]
+
+This is constructive: extend the prescribed binary form to q0 of degree
+d=3m-k, interpolate q0(P)/X0(P) on the 5m points by a form g of
+degree d−1, and set q=q0−X0g. The inequality d−1 at least 2m−1
+ensures the required interpolation. Then q vanishes at all off-axis
+points while keeping its prescribed restriction on X0=0.
+
+In particular, the audited ordinary-axis, first-normal, and second-normal
+source results supply all of the first three ambient layers. They give
+the exact quotient statement, for every fixed m at least four generically,
+
+\[
+ S_m=p_2(N)+F^3S_m,
+ \qquad \dim(S_m/F^3S_m)=8m-1,
+ \qquad \dim F^3S_m=\frac{9m^2-19m+2}{2}.
+ \tag{NR28}
+\]
+
+Thus the remaining full-spanning question is precisely
+p2(N) intersect F^3 S_m equals F^3 S_m. Its next layer is J3 on
+actual combinations whose first three coefficients all vanish.
+Independent coefficient choices at successive orders would not prove
+this assertion. The geometric interpolation argument and (NR28) were
+independently checked locally; they supply no new higher-normal
+surjectivity theorem for the actual sources.
+
+## Finite coupled higher-normal profiles
+
+[`source24_normal_filtration.py`](../exploration/source24_normal_filtration.py)
+computes the actual cleared N polynomial matrix and the normalized
+pure-path matrix at the previously recorded economic fixtures. It orders
+monomials by increasing X0 exponent. At each layer k it applies that
+layer's coefficient matrix to the kernel of every earlier layer, retaining
+the same original source coefficients. The resulting gains are therefore
+compatible successive ranks. They do not add independently ranked layers.
+
+| m | Successive gains, before trailing zeros | Remaining polynomial dimension after layers 0,1,2 |
+| --- | --- | ---: |
+| 4 | 8, 12, 11, 10, 9, 8, 7, 1 | 35 |
+| 5 | 10, 15, 14, 13, 12, 11, 10, 9, 8, 3 | 66 |
+
+The actual N and normalized-path profiles agree at every layer of these
+two fixtures. The [saved exact output](../exploration/source24-normal-filtration-results.json)
+includes the full matrices, original generator labels, successive kernel
+certificates, and explicit actual-source coefficient vectors for the
+X0-cubed-divisible polynomial images. Their coefficient-kernel dimensions
+are 65 and 126, including respectively 30 and 60 relations giving the
+zero polynomial; the genuine polynomial dimensions are 35 and 66.
+These different dimensions must not be conflated.
+
+The same script independently corroborates the two-block interpolation
+lemma at a positive common-G economic fixture. With each of its ten
+points normalized to X0=1, the cubic evaluation determinant is 944753
+modulo 1000003. Its point normalizations and cross-block conic-separator
+values are all nonzero where required. This certificate is additional
+evidence; the hand proof above already supplies the characteristic-zero
+interpolation witness.
+
+The revised run completed in 2.890 seconds using 34,258,944 bytes
+maximum RSS, with no cutoff. Independent ordinary-word and clearing
+checks passed, and the coupled elimination and finite output passed a
+separate local audit. The higher-layer profiles concern only the two
+displayed lengths. The next uniform task remains actual-source lifting
+inside F^3 S_m and subsequent filtration kernels.
