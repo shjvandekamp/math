@@ -7,6 +7,11 @@ the actual source words, both axis restrictions, the Laurent endpoint
 argument, the three-column base, and the parameter perturbation.
 The result is a lower bound on the actual scalar image of N, not a
 proof that this image fills its ambient space.
+The [Pro21 continuation](https://chatgpt.com/c/6ad15e36-dd64-83ed-9505-b8f7d094c30f)
+and two independent local audits strengthen the increment to 6q+3
+in (ZP41)--(ZP50). With the exact length-six splitting base, the
+strongest resulting bound is 3m²+45 for m>=6. The earlier 4q proof
+is retained as the axis subargument used in that extension.
 
 Use the actual source subspace N from
 [SOURCE24_BINARY_QUOTIENT.md](SOURCE24_BINARY_QUOTIENT.md), and the
@@ -869,3 +874,267 @@ zero in 2.477699792 seconds, with maximum RSS 66,535,424 bytes and no
 resource guard hit. These are external exact finite certificates with
 the paper lifting argument above. They are not Lean certificates, and
 they do not prove uniform trace surjectivity.
+
+## A uniform extension by all 6q+3 boundary directions
+
+The previous 4q increment can be strengthened to 6q+3. The proof below
+uses a filtration of observations on one common fixed-G* parameter
+family. In particular, the matching observations are applied after both
+axis restrictions have been eliminated. No closure of N under rational
+scalar multiplication is assumed.
+
+Retain the old A and B families from (ZP7), of sizes 2q+2 and
+2q−2. Write Q^t for the increasing old word omitting t and P_t for
+the old word with t first. Add the following actual zero-prefix rows:
+
+\[
+ M_{t,0}=C_{t,n}^{02},\qquad M_{t,2}=C_{t,n}^{20}\quad(1\le t\le q),
+ \qquad E=F_{\emptyset,n,2}-F_{\emptyset,1,2}.
+ \tag{ZP41}
+\]
+
+Set \(S_t=\sum_b C_{t,n}^{2b}\),
+\(T_1=E-S_1\), and \(T_2=E-S_2+B_{2,2}\).
+The new family is A, B, all M, T1, T2, E, with 6q+3 columns.
+Its coefficients in the source family are 0 and ±1.
+
+First, the accepted X2=0 observations separate A. Their determinant
+has leading coefficient \((-1)^q/(4^q\prod_tu_t^3)\) in degree
+2q+2 of v. All other new rows and all inherited scalar rows vanish
+on that axis.
+
+### The remaining two axis pivots
+
+On X0=0, X2=1, put x=X1, z_t=v_t/u_t, sigma=1/2, tau=2/3,
+c=tau−sigma, and retain d_t and Delta_q from the binary calculation.
+Let delta_t=(P_t−P_1)22, V_t=1−(P_t)22, and V^t=1−(Q^t)22.
+The binary slope of Q^t is Delta_q/d_t. Its input from the first
+block t, starting in state 2, has state-1 probability
+b_t=x/(x+tau z_t). Therefore
+
+\[
+ V_t=V^t+\frac{\Delta_q}{d_t}b_t,
+ \qquad V_t=V_1-\delta_t.
+ \tag{ZP42}
+\]
+
+The new boundary kernel resets every row to state 2 on this axis.
+The actual source formulas give h(E)=V1, h(S_t)=V^t, and
+h(B_t2)=−delta_t, with B_12=0. It follows that
+
+\[
+ h(T_t)|_{X_0=0}=\Delta_q U_t,
+ \qquad U_t=\frac{x+\sigma z_t}{c z_t}\quad(t=1,2).
+ \tag{ZP43}
+\]
+
+The accepted Laurent endpoint argument gives a basis
+\(\{\delta_s/\Delta_q,x\delta_s/\Delta_q:2\le s\le q\}
+\cup\{1,x\}\) of the powers x^(1−q) through x^q.
+The determinant of U1,U2 in the last two coordinates is
+\(\sigma c^{-2}(1/z_2-1/z_1)\ne0\).
+Thus B,T1,T2 supply 2q independent axis pivots. These restrictions
+depend only on old parameters.
+
+Also V1/Delta_q lies in that same Laurent space: the binary numerator
+has degree at most 2q, is divisible by x, and division by Delta_q
+removes its denominator and divides by a nonzero multiple of x^q.
+Consequently E's second-axis restriction can be eliminated using B,T,
+with coefficients depending only on old parameters. Call the corrected
+row E0. It vanishes on both axes.
+
+### The 2q matching pivots on the joint axis kernel
+
+Boundary clearing writes h=pbar/(D_q ell tilde). If h vanishes on
+both axes, pbar is divisible by X0 X2. Hence h/mu has only old line
+poles. On this subspace define the observation
+
+\[
+ \mathcal M_{ta}(h)=
+  \left.\left(L_{ta}\frac h\mu\right)\right|_{L_{ta}=0}(Q_{ta}),
+ \quad Q_{t0}=(0,-z_t,1),\quad
+ Q_{t2}=(1,-1/(3u_t),0),\quad a=0,2.
+ \tag{ZP44}
+\]
+
+The line is restricted first, and all other old denominators are
+required to be units at the indicated point. These are generic
+conditions. The observation annihilates an inherited mu h_old by
+the old matching condition.
+
+Put q_tb=e_b Q^t e2, W_t=q_t0/X2, and
+
+\[
+ H_t=\widetilde\ell(1-q_{t2})-\frac{X_0\ell}{v}W_t.
+ \tag{ZP45}
+\]
+
+Direct multiplication, using
+\(K_ne_2=(vX_2/\ell)\mathbf1+\mu e_2\), gives the same
+column-2 commutator entry in rows 0 and 2:
+\((vX_2/\ell)(1-q_{t2})-(X_0/\widetilde\ell)q_{t0}\).
+The actual source differences therefore satisfy
+
+\[
+ \frac{h(M_{t,0})}{\mu}=\frac{v_tH_t}{L_{t0}},
+ \qquad
+ \frac{h(M_{t,2})}{\mu}=\frac{H_t}{L_{t2}}.
+ \tag{ZP46}
+\]
+
+These rows vanish on both axes. At another block's matching point,
+H_t has zero matching residue. For q_t2, a state-0 pole requires a
+previous arrival with factor X0, and a state-2 matching residue retains
+the final X2 factor. For W_t, a state-2 pole requires a separate arrival
+factor X2 even after the final X2 is removed; its possible state-0
+residue is killed by the explicit X0 in (ZP45).
+Thus the matching matrix on M is diagonal, with entries
+
+\[
+ 2vv_t(1-\eta_t),\qquad 1-\omega_t/v,
+ \quad \eta_t=q_{t2}(Q_{t0}),\quad\omega_t=W_t(Q_{t2}).
+ \tag{ZP47}
+\]
+
+For each t, 1−eta_t is a nonzero rational function. For example,
+fix z_t and let all other old z_s tend to zero; at x=−z_t the
+remaining binary kernels tend to the state-1 absorber, so eta_t tends
+to zero. Each omega_t is independent of new v. The matching
+determinant is therefore the nonzero rational function
+\(2^q\prod_tv_t(1-\eta_t)\prod_t(v-\omega_t)\).
+
+### The last vertex jet
+
+Define j(h) as the coefficient of epsilon in h(epsilon,0,1).
+All denominators here are units at epsilon=0. An inherited row
+mu h_old has j=0, since mu=epsilon/(2v)+O(epsilon²) and
+h_old(e2)=0. The M rows also have j=0: their scalar formulas contain
+X0 times the commutator entry, which vanishes at e2.
+
+If a nonempty old word ends with block k, its state-2 probability
+starting from state 2 is 1−epsilon/(2v_k)+O(epsilon²). At zero,
+all earlier matrices reset to state 2, so only the last transition
+contributes this first derivative. Writing k(t)=max({1,...,q}−{t}),
+the actual words give
+
+\[
+ \begin{split}
+ j(E)&=1/(2v_q)-1/(2v),\\
+ j(S_t)&=1/(2v_{k(t)})-1/(2v),\\
+ j(B_{t,2})&=1/(2v_{k(t)})-1/(2v_q),\qquad j(B_{t,1})=0.
+ \end{split}
+ \tag{ZP48}
+\]
+
+In particular j(T1)=j(T2)=0. The old-only axis correction of E
+therefore leaves j(E0)=c_old−1/(2v), a nonzero rational function.
+Eliminate its matching observations using M. That correction has
+zero j, so the last pivot survives unchanged.
+
+The resulting filtered observation determinant is, up to a nonzero
+sign, the product of the A determinant, the B/T axis determinant,
+the matching determinant, and c_old−1/(2v). Each factor is nonzero
+over the same old-parameter field with new variable v. All required
+generic conditions therefore intersect any old independent-family
+open set. This proves
+
+\[
+ \boxed{\text{old scalar rank }r
+       \quad\Longrightarrow\quad
+       \text{new scalar rank at least }r+6q+3.}
+ \tag{ZP49}
+\]
+
+The new columns are independent modulo the entire inherited old
+scalar ambient, not just modulo the selected old basis. Thus if the
+old zero-prefix image is full, (ZP49) and (ZP33) prove full boundary
+spanning. Generic positive new u follows by nonvanishing of a cleared
+coefficient minor, as in the earlier extension argument.
+
+Starting from the rational three-column length-two base gives the
+uniform bound 3m²−9. The stronger finite bases above give 66 at
+m=4, 105 at m=5, and
+
+\[
+ \dim p_2(N)\ge3m^2+45\quad(m\ge6),
+ \qquad
+ d_m-\dim p_2(N)\le\frac32(m-6)(m+5).
+ \tag{ZP50}
+\]
+
+For the last bound, choose the finite 153-dimensional zero-prefix
+base at m=6, then apply (ZP49) repeatedly. At each step the old
+parameters lie in the positive independent-family open set; earlier
+boundary specializations are not retained. The bound is a paper
+theorem with external finite base certificates. It is not a Lean
+theorem, uniform scalar spanning, or equation-(24) independence.
+
+The separate verifier `source24_zero_prefix_boundary_extension.py`
+tests these actual 6q+3 columns modulo all inherited zero-prefix
+generators. The original old times (6^(t−1),3^(t−1)) give gains
+15,21,26,32 at q=2,3,4,5. They violate the matching-point genericity
+hypothesis: z_t=z_(t−1)/2 places Q_t0 on the preceding block's
+state-1 line. These deficient observations are retained, rather than
+treated as a generic refutation or silently discarded.
+
+One prescribed alternative, old times (7^(t−1),3^(t−1)), new u=0
+and new v=3^q, avoids every required matching collision and gives:
+
+| q | Inherited observed rank | New gain | Joint rank | Joint minor mod 1,000,003 |
+| --- | ---: | ---: | ---: | ---: |
+| 2 | 3 | 15 | 18 | 279735 |
+| 3 | 26 | 21 | 47 | 28317 |
+| 4 | 66 | 27 | 93 | 993774 |
+| 5 | 105 | 33 | 138 | 987904 |
+
+All candidate columns occur in the joint pivot minors. Independent
+actual-word checks verify (ZP46), the scalar append, and source-coordinate
+inclusions. Canceled matching matrices are diagonal of ranks 4,6,8,10;
+omega is computed both as a dual derivative and by stripping the final
+transition's output factor. Other-block residue checks vanish as required.
+The saved JSON includes both fixtures, their actual source coordinates,
+minors, pole collisions, and denominator checks. The alternative run
+exited zero in 2.030978042 seconds, at maximum RSS 73,105,408 bytes,
+without hitting a guard. These finite checks corroborate the uniform
+paper argument; they do not replace it.
+
+### Why the joint condition does not propagate automatically
+
+The next plausible invariant is the augmented scalar/restriction rank
+in (ZP39). Its naive boundary induction has a precise obstruction.
+Use an auxiliary line X0=−w X2, with w different from 0,v,2v.
+On this line the boundary new kernel is constant after cancellation.
+The old kernels are regular at e1. Therefore R1/X1 for every actual
+boundary source is regular at e1, whereas
+
+\[
+ D_n|_{X_0=-wX_2}=(v-w)^2(2v-w)X_2^3D_q|_{X_0=-wX_2}.
+ \tag{ZP51}
+\]
+
+Its B_w observation is divisible by X2². The target at length n
+has dimension 3q+3, but the boundary restriction image has dimension
+at most 3q+1, even before imposing the scalar kernel. Two endpoint
+coefficients are missing.
+
+For a genuine old scalar-kernel row R1=X0 X1 f, the append gives
+the following exact auxiliary polynomial, with epsilon=u_n:
+
+\[
+ B_w(RK_n)=\varepsilon(v-w)X_1X_2
+     [3\varepsilon X_1+(2v-w)X_2]
+     (D_qf)|_{X_0=-wX_2}.
+ \tag{ZP52}
+\]
+
+Its first coefficient is also divisible by X2². Its second coefficient
+can reach the linear endpoint, but that value is
+3(v−w)(D_q f)(e1). The already used scalar trace (ZP37) has endpoint
+v³(D_q f)(e1). Thus any inherited combination preserving all first
+scalar traces kills this proposed second-order endpoint as well.
+One cannot add its rank to the scalar rank independently.
+
+The unresolved induction must construct additional actual relations
+after the scalar eliminations, or an equivalent coupled argument.
+Neither the full boundary gain nor the finite inherited-jet bases
+alone prove that assertion.

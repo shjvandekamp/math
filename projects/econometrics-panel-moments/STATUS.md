@@ -420,6 +420,24 @@ on a generic line. Scalar spanning alone does not imply this joint
 condition. The verifier, original source-coordinate kernels, and
 independent derivative controls are in the source24-zero-prefix-split-jet
 files; the run used 2.48 seconds and 66.5 MB RSS.
+Two independent local audits now strengthen the uniform boundary
+increment from 4q to 6q+3. Two more axis pivots, 2q matching pivots
+on the joint axis kernel, and one surviving vertex derivative give
+a common-fiber proof. Thus an old full scalar image fills the entire
+boundary ambient. Combining this paper induction with the exact
+153-dimensional length-six base gives dim p2(N)>=3m²+45 for m>=6,
+leaving at most 3(m−6)(m+5)/2 dimensions. This still leaves uniform
+scalar spanning and source independence open. A naive induction for
+the joint restriction condition fails: both boundary restrictions and
+the canonical inherited first jets miss two endpoint coefficients.
+The inherited second-order endpoint is already determined by the
+scalar trace, so a valid lift must retain that coupling.
+The new 6q+3 columns also pass exact coupled checks at q=2,3,4,5,
+with gains 15,21,27,33 and all matching poles separated. The original
+geometric-time fixture has matching-pole collisions and one fewer
+observed direction at q=4,5; those failures and their diagnosis are
+preserved alongside the successful fixed alternative in the
+source24-zero-prefix-boundary-extension files.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -585,18 +603,19 @@ silently assumed by either proved theorem, and no result below is claimed.
    prefix coefficients. The next concrete target is J3 on the actual
    source combinations in F^3 S_m; finite coupled bases are saved at
    m=4,5. The zero-prefix alternative has an exact scalar append and
-   a uniform 4q-direction extension, giving a quadratic rank bound.
-   Find additional independent directions modulo that transferred
-   actual subspace; scalar closure is not available for arbitrary N.
-   Its boundary ambient space now has dimension d_q+6q+3. Prove
-   that the actual zero-prefix image fills it uniformly, then recover
-   the remaining 3q directions by proving the explicit first-jet map
-   onto on the actual boundary coefficient kernel.
+   a uniform 6q+3-direction extension, giving a quadratic rank bound
+   and full boundary spanning whenever the old scalar image is full.
+   Recover the remaining 3q directions by proving the explicit
+   first-jet map onto on the actual boundary coefficient kernel.
    Finite splitting certificates now succeed at n=4,5,6, including
    full scalar rank 153 at n=6. Prove the inherited scalar-kernel
    criterion uniformly by retaining the joint old scalar map and
    its other-component restriction; the finite q=4,5 checks are
    bases to investigate, not an induction theorem.
+   A boundary induction for this joint invariant misses two endpoint
+   coefficients; its inherited higher jet is coupled to the scalar
+   trace. Find new relations after the same scalar elimination,
+   rather than adding independently computed endpoint ranks.
    Neither route is yet complete.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
