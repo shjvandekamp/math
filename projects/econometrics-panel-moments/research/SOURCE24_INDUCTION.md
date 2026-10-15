@@ -754,8 +754,304 @@ at its \(m=3\), \(G_{30}\) fixture. There
 \(Z_{-3}\), \(O^{-1}Z_{-3}\), and
 \(B_0O^{-1}Z_{-3}\) all have rank 21 modulo the test prime.
 The six missing leading directions therefore already occur in the
-incoming matrix in that finite calculation. These ranks do not establish
-a real upper bound or an all-length parity rule.
+incoming matrix in that finite calculation. The support bound proved
+below supplies the characteristic-zero upper bound at \(m=3\);
+no all-length parity rule follows.
+
+### Scalar interpolation and an exact incoming recurrence
+
+There is a useful scalar quotient behind (H5). Assume that the old
+denominator lines are distinct, no three meet, their cross-block
+intersections have nonzero coordinates, and every coordinate base point
+\(L_{ta}=X_a=0\) is on no other denominator line. Let
+\(D=\prod_{t,a}L_{ta}\), and let \(Z_{\rm old}\) consist of
+the within-block line-pair points and the coordinate base points.
+Consider the scalar degree-one rational space
+\[
+ \mathcal S_m=\{q/D:q\in I(Z_{\rm old})_{3m+1}\}.
+\]
+Its subspace with no cross-block double residues is exactly
+\[
+ \mathcal U_m=\mathbb R[X]_1+
+ \sum_{t,a}\left\{q_{ta}/L_{ta}:q_{ta}\in\mathbb R[X]_2,
+                    \ q_{ta}|_{L_{ta}=X_a=0}=0\right\}. \tag{H6}
+\]
+Moreover, one basis element of \(\mathcal S_m/\mathcal U_m\)
+for each unordered cross-block line pair is
+\[
+ \frac{X_aX_bX_0}{L_{ta}L_{sb}},\qquad t<s. \tag{H7}
+\]
+Each displayed function belongs to \(\mathcal S_m\), has no
+other cross-block double residue, and its residue at its own pair is
+nonzero. To prove exhaustion, subtract these pair residues from any
+\(q/D\). The remaining residue on each old line has no poles:
+cross-block poles have been removed, and the numerator's vanishing at
+within-block intersections excludes the other possible poles. This
+residue is therefore a homogeneous quadratic on that projective line.
+It vanishes at the matching coordinate base point, so lift it to an
+allowed \(q_{ta}\) in (H6) and subtract \(q_{ta}/L_{ta}\).
+After all residues are removed, the remainder is a linear polynomial.
+This proves both (H6) and the basis assertion, in particular
+\(\dim(\mathcal S_m/\mathcal U_m)=9\binom m2\).
+
+The scalar functions in (H5) lie in this space for a direct reason.
+Write \(F_{r,0}=X_0e_0(I-P_r)\) for the old zeroth-level
+word, and let \(F_{t,r,A,0}\) be its indicated old first-level
+source. Component two of the exact identity
+\[
+ X_0\left[-\frac{X_A}{L_{tA}}e_0P^t+c_{tA}e_0P_r\right]
+ =\frac{F_{t,r,A,0}}{A_t(A,0)}-c_{tA}F_{r,0}
+   +X_0\left(c_{tA}-\frac{X_A}{L_{tA}}\right)e_0 \tag{H8}
+\]
+has no contribution from the final term. The old moment-space property
+therefore writes that component as \(X_2 g_{tA}/D\), with
+\(g_{tA}\in I(Z_{\rm old})_{3m}\). The incoming scalar
+numerator is exactly \(A_t(A,B)X_Bg_{tA}\). Thus the remaining
+incoming-rank question is a degree-one polynomial multiplication map
+followed by the quotient (H6). Multiplication by \(X_B\) is part
+of this map; it is not an allowed constant column change or a reason
+to transfer independence from the unmultiplied functions.
+
+For an exact recurrence, define the row
+\[
+ V_{tA}^{(m)}=-\frac{X_A}{L_{tA}}e_0P^{m\setminus\{t\}}
+                         +c_{tA}e_0P_r^{m}.
+\]
+This auxiliary definition makes sense for every \(m\ge3\),
+although (H5) identifies it with the leading incoming operator only
+for odd \(m\). On appending a largest block, the constants
+\(r,c_{tA}\) of every existing column stay fixed, and
+\[
+ V_{tA}^{(m+1)}=V_{tA}^{(m)}K_{m+1}\qquad(t\le m). \tag{H9}
+\]
+At an old cross-point its double residue is a zero-sum row, since
+the row sum of \(V_{tA}\) is \(-X_A/L_{tA}+c_{tA}\),
+which has only one pole. A fixed coefficient relation whose selected
+component two vanishes can consequently have a nonzero vector residue
+proportional to \(e_0-e_1\). Appending a generic block need not
+preserve it: its new component is multiplied by
+\[
+ (K_{m+1})_{02}-(K_{m+1})_{12}
+ =\frac{vX_2\bigl[(G_{02}-G_{12})X_0+
+          (G_{02}G_{11}-G_{12}G_{01})uX_1\bigr]}
+        {L_{m+1,0}L_{m+1,1}}. \tag{H10}
+\]
+At an old cross-point this is not identically zero in \(u,v\)
+when \(G\) is invertible and \(G_{02},G_{12}\ne0\), as in
+the positive parameter family. This observation concerns fixed
+coefficient relations. It does not exclude new parameter-dependent
+relations and therefore does not prove a generic rank increase.
+
+There is also an exact support restriction. All four incoming scalar
+rows at
+\(L_{1c}=L_{2d}=0\), \(c,d\in\{1,2\}\), vanish.
+For \(t>1\), both words in (H5) start at block one in state
+zero, so their only block-one denominator is \(L_{10}\).
+For \(t=1\), both words start at block two in state zero, so
+their only block-two denominator is \(L_{20}\). The shared pole
+is then in block one. More strongly, all \(6(m-1)\) scalar
+pair rows involving \(L_{11}\) or \(L_{12}\) are supported
+on only the six columns \(t=1,A\in\{1,2\},B\in\{0,1,2\}\).
+The \(t=1,A=0\) columns have only their shared pole \(L_{10}\),
+since \(c_{10}=0\). This entire row block therefore has rank at
+most six. Adding all remaining scalar pair rows proves, for odd
+\(m\ge3\),
+\[
+ \operatorname{rank}Z_{-3}\le
+ \min\!\left(9m,\;9\binom m2-6m+12\right). \tag{H11}
+\]
+At \(m=3\) this is the characteristic-zero upper bound 21,
+stronger than the bound 23 obtained from only the four zero rows.
+The recorded nonzero modular minor of size 21 lifts after denominator
+clearing, so the incoming rank is exactly 21 at that rational fixture
+and generically in the common-\(G\), independent-time family.
+Equation (H3) bounds the corresponding leading regular rank by 21,
+and its recorded nonzero mapped minor gives generic equality as well.
+This proves a six-dimensional generic leading kernel at \(m=3\).
+It does not force a deficit at any larger odd length or imply that the
+full Laurent regular matrix is singular.
+
+This also upgrades two finite Laurent orders to characteristic-zero
+statements. The entry bound \(\operatorname{val}(H)\ge-3\)
+and the \(m=3\) bound \(\operatorname{rank}H_{-3}\le21\)
+give
+\(\operatorname{val}\det H\ge-3\cdot27+6=-75\):
+after a constant column change, at least six columns of
+\(\varepsilon^3H\) are divisible by \(\varepsilon\).
+The precision-tracked result in
+`exploration/source24-regular-laurent-results.json` has nonzero
+coefficient 899455 modulo 1000003 at order \(-75\), with the
+required denominator reductions valid. Thus the determinant order is
+exactly \(-75\) over the rationals at that \(m=3\) fixture.
+At \(m=4\), the full leading rank 36 and the same entry bound
+give exact rational determinant order \(-108\), whose recorded
+leading coefficient is 359304 modulo the prime. These use the existing
+precision-certified calculations in
+`exploration/source24_regular_laurent.py`; no new computation or Lean
+valuation theorem is asserted. The recorded \(m=2\) order \(-24\)
+remains a finite-field order because a matching characteristic-zero
+lower bound has not been established there.
+
+### Six boundary pivots for every auxiliary length at least five
+
+The scalar quotient, recurrence, support bound, and six-pivot proof in
+this subsection and the preceding one have passed an independent algebra
+audit. The six-pivot statement concerns the auxiliary family for every
+\(m\ge5\), and the actual leading incoming matrix for odd
+\(m\ge5\).
+
+There is an exact appended-column identity before any rank argument.
+For linear forms \(q_{tA}=\sum_B\mu_{tAB}X_B\), let
+\(U=\sum_{t\le m,A}q_{tA}V_{tA}^{(m)}\),
+\(P=e_0P^{\{1,\ldots,m\}}\), and
+\(C=\sum_A c_{NA}q_{NA}\), where \(N=m+1\).
+The combined auxiliary incoming row is
+\[
+ (U+CP)K_N-P\sum_A\frac{q_{NA}X_A}{L_{NA}}.
+\]
+Its selected component is therefore
+\[
+ \sum_c\frac{A_N(c,2)X_2(U_c+CP_c)-q_{Nc}X_cP_2}{L_{Nc}}.
+ \tag{H12}
+\]
+This does not remove the old inverse or prove independence of the new
+columns. It displays explicitly what their old-new residues must cancel.
+
+A bounded part of the incoming family can nevertheless be isolated
+uniformly. Fix a positive invertible \(G=(\mathbf1,\alpha,\beta)\)
+with the binary and coordinate-edge nondegeneracy assumptions used in
+(H4). For every \(m\ge5\), the six auxiliary scalar columns
+\(t=1,A\in\{1,2\},B\in\{0,1,2\}\) have a nonzero
+minor using only pair rows involving \(L_{11}\) or \(L_{12}\).
+All other incoming columns vanish on these rows by the support argument
+above. This proves six generic pivots, including for the odd lengths
+where (H5) is the leading regular operator; it leaves the other
+\(9m-6\) columns unresolved.
+
+Here is a parameter-only leading-minor proof. Divide the six columns by
+\(A_1(A,B)\), write their constant combination using linear forms
+\(q_1,q_2\), and put
+\(\kappa_A=c_{1A}\), \(C=\kappa_1q_1+\kappa_2q_2\).
+On \(L_{1c}\), \(c=1,2\), its residue is
+\[
+ \frac{X_0X_c}{L_{20}X_2}
+   [-q_c v_{20}+C A_2(0,c)v_{1c}]
+                       K_3W e_2,\qquad W=K_4\cdots K_m. \tag{H13}
+\]
+Keep all blocks except three fixed and set
+\((u_3,v_3)=\delta(u_*,v_*)\), with \(u_*,v_*>0\).
+At the six selected cross-points, which do not involve block three,
+\(K_3=\mathbf1e_0+\delta M_3+O(\delta^2)\), where
+for a zero-sum row \(h\),
+\[
+ hM_3=u_*\frac{X_1}{X_0}(h\alpha)(e_1-e_0)
+             +v_*\frac{X_2}{X_0}(h\beta)(e_2-e_0). \tag{H14}
+\]
+This is invertible on zero-sum rows: \(G\) is invertible and all
+displayed coordinate factors are nonzero.
+
+The constant term of (H13) is
+\(-X_0X_cq_c(e_0We_2)/X_2\), since
+\(v_{20}\mathbf1=L_{20}\) and
+\(v_{1c}\mathbf1=0\) on its line. For each \(c\), take
+the two pair rows against \(L_{40}\) and \(L_{50}\).
+Their leading values are nonzero scalar multiples of the evaluations
+of \(q_c\) at two distinct points of \(L_{1c}\).
+Indeed, the relevant residues of \(e_0W\) are
+\(v_{40}K_5\cdots K_m\) and
+\((K_4)_{00}v_{50}K_6\cdots K_m\), respectively.
+They have nonzero component two generically. In the second expression
+with \(m=5\), this is immediate from \((v_{50})_2\ne0\).
+In every other case the intervening kernels are invertible at the
+point, and a generic last transition detects any nonzero row: its
+component-two column consists of nonzero constants divided by three
+distinct affine denominator forms in its time parameters. These three
+reciprocal forms are linearly independent over constants, as is seen by
+restricting to each one's pole. The remaining coefficient
+\((K_4)_{00}=X_0/L_{40}\) is nonzero at the second point.
+
+The resulting four leading pivots have constant kernel
+\(q_1=k_1L_{11}\), \(q_2=k_2L_{12}\).
+This is an allowed column kernel: the coefficients of each \(L\)
+are parameter-only constants. Take the last two rows against
+\(L_{20}\), one on each \(L_{1c}\). Every leading column
+vanishes on these rows, because its factor \(L_{20}\) canceled
+in the preceding constant term. On the two-dimensional kernel, their
+first coefficients are
+\[
+ \left.\frac{X_0X_c}{X_2}C A_2(0,c)
+                      v_{1c}M_3W e_2\right|_{L_{1c}=L_{20}=0}.
+ \tag{H15}
+\]
+Here \(C=\kappa_2k_2L_{12}\) on \(L_{11}\), while
+\(C=\kappa_1k_1L_{11}\) on \(L_{12}\). The coefficient
+matrix in \(k_1,k_2\) is therefore antidiagonal with generically
+nonzero entries. Both \(\kappa_A\) are nonzero by (H4), and
+\(v_{1c}M_3\ne0\) by (H14); the same last-transition argument
+makes its final component nonzero generically. Because these two rows
+are zero on the entire leading matrix, no removal of the four leading
+pivots can cancel the two displayed first-order pivots.
+
+All generic choices just used are finitely many nonzero rational
+conditions on the common-\(G\) time parameters. Each nonzero factor
+has the independent witness argument above; their nonzero sets therefore
+intersect in the positive parameter domain. The selected minor has a
+nonzero coefficient at order \(\delta^2\) after a constant
+column change, and is nonzero for sufficiently small positive
+\(\delta\). This is a six-column result, not a determinant
+argument for the full incoming or regular matrix.
+
+The separate exact modular script `exploration/source24_odd_incoming.py`
+and `exploration/source24-odd-incoming-results.json` check the direct
+operator without a Laurent expansion. At the \(G_{30}\) fixtures,
+the scalar incoming matrix and its actual image
+\(B_0O^{-1}Z_{-3}\) both have full ranks 45 for \(m=5\)
+and 63 for \(m=7\). The old source matrix itself is assembled,
+and its solve is checked by \(OY=Z_{-3}\); it is not replaced
+by a canonical source basis. The odd polar hypotheses and relevant
+geometry are verified at these fixtures. At \(m=3\), both the
+economic-time and an independent-time fixture have scalar and mapped
+rank 21, while the full vector residue matrix before selecting the
+output component has rank 27, all modulo the test prime. The latter
+distinction supports the need to track the changing projection in (H9).
+Together with (H11), the nonzero scalar and mapped minors establish
+the stated generic rank 21 in characteristic zero at \(m=3\).
+
+The script also finds a full six-by-six boundary minor at each of
+\(m=3,5,7\), using first-block states \(1,2\) crossed with
+all three states of the last old block. Every other incoming column
+vanishes on those rows. These finite minors use different rows from
+the uniform proof (H13)--(H15), which uses blocks two, four, and five
+and starts at \(m=5\). None of the finite checks establishes an
+arbitrary-length incoming or mapped determinant.
+
+There is a precise open reduction after the six coefficients in the
+first block have been removed. Write \(P_{\rm tail}=K_2\cdots K_m\).
+Multiplying the remaining combined row by \(L_{10}\) gives
+\[
+ -q_{10}X_0e_0P_{\rm tail}
+ +v_{10}\sum_{t\ge2,A}q_{tA}
+       \left[-\frac{X_A}{L_{tA}}P_{{\rm tail}\setminus\{t\}}
+                         +c_{tA}P_{\rm tail}\right]. \tag{H16}
+\]
+If \((u_1,v_1)=\delta(u_*,v_*)\) with fixed positive ratio,
+the points defining \(c_{tA}\) stay fixed. Dividing (H16) by
+\(X_0\) and taking its constant term yields
+\[
+ e_0\left[\ell(X)P_{\rm tail}
+       -\sum_{t\ge2,A}q_{tA}(X)\frac{X_A}{L_{tA}}
+                             P_{{\rm tail}\setminus\{t\}}\right],
+ \qquad \ell=\sum_{t\ge2,A}c_{tA}q_{tA}-q_{10}. \tag{H17}
+\]
+Here \(\ell\) is an arbitrary linear form, giving a deletion-word
+family with three additional common-word columns. This is not the
+previous auxiliary family: for the first shared block in the tail,
+that family would use a different move-first correction. Independence
+of (H17), and compatibility of this further degeneration with the six
+already chosen pivots, have not been proved. Simple pole removal alone
+also does not resolve it: taking \(q_{tA}\) proportional to
+\(L_{tA}\) removes its shared pole while leaving a linear-form
+multiple of a deleted product.
 
 ## A proved bridge to scalar covariates
 

@@ -8,6 +8,8 @@ import PanelMoments.SourceJointImage
 import PanelMoments.SourceTransfer
 import PanelMoments.KernelProducts
 import PanelMoments.SourceTransferOrders
+import PanelMoments.SourceSingleBlock
+import PanelMoments.SourceReducedCriterion
 import PanelMoments.BinaryTransferAlgebra
 import PanelMoments.BinaryTransferSpan
 import PanelMoments.BinaryTransferEndpoints
@@ -262,3 +264,25 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceTransferOrders.mem_singletonWord
 #print axioms PanelMoments.SourceTransferOrders.normalized_jointFirst_empty_word
 #print axioms PanelMoments.SourceTransferOrders.normalized_jointFirst_singleton_word
+
+#print axioms PanelMoments.SourceSingleBlock.remaining_nonempty
+#print axioms PanelMoments.SourceSingleBlock.firstRemaining_mem
+#print axioms PanelMoments.SourceSingleBlock.firstRemaining_le
+#print axioms PanelMoments.SourceSingleBlock.sorted_remaining_eq_singletonWord
+#print axioms PanelMoments.SourceSingleBlock.emptyWord_split
+#print axioms PanelMoments.SourceSingleBlock.wordProduct_empty_split
+#print axioms PanelMoments.SourceSingleBlock.emptyColumn_apply
+#print axioms PanelMoments.SourceSingleBlock.singletonColumn_apply
+#print axioms PanelMoments.SourceSingleBlock.matrix_column_reduction
+#print axioms PanelMoments.SourceSingleBlock.emptyColumn_reduction
+#print axioms PanelMoments.SourceSingleBlock.span_sourceColumn_eq_reducedColumn
+#print axioms PanelMoments.SourceSingleBlock.linearIndependent_sourceColumn_iff
+
+#print axioms PanelMoments.SourceReducedCriterion.denominatorScale_injective
+#print axioms PanelMoments.SourceReducedCriterion.columnFactor_pos
+#print axioms PanelMoments.SourceReducedCriterion.sourceColumn_normalized
+#print axioms PanelMoments.SourceReducedCriterion.denominatorScale_jointColumn
+#print axioms PanelMoments.SourceReducedCriterion.linearIndependent_jointColumn_iff
+#print axioms PanelMoments.SourceReducedCriterion.linearIndependent_newJoint_iff_sourceColumn
+#print axioms PanelMoments.SourceReducedCriterion.linearIndependent_newJoint_iff_reducedColumn
+#print axioms PanelMoments.SourceReducedCriterion.linearIndependent_source_of_reducedColumns

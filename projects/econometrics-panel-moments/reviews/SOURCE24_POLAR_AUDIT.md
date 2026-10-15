@@ -97,11 +97,57 @@ Only terms with at most one old pole are discarded in that formula.
 
 These are operator identities, not a rank or nonvanishing theorem. In the
 recorded m=3 modular fixture the incoming matrix and its image both have
-rank 21 of 27. That finite deficiency is not an all-length law or a real
-upper bound.
+rank 21 of 27. The later support argument below supplies the matching
+characteristic-zero upper bound at this length; no all-length rank law follows.
 
 The same review checked (R1)–(R3). The common suffix contributes the claimed
 power; the first two prefix coefficients are independent of the initial
 row. The local three cubic and six quadratic classes are independent, but
 the displayed cross-time relations prevent inferring global independence
 from this local nine-column calculation. The note preserves that limitation.
+
+## Follow-up: scalar interpolation and six generic pivots
+
+The independent reviewer also checked (H6)–(H11). The pair functions satisfy
+the base-point conditions and isolate their double residues. Removing them
+leaves quadratic single-line residues with matching-point vanishing, then a
+linear polynomial. The exact source identity, append-block recurrence and
+four structural zero rows all check. The quotient dimension and support
+bound therefore have algebraic proofs, rather than numerical evidence alone.
+
+The six-pivot argument in (H13)–(H15) passes under its stated geometry
+conditions. Four leading rows independently evaluate the two linear forms
+at two points of their respective old lines. Their kernel consists of
+constant multiples of those line equations. The two remaining rows vanish
+on the entire leading matrix, and their first derivatives on that kernel
+form a nonzero antidiagonal matrix. Thus the argument uses legitimate
+kernel elimination. Invertibility of the common matrix makes the first
+transition derivative invertible on zero-sum rows; distinct reciprocal
+row denominators justify the generic final-component detection. The
+empty-suffix case at length five is directly nonzero. The required finitely
+many nonzero conditions can hold simultaneously at positive parameters.
+
+This establishes six isolated columns in the auxiliary family for every
+`m>=5`, and in the actual leading incoming operator for odd `m>=5`.
+It does not establish independence of the other `9m-6` columns or
+nonvanishing of the full regular determinant. The separate finite six-by-six
+checks use last-block boundary rows, whereas this uniform proof uses rows
+from blocks two, four and five.
+
+The sharper support count was separately checked: all `6(m-1)` scalar pair
+rows involving either of the first block's nonzero-state lines are supported
+on at most six columns. Adding the complementary row count gives
+`rank Z_-3 <= min(9m, 9*choose(m,2)-6m+12)` for odd m. Conversion to the
+two vector coordinates at each pair preserves rank because the common row
+`e_2 G^-1` is nonzero. At m=3 the upper bound is 21, attained by the saved
+minors of the incoming and leading regular matrices. Their generic
+characteristic-zero ranks are therefore 21 on the stated valid region.
+
+The reviewer also checked the determinant-valuation consequences. At m=3,
+the analytic matrix `epsilon^3 H` has constant rank at most 21, so its
+27-column determinant has order at least six. The saved nonzero coefficient
+at order -75, with the recorded precision and good reduction, proves exact
+characteristic-zero valuation -75 at that fixture. At m=4 the entrywise
+order bound and nonzero leading determinant similarly give exact order -108.
+The m=2 order -24 remains modular-only. None of these conclusions is a Lean
+certificate or an arbitrary-length independence theorem.

@@ -66,8 +66,15 @@ followed by the other blocks in ascending order, with the shared block
 omitted in the singleton case. The homogeneous residue interpretation
 remains to be formalized.
 
-The dedicated verifier rebuilt all 22 modules in this closure and checked
-200 declarations; its axiom checks report only the three permitted foundational
+The empty-prefix columns now have an exact reversible reduction to
+single-block columns. Lean proves span and independence equivalence, then
+connects it to the actual new joint images using the exact index equivalence,
+a common positive denominator and nonzero constant column factors. The
+resulting source-induction theorem still explicitly assumes independence
+of the reduced new columns.
+
+The dedicated verifier rebuilt all 24 modules in this closure and checked
+220 declarations; its axiom checks report only the three permitted foundational
 axioms. Evidence is in
 `formal/source-family-clean-build.log` and `formal/source-family-axioms.txt`,
 with independent statement reviews in `reviews/SOURCE24_FOUNDATIONS_AUDIT.md`
@@ -115,7 +122,7 @@ row counts 30 and 39. This rules out that proposed factorization on a generic
 parameter set. It does not disprove source independence or richer methods.
 The reproducible obstruction is in the source24-axis-jet-incidence files.
 
-A precision-tracked Laurent computation now follows the regular Schur matrix
+A precision-tracked Laurent computation follows the regular Schur matrix
 as the new time factors tend to (epsilon, epsilon^3). Over the recorded prime,
 the epsilon^-3 coefficient has ranks 6, 21, and 36 at m=2,3,4; the last
 is full rank. Certified determinant valuations are -24, -75, and -108.
@@ -123,10 +130,25 @@ At m=3 the direct term contributes nothing at order -3, and the incoming
 old-residue matrix already has rank 21; the subsequent old-block map preserves
 that rank. An independently audited conditional paper argument proves the
 leading-operator factorization and the sparse odd-length polar coefficients;
-exact entrywise checks corroborate both formulas. These finite modular results imply
-nonzero rational determinants after denominator clearing, not their real
-leading valuations or an all-length theorem. The script and certificates
+exact entrywise checks corroborate both formulas. The script and certificates
 are the source24-regular-laurent exploration files.
+
+The scalar incoming space now has an explicit residue basis and an exact
+append-block recurrence. A support argument gives the uniform bound
+`rank Z_-3 <= min(9m, 9*choose(m,2)-6m+12)`. At m=3 this is 21;
+the saved nonzero minors establish generic characteristic-zero rank 21
+for both the incoming and leading regular matrices. The entrywise valuation
+bound, this rank bound and the saved determinant coefficients also prove
+exact characteristic-zero determinant valuations -75 at the m=3 fixture
+and -108 at m=4. The m=2 valuation -24 remains modular evidence only.
+
+A separate audited degeneration proves six isolated incoming-column pivots
+for every auxiliary m>=5, and for the actual incoming operator at odd m>=5.
+The other 9m-6 columns remain open. A direct calculation verifies full incoming
+and mapped ranks 45 at m=5 and 63 at m=7, including the actual old-source
+equation OY=Z and the polar hypotheses. The source24-odd-incoming files
+preserve these finite certificates. The exact remaining deletion-word
+reduction is recorded in the note; it is not yet an induction proof.
 
 ## Finite theorem
 
@@ -199,6 +221,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    formulas, including the explicit sorted-index forms, are now proved.
    Next formalize the homogeneous residue formulas and the audited polar theorem.
    The auxiliary binary independence and rank lemmas are now formalized.
+   The actual new-image normalization and reversible single-block reduction
+   are also proved. On the paper side, extend the six incoming pivots to
+   the remaining columns and prove injectivity of the subsequent old-source
+   map on their image. The deletion-word limit is a precise candidate subproblem.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final

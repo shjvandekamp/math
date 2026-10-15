@@ -18,6 +18,8 @@ Checking PanelMoments.SourceJointImage
 Checking PanelMoments.SourceTransfer
 Checking PanelMoments.KernelProducts
 Checking PanelMoments.SourceTransferOrders
+Checking PanelMoments.SourceSingleBlock
+Checking PanelMoments.SourceReducedCriterion
 Checking PanelMoments.BinaryTransferAlgebra
 Checking PanelMoments.BinaryTransferSpan
 Checking PanelMoments.BinaryTransferEndpoints
@@ -467,5 +469,43 @@ PanelMoments.BinaryTransferRank.finrank_wordSpan_parity (ρ : ℝ) (cs : List �
 'PanelMoments.SourceTransferOrders.normalized_jointFirst_singleton_word' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-200 source-family foundation declarations use only permitted foundational axioms.
+'PanelMoments.SourceSingleBlock.remaining_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.firstRemaining_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.firstRemaining_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.sorted_remaining_eq_singletonWord' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceSingleBlock.emptyWord_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.wordProduct_empty_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.emptyColumn_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.singletonColumn_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.matrix_column_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.emptyColumn_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceSingleBlock.span_sourceColumn_eq_reducedColumn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceSingleBlock.linearIndependent_sourceColumn_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceReducedCriterion.denominatorScale_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceReducedCriterion.columnFactor_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceReducedCriterion.sourceColumn_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceReducedCriterion.denominatorScale_jointColumn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceReducedCriterion.linearIndependent_jointColumn_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceReducedCriterion.linearIndependent_newJoint_iff_sourceColumn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceReducedCriterion.linearIndependent_newJoint_iff_reducedColumn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceReducedCriterion.linearIndependent_source_of_reducedColumns' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+220 source-family foundation declarations use only permitted foundational axioms.
 Serial source-family foundation verification completed; arbitrary-T independence is not asserted.

@@ -41,7 +41,8 @@ These are future tasks, not additional verified claims.
 The active equation-(24) continuation has Lean-checked general validity,
 exact index counts, actual source-function recursion, a conditional
 induction criterion, and the normalized matrix-product images with their exact
-selected-first, ascending-remainder orders,
+selected-first, ascending-remainder orders and a reversible single-block
+reduction linked to that criterion,
 plus external exact full-rank checks at
 T=5,6, and a quadratic-size residue reduction checked by exact computation
 through T=8. The original conic witness

@@ -105,6 +105,9 @@ indices, the conditional-tail induction criterion, and its joint-image
 equivalence. It checks the actual source joint-image normalization and the
 empty/singleton matrix-product formulas through proved finite Markov marginals,
 including their exact selected-first, ascending-remainder block orders.
+It checks the reversible empty-column replacement, normalization and
+reindexing of the actual new images, and the resulting conditional criterion
+in terms of the reduced columns.
 It also checks the auxiliary binary identities and constant-real
 span parity/baseline theorems, polynomial endpoint separation, paired-defect
 independence, and the rank formula for the actual move-first binary words.
@@ -115,8 +118,8 @@ The source-foundation and recursion statement reviews are in
 [SOURCE24_RECURSION_AUDIT.md](reviews/SOURCE24_RECURSION_AUDIT.md).
 The original two-theorem `verify.sh` entry point is unchanged.
 
-The continuation verifier passed its clean 22-module rebuild and all
-200 axiom checks with exit zero. Evidence:
+The continuation verifier passed its clean 24-module rebuild and all
+220 axiom checks with exit zero. Evidence:
 [source-family-clean-build.log](formal/source-family-clean-build.log) and
 [source-family-axioms.txt](formal/source-family-axioms.txt). The only diagnostic
 was an existing stylistic linter warning in `BasisCertificate.lean`.
