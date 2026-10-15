@@ -67,8 +67,11 @@ omitted in the singleton case. Lean now also proves the positive homogeneous ker
 X0 scaling of all source/reduced columns. An injective lift with section
 X=(1,eta) makes homogeneous reduced-column independence equivalent to the
 actual new-image premise, and gives the full conditional source-induction
-step in these coordinates. The algebraic residue interpretation remains to
-be formalized.
+step in these coordinates. Polynomial kernel matrices now clear the actual
+ordered products and all reduced columns using one distinct-block denominator.
+Positive evaluation and common-denominator scaling are injective, so Lean
+also proves the equivalent polynomial-column induction criterion. The
+algebraic residue interpretation remains to be formalized.
 
 The empty-prefix columns now have an exact reversible reduction to
 single-block columns. Lean proves span and independence equivalence, then
@@ -90,8 +93,10 @@ ordered stochastic matrices and restrict their rank theorem to positive
 arguments. Their focused source checks and 34 additional axiom checks passed.
 Two homogeneous-coordinate modules subsequently passed focused compilation
 and 32 further axiom checks. The extended aggregate now checks 286 declarations
-in a 28-module closure. The earlier 24-module clean build is preserved
-separately; the extended aggregate reuses that compiled closure.
+in a 28-module closure. Two further polynomial modules passed focused
+compilation and add 29 axiom checks; the current extended aggregate checks
+315 declarations in a 30-module closure. The earlier 24-module clean build
+is preserved separately; the extended aggregate reuses that compiled closure.
 
 Further exact discovery separates identities from rank evidence. The
 coalescent triangle and grid identities match direct rational series checks;
@@ -183,6 +188,18 @@ one component, multiplies by X_B/X_2 and changes the row direction. Those
 operations are essential; the rank-one result gives no rank bound for the
 actual incoming or mapped matrices.
 
+The inverse-free residue-difference operator now gives a further audited
+splitting. On the 3m seed residues it has matrix I−e gamma^T with
+gamma^T e=0, proving seed independence and surjectivity onto the 3m
+difference coordinates without old-source invertibility. The feedback map
+on the full old moment-row space has rank 6m. The completion quotient
+then separates an explicit contribution of at most one dimension from a
+zero-sum lift with zero feedback. These statements do not prove the
+required independence of the incoming family; see
+[the residue-difference note](research/SOURCE24_RESIDUE_DIFFERENCES.md).
+It also records three exact rational-zero relations in the k=3 deletion
+family, consistent with the earlier finite residue-kernel report.
+
 The next unresolved step is proving that B0 O^-1 is injective on this incoming
 image. An independently audited completion-space construction now expresses this
 map without the large old-source inverse, while preserving the actual
@@ -263,9 +280,9 @@ silently assumed by either proved theorem, and no result below is claimed.
    parameterization, and conditional induction criterion are now proved.
    The joint/conditional map equivalence and actual ordered matrix-product
    formulas, including the explicit sorted-index forms, are now proved.
-   The positive homogeneous representation and conditional induction bridge
-   are now proved. Next formalize the algebraic residue formulas and audited
-   polar theorem.
+   The positive homogeneous representation, common polynomial clearing, and
+   equivalent conditional polynomial induction criterion are now proved.
+   Next formalize the algebraic residue formulas and audited polar theorem.
    The auxiliary binary independence and rank lemmas are now formalized.
    The actual new-image normalization and reversible single-block reduction
    are also proved. The actual binary matrix rank on the positive domain is

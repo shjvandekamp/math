@@ -43,7 +43,8 @@ exact index counts, actual source-function recursion, a conditional
 induction criterion, and the normalized matrix-product images with their exact
 selected-first, ascending-remainder orders and a reversible single-block
 reduction linked to that criterion, including an injective positive homogeneous
-representation of the actual columns,
+representation of the actual columns and a polynomial criterion obtained
+by clearing one positive common denominator,
 plus external exact full-rank checks at
 T=5,6, and a quadratic-size residue reduction checked by exact computation
 through T=8. The original conic witness

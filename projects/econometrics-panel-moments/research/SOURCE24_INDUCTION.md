@@ -2333,3 +2333,14 @@ assembled into global independence by only eliminating the three
 outcome skews in each block. Further parameter orders and the additional
 cross-time kernel would have to be controlled. No such global rank
 claim is made here.
+
+### Subsequent intrinsic refinements
+
+`SOURCE24_COMPLETION_QUOTIENT.md` realizes the remaining map in a quotient
+by the actual completed source products, preserving their incidence data.
+`SOURCE24_RESIDUE_DIFFERENCES.md` derives an inverse-free full vector-pair
+difference operator, its invertible action on the 3m auxiliary seeds, and
+the corresponding feedback-zero decomposition. The latter also exhibits
+three exact rational-zero relations at deletion length k=3; these are
+distinct from the nonzero single-pole quotient examples above. Neither
+refinement proves the remaining all-length transversality statement.

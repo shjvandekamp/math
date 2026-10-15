@@ -126,14 +126,15 @@ The continuation verifier passed its clean 24-module rebuild and all
 [source-family-axioms.txt](formal/source-family-axioms.txt). The only diagnostic
 was an existing stylistic linter warning in `BasisCertificate.lean`.
 
-The subsequent four modules passed focused source compilation and 66
-additional axiom checks, without warnings. They include the actual binary
-matrix rank and the actual three-state homogeneous representation/criterion.
-The extended aggregate checks all 286 requested declarations against the
-compiled 28-module closure; its
+The subsequent six modules passed focused source compilation and add 95
+axiom checks, without warnings in the final runs. They include the actual
+binary matrix rank, the actual three-state homogeneous representation,
+and polynomial clearing with the equivalent conditional induction criterion.
+The extended aggregate checks all 315 requested declarations against the
+compiled 30-module closure; its
 output is [source-family-extended-axioms.txt](formal/source-family-extended-axioms.txt).
-The reproducible verifier now includes all four new modules. This extended check
-reuses the earlier compiled closure; it is not a new clean 28-module rebuild.
+The reproducible verifier now includes all six new modules. This extended check
+reuses the earlier compiled closure; it is not a new clean 30-module rebuild.
 The audited deletion-word induction remains a paper proof whose k=4 base
 is the external certificate in `exploration/source24-deletion-word-results.json`;
 it is not covered by the Lean verifier.
@@ -177,3 +178,10 @@ No increase beyond the host's allowance was made by this project.
 `formal/verify-foundations.sh` and `formal/foundation-axioms.txt` retain the
 older four-module foundation check. That narrower check is superseded for
 main-theorem acceptance by the two complete source rebuilds above.
+
+The residue-difference paper identities R1–R18 passed independent statement
+review. The new `source24_residue_differences.py` run checks their operator
+and seed-decomposition formulas at m=3 and m=5, including actual OY=Z
+solves and the projected incoming equation OY0=z0. It completed in 1.12
+seconds with 20.6 MiB maximum RSS. This external modular diagnostic is
+separate from the Lean checks and proves no uniform transversality claim.

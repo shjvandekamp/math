@@ -610,3 +610,80 @@ PanelMoments.SourceHomogeneousCriterion.linearIndependent_source_of_homogeneousR
 'PanelMoments.SourceHomogeneousCriterion.linearIndependent_source_of_homogeneousReduced' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduced {N : ℕ} {A : PanelMoments.Table 2}
+  (hA : PanelMoments.PositiveTable A) (r : PanelMoments.State 2) (hN : 2 ≤ N)
+  (hshort :
+    ∀ (a : PanelMoments.State 2), LinearIndependent ℝ (PanelMoments.SourceFamily.sourceMoment (PanelMoments.shift A) a))
+  (hnew : LinearIndependent ℝ (PanelMoments.SourcePolynomialKernels.clearedReducedColumn A)) :
+  LinearIndependent ℝ (PanelMoments.SourceFamily.sourceMoment A r)
+'PanelMoments.SourcePolynomialKernels.evalMatrix_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourcePolynomialKernels.rowPolynomial_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourcePolynomialKernels.blockDenominator_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourcePolynomialKernels.blockDenominator_eval_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedKernel_eval_of_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedKernel_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedKernel_entry_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedWordProduct_eval_of_nonzero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedWordProduct_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedWordProduct_entry_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedWordProduct_eval_actual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.emptyWord_toFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourcePolynomialKernels.singletonWord_toFinset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourcePolynomialKernels.wordDenominator_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourcePolynomialKernels.wordDenominator_singleton' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.blockDenominator_mul_except' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.blockDenominator_mul_singleton' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.tailDenominator_eval_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedEmptyVector_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedSingletonVector_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedSingleBlockVector_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedSourceColumn_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialKernels.clearedReducedColumn_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialCriterion.positiveEvaluation_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialCriterion.tailScale_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourcePolynomialCriterion.positiveEvaluation_clearedReduced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialCriterion.linearIndependent_clearedReduced_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialCriterion.linearIndependent_newJoint_iff_clearedReduced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
