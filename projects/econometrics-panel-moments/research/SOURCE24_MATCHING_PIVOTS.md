@@ -380,5 +380,38 @@ minor has the exact bordered expression
 One candidate square row set consists of every axis row and every
 new/old intersection row except the nine incident to old block q.
 Its size is (6q+3)+(9q-9)=15q-6. This specifies a concrete candidate
-minor only: no nonvanishing claim is made for that minor or for another
-maximal minor of R_q.
+minor. Uniform nonvanishing of this minor, or another maximal minor of
+R_q, remains open.
+
+## Exact finite checks of the specified minor
+
+The local script `source24_matching_reduction.py` constructs the exact
+18q+9-coordinate quotient and both MP21 corrections at the recorded
+economic fixtures. It uses one stripped scalar double residue at each
+new/old node, the six normalized row-sum coordinates, two old-line
+residues per old block on each coordinate axis plus one ordinary value,
+and the 3q matching values. It then tests precisely the MP25 row set
+that omits the nine new/old nodes incident to the last old block.
+
+| q | Reduced square size | Rank | Determinant mod 1000003 |
+|---:|---:|---:|---:|
+| 2 | 24 | 24 | 266536 |
+| 3 | 39 | 39 | 221696 |
+| 4 | 54 | 54 | 752096 |
+| 5 | 69 | 69 | 360670 |
+| 6 | 84 | 84 | 405943 |
+
+At every fixture, an independent inverse/determinant calculation checks
+the literal bordered identity MP25, including the matching determinant
+and row order. At q=2, 1,944 component comparisons also check the
+conjugated double residues against actual K products. The complete
+quotient has rank 18q in all five cases, consistently with MP24. The
+record saves parameters, points, row and column labels, hashes and
+nonzero minors in `source24-matching-reduction-results.json`.
+
+The guarded run finished in 1.3659 seconds with maximum RSS 19,611,648
+bytes. The primary researcher and independent deletion-induction
+reviewer checked the code, coordinate normalization, corrections and
+saved results. These are external exact finite certificates for the
+specified minor at q=2,...,6. They do not prove its nonvanishing for
+every q or the full source-family independence claim.

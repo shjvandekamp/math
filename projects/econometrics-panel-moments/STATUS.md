@@ -309,6 +309,10 @@ to explicit 3-by-6 tests, proved nonzero by exact power bounds. The
 sharpens this to a specified 3q-column set, using a near-diagonal common-G
 perturbation. Eliminating it together with six row-sum pivots leaves an
 exact (15q+3)-by-(15q−6) reduced matrix whose full rank is still open.
+Its specified square minor, omitting the nine new/old rows incident
+to the last old block, is now certified nonzero at q=2,...,6; the exact
+bordered determinant identity is checked at each fixture. This selects
+a consistent candidate minor for a uniform proof without claiming one.
 The raw-quotient exploration files preserve the finite certificates.
 The first old-time derivative also reaches the expected new-pole and
 axis ranks in all five fixtures. A mixed construction retains the
