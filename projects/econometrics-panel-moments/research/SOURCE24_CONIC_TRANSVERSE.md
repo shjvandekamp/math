@@ -162,7 +162,13 @@ The two function lists become q(P_s) and −w r(P_s), up to the common
 nonzero Q. Their residue representation is injective by the regular
 interpolation argument. Hence the known rank theorem gives total
 outgoing transverse rank 9n at the limit for odd n and 9n−6 for even n.
-This does not settle the even correction or CT8.
+The subsequent [uniform even correction](SOURCE24_CONIC_EVEN_JET.md)
+settles the six missing directions by a first-kernel derivative. Its
+positive common-alpha witness proves generic outgoing transverse rank
+9n for every n>=2. It retains the state-zero pivots through the
+degeneration and the actual moving conic coordinates. This is an audited
+paper proof, conditional on the established binary results, not a Lean
+proof or a proof of the remaining CT8 determinant.
 
 An independent Astra reviewer checked CT1–CT8, including ordinary-residue
 signs, endpoint coefficients, interpolation, all block dimensions and both
@@ -170,3 +176,30 @@ old-node corrections. The determinant identities refer to the explicitly
 transformed and consistently ordered matrix. The existing binary parity
 theorem applies for n>=2 with its stated common-rho hypotheses; the
 one-block binary pair is directly independent.
+
+## Exact finite first-jet checks
+
+`exploration/source24_conic_transverse_jet.py` independently builds the
+ordinary-y residues of the complete CT2 products over the prime 1000003,
+using dual numbers in x. It keeps all old-pole rows, including state zero,
+and computes the induced map L M'(0) R from full left and right kernels
+of M(0). The saved JSON records the leading minors, kernels and correction
+matrices. The scalar product recurrences are also checked at ordinary
+effect points.
+
+| alpha | n | Leading rank | Two-dimensional correction determinant |
+|---|---:|---:|---:|
+| (1,2,3) | 2 | 4 | 996628 |
+| (1,2,3) | 4 | 10 | 563801 |
+| (1,2,3) | 6 | 16 | 550300 |
+| (1,2,4) | 2 | 4 | 0 |
+| (1,2,4) | 4 | 10 | 209128 |
+| (1,2,4) | 6 | 16 | 86837 |
+
+Both n=3 fixtures have full leading rank 9. Nonzero minors lift to
+characteristic zero after clearing denominators. The modular zero in
+the geometric n=2 fixture alone supplies no real upper bound; it also
+must not be extrapolated to longer even lengths. The local run took
+0.0441 seconds with maximum RSS 15,122,432 bytes and passed an independent
+code audit. These finite checks corroborate the separate uniform proof;
+they are not its induction bases.

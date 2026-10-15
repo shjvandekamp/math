@@ -294,8 +294,12 @@ removes 6m+3 explicit row-sum constraints and proposes independence of the
 new raw boundary modulo the entire appended old ambient space. Exact
 finite minors establish this stronger sufficient condition at q=2,3,4;
 the q=4 test required more effect points because row-sum relations limit
-the number of independent evaluation rows. A uniform append proof and
-the further source-family transversality remain open.
+the number of independent evaluation rows. The
+[explicit quotient](research/SOURCE24_RAW_QUOTIENT.md) now has 18q+9
+coordinates, with its kernel proved exactly. A uniform 18-column
+subfamily is generically independent modulo the appended ambient.
+The full 18q-column append proof and the further source-family
+transversality remain open.
 
 The binary quotient note also gives a parity-aware component-two reduction:
 long-empty axis observations have rank 3m for odd m and 3m−2 for even m.
@@ -328,10 +332,15 @@ passed. The existing 325-declaration source-family aggregate is unchanged.
 
 The audited [conic transverse reduction](research/SOURCE24_CONIC_TRANSVERSE.md)
 isolates a uniform 9n−6 pivot block. The binary parity theorem raises the
-leading outgoing rank to 9n for odd n; even n retain six missing directions.
-The remaining Schur matrix keeps both old-node corrections. Its determinant
-and the even conic correction remain open; the singular conic O3 also
-requires a separate base step.
+leading outgoing rank to 9n for odd n. The independently audited
+[even-length first correction](research/SOURCE24_CONIC_EVEN_JET.md) now
+restores all six missing directions for every even n. Thus the outgoing
+transverse block is generically full rank at every length. The proof
+retains state-zero pivots and uses a positive common-alpha conic witness;
+it is a paper result, not Lean formalized. Exact dual-number checks at
+n=2,3,4,6 corroborate the normalization. The remaining regular Schur
+matrix keeps both old-node corrections and its determinant is still
+open; the singular conic O3 also requires a separate base step.
 
 ## Finite theorem
 
@@ -411,8 +420,13 @@ silently assumed by either proved theorem, and no result below is claimed.
    now formalized. The paper deletion induction and odd incoming-rank theorem
    are audited; their external k=4 base certificate still needs Lean checking.
    Prove injectivity of the subsequent old-source map on the incoming image,
-   and prove the remaining rank statements for the now-explicit even-length
-   correction and regular operator.
+   and prove the remaining rank statements for the regular operator.
+   The conic outgoing transverse block now has an audited paper proof for
+   both parities; its regular/longitudinal Schur block remains open, with
+   both old-node corrections retained. Formalizing the transverse proof
+   is also unfinished. The raw append alternative has an exact ambient
+   quotient and a uniform 18-column subfamily; its full 18q-column rank
+   and subsequent source transversality are still unproved.
    The conditional terminal annihilator supplies explicit boundary rows;
    prove their pairing with the incoming columns is nonsingular while
    retaining the full old-node commutator. Alternatively, prove spanning

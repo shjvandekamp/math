@@ -1,0 +1,1268 @@
+{
+  "status": "Finite actual conic outgoing transverse first-jet certificates.",
+  "construction": "Dual-number ordinary-y residues of the complete CT2 functions; correction uses full left/right kernels, including state-zero rows.",
+  "limitations": "Only the recorded auxiliary-block fixtures are certified. This is not the full source Schur matrix, a uniform even-length proof, or a real upper bound inferred from modular deficiency.",
+  "elapsed_seconds": 0.04400395800000001,
+  "maximum_rss_bytes": 15122432,
+  "bounded_limitation": null,
+  "cases": [
+    {
+      "n": 2,
+      "prime": 1000003,
+      "alpha": [
+        1,
+        2,
+        3
+      ],
+      "old_times": [
+        2,
+        5
+      ],
+      "old_nodes": [
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          5,
+          10,
+          15
+        ]
+      ],
+      "all_old_nodes_distinct_nonzero": true,
+      "row_order": "(t,a), block then state, zero-based",
+      "column_order": "(s,j), move-first block then outgoing state, zero-based",
+      "leading": {
+        "rows": 6,
+        "columns": 6,
+        "sha256": "0de8cd15ab2cf6c9c7fe027e314b4d29891931447d946593a8527a57b54a4fa8",
+        "rank_certificate": {
+          "rank": 4,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 4,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "determinant_mod_prime": 419580,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "derivative_sha256": "fd06e4e1d1e6d9054ed3aed434eff8f0f701891114deb5a59b40ae84f2f61455",
+      "direct_recurrence_scalar_checks": 30,
+      "full_old_pole_rows_retained": true,
+      "right_kernel": [
+        [
+          0,
+          399999,
+          999985,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          900003,
+          2,
+          0,
+          0,
+          1
+        ]
+      ],
+      "right_free_columns": [
+        4,
+        5
+      ],
+      "left_kernel": [
+        [
+          1625,
+          687588,
+          666677,
+          400026,
+          1,
+          0
+        ],
+        [
+          999328,
+          93687,
+          999998,
+          759985,
+          0,
+          1
+        ]
+      ],
+      "left_free_columns": [
+        4,
+        5
+      ],
+      "correction_matrix": [
+        [
+          999178,
+          500089
+        ],
+        [
+          675,
+          499934
+        ]
+      ],
+      "correction": {
+        "rows": 2,
+        "columns": 2,
+        "sha256": "c74f1b8883bf09f3cefee25300918fd23d63e3a085ea457d19fa558c5790cf5e",
+        "rank_certificate": {
+          "rank": 2,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 2,
+            "rows": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "determinant_mod_prime": 996628,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 996628
+        }
+      },
+      "correction_determinant_mod_prime": 996628,
+      "first_jet_resolves_both_directions": true,
+      "geometric_alpha_relation": false
+    },
+    {
+      "n": 3,
+      "prime": 1000003,
+      "alpha": [
+        1,
+        2,
+        3
+      ],
+      "old_times": [
+        2,
+        5,
+        11
+      ],
+      "old_nodes": [
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          5,
+          10,
+          15
+        ],
+        [
+          11,
+          22,
+          33
+        ]
+      ],
+      "all_old_nodes_distinct_nonzero": true,
+      "row_order": "(t,a), block then state, zero-based",
+      "column_order": "(s,j), move-first block then outgoing state, zero-based",
+      "leading": {
+        "rows": 9,
+        "columns": 9,
+        "sha256": "2dccfff0d0e783c1c75ed0e7560a02100833922d3dbb1f7bd98a584dacf6a7b8",
+        "rank_certificate": {
+          "rank": 9,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 9,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              6,
+              4,
+              5
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "determinant_mod_prime": 695327,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 695327
+        }
+      },
+      "derivative_sha256": "bdd5b5166f5696481df090603e66cfdf01b612d9bdc9a9c3708b127626c7cd13",
+      "direct_recurrence_scalar_checks": 45,
+      "full_old_pole_rows_retained": true
+    },
+    {
+      "n": 4,
+      "prime": 1000003,
+      "alpha": [
+        1,
+        2,
+        3
+      ],
+      "old_times": [
+        2,
+        5,
+        11,
+        23
+      ],
+      "old_nodes": [
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          5,
+          10,
+          15
+        ],
+        [
+          11,
+          22,
+          33
+        ],
+        [
+          23,
+          46,
+          69
+        ]
+      ],
+      "all_old_nodes_distinct_nonzero": true,
+      "row_order": "(t,a), block then state, zero-based",
+      "column_order": "(s,j), move-first block then outgoing state, zero-based",
+      "leading": {
+        "rows": 12,
+        "columns": 12,
+        "sha256": "6036fd05d8e0c45fb570f2b370efa391e7928c0937bfd61b3ca17083c8a74ec2",
+        "rank_certificate": {
+          "rank": 10,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 10,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              6,
+              4,
+              5,
+              9
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "determinant_mod_prime": 430795,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "derivative_sha256": "1674977e63b8fbbe652b33a5819aa8ba3e42a0e1f8b0564fb63663b83b332b15",
+      "direct_recurrence_scalar_checks": 60,
+      "full_old_pole_rows_retained": true,
+      "right_kernel": [
+        [
+          0,
+          434782,
+          999931,
+          0,
+          521742,
+          0,
+          0,
+          826088,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          509883,
+          636367,
+          0,
+          0,
+          818187,
+          0,
+          0,
+          1000000,
+          0,
+          0,
+          1
+        ]
+      ],
+      "right_free_columns": [
+        10,
+        11
+      ],
+      "left_kernel": [
+        [
+          554776,
+          908341,
+          768549,
+          989172,
+          362256,
+          900523,
+          235745,
+          107614,
+          816185,
+          292641,
+          1,
+          0
+        ],
+        [
+          627941,
+          896597,
+          687114,
+          732721,
+          119075,
+          570900,
+          577880,
+          83364,
+          685950,
+          303468,
+          0,
+          1
+        ]
+      ],
+      "left_free_columns": [
+        10,
+        11
+      ],
+      "correction_matrix": [
+        [
+          867752,
+          234580
+        ],
+        [
+          161541,
+          496650
+        ]
+      ],
+      "correction": {
+        "rows": 2,
+        "columns": 2,
+        "sha256": "9ba3fbeb0f0cbc72462b64dc746f3dcffe50f06c1b42744173f417188d02307d",
+        "rank_certificate": {
+          "rank": 2,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 2,
+            "rows": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "determinant_mod_prime": 563801,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 563801
+        }
+      },
+      "correction_determinant_mod_prime": 563801,
+      "first_jet_resolves_both_directions": true,
+      "geometric_alpha_relation": false
+    },
+    {
+      "n": 6,
+      "prime": 1000003,
+      "alpha": [
+        1,
+        2,
+        3
+      ],
+      "old_times": [
+        2,
+        5,
+        11,
+        23,
+        47,
+        97
+      ],
+      "old_nodes": [
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          5,
+          10,
+          15
+        ],
+        [
+          11,
+          22,
+          33
+        ],
+        [
+          23,
+          46,
+          69
+        ],
+        [
+          47,
+          94,
+          141
+        ],
+        [
+          97,
+          194,
+          291
+        ]
+      ],
+      "all_old_nodes_distinct_nonzero": true,
+      "row_order": "(t,a), block then state, zero-based",
+      "column_order": "(s,j), move-first block then outgoing state, zero-based",
+      "leading": {
+        "rows": 18,
+        "columns": 18,
+        "sha256": "5c993da9b3f476afca5f24dbcb34257f13525a49a707cfe8f1bc8c7d1ab040b8",
+        "rank_certificate": {
+          "rank": 16,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 16,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              6,
+              4,
+              5,
+              9,
+              13,
+              14,
+              12,
+              10,
+              11,
+              15
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "determinant_mod_prime": 289896,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "derivative_sha256": "8cf011021392d239901301dd31732152aa7116396a7c60bf79be072cc9bf08b6",
+      "direct_recurrence_scalar_checks": 90,
+      "full_old_pole_rows_retained": true,
+      "right_kernel": [
+        [
+          0,
+          951891,
+          999703,
+          0,
+          123713,
+          0,
+          0,
+          963919,
+          0,
+          0,
+          492271,
+          0,
+          0,
+          169243,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          630842,
+          921990,
+          0,
+          0,
+          978729,
+          0,
+          0,
+          223402,
+          0,
+          0,
+          675537,
+          0,
+          0,
+          583332,
+          0,
+          0,
+          1
+        ]
+      ],
+      "right_free_columns": [
+        16,
+        17
+      ],
+      "left_kernel": [
+        [
+          907261,
+          646318,
+          859531,
+          948757,
+          660088,
+          967150,
+          679047,
+          115275,
+          821370,
+          263762,
+          983709,
+          748987,
+          432403,
+          422984,
+          55373,
+          465662,
+          1,
+          0
+        ],
+        [
+          241613,
+          629727,
+          562765,
+          83906,
+          520498,
+          243828,
+          465066,
+          838836,
+          983338,
+          585540,
+          402832,
+          393277,
+          390451,
+          485764,
+          422362,
+          395896,
+          0,
+          1
+        ]
+      ],
+      "left_free_columns": [
+        16,
+        17
+      ],
+      "correction_matrix": [
+        [
+          996904,
+          89624
+        ],
+        [
+          350818,
+          28342
+        ]
+      ],
+      "correction": {
+        "rows": 2,
+        "columns": 2,
+        "sha256": "3facc5b5c2be5cc741907f0443e99e48d36fc7881dcca52cf4898e32f424e9de",
+        "rank_certificate": {
+          "rank": 2,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 2,
+            "rows": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "determinant_mod_prime": 550300,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 550300
+        }
+      },
+      "correction_determinant_mod_prime": 550300,
+      "first_jet_resolves_both_directions": true,
+      "geometric_alpha_relation": false
+    },
+    {
+      "n": 2,
+      "prime": 1000003,
+      "alpha": [
+        1,
+        2,
+        4
+      ],
+      "old_times": [
+        2,
+        5
+      ],
+      "old_nodes": [
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          5,
+          10,
+          20
+        ]
+      ],
+      "all_old_nodes_distinct_nonzero": true,
+      "row_order": "(t,a), block then state, zero-based",
+      "column_order": "(s,j), move-first block then outgoing state, zero-based",
+      "leading": {
+        "rows": 6,
+        "columns": 6,
+        "sha256": "fd5bcec468d6f070c5f755672bebe724695aa1bd24b6dd13fe1ad5f3b7ad07c3",
+        "rank_certificate": {
+          "rank": 4,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 4,
+            "rows": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "determinant_mod_prime": 617270,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "derivative_sha256": "c4719dd927525e7aaf002a94ce9a8408ee3f920df3e7b5948705b704272efeaf",
+      "direct_recurrence_scalar_checks": 30,
+      "full_old_pole_rows_retained": true,
+      "right_kernel": [
+        [
+          0,
+          199999,
+          999991,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          950003,
+          500002,
+          0,
+          0,
+          1
+        ]
+      ],
+      "right_free_columns": [
+        4,
+        5
+      ],
+      "left_kernel": [
+        [
+          1125,
+          500064,
+          218753,
+          800024,
+          1,
+          0
+        ],
+        [
+          999203,
+          999928,
+          750001,
+          439977,
+          0,
+          1
+        ]
+      ],
+      "left_free_columns": [
+        4,
+        5
+      ],
+      "correction_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "correction": {
+        "rows": 2,
+        "columns": 2,
+        "sha256": "5e77747e2d97ad2738b30d57fdd9095982e520b83e56374d562fbe4c597c8302",
+        "rank_certificate": {
+          "rank": 0,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 0,
+            "rows": [],
+            "columns": [],
+            "determinant_mod_prime": 1,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "correction_determinant_mod_prime": 0,
+      "first_jet_resolves_both_directions": false,
+      "geometric_alpha_relation": true
+    },
+    {
+      "n": 3,
+      "prime": 1000003,
+      "alpha": [
+        1,
+        2,
+        4
+      ],
+      "old_times": [
+        2,
+        5,
+        11
+      ],
+      "old_nodes": [
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          5,
+          10,
+          20
+        ],
+        [
+          11,
+          22,
+          44
+        ]
+      ],
+      "all_old_nodes_distinct_nonzero": true,
+      "row_order": "(t,a), block then state, zero-based",
+      "column_order": "(s,j), move-first block then outgoing state, zero-based",
+      "leading": {
+        "rows": 9,
+        "columns": 9,
+        "sha256": "e1b71f8f7704f17116937ca2be54030f53806a7f9d178679d1669d51697682c3",
+        "rank_certificate": {
+          "rank": 9,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 9,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              6,
+              4,
+              5
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "determinant_mod_prime": 15306,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 15306
+        }
+      },
+      "derivative_sha256": "b1e07ec27f8f3ea56390360aa4a477c36a45ff8646640908baeba45e40f89312",
+      "direct_recurrence_scalar_checks": 45,
+      "full_old_pole_rows_retained": true
+    },
+    {
+      "n": 4,
+      "prime": 1000003,
+      "alpha": [
+        1,
+        2,
+        4
+      ],
+      "old_times": [
+        2,
+        5,
+        11,
+        23
+      ],
+      "old_nodes": [
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          5,
+          10,
+          20
+        ],
+        [
+          11,
+          22,
+          44
+        ],
+        [
+          23,
+          46,
+          92
+        ]
+      ],
+      "all_old_nodes_distinct_nonzero": true,
+      "row_order": "(t,a), block then state, zero-based",
+      "column_order": "(s,j), move-first block then outgoing state, zero-based",
+      "leading": {
+        "rows": 12,
+        "columns": 12,
+        "sha256": "42852f0eb938f4485ef656425c0ce17b54813810686f62cf1dd615a125ad89d5",
+        "rank_certificate": {
+          "rank": 10,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 10,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              6,
+              4,
+              5,
+              9
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "determinant_mod_prime": 790771,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "derivative_sha256": "fe7f8dd9485c6da1b743bdf7e9f5c9e08751fbc322e2cb54f937ea6af6e13eb2",
+      "direct_recurrence_scalar_checks": 60,
+      "full_old_pole_rows_retained": true,
+      "right_kernel": [
+        [
+          0,
+          43477,
+          999955,
+          0,
+          521742,
+          0,
+          0,
+          826088,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          754943,
+          909094,
+          0,
+          0,
+          818187,
+          0,
+          0,
+          1000000,
+          0,
+          0,
+          1
+        ]
+      ],
+      "right_free_columns": [
+        10,
+        11
+      ],
+      "left_kernel": [
+        [
+          210168,
+          399369,
+          767542,
+          681414,
+          900731,
+          381894,
+          443650,
+          335458,
+          885804,
+          733047,
+          1,
+          0
+        ],
+        [
+          666476,
+          414897,
+          864991,
+          137936,
+          512784,
+          703840,
+          807390,
+          654359,
+          206612,
+          956974,
+          0,
+          1
+        ]
+      ],
+      "left_free_columns": [
+        10,
+        11
+      ],
+      "correction_matrix": [
+        [
+          613802,
+          75862
+        ],
+        [
+          52147,
+          740062
+        ]
+      ],
+      "correction": {
+        "rows": 2,
+        "columns": 2,
+        "sha256": "0212d5425e92e22f25bdddc8449449a532901932b3f47b744c87b38ae72e1bf7",
+        "rank_certificate": {
+          "rank": 2,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 2,
+            "rows": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "determinant_mod_prime": 209128,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 209128
+        }
+      },
+      "correction_determinant_mod_prime": 209128,
+      "first_jet_resolves_both_directions": true,
+      "geometric_alpha_relation": true
+    },
+    {
+      "n": 6,
+      "prime": 1000003,
+      "alpha": [
+        1,
+        2,
+        4
+      ],
+      "old_times": [
+        2,
+        5,
+        11,
+        23,
+        47,
+        97
+      ],
+      "old_nodes": [
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          5,
+          10,
+          20
+        ],
+        [
+          11,
+          22,
+          44
+        ],
+        [
+          23,
+          46,
+          92
+        ],
+        [
+          47,
+          94,
+          188
+        ],
+        [
+          97,
+          194,
+          388
+        ]
+      ],
+      "all_old_nodes_distinct_nonzero": true,
+      "row_order": "(t,a), block then state, zero-based",
+      "column_order": "(s,j), move-first block then outgoing state, zero-based",
+      "leading": {
+        "rows": 18,
+        "columns": 18,
+        "sha256": "987a0e35864c5871f3c6e6198067a2beb537af7b1661acfbaac94e3a9d3f94a6",
+        "rank_certificate": {
+          "rank": 16,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 16,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              6,
+              4,
+              5,
+              9,
+              13,
+              14,
+              12,
+              10,
+              11,
+              15
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "determinant_mod_prime": 769730,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 0
+        }
+      },
+      "derivative_sha256": "a48a32c0144c854f1b71154b9dc3d136eab9617b9b5f199ce94f73c4c51c3b48",
+      "direct_recurrence_scalar_checks": 90,
+      "full_old_pole_rows_retained": true,
+      "right_kernel": [
+        [
+          0,
+          601375,
+          999803,
+          0,
+          123713,
+          0,
+          0,
+          963919,
+          0,
+          0,
+          492271,
+          0,
+          0,
+          169243,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          315421,
+          730499,
+          0,
+          0,
+          978729,
+          0,
+          0,
+          223402,
+          0,
+          0,
+          675537,
+          0,
+          0,
+          583332,
+          0,
+          0,
+          1
+        ]
+      ],
+      "right_free_columns": [
+        16,
+        17
+      ],
+      "left_kernel": [
+        [
+          654349,
+          66675,
+          372808,
+          191918,
+          144341,
+          898072,
+          965651,
+          36869,
+          5965,
+          20511,
+          49356,
+          677732,
+          506248,
+          36439,
+          796826,
+          328492,
+          1,
+          0
+        ],
+        [
+          255808,
+          313640,
+          888681,
+          327182,
+          970779,
+          817462,
+          400363,
+          19470,
+          216861,
+          34881,
+          699208,
+          22716,
+          169851,
+          501646,
+          306927,
+          336918,
+          0,
+          1
+        ]
+      ],
+      "left_free_columns": [
+        16,
+        17
+      ],
+      "correction_matrix": [
+        [
+          40909,
+          221352
+        ],
+        [
+          927058,
+          872344
+        ]
+      ],
+      "correction": {
+        "rows": 2,
+        "columns": 2,
+        "sha256": "ad3868d2585f97d8bbd22edfc12e6f267280e3507849c796699ff5199cbd2b38",
+        "rank_certificate": {
+          "rank": 2,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 2,
+            "rows": [
+              0,
+              1
+            ],
+            "columns": [
+              0,
+              1
+            ],
+            "determinant_mod_prime": 86837,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 86837
+        }
+      },
+      "correction_determinant_mod_prime": 86837,
+      "first_jet_resolves_both_directions": true,
+      "geometric_alpha_relation": true
+    }
+  ]
+}

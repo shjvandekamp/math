@@ -144,15 +144,17 @@ criterion. The same researcher proposed the stronger criterion A5.
 Uniform nonvanishing of its boundary matrix, and the additional
 transversality needed for the actual source family, remain unresolved.
 
-## Pending audit of an explicit quotient construction
+## Audited explicit quotient construction
 
 The completed [GPT-6 Pro raw-boundary investigation](https://chatgpt.com/c/6ad13a68-9e88-83ed-90ba-098f4f9795f8)
-proposes a more explicit version of A5. For a boundary row H it sets
+supplied a more explicit version of A5, now checked by the primary
+researcher and an independent reviewer in
+[SOURCE24_RAW_QUOTIENT.md](SOURCE24_RAW_QUOTIENT.md). For a boundary row H it sets
 B=H diag(X)^−1 and C=B A_m^−1, so the stripped row is
-R=H K_m^−1=C diag(L_m). The proposed quotient tests consist of
+R=H K_m^−1=C diag(L_m). The quotient tests consist of
 9q+6 new-pole coordinates, 6q+3 coordinate-axis coordinates, and 3q
-old-line matching derivatives, totaling the ambient quotient dimension
-18q+9. The last proposed functionals are
+old-line matching values after removing the departure factor, totaling
+the ambient quotient dimension 18q+9. The last functionals are
 
 \[
  \eta_{ta}(H)=
@@ -160,11 +162,12 @@ old-line matching derivatives, totaling the ambient quotient dimension
  A_m^{-1}\right]_a\bigg|_{L_{ta}=X_a=0}. \tag{A9}
 \]
 
-The response also proposes a uniform 18-column subfamily separated by
+The audited proof also gives a uniform 18-column subfamily separated by
 new poles after coalescing old time factors, using the two-dimensional
 zero-sum Cayley–Hamilton recurrence for the common old kernel. These
-claims are not yet part of the locally accepted results: the exact
-quotient kernel, regular extension of every coordinate, collision witness,
-and rank interaction still need independent checking. No external code
-from that response has been executed. Even if these claims pass audit,
-the full 18q-column quotient rank remains to prove.
+claims include the exact quotient kernel, globally defined coordinates,
+and an ordinary-evaluation collision witness. The first two groups of
+tests leave at least 3q−9 boundary coefficient directions when q>=4,
+so the matching values contain essential information. No external code
+from that response has been executed. The full 18q-column quotient rank
+and its connection to the remaining source transversality remain open.
