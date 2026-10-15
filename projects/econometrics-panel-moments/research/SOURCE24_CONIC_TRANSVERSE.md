@@ -203,3 +203,199 @@ must not be extrapolated to longer even lengths. The local run took
 0.0441 seconds with maximum RSS 15,122,432 bytes and passed an independent
 code audit. These finite checks corroborate the separate uniform proof;
 they are not its induction bases.
+
+## Append kernels without an invertible old source block
+
+The following are exact paper reductions, not Lean results or
+nonvanishing theorems for the complete source matrix. The first two
+statements apply to general common-G tables, not just the conic family.
+Assume the wide ambient geometry of
+[SOURCE24_COMPLETION_QUOTIENT.md](SOURCE24_COMPLETION_QUOTIENT.md):
+all table entries and determinants are nonzero, the denominator lines
+are distinct, every line intersection has nonzero coordinates, no three
+lines meet, and a matching coordinate-edge point lies on no other line.
+Impose the same conditions after adding the suffix blocks. In particular,
+every suffix kernel is regular and invertible at each earlier pair node.
+All coefficient vectors and changes of basis below have parameter-only
+constant entries; they do not depend on the effect variables.
+
+For an old index \(\alpha=(t,s,a,b)\), \(t\ne s\), define the prefix,
+raw completed row, and source row by
+\[
+ I_\alpha=\frac{A_t(a,b)X_aX_b}{L_{ta}}e_b,\qquad
+ \widehat Q_\alpha=I_\alpha P_s^{\widehat t},\qquad
+ F_\alpha=I_\alpha-\widehat Q_\alpha. \tag{CT9}
+\]
+The word \(P_s^{\widehat t}\) uses every old block except \(t\),
+with \(s\) first and the others in increasing order. Extend these maps
+linearly to an old coefficient vector \(y\). Write \(\rho_n\) for the
+old cross-block double-residue map, in two independent zero-sum
+coordinates at each node, and \(O_n=\rho_nF\). Since \(I(y)\) has only
+single poles, \(\rho_n\widehat Q(y)=-O_ny\).
+
+For \(i=(t,a)\), use the normalized single-line rows
+\[
+ V_{i,b}=\frac{A_t(a,b)X_aX_b}{L_i}e_b
+                  -\delta_{ab}X_ae_a .
+\]
+They vanish at the coordinate vertices, and their line residues have
+component \(b\) equal to \(A_t(a,b)X_aX_b\). The raw rows belong to
+the wide ambient space obtained by adjoining the three diagonal
+polynomials \(X_de_d\) to the completion space. Its residue-kernel
+lemma therefore gives, for every \(y\in\ker O_n\), a unique expansion
+\[
+ \widehat Q(y)=\sum_{i,b}\kappa_{i,b}(y)V_{i,b}
+                         +\sum_d d_d(y)X_de_d. \tag{CT10}
+\]
+Indeed, subtract the vertex values to enter the completion space and
+apply (C2) of the completion note. Equivalently, after all pair
+residues vanish, each line residue of
+\(\widehat Q(y)\operatorname{diag}(X)^{-1}\) is a linear row
+divisible by the matching \(X_a\). The displayed normalization then
+fixes every \(\kappa_{i,b}\), and the remaining polynomial is diagonal.
+
+Append a block \(N=n+1\) to every old word. Its actual interior source
+row is
+\[
+ F^{[N]}(y)=I(y)-\widehat Q(y)K_N .
+\]
+At \(P=L_i=L_{Nc}=0\), the double residue for \(y\in\ker O_n\) is
+\[
+ \rho_{i,Nc}F^{[N]}(y)=
+ -\kappa_{i,c}(y)A_t(a,c)X_a(P)X_c(P)v_{Nc}(P),
+ \qquad i=(t,a), \tag{CT11}
+\]
+where \(v_{Nc}=(A_N(c,d)X_d)_d\). All prescribed geometric scalar
+factors in (CT11) are nonzero under the assumptions. Old/old residues
+are the old residues followed by right multiplication by \(K_N(P)\).
+Consequently
+\[
+ \ker(\rho_{n+1}F^{[N]})
+ =\{y\in\ker O_n:\kappa(y)=0\}
+ =\{y:\widehat Q(y)\in
+                    \operatorname{span}\{X_de_d:d=0,1,2\}\}. \tag{CT12}
+\]
+In particular, the longitudinal old-kernel map has exactly the rank
+of \(\kappa|_{\ker O_n}\). Its rank is independent of the appended
+time within the admissible geometry. This does not determine the rank
+of the new incoming columns.
+
+Appending two blocks gives a sharper kernel identity. Set
+\(M=n+2\) and
+\(F^{[N,M]}(y)=I(y)-\widehat Q(y)K_NK_M\). Then
+\[
+ \boxed{\quad
+ \ker(\rho_{n+2}F^{[N,M]})=\ker\widehat Q .
+ \quad} \tag{CT13}
+\]
+To prove the forward inclusion, old/old residues first imply
+\(O_ny=0\), since the suffix \(K_NK_M\) is invertible there.
+Old/\(N\) residues are (CT11) followed by the regular invertible
+\(K_M\), so every \(\kappa_{i,c}\) vanishes. Thus
+\(\widehat Q(y)=\sum_a d_aX_ae_a\). At the \(N,a\)/\(M,b\)
+intersection the remaining residue is
+\[
+ -d_aX_a(P)A_N(a,b)X_b(P)v_{Mb}(P).
+\]
+It forces \(d_a=0\) for each \(a\). Conversely, if
+\(\widehat Q(y)=0\), then \(F^{[N,M]}(y)=I(y)\) has no pair
+residues. Hence the residue rank of this twice-appended interior
+subfamily equals the rational-row rank of the old raw completed
+family. The statement concerns only the old labels carried through
+the suffix; it does not include the new boundary labels and does not
+prove independence of the full enlarged family.
+
+## A 27-square criterion for the singular conic three-to-four step
+
+Now use three old conic blocks at a point where
+\(\operatorname{rank}O_3=51\), and append a fourth admissible block.
+Assume its complete outgoing transverse matrix \(P\) is invertible.
+These assumptions hold on a nonempty generic parameter set by the
+separate old-rank and transverse results. The old coefficient space
+has dimension 54. Choose a 51-dimensional complement to its kernel
+and use the three normalized combinations (C13) in
+[SOURCE24_CONIC.md](SOURCE24_CONIC.md) as the kernel basis.
+
+Order columns as the 51 old complement columns, the three old kernel
+columns, the 27 outgoing columns, and the 27 incoming columns. Order
+rows as 54 old/old coordinates, 27 transverse coordinates, and 27
+longitudinal coordinates. The full 108-square residue matrix becomes
+\[
+ \begin{pmatrix}
+ A_1&0&B&E\\
+ 0&0&P&Q\\
+ C_1&C_{\ker}&R&S
+ \end{pmatrix}. \tag{CT14}
+\]
+Here \(A_1\) has size \(54\) by \(51\) and full column rank.
+All blocks use the same column normalizations and residue coordinates.
+The 27-square block \(P\) is the complete outgoing block, not just
+the \(9n-6\) controlled block \(H\) of (CT7).
+
+The three-column longitudinal block \(C_{\ker}\) has full rank
+without an old-source inverse. More explicitly, let \(h\) be the
+nonzero scalar function (C12) of the conic note. Its kernel column
+indexed by \(c\) has longitudinal entry
+\[
+ \sigma_i^c=\operatorname{Res}_{L_i}(h)(P_{i,4c})
+                         X_c(P_{i,4c})
+\]
+in new-state sector \(c\), and zero in the other two sectors, by
+(C14) there. Fix one old state-zero line \(i_0=(t,0)\). Each
+\(\sigma_{i_0}^c\) is nonzero; their explicit pivots are (C15).
+An explicit quotient map \(\Pi:\mathbb R^{27}\to\mathbb R^{24}\)
+is therefore
+\[
+ (\Pi z)_{c,i}
+    =z_{c,i}-\frac{\sigma_i^c}{\sigma_{i_0}^c}z_{c,i_0},
+       \qquad i\ne i_0. \tag{CT15}
+\]
+There are eight retained rows per sector, and
+\(\ker\Pi=\operatorname{im}C_{\ker}\).
+
+Eliminate the outgoing columns using \(P\), retaining both cross
+couplings:
+\[
+ Z=E-BP^{-1}Q,\qquad W=S-RP^{-1}Q.
+\]
+Choose any left inverse \(A_1^+\) of \(A_1\), and any full-row-rank
+\(L:\mathbb R^{54}\to\mathbb R^3\) with
+\(\ker L=\operatorname{im}A_1\). The full four-block pair-residue
+matrix is invertible if and only if
+\[
+ \boxed{\quad
+ {\cal H}_{3\to4}=
+ \begin{pmatrix}
+ LZ\\
+ \Pi\bigl(W-C_1A_1^+Z\bigr)
+ \end{pmatrix}
+ \quad\hbox{is invertible.}\quad} \tag{CT16}
+\]
+This is a 27-square matrix: three old-cokernel rows and 24
+longitudinal quotient rows.
+
+For the equivalence, after eliminating \(P\) a relation with incoming
+coefficient vector \(x\) must satisfy
+\(A_1u+Zx=0\). This is solvable exactly when \(LZx=0\), in which
+case \(u=-A_1^+Zx\). Its longitudinal equation is then solvable for
+the three old-kernel coefficients exactly when
+\(\Pi(W-C_1A_1^+Z)x=0\). If \(x=0\), full column rank of
+\(A_1\) and \(C_{\ker}\) forces every remaining coefficient to
+vanish. Thus the two kernels are isomorphic.
+
+The criterion does not depend on the auxiliary choices. If a left
+inverse is changed, its difference annihilates \(A_1\) and factors
+as \(ML\). The lower block in (CT16) changes by
+\(-\Pi C_1M\) times the upper block. Changing \(L\) or \(\Pi\)
+only changes bases in their quotient spaces; changing the old
+complement preserves the kernel characterization just proved.
+Left inverses and quotient maps may be chosen rationally from any
+nonzero parameter minor, so no effect-dependent coefficient operations
+are involved.
+
+Formula (CT16) avoids the nonexistent \(O_3^{-1}\). It retains the
+old-node term \(C_1A_1^+Z\), the outgoing-to-old correction
+\(BP^{-1}Q\), and the incoming longitudinal correction \(RP^{-1}Q\).
+It is a conditional criterion, not a proof that its determinant is
+nonzero, and it supplies no uniform conclusion for the remaining
+regular block.

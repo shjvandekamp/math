@@ -1,4 +1,4 @@
-# Research status — 15 October 2026
+# Research status — 16 October 2026
 
 **Confirmed:** the four-period source-basis theorem and the arbitrary-period
 structural dimension theorem compile end to
@@ -298,6 +298,30 @@ the number of independent evaluation rows. The
 [explicit quotient](research/SOURCE24_RAW_QUOTIENT.md) now has 18q+9
 coordinates, with its kernel proved exactly. A uniform 18-column
 subfamily is generically independent modulo the appended ambient.
+Direct exact quotient observations now certify the full boundary rank
+at q=2,3,4,5,6. At q=4,5,6 the matching values add precisely 3,6,9
+directions after the new-pole and axis observations. Separate matching
+minors have rank 3q on the incoming unequal-state columns at every
+tested fixture. A separate audited paper proof now establishes this
+matching rank uniformly for every q>=2. Its coalesced matrix reduces
+to explicit 3-by-6 tests, proved nonzero by exact power bounds. The
+[fixed cyclic matching minor](research/SOURCE24_MATCHING_PIVOTS.md)
+sharpens this to a specified 3q-column set, using a near-diagonal common-G
+perturbation. Eliminating it together with six row-sum pivots leaves an
+exact (15q+3)-by-(15q−6) reduced matrix whose full rank is still open.
+The raw-quotient exploration files preserve the finite certificates.
+The first old-time derivative also reaches the expected new-pole and
+axis ranks in all five fixtures. A mixed construction retains the
+coalesced matching matrix and applies only the new-pole/axis derivative
+to the joint leading kernel. It reaches the full 18q quotient rank in
+all five fixtures without using matching derivatives. This gives a
+concrete uniform proof target; separate observation ranks are not added.
+The joint leading rank is now proved uniformly to be 3q+15. Its kernel
+splits into q−1 explicit 15-dimensional pieces through the path-incidence
+matrix. The remaining task is injectivity of the actual first derivative
+on their direct sum modulo the leading image. The formulas retain the
+incoming prefix derivative and the cancellation of the highest old-pole
+terms. These are paper reductions, not additional Lean theorems.
 The full 18q-column append proof and the further source-family
 transversality remain open.
 
@@ -341,6 +365,14 @@ it is a paper result, not Lean formalized. Exact dual-number checks at
 n=2,3,4,6 corroborate the normalization. The remaining regular Schur
 matrix keeps both old-node corrections and its determinant is still
 open; the singular conic O3 also requires a separate base step.
+That singular step now has an exact 27-square criterion using its
+51-dimensional old complement and three explicit longitudinal kernel
+pivots. A separate suffix lemma shows that two appended blocks recover
+the full rational-row rank of any old interior subfamily through pair
+residues. Both statements preserve the incoming cross-coupling; neither
+proves the new boundary rank. A second audited transverse argument
+also proves the even correction for any fixed admissible binary
+parameters when alpha0/alpha1 is sufficiently small and positive.
 
 ## Finite theorem
 
@@ -425,8 +457,12 @@ silently assumed by either proved theorem, and no result below is claimed.
    both parities; its regular/longitudinal Schur block remains open, with
    both old-node corrections retained. Formalizing the transverse proof
    is also unfinished. The raw append alternative has an exact ambient
-   quotient and a uniform 18-column subfamily; its full 18q-column rank
-   and subsequent source transversality are still unproved.
+   quotient, a uniform 18-column subfamily and a uniform rank-3q
+   matching map with a fixed cyclic minor. Prove full rank of the
+   resulting (15q+3)-by-(15q−6) reduced matrix, or prove that the first
+   derivative is injective on the q−1 local 15-dimensional pieces of
+   the joint leading kernel. Both targets and subsequent source
+   transversality remain open.
    The conditional terminal annihilator supplies explicit boundary rows;
    prove their pairing with the incoming columns is nonsingular while
    retaining the full old-node commutator. Alternatively, prove spanning

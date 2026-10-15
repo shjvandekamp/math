@@ -15,8 +15,9 @@ The normalized ordered-word rank theorem is formalized in
 the matrix-product interpretation and this perturbation argument remain paper
 results. The transverse coordinates and actual source normalization are
 (CT1)--(CT5) in [SOURCE24_CONIC_TRANSVERSE.md](SOURCE24_CONIC_TRANSVERSE.md).
-This is a local derivation, not a result attributed to the still-pending
-external Pro12 investigation.
+The first proof below was derived locally. The later external calculation
+and its independently checked stronger parameter statement are recorded
+separately after (J19).
 
 ## Binary deformation and exact identities
 
@@ -327,3 +328,165 @@ Hence the conic outgoing transverse determinant is generically
 nonzero for every even \(n\). The established odd binary leading rank
 supplies the odd case. The longitudinal/regular correction (CT8)
 remains a separate unresolved determinant.
+
+## A second proof with fixed binary parameters
+
+The later [GPT-6 Pro calculation](https://chatgpt.com/c/6ad14116-2550-83ed-967d-1e84e863d92a)
+supplied a different degeneration, independently checked locally. It
+strengthens the parameter statement: for every fixed positive
+\(\rho\ne1\) and positive \(p_i\) with all \(p_i,\rho p_i\) distinct,
+the even-length correction is invertible for every sufficiently small
+positive \(\sigma=\alpha_0/\alpha_1\). This does not change the unresolved
+regular determinant. The following proof uses \(n\ge4\) even; the
+two-block case is addressed below.
+
+Use the CT variable \(y\) and write
+\[
+ d_i=\frac{(1-\rho)p_i y}{(p_i-y)(\rho p_i-y)},\quad
+ D=\prod_i d_i,\quad Q=\prod_i(y-p_i)(y-\rho p_i),\quad
+ \delta=(1-\rho)/\rho.
+ \tag{J20}
+\]
+The binary interpolation columns are
+\(U_s=Qf_s\), \(V_s=Q(1-f_s-D)/y\).
+The outer-support theorem gives the direct complement
+\[
+ \mathcal P_{\le2n-1}
+ =\mathcal S_n\oplus\operatorname{span}\{y^{n-1},y^n\},\quad
+ \mathcal S_n=\operatorname{span}\{T_s,T_s/y:2\le s\le n\}.
+ \tag{J21}
+\]
+At even length \(\mathcal S_n\) is the entire leading binary image.
+
+For a kernel vector \((c_s,\eta_s)\), let
+\(C_0=\sum c_s\), \(H_0=\sum\eta_s\). Its identity is
+\[
+ \sum_s\left[c_sf_s+\eta_s(1-f_s-D)/y\right]=0.
+ \tag{J22}
+\]
+If both sums vanish, the independent outer columns force the vector to
+vanish, so these sums are kernel coordinates. The expansions at zero
+and infinity give
+\[
+ C_0=\frac{H_0-\eta_n}{\rho p_n}
+            +\frac{\eta_n}{\rho p_{n-1}},\qquad
+ H_0=p_nC_0+(p_{n-1}-p_n)c_n.
+ \tag{J23}
+\]
+Thus \((H_0,\eta_n)\) are also coordinates. Let \(v_0,v_1\) have values
+\((1,0),(0,1)\) in these coordinates. For \(v_0\), a further coefficient
+in (J22) proves \(\eta_{n-1}=0\). Explicitly, for a word whose last
+two blocks are \(i,j\),
+\[
+ f_{\rm word}=1+\frac{y}{\rho p_j}
+ +y^2\left(\frac1{\rho^2p_j^2}
+                     +\frac{\delta}{\rho p_jp_i}\right)+O(y^3).
+\]
+Substitution of (J23) into the coefficient of \(y\) in (J22) leaves
+\(-\eta_{n-1}\delta(\,p_{n-2}^{-1}-p_{n-1}^{-1}\,)/(\rho p_n)=0\).
+Here \(D=O(y^n)\), so it contributes nothing to that coefficient.
+
+The actual constrained leakage ratio and an adjacent-block coefficient are
+\[
+ z_j=\frac{1-\sigma}{1-\rho}
+                  \frac{\rho p_j-y}{\sigma p_j-y},\qquad
+ \ell_i=\frac{(1+\rho)p_i-y}{\rho p_i^2}.
+ \tag{J24}
+\]
+For a nonempty prefix \(W\), put \(H_W=(\partial_xP_{W,10})_0/D_W\).
+The affine recurrence for the actual kernels shows this is independent of
+\(\sigma\) and is a Laurent polynomial. If \(W\) has length \(k\ge2\)
+and last block \(i\), then
+\[
+ H_W=\frac{\prod_{t\in W}p_t}
+          {\rho^2p_i^2\delta^k}\,y^{1-k}+O(y^{2-k}).
+ \tag{J25}
+\]
+The restriction \(k\ge2\) matters: for one block the leading constant
+is \(1/(\delta p_i)\).
+
+For each occurrence of \(j\ne s\) in the move-\(s\)-first word, let
+\(W_{s,j}\) be its preceding prefix and \(i(s,j)\) its last block. Define
+\[
+ E_j(v;y)=\sum_{s\ne j}
+ \left[(c_sy-\eta_s)H_{W_{s,j}}-\eta_s\ell_{i(s,j)}\right].
+ \tag{J26}
+\]
+Unrolling the exact affine derivative recurrences gives the derivative
+of the actual kernel-column combination as
+\[
+ R_v=R_v^0+yD\sum_j z_j E_j,
+ \tag{J27}
+\]
+where \(R_v^0\) is independent of \(\sigma\). In detail,
+\(\partial_xP_{s,12}=G_s+D\sum_{j\ne s}z_jH_{W_{s,j}}\), with
+\(G_s\) independent of \(\sigma\), and
+\[
+ \partial_x(P_{s,22}-P_{s,12})
+ =D\left[n/y+\sum_{j\ne s}\ell_{i(s,j)}z_j\right].
+\]
+These follow from the same actual-product recurrences checked in the
+finite dual-number script; no independent leakage parameters are used.
+
+The leading state-zero pivot, after a constant binary-column subtraction,
+is \(-y^2Dz_j\), and its sole state-zero pole is \(r_j=\sigma p_j\).
+Eliminating that pole from (J27) gives exactly
+\[
+ \widetilde R_v
+ =R_v^0+yD\sum_j z_j
+       \left[E_j(y)-\frac{y}{\sigma p_j}E_j(\sigma p_j)\right].
+ \tag{J28}
+\]
+In particular this retains the derivative of the state-zero Schur
+correction. Dropping the subtraction would remove the leading term below.
+
+Only \(j=n-1,n\) can be last in a prescribed move-first word. Put
+\(e_j=[y^{2-n}]E_j\), \(\mathcal P=\prod_i p_i\). Formula (J25) yields
+\[
+ e_{n-1}=-\frac{\mathcal P\,\eta_n}
+               {\rho^2\delta^{n-1}p_{n-1}p_{n-2}^2},\qquad
+ e_n=-\frac{\mathcal P}{\rho^2\delta^{n-1}p_n}
+       \left(\frac{\sum_{s\le n-2}\eta_s}{p_{n-1}^2}
+                       +\frac{\eta_{n-1}}{p_{n-2}^2}\right);
+ \tag{J29}
+\]
+all other \(e_j\) vanish. Thus \(v_0\) has \(e_{n-1}=0,e_n\ne0\),
+while \(v_1\) has \(e_{n-1}\ne0\). The kernel-to-tail map is invertible.
+
+In (J28), the uncorrected terms stay bounded as \(\sigma\to0\).
+After multiplying by \(\sigma^{n-1}\), applying CT5, and using
+\(QD=C_Dy^n\), \(C_D=(1-\rho)^n\mathcal P\), the limit is
+\[
+ \mathcal L(v)=\frac{C_D}{1-\rho}
+ \left[
+ \rho\left(\frac{e_{n-1}}{p_{n-1}^{n-2}}
+                   +\frac{e_n}{p_n^{n-2}}\right)y^{n-1}
+ -\left(\frac{e_{n-1}}{p_{n-1}^{n-1}}
+                   +\frac{e_n}{p_n^{n-1}}\right)y^n
+ \right]. \tag{J30}
+\]
+This is already in the complement (J21). The determinant from its two
+tail coefficients to its two displayed coefficients is
+\[
+ \left(\frac{C_D}{1-\rho}\right)^2
+ \frac{\rho(p_n-p_{n-1})}{p_{n-1}^{n-1}p_n^{n-1}}\ne0.
+ \tag{J31}
+\]
+Equations (J29)--(J31) prove that the induced correction is
+\(\sigma^{1-n}(\mathcal L+O(\sigma))\) with \(\mathcal L\) invertible.
+All observations and bases here are parameter-rational and independent
+of the effect variable.
+
+For \(n=2\), the earlier determinant (J13) is
+\(1/(\rho(\rho-1)^2p_1p_2)\ne0\) for every fixed admissible
+\(\rho,p_1,p_2\). Its boundary argument therefore proves that the
+correction determinant is a nonzero rational function of \(\sigma\).
+It has only finitely many positive zeros and poles, so it too is
+nonzero for every sufficiently small positive \(\sigma\). This avoids
+using the \(k\ge2\) prefix expansion in the one-block-prefix case.
+
+The independent review checked (J23), the kernel tail coefficient,
+the exact subtraction (J28), and the central limit (J30). The primary
+researcher checked the two-block reduction and the determinant in
+(J31). The initial local proof (J1)--(J19) remains independent of this
+later external derivation.
