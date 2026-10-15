@@ -1,0 +1,52 @@
+module
+
+public import RoughHeston
+
+#print axioms RoughHeston.adams_degree_and_leading
+#print axioms RoughHeston.roughExponent_degree_and_leading
+#print axioms RoughHeston.roughExponentWithDrift_degree_and_leading
+#print axioms RoughHeston.roughState_succ
+#print axioms RoughHeston.not_integrableOn_callWeightedError_of_polynomial
+#print axioms RoughHeston.reference_fixed_mesh_not_integrable
+#print axioms RoughHeston.reference_genuine_call_not_integrable
+#print axioms RoughHeston.integrable_callFourierIntegrand
+#print axioms RoughHeston.vanillaCall_fourier_transform
+#print axioms RoughHeston.no_integrable_majorant_after_fixed_level
+#print axioms RoughHeston.domination_lintegral_eq_top
+#print axioms RoughHeston.concrete_example_not_integrable
+#print axioms RoughHeston.concrete_example_against_one
+
+#print axioms RoughHeston.predictorWeight_sum_fin
+#print axioms RoughHeston.correctorWeight_sum_fin
+#print axioms RoughHeston.validated_continuation
+#print axioms RoughHeston.IsRiccatiSolution.adams_consistency
+#print axioms RoughHeston.riccati_fixed_horizon_nodal_error
+#print axioms RoughHeston.explicit_continuation_mesh_exists
+#print axioms RoughHeston.riccati_dyadic_band_error
+#print axioms RoughHeston.riccati_dyadic_band_transform_error
+#print axioms RoughHeston.riccati_original_dyadic_time_weighted_error
+#print axioms RoughHeston.riccati_original_dyadic_transform_error
+#print axioms RoughHeston.exists_riccatiSolution
+#print axioms RoughHeston.IsRiccatiSolution.unique_in_ball
+#print axioms RoughHeston.localExample_validated_transform
+#print axioms RoughHeston.fractionalIntegral_semigroup
+#print axioms RoughHeston.IsRiccatiSolution.norm_exp_exponent_le_of_re_le
+#print axioms RoughHeston.continuousOn_exactRiccatiTransform_band
+#print axioms RoughHeston.call_cutoff_error
+#print axioms RoughHeston.riccati_dyadic_call_band_difference_error
+#print axioms RoughHeston.fractionalIntegral_littleHolder_left_Icc
+#print axioms RoughHeston.IsRiccatiSolution.concrete_re_lt_one
+#print axioms RoughHeston.IsRiccatiSolution.concrete_norm_lt_band
+#print axioms RoughHeston.exists_fractionalVolterraSolution_global_lipschitz
+#print axioms RoughHeston.exists_concrete_global_riccati_family
+#print axioms RoughHeston.concrete_call_fourier_integrable
+#print axioms RoughHeston.concrete_call_cutoff_error
+#print axioms RoughHeston.IsRiccatiSolution.exact_trapezoid_error
+#print axioms RoughHeston.concrete_original_dyadic_exact_quadrature_error
+#print axioms RoughHeston.concrete_source_rates
+#print axioms RoughHeston.exists_concrete_deterministic_obstruction
+#print axioms RoughHeston.exists_concrete_deterministic_cutoff
+
+#check RoughHeston.reference_fixed_mesh_not_integrable
+#check RoughHeston.no_integrable_majorant_after_fixed_level
+#check RoughHeston.domination_lintegral_eq_top

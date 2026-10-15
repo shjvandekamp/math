@@ -1,0 +1,9 @@
+module
+
+import RoughHeston.Tail
+
+#print axioms RoughHeston.callDenominator_ne_zero
+#print axioms RoughHeston.norm_callDenominator_le
+#print axioms RoughHeston.polynomial_eventually_ge_quadratic
+#print axioms RoughHeston.not_integrableOn_of_eventually_one_le
+#print axioms RoughHeston.not_integrableOn_callWeightedError_of_polynomial
