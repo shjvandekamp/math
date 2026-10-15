@@ -12,8 +12,9 @@ are finished.
 - Mathlib `d13f23b723b8a846827a245b89c10fc7d3f11612`.
 - Transitive revisions: [formal/lake-manifest.json](formal/lake-manifest.json).
 - Repository base: `fe3e100fa673a64037771e42d95b7718379a29bd`.
-- Python 3.8 or later; the exploration and certificate generator use only the
-  standard library. Git is needed for dependency revision checks.
+- Python 3.9 or later; the exploration and certificate generators use only the
+  standard library. The conic nullspace check uses `math.lcm`. Git is needed
+  for dependency revision checks.
 
 ## Reproduce
 
@@ -91,6 +92,25 @@ printed fresh theorem types and axiom output, and rejected forbidden proof
 constructs throughout the project proof sources.
 
 ## Trust and statement checks
+
+The active source-family continuation has a separate, smaller verifier:
+
+```sh
+LEAN_BIN=/path/to/lean-4.34.1/bin ./verify-source-family.sh --clean
+```
+
+It checks the exact general family, universal moment validity, the first-state
+lift lemmas, and the cardinality of the actual canonical index type. It does
+not assert source-family independence or validate the new external rank
+certificates. Its independent statement review is in
+[SOURCE24_FOUNDATIONS_AUDIT.md](reviews/SOURCE24_FOUNDATIONS_AUDIT.md).
+The original two-theorem `verify.sh` entry point is unchanged.
+
+The continuation verifier passed its clean eight-module rebuild and all
+28 axiom checks with exit zero. Evidence:
+[source-family-clean-build.log](formal/source-family-clean-build.log) and
+[source-family-axioms.txt](formal/source-family-axioms.txt). The only diagnostic
+was an existing stylistic linter warning in `BasisCertificate.lean`.
 
 Every audited declaration in both main checks depends only on
 `propext`, `Classical.choice`, and `Quot.sound`. There are no `sorry`, `admit`,

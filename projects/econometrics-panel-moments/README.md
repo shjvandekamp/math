@@ -38,6 +38,15 @@ fresh environment, prove the particular source family's basis property for
 arbitrary T, and refresh the novelty audit before seeking external review.
 These are future tasks, not additional verified claims.
 
+The active equation-(24) continuation has Lean-checked general validity,
+exact index counts and lift foundations, external exact full-rank checks at
+T=5,6, and a quadratic-size residue reduction checked by exact computation
+through T=8. The original conic witness
+has an exact T5 residue failure; a perturbed economic witness passes the finite
+checks. The all-T determinant proof remains open. See
+[the continuation note](research/SOURCE24_INDUCTION.md) and
+[the updated status](STATUS.md#active-continuation-equation-24-for-t--5).
+
 ## Verification
 
 After installing the pinned dependencies as described in

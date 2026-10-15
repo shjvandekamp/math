@@ -14,6 +14,48 @@ primary checkout are preserved. The GitHub snapshot contains the proved
 results, saved validation evidence, and the uncompleted next steps below.
 No journal submission or source-author contact has been made.
 
+## Active continuation: equation (24) for T >= 5
+
+The continuation is **in progress**. The accepted results below are unchanged;
+independence of the particular equation-(24) family for every T is not yet
+proved or Lean checked.
+
+The exact source index audit includes footnote 8's restriction: for three
+outcomes and j>=2 shared positions, the first j−1 shared positions must be
+0,...,j−2 in zero-based notation. The correct counts are 162 at T=5 and 606
+at T=6. Naively extending the old T4 generator without this restriction gives
+too many rows.
+
+New external exact computations in `exploration/general_source24.py` find
+full row rank at a model-consistent perturbed witness with G[2,2]=17:
+162 at T=5 (two primes) and 606 at T=6 (one prime), covering all initial
+states by exact nonzero row rescaling. The unperturbed power-of-two witness
+has smaller ranks modulo those primes. A separate rational calculation now
+certifies rank 51 and three independent integer nullvectors for its T5
+54-square residue matrix. This is an exceptional-witness failure, not a
+generic counterexample. These new certificates are not Lean proofs and are
+separate from the previously verified results.
+
+The structural route splits the source family into three shorter-panel
+indicator lifts and 3(T−2)(3T−8) new quotient classes. Its remaining matrix
+has size 9(T−2)(T−3), instead of exponentially many path columns.
+`exploration/source24_residue.py` matches the direct quotient ranks at
+T=4,5,6 and finds full residue rank at T=7,8 for the perturbed witness.
+It independently rechecks the saved T5 source minor. These are external
+exact calculations, not an arbitrary-T nonvanishing proof.
+
+The research argument and precise remaining nonvanishing problem are in
+[research/SOURCE24_INDUCTION.md](research/SOURCE24_INDUCTION.md). General
+permutation-moment validity, the exact canonical three-choice family and
+indicator-lift validity/independence now compile in separate Lean modules.
+The actual source index cardinality is also proved for every T>=3, including
+its recurrence and the totals 162 and 606. The dedicated verifier rebuilt
+all eight modules in this closure and checked 28 declarations; its axiom
+checks report only the three permitted foundational axioms. Evidence is in
+`formal/source-family-clean-build.log` and `formal/source-family-axioms.txt`,
+with independent statement review in `reviews/SOURCE24_FOUNDATIONS_AUDIT.md`.
+These results do not establish independence of the additional source rows.
+
 ## Finite theorem
 
 `PanelMoments.three_choice_four_period_generic_completeness` proves that the
@@ -78,11 +120,14 @@ silently assumed by either proved theorem, and no result below is claimed.
    been executed. See [VERIFICATION.md](VERIFICATION.md) for that distinction
    and the development host's resource limits.
 2. **Prove the particular source-family basis for arbitrary panel length.**
-   Formalize DHW equation (24)'s general-T indexing, validity and cardinality,
-   then establish independence on a specified nonempty generic economic
-   region. Combine that result with the proved moment-space dimension to
-   obtain spanning. The current finite source-family proof is for T=4; the
-   general-period dimension theorem alone does not supply independence.
+   The general-T indexing, validity and cardinality are now formalized.
+   Next prove the exact recursive index bijection and source-lift equality,
+   formalize the quotient/residue reduction, and prove nonvanishing of its
+   determinant on the economic family for every T. The remaining Schur
+   complement has size 18(T−3); its nonvanishing is not assumed by any
+   completed theorem. Combine independence with the proved moment-space
+   dimension to obtain spanning. The completed source-basis theorem remains
+   T=4; neither the dimension theorem nor the index count supplies independence.
 3. **Refresh prior art and obtain external research review.**
    Check later versions and resolve the inaccessible searches recorded in
    [NOVELTY.md](NOVELTY.md) where possible. Seek separate mathematical and
@@ -102,9 +147,9 @@ silently assumed by either proved theorem, and no result below is claimed.
 
 ## Resource record
 
-The final runs used one single-threaded compiler at a time, at `nice -n 19`,
+The accepted main-theorem runs used one single-threaded compiler at a time, at `nice -n 19`,
 with a 2500 MiB Lean cap under the host's 2.5 GiB aggregate allowance. Lake
-exited before each compiler. All project verification jobs are finished.
+exited before each compiler. Those verification jobs are finished.
 No unrelated process was stopped or modified.
 
 An earlier monolithic finite certificate attempt exceeded the host allowance

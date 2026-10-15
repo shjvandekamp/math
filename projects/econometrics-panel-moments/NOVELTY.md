@@ -75,3 +75,14 @@ supports the complete moment-space dimension formula for every T>=1.
 The finite case alone has unestablished publication value. Any broader rank
 formula still needs a separate independence proof for equation (24)'s particular
 family before claiming the entire arbitrary-horizon conjecture.
+
+
+## Continuation source check
+
+On 15 October 2026, the [arXiv record](https://arxiv.org/abs/2610.17104) still
+listed only v1. A bounded title/identifier search for an independence or
+completeness proof supplied no new matching primary proof. The new work
+therefore targets the same equation-(24) family, including footnote 8's
+restriction that first becomes nonvacuous for three choices at T=5.
+This refresh does not enlarge the earlier search's coverage or establish
+priority.

@@ -24,6 +24,10 @@ recorded in VERIFICATION.md.
 | Actual likelihood kernel and range equal the structural spaces | Homogeneous dehomogenization and positive path weights | Lean checked: HomogeneousEvaluation, HomogeneousLikelihood, StructuralMoments |
 | Explicit generic economic region for every T | Conic witness, polynomial nonvanishing factors and analyticity | Lean checked: EconomicFamily, GeneralConicWitness, StructuralGenericity |
 | Arbitrary-T actual moment dimension | Structural span theorem and economic region | Lean checked: StructuralCompleteness; StructuralCheck axiom audit passed |
+| General permutation moments and exact equation-(24) family validity | Actual transformed-chain marginal identities and canonical sorted orders | Lean checked: PermutationMoments, SourceFamily |
+| Indicator lifts preserve validity and independence | Conditioning on the first outcome and disjoint supports | Lean checked: MomentLifts; exact source-index lift identification remains open |
+| Exact canonical index count for every T>=3 | Forced-prefix shared-set classification and finite counting | Lean checked: SourceCounting; count alone does not establish independence |
+| Quotient reduction to a quadratic-size residue determinant | Conditional sums, line residues and local-pair coordinates | Mathematical derivation in research/SOURCE24_INDUCTION.md; not Lean checked |
 | Arbitrary-T independence of the source’s particular family | A separate argument beyond dimension | Open; not claimed by the structural theorem |
 
 No missing obligation is replaced by an assumption encoding its desired

@@ -1,0 +1,68 @@
+Checking PanelMoments.Model
+Checking PanelMoments.Polynomial
+Checking PanelMoments.SourceMoments
+Checking PanelMoments.BasisCertificate
+PanelMoments/BasisCertificate.lean:70:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Checking PanelMoments.PermutationMoments
+Checking PanelMoments.MomentLifts
+Checking PanelMoments.SourceFamily
+Checking PanelMoments.SourceCounting
+PanelMoments.PermutationMoments.sourceMoment_isMoment {Q N k : ℕ} {A : PanelMoments.Table Q}
+  (hA : PanelMoments.PositiveTable A) (r : PanelMoments.State Q) (hk : k ≤ N) (o₁ o₂ : Equiv.Perm (Fin (N + 1)))
+  (hlast₁ : o₁ (Fin.last N) = Fin.last N) (hlast₂ : o₂ (Fin.last N) = Fin.last N)
+  (hprefix : PanelMoments.PermutationMoments.SharedPrefix k o₁ o₂) (q : PanelMoments.Path Q (k + 1)) :
+  PanelMoments.IsMoment A (N + 1) r (PanelMoments.PermutationMoments.sourceMoment A r hk o₁ o₂ q)
+PanelMoments.SourceFamily.SourceIndex (N : ℕ) : Type
+PanelMoments.SourceFamily.sourceMoment_isMoment {N : ℕ} {A : PanelMoments.Table 2} (hA : PanelMoments.PositiveTable A)
+  (r : PanelMoments.State 2) (i : PanelMoments.SourceFamily.SourceIndex N) :
+  PanelMoments.IsMoment A (N + 1) r (PanelMoments.SourceFamily.sourceMoment A r i)
+PanelMoments.MomentLifts.firstStateLift_isMoment {Q T : ℕ} {A : PanelMoments.Table Q} (r a : PanelMoments.State Q)
+  {m : PanelMoments.Path Q T → ℝ} (hm : PanelMoments.IsMoment (PanelMoments.shift A) T a m) :
+  PanelMoments.IsMoment A (T + 1) r (PanelMoments.MomentLifts.firstStateLift a m)
+PanelMoments.MomentLifts.linearIndependent_firstStateLift.{u_1} {Q T : ℕ} {ι : Type u_1} [Fintype ι]
+  (v : PanelMoments.State Q → ι → PanelMoments.Path Q T → ℝ)
+  (hv : ∀ (a : PanelMoments.State Q), LinearIndependent ℝ (v a)) :
+  LinearIndependent ℝ fun ai => PanelMoments.MomentLifts.firstStateLift ai.1 (v ai.1 ai.2)
+PanelMoments.SourceCounting.card_sourceIndex_succ {N : ℕ} (hN : 2 ≤ N) :
+  Fintype.card (PanelMoments.SourceFamily.SourceIndex (N + 1)) =
+    3 * Fintype.card (PanelMoments.SourceFamily.SourceIndex N) + 3 * N * (3 * N - 2)
+PanelMoments.SourceCounting.five_period_source_count : Fintype.card (PanelMoments.SourceFamily.SourceIndex 4) = 162
+PanelMoments.SourceCounting.six_period_source_count : Fintype.card (PanelMoments.SourceFamily.SourceIndex 5) = 606
+'PanelMoments.PermutationMoments.likelihood_prefix_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PermutationMoments.scaleRatio_mul_likelihood' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PermutationMoments.sharedPrefix_weightedChain_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.PermutationMoments.contrast_isMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PermutationMoments.sourceMoment_isMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PermutationMoments.map_sourceNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceFamily.coreList_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceFamily.coreList_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceFamily.orders_sharedPrefix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceFamily.orders_diverge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceFamily.sourceNumerator_eq_permutationNumerator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceFamily.sourceMoment_eq_permutationMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceFamily.map_sourceNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceFamily.sourceMoment_isMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.MomentLifts.firstStateLift_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.MomentLifts.firstStateLift_isMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.MomentLifts.linearIndependent_firstStateLift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.sharedSet_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.card_le_one_of_no_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.card_sizedShared_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.card_secondSlot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.card_sourceIndex_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.card_sourceIndex_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.card_sourceIndex_add_choose_of_ge_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceCounting.card_sourceIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.card_sourceIndex_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.five_period_source_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceCounting.six_period_source_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+28 source-family foundation declarations use only permitted foundational axioms.
+Serial source-family foundation verification completed; arbitrary-T independence is not asserted.
