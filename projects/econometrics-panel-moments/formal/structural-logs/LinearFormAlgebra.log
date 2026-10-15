@@ -1,0 +1,15 @@
+PanelMoments/LinearFormAlgebra.lean:45:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/LinearFormAlgebra.lean:99:2: warning: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PanelMoments/LinearFormAlgebra.lean:105:2: warning: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PanelMoments/LinearFormAlgebra.lean:130:2: warning: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PanelMoments/LinearFormAlgebra.lean:136:2: warning: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`

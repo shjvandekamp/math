@@ -1,0 +1,19 @@
+import PanelMoments.SourceMoments
+import PanelMoments.SourceAnalytic
+import PanelMoments.SourceRestrictions
+
+#print axioms PanelMoments.chain4_first_marginal
+#print axioms PanelMoments.chain4_second_marginal
+#print axioms PanelMoments.scaleRatio_mul_likelihood
+#print axioms PanelMoments.sourceMoment_eq_numerator_div
+#print axioms PanelMoments.map_sourceNumerator
+#print axioms PanelMoments.sourceMoment_isMoment
+#print axioms PanelMoments.three_choice_source_count
+#print axioms PanelMoments.originalScale_congr
+#print axioms PanelMoments.transformedScale_congr
+#print axioms PanelMoments.sourceNumerator_congr
+#print axioms PanelMoments.analyticAt_sourceNumerator
+#print axioms PanelMoments.parameter_sourceNumerator_analytic
+#print axioms PanelMoments.pathAmplitude_four_eq_originalScale
+#print axioms PanelMoments.isMoment_reducedEval_zero
+#print axioms PanelMoments.sourceNumerator_reducedEval_zero

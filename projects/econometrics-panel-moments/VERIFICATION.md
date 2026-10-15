@@ -1,0 +1,133 @@
+# Verification evidence and reproduction
+
+**Both main theorems passed compilation, axiom inspection, independent
+compiled-statement audit, and a clean rebuild of their project source closure.**
+The finite and structural clean runs each exited zero. All verification jobs
+are finished.
+
+## Pinned environment
+
+- Lean `leanprover/lean4:v4.34.1`, runtime commit
+  `5045d0056413266e57c625dcd7c365b10e377c52`.
+- Mathlib `d13f23b723b8a846827a245b89c10fc7d3f11612`.
+- Transitive revisions: [formal/lake-manifest.json](formal/lake-manifest.json).
+- Repository base: `fe3e100fa673a64037771e42d95b7718379a29bd`.
+- Python 3.8 or later; the exploration and certificate generator use only the
+  standard library. Git is needed for dependency revision checks.
+
+## Reproduce
+
+Install the pinned Lean toolchain. On a fresh machine, materialize the saved
+dependency manifest and obtain the matching dependency artifacts first:
+
+```sh
+export PATH="/path/to/lean-4.34.1/bin:$PATH"
+cd formal
+lake resolve-deps
+lake exe cache get
+cd ..
+./verify.sh --clean
+```
+
+The bootstrap requires network access. `lake resolve-deps` uses the committed
+manifest; `lake update` is not the reproduction command because it updates
+dependency resolutions. The verifiers intentionally reject missing, modified,
+or incorrectly pinned dependency checkouts. They recompile project sources,
+while retaining the pinned dependencies' compiled cache.
+
+The ordinary cache bootstrap above may use parallel decompression. It is
+outside the source verifiers' single-thread resource guarantee. On the
+constrained development host, required missing artifacts were downloaded with
+`cache get-` and extracted with `leantar --jobs 1`; an ordinary parallel cache
+bootstrap was not run under that host's one-job allowance. Fresh-machine
+bootstrap was checked against the pinned Lake and Mathlib implementation,
+but a second complete dependency download was not performed.
+
+With dependencies already present, the one-command entry point is:
+
+```sh
+LEAN_BIN=/path/to/lean-4.34.1/bin ./verify.sh --clean
+```
+
+It runs `verify-finite.sh --clean` and then `verify-structural.sh`, sequentially.
+The finite clean phase removes `formal/.lake/build`, rebuilds its whole project
+closure, and audits the finite statement. The structural phase then recompiles
+its whole project closure and audits the structural statement. Individual
+component commands are also available:
+
+```sh
+LEAN_BIN=/path/to/lean-4.34.1/bin ./verify-finite.sh --clean
+LEAN_BIN=/path/to/lean-4.34.1/bin ./verify-structural.sh --clean
+```
+
+Standalone structural cleaning removes only the outputs of its 24-module
+project closure; it preserves the separate finite certificate outputs. The
+shared foundations are recompiled. All compiler invocations are synchronous,
+`nice -n 19`, `-j 1`, and `-M 2500`; Lake resolves the environment once and exits
+before compilation. `LEAN_MEMORY_MB` permits an explicit alternative cap.
+The thread-related numerical-library environment variables are set to one.
+
+## Successful runs
+
+| Target | Source rebuild evidence | Axiom evidence | Independent statement audit |
+|---|---|---|---|
+| Four-period source basis | [finite-clean-build.log](formal/finite-clean-build.log), 72 project modules, exit 0 | [main-axioms.txt](formal/main-axioms.txt), 13 declarations | [FINITE_STATEMENT_AUDIT.md](reviews/FINITE_STATEMENT_AUDIT.md), PASS |
+| Arbitrary-period dimension | [structural-clean-build.log](formal/structural-clean-build.log), 24 project modules, exit 0 | [structural-axioms.txt](formal/structural-axioms.txt), 12 declarations | [STRUCTURAL_STATEMENT_AUDIT.md](reviews/STRUCTURAL_STATEMENT_AUDIT.md), PASS |
+
+The finite run used the former finite-only `./verify.sh --clean`; that exact
+finite workflow is now `verify-finite.sh` (only its usage text changed).
+The structural run used `./verify-structural.sh --clean` after deleting all
+outputs in its project closure. The combined wrapper was syntax checked and
+independently reviewed; the two successful component runs were not repeated
+as one combined invocation. No Lean theorem sources changed after these runs.
+
+The finite verifier regenerated the exact coefficient/minor certificate and
+compared it byte for byte with the saved data. It checked all generated Lean
+files, then compiled the primitives, 39 scalar proof chunks and final theorem.
+The structural verifier compiled the graded algebra, explicit separators,
+block induction, actual likelihood bridge, economic genericity, and final
+dimension theorem. Both checked dependency revisions and tracked changes,
+printed fresh theorem types and axiom output, and rejected forbidden proof
+constructs throughout the project proof sources.
+
+## Trust and statement checks
+
+Every audited declaration in both main checks depends only on
+`propext`, `Classical.choice`, and `Quot.sound`. There are no `sorry`, `admit`,
+`sorryAx`, custom axioms, or native computation oracles in the project proof
+sources. Generated numeric data are untrusted inputs until their formula and
+right-inverse identities are checked by the kernel; every such finite
+certificate used in the theorem passed.
+
+The independent finite audit maps the 33 source indices, 81 paths, all three
+initial states, positive-effect quantifier, economic normalizations, column
+scaling, explicit minors and actual moment space. The independent structural
+audit maps the unrestricted-effect moment space, positive path amplitudes,
+fixed-degree dehomogenization, closed interpolation induction, natural-number
+arithmetic, parameter domain, and explicit nonvacuous generic region. Neither
+audit establishes publication priority or general-period source-family
+independence. Their full reports retain the review-time context.
+
+The external exact certificate SHA256 is
+`1f314f167910b7d9a65e3567ddda625a6f6b8a839e79ffe0cdf84385c8945ca5`.
+The earlier coefficient minor is discovery evidence; the formal finite proof
+uses independently kernel-checked evaluation minors and modular inverse
+certificates. See [exploration/LOG.md](exploration/LOG.md).
+
+## Earlier resource failures and narrower checks
+
+An earlier monolithic Witness attempt was stopped after exceeding the host's
+resource allowance. A separate early interpolation attempt with a 768 MiB
+Lean cap failed before source diagnostics. Neither failed attempt is used as
+acceptance evidence. The replacement certificate chunks and repaired
+interpolation modules passed the final source rebuilds above.
+
+The host eventually allowed one single-threaded job under a 2.5 GiB aggregate
+ceiling. The successful finite assembly used a 2500 MiB Lean cap, with maximum
+RSS 2,513,960,960 bytes and footprint 410,324,096 bytes. MainCheck succeeded
+with maximum RSS 2,379,530,240 bytes. RSS and footprint are distinct metrics.
+No increase beyond the host's allowance was made by this project.
+
+`formal/verify-foundations.sh` and `formal/foundation-axioms.txt` retain the
+older four-module foundation check. That narrower check is superseded for
+main-theorem acceptance by the two complete source rebuilds above.

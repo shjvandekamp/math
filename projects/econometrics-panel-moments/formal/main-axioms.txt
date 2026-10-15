@@ -1,0 +1,23 @@
+PanelMoments.three_choice_four_period_generic_completeness :
+  PanelMoments.genericEconomicRegion.Nonempty ∧
+    IsOpen PanelMoments.genericEconomicRegion ∧
+      Dense PanelMoments.genericEconomicRegion ∧
+        ∀ θ ∈ PanelMoments.genericEconomicRegion,
+          ∀ (r : PanelMoments.State 2),
+            LinearIndependent ℝ (PanelMoments.sourceMoment (PanelMoments.parameterTable θ) r) ∧
+              PanelMoments.momentSubmodule (PanelMoments.parameterTable θ) 4 r =
+                  Submodule.span ℝ (Set.range (PanelMoments.sourceMoment (PanelMoments.parameterTable θ) r)) ∧
+                Module.finrank ℝ ↥(PanelMoments.momentSubmodule (PanelMoments.parameterTable θ) 4 r) = 33
+'PanelMoments.three_choice_four_period_generic_completeness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.sourceMoment_isMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.isMoment_iff_coefficient_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.isMoment_iff_additive_effects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.parameterWitness_table' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.Witness.eval_clearedPathPoly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.Witness.sourceRows_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.Witness.evaluationMinor_real_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.Witness.sourceMinor_real_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.exceptionalDeterminant_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.genericEconomicRegion_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.source_basis_of_minors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.economic_source_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
