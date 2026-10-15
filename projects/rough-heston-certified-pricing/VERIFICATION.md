@@ -2,32 +2,44 @@
 
 ## Result
 
-`./verify.sh` completed with **exit status 0** after clearing and rebuilding this project's generated proof modules. It compiled Weights, Adams, Exponent, Tail, Payoff and Main in dependency order, then ran AxiomAudit. One harmless tactic-style linter warning remains in Adams.lean; there are no proof errors.
+`./verify.sh` completed with **exit status 0** after clearing this project's generated outputs. It rebuilt 40 modules including the public library entrypoint, in their actual local dependency order, then ran AxiomAudit for 43 headline declarations. One pre-existing tactic-style linter warning remains in Adams.lean; there are no proof errors.
 
-Actual compiler: Lean 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release. Mathlib: d13f23b723b8a846827a245b89c10fc7d3f11612. All transitive revisions are pinned in formal/lake-manifest.json.
+Compiler: Lean 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release. Mathlib: d13f23b723b8a846827a245b89c10fc7d3f11612. Transitive revisions remain pinned in formal/lake-manifest.json.
 
-## Checked claims
+## Checked headline and scope
 
-The combined theorem is a deterministic all-finite-mesh obstruction for the explicit reference PECE recurrence. Concrete Gamma weights, recurrence evaluation identities, exact polynomial degrees, positive leading exponent coefficient, the actual vanilla-call Fourier integral at K=1/R=-2, analytic nonintegrability, dyadic levels and the extended-real supremum are checked. Main's packaged tail theorems use zero drift; Exponent also checks arbitrary affine drift and real contour parameter.
+`exists_concrete_deterministic_obstruction` constructs an actual global Riccati solution family for the concrete coefficients, derives the source's nodal and pure exact-node trapezoidal rates q=rT=alpha on every original dyadic level, proves a global exponential bound, and proves the domination function at pG=alpha has infinite integral for every original positive base mesh. Its rough range is 1/2<alpha<1, with arbitrary finite T>0. No bounded comparison, existence, invariant region or regularity premise is left in this concrete theorem.
 
-`certificates/axioms.txt` records the full `#print axioms` output for 13 declarations, including `reference_genuine_call_not_integrable`, `domination_lintegral_eq_top`, `no_integrable_majorant_after_fixed_level`, and both explicit example declarations. Every list contains only:
+`exists_concrete_deterministic_cutoff` constructs an actual family, proves absolute integrability of its genuine strike-one call Fourier integrand, and proves the cutoff/time error bound U*Cphi*delta^alpha/2+B/U on all refinements of a validated seed for each U>0. Measurability and integrability are derived from the equation and uniform approximation. It leaves the finite Fourier integral unevaluated.
+
+These statements are deterministic. The exponential is not identified with a rough-Heston probability transform, and the integral is not identified with an expected discounted payoff. The earlier general-coefficient tail obstruction and finite-band approximation theorems remain available with their explicit hypotheses. The new concrete construction uses gamma=nu=theta=V0=1, rho=-1/2, R=-2 and zero affine drift. Separate phase identities cover the exp(-R*m) scaling; the assembled concrete cutoff statement does not insert drift or discounting.
+
+## Dependency evidence
+
+`certificates/axioms.txt` contains the actual `#print axioms` output for 43 declarations, including both new constructed headline theorems, global existence, invariant bounds, actual weight/consistency estimates, original-level rates, exact-node quadrature, semigroup/Fubini, frequency continuity and actual Fourier integrability. All lists contain only:
 
 ```text
 propext, Classical.choice, Quot.sound
 ```
 
-No sorry, admit, sorryAx, new axiom, unsafe proof, native_decide, numerical oracle, or structure field assuming the desired conclusion occurs in the project proof sources. The generic bound on the comparison function is an explicit hypothesis of the deterministic theorem, not a claimed derivation of the model transform.
+There is no sorry, admit, sorryAx, substantive new axiom, unsafe proof, native_decide, external oracle or solver field assuming the desired conclusion in the project sources. `ConcreteSourceRates` is an explicit proposition proved as a conclusion about the actual recurrence; it is not supplied as an assumption. The generic preliminary estimates retain their stated hypotheses, which the concrete chain discharges.
 
-## Reproduction and resource behavior
+## Reproduction and resources
 
-From the project root run `./verify.sh`. On this Mac it selects the existing pinned runtime under /Volumes/2tb/math/.research-cache/toolchains. On another machine, an installed elan/Lake environment must supply the version in lean-toolchain. Missing dependencies are restored with Lake and the official Mathlib cache. The script checks Mathlib HEAD, rejects forbidden proof constructs, rebuilds project outputs, and records the compiler identity, clean log and axiom output.
+From the project root run `./verify.sh`. It selects the existing pinned runtime on this Mac, or relies on an appropriate elan environment elsewhere; verifies Mathlib HEAD; scans for forbidden proof constructs; derives the project import order from formal/RoughHeston.lean; rebuilds the reachable proof modules and entrypoint; and records the axiom audit. It deletes only this project's generated outputs. The generated module list is formal/.lake/build/project-modules.txt.
 
-Proof commands use `python3 bounded_lean.py -o .lake/build/lib/lean/RoughHeston/<Module>.olean RoughHeston/<Module>.lean`; the wrapper resolves LEAN_PATH, then invokes `nice -n 19 lean -j1`, serialized by a project-local lock. It monitors only its own child process tree and stops that job above 2 GiB RSS. The largest compiler-tree peak in the successful clean run was 1,474,240 KiB (about 1.41 GiB). Dependencies are isolated APFS copies, not writable links to other research projects.
+Each compiler call goes through `bounded_lean.py`: nice level 19, one Lean thread, a shared compilation lock and a 2 GiB process-tree RSS limit. The largest process-tree peak in the complete successful run was **1,512,816 KiB (about 1.44 GiB)**. Dependencies are isolated APFS copies. Targeted cache additions supplied the Beta/Gamma and fixed-point dependencies; pinned revisions did not change.
+
+Evidence is in certificates/clean-build.log, certificates/axioms.txt and certificates/toolchain.txt. Numerical discovery output is illustrative and is not used as a certificate.
 
 ## Independent statement audit
 
-See STATEMENT_AUDIT.md. The independent reviewer checked the informal/formal quantifiers, concrete weights and endpoints, one-correction algorithm, bounded-comparison qualification, true rational call factor, all-level supremum, and distinction between modulus and real-part errors. Its actionable scope/documentation findings were resolved. The primary agent also reviewed the delegated proof code and the additional payoff integral proof. Agent agreement is not proof; successful kernel checks and the inspected statements provide the formal evidence.
+STATEMENT_AUDIT.md records the independent reviews. Two material integration findings were resolved: the actual band-integral theorem now proves integrability rather than only bounding a totalized integral of a difference; and the source's exact-node time-integration premise is proved separately from total numerical exponent error, with strictly positive source constants. The global first-contact proof retains full history, the cutoff image bound is 2Q, and no derivative of the fractional solution is assumed.
 
-## What this does not verify
+Review agreement is not a proof. The compiled declarations, their dependency closures and the inspected quantifiers are the evidence.
 
-The authors' unpublished executable, floating-point rounding, stochastic rough-Heston existence, model-to-transform identity, moment admissibility, Fourier pricing inversion, full nodal/time-integration rates q and rT, a globally justified repair, quadrature and final option-price error are not in this dependency chain. The nondegenerate moment example in MANUSCRIPT.md uses external literature. No financial completion or fully established conditional-conjecture counterexample is claimed.
+## Not checked as a financial theorem
+
+Still outside the dependency chain: stochastic rough-Heston model existence/nonnegative variance, correlated-driver filtration integration, affine transform and moment identities, R=-2 moment admissibility, Fourier pricing inversion, evaluated numerical mesh/cutoff certificates, quadrature, rounding and the final option-price error. The authors' unavailable executable is not certified; the recurrence is the explicitly reconstructed standard single-correction reference scheme.
+
+The external mathfin source audit in formal/INFRASTRUCTURE.md identifies useful Ito integration infrastructure, but those sources were neither imported nor kernel-checked in this environment. Their different toolchain and dependency pins require an isolated compatibility audit. No complete financial counterexample, completed pricing project or VIX extension is claimed.

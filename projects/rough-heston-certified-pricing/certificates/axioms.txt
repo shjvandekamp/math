@@ -13,6 +13,38 @@
 'RoughHeston.domination_lintegral_eq_top' depends on axioms: [propext, Classical.choice, Quot.sound]
 'RoughHeston.concrete_example_not_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
 'RoughHeston.concrete_example_against_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.predictorWeight_sum_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.correctorWeight_sum_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.validated_continuation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.adams_consistency' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_fixed_horizon_nodal_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.explicit_continuation_mesh_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_dyadic_band_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_dyadic_band_transform_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_original_dyadic_time_weighted_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_original_dyadic_transform_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_riccatiSolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.unique_in_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.localExample_validated_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.fractionalIntegral_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.norm_exp_exponent_le_of_re_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.continuousOn_exactRiccatiTransform_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.call_cutoff_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_dyadic_call_band_difference_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.fractionalIntegral_littleHolder_left_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.concrete_re_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.concrete_norm_lt_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_fractionalVolterraSolution_global_lipschitz' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RoughHeston.exists_concrete_global_riccati_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_call_fourier_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_call_cutoff_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.exact_trapezoid_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_original_dyadic_exact_quadrature_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_source_rates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_concrete_deterministic_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_concrete_deterministic_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
 RoughHeston.reference_fixed_mesh_not_integrable (alpha T gamma rho nu theta V0 : ℝ) (M : ℕ) (Φ : ℝ → ℂ) (B : ℝ)
   (ha : 0 < alpha) (hT : 0 < T) (hg : 0 < gamma) (hn : 0 < nu) (hV : 0 < V0) (hM : 0 < M)
   (hbounded : ∀ (u : ℝ), ‖Φ u‖ ≤ B) :
@@ -30,4 +62,4 @@ RoughHeston.domination_lintegral_eq_top (alpha T gamma rho nu theta V0 p : ℝ) 
   (ha : 0 < alpha) (hT : 0 < T) (hg : 0 < gamma) (hn : 0 < nu) (hV : 0 < V0) (hM : 0 < M0)
   (hbounded : ∀ (u : ℝ), ‖Φ u‖ ≤ B) :
   ∫⁻ (u : ℝ) in Set.Ioi 0, RoughHeston.domination alpha T gamma rho nu theta V0 p M0 Φ u = ⊤
-Lean check exit=0; measured peak process-tree RSS=1405536 KiB
+Lean check exit=0; measured peak process-tree RSS=1363840 KiB

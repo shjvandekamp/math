@@ -8,12 +8,16 @@
 4. Dastgerdi–Bastani (2020), SIAM J. Financial Math. 11(4), 1063–1097, [DOI 10.1137/19M1269324](https://epubs.siam.org/doi/abs/10.1137/19M1269324). Publisher abstract identifies Adams stability/convergence problems. Search-indexed manuscript text mentions high-frequency failures and Appendix B conditional stability, but full text was inaccessible; detailed claims require verification.
 5. [RIDGE, arXiv:2607.25199v2](https://arxiv.org/html/2607.25199v2), 2026-07-30: quadratic implicit corrector as stabilization. Generic implicit/adaptive repair is not new.
 6. El Euch–Rosenbaum, [arXiv:1609.02108v1](https://arxiv.org/html/1609.02108v1), §5.1 Eqs. (26)–(27): primary recovery of the standard single-correction Adams recurrence. The main 2026 paper cites this implementation reference but does not publish its own weights/correction count.
+7. Tuan–Trinh, [arXiv:1712.02921v2](https://arxiv.org/html/1712.02921v2), 2018-01-14, Theorem 1 and the representation used in the proof of Theorem 3: fractional Lyapunov and extremum arguments for functions in the fractional-integral range. These are supporting analysis, not a proposed novel maximum principle. The source was read online during this continuation; it is not in the PDF snapshot manifest.
+8. Li–Liu, [arXiv:1612.05103v2](https://arxiv.org/html/1612.05103v2), generalized Caputo derivatives and comparison principles; Remark 6 emphasizes memory under continuation. This supports the need to preserve the old history. Read online during this continuation, not added to the PDF snapshot manifest.
 
 ## Precise checked contribution and novelty limits
 
 For the explicitly specified standard single-correction reference recurrence and the target paper's specified trapezoidal exponent, the Lean project proves exact degree 4^M and positive leading real coefficient of the final node for every finite M; derives degree 2·4^M and positive leading coefficient of the real exponent; deduces nonintegrability of the call-weighted modulus error against a bounded transform. This establishes an all-finite-mesh deterministic obstruction, including every proposed fixed refinement threshold.
 
 No matching public resolution found as of 2026-10-15 in the searches performed. This is a provisional novelty assessment, not proof of novelty. We do not claim novelty for high-frequency Adams instability, adaptive refinement, implicit correction, Fourier truncation, or kernel weak-error bounds.
+
+The new checked chain additionally constructs the actual global deterministic Riccati family for the concrete nondegenerate coefficients, derives its global exponential bound, and proves the source's nodal and exact-node time-integration rates q=rT=alpha on every original level. Thus the obstruction now applies to that actual deterministic exponential, not merely an arbitrary bounded comparison. A cutoff-and-time-discretization repair for its genuine call Fourier integral is proved, with all required integrability facts. No independent novelty claim is made for Hölder consistency, weighted contraction, fractional maximum principles, semigroups, cutoff existence or Fourier truncation. The substantial proposed contribution remains the exact all-finite-mesh mechanism and its rigorously delimited implementation consequence and repair. Stochastic pricing remains incomplete.
 
 ## Logical scope
 

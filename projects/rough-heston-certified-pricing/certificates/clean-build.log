@@ -1,12 +1,132 @@
-Lean check exit=0; measured peak process-tree RSS=1454064 KiB
 RoughHeston/Adams.lean:163:61: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-Lean check exit=0; measured peak process-tree RSS=956992 KiB
-Lean check exit=0; measured peak process-tree RSS=1468784 KiB
-Lean check exit=0; measured peak process-tree RSS=1392096 KiB
+Lean check exit=0; measured peak process-tree RSS=920336 KiB
+Lean check exit=0; measured peak process-tree RSS=1432912 KiB
+Lean check exit=0; measured peak process-tree RSS=1472768 KiB
+Lean check exit=0; measured peak process-tree RSS=1396720 KiB
 'RoughHeston.integrable_callFourierIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
 'RoughHeston.vanillaCall_fourier_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1470560 KiB
+Lean check exit=0; measured peak process-tree RSS=1442880 KiB
+'RoughHeston.intervalIntegrable_fractionalKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.integral_fractionalKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.norm_fractionalIntegral_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.norm_fractionalIntegral_sub_le_on' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1493552 KiB
+Lean check exit=0; measured peak process-tree RSS=1475232 KiB
+Lean check exit=0; measured peak process-tree RSS=1480624 KiB
+Lean check exit=0; measured peak process-tree RSS=1461344 KiB
+Lean check exit=0; measured peak process-tree RSS=1473520 KiB
+Lean check exit=0; measured peak process-tree RSS=1488528 KiB
+Lean check exit=0; measured peak process-tree RSS=1441312 KiB
+Lean check exit=0; measured peak process-tree RSS=1437536 KiB
+'RoughHeston.predictorWeight_eq_kernel_cell' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.predictor_consistency' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.corrector_productIntegration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.corrector_consistency' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1512816 KiB
+Lean check exit=0; measured peak process-tree RSS=1458976 KiB
+'RoughHeston.integrableOn_laplaceFractionalKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.intervalIntegrable_weightedFractionalKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.normalized_weighted_fractional_integral_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1401360 KiB
+'RoughHeston.predictorWeight_exp_row_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.correctorWeight_exp_row_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.correctorWeight_exp_growth_history_row_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1443472 KiB
+Lean check exit=0; measured peak process-tree RSS=1442848 KiB
+'RoughHeston.continuationMeshThreshold_conditions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.explicit_continuation_mesh_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1471152 KiB
+Lean check exit=0; measured peak process-tree RSS=1449088 KiB
+Lean check exit=0; measured peak process-tree RSS=1454496 KiB
+Lean check exit=0; measured peak process-tree RSS=1455504 KiB
+'RoughHeston.finite_prefix_rate_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_original_dyadic_tail_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_original_dyadic_nodal_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_original_dyadic_time_weighted_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_original_dyadic_transform_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1481456 KiB
+'RoughHeston.fractionalVolterraMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_fractionalVolterraSolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_riccatiSolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.unique_in_ball' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_riccatiSolution_on_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1445328 KiB
+'RoughHeston.localExample_kernel_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.localExample_solution_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.localExample_validated_dyadic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.localExample_validated_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1431648 KiB
+'RoughHeston.intervalIntegrable_fractionalKernel_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.complementary_fractionalKernel_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.fractionalIntegral_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.fractionalIntegral_complementary' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1447264 KiB
+'RoughHeston.IsRiccatiSolution.integral_force_eq_complementary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RoughHeston.IsRiccatiSolution.exactExponent_eq_complementary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RoughHeston.IsRiccatiSolution.norm_exp_exponent_le_of_re_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1466480 KiB
+'RoughHeston.riccati_band_uniform_exponent_and_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.continuousOn_exactRiccatiExponent_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.continuousOn_exactRiccatiTransform_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1455040 KiB
+'RoughHeston.call_cutoff_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_dyadic_call_band_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.riccati_dyadic_call_band_difference_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1485136 KiB
+'RoughHeston.re_fractionalIntegral_sub_ge_at_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.re_complementary_fractionalIntegral_sub_ge_at_max' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RoughHeston.rpow_increment_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.re_force_pos_at_positive_max_of_littleHolder' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1471920 KiB
+'RoughHeston.fractionalIntegral_littleHolder_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.fractionalIntegral_littleHolder_left_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1426032 KiB
+'RoughHeston.exists_first_barrier_contact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.concrete_re_lt_one_of_littleHolder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RoughHeston.fractionalIntegral_const_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.littleHolder_const_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.concrete_norm_lt_band_of_littleHolder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RoughHeston.fractionalEquation_littleHolder_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.re_force_pos_at_positive_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.concrete_re_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.IsRiccatiSolution.concrete_norm_lt_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1475520 KiB
+'RoughHeston.exists_fractionalVolterraSolution_global_lipschitz' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1478928 KiB
+'RoughHeston.squareClamp_norm_sub_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.cutoffRiccati_norm_sub_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.cutoffRiccati_eq_of_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
 Lean check exit=0; measured peak process-tree RSS=1470368 KiB
-Lean check exit=0; measured peak process-tree RSS=1474240 KiB
+'RoughHeston.exists_concrete_global_riccati_of_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_concrete_global_riccati' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_concrete_global_riccati_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1396480 KiB
+'RoughHeston.norm_concreteRiccatiTransform_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.continuousOn_concreteRiccatiTransform_Ioi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_call_fourier_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_call_cutoff_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1480832 KiB
+'RoughHeston.IsRiccatiSolution.exact_trapezoid_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_original_dyadic_exact_quadrature_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1488864 KiB
+'RoughHeston.concrete_source_rates' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_concrete_deterministic_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.exists_concrete_deterministic_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1475024 KiB
+Lean check exit=0; measured peak process-tree RSS=1419648 KiB
 Clean verification exit status: 0
