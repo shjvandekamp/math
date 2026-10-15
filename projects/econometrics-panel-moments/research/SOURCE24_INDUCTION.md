@@ -1046,12 +1046,256 @@ the points defining \(c_{tA}\) stay fixed. Dividing (H16) by
 Here \(\ell\) is an arbitrary linear form, giving a deletion-word
 family with three additional common-word columns. This is not the
 previous auxiliary family: for the first shared block in the tail,
-that family would use a different move-first correction. Independence
-of (H17), and compatibility of this further degeneration with the six
-already chosen pivots, have not been proved. Simple pole removal alone
-also does not resolve it: taking \(q_{tA}\) proportional to
+that family would use a different move-first correction. The following
+induction proves its generic independence. Simple pole removal
+alone does not resolve it: taking \(q_{tA}\) proportional to
 \(L_{tA}\) removes its shared pole while leaving a linear-form
 multiple of a deleted product.
+
+### Deletion-word induction and incoming-rank corollary
+
+**Status: independently audited paper proof; not formalized in Lean.** The argument
+below uses the saved exact finite-field minor only as a characteristic-zero
+base case. Its induction is symbolic. It does not prove the remaining
+\(B_0O^{-1}\) transversality, a full regular determinant, or independence
+of the specified source family for every length.
+
+Renumber the blocks \(1,\ldots,k\), and let \(\mathcal D_k\) be
+the scalar cross-block double-residue matrix of
+\[
+ \mathcal R_k(\ell,q)
+ =\ell(X)e_0K_1\cdots K_ke_2
+  -\sum_{t=1}^k\sum_{A=0}^2q_{tA}(X)\frac{X_A}{L_{tA}}
+                  e_0P^{\widehat t}e_2. \tag{D1}
+\]
+All \(\ell,q_{tA}\) are arbitrary homogeneous linear forms, so
+there are \(9k+3\) constant real coefficients. Every deleted word
+\(P^{\widehat t}\) is in ascending order. The parameters are one
+common normalized matrix \(G\), with first column all ones, and
+independent time factors \(A_t=G\operatorname{diag}(1,u_t,v_t)\).
+The conclusion is that \(\mathcal D_k\) has generic full
+column rank for every \(k\ge4\).
+
+All genericity statements refer to nonzero polynomials on this same
+parameter space. We impose distinct old lines, no unintended triple
+intersections, nonzero effect coordinates at cross-block intersections,
+and distinct old intersections with \(X_0=0\). We also require
+\(G\) invertible, its entries nonzero, and
+\(\det G_{\{1,2\},\{1,2\}}\ne0\). These are open conditions;
+the degeneration used below is allowed to leave the line-geometry open
+set at its limiting parameter, while all matrices used for the induction
+extend analytically in the specified residue coordinates.
+
+First, rows involving \(L_{11}\) or \(L_{12}\) see only the
+corresponding shared-block term \(q_{1c}X_c/L_{1c}\), \(c=1,2\).
+Every other word starts block one in state zero or omits that block.
+For each \(c\), use its intersections with \(L_{20}\) and
+\(L_{30}\). The residues of \((K_2\cdots K_k)_{02}\) there
+are generically nonzero: they contain respectively
+\(v_{20}K_3\cdots K_ke_2\) and
+\((K_2)_{00}v_{30}K_4\cdots K_ke_2\).
+The two distinct points detect a linear form restricted to
+\(L_{1c}\). Consequently four boundary pivots reduce any residue
+relation to
+\[
+ q_{11}=aL_{11},\qquad q_{12}=bL_{12}, \tag{D2}
+\]
+where \(a,b\) are constants. Equivalently, use the coefficient
+basis \(X_1,X_2,L_{1c}\) for each of these two forms. Its change
+of coordinates is invertible because the coefficient of \(X_0\)
+in \(L_{1c}\) is one. The four boundary rows are identically
+zero on the remaining columns. No effect-dependent column operation
+is used.
+
+Now set
+\[
+ (u_1,v_1)=\delta(u_*,v_*),\quad
+ h=(0,G_{01}u_*X_1,G_{02}v_*X_2),\quad l=h_1+h_2,
+ \quad s=aX_1+bX_2,
+\]
+so \(v_{10}=X_0e_0+\delta h\) and
+\(L_{10}=X_0+\delta l\). Write
+\(P=K_2\cdots K_k\) and
+\(Q=\sum_{t\ge2,A}q_{tA}X_A/L_{tA}\,P^{\widehat t}_{\rm tail}\).
+After (D2), the remaining row before taking its final component is
+\[
+ \frac{(X_0e_0+\delta h)(\ell P-Q)
+              -(q_{10}X_0+sL_{10})e_0P}{L_{10}}. \tag{D3}
+\]
+Use the invertible constant coefficient change
+\(\ell'=\ell-q_{10}-s\). At \(\delta=0\), (D3) is
+\(e_0(\ell'P-Q)\): the smaller deletion family on the tail,
+plus five zero columns parametrized by \(q_{10},a,b\).
+If \(\mathcal D_{k-1}\) has full rank, this is exactly the
+constant kernel of the leading residue matrix. On that kernel,
+(D3) is exactly
+\[
+ \frac{\delta}{L_{10}}
+       \big[(q_{10}+s)h-sl e_0\big]P. \tag{D4}
+\]
+
+Choose the following five residue rows in addition to any full smaller
+deletion minor:
+\[
+ \begin{split}
+ &L_{10}\cap L_{20},\quad L_{10}\cap L_{21},\quad
+ L_{10}\cap L_{22},\quad L_{10}\cap L_{31},\qquad
+ L_{21}\cap L_{31}. \tag{D5}
+ \end{split}
+\]
+They are zero on the entire leading smaller family. The first four
+are new-line rows. For the fifth, both first-two-tail-block states
+are nonzero. A smaller common word starts block two in state zero;
+a deletion/shared term either also does so, or deletes block two
+and starts block three in state zero. Thus no smaller deletion column
+has this double residue.
+
+Here are the regularity and normalization details for this first-jet
+argument. Choose projective representatives with \(X_1=1\) in
+(D5); this is possible generically and amounts to nonzero, parameter-only
+row scalings relative to homogeneous cross-product representatives.
+All old-tail rows have \(X_0\ne0\), so (D3) is analytic there.
+On a new-line row, multiply by \(L_{10}\) before evaluating its
+old-line residue. The numerator in (D3) has zero constant term at
+\(L_{10}=X_0=0\), and all other old denominators are nonzero at
+the selected point. Thus these rows also extend analytically and
+have zero constant coefficient. The canceled lines \(L_{11},L_{12}\)
+do not occur in (D3), so their coalescence with \(X_0\) produces
+no additional pole. In (D4) the explicit factor \(\delta\) means
+the first coefficient is evaluated at \(X_0=0\); motion of the
+cross-point contributes only at higher order. The four earlier boundary
+pivots are used at finite generic \(\delta\), and need no regular
+limit of their own.
+
+Put \(p=(q_{10}+s)|_{X_0=0}\), a binary linear form. On the
+first four rows of (D5), the kernel derivative is the indicated
+old-line residue on \(X_0=0\) of
+\[
+ p\big[h_1P_{12}+h_2P_{22}\big]-slP_{02}. \tag{D6}
+\]
+At \(L_{21}\) and \(L_{22}\), only the corresponding first
+term has a pole; their nonzero factors force \(p\) to vanish
+at two distinct axis points, hence \(p=0\). At \(L_{20}\)
+and then \(L_{31}\), the remaining expression forces \(s\)
+to vanish at two distinct points, hence \(s=0\). The latter
+pole is state one, not state zero: after the first tail transition,
+state zero is unreachable on this axis. Explicitly its residue in
+\(P_{02}\) contains
+\((K_2)_{01}v_{31}K_4\cdots K_ke_2\), which is nonzero
+generically. The first four kernel-jet rows therefore have rank four,
+with remaining kernel
+\[
+ q_{10}=cX_0,\qquad a=b=0. \tag{D7}
+\]
+All nonzero factors just used are explicit: \(h_1,h_2\), the two
+selected values of \(l\), nonzero transition entries, and propagated
+binary zero-sum residues. On \(X_0=0\), the nonzero binary minor
+of \(G\) makes every subsequent binary kernel invertible on its
+one-dimensional zero-sum subspace. The values of \(l\) can be
+kept nonzero by choosing the positive ratio \(u_*/v_*\) away
+from finitely many exceptional values.
+
+For (D7), (D4) equals
+\(c\delta X_0/L_{10}\,hP\), so its first derivative on an
+old-tail row is \(c hP\). On the fifth row of (D5), its residue
+is
+\[
+ c\,h_1 A_2(1,1)X_1\,
+                (v_{31}K_4\cdots K_k)_2
+       \big|_{L_{21}=L_{31}=0}. \tag{D8}
+\]
+This is generically nonzero. The first factors are nonzero by the
+cross-point assumptions. The nonzero zero-sum row \(v_{31}\)
+survives the invertible intermediate kernels. The final block \(k\)
+is distinct from blocks two and three when \(k\ge5\); varying
+its two time factors detects any such nonzero row. Indeed its output-two
+entries are nonzero multiples of three distinct reciprocal linear
+denominators in those factors. A rational linear combination of them
+cannot vanish identically unless all coefficients vanish, as is seen
+by isolating each denominator pole. This proves nonvanishing on the
+same common-\(G\) parameter space, rather than on a space of freely
+varying transition matrices.
+
+Order the five kernel coordinates by the two coefficients of \(p\),
+the two coefficients of \(s\), and the coefficient of \(X_0\)
+in \(q_{10}\). The rows \(L_{21},L_{22}\) first give an
+invertible two-by-two evaluation block for \(p\). After eliminating
+them, rows \(L_{20},L_{31}\) give such a block for \(s\).
+The last diagonal entry is (D8). Hence the five-by-five first-kernel
+matrix is invertible. The selected full reduced minor has leading
+coefficient
+\[
+ \delta^5\det(\text{smaller deletion minor})
+                   \det(\text{five kernel-jet rows}), \tag{D9}
+\]
+up to a nonzero constant sign. This is ordinary constant-kernel
+column elimination: each of the five new rows vanishes on the whole
+leading matrix. No independent stacking of derivatives is involved.
+Restoring the four boundary pivots from (D2) proves the
+implication
+\(\mathcal D_{k-1}\text{ full}\Longrightarrow\mathcal D_k\text{ full}\)
+for \(k\ge5\).
+
+To combine the required nonzero factors, clear their denominators.
+The tail determinant, the boundary factors, and the kernel-jet factors
+are each nonzero polynomials on the irreducible common-\(G\),
+independent-time parameter space. Their product is nonzero. Its open
+set intersects the positive parameter orthant; choose a point there,
+then a sufficiently small positive \(\delta\). All remaining
+generic line conditions can also be imposed at finite \(\delta\).
+This justifies intersecting the separate nonvanishing arguments without
+requiring their preliminary witness points to coincide.
+
+The base dependency is explicit. In
+`exploration/source24_deletion_word.py` and
+`exploration/source24-deletion-word-results.json`, the \(k=4\)
+matrix has a saved 39-by-39 minor equal to \(621903\) modulo
+\(1000003\), with every denominator used by the residue construction
+nonzero modulo that prime. Its rational parameters are
+\[
+ G=\begin{pmatrix}1&1&1\\1&30&10\\1&3&2\end{pmatrix},\qquad
+ (u_t,v_t)=(8^t,8^{2t}),\quad t=1,2,3,4.
+\]
+Thus this rational minor is nonzero in characteristic zero. The
+induction gives full rank \(9k+3\) for every
+\(k\ge4\). The separate \(k=5\) rank-48 minor is a finite
+check, not an additional induction assumption.
+
+For comparison, the \(k=3\) deficiency has a structural upper
+bound. The \(6(k-1)\) rows involving \(L_{11}\) or \(L_{12}\)
+depend on only the two restrictions \(q_{11}|_{L_{11}}\),
+\(q_{12}|_{L_{12}}\), together of dimension four. Therefore
+\[
+ \operatorname{rank}\mathcal D_k\le
+ \min\!\left(9k+3,\;9\binom k2-6k+10\right). \tag{D10}
+\]
+At \(k=3\), the saved nonzero 19-minor and this upper bound give
+generic characteristic-zero rank exactly 19. In the pole-removal
+subspace \(q_{tA}=k_{tA}L_{tA}\), the three explicit kernel
+functions are nonzero multiples of
+\(L_{20}(K_2K_3)_{02}\),
+\(L_{10}(K_1K_3)_{02}\), and
+\(L_{10}(K_1K_2)_{02}\). Each has only single-block poles after
+canceling its first row-zero denominator. They are quotient relations,
+not rational-function zero identities; the full 11-dimensional
+\(k=3\) residue kernel is larger.
+
+Finally, (H17) proves independence of
+the remaining \(9m-6\) incoming columns for every odd \(m\ge5\):
+put \(k=m-1\), and use the invertible coefficient map
+\(\ell=\sum c_{tA}q_{tA}-q_{10}\). At tail-tail cross-points,
+the degeneration in (H16)--(H17) and the incoming common factor only
+apply nonzero parameter-only row scalings. The six columns already
+handled by (H13)--(H15) are isolated by rows involving \(L_{11}\)
+or \(L_{12}\), on which all remaining columns vanish identically.
+Their minor and a remaining-column minor therefore combine in a block
+triangular matrix. Their separately nonzero polynomials can be
+intersected on the common parameter space. The resulting corollary is
+generic full rank \(9m\) of \(Z_{-3}\) for odd \(m\ge5\),
+subject to the earlier polar hypotheses identifying the auxiliary
+family with the actual incoming operator. It does not show that
+\(B_0O^{-1}\) is injective on this image. That is still the
+remaining transversality problem in the leading regular operator.
 
 ## A proved bridge to scalar covariates
 

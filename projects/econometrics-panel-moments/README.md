@@ -48,10 +48,13 @@ T=5,6, and a quadratic-size residue reduction checked by exact computation
 through T=8. The original conic witness
 has an exact T5 residue failure; a perturbed economic witness passes the finite
 checks. The auxiliary binary parity rank theorem is now Lean checked for
-the actual reordered transfer words. Together with an audited paper perturbation
+the actual reordered transfer words and their stochastic matrix products on
+the positive domain. Together with an audited paper perturbation
 argument, it proves nonvanishing of the shared-new polar half at every length on the
-common-G, independent-time family. The regular Schur half and the all-T
-determinant proof remain open. See
+common-G, independent-time family. An audited deletion-word induction, using
+an external exact base certificate, also proves full incoming rank at every
+odd auxiliary length at least five. Injectivity of the subsequent old-source
+map, the regular Schur half, and the all-T determinant proof remain open. See
 [the continuation note](research/SOURCE24_INDUCTION.md) and
 [the updated status](STATUS.md#active-continuation-equation-24-for-t--5).
 

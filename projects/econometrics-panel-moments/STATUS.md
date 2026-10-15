@@ -81,6 +81,12 @@ with independent statement reviews in `reviews/SOURCE24_FOUNDATIONS_AUDIT.md`
 and `reviews/SOURCE24_RECURSION_AUDIT.md`. These results do not establish
 independence of the additional source rows.
 
+Two further modules now connect the binary transfer functions to the actual
+ordered stochastic matrices and restrict their rank theorem to positive
+arguments. Their focused source checks and 34 additional axiom checks passed.
+The extended aggregate checks 254 declarations; the reproducible closure now
+contains 26 modules. The earlier 24-module clean build is preserved separately.
+
 Further exact discovery separates identities from rank evidence. The
 coalescent triangle and grid identities match direct rational series checks;
 their nonzero curvature is not a full determinant. The tested constant-time
@@ -92,8 +98,12 @@ It treats the actual move-first Q/R words, proves their relation to the prefix
 defects, and establishes endpoint separation, paired-defect independence,
 and the parity span identities over constant real coefficients. The theorem
 assumes a nonempty coefficient list, rho different from zero and one, nonzero
-entries, and adjacent distinctness. It is an auxiliary binary result, not
-equation-(24) source independence.
+entries, and adjacent distinctness. The actual matrix-product functions
+q(P_i) and z*r(P_i) now have the same rank on z>0, assuming rho>0,
+rho different from one, positive coefficients,
+and adjacent distinctness. Lean proves positive-domain restriction injective
+by polynomial uniqueness and uses a common nonzero determinant multiplier.
+This remains an auxiliary binary result, not equation-(24) source independence.
 
 The next paper argument restores the two missing directions at even length
 by an asymmetric last-block perturbation. Its explicit two-dimensional
@@ -142,13 +152,26 @@ bound, this rank bound and the saved determinant coefficients also prove
 exact characteristic-zero determinant valuations -75 at the m=3 fixture
 and -108 at m=4. The m=2 valuation -24 remains modular evidence only.
 
-A separate audited degeneration proves six isolated incoming-column pivots
-for every auxiliary m>=5, and for the actual incoming operator at odd m>=5.
-The other 9m-6 columns remain open. A direct calculation verifies full incoming
+An audited degeneration proves six isolated incoming-column pivots for every
+auxiliary m>=5. A second audited induction now proves generic full rank 9k+3
+of the deletion-word residue family for every k>=4. It uses four exact
+boundary pivots and five independent first-order kernel directions, with an
+external nonzero 39-square modular minor as its k=4 base. Combined with the
+exact deletion limit and the six isolated pivots, it proves generic incoming
+rank 9m for every odd m>=5 under the stated polar hypotheses. This is a paper
+proof with an external exact base certificate, not a Lean theorem; see
+[the independent audit](reviews/SOURCE24_DELETION_AUDIT.md).
+
+The deletion family has generic rank exactly 19 at k=3. Separate finite checks
+find full ranks 39 and 48 at k=4,5 and confirm the fifth derivative direction
+raises the shorter residue rank from 39 to 40. These reproducible certificates
+are in the source24-deletion-word files. Direct checks also verify full incoming
 and mapped ranks 45 at m=5 and 63 at m=7, including the actual old-source
-equation OY=Z and the polar hypotheses. The source24-odd-incoming files
-preserve these finite certificates. The exact remaining deletion-word
-reduction is recorded in the note; it is not yet an induction proof.
+equation OY=Z and polar hypotheses, in the source24-odd-incoming files.
+
+The next unresolved step is proving that B0 O^-1 is injective on this incoming
+image. The even-m regular calculation and the full regular determinant also
+remain open. None of the new results establishes all-T source independence.
 
 ## Finite theorem
 
@@ -222,9 +245,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    Next formalize the homogeneous residue formulas and the audited polar theorem.
    The auxiliary binary independence and rank lemmas are now formalized.
    The actual new-image normalization and reversible single-block reduction
-   are also proved. On the paper side, extend the six incoming pivots to
-   the remaining columns and prove injectivity of the subsequent old-source
-   map on their image. The deletion-word limit is a precise candidate subproblem.
+   are also proved. The actual binary matrix rank on the positive domain is
+   now formalized. The paper deletion induction and odd incoming-rank theorem
+   are audited; their external k=4 base certificate still needs Lean checking.
+   Prove injectivity of the subsequent old-source map on the incoming image,
+   and handle the even-length regular operator.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final

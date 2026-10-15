@@ -111,6 +111,8 @@ in terms of the reduced columns.
 It also checks the auxiliary binary identities and constant-real
 span parity/baseline theorems, polynomial endpoint separation, paired-defect
 independence, and the rank formula for the actual move-first binary words.
+It also checks the exact stochastic-matrix identities and transfers their rank to functions
+on the positive domain through injective restriction and determinant scaling.
 It does not discharge the criterion's new-image independence hypothesis,
 prove the new polar theorem, or validate the external rank certificates.
 The source-foundation and recursion statement reviews are in
@@ -123,6 +125,16 @@ The continuation verifier passed its clean 24-module rebuild and all
 [source-family-clean-build.log](formal/source-family-clean-build.log) and
 [source-family-axioms.txt](formal/source-family-axioms.txt). The only diagnostic
 was an existing stylistic linter warning in `BasisCertificate.lean`.
+
+The subsequent two-module extension passed focused source compilation and
+34 additional axiom checks, without warnings. The extended aggregate checks
+all 254 requested declarations against the compiled 26-module closure; its
+output is [source-family-extended-axioms.txt](formal/source-family-extended-axioms.txt).
+The reproducible verifier now includes both new modules. This extended check
+reuses the earlier compiled closure; it is not a new clean 26-module rebuild.
+The audited deletion-word induction remains a paper proof whose k=4 base
+is the external certificate in `exploration/source24-deletion-word-results.json`;
+it is not covered by the Lean verifier.
 
 Every audited declaration in both main checks depends only on
 `propext`, `Classical.choice`, and `Quot.sound`. There are no `sorry`, `admit`,

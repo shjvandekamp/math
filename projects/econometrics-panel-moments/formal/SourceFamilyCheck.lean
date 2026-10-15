@@ -15,6 +15,8 @@ import PanelMoments.BinaryTransferSpan
 import PanelMoments.BinaryTransferEndpoints
 import PanelMoments.BinaryTransferIndependence
 import PanelMoments.BinaryTransferRank
+import PanelMoments.BinaryTransferMatrices
+import PanelMoments.BinaryTransferPositiveRank
 
 /- These checks cover source recursion and the auxiliary binary rank theorem;
    arbitrary-period source independence is not asserted. -/
@@ -286,3 +288,42 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceReducedCriterion.linearIndependent_newJoint_iff_sourceColumn
 #print axioms PanelMoments.SourceReducedCriterion.linearIndependent_newJoint_iff_reducedColumn
 #print axioms PanelMoments.SourceReducedCriterion.linearIndependent_source_of_reducedColumns
+
+#check PanelMoments.BinaryTransferPositiveRank.matrixColumn
+#check PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_parity
+
+#print axioms PanelMoments.BinaryTransferMatrices.oddsMatrix_rows
+#print axioms PanelMoments.BinaryTransferMatrices.rowSumOne_mul
+#print axioms PanelMoments.BinaryTransferMatrices.det_eq_one_sub
+#print axioms PanelMoments.BinaryTransferMatrices.product_q
+#print axioms PanelMoments.BinaryTransferMatrices.product_r
+#print axioms PanelMoments.BinaryTransferMatrices.oddsMatrix_det
+#print axioms PanelMoments.BinaryTransferMatrices.determinantFactor_ne_zero
+#print axioms PanelMoments.BinaryTransferMatrices.determinantFactor_mul_H
+#print axioms PanelMoments.BinaryTransferMatrices.determinantFactor_mul_Q
+#print axioms PanelMoments.BinaryTransferMatrices.determinantFactor_mul_R
+#print axioms PanelMoments.BinaryTransferMatrices.orderedProduct_rows
+#print axioms PanelMoments.BinaryTransferMatrices.orderedProduct_det
+#print axioms PanelMoments.BinaryTransferMatrices.determinantProduct_ne_zero
+#print axioms PanelMoments.BinaryTransferMatrices.orderedProduct_entries
+#print axioms PanelMoments.BinaryTransferMatrices.orderedProduct_q_normalized
+#print axioms PanelMoments.BinaryTransferMatrices.orderedProduct_r_normalized
+#print axioms PanelMoments.BinaryTransferMatrices.determinantProduct_movedWord
+#print axioms PanelMoments.BinaryTransferMatrices.regularAt_movedWord
+#print axioms PanelMoments.BinaryTransferMatrices.movedWord_q_normalized
+#print axioms PanelMoments.BinaryTransferMatrices.movedWord_r_normalized
+
+#print axioms PanelMoments.BinaryTransferPositiveRank.positive_evaluation_injective
+#print axioms PanelMoments.BinaryTransferPositiveRank.restrictPositive_clearedSpace_injective
+#print axioms PanelMoments.BinaryTransferPositiveRank.blockColumn_mem_clearedSpace
+#print axioms PanelMoments.BinaryTransferPositiveRank.wordSpan_le_clearedSpace
+#print axioms PanelMoments.BinaryTransferPositiveRank.restrictPositive_wordSpan_injective
+#print axioms PanelMoments.BinaryTransferPositiveRank.regularAt_positive
+#print axioms PanelMoments.BinaryTransferPositiveRank.determinantScale_injective
+#print axioms PanelMoments.BinaryTransferPositiveRank.transferMap_wordSpan_injective
+#print axioms PanelMoments.BinaryTransferPositiveRank.matrixColumn_eq_transferMap
+#print axioms PanelMoments.BinaryTransferPositiveRank.matrixSpan_eq_range
+#print axioms PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_eq_wordSpan
+#print axioms PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_parity
+#print axioms PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_odd
+#print axioms PanelMoments.BinaryTransferPositiveRank.finrank_matrixSpan_even
