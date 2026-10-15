@@ -216,6 +216,12 @@ constructed zero-sum incoming representative; see
 incoming spanning condition remains open. Trying to recover incidence from all three axes also
 fails: universal observation rank bounds are 72 and 90 at m=4,5, while
 saved stacked minors with incidence have sizes 105 and 132.
+The binary quotient note now also gives an audited explicit pair basis for
+the sector whose component two is zero, of dimension 9*choose(m,2), and
+a complete observation map for component two. Exact finite minors now
+verify surjectivity on the annihilated source subspace at four and five
+blocks; the three-block modular test is deficient. Uniform surjectivity
+and independence in the resulting scalar quotient remain open.
 
 The even physical constant correction now has an audited formula: one
 2-by-2 kernel/cokernel solve plus a diagonal solve, under the established
@@ -225,6 +231,51 @@ verify every constant coefficient at m=2 and m=4; the actual mapped ranks
 are 6 and 36 there. See [the even correction note](research/SOURCE24_EVEN_CORRECTION.md).
 All-length rank of this corrected even input and the full regular determinant
 remain open. None of the new results establishes all-T source independence.
+
+An audited [terminal peeling construction](research/SOURCE24_TERMINAL_PEELING.md)
+now gives a recursive annihilator of the actual completion span, assuming
+the final old-source matrix is invertible. It uses three cubic divisions
+and boundary minors of size 18(m−1); it does not assume shorter incoming
+complementarity. Its equivalent border determinant remains unproved.
+Six exact finite fixtures verify append and actual seed-transport identities,
+and the cubic identity is checked coefficientwise over the rationals.
+The full recursive annihilator has not been implemented or Lean formalized.
+
+The [append commutator](research/SOURCE24_APPEND_COMMUTATOR.md) cannot be
+treated as a bounded-rank correction: an audited first-order degeneration
+proves rank 3q in each coordinate sector for q>=2 and combined rank 9q
+for odd q>=5, conditional on the audited incoming theorem. These are
+pair-data ranks before quotienting by the completion span. Separately,
+the [near-identity calculation](research/SOURCE24_NEAR_IDENTITY.md) shows
+that two proposed leading blocks lose first-slot information. It leaves
+higher coefficients and cross-block interactions open.
+
+The [conic specialization](research/SOURCE24_CONIC.md) has particularly
+simple pair points and divided-difference denominators. New finite exact
+checks find full ranks 108 and 180 at four and five blocks, and rank 51
+modulo the recorded prime in three distinct three-block examples. The
+earlier exact rational rank-51 witness is preserved. Three independently
+audited parameter identities now explain this defect throughout the
+three-block conic family: two source combinations vanish as rational rows,
+and the third equals an explicit nonzero single-block combination. Together
+with the saved minor they establish generic residue rank 51, and generic
+rank 52 for the 54 shared rational rows, on this special family. These are
+paper results, not Lean theorems or counterexamples to general common-G
+independence. A uniform proof from four blocks onward remains open.
+
+The audited [directed residue reduction](research/SOURCE24_DIRECTED_ELIMINATION.md)
+turns the difference operator into outgoing-edge sums and removes 3m
+explicit actual-source seed columns by an invertible triangular change.
+The resulting square matrix has size 3m(3m−4); its invertibility is
+equivalent to that of the old source matrix. This equivalence does not
+settle the reduced rank question.
+
+The audited [native-component construction](research/SOURCE24_NATIVE_COMPONENTS.md)
+gives the exact component-two incoming quotient representative, a conditional
+regular-limit criterion with saturation, and explicit terminal extraction.
+The terminal formula extracts interior source coefficients, but the full
+quotient has a further 18q−3 boundary directions, for m=q+1. Controlling
+their action remains open; the interior formula alone is insufficient.
 
 ## Finite theorem
 
@@ -306,6 +357,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    Prove injectivity of the subsequent old-source map on the incoming image,
    and prove the remaining rank statements for the now-explicit even-length
    correction and regular operator.
+   The conditional terminal annihilator supplies explicit boundary rows;
+   prove their pairing with the incoming columns is nonsingular while
+   retaining the full old-node commutator. Alternatively, prove spanning
+   in the explicit binary quotient. Neither route is yet complete.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final

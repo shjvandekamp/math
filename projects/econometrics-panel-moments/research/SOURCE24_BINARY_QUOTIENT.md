@@ -211,6 +211,94 @@ both the source inverse and any interpolation solve from the representative.
 The individual correction terms in (B17) need not be moment rows, so they
 cannot separately be reduced modulo \(N\).
 
+## An explicit scalar sector with component two zero
+
+Put \(r=9\binom m2\), so \(n=2r\), and let
+\(W_{01}=\{R\in\mathscr W_0:R_2=0\}\). For a cross-block
+line pair \(i=(t,c),j=(s,d)\), write
+\(Q_i=L_i\cap\{X_c=0\}\), \(Q_j=L_j\cap\{X_d=0\}\).
+Let \(\ell_{ij}\) be a nonzero linear form vanishing at these
+two matching points, and define
+
+\[
+ H_{ij}=\frac{X_0X_1\ell_{ij}}{L_iL_j}(e_1-e_0).
+ \tag{B20}
+\]
+
+The points \(Q_i,Q_j\) are distinct, and
+\(\ell_{ij}(P_{ij})\ne0\). Otherwise their joining line
+would coincide with \(L_i\), forcing \(Q_j=P_{ij}\),
+contrary to the nonzero-coordinate hypothesis. The row (B20) belongs
+to \(W_{01}\): the two zeros of \(\ell_{ij}\) supply the
+matching factors, its vertices vanish, and its only pair residue is
+
+\[
+ \rho_{ij}H_{ij}=P_0P_1\ell_{ij}(P)(e_1-e_0)\ne0.
+ \tag{B21}
+\]
+
+These rows are a basis of \(W_{01}\). To prove spanning, subtract
+their uniquely determined multiples to remove every pair residue of
+\(R\in W_{01}\). Coordinate divisibility gives
+\(R=X_0X_1f(e_1-e_0)\), with \(f\) homogeneous of degree
+minus one and only simple old-line poles. Its pair residues and same-block
+double residues vanish, so each line residue is a constant. Matching-point
+vanishing of both \(-X_1f\) and \(X_0f\) forces that constant
+to be zero, including matching states zero and one. The remaining
+pole-free function of negative degree is zero. Thus
+
+\[
+ \dim W_{01}=r. \tag{B22}
+\]
+
+There is a corresponding complete observation map for component two:
+
+\[
+ \mathscr C_2(R)=
+ \big((\rho_{ij}R)_2\ ;\ (T_{i,2}R)_i\big)
+       \in K^{r+3m}. \tag{B23}
+\]
+
+Its kernel is exactly \(W_{01}\). Indeed, zero pair observations
+leave each residue of \(R_2/X_2\) equal to \(k_iX_c\).
+The normalized observations \(T_{i,2}=0\) kill these constants,
+and the vertex condition at \(e_2\) kills the remaining polynomial
+constant. Since \(\dim\mathscr W_0=2r+3m\), (B23) is onto.
+This lemma needs no old-source inverse.
+
+In particular, if one can prove \(\mathscr C_2(N)=K^{r+3m}\),
+then every binary quotient class has a representative in \(W_{01}\),
+and under old-source independence
+
+\[
+ \mathscr W_0/N\simeq W_{01}/(N\cap W_{01}),\qquad
+ \dim(N\cap W_{01})=r-6m. \tag{B24}
+\]
+
+The required surjectivity on \(N\) is an additional claim; it does
+not follow from (B20)–(B23). It is impossible at \(m=2\) by
+dimension. Even where it holds, independence of the specific incoming
+classes in the resulting scalar quotient still requires proof.
+
+The exact local script `exploration/source24_component_two.py` constructs
+(B23) on the actual generators of N and independently checks every long
+empty row from its full ordered word, including its single-block correction.
+At the recorded prime and full-old-source economic fixtures it finds:
+
+| m | rank of component-two observations on N | target r+3m | coefficient kernel dimension |
+|---:|---:|---:|---:|
+| 3 | 27 | 36 | 18 |
+| 4 | 66 | 66 | 30 |
+| 5 | 105 | 105 | 60 |
+
+The full row minors at m=4,5 lift to characteristic zero after clearing
+denominators, so the conditional scalar representation (B24) is realized
+at those rational fixtures and generically at those two fixed lengths.
+The m=3 modular deficiency is not an upper-bound proof over the reals.
+The run took 0.597 seconds and 21,217,280 bytes maximum RSS; results are
+in `exploration/source24-component-two-results.json`. The primary
+researcher reviewed the implementation. No all-length surjectivity follows.
+
 ## Why row sum alone cannot produce the annihilators
 
 Let \(\Psi(P)=\sum_dX_dP_d\), so
@@ -239,6 +327,9 @@ checked the dimensions, signs, and polynomial formulas. A separate Astra
 researcher derived the explicit lift B15–B19, which the first reviewer
 audited, including every coordinate point and the matching-state cases.
 The primary researcher also checked the lift and constant formula.
+The primary researcher derived B20–B24; an independent Astra reviewer
+checked the coordinate factors, pair basis, observation kernel, and
+dimension argument. B24 is explicitly conditional on surjectivity for N.
 
 The unresolved target is rank \(6m\) of the pairing between (B13) and
 the incoming polynomials \(\Phi(F^*)\), followed by the remaining output-zero
