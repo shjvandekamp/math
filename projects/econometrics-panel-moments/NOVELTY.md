@@ -86,3 +86,14 @@ therefore targets the same equation-(24) family, including footnote 8's
 restriction that first becomes nonvacuous for three choices at T=5.
 This refresh does not enlarge the earlier search's coverage or establish
 priority.
+
+## Binary proof-mechanism check during the continuation
+
+[Honoré–Weidner v7, §6.3](https://arxiv.org/html/2005.05942v7#S6.SS3)
+describes independence of its restricted r=T binary moment family as
+numerically verified. [Dano's author draft, p.13](https://kevindano.github.io/assets/files/JMP_KevinDano.pdf)
+likewise distinguishes its proved image-dimension result from numerical
+independence of its proposed family beyond T=3. Partial fractions provide a
+useful model for residue coordinates, but do not establish independence of
+our specified three-choice family. This was a targeted mechanism check,
+not a new claim of priority or a survey of all binary results.

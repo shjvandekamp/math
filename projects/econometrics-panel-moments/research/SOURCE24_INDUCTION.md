@@ -453,3 +453,376 @@ See `exploration/conic_residue_nullspace.py` and
 `exploration/conic-nullspace-results.json`. The perturbed economic
 witnesses and their separate finite certificate status are recorded in
 the exploration results.
+
+## Coalescing time factors: exact column identities
+
+This section records algebraic identities, not an all-length independence
+proof. Keep one outcome pair \((a,b)\) fixed, use row vectors, and write
+
+\[
+ K_i(\varepsilon)=K+\varepsilon D_i+\varepsilon^2E_i+O(\varepsilon^3),
+ \qquad p=X_aK(a,b),\qquad \ell(H)=X_aH(a,b).
+\]
+
+For common \(G\), independent linear time tilts
+\(A_i=G\operatorname{diag}(1,1+\varepsilon\delta_i,
+1+\varepsilon\zeta_i)\) give
+\(D_i=\delta_iK_u+\zeta_iK_v\). The normalization of each transition
+row generally makes \(E_i\ne0\); none of the identities below discards
+these terms. Set \([H,J]=HJ-JH\).
+
+For adjacent IDs \(u<v\) in the ordered set \(B\setminus\{t\}\), let
+\(A\) be the ordered product before \(u\), and \(C\) the ordered
+product after \(v\). The exact source-column difference is
+
+\[
+ \Delta_t(u,v):=F_{t,u,a,b}-F_{t,v,a,b}
+ =X_aK_t(a,b)e_b(K_vAK_u-K_uAK_v)C.
+\]
+
+Replacing, for each fixed \(t,a,b\), its list of columns by one base
+column and adjacent differences is an invertible constant column
+operation. If \(u\) has position \(j\), counted from one in
+\(B\setminus\{t\}\), and \(c\) IDs follow \(v\), the first
+coefficient of this difference is
+
+\[
+ [\varepsilon]\Delta_t(u,v)
+ =p\,e_b[D_v-D_u,K^j]K^c.
+\]
+
+The first derivatives of the common prefix, suffix, and scalar prefactor
+cancel. These repeated first coefficients permit further constant column
+operations with genuinely second-order leading terms.
+
+For three consecutive global IDs \(r<s<t\), put
+\(U=D_s-D_r\), \(V=D_t-D_r\), let \(j-1\) be the number of IDs
+before \(r\), and let \(c\) be the number after \(t\). The triangle
+combination
+
+\[
+ H=\Delta_t(r,s)+\Delta_r(s,t)-\Delta_s(r,t)
+\]
+
+has zero coefficients of orders zero and one, and
+
+\[
+ [\varepsilon^2]H
+ =e_b\left\{
+   \ell(V)[U,K^j]-\ell(U)[V,K^j]
+   +p\bigl(VK^{j-1}U-UK^{j-1}V\bigr)
+ \right\}K^c. \tag{C1}
+\]
+
+Here is a direct derivation that also checks the cancellation of every
+\(E_i\). Let \(A\) and \(C\) be the common actual prefix and suffix,
+\(U_*=K_s-K_r\), \(V_*=K_t-K_r\), and \(p_r=X_aK_r(a,b)\).
+Expansion of the three column differences gives the exact identity
+
+\[
+ H=e_b\{\ell(V_*)(U_*AK_r-K_rAU_*)
+       -\ell(U_*)(V_*AK_r-K_rAV_*)
+       +p_r(V_*AU_*-U_*AV_*)\}C.
+\]
+
+Every term has two matrix differences. Taking their first coefficients
+and the zeroth coefficients of the remaining factors proves (C1).
+For two time directions, (C1) is their alternating bilinear form
+multiplied by the signed area of the three time-tilt vectors.
+
+There are also second-order identities from moving the shared slot.
+Fix a globally adjacent edge \(u<v\), with \(L\) IDs before \(u\)
+and \(R\) after \(v\). Set \(V=D_v-D_u\).
+If adjacent shared IDs \(t,t'\) occupy zero-based prefix positions
+\(k,k+1\), where \(0\le k\le L-2\), put \(U=D_{t'}-D_t\).
+The coefficients of orders zero and one in
+\(\Delta_t(u,v)-\Delta_{t'}(u,v)\) vanish, and the second is
+
+\[
+ e_b\left\{-\ell(U)[V,K^L]
+   +p\left(VK^kUK^{L-k-1}
+          -K^{k+1}UK^{L-k-2}V\right)\right\}K^R. \tag{C2}
+\]
+
+For adjacent shared IDs in suffix positions \(k,k+1\), with
+\(0\le k\le R-2\), the corresponding second coefficient is
+
+\[
+ e_b[V,K^{L+1}]
+   \left\{pK^kUK^{R-k-2}-\ell(U)K^{R-1}\right\}. \tag{C3}
+\]
+
+To derive (C2), the difference of the first prefix derivatives is
+\(K^kUK^{L-k-2}\), whereas the difference of the scalar derivatives
+is \(-\ell(U)\). Substitution in the adjacent-edge identity gives
+the displayed expression. The same argument on the suffix proves (C3).
+All common second derivatives cancel. With three consecutive shared
+prefix slots having equal increments \(U\), a second finite difference
+also cancels the scalar term in (C2), giving
+
+\[
+ p e_b\left\{VK^k[U,K]K^{L-k-2}
+       -K^{k+1}[U,K]K^{L-k-3}V\right\}K^R,
+ \qquad 0\le k\le L-3. \tag{C4}
+\]
+
+These are constant combinations of the original source columns. No
+effect-dependent coefficients have been used to change the column span.
+
+The second-order alternating form does not vanish identically for
+softmax transitions. At the boundary matrix
+
+\[
+ G=\begin{pmatrix}1&1&1\\1&1&0\\1&0&1\end{pmatrix},
+ \qquad X=(1,1,1),\quad u=v=1,
+\]
+
+take \(U=K_u\), \(V=K_v\), \(a=b=0\), and \(j=1\). Then
+
+\[
+ e_0\{V_{00}[U,K]-U_{00}[V,K]+K_{00}(VU-UV)\}
+       =(0,-1/54,1/54),\qquad \det K=-1/12.
+\]
+
+Thus no suffix power kills this particular row. Although this boundary
+matrix has zero entries and fails some residue-geometry assumptions, the
+displayed rational coefficient is defined and nonzero. Continuity gives
+strictly positive nearby common matrices with the same nonvanishing
+property. This establishes a nonzero second-order column for arbitrary
+suffix length, not independence from other columns.
+
+The same boundary matrix supports two independent spectral variables.
+On the zero-sum row space, let \(\tau=\operatorname{tr}K-1\) and
+\(d=\det K\). For \(X=(1,t,s)\), put
+\(A=1+t+s\), \(B=1+t\), \(C=1+s\). Direct computation gives
+
+\[
+ \tau=1+A^{-1}-B^{-1}-C^{-1},\qquad
+ d=-\frac{ts}{ABC}.
+\]
+
+At \((t,s)=(1,2)\), their derivative rows are
+\((3/16,7/144)\) and \((-1/48,1/144)\), so the Jacobian is
+\(1/432\). Their image therefore contains an open set, proving that
+\(\tau\) and \(d\) are algebraically independent. The nonzero
+Jacobian also persists under a small positive perturbation of \(G\).
+
+After spectral decomposition, (C2)--(C4) contain terms with two varying
+nonstationary eigenvalue exponents. This is a possible source of the
+quadratic number of independent directions needed as \(n\) grows.
+However, the accompanying coefficients also depend on the effects, and
+the remaining terms have not been eliminated. Algebraic independence of
+the spectral invariants does not by itself establish independence of these
+columns. A nonsingular full leading matrix, or an equivalent Laurent
+determinant argument, remains unproved. Independence of stacked Taylor
+coefficients is not a substitute: pointwise column relations may have
+\(\varepsilon\)-dependent coefficients.
+
+As a check on the identities, `exploration/coalescent_checks.py` verifies
+the adjacent-edge coefficient and (C1)--(C3) directly from exact rational
+series of the original \(F\) columns, retaining normalization terms.
+The recorded cases cover \(n=3,\ldots,6\), two positive common matrices,
+three effect vectors, and every outcome pair: 2,160 adjacent-edge checks
+and 540 checks for each of the triangle, prefix, and suffix formulas.
+It also checks the boundary curvature and spectral Jacobian. These are
+external spot checks of the algebraic identities, not rank certificates
+or Lean proofs; (C4) follows by subtraction of (C2).
+
+## A last-block degeneration and its binary obstruction
+
+The inverse-matrix filtration above permits a more explicit boundary
+calculation, but its simplest candidate polar block is singular. Normalize
+the first column of the common matrix \(G\) to one, put
+\(\alpha_a=G_{a1}\), \(\beta_a=G_{a2}\), and choose the last block
+as \(A_N=G\operatorname{diag}(1,\varepsilon,\varepsilon^B)\), with
+integer \(B>1\). On its line \(L_{Na}=0\), use the affine parameter
+
+\[
+ X_1=1,\qquad X_2=z,\qquad
+ X_0=-\varepsilon\alpha_a-\varepsilon^B\beta_a z.
+\]
+
+For invertible \(G\) and nonzero \(\alpha_a z\), the exact inverse
+formula gives
+
+\[
+ \varepsilon^{B-1}K_N^{-1}
+ \longrightarrow z^{-1}E_{22}G^{-1}
+       \operatorname{diag}(\alpha_c-\alpha_a)_{c=0}^2. \tag{L1}
+\]
+
+Only row two can survive. Its row sum is zero, because row two of
+\(G^{-1}\) annihilates both the first and second columns of \(G\).
+Its component \(a\) is also zero. Under generic conditions this row is
+nonzero, as expected for the one-dimensional new-line residue direction.
+
+Divide each shared-\(N\) source column by the nonzero constant
+\(A_N(a,b)\), multiply it on the right by \(K_N^{-1}\), and take
+its residue along \(L_{Na}=0\). The resulting row is exactly
+
+\[
+ X_aX_b\,e_b(I-P_s^{\mathrm{old}})K_N^{-1}.
+\]
+
+Write \(\kappa_i=1\) for \(i=0\) and zero otherwise. After multiplying
+this column by the constant power
+\(\varepsilon^{B-1-\kappa_a-\kappa_b}\), its limit is the common row in
+(L1) times
+\(X_a^0X_b^0[e_b(I-P_s^{\mathrm{old},0})]_2\), where
+\((X_0^0,X_1^0,X_2^0)=(-\alpha_a,1,z)\).
+The limiting old transitions have zero first column; after one step a
+path stays in the binary state set \(\{1,2\}\).
+
+The \(b=0\) column for a given \(s\) has a row-zero pole only at
+\(L_{s0}|_{X_0=0}=0\). Later matrices use only rows one and two.
+For distinct restricted lines and invertible binary transitions, these
+\(m\) poles form a diagonal nonzero block. The other \(2m\) columns
+are, up to a shared nonzero rational factor and signs,
+
+\[
+ q(P_s)(z),\qquad z\,r(P_s)(z),
+\]
+
+where \(q(P)=P_{12}\), \(r(P)=P_{21}\), and \(P_s\) orders
+the \(m\) old binary transitions with \(s\) first. Their generic
+independence would have made this particular polar half sufficient.
+It is false already for \(m=2\).
+
+The failure has a short exact calculation. Common \(G\) makes the two
+binary row odds \(c_i z\) and \(\rho c_i z\), with common
+\(\rho\ne1\). If \(d_i\) is the binary determinant, set
+
+\[
+ H_i=d_i^{-1}
+  =\frac{(1+c_i z)(1+\rho c_i z)}{(\rho-1)c_i z},\qquad
+ Q_i=\frac{q_i}{d_i}=\frac{1+\rho c_i z}{\rho-1},\qquad
+ R_i=\frac{zr_i}{d_i}=\frac{1+c_i z}{(\rho-1)c_i}.
+\]
+
+Dividing every column by the common rational function
+\(\prod_i d_i\) is an injective linear transformation. In any word
+order, its two columns become the sums of \(Q_i\), respectively
+\(R_i\), times the preceding \(H\) products. These are Laurent
+polynomials supported on powers \(1-m,\ldots,m\).
+Moving slot \(s\) to the front changes the first sum by
+
+\[
+ h_s=\sum_{i<s}\frac{c_i-c_s}{c_ic_s(\rho-1)^2}
+       \bigl(z^{-1}+\rho(c_i+c_s)+\rho c_ic_sz\bigr)
+       \prod_{j<i}H_j,
+\]
+
+and changes the second by \(-z h_s\). The formula follows from
+\(H_i-1=Q_i+R_i/z\). The pairs \(h_s,z h_s\), for
+\(s=2,\ldots,m\), are independent when consecutive \(c_i\)'s
+are distinct: their successive outer powers are unique. They leave a
+two-dimensional Laurent remainder, which need not be filled by the two
+ascending baseline columns.
+
+Indeed, for \(m=2\), let
+\(J=1+\rho(c_1+c_2)z+\rho c_1c_2z^2\). Direct factorization gives
+
+\[
+ h_2=\frac{(c_1-c_2)J}{c_1c_2(\rho-1)^2z},\quad
+ Q_{\mathrm{base}}=\frac{(1+\rho c_1z)J}{(\rho-1)^2c_1z},\quad
+ R_{\mathrm{base}}=\frac{(1+c_1z)J}{(\rho-1)^2c_1c_2z}.
+\]
+
+Both baseline columns lie in the span of \(h_2,z h_2\). The four
+binary columns therefore have rank exactly two for
+\(c_1\ne c_2\) and \(\rho\ne1\). Consequently the leading
+shared-\(N\) polar half above is deficient when \(m=2\). This
+rules out that particular simple leading block, not the complete
+Schur complement: the other new columns and higher powers of
+\(\varepsilon\) have not been eliminated or shown dependent.
+
+There is nevertheless a complete nonvanishing argument for this binary
+subproblem when \(m\) is odd. Fix \(c>0\) and \(\rho>0\),
+\(\rho\ne1\), and set \(c_i=c+\delta\xi_i\), with consecutive
+\(\xi_i\)'s distinct. Use the constant column transformation to the
+two ascending baseline columns and \(h_s,z h_s\), then divide each
+difference column by the parameter \(\delta\). At \(\delta=0\),
+put
+
+\[
+ H=\frac{(1+cz)(1+\rho cz)}{(\rho-1)cz},\qquad
+ J=z^{-1}+2\rho c+\rho c^2z=c(\rho-1)(H+1).
+\]
+
+The limits of \(h_s/\delta\) are triangular nondegenerate combinations
+of \(JH^j\), \(0\le j\le s-2\): the coefficient of the last
+power is proportional to \(\xi_{s-1}-\xi_s\). The Laurent space
+supported on \(1-m,\ldots,m\) has the basis
+\(H^j,zH^j\), \(0\le j\le m-1\), as follows by successively
+peeling its two outer powers. The limiting difference columns therefore
+span exactly
+
+\[
+ (H+1)\{p(H)+zq(H):\deg p,\deg q\le m-2\}.
+\]
+
+In the remaining two-dimensional quotient, evaluation at \(H=-1\)
+leaves the basis \(1,z\). The baseline columns limit to
+\(Q S_m(H)\), \(R S_m(H)\), where
+\(S_m(H)=1+H+\cdots+H^{m-1}\). For odd \(m\),
+\(S_m(-1)=1\), and the coefficient determinant of the two linear
+polynomials \(Q=(1+\rho cz)/(\rho-1)\) and
+\(R=(1+cz)/((\rho-1)c)\) is \(-1/(\rho-1)\ne0\).
+Thus the entire limiting coefficient matrix is nonsingular. This proves
+generic binary independence for every odd \(m\), with a nonzero
+leading determinant of order \(\delta^{2m-2}\) before the difference
+columns were rescaled. It is a Laurent determinant argument, rather
+than an inference from stacked jets.
+
+For even \(m\), both baseline quotient classes vanish in this
+coalescence. That fact alone does not prove a generic even-length
+deficiency. Exact finite checks in `exploration/binary_laurent.py`
+and `exploration/binary-laurent-results.json` give ranks
+\(2,2,6,6,10,10\) for \(m=1,\ldots,6\), using
+\(\rho=2,-1\) and \(c_i=i\) or \(2^{i-1}\). Their even-length
+baseline remainders are zero; their odd-length remainders are precisely
+\(Q_m,R_m\). These are evidence for a stronger parity identity,
+not yet a proved general even-length statement. The \(m=2\)
+deficiency above is already proved symbolically.
+
+The exact binary kernel can also guide a correction away from the
+boundary. At \(m=2\), write \(A_{12}=P_{12}(1,2)\) and
+\(B_{12}=z(1-P_{12}(2,2))\), and similarly for the reverse word.
+The two constant relations at \(X_0=0\) are
+
+\[
+ A_{12}-A_{21}-c_2B_{12}+c_1B_{21}=0,
+\]
+\[
+ c_1A_{12}-c_2A_{21}
+       -\rho c_1c_2B_{12}+\rho c_1c_2B_{21}=0.
+\]
+
+Differentiating these relations gives candidates for the two lost
+directions on each new line. A complete Schur derivative must also
+differentiate the inverse-matrix row functional, the chosen line
+coordinates, and the scalar normalizations, or prove their contributions
+vanish in the quotient. No such complete derivative determinant has been
+established here. The rank-two boundary obstruction must not be promoted
+to singularity of the generic shared-\(N\) polar half.
+
+## Additional finite degeneration diagnostics
+
+The sparse and absorbing computations are recorded separately in the
+exploration scripts and results. Normalized sparse evaluations did not
+provide a full witness. In the absorbing chart, the subsequent
+first-order experiment used the constant kernel \(N\) of the zeroth
+evaluation matrix \(M_0\), and tested
+\([M_{0,\mathrm{pivot}},M_1N]\), explicitly verifying
+\(M_0N=0\). This is the relevant column elimination, rather than
+stacking \(M_0\) and \(M_1\).
+
+For the tested independent and economic time factors, \(n=2\) had
+zeroth rank 16 and full first-order rank 24; \(n=3\) had zeroth rank
+31 and first-order rank 51 out of 63. These finite evaluation results
+are in `exploration/absorbing-firstjet-results.json`. The latter case
+does not furnish the required first-order witness. The tests do not
+establish a universal rank upper bound, rule out higher-order excursions,
+or prove an all-length source determinant. The exact identities and the
+odd-length binary nonvanishing proof above remain separate from these
+finite diagnostics.

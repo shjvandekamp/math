@@ -25,12 +25,16 @@ recorded in VERIFICATION.md.
 | Explicit generic economic region for every T | Conic witness, polynomial nonvanishing factors and analyticity | Lean checked: EconomicFamily, GeneralConicWitness, StructuralGenericity |
 | Arbitrary-T actual moment dimension | Structural span theorem and economic region | Lean checked: StructuralCompleteness; StructuralCheck axiom audit passed |
 | General permutation moments and exact equation-(24) family validity | Actual transformed-chain marginal identities and canonical sorted orders | Lean checked: PermutationMoments, SourceFamily |
-| Indicator lifts preserve validity and independence | Conditioning on the first outcome and disjoint supports | Lean checked: MomentLifts; exact source-index lift identification remains open |
+| Indicator lifts preserve validity and independence | Conditioning on the first outcome and disjoint supports | Lean checked: MomentLifts |
 | Exact canonical index count for every T>=3 | Forced-prefix shared-set classification and finite counting | Lean checked: SourceCounting; count alone does not establish independence |
+| Actual source-index and moment-function recursion | Shared-slot insertion, canonical order transport, and first-scale cancellation | Lean checked: PermutationLifts, SourceRecursion, SourceLifts |
+| Exact empty/singleton coordinates for every new index | Omitted-zero shared-set classification and explicit inverse constructors | Lean checked: SourceNewIndices |
+| Conditional induction from shorter families and new images | Actual tail-expectation kernel and index partition | Lean checked: SourceConditional; new-image independence is an explicit unresolved hypothesis |
 | Quotient reduction to a quadratic-size residue determinant | Conditional sums, line residues and local-pair coordinates | Mathematical derivation in research/SOURCE24_INDUCTION.md; not Lean checked |
 | Arbitrary-T independence of the source’s particular family | A separate argument beyond dimension | Open; not claimed by the structural theorem |
 
-No missing obligation is replaced by an assumption encoding its desired
-conclusion. The external integer coefficient certificates remain discovery
+Neither accepted main theorem assumes a missing rank or independence result.
+The continuation's induction criterion is explicitly conditional and is not
+an arbitrary-period source-basis theorem. The external integer coefficient certificates remain discovery
 evidence; the finite Lean theorem uses independently checked evaluation
 certificates instead.

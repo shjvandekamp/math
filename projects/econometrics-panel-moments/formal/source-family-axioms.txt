@@ -19,6 +19,35 @@ PanelMoments.SourceCounting.card_sourceIndex_succ {N : ℕ} (hN : 2 ≤ N) :
     3 * Fintype.card (PanelMoments.SourceFamily.SourceIndex N) + 3 * N * (3 * N - 2)
 PanelMoments.SourceCounting.five_period_source_count : Fintype.card (PanelMoments.SourceFamily.SourceIndex 4) = 162
 PanelMoments.SourceCounting.six_period_source_count : Fintype.card (PanelMoments.SourceFamily.SourceIndex 5) = 606
+PanelMoments.SourceRecursion.indexRecursionEquiv (N : ℕ) :
+  PanelMoments.SourceRecursion.ZeroIndex N ≃ PanelMoments.State 2 × PanelMoments.SourceFamily.SourceIndex N
+PanelMoments.SourceLifts.sourceMoment_liftIndex {N : ℕ} {A : PanelMoments.Table 2} (hA : PanelMoments.PositiveTable A)
+  (r a : PanelMoments.State 2) (i : PanelMoments.SourceFamily.SourceIndex N) :
+  PanelMoments.SourceFamily.sourceMoment A r (PanelMoments.SourceRecursion.liftIndex a i) =
+    PanelMoments.MomentLifts.firstStateLift a (PanelMoments.SourceFamily.sourceMoment (PanelMoments.shift A) a i)
+PanelMoments.SourceLifts.linearIndependent_zeroIndex {N : ℕ} {A : PanelMoments.Table 2}
+  (hA : PanelMoments.PositiveTable A) (r : PanelMoments.State 2)
+  (hshort :
+    ∀ (a : PanelMoments.State 2),
+      LinearIndependent ℝ (PanelMoments.SourceFamily.sourceMoment (PanelMoments.shift A) a)) :
+  LinearIndependent ℝ fun i => PanelMoments.SourceFamily.sourceMoment A r ↑i
+PanelMoments.SourceNewIndices.newIndexEquiv {N : ℕ} (hN : 2 ≤ N) :
+  PanelMoments.SourceNewIndices.NewIndex N ≃
+    Fin N × PanelMoments.State 2 ⊕ (t : Fin N) × { s // s ≠ t } × PanelMoments.State 2 × PanelMoments.State 2
+PanelMoments.SourceNewIndices.card_newIndex {N : ℕ} (hN : 2 ≤ N) :
+  Fintype.card (PanelMoments.SourceNewIndices.NewIndex N) = 3 * N + 9 * N * (N - 1)
+PanelMoments.SourceConditional.mem_ker_conditionalTail_iff {Q T : ℕ} (A : PanelMoments.Table Q)
+  (m : PanelMoments.Path Q (T + 1) → ℝ) :
+  m ∈ (PanelMoments.SourceConditional.conditionalTail A).ker ↔
+    ∀ (a : PanelMoments.State Q), PanelMoments.IsMoment (PanelMoments.shift A) T a fun z => m (Fin.cons a z)
+PanelMoments.SourceConditional.linearIndependent_source_of_conditional {N : ℕ} {A : PanelMoments.Table 2}
+  (hA : PanelMoments.PositiveTable A) (r : PanelMoments.State 2)
+  (hshort :
+    ∀ (a : PanelMoments.State 2), LinearIndependent ℝ (PanelMoments.SourceFamily.sourceMoment (PanelMoments.shift A) a))
+  (hnew :
+    LinearIndependent ℝ fun i =>
+      (PanelMoments.SourceConditional.conditionalTail A) (PanelMoments.SourceFamily.sourceMoment A r ↑i)) :
+  LinearIndependent ℝ (PanelMoments.SourceFamily.sourceMoment A r)
 'PanelMoments.PermutationMoments.likelihood_prefix_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PanelMoments.PermutationMoments.scaleRatio_mul_likelihood' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PanelMoments.PermutationMoments.sharedPrefix_weightedChain_sum' depends on axioms: [propext,
@@ -53,3 +82,64 @@ PanelMoments.SourceCounting.six_period_source_count : Fintype.card (PanelMoments
 'PanelMoments.SourceCounting.card_sourceIndex_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PanelMoments.SourceCounting.five_period_source_count' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PanelMoments.SourceCounting.six_period_source_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PermutationLifts.originalScale_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PermutationLifts.transformedScale_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PermutationLifts.sourceNumerator_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PermutationLifts.sourceMoment_prepend' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.sharedLiftEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.firstSlot_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.secondSlotLiftEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.sort_liftRaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.sharedSlot_lift_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.sharedSlot_lift_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.labelLiftEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.liftLabels_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.liftLabels_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.indexRecursionEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.liftIndex_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.liftIndex_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.exists_unique_liftIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRecursion.card_zeroIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.remaining_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.coreList_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.coreOrder_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.appendLast_prependFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.firstOrder_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.secondOrder_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.prefixVector_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.permutationSourceMoment_cast' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.sourceMoment_liftIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLifts.linearIndependent_zeroIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.firstSlot_newIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.shared_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.sharedSlot_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.emptyIndex_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.singletonIndex_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.emptyIndex_ne_singletonIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.parameterIndex_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.newIndexEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.newIndexEquiv_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.newIndexEquiv_singleton' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.newIndex_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceNewIndices.card_newIndex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConditional.conditionalTail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConditional.conditionalTail_eq_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConditional.mem_ker_conditionalTail_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConditional.conditionalTail_firstStateLift_apply' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConditional.conditionalTail_firstStateLift_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConditional.conditionalTail_liftIndex_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConditional.conditionalTail_zeroIndex_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConditional.linearIndependent_source_of_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConditional.linearIndependent_source_of_newParameters' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

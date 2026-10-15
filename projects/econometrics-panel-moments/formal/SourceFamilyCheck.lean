@@ -1,6 +1,9 @@
 import PanelMoments.SourceFamily
 import PanelMoments.MomentLifts
 import PanelMoments.SourceCounting
+import PanelMoments.SourceLifts
+import PanelMoments.SourceNewIndices
+import PanelMoments.SourceConditional
 
 /- This checks general validity, lifts and index counts, not source independence. -/
 
@@ -12,6 +15,13 @@ import PanelMoments.SourceCounting
 #check PanelMoments.SourceCounting.card_sourceIndex_succ
 #check PanelMoments.SourceCounting.five_period_source_count
 #check PanelMoments.SourceCounting.six_period_source_count
+#check PanelMoments.SourceRecursion.indexRecursionEquiv
+#check PanelMoments.SourceLifts.sourceMoment_liftIndex
+#check PanelMoments.SourceLifts.linearIndependent_zeroIndex
+#check PanelMoments.SourceNewIndices.newIndexEquiv
+#check PanelMoments.SourceNewIndices.card_newIndex
+#check PanelMoments.SourceConditional.mem_ker_conditionalTail_iff
+#check PanelMoments.SourceConditional.linearIndependent_source_of_conditional
 
 example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferInstance
 
@@ -43,3 +53,52 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceCounting.card_sourceIndex_succ
 #print axioms PanelMoments.SourceCounting.five_period_source_count
 #print axioms PanelMoments.SourceCounting.six_period_source_count
+#print axioms PanelMoments.PermutationLifts.originalScale_cons
+#print axioms PanelMoments.PermutationLifts.transformedScale_prepend
+#print axioms PanelMoments.PermutationLifts.sourceNumerator_prepend
+#print axioms PanelMoments.PermutationLifts.sourceMoment_prepend
+#print axioms PanelMoments.SourceRecursion.sharedLiftEquiv
+#print axioms PanelMoments.SourceRecursion.firstSlot_lift
+#print axioms PanelMoments.SourceRecursion.secondSlotLiftEquiv
+#print axioms PanelMoments.SourceRecursion.sort_liftRaw
+#print axioms PanelMoments.SourceRecursion.sharedSlot_lift_zero
+#print axioms PanelMoments.SourceRecursion.sharedSlot_lift_succ
+#print axioms PanelMoments.SourceRecursion.labelLiftEquiv
+#print axioms PanelMoments.SourceRecursion.liftLabels_zero
+#print axioms PanelMoments.SourceRecursion.liftLabels_succ
+#print axioms PanelMoments.SourceRecursion.indexRecursionEquiv
+#print axioms PanelMoments.SourceRecursion.liftIndex_apply
+#print axioms PanelMoments.SourceRecursion.liftIndex_injective
+#print axioms PanelMoments.SourceRecursion.exists_unique_liftIndex
+#print axioms PanelMoments.SourceRecursion.card_zeroIndex
+#print axioms PanelMoments.SourceLifts.remaining_lift
+#print axioms PanelMoments.SourceLifts.coreList_lift
+#print axioms PanelMoments.SourceLifts.coreOrder_lift
+#print axioms PanelMoments.SourceLifts.appendLast_prependFirst
+#print axioms PanelMoments.SourceLifts.firstOrder_lift
+#print axioms PanelMoments.SourceLifts.secondOrder_lift
+#print axioms PanelMoments.SourceLifts.prefixVector_lift
+#print axioms PanelMoments.SourceLifts.permutationSourceMoment_cast
+#print axioms PanelMoments.SourceLifts.sourceMoment_liftIndex
+#print axioms PanelMoments.SourceLifts.linearIndependent_zeroIndex
+#print axioms PanelMoments.SourceNewIndices.firstSlot_newIndex
+#print axioms PanelMoments.SourceNewIndices.shared_card_le_one
+#print axioms PanelMoments.SourceNewIndices.sharedSlot_singleton
+#print axioms PanelMoments.SourceNewIndices.emptyIndex_injective
+#print axioms PanelMoments.SourceNewIndices.singletonIndex_injective
+#print axioms PanelMoments.SourceNewIndices.emptyIndex_ne_singletonIndex
+#print axioms PanelMoments.SourceNewIndices.parameterIndex_surjective
+#print axioms PanelMoments.SourceNewIndices.newIndexEquiv
+#print axioms PanelMoments.SourceNewIndices.newIndexEquiv_empty
+#print axioms PanelMoments.SourceNewIndices.newIndexEquiv_singleton
+#print axioms PanelMoments.SourceNewIndices.newIndex_cases
+#print axioms PanelMoments.SourceNewIndices.card_newIndex
+#print axioms PanelMoments.SourceConditional.conditionalTail
+#print axioms PanelMoments.SourceConditional.conditionalTail_eq_zero_iff
+#print axioms PanelMoments.SourceConditional.mem_ker_conditionalTail_iff
+#print axioms PanelMoments.SourceConditional.conditionalTail_firstStateLift_apply
+#print axioms PanelMoments.SourceConditional.conditionalTail_firstStateLift_eq_zero
+#print axioms PanelMoments.SourceConditional.conditionalTail_liftIndex_eq_zero
+#print axioms PanelMoments.SourceConditional.conditionalTail_zeroIndex_eq_zero
+#print axioms PanelMoments.SourceConditional.linearIndependent_source_of_conditional
+#print axioms PanelMoments.SourceConditional.linearIndependent_source_of_newParameters

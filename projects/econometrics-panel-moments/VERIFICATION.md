@@ -99,15 +99,17 @@ The active source-family continuation has a separate, smaller verifier:
 LEAN_BIN=/path/to/lean-4.34.1/bin ./verify-source-family.sh --clean
 ```
 
-It checks the exact general family, universal moment validity, the first-state
-lift lemmas, and the cardinality of the actual canonical index type. It does
-not assert source-family independence or validate the new external rank
+It checks the exact general family, universal moment validity, exact source
+recursion, the cardinality and empty/singleton parameterization of the actual
+indices, and the conditional-tail induction criterion. It does not discharge
+the criterion's new-image independence hypothesis or validate the external rank
 certificates. Its independent statement review is in
-[SOURCE24_FOUNDATIONS_AUDIT.md](reviews/SOURCE24_FOUNDATIONS_AUDIT.md).
+[SOURCE24_FOUNDATIONS_AUDIT.md](reviews/SOURCE24_FOUNDATIONS_AUDIT.md) and
+[SOURCE24_RECURSION_AUDIT.md](reviews/SOURCE24_RECURSION_AUDIT.md).
 The original two-theorem `verify.sh` entry point is unchanged.
 
-The continuation verifier passed its clean eight-module rebuild and all
-28 axiom checks with exit zero. Evidence:
+The continuation verifier passed its clean 13-module rebuild and all
+77 axiom checks with exit zero. Evidence:
 [source-family-clean-build.log](formal/source-family-clean-build.log) and
 [source-family-axioms.txt](formal/source-family-axioms.txt). The only diagnostic
 was an existing stylistic linter warning in `BasisCertificate.lean`.

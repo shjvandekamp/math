@@ -49,12 +49,35 @@ The research argument and precise remaining nonvanishing problem are in
 permutation-moment validity, the exact canonical three-choice family and
 indicator-lift validity/independence now compile in separate Lean modules.
 The actual source index cardinality is also proved for every T>=3, including
-its recurrence and the totals 162 and 606. The dedicated verifier rebuilt
-all eight modules in this closure and checked 28 declarations; its axiom
-checks report only the three permitted foundational axioms. Evidence is in
+its recurrence and the totals 162 and 606. The exact inherited-index bijection,
+canonical order transport, and equality of source functions with shorter
+indicator lifts are now proved. Every non-inherited index has explicit empty
+or singleton coordinates. The actual conditional-tail expectation map has
+the expected kernel, and Lean proves that shorter-family independence plus
+independence of the new conditional images implies full source independence.
+That last hypothesis remains unresolved; the tail-map normalization to the
+research note's rational images is also not yet formalized.
+
+The dedicated verifier rebuilt all 13 modules in this closure and checked
+77 declarations; its axiom checks report only the three permitted foundational
+axioms. Evidence is in
 `formal/source-family-clean-build.log` and `formal/source-family-axioms.txt`,
-with independent statement review in `reviews/SOURCE24_FOUNDATIONS_AUDIT.md`.
-These results do not establish independence of the additional source rows.
+with independent statement reviews in `reviews/SOURCE24_FOUNDATIONS_AUDIT.md`
+and `reviews/SOURCE24_RECURSION_AUDIT.md`. These results do not establish
+independence of the additional source rows.
+
+Further exact discovery separates identities from rank evidence. The
+coalescent triangle and grid identities match direct rational series checks;
+their nonzero curvature is not a full determinant. The tested constant-time
+and normalized sparse witnesses give deficient modular evaluation matrices.
+For the absorbing-state degeneration, a legitimate first-jet elimination
+reaches full rank at n=2 but only 51 of 63 columns at n=3. A binary Laurent
+subproblem gives ranks 2,2,6,6,10,10 at m=1,...,6 in the tested rational
+specializations; its m=2 deficiency is also established symbolically. These
+diagnostics are external calculations. The research note additionally proves
+generic full rank of that auxiliary binary Laurent family for every odd m
+by a nonzero leading determinant. This partial mathematical result is not
+Lean formalized and does not settle the three-choice determinant.
 
 ## Finite theorem
 
@@ -121,8 +144,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    and the development host's resource limits.
 2. **Prove the particular source-family basis for arbitrary panel length.**
    The general-T indexing, validity and cardinality are now formalized.
-   Next prove the exact recursive index bijection and source-lift equality,
-   formalize the quotient/residue reduction, and prove nonvanishing of its
+   The exact recursive index bijection, source-lift equality, new-index
+   parameterization, and conditional induction criterion are now proved.
+   Next formalize the joint-map normalization and quotient/residue formulas,
+   then prove nonvanishing of the remaining
    determinant on the economic family for every T. The remaining Schur
    complement has size 18(T−3); its nonvanishing is not assumed by any
    completed theorem. Combine independence with the proved moment-space
