@@ -248,6 +248,74 @@ evaluations of the two zero rows and the nonzero single-pole row. The primary
 researcher reviewed the implementation. These checks do not replace the
 paper argument or constitute Lean verification.
 
+## Appending a block separates the three missing residue directions
+
+Write d_t=p_r−p_s for each positive cyclic order and set
+
+\[
+ h=\sum_{\mathrm{cyc}(t,s,r)}d_t
+       \left(\frac{p_t^2X_0}{L_{t0}}
+             -\frac{k^2p_t\Pi X_2}{L_{t2}}\right). \tag{C12}
+\]
+
+The prefix and completed calculations above give
+T1=S1=h X2 e2 and T2=S2=−h X0 e0/Pi. For the third,
+C11 implies S3·1=−h X1, after cancelling the same two polynomial
+cyclic sums used in C7. Hence T3=−h X1 e1. The rational function h
+is nonzero: its residue at L_t0 is d_t p_t² X0.
+
+Append a fourth block K4. For interior labels the actual source identity is
+F^(4)=F^(3)K4+I_prefix(I−K4). Let G_j denote the three combinations
+with the unchanged constant coefficient vectors C6. Normalize them as
+C0=Pi G2, C1=G3, C2=−G1. Then
+
+\[
+ C_0=hX_0e_0(K_4-I),\qquad
+ C_1=R^{(3)}+hX_1e_1(K_4-I),\qquad
+ C_2=hX_2e_2(K_4-I). \tag{C13}
+\]
+
+The extra R3 term has only old single poles. At an old/new intersection
+(i,(4,j)), the double residue of column C_c is therefore
+
+\[
+ \delta_{cj}\,\operatorname{Res}_{L_i}(h)X_jv_{4j}. \tag{C14}
+\]
+
+Fix any old state-zero line L_t0. Its h residue is nonzero at all three
+admissible crossings with new lines, and the three columns in C14 have
+disjoint new-state support. Thus these three terminal profiles are
+independent. For a conic fourth block, write z_j=q_4j and use
+P_j=(p_t z_j,−p_t−z_j,1). In the new numerator-vector coordinate, the
+three diagonal pivots are
+
+\[
+ d_t p_t^4z_0^2,\quad -d_t p_t^3z_1(p_t+z_1),\quad
+ d_t p_t^3z_2;
+ \qquad \det=-d_t^3p_t^{10}z_0^2z_1z_2(p_t+z_1)\ne0. \tag{C15}
+\]
+
+At a generic old conic point with rank O3=51, the old/old rows of the
+appended 54-column subfamily are the original residues followed by right
+multiplication by K4 at each node. These matrices are invertible and
+preserve the zero-sum plane. Their coefficient kernel is exactly the
+three C6 vectors, on which C14 is injective. Consequently the 54 interior
+columns become independent after one admissible appended block. Further
+appended blocks preserve this argument: old and first-appended pair
+residues are multiplied by the invertible remaining suffix.
+
+There is a separate consequence before appending. A relation among the
+54 raw completed rows Qhat3 must lie in that same three-dimensional
+residue kernel. Its three possible images are h X2 e2, −h X0 e0/Pi,
+and −h X1 e1, which are independent. Thus those raw completed rows
+already have rank 54 at a generic three-block conic point.
+
+An independent Astra researcher derived C12–C15 and a separate reviewer
+checked the signs, the extra R3 term, and both rank deductions. These
+results concern the interior subfamily and raw completed rows. They do
+not prove independence of the new boundary columns or the full enlarged
+source family.
+
 The remaining conic question is uniform nonvanishing for \(m\ge4\).
 The three-block generic nonvanishing witness for the unrestricted common-G
 family uses a perturbation off the conic. Thus the conic obstruction does

@@ -262,6 +262,11 @@ with the saved minor they establish generic residue rank 51, and generic
 rank 52 for the 54 shared rational rows, on this special family. These are
 paper results, not Lean theorems or counterexamples to general common-G
 independence. A uniform proof from four blocks onward remains open.
+An exact terminal calculation further shows that appending one admissible
+block restores independence of these 54 interior residue columns. Their
+three missing directions occupy three separate new-state sectors. The 54
+raw completed three-block rows are already independent. Neither statement
+settles the new boundary columns of the full enlarged family.
 
 The audited [directed residue reduction](research/SOURCE24_DIRECTED_ELIMINATION.md)
 turns the difference operator into outgoing-edge sums and removes 3m
@@ -275,7 +280,14 @@ gives the exact component-two incoming quotient representative, a conditional
 regular-limit criterion with saturation, and explicit terminal extraction.
 The terminal formula extracts interior source coefficients, but the full
 quotient has a further 18q−3 boundary directions, for m=q+1. Controlling
-their action remains open; the interior formula alone is insufficient.
+their quotient contribution remains open; the interior formula alone is
+insufficient. Their extraction values and those of native seed components
+are now explicit. A boundary-retaining exact sequence separates the
+remaining quotient into dimensions 6+h and 6q−h, where h is the still
+unresolved all-length rank of the boundary extraction matrix. Exact finite
+minors give h=6q at q=2,3,4, with an independent q=3 fixture. Thus all
+extraction outputs are already spanned by the boundary there, and the
+remaining 6m quotient dimensions require the other part of the elimination.
 
 ## Finite theorem
 

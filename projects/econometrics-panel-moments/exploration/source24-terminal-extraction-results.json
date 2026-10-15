@@ -1,0 +1,4047 @@
+{
+  "status": "Exact finite-field actual-source terminal-extraction checks and boundary ranks; no all-length theorem.",
+  "formulas": "N6 actual transformed residues; N7 interior and full long-empty rows; N10 analytically cancelled raw residues; N12/N13 actual boundary extraction; N14/N15 native seed components; N16 binary cancellation.",
+  "cancellation": "Matching Xc is removed before evaluation. Native c=d=0 values are independently checked with order-two actual source jets against matching-divided conjugate-word first jets.",
+  "limitations": "Ranks are at the stated fixtures. No native independence modulo the full boundary span or flat limit, and no incoming or all-length independence, is inferred. Nonzero modular minors lift after denominator clearing; modular deficiencies alone do not give rational upper bounds.",
+  "elapsed_seconds": 1.683374292,
+  "maximum_rss_bytes": 21692416,
+  "bounded_limitation": null,
+  "cases": [
+    {
+      "q": 2,
+      "m": 3,
+      "time_fixture": "economic",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ]
+      ],
+      "geometry": {
+        "normalized_first_coefficients_equal_one": true,
+        "all_line_coefficients_nonzero": true,
+        "distinct_old_lines": true,
+        "all_pair_coordinates_nonzero_including_same_block": true,
+        "no_unintended_three_line_points": true,
+        "every_coordinate_edge_point_is_on_only_its_matching_line": true
+      },
+      "actual_source_geometry": {
+        "cross_line_points": 27,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "terminal_coefficient_inverse": {
+        "size": 3,
+        "determinant_mod_prime": 390580,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "18e1dd3fcb7c03b98220dcd93aad56476c18579a4317af7f8617bd099842a754"
+      },
+      "checks": {
+        "source_matching_divisions": 324,
+        "empty_matching_divisions": 54,
+        "analytic_source_g_vectors_checked": 972,
+        "analytic_empty_g_vectors_checked": 162,
+        "native_second_order_residue_checks": 216,
+        "native_double_zero_cancellations": 24,
+        "native_E_formula_checks": 216,
+        "interior_N7_entries": 324,
+        "long_empty_N7_entries": 108,
+        "native_J_sum_entries": 108,
+        "all_source_N12_entries": 972
+      },
+      "all_N13_boundary_entries_verified": true,
+      "N13_entries_checked": 594,
+      "native_N16_verified": true,
+      "actual_source_matrix": {
+        "rows": 54,
+        "columns": 54,
+        "sha256": "a6956189882b6b284c451a7b7db613ae836d32dfa6d51a0736cc2d3d8fb640cd",
+        "rank_certificate": {
+          "rank": 54,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 54,
+            "rows": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              5,
+              3,
+              1,
+              9,
+              7,
+              11,
+              15,
+              13,
+              17,
+              18,
+              24,
+              30,
+              21,
+              25,
+              31,
+              19,
+              26,
+              32,
+              27,
+              28,
+              29,
+              20,
+              23,
+              22,
+              33,
+              34,
+              35,
+              36,
+              37,
+              39,
+              38,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              53,
+              52,
+              50,
+              51
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53
+            ],
+            "determinant_mod_prime": 988215,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 11788
+        }
+      },
+      "actual_source_invertible_at_fixture": true,
+      "boundary_generator_count": 33,
+      "boundary_source_coefficients": {
+        "rows": 54,
+        "columns": 33,
+        "sha256": "93238a91c793779ba70438eea725557200e2595f627476d25581b11df60add0b",
+        "rank_certificate": {
+          "rank": 33,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 33,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              48,
+              51,
+              46,
+              49,
+              52
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ],
+            "determinant_mod_prime": 1000002,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "actual_boundary_pair_matrix_sha256": "30662ace243a27d44cee9a63daec808456458c285bd8aeec1294343ff76814fd",
+      "boundary_binary_extraction": {
+        "rows": 12,
+        "columns": 33,
+        "sha256": "f6e50d0b5e5499fbc733c3b29aef1827cd99abb37cd2826d04e86c50a142d4d9",
+        "rank_certificate": {
+          "rank": 12,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 12,
+            "rows": [
+              0,
+              1,
+              6,
+              3,
+              2,
+              7,
+              4,
+              5,
+              8,
+              9,
+              10,
+              11
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "determinant_mod_prime": 42005,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "boundary_binary_rank": 12,
+      "binary_output_dimension": 12,
+      "boundary_binary_cokernel_dimension": 0,
+      "native_component_one_binary_extraction": {
+        "rows": 12,
+        "columns": 6,
+        "sha256": "df2847d6da313552409eaedb1499f02b3238d266de9a78e4bc475bfbca0c0000",
+        "rank_certificate": {
+          "rank": 6,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 6,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "determinant_mod_prime": 25267,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "native_component_two_binary_sha256": "577c194e29174f74e5a3e609b0168d239c0e669719eb335ee0dad72547bc3e9a",
+      "quotient_outer_dimensions_if_source_independent": [
+        18,
+        0
+      ],
+      "extraction_source_sha256": "87fce3707339fce7b0e570f4d53cb70d59edb945c4f73da03296de536bd165d0",
+      "extraction_empty_sha256": "60bfd045e3d6fb38ff6697c28ac0e707feaa55ab9b4962f4ebaf4b893617ec1f",
+      "binary_output_labels": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ]
+      ],
+      "boundary_generator_labels": [
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 0
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 1
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 2
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 0
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 1
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 2
+        }
+      ],
+      "old_seed_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "elapsed_seconds": 0.089667042
+    },
+    {
+      "q": 3,
+      "m": 4,
+      "time_fixture": "economic",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ]
+      ],
+      "geometry": {
+        "normalized_first_coefficients_equal_one": true,
+        "all_line_coefficients_nonzero": true,
+        "distinct_old_lines": true,
+        "all_pair_coordinates_nonzero_including_same_block": true,
+        "no_unintended_three_line_points": true,
+        "every_coordinate_edge_point_is_on_only_its_matching_line": true
+      },
+      "actual_source_geometry": {
+        "cross_line_points": 54,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "terminal_coefficient_inverse": {
+        "size": 3,
+        "determinant_mod_prime": 976363,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "d6ffa64afce7bd7485555e4f11a76fe619625fab695b59d2beaab9b3ff233552"
+      },
+      "checks": {
+        "source_matching_divisions": 972,
+        "empty_matching_divisions": 108,
+        "analytic_source_g_vectors_checked": 2916,
+        "analytic_empty_g_vectors_checked": 324,
+        "native_second_order_residue_checks": 486,
+        "native_double_zero_cancellations": 54,
+        "native_E_formula_checks": 486,
+        "interior_N7_entries": 1458,
+        "long_empty_N7_entries": 243,
+        "native_J_sum_entries": 243,
+        "all_source_N12_entries": 2916
+      },
+      "all_N13_boundary_entries_verified": true,
+      "N13_entries_checked": 1377,
+      "native_N16_verified": true,
+      "actual_source_matrix": {
+        "rows": 108,
+        "columns": 108,
+        "sha256": "026a36f9e968de2e0823feb25476798d14e92d0da4dd53ac3f277c89101d53b1",
+        "rank_certificate": {
+          "rank": 108,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 108,
+            "rows": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              5,
+              3,
+              1,
+              9,
+              7,
+              11,
+              15,
+              13,
+              17,
+              18,
+              19,
+              20,
+              24,
+              25,
+              26,
+              30,
+              31,
+              32,
+              21,
+              28,
+              33,
+              22,
+              27,
+              34,
+              23,
+              29,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ],
+            "determinant_mod_prime": 679979,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 679979
+        }
+      },
+      "actual_source_invertible_at_fixture": true,
+      "boundary_generator_count": 51,
+      "boundary_source_coefficients": {
+        "rows": 108,
+        "columns": 51,
+        "sha256": "ee54389231040ea1915f26fc9f77b63e9c0eff3061618f7610998964dfd5b151",
+        "rank_certificate": {
+          "rank": 51,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 51,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              102,
+              105,
+              100,
+              103,
+              106
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50
+            ],
+            "determinant_mod_prime": 1000002,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "actual_boundary_pair_matrix_sha256": "f9538f1b3affbcb9fd1a2cf4da9706f545f5a857e596445e4ff5e6a67f5bd94b",
+      "boundary_binary_extraction": {
+        "rows": 18,
+        "columns": 51,
+        "sha256": "be2c008987df3bc233ef89e513bc55528f889313d0a04d29490b2f5d86e13d97",
+        "rank_certificate": {
+          "rank": 18,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 18,
+            "rows": [
+              0,
+              1,
+              6,
+              3,
+              2,
+              7,
+              4,
+              5,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "determinant_mod_prime": 873566,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "boundary_binary_rank": 18,
+      "binary_output_dimension": 18,
+      "boundary_binary_cokernel_dimension": 0,
+      "native_component_one_binary_extraction": {
+        "rows": 18,
+        "columns": 9,
+        "sha256": "842748db080065483a3e172ff5ba0b304adf874570a6fe7c0b79271128592e25",
+        "rank_certificate": {
+          "rank": 9,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 9,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "determinant_mod_prime": 791136,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "native_component_two_binary_sha256": "7cf5257307bed2006b46c8dba601218b869b9f742a0393cce6179f2e3a24c99e",
+      "quotient_outer_dimensions_if_source_independent": [
+        24,
+        0
+      ],
+      "extraction_source_sha256": "3e70f4e1c3f7e431d81a1114561481f49f334436d9698aa22ee293f5cb06e68c",
+      "extraction_empty_sha256": "2476179ae7b06c93a5a1c7e87582afd63782e82e1a7bdb8ef7229a7ae7544092",
+      "binary_output_labels": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ]
+      ],
+      "boundary_generator_labels": [
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 0
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 1
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 2
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 0
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 1
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 2
+        }
+      ],
+      "old_seed_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "elapsed_seconds": 0.33220324999999995
+    },
+    {
+      "q": 4,
+      "m": 5,
+      "time_fixture": "economic",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ],
+        [
+          32768,
+          1073741824
+        ]
+      ],
+      "geometry": {
+        "normalized_first_coefficients_equal_one": true,
+        "all_line_coefficients_nonzero": true,
+        "distinct_old_lines": true,
+        "all_pair_coordinates_nonzero_including_same_block": true,
+        "no_unintended_three_line_points": true,
+        "every_coordinate_edge_point_is_on_only_its_matching_line": true
+      },
+      "actual_source_geometry": {
+        "cross_line_points": 90,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "terminal_coefficient_inverse": {
+        "size": 3,
+        "determinant_mod_prime": 896359,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "8834cfa1064f91cd8f05dbea9f85ed771e1af3e72d52e7e5cd5af2bfd66304f0"
+      },
+      "checks": {
+        "source_matching_divisions": 2160,
+        "empty_matching_divisions": 180,
+        "analytic_source_g_vectors_checked": 6480,
+        "analytic_empty_g_vectors_checked": 540,
+        "native_second_order_residue_checks": 864,
+        "native_double_zero_cancellations": 96,
+        "native_E_formula_checks": 864,
+        "interior_N7_entries": 3888,
+        "long_empty_N7_entries": 432,
+        "native_J_sum_entries": 432,
+        "all_source_N12_entries": 6480
+      },
+      "all_N13_boundary_entries_verified": true,
+      "N13_entries_checked": 2484,
+      "native_N16_verified": true,
+      "actual_source_matrix": {
+        "rows": 180,
+        "columns": 180,
+        "sha256": "fc53b1220e88adb9e93b2c046874491cc28a97bac18cffde943adf4d0007faea",
+        "rank_certificate": {
+          "rank": 180,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 180,
+            "rows": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              5,
+              3,
+              1,
+              9,
+              7,
+              11,
+              15,
+              13,
+              17,
+              18,
+              19,
+              20,
+              24,
+              25,
+              26,
+              30,
+              31,
+              32,
+              21,
+              22,
+              23,
+              27,
+              28,
+              29,
+              33,
+              34,
+              35,
+              36,
+              42,
+              48,
+              39,
+              43,
+              49,
+              37,
+              44,
+              50,
+              45,
+              46,
+              47,
+              38,
+              41,
+              40,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179
+            ],
+            "determinant_mod_prime": 874535,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 874535
+        }
+      },
+      "actual_source_invertible_at_fixture": true,
+      "boundary_generator_count": 69,
+      "boundary_source_coefficients": {
+        "rows": 180,
+        "columns": 69,
+        "sha256": "406d0324b6431d3fc45b77febfed1768cc0ebc98b7f56f3698c0053426ac0592",
+        "rank_certificate": {
+          "rank": 69,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 69,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              174,
+              177,
+              172,
+              175,
+              178
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68
+            ],
+            "determinant_mod_prime": 1000002,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "actual_boundary_pair_matrix_sha256": "b2067b3b551d7183f4c5ccbf60c76de84fc027e94e6011412a790272a1f2d01e",
+      "boundary_binary_extraction": {
+        "rows": 24,
+        "columns": 69,
+        "sha256": "77fd4df40ad6ac09f93485c1fa3c9938a9c624486daf60ab848aae57735d317b",
+        "rank_certificate": {
+          "rank": 24,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 24,
+            "rows": [
+              0,
+              1,
+              6,
+              3,
+              2,
+              7,
+              4,
+              5,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            "determinant_mod_prime": 597566,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "boundary_binary_rank": 24,
+      "binary_output_dimension": 24,
+      "boundary_binary_cokernel_dimension": 0,
+      "native_component_one_binary_extraction": {
+        "rows": 24,
+        "columns": 12,
+        "sha256": "61388d3d76a4f85cb7b6351211be7d15824b4af3f104ddbd162ea0a429838445",
+        "rank_certificate": {
+          "rank": 12,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 12,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "determinant_mod_prime": 911359,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "native_component_two_binary_sha256": "42d0a695bffdb7675e8290f1ed38d45df4c66f7a2572b4350bac81eee7833749",
+      "quotient_outer_dimensions_if_source_independent": [
+        30,
+        0
+      ],
+      "extraction_source_sha256": "a8b3cc4460e70416f6a2d84d5fdf34ea914fe305a5505314616f363c95144fb6",
+      "extraction_empty_sha256": "050707e14cca8490970a1999467e826c196b005377502c7eb4fd7b66b06ae0d7",
+      "binary_output_labels": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          2
+        ],
+        [
+          5,
+          2,
+          1
+        ],
+        [
+          5,
+          2,
+          2
+        ]
+      ],
+      "boundary_generator_labels": [
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 5,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 5,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 0
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 1
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 2
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 0
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 1
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 2
+        }
+      ],
+      "old_seed_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "elapsed_seconds": 0.9387981249999999
+    },
+    {
+      "q": 3,
+      "m": 4,
+      "time_fixture": "independent",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          3271,
+          8209
+        ],
+        [
+          4787,
+          9815
+        ],
+        [
+          7749,
+          4464
+        ],
+        [
+          8787,
+          4365
+        ]
+      ],
+      "geometry": {
+        "normalized_first_coefficients_equal_one": true,
+        "all_line_coefficients_nonzero": true,
+        "distinct_old_lines": true,
+        "all_pair_coordinates_nonzero_including_same_block": true,
+        "no_unintended_three_line_points": true,
+        "every_coordinate_edge_point_is_on_only_its_matching_line": true
+      },
+      "actual_source_geometry": {
+        "cross_line_points": 54,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "terminal_coefficient_inverse": {
+        "size": 3,
+        "determinant_mod_prime": 906542,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "eee3f22131e62647122632783ea350b1b6162ab05f1262bfb905726ffda30168"
+      },
+      "checks": {
+        "source_matching_divisions": 972,
+        "empty_matching_divisions": 108,
+        "analytic_source_g_vectors_checked": 2916,
+        "analytic_empty_g_vectors_checked": 324,
+        "native_second_order_residue_checks": 486,
+        "native_double_zero_cancellations": 54,
+        "native_E_formula_checks": 486,
+        "interior_N7_entries": 1458,
+        "long_empty_N7_entries": 243,
+        "native_J_sum_entries": 243,
+        "all_source_N12_entries": 2916
+      },
+      "all_N13_boundary_entries_verified": true,
+      "N13_entries_checked": 1377,
+      "native_N16_verified": true,
+      "actual_source_matrix": {
+        "rows": 108,
+        "columns": 108,
+        "sha256": "94bad964e7926f649768e2162fe155f82a5327d55884ecff28a77083841276f4",
+        "rank_certificate": {
+          "rank": 108,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 108,
+            "rows": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              5,
+              3,
+              1,
+              9,
+              7,
+              11,
+              15,
+              13,
+              17,
+              18,
+              19,
+              20,
+              24,
+              25,
+              26,
+              30,
+              31,
+              32,
+              21,
+              28,
+              33,
+              22,
+              27,
+              34,
+              23,
+              29,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ],
+            "determinant_mod_prime": 4779,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 4779
+        }
+      },
+      "actual_source_invertible_at_fixture": true,
+      "boundary_generator_count": 51,
+      "boundary_source_coefficients": {
+        "rows": 108,
+        "columns": 51,
+        "sha256": "ee54389231040ea1915f26fc9f77b63e9c0eff3061618f7610998964dfd5b151",
+        "rank_certificate": {
+          "rank": 51,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 51,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              102,
+              105,
+              100,
+              103,
+              106
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50
+            ],
+            "determinant_mod_prime": 1000002,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "actual_boundary_pair_matrix_sha256": "21ffd5f090acc95e4f9275e46311bc75f9b33970feb479c83da9f717cce35086",
+      "boundary_binary_extraction": {
+        "rows": 18,
+        "columns": 51,
+        "sha256": "9d30d5e7e630c8ab3220fc8d3d12d6924fd61b6072684e53903de431c718def5",
+        "rank_certificate": {
+          "rank": 18,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 18,
+            "rows": [
+              0,
+              1,
+              6,
+              3,
+              2,
+              7,
+              4,
+              5,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "determinant_mod_prime": 501434,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "boundary_binary_rank": 18,
+      "binary_output_dimension": 18,
+      "boundary_binary_cokernel_dimension": 0,
+      "native_component_one_binary_extraction": {
+        "rows": 18,
+        "columns": 9,
+        "sha256": "7e38e119eff3bba36c293d5665ac6bbf337bfc5e4600b2d56965006915b32453",
+        "rank_certificate": {
+          "rank": 9,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 9,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "determinant_mod_prime": 318606,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "native_component_two_binary_sha256": "8b2b5061fd17a6d5fe8c6f8f9daa9365efbdc2620c9e141eec6875414a234392",
+      "quotient_outer_dimensions_if_source_independent": [
+        24,
+        0
+      ],
+      "extraction_source_sha256": "557642f7d35d9226d49969baa2dd971704a4a8c7fd26e33d2098ee76c5158dc4",
+      "extraction_empty_sha256": "0e65eb0661c7a41830761a4a3dfe12faa1eb1bb96a70ef5400fd29d89d859f11",
+      "binary_output_labels": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ]
+      ],
+      "boundary_generator_labels": [
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "old_shared_terminal_first_difference",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "terminal_shared_first_difference",
+          "s": 4,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 0
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 1
+        },
+        {
+          "kind": "terminal_shared_output_zero",
+          "a": 2
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 0
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 1
+        },
+        {
+          "kind": "terminal_long_empty",
+          "a": 2
+        }
+      ],
+      "old_seed_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "elapsed_seconds": 0.32187450000000006
+    }
+  ]
+}

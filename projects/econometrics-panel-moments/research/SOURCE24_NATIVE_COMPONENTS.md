@@ -153,3 +153,195 @@ first-slot differences involving the final block, final-block shared
 output-zero rows, and final-block long empty rows. N8 does not annihilate
 or control those directions. Their action on the native incoming classes,
 or on their flat limits, remains the unresolved step.
+
+## Extraction on the additional boundary directions
+
+Continue with m=q+1, q>=2. Write M=A_m^-1 and
+
+\[
+ \widetilde K_t=\operatorname{diag}(X)K_t\operatorname{diag}(X)^{-1}
+              =\operatorname{diag}(X_c/L_{tc})A_t.
+\]
+
+For an ordered word P, use tilde P for the product of the corresponding
+tilde kernels in the same order. For the raw completed row Qhat define,
+at each old line i=(u,c), u<=q,
+
+\[
+ g_i^{t,s,a,b}=\frac{\operatorname{Res}_{L_i}
+      (\widehat Q_{t,s,a,b}\operatorname{diag}(X)^{-1})}{X_c}.
+ \tag{N9}
+\]
+
+These rational rows have the explicit form
+
+\[
+ g_i^{t,s,a,b}=\begin{cases}
+ A_t(a,b)e_b\widetilde P_s^{\widehat t},&u=t,\ c=a,\\
+ 0,&u=t,\ c\ne a,\\
+ A_t(a,b)\dfrac{X_a}{L_{ta}}(\widetilde K_U)_{bc}
+                A_u(c,:)\widetilde K_V,
+      &u\ne t,\quad P_s^{\widehat t}=K_UK_uK_V.
+ \end{cases} \tag{N10}
+\]
+
+Empty words mean the identity. Indeed Qhat diag(X)^-1 equals
+A_t(a,b) X_a/L_ta e_b tilde P. At the shared pole, removing L_ta
+and dividing by Xc=Xa gives the first case. At another block,
+Res_Luc tilde K_u=Xc e_c^T A_u(c,:), giving the last case.
+Thus the matching factor has been removed before edge evaluation.
+
+For a collection of such rows set
+
+\[
+ \mathcal H_{i,b'}(g)=\frac1{A_u(c,b')}
+   \sum_{d=0}^2 A_m(d,b')[g_iM]_d(Q_{i,d}). \tag{N11}
+\]
+
+Every actual shared source then satisfies
+
+\[
+ \mathcal J_{i,b'}F_{t,s,a,b}
+ =\delta_{i,(t,a)}\delta_{b',b}-\mathcal H_{i,b'}(g^{t,s,a,b}).
+ \tag{N12}
+\]
+
+The incidence term is absent when t=m. The prefix contributes
+A_t(a,b) M_bd to E_(t,a),d; multiplication by A_m and division by
+A_t(a,b') gives the displayed Kronecker coefficient. The completed
+term contributes N11 with the minus sign. For interior sources its
+last tilde K_m satisfies tilde K_m M=diag(Xd/L_md). Consequently
+the d-component vanishes at Q_i,d, including d=c, recovering N7.
+
+For t<=q choose r(t)=min({1,...,q} minus {t}); for shared block m
+choose first slot 1. The additional generators of N beyond N_tail have
+the exact extraction values
+
+\[
+\begin{aligned}
+ \mathcal J(F_{t,m,a,b}-F_{t,r(t),a,b})
+   &=-\mathcal H(g^{t,m,a,b}),&&t\le q,\\
+ \mathcal J(F_{m,s,a,b}-F_{m,1,a,b})
+   &=-\mathcal H(g^{m,s,a,b}-g^{m,1,a,b}),&&2\le s\le q,\\
+ \mathcal J F_{m,1,a,0}&=-\mathcal H(g^{m,1,a,0}),\\
+ \mathcal J F_{m,a}&=-\sum_b\mathcal H(g^{m,1,a,b}).
+\end{aligned} \tag{N13}
+\]
+
+These hold for all extraction outputs; retain b'=1,2 for the binary
+restriction. The last line uses F_ma=E_ma+sum_b F_m1ab and J E_ma=0,
+because E_ma has no old-line pole. The counts are
+9q+9(q−1)+3+3=18q−3. Under final O_m invertibility these generators
+are independent modulo N_tail. Only A_m^-1, not an old-source inverse,
+occurs in these formulas.
+
+## Extraction on native seed components
+
+For an old seed U=U_tA, t<=q, and j=1,2, set
+R_i^[j]=Res_Li U_j/(X0 Xc Xj). These functions are regular at each
+coordinate-edge point; zero binary feedback supplies the extra zero at
+X0=0. Substitution in N6 gives
+
+\[
+ \mathcal E_{i,d}(\mathsf P_jU)
+ =\left[R_i^{[j]}(X_0M_{jd}-X_jM_{0d})\right]_{Q_{i,d}}, \tag{N14}
+\]
+
+and therefore
+
+\[
+ \mathcal J_{i,b'}(\mathsf P_jU)
+ =\frac1{A_u(c,b')}\sum_d A_m(d,b')
+   \left[R_i^{[j]}(X_0M_{jd}-X_jM_{0d})\right]_{Q_{i,d}}. \tag{N15}
+\]
+
+The formulas remain regular when d=c. N7 gives
+
+\[
+ \mathcal J_{\rm bin}(\mathsf P_1U)
+   =-\mathcal J_{\rm bin}(\mathsf P_2U). \tag{N16}
+\]
+
+These are extraction values, not classes modulo the additional boundary
+directions.
+
+## An exact quotient criterion retaining the boundary
+
+Put J=J_binary with 6q outputs. The selected interior source rows give
+the explicit right inverse L(e_(u,c,b))=F_(u,r(u),c,b), b=1,2, by N7.
+Since N_tail is contained in ker J, the map R to
+(JR,[R−LJR]) induces an isomorphism
+
+\[
+ \mathscr W_0/N_{\rm tail}\simeq K^{6q}\oplus\overline K,
+ \qquad \overline K=\ker J/N_{\rm tail}. \tag{N17}
+\]
+
+Here dim W0=9q²+12q+3 and dim N_tail=9q²−12q, so
+dim overline K=18q+3 and the full space in N17 has dimension 24q+3.
+Let b_1,...,b_(18q−3) be the generators in N13. Define
+
+\[
+ J_\partial x=J\sum_\ell x_\ell b_\ell,\qquad
+ K_\partial x=\left[\sum_\ell x_\ell b_\ell-\mathscr L J_\partial x\right].
+ \tag{N18}
+\]
+
+Then the actual quotient is
+
+\[
+ \mathscr W_0/N\simeq
+  (K^{6q}\oplus\overline K)/\operatorname{im}(J_\partial,K_\partial).
+ \tag{N19}
+\]
+
+The combined boundary map is injective by independence modulo N_tail.
+Writing h=rank J_partial, its second component is injective on
+ker J_partial. Projection onto the first factor gives the exact sequence
+
+\[
+ 0\longrightarrow\overline K/K_\partial(\ker J_\partial)
+ \longrightarrow\mathscr W_0/N
+ \longrightarrow K^{6q}/\operatorname{im}J_\partial\longrightarrow0.
+ \tag{N20}
+\]
+
+The two outer dimensions are 6+h and 6q−h, summing to 6m.
+Thus pivots in the explicit J_partial can organize the remaining incoming
+calculation into these two blocks. Its rank h is unresolved and may equal
+6q. No size improvement or incoming independence is asserted.
+
+An independent Astra researcher derived N9–N20 from the audited extraction
+formula; the primary researcher checked the conjugation, signs, native
+projection formula, and quotient dimension argument before integration.
+
+## Finite checks of the full boundary action
+
+`exploration/source24_terminal_extraction.py` compares actual transformed
+source residues with the independently cancelled conjugate-word formula
+at every old line and each coordinate edge. It verifies the interior
+extraction, full long-empty rows, all four boundary groups, and native
+component extraction. At c=d=0, independent second-order source jets
+check both vanishing factors before evaluation. The primary researcher
+reviewed the implementation.
+
+The saved `exploration/source24-terminal-extraction-results.json` records:
+
+| Old blocks q | Fixture | Boundary columns | Binary extraction rank |
+|---:|---|---:|---:|
+| 2 | economic | 33 | 12 / 12 |
+| 3 | economic | 51 | 18 / 18 |
+| 4 | economic | 69 | 24 / 24 |
+| 3 | independent time factors | 51 | 18 / 18 |
+
+All calculations are exact modulo 1,000,003, and the full actual source
+matrices are invertible in these fixtures. The successful bounded run
+took 1.683 seconds and about 20.7 MiB maximum RSS. The nonzero minors
+prove generic h=6q separately at these fixed lengths after clearing
+denominators. No uniform assertion about h is made.
+
+Here the boundary spans every binary extraction output, so the rightmost
+quotient in N20 is zero. All 6m remaining dimensions lie in the leftmost
+quotient. Thus these observations alone do not distinguish any full
+quotient direction at these fixtures; native incoming independence still
+requires the remaining boundary elimination.
