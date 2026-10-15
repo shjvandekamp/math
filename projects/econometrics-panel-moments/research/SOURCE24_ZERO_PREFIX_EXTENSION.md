@@ -1138,3 +1138,150 @@ The unresolved induction must construct additional actual relations
 after the scalar eliminations, or an equivalent coupled argument.
 Neither the full boundary gain nor the finite inherited-jet bases
 alone prove that assertion.
+
+### The actual scalar kernel loses three boundary endpoints
+
+There is a sharper statement than (ZP51) after imposing R2=0.
+In the chart X1=1, write X0=−wz, X2=z. Every old kernel tends
+to the state-1 reset matrix, and the new boundary kernel is constant.
+Its first two rows equal k=(−w,0,v)/(v−w). Every zero-prefix
+boundary row is analytic in z and has constant term
+\(\kappa(k-e_1)\): a completed word ending in an old block tends
+to e1, a word ending in the new block tends to k, and only state-1
+old prefixes can contribute a nonzero constant term. New-prefix
+output-1 terms vanish; the other new-prefix differences have zero
+constant term because both old tails reset to e1.
+
+If R2 is identically zero, k2=v/(v−w) forces kappa=0. Hence
+R1=O(z), and (ZP51) now implies
+
+\[
+ B_w(\ker p_2\text{ at the boundary})
+   \subseteq X_2^3\,\mathbb R[X_1,X_2]_{3q-1},
+ \qquad \operatorname{rank}\le3q.
+ \tag{ZP53}
+\]
+
+Thus the joint induction must recover three endpoint coefficients,
+not just the two excluded for arbitrary boundary rows.
+
+`source24_zero_prefix_joint_boundary.py` checks B_w at w=5 on the
+same original-coordinate boundary kernels used for Theta. It verifies
+cleared words without division, interpolation with six extra points,
+and a single stacked matrix for both maps. The saved highest coefficient
+row vanishes, consistently with (ZP53). It gives:
+
+| n | Boundary scalar rank | B_w on its kernel | [B_w; Theta] on the same kernel | Scalar plus both |
+| --- | ---: | ---: | ---: | ---: |
+| 4 | 57 | 9 | 18 | 75 |
+| 5 | 93 | 12 | 24 | 117 |
+| 6 | 138 | 15 | 30 | 168 |
+
+The stacked maps have zero row-space overlap at these fixtures. Their
+mixed minors are 605343,703342,563527 modulo 1,000,003. Combining the
+finite lower bounds with (ZP53) proves that the boundary auxiliary
+kernel rank is generically exactly 3q at these three lengths; it does
+not prove this for every q. The remaining joint target is respectively
+78,120,171. The main run took 1.011 seconds and 59,736,064 bytes RSS;
+the saved-coefficient follow-up checked the sharper zero row without
+rerunning evaluations or ranks. All data are in the corresponding
+`source24-zero-prefix-joint-boundary-results.json`.
+
+### Two endpoint lifts after the actual scalar projection
+
+The following lemmas are conditional on old scalar spanning and
+surjectivity of the inherited trace in (ZP37). Those hypotheses provide
+a full scalar basis at positive new u=epsilon: independent appended
+old columns, the 6q+3 new boundary columns, and 3q unscaled inherited
+kernel columns whose numerators begin at order epsilon. No uniform
+version of these hypotheses is inferred here.
+
+Define signed terminal incidences ell_t by the completed-word
+expansion of a zero-prefix row. At e1 only initial state 1 and shared
+state 1 survive. A completed word contributes the divided output
+values of its final transition, so, with
+a_t=1/(2u_t), b_t=v_t/(2u_t),
+
+\[
+ (R_0/X_0)(e_1)=\sum_t\ell_t a_t,
+ \qquad (R_2/X_2)(e_1)=\sum_t\ell_t b_t.
+ \tag{ZP54}
+\]
+
+All appended old zero-prefix rows have zero incidence: every term ends
+with n and their prefix weights cancel. Among the selected new columns
+only Astar1=sum_b C_1n^(1b) has nonzero incidence, namely e_n−e_q.
+All other A, B, M, T, E columns have zero incidence.
+
+First use C=C_nq^(11), with incidence e_q−e_(q−1). In its unique
+scalar expansion in the stated basis, evaluation at e1 forces the
+Astar1 coefficient to be
+kappa=(b_q−b_(q−1))/(b_n−b_q). Subtract the entire scalar expansion
+to obtain an actual row R with R2=0. With p_i=D_n R_i/X_i,
+
+\[
+ p_0(R)(e_1)=D_n(e_1)\frac{\Delta}{b_n-b_q},\qquad
+ \Delta=(b_n-b_q)(a_q-a_{q-1})-(a_n-a_q)(b_q-b_{q-1}).
+ \tag{ZP55}
+\]
+
+This is generically nonzero: a_n=1/(2epsilon), b_n=v/(2epsilon),
+and its leading coefficient in epsilon^(-1) is a nonzero rational
+function of v and the old times. For any scalar-zero R, zero row sum
+gives B_w=−p0|auxline/X1. Thus this corrected row has nonzero
+constant auxiliary endpoint, B_w(R)(e1)=−p0(R)(e1).
+
+For a second row take C=C_nq^(01). Let V=e1(P1−Pq) for old words.
+Exactly C=epsilon X0 X1 V/L_n0. Its scalar numerator begins with
+epsilon ell X0 tilde p_old, where p_old=D_q X1 V2/X2 is in the
+old scalar ambient. This coefficient belongs to the full boundary
+image: after removing ell, it satisfies the old conditions, the new
+tilde factor, and normalization at e2.
+
+In the scalar basis above, every coefficient of C is O(epsilon).
+To see this, divide the inherited kernel columns by epsilon: the
+limiting basis is independent because their ell traces complement
+the boundary image. The inverse has at most a simple pole in the
+unscaled basis. At order zero the boundary coefficients vanish;
+at order one, the ell trace of C's first coefficient is zero, forcing
+the unscaled jet coefficients' constant terms to vanish too.
+The Astar1 coefficient is exactly zero by (ZP54), since C has zero
+incidence and b_n−b_q is nonzero.
+
+Set
+\(J_x(R)=\partial_0(p_0-v^{-1}p_2)(e_1)\).
+For any appended old row, direct multiplication gives
+p0−p2/v=−D_q R2 L_n0 L_n1, so Jx=0 exactly. Among the other
+selected new basis columns only A_t1=C_tn^(10) and Astar0 can
+contribute Jx; their values are O(epsilon³). Their terminal new-block
+terms cancel because a_n−b_n/v=0. The other selected columns have
+a remaining X2 factor or at least two X0 factors after the output
+division. Direct calculation for C gives
+
+\[
+ J_x(C)=6D_q(e_1)\varepsilon^3
+       \left[(a_q-a_{q-1})-\frac{b_q-b_{q-1}}v\right].
+ \tag{ZP56}
+\]
+
+Its scalar projection changes this only at order epsilon^4, since
+all contributing projection coefficients are O(epsilon). The
+corrected scalar-zero row therefore retains a nonzero leading Jx.
+Its constant auxiliary endpoint is zero by its zero incidence.
+Its linear endpoint, in the chart X1=1, is
+w partial_0 p0(e1)−partial_2 p0(e1), which is nonzero for generic w:
+the row and its scalar-projection coefficients do not depend on w,
+and partial_0 p0=Jx is nonzero.
+
+These two corrected rows give
+
+\[
+ \operatorname{rank}(\text{constant and linear auxiliary endpoints
+ on the actual scalar kernel})=2
+ \tag{ZP57}
+\]
+
+under the stated scalar-basis hypotheses. Both lifts were checked
+independently against the actual source words. The quadratic endpoint
+and the uniform auxiliary body rank remain open. Separate body and
+endpoint ranks cannot be added without checking their common kernel.

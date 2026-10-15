@@ -428,8 +428,9 @@ boundary ambient. Combining this paper induction with the exact
 153-dimensional length-six base gives dim p2(N)>=3m²+45 for m>=6,
 leaving at most 3(m−6)(m+5)/2 dimensions. This still leaves uniform
 scalar spanning and source independence open. A naive induction for
-the joint restriction condition fails: both boundary restrictions and
-the canonical inherited first jets miss two endpoint coefficients.
+the joint restriction condition fails: arbitrary boundary restrictions
+miss two endpoint coefficients, and imposing the actual scalar kernel
+forces a third endpoint to vanish.
 The inherited second-order endpoint is already determined by the
 scalar trace, so a valid lift must retain that coupling.
 The new 6q+3 columns also pass exact coupled checks at q=2,3,4,5,
@@ -438,6 +439,15 @@ geometric-time fixture has matching-pole collisions and one fewer
 observed direction at q=4,5; those failures and their diagnosis are
 preserved alongside the successful fixed alternative in the
 source24-zero-prefix-boundary-extension files.
+The sharper auxiliary kernel bound is 3q. Exact coupled checks attain
+it at n=4,5,6, with ranks 9,12,15; stacking the splitting trace on the
+same kernel gives 18,24,30. These leave three joint endpoint directions.
+Two conditional paper lemmas now recover the constant and linear
+endpoints after the actual scalar projection. Their hypotheses are
+old scalar spanning and inherited trace surjectivity; they do not
+prove those hypotheses inductively. The quadratic endpoint and
+uniform auxiliary body spanning remain open, and their ranks must
+be combined on the same source kernel.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -612,10 +622,12 @@ silently assumed by either proved theorem, and no result below is claimed.
    criterion uniformly by retaining the joint old scalar map and
    its other-component restriction; the finite q=4,5 checks are
    bases to investigate, not an induction theorem.
-   A boundary induction for this joint invariant misses two endpoint
-   coefficients; its inherited higher jet is coupled to the scalar
-   trace. Find new relations after the same scalar elimination,
-   rather than adding independently computed endpoint ranks.
+   A boundary induction for this joint invariant misses three
+   endpoint coefficients on the actual scalar kernel. Two conditional
+   endpoint lifts now survive scalar elimination; recover the third
+   and prove uniform body spanning with the same source coefficients.
+   The inherited higher jet is coupled to the scalar trace, so
+   independently computed ranks cannot simply be added.
    Neither route is yet complete.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
