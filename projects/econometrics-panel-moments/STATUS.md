@@ -309,6 +309,14 @@ this gives generic rank exactly 27 and explains the nine-dimensional
 deficiency. Its cleared cubic products provide a new route to investigate
 larger lengths; their actual N coefficient combinations still matter.
 
+The [pure-path polynomial induction](research/SOURCE24_PATH_SPAN.md) now
+proves that all normalized path products span the entire component-two
+ambient space generically for each m>=4. It combines an audited correction
+argument with external exact 12-by-12 interpolation and 67-by-67 base
+minors. This auxiliary theorem still leaves the restriction to the actual
+N combinations open. The append identities retain their coupled
+components and prefix corrections explicitly.
+
 The audited [conic transverse reduction](research/SOURCE24_CONIC_TRANSVERSE.md)
 isolates a uniform 9n−6 pivot block. The binary parity theorem raises the
 leading outgoing rank to 9n for odd n; even n retain six missing directions.
