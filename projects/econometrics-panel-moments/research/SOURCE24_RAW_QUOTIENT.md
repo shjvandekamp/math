@@ -800,3 +800,195 @@ checked the matching formulas, common-parameter argument, incidence
 decomposition, actual word derivatives and pole-order cancellation in
 this section. These are audited paper results; no Lean formalization
 of the new joint-kernel reduction is claimed.
+
+## Old-pole coefficients and an endpoint-distance filtration
+
+**Status of this section: independently audited paper results; not Lean
+formalized.** The primary researcher and the independent
+deletion-induction reviewer checked the coefficient identities and
+spectral pole bounds, including the moving-pole hypothesis.
+It refines the pole-order calculation after (RQ39), but does not prove
+the injectivity in (RQ40). All coefficient spaces for source relations
+still use constant real scalars.
+
+Fix one generic point of an old line, take its local equation as
+\(z=L_c\), and assume the other old lines do not vanish there. Write
+\[
+ H=\frac Rz+S+O(z),\qquad
+ R=e_cv_c,\qquad R^2=sR,\qquad
+ s=\operatorname{tr}R=G_{cc}X_c\ne0. \tag{RQ41}
+\]
+This hypothesis holds at the generic old poles on a new-line restriction,
+and at generic coordinate-axis poles whose departure state differs from
+the axis state. It fails at the matching point \(L_c=X_c=0\), where
+the residue is nilpotent. The spectral argument below is not a statement
+at that matching point; the matching equations remain the separate
+constraints \(M_kz_k=0\).
+
+Let \(D\) be a fixed actual common-time derivative, that is, a fixed
+linear combination of \(U,V\) in (RQ37). Its local expansion and a
+useful commutator coefficient are
+\[
+ D=-\frac{\ell R}{z^2}+\frac Tz+O(1),\qquad
+ W=T+\ell S,\qquad C=[W,R],\qquad
+ [D,H]=\frac C{z^2}+O(z^{-1}),\qquad RCR=0. \tag{RQ42}
+\]
+Here \(\ell\) is the value at the pole of the derivative of its line
+equation. The notation \(T\) in this local expansion does not denote
+the observation map \(T_N\). Indeed, the potential order-three term
+in \([D,H]\) cancels, and its order-two term is
+\([T,R]-\ell[R,S]=[T+\ell S,R]\).
+
+Put \(r=q-1\), and for the moment use the same \(D\) on every edge.
+The outgoing word derivative is
+\[
+ \mathcal O_k(D)=DH^r-H^kDH^{r-k}
+   =\sum_{i=0}^{k-1}H^i[D,H]H^{q-2-i}.
+ \tag{RQ43}
+\]
+For \(q\ge3\), its coefficient of \(z^{-q}\) is
+\[
+ [z^{-q}]\mathcal O_k(D)=
+ \begin{cases}
+ CR^{q-2},&1\le k\le q-2,\\
+ CR^{q-2}+R^{q-2}C,&k=q-1.
+ \end{cases} \tag{RQ44}
+\]
+Every term having a positive power of R on both sides of C is zero.
+For \(q=2\) there is one edge and its coefficient is C. Thus the
+highest outgoing pole does not distinguish the interior edges for a
+fixed time direction. The actual outgoing derivative includes the
+left factor \(X_aK_N(a,b)e_b\) from (RQ39). After taking a new-line
+residue in sector a this factor becomes
+\(X_aA_N(a,b)X_be_b\), followed by the fixed right strip
+\(K_N^{-1}\). These factors must be retained when applying observations;
+they can annihilate the displayed coefficient.
+
+For incoming derivatives retain the differentiated prefix. With
+\(w=e_bK_N\), or \(w=v_{Nb}\) after its new-line residue, define
+\[
+ \mathcal I_k(D)=X_aD(a,b)wH^r
+       -X_aH(a,b)wH^{k-1}DH^{r-k}.
+ \tag{RQ45}
+\]
+At the first edge its order-q coefficient is
+\[
+ [z^{-q}]\mathcal I_1(D)
+ =X_a\{W_{ab}wR-R_{ab}wW\}R^{q-2},
+\]
+and consecutive coefficients differ by
+\[
+ [z^{-q}](\mathcal I_{k+1}(D)-\mathcal I_k(D))
+ =X_aR_{ab}wR^{k-1}CR^{q-k-2},
+ \qquad 1\le k\le q-2. \tag{RQ46}
+\]
+All quantities in these leading coefficients are evaluated at the pole.
+For \(q\ge4\), the order-q incoming coefficients consequently agree
+on all bulk edges \(2\le k\le q-2\); only the first and last edge
+can give a change. If \(a\ne c\), then \(R_{ab}=0\), so this top
+coefficient agrees on all edges. Formula (RQ46) follows from the exact
+identity
+\(\mathcal I_{k+1}-\mathcal I_k
+=X_aH(a,b)wH^{k-1}[D,H]H^{q-k-2}\).
+
+### The moving pole and the analytic complementary block
+
+The regularity needed for sharper bounds uses the actual moving pole.
+Replace the exponential time curve by its affine curve with the same
+first derivative. Its line equation has the exact form
+\(\zeta(z,t)=z+t\ell(z)\). The matrix \(\zeta H(z,t)\) is jointly
+analytic. In general \(zH(z,t)\), with z fixed at the old line,
+is not jointly analytic. At \(\zeta=0\) the former matrix has rank
+one and a simple nonzero eigenvalue. Its analytic eigenvalue and spectral
+projector, denoted by \(\gamma\) and P, give
+\[
+ H(z,t)=\lambda(z,t)P(z,t)+B(z,t),\qquad
+ \lambda=\gamma/\zeta,\qquad PB=BP=0,
+ \tag{RQ47}
+\]
+where P and B are jointly analytic. To see the last assertion,
+\(\zeta H-\gamma P\) vanishes on \(\zeta=0\), so each of its
+entries is divisible by \(\zeta\). At \(t=0\),
+\(\lambda=s/z+O(1)\) and \(P(0)=R/s\).
+
+With \(Q=I-P\), differentiating the actual family gives
+\(QDQ=QB_tQ\), which is analytic: the \(\lambda_tP\) term is
+killed and \(QP_tQ=0\). Consequently the P--P block of \([D,H]\)
+is zero, its two off-diagonal P--Q blocks have pole order at most two,
+and its Q--Q block is analytic. Therefore, for all \(i,j\ge0\),
+\[
+ \operatorname{poleord}\bigl(H^i[D,H]H^j\bigr)
+       \le \max(i,j)+2. \tag{RQ48}
+\]
+Here a pole-order bound p means the expression is \(O(z^{-p})\);
+it need not have a nonzero coefficient at that order. This argument
+requires an actual parameter derivative D. It does not assert the
+regularity of \(QDQ\) for an arbitrary matrix with double poles.
+
+For an explicit coefficient map put
+\(P_0=R/s\), \(Q_0=I-P_0\), and \(B_0=Q_0SQ_0\). In the
+following projector formulas interpret \(B_0^0\) as \(Q_0\).
+The coefficient at the bound in (RQ48) is
+\[
+ \begin{cases}
+ s^iP_0CB_0^j,&i>j,\\
+ s^jB_0^iCP_0,&j>i,\\
+ s^i(P_0CB_0^i+B_0^iCP_0),&i=j.
+ \end{cases} \tag{RQ49}
+\]
+This follows by splitting the product into its two off-diagonal
+projector blocks and its analytic complementary block. The given source
+prefixes and output observations still act on these coefficient maps.
+
+Using the exact consecutive-edge identities in (RQ43) and (RQ46),
+one obtains, for \(q\ge3\) and \(1\le k\le q-2\),
+\[
+ \begin{split}
+ \operatorname{poleord}(\mathcal O_{k+1}(D)-\mathcal O_k(D))
+   &\le q-\min(k,q-k-2),\\
+ \operatorname{poleord}(\mathcal I_{k+1}(D)-\mathcal I_k(D))
+   &\le q-\min(k-1,q-k-2).
+ \end{split} \tag{RQ50}
+\]
+The second bound improves by one when the prefix row \(a\ne c\).
+Thus deeper interior differences lose successive highest pole levels.
+An analytic left or right factor preserves these upper bounds, although
+it can kill the first allowed coefficient.
+
+### Coordinate-axis observations and the remaining restriction
+
+The axis observations should be applied after their coordinate factors
+have been cancelled, rather than by substituting into a singular
+\(\operatorname{diag}(X)^{-1}\). Use
+\(J=\operatorname{diag}(X)H\operatorname{diag}(X)^{-1}
+=\operatorname{diag}(X/L)G\), and similarly \(J_N\). The actual
+raw columns divided on the right by \(\operatorname{diag}(X)\)
+and then multiplied by \(A_N^{-1}\), as in (RQ2), are
+\[
+ \begin{split}
+ C^{\rm out}_{s,ab}
+   &=\frac{X_aA_N(a,b)}{L_{Na}}\,
+       e_b J_sJ_{\text{remaining in increasing order}}A_N^{-1},\\
+ C^{\rm in}_{t,ab}
+   &=J_t(a,b)e_bJ_N
+       J_{\text{increasing old word omitting }t}A_N^{-1}.
+ \end{split} \tag{RQ51}
+\]
+These formulas have regular restrictions to an axis away from their
+listed line poles. At an old pole of state c different from that axis,
+J has residue \(X_ce_cG(c,:)\) with the same nonzero trace s.
+Consequently (RQ42)--(RQ50) apply to \(J,\dot J\), with the analytic
+outgoing prefactor in (RQ51). For the incoming formula replace
+\(X_aH(a,b)\) by \(J(a,b)\), its derivative accordingly, and
+take \(w=e_bJ_N\). This keeps the prefix term and avoids hidden
+coordinate divisions. Taking the selected output component and any
+regular new-line factor can only decrease the resulting pole bound.
+
+The endpoint-distance filtration is for fixed D. In the actual mixed-jet
+problem the direction is \(\Delta_k\) and may vary with k; moreover
+the coefficient vector on edge k must lie in its own \(\ker M_k\).
+Replacing adjacent-edge columns by their differences need not preserve
+this direct sum of local constraints. Hence (RQ44), (RQ46), and (RQ50)
+provide explicit coefficient maps and a possible lower-pole filtration,
+but not a triangular basis on the domain of (RQ40). Uniform injectivity
+of that constrained map remains open.

@@ -326,6 +326,11 @@ matrix. The remaining task is injectivity of the actual first derivative
 on their direct sum modulo the leading image. The formulas retain the
 incoming prefix derivative and the cancellation of the highest old-pole
 terms. These are paper reductions, not additional Lean theorems.
+An audited moving-pole argument now bounds the order of consecutive-edge
+differences by their distance from the endpoints. It also identifies
+why the highest coefficients alone cannot separate interior edges.
+Applying that filtration to the varying time directions and the local
+matching constraints remains unfinished.
 The full 18q-column append proof and the further source-family
 transversality remain open.
 
