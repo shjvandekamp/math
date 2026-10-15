@@ -85,6 +85,13 @@ The 6m point conditions are independent by PS2 and degree elevation.
 The condition at e2 adds one more, since D vanishes on all old points
 and is nonzero at e2.
 
+This extra-point vanishing space is precisely the cleared component-two
+ambient space. Indeed D R2/X2 for R in W0 vanishes at same-block line
+intersections by the absence of those double residues, at matching points
+by the departure factor, and at e2 by vertex vanishing. Its dimension is
+r+3m by the already proved kernel and surjectivity statement B23. The
+inclusion and the equal dimensions in PS6 therefore give equality.
+
 For generic validity on the common-G family, it suffices to certify one
 nonzero two-block quartic evaluation minor of size 12 and one nonzero
 four-block pure-product minor of size 67, with the required geometry.
@@ -166,5 +173,21 @@ The primary researcher derived PS1–PS6 and an independent Astra reviewer
 checked the interpolation degrees, use of the existing block-extension
 theorem, normalization and common-G generic quantifiers. That reviewer
 derived PS7–PS8; the primary researcher checked them by expanding the
-stochastic kernel and the three actual prefix types. The new induction
-and append identities are not yet formalized in Lean.
+stochastic kernel and the three actual prefix types.
+
+`formal/PanelMoments/PureCubicProducts.lean` now formalizes the actual
+degree-3m products, their homogeneity and vanishing, the append step and
+finite-horizon induction. Its main theorem
+`productSpan_eq_vanishingSpace_of_four` explicitly assumes the four-block
+base equality and the degree-3q−2 interpolation hypotheses. The pair
+separator construction, generic parameter argument and external finite
+certificates have not been discharged in that Lean theorem. PS7–PS8 also
+remain paper identities.
+
+Focused compilation exited zero in 21.70 seconds. Twelve axiom checks
+exited zero in 15.42 seconds, using only propext, Classical.choice and
+Quot.sound. Peak RSS was respectively 2,026,700,800 and 2,010,628,096 bytes.
+The build has two harmless tactic-style linter warnings. The check source
+and complete outputs are `PureCubicProductsCheck.lean`,
+`pure-cubic-products-build.log` and `pure-cubic-products-axioms.txt` under
+`formal/`. This was a focused extension, not a new clean aggregate rebuild.

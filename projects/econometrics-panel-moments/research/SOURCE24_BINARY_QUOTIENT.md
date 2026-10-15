@@ -463,6 +463,13 @@ Otherwise a nonzero pure-axis annihilator survives every generator of N.
 First-slot differences are essential to remove this ambiguity. Neither
 B35 nor B37 proves uniform surjectivity or the observed m=3 deficiency.
 
+The subsequent proof in `SOURCE24_AXIS_SPANNING.md` now establishes
+T2(N)=K^(3m) for every m>=3 under these hypotheses. It uses actual
+first-slot differences to span the binary-axis residue space and the
+diagonal long-empty state-zero rows to complete it. In particular B37
+has rank two uniformly at even lengths. This removes the pure-axis
+ambiguity, while the remaining pair-weight annihilators are still open.
+
 The extended exact script checks B27's triangular block, B28's matching
 first derivatives, B29's binary residue scaling and B32's seed subtraction.
 At m=3,4,5 it finds long-empty ranks 9,10,15 respectively. The odd

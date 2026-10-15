@@ -300,8 +300,11 @@ the further source-family transversality remain open.
 The binary quotient note also gives a parity-aware component-two reduction:
 long-empty axis observations have rank 3m for odd m and 3m−2 for even m.
 Odd lengths eliminate all axis annihilator coefficients; even lengths
-leave two directions that first-slot differences must remove. This does
-not yet prove component-two spanning for every length.
+leave two directions that first-slot differences must remove. The later
+[actual-source axis spanning proof](research/SOURCE24_AXIS_SPANNING.md)
+now removes those directions uniformly: T2(N) has rank 3m for all m>=3.
+It uses two coprime quadratic differences followed by Laurent endpoint
+elimination. The full pair-plus-axis component-two spanning remains open.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -316,6 +319,12 @@ argument with external exact 12-by-12 interpolation and 67-by-67 base
 minors. This auxiliary theorem still leaves the restriction to the actual
 N combinations open. The append identities retain their coupled
 components and prefix corrections explicitly.
+The new `PureCubicProducts` Lean module proves the conditional append step
+and finite-horizon induction for the actual degree-3m products. Its
+four-block base and lower-degree interpolation are explicit premises;
+their external certificates and paper proof are not silently treated as
+Lean proofs. Focused compilation and twelve foundational-axiom checks
+passed. The existing 325-declaration source-family aggregate is unchanged.
 
 The audited [conic transverse reduction](research/SOURCE24_CONIC_TRANSVERSE.md)
 isolates a uniform 9n−6 pivot block. The binary parity theorem raises the

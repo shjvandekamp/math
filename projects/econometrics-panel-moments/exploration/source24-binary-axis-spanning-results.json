@@ -1,0 +1,2010 @@
+{
+  "status": "Exact finite binary-axis minor and actual first-slot-difference checks; no uniform source-rank claim.",
+  "independent_check": "The scalar H*kappa formula is compared with actual ordered binary kernels. Pole matrices are built directly from residue kernels and independently reconstruct those same actual differences at three ordinary points.",
+  "scope": "Only m=3,...,8 at the recorded economic fixture; no old source matrix O or full three-state system was constructed.",
+  "limitations": "These nonzero minors do not constitute the all-m Laurent induction or the full T2(N) surjectivity proof. Row-zero long-empty directions belong to that separate bridge.",
+  "limits": {
+    "seconds": 28,
+    "maximum_rss_bytes": 99614720
+  },
+  "elapsed_seconds": 0.08142299999999998,
+  "maximum_rss_bytes": 15433728,
+  "bounded_limitation": null,
+  "cases": [
+    {
+      "m": 3,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ]
+      ],
+      "sigma": 666669,
+      "tau": 333335,
+      "c": 666669,
+      "z": [
+        8,
+        64,
+        512
+      ],
+      "selected_pairs": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "columns": [
+        [
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ]
+      ],
+      "column_convention": "(t,s,a,b) means actual F_t,s,a,b\u2212F_t,r(t),a,b; blocks t,s are one-based and states a,b are 1 or 2.",
+      "pole_labels": [
+        [
+          1,
+          1,
+          666666
+        ],
+        [
+          1,
+          2,
+          333329
+        ],
+        [
+          2,
+          1,
+          333313
+        ],
+        [
+          2,
+          2,
+          666626
+        ],
+        [
+          3,
+          1,
+          666498
+        ],
+        [
+          3,
+          2,
+          332993
+        ]
+      ],
+      "pole_convention": "Row (u,state,pole) is the coefficient of 1/(x\u2212pole) in component 2 divided by X2; no additional source normalization.",
+      "direct_pole_matrix": {
+        "rows": 6,
+        "columns": 8,
+        "sha256": "95414bf7ab6a720c6be6a77262013a3df059118fd1d7ab0fb9599b1825432be3",
+        "rank_certificate": {
+          "rank": 6,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 6,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "determinant_mod_prime": 516277,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "full_binary_pole_span_over_Fp": true,
+      "quadratic_coprimality": {
+        "Q12": [
+          555671,
+          48,
+          1
+        ],
+        "Q13": [
+          445356,
+          333681,
+          1
+        ],
+        "coefficient_order": "Increasing powers of x.",
+        "difference_scale": 666370,
+        "Q12_at_minus_sigma_z1": 777773,
+        "Bezout_U": [
+          830778,
+          612882
+        ],
+        "Bezout_V": [
+          216100,
+          387121
+        ],
+        "U_times_Q12_plus_V_times_Q13_equals_one": true
+      },
+      "ordinary_points": [
+        {
+          "x": 1,
+          "Delta": 530,
+          "direct_values_sha256": "5a740ed636a7e2d0a5611c984c112a80021d8e2bcc21e9f80f5a0e476940f81d"
+        },
+        {
+          "x": 2,
+          "Delta": 682503,
+          "direct_values_sha256": "2d4615553cd2ec1a0e239f9d4229578a4fd69d90c089a5897f7dc760df298902"
+        },
+        {
+          "x": 7,
+          "Delta": 619112,
+          "direct_values_sha256": "dca251a644fd9afd429b36e18d586a2c98e08721df4a816be69030014066577d"
+        }
+      ],
+      "normalized_difference_formula_checks": 24,
+      "direct_residue_reconstruction_checks": 24,
+      "all_poles_nonzero_and_distinct": true,
+      "every_ordinary_denominator_nonzero": true,
+      "elapsed_seconds": 0.0014428330000000045
+    },
+    {
+      "m": 4,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ]
+      ],
+      "sigma": 666669,
+      "tau": 333335,
+      "c": 666669,
+      "z": [
+        8,
+        64,
+        512,
+        4096
+      ],
+      "selected_pairs": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "columns": [
+        [
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          3,
+          1,
+          2
+        ],
+        [
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          2,
+          2
+        ]
+      ],
+      "column_convention": "(t,s,a,b) means actual F_t,s,a,b\u2212F_t,r(t),a,b; blocks t,s are one-based and states a,b are 1 or 2.",
+      "pole_labels": [
+        [
+          1,
+          1,
+          666666
+        ],
+        [
+          1,
+          2,
+          333329
+        ],
+        [
+          2,
+          1,
+          333313
+        ],
+        [
+          2,
+          2,
+          666626
+        ],
+        [
+          3,
+          1,
+          666498
+        ],
+        [
+          3,
+          2,
+          332993
+        ],
+        [
+          4,
+          1,
+          331969
+        ],
+        [
+          4,
+          2,
+          663938
+        ]
+      ],
+      "pole_convention": "Row (u,state,pole) is the coefficient of 1/(x\u2212pole) in component 2 divided by X2; no additional source normalization.",
+      "direct_pole_matrix": {
+        "rows": 8,
+        "columns": 12,
+        "sha256": "748f5d3764189c5cf15fc56203270e03e6240db670e8836b3b63fa61c55b0b72",
+        "rank_certificate": {
+          "rank": 8,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 8,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              11
+            ],
+            "determinant_mod_prime": 126198,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "full_binary_pole_span_over_Fp": true,
+      "quadratic_coprimality": {
+        "Q12": [
+          555671,
+          48,
+          1
+        ],
+        "Q13": [
+          445356,
+          333681,
+          1
+        ],
+        "coefficient_order": "Increasing powers of x.",
+        "difference_scale": 666370,
+        "Q12_at_minus_sigma_z1": 777773,
+        "Bezout_U": [
+          830778,
+          612882
+        ],
+        "Bezout_V": [
+          216100,
+          387121
+        ],
+        "U_times_Q12_plus_V_times_Q13_equals_one": true
+      },
+      "ordinary_points": [
+        {
+          "x": 1,
+          "Delta": 225209,
+          "direct_values_sha256": "155974ad1f55f0e544166209f3791aae43be254f049538caf180005e8fa52ca1"
+        },
+        {
+          "x": 2,
+          "Delta": 610282,
+          "direct_values_sha256": "968de90cab92a539305b1c221a4894d9b85c867091d80ed9b1a038af9fca6226"
+        },
+        {
+          "x": 7,
+          "Delta": 850589,
+          "direct_values_sha256": "55f80a3d782ea1167009ad421201795f6060ff614d29f488d3589232682ca8c9"
+        }
+      ],
+      "normalized_difference_formula_checks": 36,
+      "direct_residue_reconstruction_checks": 36,
+      "all_poles_nonzero_and_distinct": true,
+      "every_ordinary_denominator_nonzero": true,
+      "elapsed_seconds": 0.007953417000000004
+    },
+    {
+      "m": 5,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ],
+        [
+          32768,
+          1073741824
+        ]
+      ],
+      "sigma": 666669,
+      "tau": 333335,
+      "c": 666669,
+      "z": [
+        8,
+        64,
+        512,
+        4096,
+        32768
+      ],
+      "selected_pairs": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "columns": [
+        [
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          5,
+          3,
+          1,
+          1
+        ],
+        [
+          5,
+          3,
+          1,
+          2
+        ],
+        [
+          5,
+          3,
+          2,
+          1
+        ],
+        [
+          5,
+          3,
+          2,
+          2
+        ],
+        [
+          5,
+          4,
+          1,
+          1
+        ],
+        [
+          5,
+          4,
+          1,
+          2
+        ],
+        [
+          5,
+          4,
+          2,
+          1
+        ],
+        [
+          5,
+          4,
+          2,
+          2
+        ]
+      ],
+      "column_convention": "(t,s,a,b) means actual F_t,s,a,b\u2212F_t,r(t),a,b; blocks t,s are one-based and states a,b are 1 or 2.",
+      "pole_labels": [
+        [
+          1,
+          1,
+          666666
+        ],
+        [
+          1,
+          2,
+          333329
+        ],
+        [
+          2,
+          1,
+          333313
+        ],
+        [
+          2,
+          2,
+          666626
+        ],
+        [
+          3,
+          1,
+          666498
+        ],
+        [
+          3,
+          2,
+          332993
+        ],
+        [
+          4,
+          1,
+          331969
+        ],
+        [
+          4,
+          2,
+          663938
+        ],
+        [
+          5,
+          1,
+          655746
+        ],
+        [
+          5,
+          2,
+          311489
+        ]
+      ],
+      "pole_convention": "Row (u,state,pole) is the coefficient of 1/(x\u2212pole) in component 2 divided by X2; no additional source normalization.",
+      "direct_pole_matrix": {
+        "rows": 10,
+        "columns": 16,
+        "sha256": "62304e871f100f3eb76f747e3c38054b086cf3210c2d1dc3480964efb3ae3c72",
+        "rank_certificate": {
+          "rank": 10,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 10,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              11,
+              12,
+              15
+            ],
+            "determinant_mod_prime": 804552,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "full_binary_pole_span_over_Fp": true,
+      "quadratic_coprimality": {
+        "Q12": [
+          555671,
+          48,
+          1
+        ],
+        "Q13": [
+          445356,
+          333681,
+          1
+        ],
+        "coefficient_order": "Increasing powers of x.",
+        "difference_scale": 666370,
+        "Q12_at_minus_sigma_z1": 777773,
+        "Bezout_U": [
+          830778,
+          612882
+        ],
+        "Bezout_V": [
+          216100,
+          387121
+        ],
+        "U_times_Q12_plus_V_times_Q13_equals_one": true
+      },
+      "ordinary_points": [
+        {
+          "x": 1,
+          "Delta": 425665,
+          "direct_values_sha256": "49d8bc44163af139c16323693a67335e167a5c507a07ce243d1f33916898327b"
+        },
+        {
+          "x": 2,
+          "Delta": 782687,
+          "direct_values_sha256": "7967e78e55700f698c8f86e358281e1eef0b62713174b2d906c60448a3adefec"
+        },
+        {
+          "x": 7,
+          "Delta": 375707,
+          "direct_values_sha256": "b87ec8047d09ac10f331b7d594633552e09ea09b54f3e5f095b2c7fa73a09d3c"
+        }
+      ],
+      "normalized_difference_formula_checks": 48,
+      "direct_residue_reconstruction_checks": 48,
+      "all_poles_nonzero_and_distinct": true,
+      "every_ordinary_denominator_nonzero": true,
+      "elapsed_seconds": 0.006400375
+    },
+    {
+      "m": 6,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ],
+        [
+          32768,
+          1073741824
+        ],
+        [
+          262144,
+          68719476736
+        ]
+      ],
+      "sigma": 666669,
+      "tau": 333335,
+      "c": 666669,
+      "z": [
+        8,
+        64,
+        512,
+        4096,
+        32768,
+        262144
+      ],
+      "selected_pairs": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "columns": [
+        [
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          6,
+          3,
+          1,
+          1
+        ],
+        [
+          6,
+          3,
+          1,
+          2
+        ],
+        [
+          6,
+          3,
+          2,
+          1
+        ],
+        [
+          6,
+          3,
+          2,
+          2
+        ],
+        [
+          6,
+          4,
+          1,
+          1
+        ],
+        [
+          6,
+          4,
+          1,
+          2
+        ],
+        [
+          6,
+          4,
+          2,
+          1
+        ],
+        [
+          6,
+          4,
+          2,
+          2
+        ],
+        [
+          6,
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          5,
+          1,
+          2
+        ],
+        [
+          6,
+          5,
+          2,
+          1
+        ],
+        [
+          6,
+          5,
+          2,
+          2
+        ]
+      ],
+      "column_convention": "(t,s,a,b) means actual F_t,s,a,b\u2212F_t,r(t),a,b; blocks t,s are one-based and states a,b are 1 or 2.",
+      "pole_labels": [
+        [
+          1,
+          1,
+          666666
+        ],
+        [
+          1,
+          2,
+          333329
+        ],
+        [
+          2,
+          1,
+          333313
+        ],
+        [
+          2,
+          2,
+          666626
+        ],
+        [
+          3,
+          1,
+          666498
+        ],
+        [
+          3,
+          2,
+          332993
+        ],
+        [
+          4,
+          1,
+          331969
+        ],
+        [
+          4,
+          2,
+          663938
+        ],
+        [
+          5,
+          1,
+          655746
+        ],
+        [
+          5,
+          2,
+          311489
+        ],
+        [
+          6,
+          1,
+          245953
+        ],
+        [
+          6,
+          2,
+          491906
+        ]
+      ],
+      "pole_convention": "Row (u,state,pole) is the coefficient of 1/(x\u2212pole) in component 2 divided by X2; no additional source normalization.",
+      "direct_pole_matrix": {
+        "rows": 12,
+        "columns": 20,
+        "sha256": "f67c8d3d01a072bb6ff0f5f7634f92b30fed08fb8217581c0b8033e36796e57d",
+        "rank_certificate": {
+          "rank": 12,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 12,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              11,
+              12,
+              15,
+              16,
+              19
+            ],
+            "determinant_mod_prime": 196648,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "full_binary_pole_span_over_Fp": true,
+      "quadratic_coprimality": {
+        "Q12": [
+          555671,
+          48,
+          1
+        ],
+        "Q13": [
+          445356,
+          333681,
+          1
+        ],
+        "coefficient_order": "Increasing powers of x.",
+        "difference_scale": 666370,
+        "Q12_at_minus_sigma_z1": 777773,
+        "Bezout_U": [
+          830778,
+          612882
+        ],
+        "Bezout_V": [
+          216100,
+          387121
+        ],
+        "U_times_Q12_plus_V_times_Q13_equals_one": true
+      },
+      "ordinary_points": [
+        {
+          "x": 1,
+          "Delta": 54090,
+          "direct_values_sha256": "c8329544ccdab5221cc9218d90951534c282ecae939cb245da0761e06edd6d03"
+        },
+        {
+          "x": 2,
+          "Delta": 541161,
+          "direct_values_sha256": "a8f4dab5da9c10069230c4667fb2a2a97157524f29d1fc29b43a14003c04ad4d"
+        },
+        {
+          "x": 7,
+          "Delta": 53936,
+          "direct_values_sha256": "d44321d943d7b0a5700c099f534bad775c814fc9e9ef17a2497f1123e8f6e481"
+        }
+      ],
+      "normalized_difference_formula_checks": 60,
+      "direct_residue_reconstruction_checks": 60,
+      "all_poles_nonzero_and_distinct": true,
+      "every_ordinary_denominator_nonzero": true,
+      "elapsed_seconds": 0.01946345799999999
+    },
+    {
+      "m": 7,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ],
+        [
+          32768,
+          1073741824
+        ],
+        [
+          262144,
+          68719476736
+        ],
+        [
+          2097152,
+          4398046511104
+        ]
+      ],
+      "sigma": 666669,
+      "tau": 333335,
+      "c": 666669,
+      "z": [
+        8,
+        64,
+        512,
+        4096,
+        32768,
+        262144,
+        97146
+      ],
+      "selected_pairs": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "columns": [
+        [
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          7,
+          3,
+          1,
+          1
+        ],
+        [
+          7,
+          3,
+          1,
+          2
+        ],
+        [
+          7,
+          3,
+          2,
+          1
+        ],
+        [
+          7,
+          3,
+          2,
+          2
+        ],
+        [
+          7,
+          4,
+          1,
+          1
+        ],
+        [
+          7,
+          4,
+          1,
+          2
+        ],
+        [
+          7,
+          4,
+          2,
+          1
+        ],
+        [
+          7,
+          4,
+          2,
+          2
+        ],
+        [
+          7,
+          5,
+          1,
+          1
+        ],
+        [
+          7,
+          5,
+          1,
+          2
+        ],
+        [
+          7,
+          5,
+          2,
+          1
+        ],
+        [
+          7,
+          5,
+          2,
+          2
+        ],
+        [
+          7,
+          6,
+          1,
+          1
+        ],
+        [
+          7,
+          6,
+          1,
+          2
+        ],
+        [
+          7,
+          6,
+          2,
+          1
+        ],
+        [
+          7,
+          6,
+          2,
+          2
+        ]
+      ],
+      "column_convention": "(t,s,a,b) means actual F_t,s,a,b\u2212F_t,r(t),a,b; blocks t,s are one-based and states a,b are 1 or 2.",
+      "pole_labels": [
+        [
+          1,
+          1,
+          666666
+        ],
+        [
+          1,
+          2,
+          333329
+        ],
+        [
+          2,
+          1,
+          333313
+        ],
+        [
+          2,
+          2,
+          666626
+        ],
+        [
+          3,
+          1,
+          666498
+        ],
+        [
+          3,
+          2,
+          332993
+        ],
+        [
+          4,
+          1,
+          331969
+        ],
+        [
+          4,
+          2,
+          663938
+        ],
+        [
+          5,
+          1,
+          655746
+        ],
+        [
+          5,
+          2,
+          311489
+        ],
+        [
+          6,
+          1,
+          245953
+        ],
+        [
+          6,
+          2,
+          491906
+        ],
+        [
+          7,
+          1,
+          967621
+        ],
+        [
+          7,
+          2,
+          935239
+        ]
+      ],
+      "pole_convention": "Row (u,state,pole) is the coefficient of 1/(x\u2212pole) in component 2 divided by X2; no additional source normalization.",
+      "direct_pole_matrix": {
+        "rows": 14,
+        "columns": 24,
+        "sha256": "59b8e1626030fd9dafad3f54ade3db4bde1888a4af9042dde842c7d50cefa6f7",
+        "rank_certificate": {
+          "rank": 14,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 14,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              11,
+              12,
+              15,
+              16,
+              19,
+              20,
+              23
+            ],
+            "determinant_mod_prime": 180041,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "full_binary_pole_span_over_Fp": true,
+      "quadratic_coprimality": {
+        "Q12": [
+          555671,
+          48,
+          1
+        ],
+        "Q13": [
+          445356,
+          333681,
+          1
+        ],
+        "coefficient_order": "Increasing powers of x.",
+        "difference_scale": 666370,
+        "Q12_at_minus_sigma_z1": 777773,
+        "Bezout_U": [
+          830778,
+          612882
+        ],
+        "Bezout_V": [
+          216100,
+          387121
+        ],
+        "U_times_Q12_plus_V_times_Q13_equals_one": true
+      },
+      "ordinary_points": [
+        {
+          "x": 1,
+          "Delta": 238259,
+          "direct_values_sha256": "00f8b37c9fc2e5ecab1495f900fa1ee6671d40496c32eff6bb30a11b176c522c"
+        },
+        {
+          "x": 2,
+          "Delta": 155124,
+          "direct_values_sha256": "ed5cba3dcbbe075f182eed4b262186f75926b8b92ec052e2f70ec938b0b41337"
+        },
+        {
+          "x": 7,
+          "Delta": 913731,
+          "direct_values_sha256": "32f5fdb30671effa8315d4f98250b0092ba37404c6a12ebfc7ea21c1db7d6610"
+        }
+      ],
+      "normalized_difference_formula_checks": 72,
+      "direct_residue_reconstruction_checks": 72,
+      "all_poles_nonzero_and_distinct": true,
+      "every_ordinary_denominator_nonzero": true,
+      "elapsed_seconds": 0.02068366599999999
+    },
+    {
+      "m": 8,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ],
+        [
+          32768,
+          1073741824
+        ],
+        [
+          262144,
+          68719476736
+        ],
+        [
+          2097152,
+          4398046511104
+        ],
+        [
+          16777216,
+          281474976710656
+        ]
+      ],
+      "sigma": 666669,
+      "tau": 333335,
+      "c": 666669,
+      "z": [
+        8,
+        64,
+        512,
+        4096,
+        32768,
+        262144,
+        97146,
+        777168
+      ],
+      "selected_pairs": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "columns": [
+        [
+          3,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          8,
+          3,
+          1,
+          1
+        ],
+        [
+          8,
+          3,
+          1,
+          2
+        ],
+        [
+          8,
+          3,
+          2,
+          1
+        ],
+        [
+          8,
+          3,
+          2,
+          2
+        ],
+        [
+          8,
+          4,
+          1,
+          1
+        ],
+        [
+          8,
+          4,
+          1,
+          2
+        ],
+        [
+          8,
+          4,
+          2,
+          1
+        ],
+        [
+          8,
+          4,
+          2,
+          2
+        ],
+        [
+          8,
+          5,
+          1,
+          1
+        ],
+        [
+          8,
+          5,
+          1,
+          2
+        ],
+        [
+          8,
+          5,
+          2,
+          1
+        ],
+        [
+          8,
+          5,
+          2,
+          2
+        ],
+        [
+          8,
+          6,
+          1,
+          1
+        ],
+        [
+          8,
+          6,
+          1,
+          2
+        ],
+        [
+          8,
+          6,
+          2,
+          1
+        ],
+        [
+          8,
+          6,
+          2,
+          2
+        ],
+        [
+          8,
+          7,
+          1,
+          1
+        ],
+        [
+          8,
+          7,
+          1,
+          2
+        ],
+        [
+          8,
+          7,
+          2,
+          1
+        ],
+        [
+          8,
+          7,
+          2,
+          2
+        ]
+      ],
+      "column_convention": "(t,s,a,b) means actual F_t,s,a,b\u2212F_t,r(t),a,b; blocks t,s are one-based and states a,b are 1 or 2.",
+      "pole_labels": [
+        [
+          1,
+          1,
+          666666
+        ],
+        [
+          1,
+          2,
+          333329
+        ],
+        [
+          2,
+          1,
+          333313
+        ],
+        [
+          2,
+          2,
+          666626
+        ],
+        [
+          3,
+          1,
+          666498
+        ],
+        [
+          3,
+          2,
+          332993
+        ],
+        [
+          4,
+          1,
+          331969
+        ],
+        [
+          4,
+          2,
+          663938
+        ],
+        [
+          5,
+          1,
+          655746
+        ],
+        [
+          5,
+          2,
+          311489
+        ],
+        [
+          6,
+          1,
+          245953
+        ],
+        [
+          6,
+          2,
+          491906
+        ],
+        [
+          7,
+          1,
+          967621
+        ],
+        [
+          7,
+          2,
+          935239
+        ],
+        [
+          8,
+          1,
+          740947
+        ],
+        [
+          8,
+          2,
+          481891
+        ]
+      ],
+      "pole_convention": "Row (u,state,pole) is the coefficient of 1/(x\u2212pole) in component 2 divided by X2; no additional source normalization.",
+      "direct_pole_matrix": {
+        "rows": 16,
+        "columns": 28,
+        "sha256": "0050fa859b06f5b36fd4c7e0ed8370979286269d04e403311e60c3492acfa5db",
+        "rank_certificate": {
+          "rank": 16,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 16,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              8,
+              11,
+              12,
+              15,
+              16,
+              19,
+              20,
+              23,
+              24,
+              27
+            ],
+            "determinant_mod_prime": 76384,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "full_binary_pole_span_over_Fp": true,
+      "quadratic_coprimality": {
+        "Q12": [
+          555671,
+          48,
+          1
+        ],
+        "Q13": [
+          445356,
+          333681,
+          1
+        ],
+        "coefficient_order": "Increasing powers of x.",
+        "difference_scale": 666370,
+        "Q12_at_minus_sigma_z1": 777773,
+        "Bezout_U": [
+          830778,
+          612882
+        ],
+        "Bezout_V": [
+          216100,
+          387121
+        ],
+        "U_times_Q12_plus_V_times_Q13_equals_one": true
+      },
+      "ordinary_points": [
+        {
+          "x": 1,
+          "Delta": 499648,
+          "direct_values_sha256": "7323ea07c90c0d5d377d38c7f9849f1d80c976f670e9711cf803c7d2292c10c2"
+        },
+        {
+          "x": 2,
+          "Delta": 642198,
+          "direct_values_sha256": "fb039bf7923f4c02615523882322efbba8ce8c2c043e102589c938dde69446ba"
+        },
+        {
+          "x": 7,
+          "Delta": 618395,
+          "direct_values_sha256": "a3930b99f021ce806ce7d134221156c4e8b1f6d13daffafacba9b1e3f4f7d06d"
+        }
+      ],
+      "normalized_difference_formula_checks": 84,
+      "direct_residue_reconstruction_checks": 84,
+      "all_poles_nonzero_and_distinct": true,
+      "every_ordinary_denominator_nonzero": true,
+      "elapsed_seconds": 0.02519991699999999
+    }
+  ]
+}
