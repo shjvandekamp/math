@@ -384,6 +384,29 @@ dimensions through order m. Exact coupled kernel bases at m=4,5 isolate
 the remaining 35- and 66-dimensional polynomial spaces and fill every
 later layer at those fixtures. These finite profiles do not extend
 the actual-source spanning theorem to general m.
+An independently audited [zero-prefix extension](research/SOURCE24_ZERO_PREFIX_EXTENSION.md)
+now gives a quadratic lower bound: dim p2(N) is at least
+2m(m−1)−1. At a common-G boundary specialization, these actual
+source differences have an exact scalar append law; two axis restrictions
+separate 4q new independent directions from every appended old row.
+The three-column rational base has determinant −2916. Combining this
+with the normal theorem gives the larger of 8m−1 and 2m(m−1)−1,
+and the smaller of the corresponding pair-weight bounds
+(9m²−19m+2)/2 and (5m²+m+2)/2. The quadratic bound improves the
+earlier one for m>=6. It still does not prove full component-two spanning.
+The same investigation now explains the boundary specialization's rank
+loss. The merged new lines force one common factor in every cleared
+source numerator. The remaining numerators satisfy old length-six
+scheme conditions, a new double-point condition, and normalization.
+A local interpolation proof gives ambient dimension d_q+6q+3, where
+d_q=9 choose(q,2)+3q. Exact finite witnesses fill this boundary space
+at q=3,4,5, giving ranks 57,93,138. Uniform filling and recovery of
+the missing 3q directions under perturbation remain open. The latter
+now has an explicit first-jet target: on the actual boundary kernel,
+restriction of the derivative to the merged line is divisible by
+X1² X2², leaving binary forms of degree 3q−1. Surjectivity of this
+3q-dimensional map, together with boundary spanning, would give the
+full scalar rank after splitting the new lines.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -424,6 +447,13 @@ auxiliary pair-source result with an external finite certificate, not
 an all-length or full source-family theorem. Uniform nonvanishing of
 the leading determinant remains open; the singular conic O3 also
 requires a separate base step.
+The audited [source-space compression](research/SOURCE24_CONIC_SOURCE_COMPRESSION.md)
+expresses its three new-state sectors through one actual-source seed.
+An explicit n(5n−8)-dimensional subspace of ker U reduces the old
+inverse from size 9n(n−1) to n(4n−1), conditional on O being
+invertible. The sparse seed has a single terminal defect under U;
+the even correction is retained as a six-column border. These exact
+identities leave the transformed-seed determinant unproved.
 That singular step now has an exact 27-square criterion using its
 51-dimensional old complement and three explicit longitudinal kernel
 pivots. A separate suffix lemma shows that two appended blocks recover
@@ -516,7 +546,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    both parities. Its regular/longitudinal Schur block now has an audited
    leading-operator formula and a finite five-to-six-block witness;
    prove uniform nonvanishing of U_n O_n^{-1} D_n Z_0 with both old-node
-   corrections retained. Formalizing the transverse proof
+   corrections retained. Its exact source-space compression now reduces
+   the old inverse and identifies a common seed for all three sectors;
+   prove transversality of its coordinate-transformed copies, keeping
+   the even six-column border. Formalizing the transverse proof
    is also unfinished. The raw append alternative has an exact ambient
    quotient, a uniform 18-column subfamily and a uniform rank-3q
    matching map with a fixed cyclic minor. The specified minor of its
@@ -538,7 +571,15 @@ silently assumed by either proved theorem, and no result below is claimed.
    a higher-normal lifting theorem that retains the coupled row and
    prefix coefficients. The next concrete target is J3 on the actual
    source combinations in F^3 S_m; finite coupled bases are saved at
-   m=4,5. Neither route is yet complete.
+   m=4,5. The zero-prefix alternative has an exact scalar append and
+   a uniform 4q-direction extension, giving a quadratic rank bound.
+   Find additional independent directions modulo that transferred
+   actual subspace; scalar closure is not available for arbitrary N.
+   Its boundary ambient space now has dimension d_q+6q+3. Prove
+   that the actual zero-prefix image fills it uniformly, then recover
+   the remaining 3q directions by proving the explicit first-jet map
+   onto on the actual boundary coefficient kernel.
+   Neither route is yet complete.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final
