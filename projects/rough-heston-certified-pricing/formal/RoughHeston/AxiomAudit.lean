@@ -1,0 +1,21 @@
+module
+
+public import RoughHeston.Main
+
+#print axioms RoughHeston.adams_degree_and_leading
+#print axioms RoughHeston.roughExponent_degree_and_leading
+#print axioms RoughHeston.roughExponentWithDrift_degree_and_leading
+#print axioms RoughHeston.roughState_succ
+#print axioms RoughHeston.not_integrableOn_callWeightedError_of_polynomial
+#print axioms RoughHeston.reference_fixed_mesh_not_integrable
+#print axioms RoughHeston.reference_genuine_call_not_integrable
+#print axioms RoughHeston.integrable_callFourierIntegrand
+#print axioms RoughHeston.vanillaCall_fourier_transform
+#print axioms RoughHeston.no_integrable_majorant_after_fixed_level
+#print axioms RoughHeston.domination_lintegral_eq_top
+#print axioms RoughHeston.concrete_example_not_integrable
+#print axioms RoughHeston.concrete_example_against_one
+
+#check RoughHeston.reference_fixed_mesh_not_integrable
+#check RoughHeston.no_integrable_majorant_after_fixed_level
+#check RoughHeston.domination_lintegral_eq_top

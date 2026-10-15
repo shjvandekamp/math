@@ -1,0 +1,33 @@
+'RoughHeston.adams_degree_and_leading' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.roughExponent_degree_and_leading' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.roughExponentWithDrift_degree_and_leading' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.roughState_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.not_integrableOn_callWeightedError_of_polynomial' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RoughHeston.reference_fixed_mesh_not_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.reference_genuine_call_not_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.integrable_callFourierIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.vanillaCall_fourier_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.no_integrable_majorant_after_fixed_level' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.domination_lintegral_eq_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_example_not_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.concrete_example_against_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+RoughHeston.reference_fixed_mesh_not_integrable (alpha T gamma rho nu theta V0 : ℝ) (M : ℕ) (Φ : ℝ → ℂ) (B : ℝ)
+  (ha : 0 < alpha) (hT : 0 < T) (hg : 0 < gamma) (hn : 0 < nu) (hV : 0 < V0) (hM : 0 < M)
+  (hbounded : ∀ (u : ℝ), ‖Φ u‖ ≤ B) :
+  ¬MeasureTheory.IntegrableOn
+      (RoughHeston.callWeightedError
+        (fun u => Polynomial.eval (↑u) (RoughHeston.roughExponent alpha (T / ↑M) (-2) gamma rho nu theta V0 M)) Φ)
+      (Set.Ioi 0) MeasureTheory.volume
+RoughHeston.no_integrable_majorant_after_fixed_level (alpha T gamma rho nu theta V0 p : ℝ) (M0 L : ℕ) (Φ : ℝ → ℂ)
+  (B : ℝ) (D : ℝ → ℝ) (ha : 0 < alpha) (hT : 0 < T) (hg : 0 < gamma) (hn : 0 < nu) (hV : 0 < V0) (hM : 0 < M0)
+  (hbounded : ∀ (u : ℝ), ‖Φ u‖ ≤ B)
+  (hdom :
+    ∀ (ell : ℕ), L ≤ ell → ∀ (u : ℝ), 0 < u → RoughHeston.levelError alpha T gamma rho nu theta V0 p M0 ell Φ u ≤ D u) :
+  ¬MeasureTheory.IntegrableOn D (Set.Ioi 0) MeasureTheory.volume
+RoughHeston.domination_lintegral_eq_top (alpha T gamma rho nu theta V0 p : ℝ) (M0 : ℕ) (Φ : ℝ → ℂ) (B : ℝ)
+  (ha : 0 < alpha) (hT : 0 < T) (hg : 0 < gamma) (hn : 0 < nu) (hV : 0 < V0) (hM : 0 < M0)
+  (hbounded : ∀ (u : ℝ), ‖Φ u‖ ≤ B) :
+  ∫⁻ (u : ℝ) in Set.Ioi 0, RoughHeston.domination alpha T gamma rho nu theta V0 p M0 Φ u = ⊤
+Lean check exit=0; measured peak process-tree RSS=1405536 KiB

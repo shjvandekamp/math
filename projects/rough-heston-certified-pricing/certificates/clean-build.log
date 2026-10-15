@@ -1,0 +1,12 @@
+Lean check exit=0; measured peak process-tree RSS=1454064 KiB
+RoughHeston/Adams.lean:163:61: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Lean check exit=0; measured peak process-tree RSS=956992 KiB
+Lean check exit=0; measured peak process-tree RSS=1468784 KiB
+Lean check exit=0; measured peak process-tree RSS=1392096 KiB
+'RoughHeston.integrable_callFourierIntegrand' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RoughHeston.vanillaCall_fourier_transform' depends on axioms: [propext, Classical.choice, Quot.sound]
+Lean check exit=0; measured peak process-tree RSS=1470368 KiB
+Lean check exit=0; measured peak process-tree RSS=1474240 KiB
+Clean verification exit status: 0
