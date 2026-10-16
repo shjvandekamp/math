@@ -4,6 +4,7 @@ import PanelMoments.SourceScalarPrependAlgebra
 import PanelMoments.SourceWeightedPrependAlgebra
 import PanelMoments.SourceTerminalPrefixExtraction
 import PanelMoments.SourceTimeScaling
+import PanelMoments.SourceBoundaryEndpointAlgebra
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -564,3 +565,17 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceTimeScaling.homogeneousReducedColumn_scaledTable
 #print axioms PanelMoments.SourceTimeScaling.linearIndependent_sourceColumn_scaledTable_iff
 #print axioms PanelMoments.SourceTimeScaling.linearIndependent_reducedColumn_scaledTable_iff
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.canceledOutput_kernel
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.canceledOutput_eq_divided_output
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.weightedTime_rowForm
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.weightedTime_canceledOutput
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.weight_pos
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.preservingScale_pos
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.preservingScale_sub_weight_eq
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.preservingScale_sub_weight_pos
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.weighted_endpoint_relation
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_factorization
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.endpointCore_det
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det_pos
+#print axioms PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det_ne_zero

@@ -159,11 +159,17 @@ time-coordinate scaling of the actual row forms, kernels, ordered words,
 and source vectors, including their exact inverse-head coordinate factors.
 Positive scaling preserves independence of the actual source and reduced
 families at every fixed length; neither family is asserted to be independent.
-The updated aggregate checks 449 declarations in a 41-module compiled
+SourceBoundaryEndpointAlgebra adds fourteen checked declarations for
+the actual weighted kernel after algebraic cancellation of an output
+coordinate. It proves the coordinate-edge relation and the endpoint
+recovery determinant S^2/product_b(S-w_b)>0, with no division by a
+zero edge coordinate. It does not formalize residue interpolation
+or source independence.
+The updated aggregate checks 463 declarations in a 42-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 41-module rebuild. The aggregate took 38.20 seconds with peak
-RSS 2,170,994,688 bytes under the serial memory cap.
+new clean 42-module rebuild. The aggregate took 37.72 seconds with peak
+RSS 1,968,766,976 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 
@@ -798,7 +804,11 @@ Lean proofs or an arbitrary-length result.
 There is now a uniform paper theorem for a genuine growing
 subfamily: (LC85)--(LC89) prove full 9q double-residue rank of
 all new-head columns in the variable-r weighted family, with
-no shorter-source independence premise. Grouped differences
+no shorter-source independence premise. The independently audited
+rank-one specialization (LC106)--(LC107) strengthens this to
+every fixed positive weight triple, including (2,3,5), and
+to fixed positive invertible common G with nonzero two-by-two
+minors. Grouped differences
 also give an explicit 3(q-2)-dimensional residue family killed
 by all new matching rows. These ranks are before quotienting
 retained old sources. For the paired new-head/new-first boundary
@@ -816,6 +826,33 @@ weighted family. After using the terminal residues, only the
 three last incoming coefficients remain unknown. This controls
 the previously growing polynomial head correction, but does not
 yet solve those coefficients or prove the boundary determinant.
+The audited partial-fraction construction (LC99)--(LC102)
+now builds the shorter ambient row without a source-matrix
+inverse. Its one-dimensional polynomial ambiguity cancels
+exactly after the inherited head correction. The unresolved
+source dependence enters through a three-by-three last-incoming
+response, with the positive sign in the canceled-value formula
+checked explicitly. This is not yet a closed recurrence with a
+fixed number of state variables: the response map still acts
+on a growing shorter residue space.
+At a last-time collision the endpoint correction has the
+explicit, generally nonzero first derivative (LC103).
+The actual duplicate-difference jets equal a connection
+supported on only the six terminal paired columns,
+(LC104)--(LC105). These audited identities narrow the
+confluent calculation without identifying ambient interpolation
+with actual source-prefix compatibility.
+The audited new-head quotient (LC108)--(LC111) now gives an
+explicit descent: three pole pivots and three coordinate-edge
+outputs per block, followed by a seven-dimensional base.
+It recovers all head coefficients and their margins and
+annihilates the polynomial ambiguity. The full old/new
+elimination (LC112)--(LC113) retains the actual inserted
+kernel and the old-body correction D_q+Z_T. Applying this
+quotient to incoming columns gives a delayed-output
+structure, but its newest columns still feed earlier poles.
+Nonvanishing of that incoming quotient and of the full
+remaining source block are the next unproved steps.
 The saved finite boundary checker independently extracts the
 54-square minor 482791 from the prior q=4 matrix, verifies its
 three sector determinants, and gives the remaining 27-square

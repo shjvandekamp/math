@@ -2536,3 +2536,404 @@ assuming the paired source matrix invertible. It does not
 recover y_last or prove det S_q nonzero. Those three remaining
 coefficients, and their interaction with the canceled values
 in (LC95), are the concrete next step.
+
+## Explicit interpolation and the remaining three-coefficient feedback
+
+The row interpolant needed in (LC95) can be constructed without
+inverting the shorter paired source matrix. Choose an affine
+coordinate z on the new line with all three coordinate-edge
+points at distinct finite values tau_j, all old-pole nodes z_i
+finite, and no node at an edge. For prescribed ordinary
+z-residue rows r_i with sum_j r_ij=0, put
+
+\[
+ F^0_j(z)=\sum_i r_{ij}
+       \frac{z-\tau_j}{(z_i-\tau_j)(z-z_i)},\qquad
+ C=\sum_{i,j}\frac{r_{ij}}{z_i-\tau_j}.
+ \tag{LC99}
+\]
+
+The partial-fraction identity
+(z-tau_j)/((z_i-tau_j)(z-z_i))
+=1/(z_i-tau_j)+1/(z-z_i)
+shows that sum_j F^0_j=C. Therefore
+F_j=F^0_j+c_j(z-tau_j), where
+c_0=C/(tau_0-tau_1), c_1=-c_0, c_2=0,
+has row sum zero, the prescribed residues, and component j
+zero at its coordinate edge. Restoring the homogeneous chart
+factor gives a degree-one row R_can. Any other row with these
+properties, no additional poles, and affine growth at most
+one differs from R_can by lambda v. Indeed the difference is
+a degree-one polynomial, component j is a multiple of X_j,
+and its zero sum makes the three coefficients proportional
+to the new line normal. The growth condition is essential:
+unrestricted polynomial terms would invalidate uniqueness.
+All original homogeneous residue observations must first be
+converted consistently to these ordinary affine residues.
+
+This polynomial ambiguity cancels in the transported quotient.
+For fixed terminal residue data rho and fixed last incoming
+coefficients, replacing the auxiliary representative R by
+R+lambda v in (LC98) changes sigma by lambda A_circle(a,:).
+This follows from Phi_q(v)=L_q A_circle(a,:)^T. Consequently
+
+\[
+ R+h_\sigma(V-I)\ \longmapsto\
+ R+h_\sigma(V-I)+\lambda vV,\qquad
+ h_\sigma=\sum_b\sigma_bX_b e_b.
+ \tag{LC100}
+\]
+
+The added row is in the canceled-value kernel from (LC95).
+This is a rule for auxiliary representatives; it does not
+assert that adding lambda v preserves the actual paired
+source span.
+
+For an explicit feedback formula take q>=3 and k=q-1, so the
+endpoint formula (LC98) applies to the shorter family. Suppose
+B_k is invertible. For shorter residue data z, let T_k z be
+the three last incoming coefficients of its unique actual
+paired-source preimage. Define the known linear maps
+
+\[
+ \mathcal A_k z=L_k^{-1}
+   \bigl(\Phi_k(R_{\rm can}(z))+C_k\rho(z)\bigr),
+ \qquad
+ \overline D_k=L_k^{-1}D_k.
+ \tag{LC101}
+\]
+
+Here rho(z) is the shorter terminal transformed-residue
+observation, obtained linearly from z. In the representative
+gauge R_can, (LC98) gives
+sigma=mathcal A_k z+overline D_k T_k z. The actual preimage
+may differ from R_can by lambda v, but (LC100) cancels this
+difference in every following canceled-value test.
+
+Let b_q be the three earlier-residue columns of C_d V_q in
+(LC95), and let Eval_q take component c at P_c. With
+X_q=diag(X_c(P_c)), the exact remaining matrix is
+
+\[
+ \begin{aligned}
+ S_q&=S_q^{\rm local}
+       +X_q\overline D_k(T_k b_q),\\
+ S_q^{\rm local}
+   &=\operatorname{Eval}_q
+        \bigl((C_dV_q)_{d=0}^2-R_{\rm can}(b_q)\bigr)
+       +X_q\mathcal A_k b_q .
+ \end{aligned}
+ \tag{LC102}
+\]
+
+Here interpolation and evaluation act columnwise on the
+three indicated rows. The plus signs follow because column c of V_q vanishes at
+P_c: the c-th component of h_sigma(V_q-I) there equals
+-X_c sigma_c, and this inherited correction is subtracted.
+For q=2 one must use the direct shorter base separately;
+(LC101) does not invoke the q>=2 endpoint formula at k=1.
+
+Equations (LC99)--(LC102) were independently audited. They
+remove the full shorter inverse from constructing the row
+interpolant and isolate its remaining effect in the three
+last incoming coefficients. They do not yet give a closed
+recurrence with a fixed number of state variables: T_k still
+has a growing residue-data domain. Proving a closed formula
+for its action on b_q, or proving the resulting determinant
+nonzero directly, remains open.
+
+## The endpoint derivative at a last-time collision
+
+There is a regular way to study the same correction when the
+last two time blocks coincide. Write k=q-1, K_k=K,
+K_q=K+epsilon dotK+O(epsilon^2), and
+P=K_1...K_(k-1). Vary the last time factors by
+b_qi=b_ki(1+epsilon delta_i)+O(epsilon^2). Use the actual
+duplicate differences Y_epsilon=H_qb-H_kb or J_qc-J_kc
+in the q-block family, without dividing by the possibly
+singular Newton pivots xi. They vanish at epsilon=0 and
+have total head-prefix sum zero identically. Their positive
+exceptional completed rows in (LC96) specialize respectively to
+E_0=X_b e_b KPK and
+E_0=A_k(c,a)X_c vPK/L_kc. Differentiating (LC97) gives
+
+\[
+ \Phi_K(Y')_b
+   =\sum_{i\ne b}\dot\eta_{bi}(E_{0,i}/X_i)(M_b),
+ \qquad
+ \dot\eta_{bi}=(\delta_b-\delta_i)\eta_{k,b,i}.
+ \tag{LC103}
+\]
+
+The sign is positive: the exact identity for these differences
+is 0=Phi_q(Y_epsilon)+(eta_k-eta_q)(E_epsilon/X),
+and Y_0=0. In particular eta_q-eta_k being of first order
+does not make the correction negligible; its first coefficient
+is generally nonzero.
+
+The corresponding derivative is supported on just the six
+terminal columns of the shorter paired family. For each such
+family column define the auxiliary polynomial prefix by
+I_aux(H_sb)=X_b e_b and I_aux(J_tc)=0. This auxiliary prefix
+is distinct from the global source-prefix map. With only
+the shorter last time varied, define on each column
+
+\[
+ \nabla R=\dot R-(R-I_{\rm aux}(R))\dot K K^{-1}.
+ \tag{LC104}
+\]
+
+Every nonterminal completed word ends in K, so its derivative
+is (R-I_aux(R))dotK K^(-1), and its connection value is zero.
+For the last six columns, putting g_c=A_k(c,a)X_c/L_kc gives
+
+\[
+ \begin{aligned}
+ \nabla H_{k,b}
+   &=-X_b e_b\dot K P+X_b e_bKP\dot K K^{-1}
+     =(H_{q,b}-H_{k,b})'K^{-1},\\
+ \nabla J_{k,c}
+   &=-\dot g_c\,vP+g_c vP\dot K K^{-1}
+     =(J_{q,c}-J_{k,c})'K^{-1}.
+ \end{aligned}
+ \tag{LC105}
+\]
+
+These are identities for the actual ordered columns and their
+coefficientwise linear extension. Differentiating a combination
+whose coefficients themselves vary would additionally
+differentiate those coefficients.
+
+There is still a source-compatibility condition. Set
+sigma*=L_K^(-1)Phi_K(Y') and
+f*=Y'K^(-1)-h_sigma*(K^(-1)-I).
+The inverse-column identity behind (LC97) makes f* satisfy
+the shorter coordinate-edge conditions. Once all residual
+double poles are removed, this constructs a shorter ambient
+interpolant. It does not prove that sigma* equals the
+accumulated head coefficients of the actual shorter source
+preimage. That discrepancy is precisely the remaining
+confluent graph condition, modulo the gauge in (LC100).
+The identities (LC103)--(LC105) passed independent audit;
+nonvanishing of the final three pivots remains unproved.
+
+## Strengthening the new-head theorem to every fixed positive weight triple
+
+The nonzero Newton-pivot proof in (LC88)--(LC89) can be
+strengthened: r need not vary. This argument was proposed in
+[Pro41](https://chatgpt.com/c/6ad1b27c-7cb0-83ed-b39d-e1350c9e67c7)
+and independently audited locally.
+
+Fix positive r and a generic last time. At the point
+P*={L_circle,a=L_md=0}, all X coordinates are units, and
+V=K_m^(-1)(P*) has rank two with left kernel span(v_md).
+Choose a zero-sum row w satisfying
+w_0=(r_0+1)X_0 and w not parallel to v_md. Set the two
+auxiliary time factors to w_1/X_1 and w_2/X_2. Its row-zero
+numerator is w and its row-zero denominator vanishes.
+Writing c_0=r_0+1 and w_2=-c_0X_0-w_1, the other two
+denominators are
+
+\[
+ L_{h1}=-r_0X_0+r_1w_1,\qquad
+ L_{h2}=[1-c_0(r_2+1)]X_0-r_2w_1.
+ \tag{LC106}
+\]
+
+They exclude only finitely many choices of w_1, as do
+w_1w_2=0 and w parallel to v_md. Move every earlier time
+toward this same auxiliary time with L_h0(P*)=epsilon.
+Then K_h(P*)=epsilon^(-1)e_0w+O(1), and for m>=2
+
+\[
+ v_{md}K_h^{m-1}V
+  =\epsilon^{-(m-1)}(v_{md})_0w_0^{m-2}wV
+       +O(\epsilon^{-(m-2)})\ne0.
+ \tag{LC107}
+\]
+
+Every factor in the leading coefficient is nonzero by the
+choices above. The auxiliary limiting times need not be
+positive: this specialization proves that the relevant real
+rational function is not identically zero. Its nonvanishing
+open set then intersects the positive time orthant. For each
+finite m, the finitely many pivot conditions and generic
+geometry conditions can be imposed simultaneously there.
+The m=1 direct base and the induction in (LC89) therefore
+prove full new-head residue rank 9q for every fixed positive
+r, including r=(2,3,5).
+
+The same pivot construction works for a fixed positive common
+G with det G nonzero and all two-by-two minors nonzero.
+Use w_0=G_00X_0 and auxiliary factors
+w_1/(G_01X_1), w_2/(G_02X_2). The other-row denominators
+are affine functions of w_1 with slopes
+G_i1/G_01-G_i2/G_02, nonzero by the stated minors. The
+geometric open conditions and the direct base then give the
+same new-head theorem. Invertibility of G is a separate
+assumption; the two-by-two minor conditions alone do not
+imply it. Neither version proves a rank contribution modulo
+retained old columns.
+
+## Constructive quotient by the entire new-head family
+
+Pro41 also supplied the following independently audited
+construction. Fix a new-line sector, write g=A_circle(a,:)^T,
+and let mathcal V_m be the degree-one, zero-sum rational rows
+with simple poles at the 3m old nodes and component j zero
+at Q_j={L_circle,a=X_j=0}. Its dimension is 6m+1 and its
+polynomial subspace is span(v).
+
+For rows regular at the coordinate edges define
+e(F)_j=F_j(Q_j). Choose k(j) different from j and the
+zero-sum polynomial rows W_j=X_k(j)(e_j-e_k(j))/X_k(j)(Q_j).
+They satisfy e(W_j)=e_j. Thus every degree-one zero-sum
+polynomial row has the unique decomposition
+F=sum_j e(F)_j W_j+phi(F)v. The functional phi is used
+only on polynomial rows.
+
+Put V_m=K_m^(-1), U_sb^(m)=H_sb^(m)-H_1b^(m), s>=2,
+and J_mb^poly=X_b e_b(V_m-I). The latter notation denotes
+a polynomial head correction, not an incoming source.
+For any f_m in mathcal V_m determine x_md from
+Res_(L_md)(f_m V_m)=x_md Res_(L_md)(U_md^(m)V_m).
+The residue image is one-dimensional and the pivot is the
+proved nonzero head pivot. Define
+
+\[
+ G_m=\left(f_m-\sum_b x_{mb}U_{mb}^{(m)}\right)V_m,
+ \qquad y_m=e(G_m),\qquad
+ f_{m-1}=G_m-\sum_j(y_m)_jW_j .
+ \tag{LC108}
+\]
+
+There are no newest-block poles in G_m and no coordinate
+poles: the component factors X_j cancel diag(X)^(-1)
+in V_m. Subtracting the polynomial edge correction gives
+f_(m-1) in mathcal V_(m-1). Conversely,
+f_m=sum_b x_mb U_mb^(m)+(f_(m-1)+sum_j y_mj W_j)K_m.
+The differences transport exactly:
+U_sb^(m)K_(m+1)...K_q=U_sb^(q).
+
+At m=1 choose three complementary one-node residue lifts
+g_d alongside the three H_1b^(1) and v. Each g_d has
+residue at only node d, independent there of the H_1d
+residue. Existence follows by prescribing residues and
+subtracting polynomial edge values. These seven rows
+form a basis, so the final row has a unique expansion
+
+\[
+ f_1=\sum_b\beta_b H_{1b}^{(1)}
+          +\sum_d\gamma_d g_d+\lambda_1v .
+ \tag{LC109}
+\]
+
+Define the edge matrix and polynomial coefficient row
+
+\[
+ \mathcal E_m=
+  \bigl(e(J_{m0}^{\rm poly}),e(J_{m1}^{\rm poly}),
+        e(J_{m2}^{\rm poly})\bigr)
+  =\operatorname{diag}(L_{mj}(Q_j))(A_m^{-1})^{\mathsf T},
+ \qquad
+ \eta_m=(\phi(J_{m0}^{\rm poly}),\phi(J_{m1}^{\rm poly}),
+                  \phi(J_{m2}^{\rm poly})).
+ \tag{LC110}
+\]
+
+This matrix is invertible on the stated coordinate-edge
+geometry. It is distinct from the endpoint matrix L_m
+and its coefficients eta in (LC97). Set z_m=mathcal E_m^(-1)y_m.
+On a baseline head combination plus lambda_m v, the exact
+relations are z_m=beta+lambda_m g and
+z_(m-1)=(I+g eta_m)z_m. No inverse of this rank-one
+update is needed. For q>=2 define the 3q quotient observations
+
+\[
+ \mathcal C_a(f)=
+ \left(
+  \gamma,\
+  \bigl(z_{m-1}-(I+g\eta_m)z_m\bigr)_{m=3}^q,\
+  \beta+\lambda_1g-(I+g\eta_2)z_2
+ \right).
+ \tag{LC111}
+\]
+
+Their kernel is exactly span(H_sb^(q)) direct-sum span(v).
+Necessity follows by transporting each difference and using
+the baseline relations. For sufficiency the last relation
+sets z_1=beta+lambda_1g, and each transition changes z_m
+only by a multiple of g. Hence every z_m-beta is a multiple
+of g; reconstruction in (LC108) gives precisely a head
+combination plus a multiple of v. At q=1 use gamma as
+the three quotient observations.
+
+The extracted head coefficients are c_sb=x_sb for s>=2,
+c_1b=beta_b-sum_(s>=2)x_sb. This defines a projection Pi_a
+which recovers the coefficients on the head span. Both Pi_a
+and mathcal C_a kill v, and together they give an invertible
+change of the 6q residue coordinates. For the original
+physical new-head columns divide c_sb by A_circle(a,b);
+their accumulated literal head margin is beta.
+This is an explicit descent with a fixed seven-dimensional
+base and three pole/three edge operations at each length.
+The rational input and residue data still grow with q:
+it is not a closed recurrence for the paired determinant.
+
+## Exact old/new source elimination using the explicit head quotient
+
+Let N be all 9q actual new-head F columns, T all retained
+old-head/old-first columns, and B all 9q old-head/new-first
+columns. Across the three sectors the preceding maps give
+(Pi_N,C) as an invertible change of the 18q new-pole rows,
+with Pi_N D_new(N)=I and C D_new(N)=0.
+The profiles supplied to that descent are actual ordered
+source residues:
+
+\[
+ \left.\frac{L_{\circ a}}{X_a}F^+_{t,s,h,b}\right|_{L_{\circ a}=0}
+   =-\frac{p_{thb}A_s(b,a)}{L_{sb}}\,v_aR_{ts},
+ \qquad
+ \left.\frac{L_{\circ a}}{X_a}F_{t,\circ,h,b}\right|_{L_{\circ a}=0}
+   =-\delta_{ba}\frac{X_hA_t(h,a)}{L_{th}}\,v_aR_t .
+ \tag{LC112}
+\]
+
+Here R_ts omits t,s and R_t omits t, both increasing.
+In particular the inserted K_s contributes the factor
+A_s(b,a)/L_sb and has not been dropped. The incoming
+quotient C_B separates into three 3q-square state sectors.
+
+Write T=F_old+A_err, with the exact prepend error
+A_err,ts,hb=p_thb e_b K_s(I-K_circle)R_ts. Subtract the
+actual head projections from T and B, and set
+Z_T=D_old(A_err-N Pi_T), Z_B=D_old(B-N Pi_B).
+Ordinary invertible row and column operations give
+
+\[
+ D_{q+1}\sim
+ \begin{pmatrix}
+ I_{9q}&0&0\\
+ 0&D_q+Z_T&Z_B\\
+ 0&C_T&C_B
+ \end{pmatrix}.
+ \tag{LC113}
+\]
+
+This elimination does not assume D_q invertible. If it is
+invertible, one may factor det D_q from the lower block,
+retaining I+D_q^(-1)Z_T rather than replacing it by I.
+No nonvanishing of that remaining block is proved.
+The literal new-head margins after subtraction are -beta_a(T)
+and -beta_a(B). Their actual matching observations remain
+-beta_a(X)+A_circle(a,:)e_circle,a(X-N Pi_X); they must
+not be counted again as residue pivots.
+
+For the paired boundary problem there is an additional exact
+delay property: when t<m,
+J_tc^(m)V_m=J_tc^(m-1), so its descent has x_m=y_m=0
+until m reaches t. Applying (LC111) to these delayed
+incoming columns may expose a useful matrix structure.
+The newest incoming group still produces earlier residues,
+so this property alone does not make C_B triangular or
+prove its determinant nonzero.

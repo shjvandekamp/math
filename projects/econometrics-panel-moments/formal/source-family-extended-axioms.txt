@@ -1007,3 +1007,41 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceTimeScaling.linearIndependent_reducedColumn_scaledTable_iff' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.canceledOutput_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.canceledOutput_eq_divided_output' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.weightedTime_rowForm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.weightedTime_canceledOutput' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.weight_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.preservingScale_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.preservingScale_sub_weight_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.preservingScale_sub_weight_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.weighted_endpoint_relation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.endpointCore_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

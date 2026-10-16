@@ -94,10 +94,17 @@ preserve independence of both the actual source family and the reduced
 family at each fixed length. The module does not assert that either family
 is independent or prove determinant nonvanishing.
 
-The current source-family aggregate checks 449 declarations in a compiled
-41-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. It took 38.20 seconds with peak
-RSS 2,170,994,688 bytes under the serial memory cap. All checked declarations
+SourceBoundaryEndpointAlgebra.lean uses the actual weighted table and
+kernel to cancel an output coordinate before restricting to a coordinate
+edge. It proves the endpoint relation and the recovery determinant
+S^2/product_k(S-w_k), positive for positive weights and independent of
+the nonzero time factors. No residue interpolation or source-independence
+claim is made.
+
+The current source-family aggregate checks 463 declarations in a compiled
+42-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. It took 37.72 seconds with peak
+RSS 1,968,766,976 bytes under the serial memory cap. All checked declarations
 use only the permitted foundational axioms; the output is saved in
 `source-family-extended-axioms.txt`.
 
