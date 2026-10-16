@@ -13,6 +13,7 @@ import PanelMoments.SourceBinaryTerminalAlgebra
 import PanelMoments.SourceFirstBlockCancellation
 import PanelMoments.SourceResetHeadObstruction
 import PanelMoments.SourceTerminalColumnRelation
+import PanelMoments.SourceWeakTransferInterpolation
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -671,3 +672,12 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceTerminalColumnRelation.vecMul_column_relation
 #print axioms PanelMoments.SourceTerminalColumnRelation.vecMul_column_relation_zero_sum
 #print axioms PanelMoments.SourceTerminalColumnRelation.word_tail_column_relation_zero_sum
+
+#print axioms PanelMoments.SourceWeakTransferInterpolation.interpolation_numerator_factorization
+#print axioms PanelMoments.SourceWeakTransferInterpolation.positiveFactor_eq_sq
+#print axioms PanelMoments.SourceWeakTransferInterpolation.positiveFactor_pos
+#print axioms PanelMoments.SourceWeakTransferInterpolation.positiveFactor_ne_zero
+#print axioms PanelMoments.SourceWeakTransferInterpolation.interpolationValue_factorization
+#print axioms PanelMoments.SourceWeakTransferInterpolation.scaledInterpolationValue_eq_reducedValue
+#print axioms PanelMoments.SourceWeakTransferInterpolation.reducedValue_ne_zero
+#print axioms PanelMoments.SourceWeakTransferInterpolation.reducedValue_at_zero

@@ -5660,3 +5660,22 @@ endpoint basis may have poles at h=0; no regular boundary normalization
 or exact diagonal valuation follows from this separation result.
 The remaining task is to control those three directions together,
 then the retained-old-source determinant.
+
+The two polynomial gauges now have explicit actual coefficient updates.
+Writing W_0,W_1 for the two retained head defects from the full transfer,
+their weak functions, together with the constant function, span exactly
+V_k=span{1,W_0,W_1}; the change of basis has determinant
+3a_k a_(k-1)/(a_k-a_(k-1))^2. Thus the remaining leading-coefficient
+question is the explicit transversality condition
+
+\[
+ \mathcal S_k^{\rm full\ weak}\cap
+             \operatorname{span}\{1,W_0,W_1\}=\{0\},
+ \tag{LC204}
+\]
+
+as proved in (NH28)--(NH32). The gauge identities retain their actual
+heads and row sums. Condition (LC204) itself remains unproved.
+The scalar polynomial certificate underlying (LC203) is now checked
+by eight Lean theorems; this does not formalize the transfer or
+establish (LC204).

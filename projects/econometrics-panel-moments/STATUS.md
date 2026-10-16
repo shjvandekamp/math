@@ -139,6 +139,9 @@ scalars. The justified actual graded residue rank is at least 6m-3:
 one infinity/constant direction and two polynomial gauges remain
 to be controlled together. This is audited paper progress, not a
 proof of full paired independence or of equation (24) for every T.
+The two actual gauge updates now reduce the remaining leading determinant
+to the explicit intersection test (LC204): the promoted weak image must
+be transverse to span{1,W_0,W_1}. Its uniform nonvanishing is still open.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
@@ -324,11 +327,15 @@ the exact relation between its two output columns, including arbitrary
 and zero-sum row actions and ordered tails. The cleared identity needs
 no units; the divided statements list their denominator conditions.
 No boundary or rank conclusion is asserted by this module.
-The updated aggregate checks 542 declarations in a 50-module compiled
+SourceWeakTransferInterpolation adds eight checked scalar theorems for
+the explicit interpolation numerator, its positive quadratic factor,
+the rational reduction, nonvanishing at nonzero h, and vanishing at h=0.
+It does not formalize the actual transfer or a rank statement.
+The updated aggregate checks 550 declarations in a 51-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 50-module rebuild. The aggregate took 12.60 seconds with peak
-RSS 2,469,543,936 bytes under the serial memory cap.
+new clean 51-module rebuild. The aggregate took 18.70 seconds with peak
+RSS 2,379,907,072 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 

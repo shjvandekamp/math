@@ -1246,3 +1246,27 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceTerminalColumnRelation.word_tail_column_relation_zero_sum' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceWeakTransferInterpolation.interpolation_numerator_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceWeakTransferInterpolation.positiveFactor_eq_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceWeakTransferInterpolation.positiveFactor_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceWeakTransferInterpolation.positiveFactor_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceWeakTransferInterpolation.interpolationValue_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceWeakTransferInterpolation.scaledInterpolationValue_eq_reducedValue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceWeakTransferInterpolation.reducedValue_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceWeakTransferInterpolation.reducedValue_at_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

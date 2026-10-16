@@ -272,6 +272,13 @@ The quadratic equals \(4(a-A)^2+3aA>0\) for positive \(a,A\).
 Therefore (NH13) is nonzero under the stated units and \(h\ne0\).
 It also proves \(\dim\mathcal N_k(h)=3\).
 
+The displayed polynomial factorization, its positive quadratic factor,
+and the reduced scalar's nonvanishing are now checked in
+[SourceWeakTransferInterpolation.lean](../formal/PanelMoments/SourceWeakTransferInterpolation.lean).
+That module contains eight scalar theorems with explicit denominator
+hypotheses. It does not identify an actual source row or formalize the
+transfer and rank arguments in this note.
+
 On the other hand, \(\chi_{k,h}c\) vanishes at \(r=2h\), because
 \(c\) is regular there. Since \(\Delta_k(2h)D_m(2h)\ne0\), no
 nonzero multiple of the remaining line in (NH12) can equal it.
@@ -554,3 +561,100 @@ to the remaining weak observations. In particular, it would be
 incorrect to infer that only two directions remain from full weak
 function independence. The exact paired determinant and the
 retained-old-source step are still unproved.
+
+## Two actual gauges and the explicit three-dimensional test
+
+The remaining scalar complement can be stated explicitly. Let
+\(p_0=e_0\) and \(p_1=-re_1\). Suppose actual completed coefficient
+vectors \(\gamma_0,\gamma_1\) have binary rows \(p_0,p_1\).
+Their exact row sums are respectively \(1,-r\). Such gauges exist
+by the binary scalar lifting theorem and the checked base. Their
+source polynomial heads are retained throughout this construction.
+
+For an append, set \(g_b=(p_bK_k^0)_1\) and
+\(q_b=g_b-(p_b)_1\). The actual update is
+\(\gamma_b^+=\iota(\gamma_b)-\mathcal C_{q_b}\), where
+\(\mathcal C_{q_b}\) is an exact-sum-zero binary lift at length \(k\).
+Its binary row is again \(p_b\), and its head is the old head minus
+the lift's actual head. No ambient polynomial preimage is assumed.
+The two targets are
+
+\[
+ q_0=\frac{-Ar}{2-Ar},\quad
+ \frac{q_0}{d_k}=\frac{1-2Ar}{3},\qquad
+ q_1=\frac r{1-2Ar},\quad
+ \frac{q_1}{d_k}=-\frac2{3A}+\frac r3.
+ \tag{NH28}
+\]
+
+Use the actual head differences (NH18) with coefficients
+\[
+ \begin{array}{c|cc}
+ &\mathcal H_{k,0}&\mathcal H_{k,1}\\ \hline
+ q_0&-A/(A-a_m)&-2Aa_m/(A-a_m)\\
+ q_1&2/(A-a_m)&a_m/(A-a_m).
+ \end{array}
+ \tag{NH29}
+\]
+In each row, subtracting these two binary outputs from \(q_b\) and
+dividing by \(d_k\) leaves a bounded old scalar that is zero at zero,
+by (NH19) and (NH28). Append its actual shorter lift. This constructs
+the required \(\mathcal C_{q_b}\).
+
+The last-kernel identity then gives the two updated gauge weak functions
+\[
+ \begin{split}
+ c_{\gamma_0^+}
+   &=\frac{b_k}{3}+\frac A{A-a_m}W_0
+                      +\frac{2Aa_m}{A-a_m}W_1,\\
+ c_{\gamma_1^+}
+   &=\frac{b_k}{3A}-\frac2{A-a_m}W_0
+                      -\frac{a_m}{A-a_m}W_1.
+ \end{split}
+ \tag{NH30}
+\]
+Indeed the inherited gauge contributes
+\(b_ks_b/3-b_k\mathcal A_k g_b\), whereas its zero-sum section
+contributes \(-b_k\mathcal A_kq_b\) plus the two defects in (NH29).
+For \(b=1\), the remaining polynomial expression is
+\(-b_kr/3+b_k\mathcal A_kr=b_k/(3A)\).
+This calculation does not transport the old gauge's weak scalar:
+that older scalar first enters the appended output at the next
+\(\delta\) order.
+
+The coefficient determinant of \(W_0,W_1\) in (NH30) is
+\(3Aa_m/(A-a_m)^2\ne0\). Consequently
+\[
+ \operatorname{span}\{1,c_{\gamma_0^+},c_{\gamma_1^+}\}
+       =\operatorname{span}\{1,W_0,W_1\}=:\mathcal V_k.
+ \tag{NH31}
+\]
+Another exact simplification is
+\(W_1=-rW_0-r\Delta_kD_k\): the binary row difference of the
+moved-first product is its determinant \(D_k\).
+
+The gauges remain independent modulo the exact-sum-zero coefficient
+space because their completed sums are \(1,-r\). Together with the
+actual binary section and promoted kernel vectors, they form an actual
+coefficient basis; the positive-order promotion corrections preserve
+its unit determinant.
+
+Write \(\mathcal S_k\) for the full actual promoted weak-function
+image in (NH26), of dimension \(3k-2\). Since the ambient
+\(\mathcal F_k\) has dimension \(3k+1\), the remaining condition is
+precisely
+\[
+ \boxed{\mathcal S_k\cap\mathcal V_k=\{0\},
+        \qquad \mathcal V_k=\operatorname{span}\{1,W_0,W_1\}.}
+ \tag{NH32}
+\]
+If this transversality holds, (NH31) and (NH27) show that the
+\(3k-2\) promoted kernel columns and the two gauge columns have
+independent weak residues. Combined with the \(3k\) strong binary
+pivots, the leading normalized graded determinant is then nonzero.
+Conversely that leading weak-residue independence gives (NH32).
+
+Thus (NH32) is an explicit three-dimensional test, with both actual
+gauge functions known. Its vanishing or nonvanishing has not been
+established uniformly in \(k\). The direct-sum transfer alone does
+not prove this transversality, and does not yet close paired induction.
