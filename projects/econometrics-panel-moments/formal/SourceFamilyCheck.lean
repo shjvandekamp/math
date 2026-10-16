@@ -422,6 +422,8 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceAppendIdentities.clearedKernel_eval_coordinate_factor
 #print axioms PanelMoments.SourceAppendIdentities.cleared_vecMul_coordinate_factor
 #print axioms PanelMoments.SourceAppendIdentities.cleared_append_scalar_split
+#print axioms PanelMoments.SourceAppendIdentities.cleared_append_scalar_zero_factorization
+#print axioms PanelMoments.SourceAppendIdentities.append_scalar_zero_factorization
 #print axioms PanelMoments.SourceAppendIdentities.denominator_mul_append_scalar_split
 #print axioms PanelMoments.SourceAppendIdentities.divided_cleared_pole_factorization
 #print axioms PanelMoments.SourceAppendIdentities.endBlock_outputDivided_pole_cancellation

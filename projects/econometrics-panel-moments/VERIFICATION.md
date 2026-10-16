@@ -154,6 +154,17 @@ its serial reproduction list. No new clean 32-module rebuild was run.
 These identities do not formalize the new residue asymptotics or the
 paper scalar/auxiliary rank induction.
 
+The full-vector scalar-zero append identity was subsequently added to
+the same module, in cleared and rational forms. Focused compilation
+passed in 11.83 seconds with maximum RSS 2,033,991,680 bytes; the
+[build log](formal/source-append-identities-full-vector-build.log)
+retains the result. Both new declarations passed focused axiom checks.
+The current cached aggregate then passed all **339** requested
+declarations in the same **32-module** closure, and the saved extended
+axiom file was updated. No clean rebuild was needed or claimed. The
+formula is exact; the normalized boundary limit and rank arguments
+remain paper results.
+
 Every audited declaration in both main checks depends only on
 `propext`, `Classical.choice`, and `Quot.sound`. There are no `sorry`, `admit`,
 `sorryAx`, custom axioms, or native computation oracles in the project proof

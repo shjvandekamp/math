@@ -12,6 +12,8 @@ existing homogeneous model kernel and its polynomial clearing.
 At `ε = 0`, a zero-sum row appends to a scalar multiple of
 `e₂ - e₀`; an old scalar-kernel row therefore appends to zero.
 The cleared first splitting identity is exact for every `ε`.
+For a scalar-zero input row, the whole appended vector factors as
+`ε X₁ R₁ / (L₀ L₁)` times `(-X₀, X₀ + v X₂, -v X₂)`.
 
 The last lemmas factor the actual cleared matrix on a row-form zero
 and prove the output-divided cancellation underlying the new-pole
@@ -151,6 +153,52 @@ theorem cleared_append_scalar_split (ε v : ℝ) (X R : State 2 → ℝ)
     hzero, hR₂, rowCofactor_zero, rowCofactor_one, blockTable, block_rowForm,
     gamma, delta]
   ring
+
+/-- The full-vector splitting factorization, without denominator hypotheses. -/
+theorem cleared_append_scalar_zero_factorization (ε v : ℝ) (X R : State 2 → ℝ)
+    (hR : ∑ a : State 2, R a = 0) (hR₂ : R 2 = 0) :
+    clearedAppendRow ε v X R =
+      (ε * X 1 * R 1 * rowForm (blockTable ε v) X 0 2) •
+        ![-X 0, X 0 + v * X 2, -v * X 2] := by
+  have hsum : R 0 + R 1 + R 2 = 0 := by
+    simpa [Fin.sum_univ_succ, add_assoc] using hR
+  have hzero : R 0 = -R 1 := by linarith
+  funext i
+  rw [clearedAppendRow, cleared_vecMul_coordinate_factor]
+  fin_cases i <;>
+    simp [Matrix.vecMul, dotProduct, Fin.sum_univ_succ, dividedClearedKernel,
+      hzero, hR₂, rowCofactor_zero, rowCofactor_one, blockTable, block_rowForm,
+      gamma, delta, Pi.smul_apply, smul_eq_mul] <;> ring
+
+/-- The actual rational-kernel form of the full-vector identity (SK21).
+This concerns a pure append; copying arbitrary old source coefficients also
+has the prefix correction and is not identified with this operation. -/
+theorem append_scalar_zero_factorization (ε v : ℝ) (X R : State 2 → ℝ)
+    (hR : ∑ a : State 2, R a = 0) (hR₂ : R 2 = 0)
+    (hL : ∀ a, rowForm (blockTable ε v) X 0 a ≠ 0) :
+    appendRow ε v X R =
+      (ε * X 1 * R 1 /
+        (rowForm (blockTable ε v) X 0 0 * rowForm (blockTable ε v) X 0 1)) •
+        ![-X 0, X 0 + v * X 2, -v * X 2] := by
+  have h := cleared_append_scalar_zero_factorization ε v X R hR hR₂
+  rw [clearedAppendRow, clearedKernel_eval_of_nonzero _ _ _ hL,
+    Matrix.vecMul_smul] at h
+  have hD : MvPolynomial.eval X (blockDenominator (blockTable ε v) 0) =
+      rowForm (blockTable ε v) X 0 0 *
+        (rowForm (blockTable ε v) X 0 1 * rowForm (blockTable ε v) X 0 2) := by
+    rw [blockDenominator_eval]
+    simp [Fin.prod_univ_succ]
+  have hDne : MvPolynomial.eval X (blockDenominator (blockTable ε v) 0) ≠ 0 := by
+    rw [hD]
+    exact mul_ne_zero (hL 0) (mul_ne_zero (hL 1) (hL 2))
+  funext i
+  have hi := congrFun h i
+  simp only [Pi.smul_apply, smul_eq_mul] at hi ⊢
+  apply mul_left_cancel₀ hDne
+  change MvPolynomial.eval X (blockDenominator (blockTable ε v) 0) *
+      Matrix.vecMul R (kernel (blockTable ε v) X 0) i = _
+  rw [hi, hD]
+  field_simp [hL 0, hL 1]
 
 /-- The same identity for the rational actual kernel wherever its row forms are units. -/
 theorem denominator_mul_append_scalar_split (ε v : ℝ) (X R : State 2 → ℝ)

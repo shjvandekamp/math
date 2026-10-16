@@ -424,6 +424,11 @@ to determine its induced kernel after those same actual corrections on
 K intersect Z, and to retain an injective inherited block. The raw
 first-jet injectivity alone is not that statement.
 
+The exact full-vector equality in (SK21) is now proved in Lean by
+`SourceAppendIdentities.cleared_append_scalar_zero_factorization` and
+`SourceAppendIdentities.append_scalar_zero_factorization`. The
+normalized limit and its rank consequences are not formalized there.
+
 ## Scalar fullness using only copied old sources
 
 A stronger consequence of the prefix calculation is now independently
@@ -617,6 +622,11 @@ can carry all 3q old auxiliary pivots. Full scalar, polar and
 one-line ranks are therefore compatible with a deficient remaining
 regular block. This is a limitation of those rank facts, not an
 actual counterexample to source independence.
+
+[SOURCE24_PREFIX_PENCIL.md](SOURCE24_PREFIX_PENCIL.md) now constructs
+explicit prefix coordinates for this regular quotient. Its source-graph
+map has only five polynomial monomials in the two new time factors;
+the corrected boundary determinant remains open.
 
 ## The choice of scalar section can erase inherited rows
 

@@ -111,7 +111,9 @@ The new `SourceAppendIdentities` module now proves actual word appending,
 whole-vector boundary annihilation, exact scalar splitting, and the
 output-divided pole cancellation using the existing homogeneous and
 cleared model kernels. Focused compilation and twelve further axiom
-checks passed. The updated aggregate checks 337 declarations in a
+checks passed. The full-vector scalar-zero append factorization now
+adds two further checked declarations. The updated aggregate checks
+339 declarations in a
 32-module compiled closure, using only the permitted foundational axioms.
 This is a cached aggregate check, not a new clean 32-module rebuild.
 Residue operators, matching-coordinate removability, asymptotic orders,
@@ -494,6 +496,15 @@ remaining problem is an exact 9q-square determinant in a quotient of
 the old scalar-zero polynomial space. This recasts the existing regular
 Schur gap with all actual corrections retained; its nonvanishing is
 still open. See (SK22)--(SK30) in the scalar-kernel reduction note.
+
+Local ambient prefix recovery now gives explicit quotient coordinates.
+Under the shorter-source independence premise, its actual source-graph
+condition is a (9q+3)-by-r_q matrix with only five new-time monomials:
+1,u,u²,v,uv. Its kernel is exactly the inherited scalar-zero image.
+The boundary columns must still be proved transverse to that kernel;
+the small polynomial degree alone does not prove this. See
+`research/SOURCE24_PREFIX_PENCIL.md` for the audited formulas and
+the necessary generic geometry.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
