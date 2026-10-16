@@ -3934,3 +3934,207 @@ inherited-kernel bijection, and conditional rank argument remain paper
 mathematics. The updated cached aggregate checks 510 declarations in
 47 modules in 11.77 seconds, with peak RSS 2,468,528,128 bytes and only
 permitted foundational axioms.
+
+## An affine response pencil and its first terminal-parameter coefficient
+
+Keep the shorter actual family fixed in (LC144)--(LC148).
+Its edge normalization is independent of tau. Writing
+u_f=(s_0,f,s_2)G^(-1), one has the exact decomposition
+
+\[
+\begin{split}
+ R_\tau(f)&=R^{(0)}(f)+\tau R^{(2)}(f),\\
+ R^{(0)}(f)&=X_0\bigl(s_0e_0-u_f\operatorname{diag}(G_{:0})\bigr),\\
+ R^{(2)}(f)&=X_2\bigl(s_2e_2-u_f\operatorname{diag}(G_{:2})\bigr),\\
+ M_\tau&=M^{(0)}+\tau M^{(2)} .
+\end{split}
+ \tag{LC149}
+\]
+
+These are fixed actual shorter-source graph maps. Define the
+canceled column phi=P e_1/X_1, beta=v phi, and
+kappa_c=G(c,2)/G(c,0). In the chart X_2=1, x=X_0, put
+psi=x(phi_0-phi_2)/beta. The scalar terminal cancellation
+in (LC147) gives exactly
+
+\[
+ t_c(\tau)=\delta_{c1}-X_c T_{\tau\kappa_c},\qquad
+ T_\lambda=\phi_2+
+   \frac{x(\phi_0-\phi_2)-\beta\psi(-\lambda)}{x+\lambda}.
+ \tag{LC150}
+\]
+
+The apparent x=-lambda pole cancels. In particular a generic
+collision with an earlier pole is removable in the parameter
+lambda when beta's cleared numerator is nonzero there. Genuine
+parameter poles may instead occur when that numerator vanishes
+at the moving last node. This cancellation concerns the scalar
+output only. The full incoming vector can retain a last-node
+pole, so it cannot be substituted as an actual shorter row.
+
+Let E=(0,-g_2/g_1,1), assume beta(E) nonzero, and put
+k_0=(phi_0-phi_2)(E)/beta(E). The homogeneous divided expression
+chi=[X_2(phi_0-phi_2)-k_0 beta]/X_0 has degree -1
+and a removable value at X_0=0. Then
+t_c(0)=delta_c1-X_c phi_0 and
+t_c'(0)=kappa_c X_c chi.
+Since sum_c g_c t_c(0)=g_1 is constant, weighted column
+addition in W_m eliminates both the constant term and the
+M^(2) contribution to the first coefficient. With
+Lambda=sum_c g_c kappa_c X_c,
+
+\[
+ [\tau]\det W_m(\tau)
+   =\frac1{g_2}
+      \det\bigl[
+       M^{(0)}(t_0(0)),\
+       M^{(0)}(t_1(0)),\
+       M^{(0)}(\Lambda\chi)
+      \bigr].
+ \tag{LC151}
+\]
+
+Indeed replace the third column by the weighted sum of all
+three divided by g_2. Its constant term is zero and its first
+derivative is M^(0)(Lambda chi)/g_2; only the first two
+columns' constant terms contribute to the determinant's first
+coefficient. Both (LC150) and (LC151) were independently
+audited locally. No nonzero coefficient has been assumed.
+
+There is a useful exact description of the first two lifted
+rows. Put w=e_1G^(-1)diag(G_:0), and choose the constant
+zero-sum row d_c by
+(d_c)_j=-w_j X_c(Q_j)phi_0(Q_j), j=1,2.
+The canonical lift is
+
+\[
+ R^{(0)}(t_c(0))=X_0\bigl[X_c\phi_0w+d_c\bigr],\qquad
+ M^{(0)}(t_c(0))
+   =\Sigma_m(R_c)
+       -\left(\frac{(R_c)_0}{X_0}\right)(Q_0)e_0 .
+ \tag{LC152}
+\]
+
+The nonpolynomial term is
+-(X_c/X_1)(H_10)_1 w, because the selected-first head
+H_10=X_0(e_0-e_0P). Thus the response is an explicit coordinate
+projection of one actual head plus its edge correction. The
+polynomial correction X_0 d_c generally has no separate
+coordinate-divisible shorter source preimage. Sigma_m must be
+applied to the whole row. A constant-coefficient word expansion
+or a compatible append rule for this projection remains open.
+
+At m=1 there is a genuine obstruction to using this first
+coefficient uniformly. For a combination alpha H_10+beta J_10,
+divide its completed row by X_0 and multiply by
+diag(G_:0)^(-1)G. Component 0 is the constant alpha;
+component 2 has only the single L_10 pole. Choose a nonzero
+pair (alpha,beta) canceling that pole, making component 2
+constant as well. The remaining component supplies a nonzero
+scalar class in ker M^(0). If it were constant, coordinate
+factors and the value at Q_0 would make the actual combination
+zero, contrary to B_1 invertibility. Therefore rank M^(0)<=2
+at one block, and (LC151) vanishes there. This does not
+obstruct induction from the separately established q=2 base.
+
+The prescribed checker
+[source24_binary_terminal_tau_coefficient.py](../exploration/source24_binary_terminal_tau_coefficient.py)
+uses the same equal-weight old times and prime as above.
+It evaluates chi's removable edge value using exact dual
+arithmetic, verifies scalar residues by polynomial clearing,
+and reconstructs each R^(0) from actual shorter columns plus
+lambda v. The three-column coefficient matrix has ranks
+1,3,3 and determinants 0,747063,517289 at m=1,2,3.
+It evaluates no singular terminal nodes and uses no terminal
+inverse or parameter sweep. The complete saved certificate is
+source24-binary-terminal-tau-coefficient-results.json.
+These are finite evaluations of (LC151)'s matrix, not an
+independent expansion in tau and not its uniform nonvanishing.
+Proving this coefficient nonzero for every m>=2 would close
+the paired induction. The full source correction would still
+remain.
+
+## An exact prepend factorization and its first-order edge collapse
+
+[Pro45](https://chatgpt.com/c/6ad1c0c7-abec-83eb-80c0-55c8323d8bfe)
+supplied a useful separate explanation of a coalescent obstruction.
+The exact factorization and edge transport below were audited locally.
+For r=(1,1,1), use Y_i=g_iX_i and z_ti=b_ti/g_i,
+so sum Y_i=0 and v=Y. Rescale the columns by their nonzero
+parameter factors, giving H_sb=Y_b e_b(I-P_s) and
+J_tc=-(Y_c/L_tc)vP^t. Write
+L_tc=sum_i z_tiY_i+z_tcY_c.
+Take z_1=(1,1+epsilon,1+2epsilon), fix a generic z_2,
+and let T=K_3...K_q be the actual ordered tail.
+
+Put c_sb=((I+11^T)z_s)_b,
+Hhat_sb=H_sb-(c_sb/4)J_sb, and Jhat_sb=J_sb/4 for s>=2.
+At epsilon=0 the first kernel is K_*=I+d v, d_i=1/Y_i,
+and these lifted rows limit to the actual shorter rows on
+blocks 2,...,q. With
+M_b=Y_b e_bK_2-(c_2b/4)(Y_b/L_2b)v and
+M_sum=sum_b M_b, define corrected rows
+Jcal_c=J_1c-sum_b Hhat_2b+v and
+Hcal_b=H_1b-Hhat_2b-sum_d Hhat_2d+v. Then exactly
+
+\[
+\begin{split}
+ \mathcal J_c&=
+    \bigl[M_{\rm sum}K_1-(Y_c/L_{1c})vK_2\bigr]T,\\
+ \mathcal H_b&=
+    \bigl[(M_b+M_{\rm sum})K_1-Y_b e_bK_1K_2\bigr]T .
+\end{split}
+ \tag{LC153}
+\]
+
+Both brackets vanish at epsilon=0:
+M_bK_*=Y_b e_bK_2 and M_sum K_*=vK_2.
+In particular the corrected q-block rows are precisely the
+corrected two-block rows multiplied by T, with no reordering.
+At the three moving first-block nodes the tail is regular.
+If N_q records two zero-sum residue coordinates per node for
+these six columns, with identical charts and normalizations,
+
+\[
+ \det N_q=\det N_2\prod_{i=0}^2\det T(P_{1i}).
+ \tag{LC154}
+\]
+
+Right multiplication on the zero-sum plane has determinant
+det T because T1=1. This statement concerns these six
+columns and these six residue observations only.
+
+It does not justify passing a two-block first-order
+transversality argument through an edge limit. In the chart
+Y_i=s, Y_j=1, Y_k=-1-s, let a_i(F)=lim s F_j and
+b_i(F)=F_i(Q_i), for a zero-sum first-variation row with
+at most a simple active pole and a finite inactive component.
+If every row form of a tail block is nonzero at Q_i, direct
+cancellation gives
+
+\[
+ \begin{pmatrix}a_i(FK_t)\\b_i(FK_t)\end{pmatrix}
+  =
+  \begin{pmatrix}\kappa_{ti}&0\\\mu_{ti}&0\end{pmatrix}
+  \begin{pmatrix}a_i(F)\\b_i(F)\end{pmatrix},\qquad
+ \kappa_{ti}=
+   \frac{3z_{tj}z_{tk}}{(2z_{tj}-z_{tk})(2z_{tk}-z_{tj})},
+ \quad
+ \mu_{ti}=
+   \frac{z_{ti}(z_{tj}+z_{tk})}
+        {(2z_{tj}-z_{tk})(2z_{tk}-z_{tj})}.
+ \tag{LC155}
+\]
+
+The hypotheses include z_tj-z_tk nonzero, which is the
+inactive row form at that edge. The finite b_i contribution
+is killed by the vanishing output column; the new inactive
+value comes from the active pole. A nonempty tail therefore
+leaves at most three independent values among these six
+first-order edge observations. This is not a rank bound on
+the whole rational family. Also, the actual older lifts in
+(LC153) have moving first-block poles for nonzero epsilon,
+so eliminating them introduces an old-body correction.
+Neither (LC154) nor tail invertibility away from the edges
+removes that correction. The binary-terminal construction
+above explicitly accounts for the inherited leading kernel.

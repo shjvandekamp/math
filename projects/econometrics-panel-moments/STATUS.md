@@ -34,6 +34,11 @@ inverse. Its prescribed finite tests pass at q=2,3,4. Direct derivatives
 of the actual full paired matrix independently give leading ranks
 12,15,18 and remaining first-jet ranks 0,3,6. Uniform nonvanishing of
 the response, followed by the retained-old-source step, is still open.
+The response is an affine pencil in the remaining terminal parameter.
+Its first determinant coefficient is the explicit three-column graph
+response in (LC151). It vanishes at one block, but the prescribed
+two- and three-block coefficients are nonzero. Proving this coefficient
+nonzero for every m>=2 is the current concrete induction target.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
@@ -975,6 +980,20 @@ coefficients 355755,840736,966235. Its saved calculation timing is
 0.049 seconds and 16,285,696 bytes peak RSS before JSON serialization. These certificates are the
 source24-binary-terminal-response and source24-binary-terminal-jet
 exploration files; neither is an arbitrary-length proof.
+Equations (LC149)--(LC151) give an exact affine response pencil,
+a scalar divided-difference formula, and its first terminal-parameter
+coefficient. The new source24-binary-terminal-tau-coefficient
+certificate evaluates that three-column matrix at m=1,2,3, with ranks
+1,3,3 and determinants 0,747063,517289 modulo 1000003. It verifies
+the removable edge value and actual shorter-source reconstruction.
+Its relation to the determinant coefficient is audited algebra;
+the script itself evaluates the matrix only. A one-block kernel
+explains why this coefficient cannot serve as the base. The separate
+q=2 base is already available. The first two columns have an exact
+selected-head projection formula (LC152), whose compatible actual
+source expansion remains unknown. The alternative prepend factorization
+(LC153)--(LC155) also explains why a regular tail loses three finite
+edge observations at first order; it supplies no shortcut to full rank.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently
@@ -1201,6 +1220,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    W_m(tau) in (LC147). The conditional first-jet theorem (LC148)
    and independent finite response/derivative certificates supply a
    concrete induction target, but its all-length determinant is open.
+   More sharply, prove the coefficient in (LC151) nonzero for every
+   m>=2, starting from the separate q=2 base. Its finite m=2,3 values
+   are nonzero and its first two columns come from the projected
+   selected-first head in (LC152). A compatible source expansion or
+   recurrence for that projection is not yet established.
    Then control the retained-old-source correction in (LC113).
    Formalization of these residue, edge-descent, and asymptotic
    arguments remains unfinished.
