@@ -672,3 +672,263 @@ source-rank lower bound. It is strictly weaker than the required
 full rank N_(q+1)=N_q+18q+3. The two-direction argument and its
 quotient loss count were independently audited; they are not Lean
 formalized and do not prove a regular full-rank pencil.
+
+## A one-component prefix for the six leading off-diagonal rows
+
+For a≠b let i be the third state. Subtract a known copied-old
+column from the surviving row:
+
+\[
+ \delta_{ab}=W_{ab}-C(F_{q,1,a,b})
+      =p_{qab}e_b(QK-KQ),\qquad
+ J_{ab}=\delta_{ab}K^{-1}=p_{qab}e_b(Q-KQK^{-1}).
+ \tag{LC30}
+\]
+
+The index 1 is the first earlier block, so its remaining suffix is
+exactly Q. An ambient preimage of δ_ab can be chosen with prefix
+in just the third row direction:
+
+\[
+ I_{ab}=h_{ab}v_i,\qquad
+ R_{ab}=J_{ab}+h_{ab}(v_i-L_i e_i),\qquad
+ T_q(R_{ab},I_{ab})=\delta_{ab}.
+ \tag{LC31}
+\]
+
+Here h_ab lies in the scalar prefix space J_q=span{1,X_d/L_td}.
+It is recovered by the old-line interpolation on axis X_i=0
+applied to g_i=(J_ab)_i/L_i, retaining all divided matching data
+at old lines other than (q,i). The coefficient of X_i/L_i is
+free and can be set to zero. Ordinary axis restriction alone does
+not determine the matching coefficients with state i.
+
+For the ambient verification, J_ab has no coordinate poles.
+Its a,b components already satisfy coordinate divisibility and
+the old matching conditions. The prefix p_qab supplies X_aX_b;
+at an earlier pole in state a or b the completed path supplies
+an additional incoming or terminal factor. At the q matching
+points, the corresponding output factor of K^(-1) cancels the
+potential q pole in the affected component. Thus the interpolation
+is needed only for component i. It makes
+R_i=L_i(g_i-h_ab)+A_q(i,i)X_i h_ab coordinate-divisible and matching.
+The other two corrected components preserve these properties,
+since every line residue of h_ab is proportional to that line's
+state coordinate.
+
+The possible same-block double residue at P_ab also vanishes:
+K^(-1)(P_ab)=1 e_i^T, while v_bQ is zero-sum. The added term in
+(LC31) has at most simple old poles, so it adds no same-block
+double residue. These checks put R_ab in the full old ambient
+space W0_q, not just a space of rows with partial axis conditions.
+
+There is a useful pole distinction. The row δ_ab generally has a
+q,i pole. J_ab has no such pole, but g_i may have the term
+p_qab Q_bi/L_i. Its numerator contains X_i, so its ordinary axis
+restriction vanishes, and multiplication by L_i in R_i cancels
+that term. This is why the q,i prefix coefficient is free; an
+asserted absence of the q,i pole in δ_ab would be false.
+Changing h_ab by c X_i/L_i changes (R_ab,I_ab) by the kernel pair
+(−c E_qi,c X_i e_iK), whose source-graph defect is −c X_i e_i.
+
+The construction and these local conditions were independently
+audited. It does not assert copied-source membership: the equation
+I_old(R_ab)=I_ab, up to the known constant-prefix ambiguity, still
+involves the actual old source graph.
+
+Under shorter-source independence, the source-graph defect from
+(LC3) identifies im(T_q)/span(C) with the prefix space modulo its
+three constant diagonal rows X_i e_i. Its dimension is 9q.
+Indeed the ambient kernel changes the defect by precisely those
+three constants; if a defect is constant, that kernel adjustment
+makes it zero and the row belongs to the copied-old source graph.
+The three diagonal W are independent modulo all of im(T_q), while
+every off-diagonal δ_ab belongs to im(T_q). It follows that all
+nine W are independent modulo C exactly when the following six
+columns have rank six:
+
+\[
+ \left[
+ \operatorname{ResPrefix}_{\rm old}
+       \bigl(I_{\rm old}(R_{ab})-h_{ab}v_i\bigr)
+ \right]_{a\ne b},\qquad i=\{0,1,2\}\setminus\{a,b\}.
+ \tag{LC32}
+\]
+
+This is a 9q-by-6 matrix with unambiguous pole coefficients.
+Its nonvanishing remains open. The explicit one-component prefix
+reduces the ambient recovery work, but does not compute the actual
+old source expansion of R_ab.
+
+## Exact finite recovery and a six-row minor to target
+
+The [leading-prefix verifier](../exploration/source24_leading_prefix_probe.py)
+and [saved output](../exploration/source24-leading-prefix-probe-results.json)
+recover these actual preimages at q=4 and q=5, with the same prime,
+G and time factors as (LC10). For each third state i, they solve
+the actual appended E/F columns together with the 3q scalar h terms,
+omitting only X_i/L_qi. The three systems have full column rank
+132 at q=4 and 210 at q=5. Prefix coefficients are computed from
+the recovered source coefficients by the defining formula, and
+independently checked against the direct E/F prefix evaluation.
+
+The preimage identities are checked as rational-function identities
+over the finite field, rather than only at holdout sample points.
+The common denominator D_old Δ_q clears each identity: every earlier
+block occurs at most once and block q at most twice in every term.
+It has degree 3q+3, so the cleared homogeneous row has degree
+d=3q+4. On X_0=1 the translated triangular grid
+(X_1,X_2)=(2+i,3+j), i+j≤d, is unisolvent. Its Newton basis has
+diagonal entries i!j!, nonzero since p>d. All row denominators
+are units on the grid. All three components of the six identities
+vanish at its 153 points for q=4 and 210 points for q=5. This
+proves the cleared polynomial identities at each parameter fixture.
+The three prefix components are checked on the same grids as well.
+
+The resulting 9q-by-6 matrix in (LC32) has rank six in both cases.
+More specifically, at **each single old time t**, the six rows with
+state a=0,1 and output b=0,1,2 already give a nonzero minor:
+
+| q | Determinants in increasing time order, modulo 1000003 |
+|---|---|
+| 4 | 78978, 128152, 81259, 593672 |
+| 5 | 414715, 154021, 55602, 234422, 439686 |
+
+These are concrete finite witnesses for the smaller leading-rank
+problem. They do not prove that the same six rows work for arbitrary
+q. No sparse source expansion appears: every R_ab uses all N_q
+old E/F coefficients and every h_ab uses all 3q allowed scalar terms
+in both fixtures. In particular restricting the expansion to source
+pairs involving q would be incorrect at these points.
+
+The q-time prefix block does depend only on the sums of coefficients
+of F_(q,s,a,b) and those of E_qa, together with the explicit q-time
+h coefficients. First-q source columns have their prefix at their
+other time. However the q-line residue equations couple these two
+families, so this observation does not yet compute the required sums.
+An all-q formula for this aggregation, or nonvanishing of one of the
+displayed six-row minors, is the next leading-rank target.
+
+The primary read the verifier and the clearing/unisolvence argument.
+The extended run took 5.48 seconds and peak RSS 28,229,632 bytes;
+the original q=4 coefficients were preserved exactly. This is an
+external exact finite certificate, not a Lean-checked determinant.
+
+## State symmetry fixes the direction in the growing rank bound
+
+The [fixed-direction Pro calculation](https://chatgpt.com/c/6ad18b10-32fc-83eb-aab0-83a531433db2)
+adds a symmetry argument to (LC26)--(LC29). It was checked locally
+and independently audited. Normalize the transverse observation to
+O_c(H)=L_d ρ_c(H)λ_d, d≠c. Since ∑_i L_i λ_i=1, the other
+choice e gives its negative on a zero-sum row on L_c=0. For the
+vector deletion row f_ta=(X_a/L_ta)v_cT_t, (LC13) becomes
+
+\[
+ \frac{O_c(V_{tac}(\delta))}{A_t(a,c)X_c}
+   =H_{ce}L_e(f_{ta})_d-H_{cd}L_d(f_{ta})_e.
+ \tag{LC33}
+\]
+
+The A_t(a,c) factor is a parameter-only column scaling; division
+by X_c is a common invertible operation on this line's observation
+space. Two independent directions therefore recover the same 3m
+vector columns, m=q−1, as before. Let r(δ) be the generic rank
+of all three incoming observation blocks for a fixed real direction.
+
+State permutation π acts birationally on the same parameter family:
+write z_t=(1,u_t,v_t) and set
+
+\[
+ G'_{ab}=\frac{G_{\pi(a),\pi(b)}}{G_{\pi(a),\pi(0)}},
+ \qquad z'_{tb}=\frac{z_{t,\pi(b)}}{z_{t,\pi(0)}},
+ \qquad X'_b=X_{\pi(b)}.
+ \tag{LC34}
+\]
+
+The kernels conjugate by the permutation, all source columns
+permute, and the time order stays fixed. If L'_c=s_c L_π(c), the
+normalized observation changes by s_c² and possibly a sign. Here
+s_c depends only on parameters, not X. First-order perturbation
+weights permute and then subtract their new zeroth weight; adding
+a common weight has no effect on the kernel derivative.
+
+For a cycle, δ=(τ,ν) becomes δ°=(ν−τ,−τ), so r(δ°)=r(δ).
+Their determinant is −(τ²−τν+ν²), nonzero for every nonzero real
+δ. Stacked vector independence gives 9m≤r(δ)+r(δ°)=2r(δ).
+Thus **every fixed real direction with 0,τ,ν distinct**, including
+(1,2), gives the gain max(12,ceil(9m/2)) in (LC28), on its generic
+old-parameter open. Existence of an unspecified good direction is
+no longer needed.
+
+There is a small further improvement. Fix c and exchange the other
+two states. This preserves that state block's generic rank. The two
+directions are independent precisely when
+(d_d−d_e)(2d_c−d_d−d_e)≠0. If the weights are distinct and
+(τ+ν)(2τ−ν)(2ν−τ)≠0, all three state blocks therefore have rank
+at least ceil(3m/2). The blocks have disjoint column support, so
+r(δ)≥3ceil(3m/2). Quotienting by O(span(B,J)) still loses at most
+twelve dimensions. The exact Π correction vanishes in that quotient,
+and its twelve pivots can then be added. For fixed δ=(1,3), or any
+other such real direction, this proves
+
+\[
+ \operatorname{rank}[B,D']-\operatorname{rank}B
+ \ge\max\left(12,3\left\lceil\frac{3(q-1)}2\right\rceil\right).
+ \tag{LC35}
+\]
+
+Under shorter-source independence the total lower bound is N_q+3
+plus (LC35). At q=4 it is N_q+18, one more than (LC29); at q=5
+it remains N_q+21. The improvement by one occurs when q is even.
+This argument concerns unrestricted independent time factors and
+real directions. It need not preserve a prescribed time-factor
+curve such as v_t=u_t², and does not assert all-length full rank.
+
+## What last-block stripping can and cannot remove
+
+The proof of (LC25) extends to independence modulo rows w(X)Q+g(X),
+provided w,g have no poles at any earlier-line intersection with
+the fixed terminal line. Multiply a proposed relation by K_m^(-1).
+The full product becomes w K_1...K_(m−1); g K_m^(-1) remains
+regular at the old intersections because the inverse kernel has
+only coordinate denominators. Residues at the three m-th lines
+isolate and kill the new deletion coefficients. Repeat backwards.
+This proves the extended lemma, with the same nonzero residue
+condition already established in (LC25).
+
+It does not remove arbitrary right multipliers wQB. At a new line
+L_ma=0 the relevant conjugated residue is
+
+\[
+ \operatorname{Res}(K_m B K_m^{-1})
+    =e_a v_{ma}B K_m^{-1}\big|_{L_{ma}=0}.
+ \tag{LC36}
+\]
+
+It vanishes exactly when v_ma B is proportional to v_ma. Inverting
+the two-direction scalar observation can create rank-one right
+multipliers from the actual W/S nuisance terms. They have no
+established cancellation of (LC36). Thus the extended lemma alone
+does not justify removing the twelve-dimensional loss in (LC35).
+
+The analogous scalar deletion step also has a precise correction.
+On the fixed terminal line let F lie in the old vector deletion
+span, Q be the old full product, and b=(vQ)_e. For an appended
+earlier time n, a scalar relation is
+F K_n e_e+b∑_a c_na X_a/L_na=0. At P_na=L_na∩L_terminal,
+assuming b(P_na)X_a(P_na)≠0, its new residues force
+
+\[
+ c_{na}=-\ell_a(F),\qquad
+ \ell_a(F)=\left[
+   \frac{A_n(a,e)X_e F_a}{X_a b}\right]_{P_{na}}.
+ \tag{LC37}
+\]
+
+Hence the enlarged scalar family is independent exactly when
+F↦F K_n e_e−b∑_a ell_a(F)X_a/L_na is injective on that old
+vector span. Its new poles cancel by construction; its old residues
+and pole-free remainder still need control. Old scalar independence
+controls F_e, which is a different map. No induction closing that
+gap has been proved. These two stripping observations and their
+limitations were independently checked.

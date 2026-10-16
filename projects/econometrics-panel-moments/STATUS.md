@@ -587,6 +587,28 @@ rank[B,D'] ≥ N_q+3+max(12,ceil(9(q−1)/2)) under shorter-source
 independence. It gives N_q+17 at q=4 and N_q+21 at q=5, with all
 correction losses retained. This is not full rank or a regular-pencil
 proof; see (LC26)--(LC29).
+For each leading off-diagonal survivor, an audited ambient preimage
+now needs only one scalar prefix interpolation, in the third state
+direction. The six leading-rank obligations are exactly a 9q-by-6
+matrix of old-pole source-graph defects; its columns are independent
+of the coalescent constant-prefix ambiguity. This smaller criterion
+still requires the actual old source expansion and is not a proof
+of full leading rank. See (LC30)--(LC32).
+The exact leading-prefix recovery now has q=4 and q=5 witnesses.
+At each time separately, the six pole rows with initial state 0 or 1
+and all three outputs already distinguish the six columns. Triangular
+153-point and 210-point interpolation grids certify the recovered
+preimage identities over the finite-field rational-function field.
+All source expansions are dense, so a sparse expansion shortcut fails.
+An all-q formula for these six-row minors remains open.
+A state-relabeling argument also strengthens the growing jet bound:
+it holds for every fixed real direction with distinct weights, and
+fixed direction (1,3) gives gain max(12,3ceil(3(q−1)/2)) over B.
+With shorter-source independence this is N_q+18 at q=4 and N_q+21
+at q=5. It is a generic independent-time-factor statement, not a
+fixed-curve or full-rank theorem. The extended stripping lemma and
+exact scalar deletion recurrence identify further correction terms
+that still need control; see (LC33)--(LC37).
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
