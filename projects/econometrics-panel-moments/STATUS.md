@@ -731,6 +731,16 @@ with nine locally recoverable coordinates modulo E_q. This replaces
 the full I_old inversion while retaining all grouped source-prefix
 margins. A structural recurrence or nonzero determinant coefficient
 for the resulting matrix remains open.
+An exact q=4 certificate checks the specified transverse projection:
+O(H) has rank 36, the copied/E-jet block has rank 123, and the
+corrected 36-square quotient minor has determinant 339987 modulo
+1000003. Its combined 195-square observation/evaluation minor is
+945187. This is a sampled quotient matrix, not the canonical LC61
+coordinate matrix. The script independently checks Laurent extraction,
+the paper observation formulas, interpolation and actual projection
+coefficients. One bounded run used 5.24 seconds and 41 MB; the code
+was independently audited. It verifies this decomposition at the
+existing finite fixture and supplies no all-length inference.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently

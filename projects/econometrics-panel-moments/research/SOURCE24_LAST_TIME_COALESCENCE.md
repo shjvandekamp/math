@@ -1700,3 +1700,40 @@ recovered rows or invoking the PP interpolation inverse. This
 does not remove the old-source dependence: it is retained in the
 actual F residue matrix and its inverse. No prepend recurrence or
 uniform nonzero determinant coefficient has yet been proved.
+
+## Exact finite check of the specified transverse projection
+
+The [projection script](../exploration/source24_collision_projection.py)
+and [saved certificate](../exploration/source24-collision-projection-results.json)
+check the exact frame and projection in (LC53)--(LC54) at the existing
+q=4, relative-direction (1,2), p=1000003 fixture. They reuse the saved
+actual ordinary source evaluations and independently extract the
+terminal Laurent observations from the actual ordered words.
+
+| Matrix | Size or rank | Determinant modulo 1000003 |
+|---|---:|---:|
+| O(H) | 36 by 36 | 508580 |
+| Selected ordinary C,Z minor | 123 by 123 | 164520 |
+| Corrected quotient minor | 36 by 36 | 339987 |
+| Combined observation/evaluation minor | 195 by 195 | 945187 |
+
+The last determinant is the product of the first three after the
+recorded parameter-only column corrections. All 24,570 single-line
+cubic coefficients cancel before contraction by the fixed covectors.
+The extracted observations agree with 8,190 independently derived
+LC formula entries. Twelve nodes per terminal line determine its
+degree-eleven cleared observation polynomial; two extra nodes check
+1,170 further values. A further 1,170 actual dual-number entries
+reconstruct the saved ordinary values. Coordinate and denominator
+units, O(C)=O(Z)=0, and both projection identities are checked.
+
+The certificate records the full observation matrix, all correction
+coefficients, row and column labels, hashes, and the quotient minor.
+One bounded run took 5.24 seconds externally with peak RSS 41,009,152
+bytes; both the primary and an independent reviewer audited the code
+without rerunning it. This verifies the specified new projection at
+one fixture. The determinant 339987 belongs to a sampled quotient
+coordinate matrix, not the canonical graph-coordinate matrix (LC61).
+The two tests have the same rank under the proved identification,
+but their determinants need not coincide. This is external exact
+finite evidence, not a Lean result or an all-q nonvanishing theorem.
