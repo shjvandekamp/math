@@ -71,6 +71,21 @@ directions; therefore head sums alone cannot close its recurrence.
 The inverse-tail alternative develops coordinate poles of order m-2
 for an explicit first target. This excludes channels with uniformly
 bounded coordinate poles, not every possible finite response state.
+The simultaneous small-time route now has an exact terminal-column
+relation and an audited leading-rank obstruction (LC188)--(LC190):
+after the specified scalings, rank is at most 3m+5 and the determinant
+vanishes to order at least 6m-10 for m>=3. A proof along this path must
+control higher coefficients on the actual remaining source kernel;
+no nonzero all-length leading coefficient is claimed.
+The prescribed exact m=3 series certificate makes this bound sharp:
+leading rank 14 and determinant 202478 epsilon^8+O(epsilon^9)
+modulo 1000003, with fourteen unit pivots and four order-two pivots.
+The calculation retains coefficients through order 16 and independently
+matches all 324 entries of a single rational control to the existing
+actual evaluator. This is an external finite certificate, not Lean or
+an all-length result. The common-tail identity (LC195) now identifies
+the next scalar observation, including the indispensable tail-node
+evaluation; its rank after actual later-column corrections is open.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
@@ -251,11 +266,16 @@ their signed incoming scalars and edge normalizations, and the resulting
 coefficient-head determinant 31/24640. The corrected responses have
 nonzero minor -31/3080. These are heads of explicit source coefficients;
 the module does not assume an abstract head map or prove source rank.
-The updated aggregate checks 537 declarations in a 49-module compiled
+SourceTerminalColumnRelation adds five actual-kernel identities for
+the exact relation between its two output columns, including arbitrary
+and zero-sum row actions and ordered tails. The cleared identity needs
+no units; the divided statements list their denominator conditions.
+No boundary or rank conclusion is asserted by this module.
+The updated aggregate checks 542 declarations in a 50-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 49-module rebuild. The aggregate took 13.89 seconds with peak
-RSS 2,470,379,520 bytes under the serial memory cap.
+new clean 50-module rebuild. The aggregate took 12.60 seconds with peak
+RSS 2,469,543,936 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 

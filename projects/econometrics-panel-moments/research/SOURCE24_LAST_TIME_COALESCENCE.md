@@ -5105,3 +5105,315 @@ coefficient heads, without postulating an actual head map or
 asserting source independence. The updated cached aggregate
 checks 537 declarations across 49 modules, with only the
 permitted foundational axioms and no warnings.
+
+## Simultaneous small-time expansion: the first missing layer
+
+Local work now examines the constructive positive regime used
+in (LC185), without treating its ordinary geometry as a rank proof.
+Use the moving chart r=-epsilon X_1:
+X=(1,-r/epsilon,r/epsilon-2). For u_t=a_t epsilon,
+w_t=b_t epsilon^3, the weighted coordinates are
+Y_t=(1,-a_t r,b_t epsilon^2(r-2epsilon)).
+The limiting actual kernel is
+
+\[
+ K_t^0(r)=
+ \begin{pmatrix}
+ 2/(2-a_tr)&-a_tr/(2-a_tr)&0\\
+ 1/(1-2a_tr)&-2a_tr/(1-2a_tr)&0\\
+ 1/(1-a_tr)&-a_tr/(1-a_tr)&0
+ \end{pmatrix}.
+ \tag{LC188}
+\]
+
+Its three ordinary limiting poles are 2/a_t,1/(2a_t),1/a_t.
+Normalize each actual H column by 1,epsilon,epsilon
+for states 0,1,2, and each actual J column by
+epsilon,epsilon^2,epsilon^2. Take ordinary r residues
+of output 1 and output 2/epsilon^2. This defines a
+normalized 6m-square matrix B_norm with the same
+nonvanishing question for nonzero epsilon.
+The original column divergences are removed, and the
+ordinary simple-pole residue normalizations are units.
+
+An exact kernel identity makes the first deficiency
+visible. For weighted coordinates (1,y,z), put
+theta=z/(3+z), eta=z(1-y)/(y(3+z)), and
+chi=4z/((3+z)(1+y+2z)). Then
+
+\[
+ K e_2=\theta\mathbf1+\eta K e_1+\chi e_2.
+ \tag{LC189}
+\]
+
+The first two rows follow by multiplying their row
+denominators; the last row uses the additional 4z term.
+For a zero-sum input q, this says
+(qK)_2=eta(qK)_1+chi q_2 exactly.
+For a general input the extra term is theta sum(q).
+No kernel inverse or boundary substitution is used.
+
+For m>=3 all inherited columns (time t<m) have a
+nonempty completed prefix before their final K_m.
+The normalized prefix has output-2 values and residues
+of order O(epsilon^2). This includes J columns because
+their preceding omitted word has length m-2>=1;
+the empty-prefix case at m=2 is an essential exception.
+At each moving pole perform the invertible row operation
+lower := output2/epsilon^2-(eta_m/epsilon^2)output1.
+The factor eta_m/epsilon^2 is regular there, with limit
+-b_m(1+a_m r)/(3a_m).
+
+Equation (LC189) now shows that every inherited lower
+entry is O(epsilon^2). The theta times head term has
+no observed pole, while the J input has zero row sum.
+At the special terminal pole L_m2=0, chi_m/epsilon^2
+has a bounded residue and multiplies the same
+O(epsilon^2) prefix output. At the other terminal
+poles chi_m is regular. Moreover the inherited
+upper row at L_m2=0 is also O(epsilon^2): only row 2
+of K_m has this pole and its prefix coefficient has
+that order.
+
+Only the six terminal columns H_mc,J_mc remain
+unrestricted in these 3m+1 rows. Therefore
+
+\[
+ \operatorname{rank}B_{\rm norm}(0)\le3m+5,\qquad
+ \operatorname{ord}_{\epsilon}\det B_{\rm norm}
+      \ge 2(3m-5)=6m-10 \quad(m\ge3).
+ \tag{LC190}
+\]
+
+For the valuation bound, each determinant term must
+use at least 3m-5 inherited entries in those 3m+1
+rows, each of order at least two. This also applies
+if the determinant vanishes identically. Neither
+rank equality nor a nonzero first permitted
+coefficient has been established.
+
+Thus simply rescaling the second output does not
+produce a full-rank leading matrix. A constructive
+proof along this path must retain the next completed-
+prefix output terms and establish injectivity on the
+actual remaining coefficient kernel. The exact
+terminal identity gives those terms explicitly; it
+does not supply their rank.
+
+The homogeneous version of (LC189), its denominator-cleared
+polynomial identity, its arbitrary and zero-sum row actions,
+and its ordered-tail consequence are now Lean checked in
+[SourceTerminalColumnRelation.lean](../formal/PanelMoments/SourceTerminalColumnRelation.lean).
+No plane equation, inverse kernel, or nonzero X_0 hypothesis
+is required. The divided statements list all their units.
+The five new declarations bring the cached aggregate to 542
+declarations across 50 modules, with only foundational axioms
+and no warnings. The rank and valuation bounds in (LC190)
+remain audited paper arguments.
+
+The two small parameters can be separated exactly. Write
+h=epsilon for the new time's state-0 scale, and
+delta=epsilon^2 for the old times' state-2 scale.
+The normalized source columns above are precisely the paired
+family with effects (1,-r,r-2h), old tables
+G diag(1,a_t,b_t delta), and new-line normal (2h,1,1).
+Its polynomial row is v=(2h,-r,r-2h).
+This is an actual simultaneous rescaling of time and effect
+coordinates. At h=0 it is a boundary calculation, not an
+admissible positive new-time witness.
+
+For a single kernel with weighted coordinates (1,y,z),
+the first output of a zero-sum row with coordinates (q_1,q_2)
+is alpha q_1+beta q_2, where
+alpha=y(3+z)/(L_0L_1) and beta=y(1-z)/(L_0L_2).
+Combining this with (LC189), its two-output column update is
+
+\[
+ \binom{q'_1}{q'_2}
+ =
+ \begin{pmatrix}\alpha&\beta\\
+                 \eta\alpha&\eta\beta+\chi\end{pmatrix}
+ \binom{q_1}{q_2},\qquad
+ \det=\alpha\chi=\frac{4yz}{L_0L_1L_2}.
+ \tag{LC191}
+\]
+
+The determinant is the actual kernel determinant. A proper
+tail T consequently has the exact zero-sum relation
+(qT)_2=eta_T(qT)_1+chi_T q_2, where
+alpha_T=T_11-T_01, eta_T=(T_12-T_02)/alpha_T, and
+chi_T=det(T)/alpha_T. On a regular chart where its leading
+binary factors are nonzero, a tail of length L has
+
+\[
+ \chi_T=\delta^L
+   \prod_{j\text{ in tail}}
+       \frac{4b_j(r-2h)}{3(1-a_jr)}
+      +O(\delta^{L+1}).
+ \tag{LC192}
+\]
+
+The r-2h factor is required for independent h,delta.
+It may be replaced by r only when taking h=0 or the
+leading h-to-zero coefficient.
+
+There is a concrete actual coefficient combination that
+exhibits the delay. With the rescaled actual J sources define
+C_t=h a_t J_t0+2a_t J_t1+a_t J_t2. Direct substitution gives
+C_t=((vK_t)_1/r)vP^t. Hence, for T=K_3...K_m,
+
+\[
+\begin{split}
+ C_1-C_2&=\Omega(e_2-e_0)T,\\
+ \Omega&=\frac{(vK_1)_1(vK_2)_2-(vK_2)_1(vK_1)_2}{r},\\
+ [\delta]\Omega\big|_{h=0}
+   &=r k_1k_2
+      \left(\frac{b_2}{a_2}-\frac{b_1}{a_1}
+                     -3(b_2-b_1)r\right),\\
+ k_t&=\frac{a_tr}{(1-a_tr)(1-2a_tr)} .
+\end{split}
+ \tag{LC193}
+\]
+
+The coefficients h a_t,2a_t,a_t are constant in the
+effect coordinate; this is a genuine source combination.
+The displayed first coefficient is generically nonzero.
+Its tail-transverse observation, with output 2 divided
+by delta, is Omega chi_T/delta. It starts at order
+delta^(m-2), away from tail poles. For m=2 the empty
+tail has eta_T=0,chi_T=1 and the order is zero.
+The ordinary scalar-output correction is generally
+already nonzero at order delta. It must still be
+removed with actual coefficients before any assertion
+about a Schur quotient rank; the transverse delay alone
+does not establish that assertion.
+
+The prescribed first test of the missing layer is exact.
+[source24_small_time_series.py](../exploration/source24_small_time_series.py)
+uses only m=3, a=(5/4,3/2,7/4), b=(1,2,3), prime 1000003,
+and the column/ordinary-r residue normalization above.
+It constructs all matrix entries through order 16,
+symbolically canceling the last output's epsilon^2
+factor before expansion. Its result is
+
+\[
+ \operatorname{rank}B_{\rm norm}(0)=14,\qquad
+ \det B_{\rm norm}
+   =202478\,\epsilon^8+O(\epsilon^9)
+       \pmod {1000003}.
+ \tag{LC194}
+\]
+
+Complete minimum-valuation elimination has fourteen
+pivots of valuation zero and four of valuation two.
+Every residual entry retains absolute precision 17:
+factor the minimum epsilon^v from the entire residual
+block, perform the unit Schur update to precision 17-v,
+then restore that factor. No nonunit series is inverted.
+The product of the pivot leading terms and permutation
+signs therefore certifies the stated coefficient.
+
+A separate rational evaluation at the single unit
+epsilon=2 matches all 324 entries of the existing
+actual paired evaluator after chart, source-column,
+and output normalization. It does not evaluate a
+truncated Taylor polynomial at epsilon=2.
+The saved source24-small-time-series-results.json
+contains the series, node geometry, hashes, pivots,
+precision accounting, and independent scalar control.
+Local and independent static audits passed. No parameter
+sweep, replacement fixture, or higher precision was used.
+This is a finite external certificate for the normalized
+determinant; it proves that (LC190)'s order bound is sharp
+at this m=3 fixture, not that it is sharp at every length.
+
+## Common-tail interpolation and the necessary higher-order elimination
+
+The tail relation also gives an exact observation of the
+first 6k actual columns, for k>=2 and a nonempty proper
+tail T=K_(k+1)...K_m. Put L=m-k and use the independent
+h,delta coordinates above. Write a column as R=p-CT,
+where p is its polynomial H head (or zero for J), retaining
+the actual completed prefix C. With alpha_T,eta_T,chi_T
+as in (LC192), set theta_T=T_02-eta_T T_01. Then
+T e_2=theta_T 1+eta_T T e_1+chi_T e_2.
+
+At each moving node take the output-2 residue divided
+by delta minus eta_T at that node times the output-1
+residue divided by delta. On the generic unit set this is
+
+\[
+ \begin{cases}
+ -\chi_T(p_i)\operatorname{Res}_{p_i}(C_2)/\delta,
+       &\text{at an earlier node},\\
+ -C_2(p_*)\operatorname{Res}_{p_*}(\chi_T)/\delta,
+       &\text{at the first tail state-2 node }p_*,\\
+ 0,    &\text{at every other tail node}.
+ \end{cases}
+ \tag{LC195}
+\]
+
+At earlier nodes the polynomial prefix sum makes the
+theta_T term regular. At the first tail state-2 node,
+rows 0 and 1 of T are regular: their input has zero
+coordinate 2 before that first factor. Generically
+alpha_T is nonzero there, and chi_T alone has a pole.
+At every other tail node alpha_T has a nonzero simple
+residue, so the ratios eta_T and chi_T cancel their
+poles and eta_T aligns the entire rank-one output residue.
+These generic nonvanishing facts also follow from the
+binary products, with the first weak-output term retained
+for subsequent state-2 nodes.
+
+Let c=(C_2/delta)|_(delta=0). By (LC192), the first
+possible delta^L layer in (LC195) consists of nonzero
+weighted earlier residues of c and one nonzero weighted
+evaluation at p_*^0=1/a_(k+1). It determines c uniquely:
+c has only the 3k earlier simple poles, has polynomial
+part of degree at most one, and vanishes at r=2h.
+Zero earlier residues leave a multiple of r-2h;
+the evaluation at the distinct p_*^0 kills that last
+direction. The completed-prefix formulas have these
+properties: their final output has the factor
+delta(r-2h), all earlier forms are units at the edge,
+and the kernels have degree zero at infinity.
+
+The exact cancellation at the other tail nodes must
+precede expansion. The formula (LC192) is not a uniform
+delta-expansion at their state-2 nodes, and taking
+residues of that unqualified expansion would insert
+spurious terms. This faithful scalar observation does
+not identify the rank of the shorter completed-output
+family or its rank modulo the later source columns.
+Those actual coefficient questions remain open.
+
+[Pro51](https://chatgpt.com/c/6ad1ddb3-9504-83eb-9e11-5c721a633184)
+independently obtained the bound 3m+5 and divisibility
+by delta^(3m-5) in the independent weak parameter.
+It also excludes a repair by diagonal scaling alone.
+In the equivalent output-0/output-2-over-delta
+normalization, match the first row at each own node
+(t,c) to H_tc, and the second row to J_tc.
+Every matching entry at h=delta=0 is nonzero:
+the H pole row propagates by the nonzero binary
+determinants, and the J first binary output is
+-a r^2/((1-ar)(1-2ar)), followed by those determinants.
+Its scaled second-output ratio is
+b_last(1+a_last r)/(3a_last)>0 on the positive
+limiting node intervals. Thus their matching product
+has a nonzero limit.
+
+If M is this product and C=D_left B D_right for any
+invertible diagonal rescalings, then
+
+\[
+ \frac{\det C}{M_C}=\frac{\det B}{M}\longrightarrow0.
+ \tag{LC196}
+\]
+
+An entrywise-finite limit for C makes M_C bounded,
+so det C tends to zero. Consequently this path
+requires actual nondiagonal elimination of higher
+coefficients. The finite certificate (LC194) performs
+that elimination successfully at m=3; it does not
+yet provide a uniform construction.
