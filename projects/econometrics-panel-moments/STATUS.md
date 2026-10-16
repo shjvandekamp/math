@@ -101,6 +101,22 @@ determinant after the actual lifts, followed by the retained-old-source
 step. Neither the scalar spanning results nor the lower bound proves
 that determinant nonzero for every length.
 
+The actual weak transfer now has an audited one-dimensional exceptional
+kernel and an explicit correction for the oldest layer's value at infinity.
+It proves separation of two consecutive new layers. Iterating at h=0,
+however, fills a scalar ambient of dimension 2m-1 from m=5 onward.
+At m=6 twelve actual promoted directions therefore become dependent,
+forcing the delta^34 coefficient to vanish and giving diagonal order
+at least 69 (LC199). This boundary argument does not imply order 70.
+The one prescribed six-block finite certificate instead finds nonzero
+coefficient 940736 at order 71 modulo 1000003, with leading rank 23;
+all 1,296 rational-control entries match (LC200). This distinguishes
+the proved cancellation from the higher finite observed order.
+The next targets are the transfer for nonzero h, the extra graded
+cancellations and the oldest four-dimensional layer, followed by the
+retained-old-source determinant. Equation-(24) independence for all
+T>=5 remains open.
+
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
 induction and an external exact finite base. This auxiliary theorem

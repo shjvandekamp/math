@@ -5497,3 +5497,73 @@ m=4 for the displayed fixtures only. A nonzero graded determinant
 for arbitrary m remains the required theorem on this route.
 The scalar lifts and the valuation lower bound do not prove paired
 independence or the subsequent retained-old-source block.
+
+## Actual weak transfer, boundary saturation, and the six-block test
+
+The audited paper derivation in
+[SOURCE24_BINARY_WEAK_TRANSFER.md](SOURCE24_BINARY_WEAK_TRANSFER.md)
+constructs three new actual binary-kernel combinations at every prefix
+k>=3. Their first weak outputs span an explicit three-dimensional space.
+After the next actual binary correction, the weak scalar is multiplication
+by a rational function plus one node-evaluation correction. Its kernel
+modulo the new three-dimensional image is exactly one explicit rational
+line. A separate actual head difference retains the oldest layer's
+infinity contribution; it gives the same exceptional line generically.
+The preceding first-weak image avoids that line, proving two-layer
+separation, but this separation cannot be iterated indefinitely at h=0.
+
+After dividing by D_m/(1-a_1 r), the accumulated images born at prefixes
+3 through m lie in the space with Laurent powers -1 through m and simple
+poles at 1/a_4,...,1/a_m. Its dimension is 2m-1. The audited proof gives
+dimension 3 at m=3, dimension 6 at m=4, and equality with this ambient
+space for every m>=5. In particular the twelve directions at m=6
+span only eleven functions. This dependence survives the actual
+order-raising corrections: the next unknown completed-row coefficient
+contributes zero because the binary terminal column is zero.
+Fully promoting the nested actual coefficient basis therefore proves
+
+\[
+ [\delta^{34}]\det B_6(0,\delta)=0,\qquad
+ \operatorname{ord}_\delta\det B_6(0,\delta)\ge35,\qquad
+ \operatorname{ord}_\epsilon
+        \det B_6(\epsilon,\epsilon^2)\ge69 .
+ \tag{LC199}
+\]
+
+The last bound follows from joint analyticity and (LC197). This argument
+alone does not give order 70: the coefficient of delta^34 may have a
+linear h term. Nor does it show that the determinant vanishes identically.
+
+One prescribed six-block exact calculation uses
+a=(5/4,3/2,7/4,15/8,31/16,63/32), b=(1,2,3,4,5,6), prime 1000003,
+and absolute entry precision 73. It gives
+
+\[
+ \operatorname{rank}B_6(0)=23,\qquad
+ \det B_6(\epsilon,\epsilon^2)
+      =940736\,\epsilon^{71}+O(\epsilon^{72})
+            \pmod {1000003}.
+ \tag{LC200}
+\]
+
+The pivot multiplicities are 23 of order zero, three each of orders
+2 and 4, two of order 6, one of order 7, three of order 8, and one
+of order 10. Thus the earlier proposed sharp order-68 pattern fails
+at this fixture. Vanishing of its earlier coefficients modulo one prime
+does not by itself prove their rational or generic vanishing.
+
+All 1,296 rational-control entries at epsilon=2 match the existing
+actual paired evaluator, with 1,944 polynomial-clearing component
+checks. All 576 series inverses are recorded and checked. The
+minimum-valuation elimination retains absolute precision 73.
+The sole run took 10.75 seconds and 45.5 MB external peak RSS.
+Source and dependency hashes match the saved certificate; local review
+passed without rerunning the calculation. The files are
+[source24_small_time_six_blocks.py](../exploration/source24_small_time_six_blocks.py)
+and source24-small-time-six-blocks-results.json.
+
+The next steps are to control the additional cancellations, derive the
+actual transfer away from h=0, and find a nonzero graded coefficient
+uniformly in the length. The oldest four-dimensional layer and the
+retained-old-source determinant must also be controlled. None of the
+boundary saturation or finite nonvanishing results closes those steps.
