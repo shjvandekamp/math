@@ -3255,3 +3255,91 @@ Its single exact run passed in 0.13 seconds with peak
 RSS 14,073,856 bytes. It checks algebra of the supplied
 formula; the actual-source identification and perturbation
 proof above are separate mathematical arguments.
+
+The coefficient algebra is now also checked in
+SourceEndpointCoalescenceCoefficient.lean. Its ten declarations
+prove the displayed determinant positive for A>1 and B>=3,
+including A=4^m and B=3^m for every m>=1. The focused
+build and axiom check passed. The source-family aggregate
+checks 489 declarations in a 44-module compiled closure,
+using only the permitted foundational axioms. Identification
+with the actual asymptotic matrix and the uniform paired-rank
+deduction remain paper arguments.
+
+The fixed equal-weight finite probe
+[source24_equal_weight_boundary.py](../exploration/source24_equal_weight_boundary.py)
+directly constructs only the paired matrices at q=2,3,4,
+with new time (1,1,1) and old b_t=(1,8^t,8^(2t)).
+All three sectors have full ranks 12,18,24, respectively.
+Their determinants modulo 1000003 are
+(840657,491388,336677), (835722,440639,265972), and
+(474096,257877,896587). The complete arrangement geometry
+passes, and a separate polynomial-clearing calculation
+checks all three components of every residue vector.
+One guarded run took 0.17 seconds with peak RSS
+16,564,224 bytes. These are finite generic bases within
+fixed r=(1,1,1), not an all-length theorem. In particular,
+there is no identically singular equal-weight family at
+any of these three lengths.
+
+## Why the final three directions need an additional splitting calculation
+
+The endpoint witness does not immediately prove full paired
+rank. At its exact preserving limit let B=I+d v, with
+d_i=1/Y_i, and let all m earlier kernels equal B.
+Write P=B^m, keep the last kernel K_q arbitrary, and use
+the unnormalized earlier time vector g. Every earlier
+incoming row collapses to the same function
+J^circ=-g_a 4^(m-1)vK_q. With the cancellation ratio
+in (LC119), direct multiplication gives
+
+\[
+ J_{qc}-r_c U_{qc}
+   =-\frac{b_{qa}4^m}{U+z_c}\,vK_q
+   =\frac{4b_{qa}}{g_a(U+z_c)}\,J^\circ .
+ \tag{LC124}
+\]
+
+Indeed U_qc=X_c e_c(PK_q-K_qP), and
+e_c K_q d=(U+z_c)/L_qc. Substituting P=I+t_m d v
+cancels the v term exactly. Thus the remaining quotient
+columns already lie in the collapsed earlier incoming
+span at zeroth order. The genuine earlier-time splitting
+cannot be discarded in an attempted proof of the last
+three directions.
+
+For an explicit next calculation vary only earlier block
+ell by b_ell,i=g_i(1+epsilon delta_i), holding K_q fixed.
+Put W=sum_i delta_i Y_i and N=dv. Then
+
+\[
+ (\dot B)_{i,:}
+  =\frac{v(\operatorname{diag}(\delta)-\delta_i I)}{Y_i}
+    -\frac{Wv}{Y_i^2}-\frac{W e_i}{Y_i},
+ \qquad
+ \dot P=B^{\ell-1}\dot B B^{m-\ell}.
+ \tag{LC125}
+\]
+
+Let mu_qc=A_q(c,a)X_c/L_qc and
+k_c=4b_qa/(g_a(U+z_c)). For the relation in (LC124),
+represented using any J_ell,h, keep r_c and k_c fixed
+at their limiting values. Its first derivative is
+
+\[
+ -\mu_{qc}v\dot P
+ -r_c X_c e_c(\dot P K_q-K_q\dot P)
+ +k_c g_a\left(\delta_a-\delta_h-\frac W{Y_h}\right)
+       4^{m-1}vK_q .
+ \tag{LC126}
+\]
+
+This follows because J_ell,h omits the varying block:
+only its exterior scalar differentiates. Since N^2=3N,
+dot P lies in the span of dot B, N dot B, dot B N,
+N dot B N, with explicit coefficients from
+B^j=I+(4^j-1)N/3. These identities have been checked
+algebraically. Their independence after correcting the
+simultaneously splitting earlier columns is unproved;
+the four-term expression alone does not give the final
+three pivots.

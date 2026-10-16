@@ -6,6 +6,7 @@ import PanelMoments.SourceTerminalPrefixExtraction
 import PanelMoments.SourceTimeScaling
 import PanelMoments.SourceBoundaryEndpointAlgebra
 import PanelMoments.SourceRepeatedPoleAlgebra
+import PanelMoments.SourceEndpointCoalescenceCoefficient
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -596,3 +597,13 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_eval_repeated
 #print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_at_rowPole
 #print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_at_rowPole_ne_zero
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.ell_eq
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.d_eq
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.p_eq
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.kappa_pos
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.kappa_lt_p
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.ell_neg
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.d_neg
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det_pos
+#print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det_pos_pow

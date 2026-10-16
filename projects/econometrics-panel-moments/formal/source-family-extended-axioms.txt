@@ -1083,3 +1083,21 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_at_rowPole_ne_zero' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.ell_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.d_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.p_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.kappa_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.kappa_lt_p' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.ell_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.d_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det_pos_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

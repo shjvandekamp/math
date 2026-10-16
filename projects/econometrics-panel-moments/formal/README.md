@@ -108,10 +108,16 @@ Nonvanishing retains explicit nonzero factors and the final-row
 hypothesis. Parameter existence, residue extraction, and source rank
 are not asserted.
 
-The current source-family aggregate checks 479 declarations in a compiled
-43-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. It took 56.34 seconds with peak
-RSS 1,661,157,376 bytes under the serial memory cap. All checked declarations
+SourceEndpointCoalescenceCoefficient.lean proves the identities and strictly
+positive determinant of the endpoint calculation's displayed first coefficient
+matrix, including A=4^m and B=3^m for every m>=1. Its ten declarations
+do not identify that matrix with an actual source asymptotic coefficient;
+residue extraction, limit control, and source independence remain separate.
+
+The current source-family aggregate checks 489 declarations in a compiled
+44-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. It took 40.23 seconds with peak
+RSS 1,832,435,712 bytes under the serial memory cap. All checked declarations
 use only the permitted foundational axioms; the output is saved in
 `source-family-extended-axioms.txt`.
 

@@ -180,11 +180,15 @@ value. It proves arbitrary positive-length power formulas, their
 conditional nonvanishing, and the corresponding actual cleared word
 products when the time blocks agree. Parameter existence and pole
 extraction remain outside this module.
-The updated aggregate checks 479 declarations in a 43-module compiled
+SourceEndpointCoalescenceCoefficient adds ten checked declarations for
+the explicit endpoint first coefficient matrix. Its determinant is
+strictly positive for A>1 and B>=3, in particular A=4^m and B=3^m
+for every m>=1. Actual asymptotic extraction remains a paper argument.
+The updated aggregate checks 489 declarations in a 44-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 43-module rebuild. The aggregate took 56.34 seconds with peak
-RSS 1,661,157,376 bytes under the serial memory cap.
+new clean 44-module rebuild. The aggregate took 40.23 seconds with peak
+RSS 1,832,435,712 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 
@@ -906,6 +910,16 @@ inequality. Its single run took 0.13 seconds with peak RSS
 14,073,856 bytes. Identification with actual ordered source
 endpoints and control of the singular limit come from the
 independently audited paper argument, not that algebra checker.
+The fixed equal-weight boundary probe now gives full paired rank
+in all three sectors at q=2,3,4 using the single prescribed positive
+fixture b_t=(1,8^t,8^(2t)). All geometry and independent polynomial
+clearing checks pass. Its sector determinants modulo 1000003 are
+(840657,491388,336677), (835722,440639,265972), and
+(474096,257877,896587), respectively. The script and complete
+certificates are the source24-equal-weight-boundary exploration
+files. One run took 0.17 seconds and 16,564,224 bytes peak RSS.
+These establish finite generic paired bases at fixed r=(1,1,1);
+they do not prove the arbitrary-length final-three determinant.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently
