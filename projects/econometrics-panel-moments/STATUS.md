@@ -506,6 +506,16 @@ the small polynomial degree alone does not prove this. See
 `research/SOURCE24_PREFIX_PENCIL.md` for the audited formulas and
 the necessary generic geometry.
 
+The same local recovery extends to the entire transverse kernel:
+(R,I)↦R K_n+I(I−K_n) is an ambient isomorphism. Under shorter-source
+independence its source-graph defect has kernel exactly the copied-old
+span. The three new local E rows map to the three constant prefix
+coordinates. Hence, after only the shared-new polar elimination, the
+remaining criterion is a 9q-square determinant of old-pole prefix
+coefficients. This removes the scalar right inverse and the arbitrary
+three-column quotient from the target, while retaining the actual
+old source graph. Its nonvanishing is unproved; see (PP14)--(PP20).
+
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
 this gives generic rank exactly 27 and explains the nine-dimensional
@@ -679,7 +689,12 @@ silently assumed by either proved theorem, and no result below is claimed.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final
-   nonvanishing on the common-G family and apply the scalar-covariate bridge.
+   nonvanishing on the common-G family. The prefix-recovery version
+   (PP20) now expresses it as the 9q-square old-pole coefficient matrix
+   of the actual source-graph defect after polar elimination, with no
+   scalar right inverse. Compute its leading boundary term or prove
+   transversality using the actual old source graph; the five-term
+   pencil alone does not settle it. Then apply the scalar-covariate bridge.
    None of these open claims is assumed by a completed theorem. Combine
    independence with the proved moment-space dimension to obtain spanning. The completed source-basis theorem remains
    T=4; neither the dimension theorem nor the index count supplies independence.
