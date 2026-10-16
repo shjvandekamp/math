@@ -275,10 +275,16 @@ and under old-source independence
  \dim(N\cap W_{01})=r-6m. \tag{B24}
 \]
 
-The required surjectivity on \(N\) is an additional claim; it does
-not follow from (B20)–(B23). It is impossible at \(m=2\) by
-dimension. Even where it holds, independence of the specific incoming
-classes in the resulting scalar quotient still requires proof.
+The required surjectivity on N does not follow from (B20)–(B23),
+and is impossible at m=2 by dimension. It is now established generically
+for every m>=4 by the independent zero-prefix scalar/auxiliary theorem in
+[SOURCE24_JOINT_EXTENSION_PROOF.md](SOURCE24_JOINT_EXTENSION_PROOF.md),
+which uses an external exact finite base and is not Lean formalized.
+Independence of the specific incoming classes in this scalar quotient
+still requires proof. In particular, (B24) continues to assume old-source
+independence and must not be used to prove that assumption. A separate
+reduction without that assumption is given in
+[SOURCE24_SCALAR_KERNEL_REDUCTION.md](SOURCE24_SCALAR_KERNEL_REDUCTION.md).
 
 The exact local script `exploration/source24_component_two.py` constructs
 (B23) on the actual generators of N and independently checks every long
@@ -298,7 +304,8 @@ The m=3 modular deficiency alone is not an upper-bound proof over the reals;
 the path factorization B38–B42 below now supplies that upper bound.
 The run took 0.597 seconds and 21,217,280 bytes maximum RSS; results are
 in `exploration/source24-component-two-results.json`. The primary
-researcher reviewed the implementation. No all-length surjectivity follows.
+researcher reviewed the implementation. These finite checks alone give no
+all-length surjectivity; that is supplied by the later theorem cited above.
 
 ## Why row sum alone cannot produce the annihilators
 

@@ -1,18 +1,23 @@
 # A quadratic lower bound from zero-prefix source rows
 
-**Status: independently checked paper algebra; not Lean formalized.**
-The [Pro19 investigation](https://chatgpt.com/c/6ad1572b-b950-83ed-92cb-6eaa72dc3df9)
-proposed the recursive family below. Local independent review checked
-the actual source words, both axis restrictions, the Laurent endpoint
-argument, the three-column base, and the parameter perturbation.
-The result is a lower bound on the actual scalar image of N, not a
-proof that this image fills its ambient space.
-The [Pro21 continuation](https://chatgpt.com/c/6ad15e36-dd64-83ed-9505-b8f7d094c30f)
-and two independent local audits strengthen the increment to 6q+3
-in (ZP41)--(ZP50). With the exact length-six splitting base, the
-later coupled finite certificate gives full scalar rank 210 at length
-seven and the stronger bound 3m²+63 for m>=7; see (ZP80). The earlier 4q proof
-is retained as the axis subargument used in that extension.
+**Current status: uniform generic scalar and auxiliary fullness is now
+proved on paper for every m>=4, using an external exact joint base.**
+The completed extension is in
+[SOURCE24_JOINT_EXTENSION_PROOF.md](SOURCE24_JOINT_EXTENSION_PROOF.md).
+It resolves the conditional body/endpoint obligations developed below.
+It is not Lean formalized and does not prove all-T equation-(24)
+independence. The remaining exact source criterion is in
+[SOURCE24_SCALAR_KERNEL_REDUCTION.md](SOURCE24_SCALAR_KERNEL_REDUCTION.md).
+
+This note preserves the successive lower bounds, finite certificates,
+and algebraic subarguments used by that theorem. Statements of open
+intermediate obligations record their stage of the argument; the later
+joint-extension theorem supersedes them. The
+[Pro19 investigation](https://chatgpt.com/c/6ad1572b-b950-83ed-92cb-6eaa72dc3df9)
+introduced the recursive quadratic bound, and the
+[Pro21 continuation](https://chatgpt.com/c/6ad15e36-dd64-83ed-9505-b8f7d094c30f)
+helped strengthen the boundary increment to 6q+3. Local independent
+audits checked the actual source formulas and all accepted arguments.
 
 Use the actual source subspace N from
 [SOURCE24_BINARY_QUOTIENT.md](SOURCE24_BINARY_QUOTIENT.md), and the
@@ -1828,7 +1833,8 @@ exchanging epsilon and w limits. The third direction must retain
 normal X2 information or a subleading term in w. One concrete
 alternative is to use the two new ordinary residues and the new
 state-2 divided matching residue as the three remaining coordinates.
-Their coupled determinant has not yet been proved nonzero.
+Their coupled determinant is now proved nonzero in (JE21) of the
+separate joint-extension proof.
 
 Endpoint normalization also matters. The scalar-corrected body
 column C_qn^(11) has the same constant auxiliary endpoint as

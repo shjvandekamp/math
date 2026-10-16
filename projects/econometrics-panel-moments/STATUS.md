@@ -20,6 +20,12 @@ The continuation is **in progress**. The accepted results below are unchanged;
 independence of the particular equation-(24) family for every T is not yet
 proved or Lean checked.
 
+The latest paper result proves uniform full scalar/auxiliary rank of
+actual zero-prefix source combinations for all m>=4. It uses an audited
+induction and an external exact finite base. This auxiliary theorem
+reduces the remaining source problem to a smaller actual determinant;
+it does not establish the full equation-(24) family as a basis.
+
 The exact source index audit includes footnote 8's restriction: for three
 outcomes and j>=2 shared positions, the first j−1 shared positions must be
 0,...,j−2 in zero-based notation. The correct counts are 162 at T=5 and 606
@@ -384,120 +390,62 @@ dimensions through order m. Exact coupled kernel bases at m=4,5 isolate
 the remaining 35- and 66-dimensional polynomial spaces and fill every
 later layer at those fixtures. These finite profiles do not extend
 the actual-source spanning theorem to general m.
-An independently audited [zero-prefix extension](research/SOURCE24_ZERO_PREFIX_EXTENSION.md)
-now gives a quadratic lower bound: dim p2(N) is at least
-2m(m−1)−1. At a common-G boundary specialization, these actual
-source differences have an exact scalar append law; two axis restrictions
-separate 4q new independent directions from every appended old row.
-The three-column rational base has determinant −2916. Combining this
-with the normal theorem gives the larger of 8m−1 and 2m(m−1)−1,
-and the smaller of the corresponding pair-weight bounds
-(9m²−19m+2)/2 and (5m²+m+2)/2. The quadratic bound improves the
-earlier one for m>=6. It still does not prove full component-two spanning.
-The same investigation now explains the boundary specialization's rank
-loss. The merged new lines force one common factor in every cleared
-source numerator. The remaining numerators satisfy old length-six
-scheme conditions, a new double-point condition, and normalization.
-A local interpolation proof gives ambient dimension d_q+6q+3, where
-d_q=9 choose(q,2)+3q. Exact finite witnesses fill this boundary space
-at q=3,4,5, giving ranks 57,93,138. Uniform filling and recovery of
-the missing 3q directions under perturbation remain open. The latter
-now has an explicit first-jet target: on the actual boundary kernel,
-restriction of the derivative to the merged line is divisible by
-X1² X2², leaving binary forms of degree 3q−1. Surjectivity of this
-3q-dimensional map, together with boundary spanning, would give the
-full scalar rank after splitting the new lines.
-The exact splitting calculation now fills that target at n=4,5,6:
-the induced kernel-jet ranks are 9,12,15 and the combined ranks are
-66,105,153. The saved mixed determinants are 244881,60146,468890
-modulo 1,000,003. The paper leading-minor argument therefore gives
-generic scalar spanning at each of these three lengths for fixed G*;
-these are external certificates, not Lean proofs. The actual inherited
-old scalar kernels already supply all 12 and 15 trace directions at
-q=4,5. Uniform inherited-jet surjectivity is equivalent to the joint
-rank of the old scalar map and a specified other-component restriction
-on a generic line. Scalar spanning alone does not imply this joint
-condition. The verifier, original source-coordinate kernels, and
-independent derivative controls are in the source24-zero-prefix-split-jet
-files; the run used 2.48 seconds and 66.5 MB RSS.
-Two independent local audits now strengthen the uniform boundary
-increment from 4q to 6q+3. Two more axis pivots, 2q matching pivots
-on the joint axis kernel, and one surviving vertex derivative give
-a common-fiber proof. Thus an old full scalar image fills the entire
-boundary ambient. Combining this paper induction with the exact
-153-dimensional length-six base gives dim p2(N)>=3m²+45 for m>=6,
-leaving at most 3(m−6)(m+5)/2 dimensions. This still leaves uniform
-scalar spanning and source independence open. A naive induction for
-the joint restriction condition fails: arbitrary boundary restrictions
-miss two endpoint coefficients, and imposing the actual scalar kernel
-forces a third endpoint to vanish.
-The inherited second-order endpoint is already determined by the
-scalar trace, so a valid lift must retain that coupling.
-The new 6q+3 columns also pass exact coupled checks at q=2,3,4,5,
-with gains 15,21,27,33 and all matching poles separated. The original
-geometric-time fixture has matching-pole collisions and one fewer
-observed direction at q=4,5; those failures and their diagnosis are
-preserved alongside the successful fixed alternative in the
-source24-zero-prefix-boundary-extension files.
-The sharper auxiliary kernel bound is 3q. Exact coupled checks attain
-it at n=4,5,6, with ranks 9,12,15; stacking the splitting trace on the
-same kernel gives 18,24,30. These leave three joint endpoint directions.
-Three conditional paper lemmas now recover all three endpoint
-coordinates after the actual scalar projection. Their hypotheses are
-old scalar spanning and inherited trace surjectivity; they do not
-prove those hypotheses inductively. Auxiliary body spanning now has
-a conditional uniform paper proof; the endpoint correction against
-that body remains open. The body
-map is now reduced to the kernel of the explicit 6q+3 new-source
-quotient coordinates; no old scalar inverse is needed there.
-A further auxiliary-line limit reduces the body map to 2q ordinary
-axis residues and q divided state-2 matching residues on that same
-coefficient kernel. Exact checks at n=4,5,6 give ranks 9,12,15,
-with the expected 2q-plus-q split and nonzero minors
-367880,159493,375589 modulo 1,000,003. Independent polynomial-cleared
-controls verify the constant and first-order residue evaluations.
-The source24-zero-prefix-body-limit files save this finite evidence.
-The ordinary 2q-axis part now has an independently audited uniform
-paper proof, conditional on old scalar fullness and the accepted
-boundary quotient basis. An explicit move-first outgoing column
-supplies the pole missed by the incoming candidates.
-At q=4,5, exact projection through that prescribed scalar basis
-confirms the 2q axis selector. The C12 and C22 matching families,
-even together, miss one direction. Adding C_2n^(11) completes the
-matching basis in both fixtures: full 3q determinants are
-126855,623902 modulo 1,000,003. The failures, left nullvectors and
-successful source-coordinate corrections are retained in the
-source24-zero-prefix-projected-body files.
-The matching selector now also has a uniform paper proof. Its
-first q−1 directions reduce to Laurent interpolation after a last-time
-degeneration; a local two-block residue calculation supplies the
-remaining direction, with nonzero value −15 at u1=1,u2=4. All scalar
-corrections are retained. Thus old scalar fullness implies boundary
-auxiliary body rank 3q for q>=4. Under the stronger old joint
-hypothesis, inherited whole-row-zero columns automatically separate
-the splitting trace from this body. The three endpoint directions
-still must survive the exact body Schur correction. This conditional
-paper result is not a Lean theorem, a closed induction for scalar
-fullness, or an all-T proof of equation-(24) independence.
-A checked limitation rules out using three pure-axis endpoint jets
-in the leading auxiliary-line limit: after old-axis elimination,
-the residual rational function has only two new ordinary poles.
-The final direction must retain normal information, such as the
-new state-2 matching value, or subleading auxiliary-line terms.
+The zero-prefix route now has an independently audited **uniform paper
+proof of full scalar and auxiliary rank for every m>=4**. The theorem is
+in [research/SOURCE24_JOINT_EXTENSION_PROOF.md](research/SOURCE24_JOINT_EXTENSION_PROOF.md).
+For the actual zero-prefix source family Z_m it proves scalar rank
+d_m=9 choose(m,2)+3m and rank 3m of the auxiliary-line restriction on
+the same scalar kernel. It uses the external exact length-four joint
+base (scalar 66, trace 12), the earlier audited boundary/body arguments,
+and a new coupled three-pole extension. It is not Lean formalized and
+is not an all-T equation-(24) independence theorem.
 
-A fully coupled finite endpoint test now succeeds at q=4,5. It uses
-one prescribed scalar projection and then the exact body Schur
-correction on the same original source coefficients. The resulting
-three-by-three determinants are 205708 and 135971 modulo 1,000,003;
-full auxiliary ranks are 15 and 18. The verifier and original-coordinate
-certificates are in the source24-zero-prefix-endpoint-schur files.
-The length-six joint rank 153+18=171, together with the audited
-boundary extension and inherited trace criterion, proves generic
-scalar rank 210 at length seven. It also improves the propagated
-lower bound to 3m²+63 for m>=7, with deficit at most
-3(m−7)(m+6)/2. These are paper consequences with external finite
-bases; they do not themselves propagate the joint condition or prove
-equation-(24) independence.
+The induction keeps one full scalar projection, including normalized
+inherited first-jet columns, and one projection onto the 3q old body
+observations. Two new ordinary residues and one divided state-2 residue
+annihilate every appended-old correction exactly. On three actual new
+source columns, their corrected determinant begins
+−36 epsilon^7 (Delta a−Delta b/v)^2 (Delta a−Delta b/(2v)),
+which is generically nonzero. Fixing epsilon first and then taking the
+auxiliary-line limit proves rank 3(q+1) for a single auxiliary map.
+The scalar, body and final three directions retain the same source
+coefficients; no independent ranks or simultaneous limits are added.
+The primary researcher and two independent local audits checked this
+argument, including the written proof.
+
+The preceding construction and exact evidence remain in
+[research/SOURCE24_ZERO_PREFIX_EXTENSION.md](research/SOURCE24_ZERO_PREFIX_EXTENSION.md).
+The uniform 6q+3 boundary increment, 2q ordinary body pivots, and q
+matching body pivots are its intermediate paper results. The matching
+argument uses Laurent interpolation for q−1 directions and an additional
+actual incoming column for the last one. Saved splitting certificates
+at n=4,5,6 give scalar ranks 66,105,153. The body-limit and prescribed
+projection certificates retain their original source coefficients,
+including the failed C12+C22 selector and its successful repair.
+
+A separate fully coupled finite endpoint test at q=4,5 gives
+three-by-three Schur determinants 205708 and 135971 modulo 1,000,003,
+and full auxiliary ranks 15 and 18. Its code and certificates are in
+the source24-zero-prefix-endpoint-schur files. That test uses an older
+third endpoint candidate; it corroborates the joint-rank target but is
+not a numerical verification of the new three-pole leading formula.
+The resulting length-seven scalar rank 210 and propagated bound
+3m²+63 were intermediate paper consequences; the uniform joint theorem
+now supersedes the lower bound.
+
+The exact remaining source problem is smaller but still open.
+[research/SOURCE24_SCALAR_KERNEL_REDUCTION.md](research/SOURCE24_SCALAR_KERNEL_REDUCTION.md)
+uses full scalar rank to eliminate d_m actual source directions without
+assuming the source matrix O_m invertible. It then uses the proved 3m
+line-restriction pivots on those same coefficients. Writing
+r=9 choose(m,2), the remaining criterion is an (r−3m)-square determinant
+of actual scalar-zero polynomials divided by the auxiliary line.
+Its sizes are 42,75,117 at m=4,5,6. The zero-prefix family and N alone
+have too few coefficients to fill the remaining vector space; the
+selected output-one/two source columns must be retained. Repeated
+restriction or append does not automatically preserve this coefficient
+kernel. Uniform nonvanishing of this residual matrix, and its Lean
+formalization, are the next substantive obligations.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -656,36 +604,19 @@ silently assumed by either proved theorem, and no result below is claimed.
    transversality remain open.
    The conditional terminal annihilator supplies explicit boundary rows;
    prove their pairing with the incoming columns is nonsingular while
-   retaining the full old-node commutator. Alternatively, prove spanning
-   in the explicit binary quotient. Its first and second normal layers
-   now have uniform actual-source spanning proofs; extend them with
-   a higher-normal lifting theorem that retains the coupled row and
-   prefix coefficients. The next concrete target is J3 on the actual
-   source combinations in F^3 S_m; finite coupled bases are saved at
-   m=4,5. The zero-prefix alternative has an exact scalar append and
-   a uniform 6q+3-direction extension, giving a quadratic rank bound
-   and full boundary spanning whenever the old scalar image is full.
-   Recover the remaining 3q directions by proving the explicit
-   first-jet map onto on the actual boundary coefficient kernel.
-   Finite splitting certificates now succeed at n=4,5,6, including
-   full scalar rank 153 at n=6. Prove the inherited scalar-kernel
-   criterion uniformly by retaining the joint old scalar map and
-   its other-component restriction; the finite q=4,5 checks are
-   bases to investigate, not an induction theorem.
-   A boundary induction for this joint invariant misses three
-   endpoint coefficients on the actual scalar kernel. Three conditional
-   endpoint lifts now survive scalar elimination. The auxiliary body
-   now has a conditional uniform 3q-rank proof through its
-   2q-axis-plus-q-matching limit. Prove that all three endpoint
-   directions survive the exact body Schur correction on those same
-   source coefficients; separate endpoint and body ranks do not suffice.
-   Retain normal information for the third direction: the leading
-   pure-axis endpoint space has dimension at most two after old-body
-   elimination. A concrete alternative uses the two new ordinary
-   residues and the new state-2 divided matching residue.
-   The inherited higher jet is coupled to the scalar trace, so
-   independently computed ranks cannot simply be added.
-   Neither route is yet complete.
+   retaining the full old-node commutator. The explicit binary quotient
+   still requires independence of its specific incoming classes. Its
+   earlier normal-layer approach is now an alternative description:
+   the zero-prefix theorem supplies uniform full scalar
+   and auxiliary rank by an audited joint induction for m>=4, using
+   an external exact length-four base. Formalize that base, the boundary
+   and body proofs, the three-pole correction and the ordered-limit
+   argument. Its source-independent scalar-kernel reduction leaves an
+   (9 choose(m,2)−3m)-square actual polynomial determinant. Prove this
+   determinant nonzero, retaining the selected output-one/two columns
+   and the same scalar/line corrections. A corrected-append transport
+   or a further restriction theorem on the existing coefficient kernel
+   would be concrete next lemmas. Neither is yet established.
    The full Schur complement has size
    18(T−3); its shared-new polar half now has a paper nonvanishing proof,
    while the regular half after those pivots remains open. Prove that final
