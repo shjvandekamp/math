@@ -3,6 +3,7 @@ import PanelMoments.SourceRelativeTimeJet
 import PanelMoments.SourceScalarPrependAlgebra
 import PanelMoments.SourceWeightedPrependAlgebra
 import PanelMoments.SourceTerminalPrefixExtraction
+import PanelMoments.SourceTimeScaling
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -547,3 +548,19 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceTerminalPrefixExtraction.actual_inverse_terminalCorrection_mul_kernel
 #print axioms PanelMoments.SourceTerminalPrefixExtraction.actual_inverse_prefix_shift
 #print axioms PanelMoments.SourceTerminalPrefixExtraction.actual_inverse_terminalPrefix_reconstruction
+
+-- Actual common time-coordinate covariance and fixed-length independence equivalences.
+#print axioms PanelMoments.SourceTimeScaling.scaledTable_pos
+#print axioms PanelMoments.SourceTimeScaling.rowForm_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.kernel_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.homogeneousWordProduct_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.emptyVector_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.singletonVector_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.singleBlockVector_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.sourceColumn_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.reducedColumn_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.coordinatePullback_injective
+#print axioms PanelMoments.SourceTimeScaling.positiveSourceColumn_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.homogeneousReducedColumn_scaledTable
+#print axioms PanelMoments.SourceTimeScaling.linearIndependent_sourceColumn_scaledTable_iff
+#print axioms PanelMoments.SourceTimeScaling.linearIndependent_reducedColumn_scaledTable_iff

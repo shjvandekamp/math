@@ -2113,3 +2113,329 @@ These are external exact finite certificates, not Lean theorems.
 Together with the earlier q=3,4 cases, they establish finite bases
 inside the weighted family at four lengths. The all-length
 determinant recurrence remains open.
+
+## An all-length boundary family invisible to the new matching rows
+
+There is a local Newton-style induction for actual new-head sums.
+It proves a growing rank before the quotient by retained old columns.
+Keep the weighted prepend and write
+P_s=K_s product_(j in old minus s, increasing) K_j. For q>=2 set
+
+\[
+ Z_{a,s}=\sum_b(F_{\circ,s,a,b}-F_{\circ,1,a,b}),
+ \quad 2\le s\le q,\qquad
+ v=A_\circ(a,:)\operatorname{diag}X.
+ \tag{LC85}
+\]
+
+The residue of Z_(a,s) on its own new line is
+X_a v(P_1-P_s); it has no other new-line pole. On that line put
+A_s^(q)=v(P_1-P_s). For s<q these rows equal A_s^(q-1)K_q.
+Right multiplication by the rational inverse K_q^(-1) preserves
+linear independence over the parameter field, with coefficients
+constant in X. It returns the inherited rows to A_s^(q-1), while
+the new row s=q becomes
+
+\[
+ vP_{\rm old}-vK_qP_{\rm old}K_q^{-1},\qquad
+ \mathop{\rm Res}_{L_{qd}=0}
+   =-v_d\,v_{qd}P_{\rm old}K_q^{-1}.
+ \tag{LC86}
+\]
+
+The inverse is regular at this pole when the coordinates are
+nonzero: its rational formula is diag(X)^(-1) A_q^(-1)diag(L_q).
+The inherited rows have no q-block pole. The displayed new residue
+is generically nonzero within the common weighted family, as the
+following explicit coefficient witnesses at every length.
+
+For a=0, r=(2,3,5), take X=(1,1,-4), circle time (1,1), and
+the last old time (2,1/8), with d=2. Then v=(3,1,-4),
+v_q2=(1,2,-3), and L_circle,0=L_q2=0. Let all earlier times
+approach (1,5/4); their row-1 pole residue is
+R=e_1 v_* with v_*=(1,4,-5). The highest simultaneous coefficient
+in their separate row-1 poles satisfies
+
+\[
+ v_{q2}R^{q-1}=2\,4^{q-2}v_*,\qquad
+ v_*K_q^{-1}(X)=\frac{153}{122}(-1,1,0)\ne0.
+ \tag{LC87}
+\]
+
+Here K_q^(-1)(X) means the regular value of the rational inverse,
+which has rank two; K_q itself has a pole there. This boundary
+calculation proves a coefficient is nonzero, rather than treating
+the coincident-line boundary as an admissible geometric fixture.
+Positive perturbations separate the old lines and retain the
+nonzero coefficient. Intersecting this nonempty generic open with
+the shorter independence open proves the induction, including
+the q=2 base. State permutations give the same nonzero-polynomial
+claim for each sector. Their finite intersection proves the joint
+statement for generic positive variable r; this argument does not
+claim all sectors at one fixed ordered r=(2,3,5).
+
+Double-pole extraction is injective on these line rows. If all
+their old-pole residues vanish, their combination is a homogeneous
+linear polynomial row on the new projective line. Its j-th
+component vanishes at X_j=0, since each completed word ends in
+a kernel with that coordinate factor and the old denominators
+are units at the coordinate-edge points. Thus that component is
+c_j X_j. Zero row sum implies c is a multiple of A_circle(a,:),
+so the row is lambda v. At the own matching point X_a=0,
+every ordered old product acts on the active binary zero-sum row
+by the same product of binary determinants. Every A_s vanishes
+there, hence lambda=0. The factor X_a is a unit at every generic
+new/old cross point, so it does not change this conclusion for
+the actual residue of Z_(a,s).
+
+Consequently D_new has rank 3(q-1) on the columns (LC85): the
+three sectors have disjoint new-line support. By (LC83), their
+new M map vanishes for s<q. Only s=q contributes, through
+Delta/A_circle(a,a) times
+(theta_(q-1)/d_(q-1)-theta_q/d_q), a generically nonzero scalar
+in each sector. The M rank is therefore exactly three, and the
+explicit 3(q-2) columns with 2<=s<=q-1 retain full D_new rank
+inside its kernel.
+
+This supplies an all-length obstruction to recovering D_new from
+M_new, already within actual new-head source combinations. It
+does not prove a new source-rank contribution after quotienting
+the retained old-head columns. Controlling that intersection is
+the next joint-elimination problem.
+
+## Full new-head double-residue rank
+
+The preceding induction extends to all 9q individual new-head
+columns, without matching observations. For a fixed new line set
+
+\[
+ B_{s,b}^{(q)}=A_\circ(a,b)X_b e_b(I-P_s),
+ \qquad 1\le s\le q,\quad b=0,1,2.
+ \tag{LC88}
+\]
+
+These are the own-line residues of F_circle,s,a,b divided by X_a.
+The induction invariant is independence of their old-pole
+residues. For s<q, right multiplication by K_q^(-1) gives
+
+\[
+ B_{s,b}^{(q)}K_q^{-1}
+  =B_{s,b}^{(q-1)}
+    +A_\circ(a,b)X_b e_b(K_q^{-1}-I).
+ \tag{LC89}
+\]
+
+The added row is polynomial, since
+X_b e_b K_q^(-1)=e_b A_q^(-1)diag(L_q).
+At the new old-block pole L_qd=0, only b=d among the newest
+three columns has a residue after this multiplication, namely
+-A_circle(a,d)X_d v_qd P_old K_q^(-1).
+For unequal states a,d, (LC87) proves it is generically nonzero.
+For equal states use a=d=0, the same r and point, but last old
+time (5,2). Then L_q0=0, the other row forms are 13 and -42,
+and v_q0=(3,5,-8). The earlier degeneration gives
+v_q0 R^(q-1)=5*4^(q-2)v_*, and v_* is not proportional to
+v_q0. The regular inverse has left kernel exactly span(v_q0),
+so the residue is nonzero. Permutations, with harmless
+normalization of the permuted time vector's first component,
+cover every equal and unequal pair. As above, the simultaneous
+generic conclusion allows r to vary.
+
+Suppose a relation has zero residues at all old/new cross points.
+Its row remains regular at those points after multiplication by
+K_q^(-1), because every coordinate is a unit there. At the three
+q-block poles, the displayed isolated residues force each of the
+three newest coefficients to vanish. The remaining residues in
+(LC89) are the shorter relation's residues, since the correction
+is polynomial. Induction finishes the proof. For q=1, start
+directly with the three disjoint poles of B_(1,b), whose residues
+are -A_circle(a,b)X_b v_1b; no inverse multiplication is needed
+at this base step.
+
+Thus the actual new-head columns have full D_new rank 3q in
+each new-line sector, or 9q altogether, for generic positive
+parameters in the weighted family. No old-source independence
+premise, matching observation, or ambient dimension argument is
+used. This is a paper theorem, not yet formalized in Lean.
+
+The remaining boundary columns F_(t,circle,c,a) cannot simply be
+added as a second pivot at each pole after multiplying by
+K_q^(-1). At L_qd=0, that inverse has zero column d and preserves
+row sum; it maps the two-dimensional zero-sum space to a line.
+The new-head and new-first candidate residues therefore become
+collinear. Their joint rank needs another argument. A single
+exact extraction from the saved q=4 weighted finite matrix gives
+rank 54 and determinant 482791 modulo 1000003 for the entire
+54-square boundary block: rows with a block-0 pole, columns
+with t=0 or s=0, in their saved order. This finite check supports
+the boundary-block question but does not prove it for every q.
+Even its full rank would leave the retained-old-column Schur
+complement to be proved nonzero.
+
+## The scalar prepend leaves an explicit graph-pair obstruction
+
+An independently audited calculation from
+[Pro39](https://chatgpt.com/c/6ad1aace-81f8-83ed-b7be-25f2d7f32022)
+identifies a different obstruction to a boundary-only repair of
+the collision recurrence. Use Gtilde=diag(r)+11^T, w_i=1/r_i,
+sigma=1+sum_i w_i, kappa=sigma-1, and ell=sum_i X_i. The new
+prepend J has time (1,1), while the terminal K has time (c,c),
+c=r_0+1. Then e_0 K=X/ell, and the full-plane identity is
+
+\[
+ (X+\ell w)J=\sigma X,\qquad
+ e_0KJ=\sigma e_0K-wJ,\qquad
+ W^+_{a0}=\sigma W_{a0}+N_a,
+ \quad N_a=p_{qa0}(wJQ-\kappa e_0).
+ \tag{LC90}
+\]
+
+The first equality follows from X_i+ell w_i=w_i L_circle,i;
+the remaining equalities retain the actual earlier word Q.
+Each N_a has only simple terminal poles, so O(N_a)=0. It cannot
+be discarded merely because the scalar transverse recurrence
+does not see it.
+
+Consider the eighteen boundary source-row/prefix pairs
+(p_qab e_b(I-JQ),p_qab e_b) and
+(p_circle,ab e_b(I-KQ),p_circle,ab e_b).
+The three pairs (-N_a,kappa p_qa0 e_0) are independent modulo
+their span. Apply (R,I) -> I-R and right multiply by Q^(-1).
+It suffices to prove independence of B_a=p_qa0 wJ modulo
+span{p_qab e_b J,p_circle,ab e_b K}.
+
+At ell=L_circle,i=0, i=1 or 2, take X_0=1, X_i=0, X_j=-1.
+The B_0 double residue is w_i X, while all the eighteen
+comparison terms have zero double residue because their
+numerators contain X_i. The other two B_a have no ell pole.
+Thus the B_0 coefficient vanishes in any putative relation.
+For a=1,2, take its terminal-line residue, divide by X_a,
+and right multiply by J^(-1). The relation becomes
+
+\[
+ \gamma_a A_q(a,0)X_0w
+  =\sum_b c_b A_q(a,b)X_b e_b+f_a(X)g_a(X),
+ \quad f_a=\sum_i d_i X_i\widetilde G(i,a)/L_{\circ i},
+ \quad g_a=A_q(a,:)\widetilde G^{-1}\operatorname{diag}(L_\circ).
+ \tag{LC91}
+\]
+
+The relevant row of A_q Gtilde^(-1) is
+c e_a-e_0+w/sigma, with all three entries nonzero. Hence g_a
+has no projective zero. The three circle-line intersections on
+L_qa are distinct generically and have X_i nonzero there for
+positive r. Their residues force every d_i=0. Then component
+b different from 0 compares independent linear forms X_0 and
+X_b on L_qa and forces gamma_a=0. This proves exactly the
+three-dimensional quotient statement for those graph pairs.
+
+The B_0 residue also survives the actual earlier word. At the
+displayed point let z_t be the time factor for the active state
+j different from 0. The binary zero-sum multiplier is
+
+\[
+ \beta_{t,i}=
+ \frac{z_t[1-(r_0+1)(r_j+1)]}
+ {(r_0+1-z_t)[1-(r_j+1)z_t]},\qquad
+ [\ell L_{\circ i}N_0]_{X_0=1,\ X_i=0,\ X_j=-1}
+     =w_i\Bigl(\prod_t\beta_{t,i}\Bigr)X\ne0.
+ \tag{LC92}
+\]
+
+In the last formula X means X_0=1, X_i=0, X_j=-1, as above.
+The numerator factors are nonzero for positive parameters and
+the denominators are nonzero for generic earlier times. This is
+an all-length nonzero coefficient of the prepend error, not of
+the remaining source determinant. The graph-pair quotient here
+uses only the eighteen terminal/prepend boundary pairs. It does
+not include all interior-source prefix corrections or establish
+a gain after the full Gamma quotient. Those corrections must
+still be controlled jointly with the old-column elimination.
+
+## A conditional three-by-three recurrence for the paired boundary block
+
+Fix one new-line sector a. Remove the harmless constant
+A_circle(a,b) from each new-head column and use the line rows
+
+\[
+ H_{s,b}=X_b e_b(I-P_s),\qquad
+ J_{t,c}=-\frac{A_t(c,a)X_c}{L_{tc}}\,vP^t,
+ \quad P^t=\prod_{j\ne t}^{\nearrow}K_j.
+ \tag{LC93}
+\]
+
+They are precisely the new-head and new-first source residues
+divided by X_a. Let B_q be their 6q-square old-pole observation
+matrix, with two zero-sum coordinates at each of the 3q nodes.
+Its q=1 base is generically invertible directly: at the old pole
+c the two exclusive columns have residues -X_c v_1c and
+-A_1(c,a)X_c v. The two line normals are independent and all
+coordinates are units, so these two rows are independent.
+
+For q>=2 put P=K_1...K_(q-1), V=K_q^(-1), and
+P_d={L_circle,a=L_qd=0}. At P_d replace the two residue
+coordinates of a row Y by the pair consisting of the one
+nonzero coordinate of Res(YV) and the canceled value
+
+\[
+ (YV)_d(P_d)
+   =\left[\operatorname{Res}_{L_{qd}}Y\,
+             \operatorname{diag}(X)^{-1}A_q^{-1}e_d\right]_{P_d}.
+ \tag{LC94}
+\]
+
+This is an invertible change of observation coordinates.
+Indeed the kernel of residue multiplication by V is
+span(v_qd), and the canceled-value functional equals one on
+v_qd. Inherited head columns become
+H_(s,b)^(q-1)+X_b e_b(V-I), while inherited incoming columns
+become exactly J_(t,c)^(q-1).
+
+Choose j different from d and set
+xi_d=(v_qd P V)_j(P_d), eta_d=(v P V)_j(P_d).
+The nonzero xi_d are the proved new-head pivots. Both residue
+rows have component d zero and row sum zero, so the actual
+column combination
+C_d=J_(q,d)-A_q(d,a)(eta_d/xi_d)H_(q,d)
+has no q-block pole after multiplication by V. Let b_d be the
+earlier-pole observations of C_d V. Assuming B_(q-1) invertible,
+solve alpha_d=B_(q-1)^(-1)b_d and subtract the corresponding
+actual transported inherited columns, including every
+X_b e_b(V-I) head correction. Denote the remainder by T_d.
+
+It is a homogeneous linear zero-sum polynomial row on the new
+line. There are no remaining old-line poles. Coordinate
+denominators cancel in X_b e_b V and in products P V, since
+the last earlier kernel supplies diag(X); q>=2 is used here.
+The remaining three observation coordinates give the exact
+conditional equivalence
+
+\[
+ B_q\text{ invertible}
+ \quad\Longleftrightarrow\quad
+ \det S_q\ne0,\qquad
+ S_q=\bigl((T_d)_c(P_c)\bigr)_{c,d=0,1,2},
+ \tag{LC95}
+\]
+
+under the stated shorter-matrix and pivot hypotheses. This
+follows by ordinary block elimination using (LC94): three new
+head pivots, the 6(q-1) shorter observations, and these last
+three canceled values.
+
+For completeness, the evaluation map on degree-one zero-sum
+polynomial rows has kernel exactly span(vV). If its c-th
+component vanishes at P_c, that component is k_c L_qc on the
+new line. Their sum vanishes iff k A_q is a multiple of the
+new line normal, which gives precisely vV. This kernel does
+not invalidate the square residue criterion: it is the
+polynomial direction invisible to the original pole data.
+
+The uniform nonvanishing of det S_q is unproved. Highest
+confluent poles alone also yield only one pivot per node;
+discarding the canceled values or the inherited polynomial
+correction would lose the missing information. This recurrence
+requires only the shorter paired boundary inverse, rather than
+the full old source inverse. Even a proof of det S_q nonzero
+would still leave the old-source Schur complement needed for
+the original equation-(24) independence theorem.

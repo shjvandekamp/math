@@ -154,11 +154,16 @@ of a constant prefix row from own-line and coordinate-edge values. Its
 actual inverse corollaries retain explicit local nonzero assumptions;
 no residue extraction, ambient membership, or source-rank theorem is
 asserted by this module.
-The updated aggregate checks 435 declarations in a 40-module compiled
+`SourceTimeScaling` adds fourteen checked declarations for common
+time-coordinate scaling of the actual row forms, kernels, ordered words,
+and source vectors, including their exact inverse-head coordinate factors.
+Positive scaling preserves independence of the actual source and reduced
+families at every fixed length; neither family is asserted to be independent.
+The updated aggregate checks 449 declarations in a 41-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 40-module rebuild. The aggregate took 38.06 seconds with peak
-RSS 1,831,043,072 bytes under the serial memory cap.
+new clean 41-module rebuild. The aggregate took 38.20 seconds with peak
+RSS 2,170,994,688 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 
@@ -790,6 +795,20 @@ geometry pass; the single run took 3.00 seconds and 36,601,856
 bytes peak RSS. Together with q=3,4 these are four confirmed
 finite weighted bases, still external certificates rather than
 Lean proofs or an arbitrary-length result.
+There is now a uniform paper theorem for a genuine growing
+subfamily: (LC85)--(LC89) prove full 9q double-residue rank of
+all new-head columns in the variable-r weighted family, with
+no shorter-source independence premise. Grouped differences
+also give an explicit 3(q-2)-dimensional residue family killed
+by all new matching rows. These ranks are before quotienting
+retained old sources. For the paired new-head/new-first boundary
+block, (LC93)--(LC95) give an exact induction reduction to a
+three-by-three canceled-value matrix. Its determinant remains
+unproved; the recurrence retains the inherited polynomial head
+corrections. The separate audited Pro39 calculation (LC90)--(LC92)
+exhibits three graph-pair error classes that cannot be absorbed
+by only the eighteen terminal/prepend boundary pairs. Neither
+result supplies the full old-source Schur-complement step.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently

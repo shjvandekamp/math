@@ -981,3 +981,29 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceTerminalPrefixExtraction.actual_inverse_terminalPrefix_reconstruction' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceTimeScaling.scaledTable_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTimeScaling.rowForm_scaledTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTimeScaling.kernel_scaledTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTimeScaling.homogeneousWordProduct_scaledTable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTimeScaling.emptyVector_scaledTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTimeScaling.singletonVector_scaledTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTimeScaling.singleBlockVector_scaledTable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTimeScaling.sourceColumn_scaledTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTimeScaling.reducedColumn_scaledTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTimeScaling.coordinatePullback_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceTimeScaling.positiveSourceColumn_scaledTable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTimeScaling.homogeneousReducedColumn_scaledTable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTimeScaling.linearIndependent_sourceColumn_scaledTable_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTimeScaling.linearIndependent_reducedColumn_scaledTable_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -85,10 +85,19 @@ matrix, coordinate, and row-form nonzero assumptions. These are finite
 algebraic identities; residue extraction, ambient membership, generic
 existence, and source-family rank are not asserted.
 
-The current source-family aggregate checks 435 declarations in a compiled
-40-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. It took 38.06 seconds with peak
-RSS 1,831,043,072 bytes under the serial memory cap. All checked declarations
+`SourceTimeScaling.lean` proves that multiplying every table column `b`
+by a common factor `h_b` equals replacing coordinates by `h_b X_b` in the
+actual row forms, kernels, and ordered products. Each empty, singleton,
+and single-block vector gains the factor `1/h_a` for its first state `a`.
+With positive factors, coordinate pullback and these nonzero column factors
+preserve independence of both the actual source family and the reduced
+family at each fixed length. The module does not assert that either family
+is independent or prove determinant nonvanishing.
+
+The current source-family aggregate checks 449 declarations in a compiled
+41-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. It took 38.20 seconds with peak
+RSS 2,170,994,688 bytes under the serial memory cap. All checked declarations
 use only the permitted foundational axioms; the output is saved in
 `source-family-extended-axioms.txt`.
 
