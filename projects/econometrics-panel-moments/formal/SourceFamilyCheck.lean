@@ -1,4 +1,4 @@
-import PanelMoments.SourceCoordinateFactors
+import PanelMoments.SourceAppendIdentities
 import PanelMoments.SourcePolynomialKernels
 import PanelMoments.SourcePolynomialCriterion
 import PanelMoments.SourceFamily
@@ -411,3 +411,17 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceCoordinateFactors.clearedReducedColumn_dvd_output
 #print axioms PanelMoments.SourceCoordinateFactors.clearedSourceColumn_eq_coordinate_mul
 #print axioms PanelMoments.SourceCoordinateFactors.clearedReducedColumn_eq_coordinate_mul
+
+-- Exact append and new-pole cancellation algebra.
+#print axioms PanelMoments.SourceAppendIdentities.block_rowForm
+#print axioms PanelMoments.SourceAppendIdentities.kernel_eq_block_of_entries
+#print axioms PanelMoments.SourceAppendIdentities.homogeneousWordProduct_append
+#print axioms PanelMoments.SourceAppendIdentities.actual_word_append_block
+#print axioms PanelMoments.SourceAppendIdentities.boundary_append_formula
+#print axioms PanelMoments.SourceAppendIdentities.boundary_append_zero
+#print axioms PanelMoments.SourceAppendIdentities.clearedKernel_eval_coordinate_factor
+#print axioms PanelMoments.SourceAppendIdentities.cleared_vecMul_coordinate_factor
+#print axioms PanelMoments.SourceAppendIdentities.cleared_append_scalar_split
+#print axioms PanelMoments.SourceAppendIdentities.denominator_mul_append_scalar_split
+#print axioms PanelMoments.SourceAppendIdentities.divided_cleared_pole_factorization
+#print axioms PanelMoments.SourceAppendIdentities.endBlock_outputDivided_pole_cancellation

@@ -107,6 +107,16 @@ compilation and add 29 axiom checks; the current extended aggregate checks
 output-coordinate divisibility results. The earlier 24-module clean build
 is preserved separately; the extended aggregate reuses that compiled closure.
 
+The new `SourceAppendIdentities` module now proves actual word appending,
+whole-vector boundary annihilation, exact scalar splitting, and the
+output-divided pole cancellation using the existing homogeneous and
+cleared model kernels. Focused compilation and twelve further axiom
+checks passed. The updated aggregate checks 337 declarations in a
+32-module compiled closure, using only the permitted foundational axioms.
+This is a cached aggregate check, not a new clean 32-module rebuild.
+Residue operators, matching-coordinate removability, asymptotic orders,
+and the joint-rank induction remain paper arguments outside this module.
+
 Further exact discovery separates identities from rank evidence. The
 coalescent triangle and grid identities match direct rational series checks;
 their nonzero curvature is not a full determinant. The tested constant-time
@@ -456,6 +466,14 @@ sources realize its multipliers on long-empty difference seeds, but
 realizing them on the full corrected source coefficient kernel remains
 open. This identifies a concrete source-realization lemma rather than
 another ambient dimension question.
+
+An exact coefficient calculation now identifies why simple append
+closure fails: the scalar/line coefficient kernel still maps onto the
+entire 9q+3-dimensional append-prefix space. Thus its correction term
+cannot generally be discarded. For q>=6 those constraints also leave
+at least 3q(q−5)/2 arrival-index imbalance directions. These audited
+obstructions concern formal coefficients and do not disprove source
+independence or closure after the required corrections.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,

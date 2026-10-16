@@ -262,3 +262,86 @@ is not automatically an available reduced source column. To use
 actual residual coefficient kernel, retaining the same scalar and
 line corrections. That closure is not proved here. Ambient ideal
 generation and the seed identity alone do not imply it.
+
+## The residual constraints leave the entire append prefix available
+
+A further independently audited coefficient calculation identifies the
+coupling that a transport proof must handle. Work with the full formal
+list of local E_(t,a) and F_(t,s,a,b) columns at length q>=4. Write its
+coefficients as lambda_(ta) and alpha_(tsab), and put
+
+\[
+ P_{tab}=X_aK_t(a,b)e_b,\qquad
+ J_{tab}=\sum_{s\ne t}\alpha_{tsab},\qquad
+ \mathcal I(c)=\sum_{t,a}\lambda_{ta}E_{ta}
+                  +\sum_{t,a,b}J_{tab}P_{tab}.
+ \tag{SK13}
+\]
+
+Appending the same coefficient vector to the actual new list gives
+
+\[
+ R_{\rm new}(c)=R_{\rm old}(c)K_n+
+                  \mathcal I(c)(I-K_n).
+ \tag{SK14}
+\]
+
+For F this is its exact ordered-word append identity; a local E remains
+the same local E, which is also E K_n+E(I−K_n). Its prefix is E here,
+not X_a e_a.
+
+Since E_(ta)=X_a e_a−sum_b P_tab, the prefix rewrites as
+
+\[
+ \mathcal I(c)=\sum_a\Bigl(\sum_t\lambda_{ta}\Bigr)X_ae_a
+             +\sum_{t,a,b}(J_{tab}-\lambda_{ta})P_{tab}.
+ \tag{SK15}
+\]
+
+The 9q vectors P_tab are independent modulo the three diagonal
+polynomials X_a e_a: at each distinct line L_ta, take the residue
+component by component. Its numerator X_a A_t(a,b)X_b is not
+identically zero on that line. Thus every coefficient of P_tab must
+vanish; the three remaining diagonal polynomials are independent.
+The prefix image has dimension 9q+3.
+
+Its formal kernel is exactly J_tab=lambda_ta and sum_t lambda_ta=0.
+A basis consists of the 9q(q−2) first-slot differences and the
+3(q−1) long-empty differences. Hence this kernel is the formal
+zero-prefix space Z, with dimension 9q²−15q−3.
+
+Let K be the coefficient kernel of the full scalar-plus-auxiliary map.
+Its dimension is r−3q. That joint map is onto already on Z, by the
+new uniform theorem. For every coefficient vector c, choose z in Z
+with the same joint observation. Then c−z belongs to K and has the
+same prefix as c. Consequently
+
+\[
+ 0\longrightarrow K\cap Z\longrightarrow K
+    \xrightarrow{\mathcal I}\operatorname{im}\mathcal I
+    \longrightarrow0,
+ \qquad \dim(K\cap Z)=r-12q-3.
+ \tag{SK16}
+\]
+
+These are dimensions of formal coefficient spaces, not claims about
+independence of their actual rational-row images. They prove that
+imposing the scalar and line constraints does not shrink the possible
+prefix image. The correction in (SK14) cannot universally be discarded.
+
+There is also a direct obstruction to averaging the arrival index.
+Define beta(c) by the differences
+alpha_(ts a1)−alpha_(ts a0) and alpha_(ts a2)−alpha_(ts a0), ignoring
+E coefficients. Its formal kernel has dimension 3q². Therefore
+
+\[
+ \operatorname{rank}(\beta|_K)
+       \ge (r-3q)-3q^2=\frac32q(q-5),\qquad q\ge6.
+ \tag{SK17}
+\]
+
+The residual conditions do not force equal arrival-index coefficients.
+Possible source relations are still included in K, so this does not
+rule out balancing after adding other actual source corrections, nor
+refute the desired multiplier closure. It identifies the nonzero
+coefficient imbalance that such a construction must explicitly absorb.

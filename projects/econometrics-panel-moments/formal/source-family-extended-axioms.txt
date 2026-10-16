@@ -715,3 +715,33 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceCoordinateFactors.clearedReducedColumn_eq_coordinate_mul' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceAppendIdentities.block_rowForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceAppendIdentities.kernel_eq_block_of_entries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceAppendIdentities.homogeneousWordProduct_append' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceAppendIdentities.actual_word_append_block' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceAppendIdentities.boundary_append_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceAppendIdentities.boundary_append_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceAppendIdentities.clearedKernel_eval_coordinate_factor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceAppendIdentities.cleared_vecMul_coordinate_factor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceAppendIdentities.cleared_append_scalar_split' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceAppendIdentities.denominator_mul_append_scalar_split' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceAppendIdentities.divided_cleared_pole_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceAppendIdentities.endBlock_outputDivided_pole_cancellation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

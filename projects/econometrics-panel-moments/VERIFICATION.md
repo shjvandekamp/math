@@ -140,6 +140,20 @@ The audited deletion-word induction remains a paper proof whose k=4 base
 is the external certificate in `exploration/source24-deletion-word-results.json`;
 it is not covered by the Lean verifier.
 
+A further module, `SourceAppendIdentities`, proves exact actual-kernel
+append, boundary-annihilation, scalar-splitting, and cleared-pole
+cancellation identities. Its focused compile exited zero in 19.38 seconds
+with maximum RSS 1,802,436,608 bytes; its only diagnostic was a harmless
+style-linter warning. The log is
+[source-append-identities-build.log](formal/source-append-identities-build.log).
+Its twelve substantive axiom checks passed separately, then the updated
+`SourceFamilyCheck.lean` aggregate passed all **337** checks in the
+**32-module** compiled closure. The saved extended axiom file now records
+that latest result. `verify-source-family.sh` includes the new module in
+its serial reproduction list. No new clean 32-module rebuild was run.
+These identities do not formalize the new residue asymptotics or the
+paper scalar/auxiliary rank induction.
+
 Every audited declaration in both main checks depends only on
 `propext`, `Classical.choice`, and `Quot.sound`. There are no `sorry`, `admit`,
 `sorryAx`, custom axioms, or native computation oracles in the project proof

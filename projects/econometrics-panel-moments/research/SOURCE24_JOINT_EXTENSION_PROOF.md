@@ -590,3 +590,20 @@ This conclusion is an actual zero-prefix image theorem. It does
 not identify the remaining formal source-coordinate kernel with
 zero, prove the separate equation-(24) independence bridge, or
 supply a Lean formalization of the induction.
+
+
+## Exact algebra now checked in Lean
+
+[SourceAppendIdentities.lean](../formal/PanelMoments/SourceAppendIdentities.lean)
+uses the existing actual homogeneous kernel and its cleared polynomial
+matrix. It proves ordered-word appending, the entire boundary vector
+formula and its scalar-kernel annihilation, the exact cleared splitting
+identity, and the output-divided cancellation on a row-form zero.
+Focused compilation and twelve substantive axiom checks passed; the
+extended source-family aggregate now includes those checks.
+
+This formalizes algebra used in (JE6), (JE8), and the end-block part of
+(JE10)--(JE11). It does not define the residue operators, prove the extra
+matching-coordinate cancellations or asymptotic orders, or formalize
+(JE21)'s rank induction. The all-length theorem in this note remains an
+audited paper result with an external exact finite base.
