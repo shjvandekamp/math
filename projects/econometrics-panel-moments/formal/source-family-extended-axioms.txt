@@ -825,3 +825,37 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceMixedPairDeterminant.actualWord_pair_minor_ne_zero' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.firstCoeff_C' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.firstCoeff_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.firstCoeff_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.firstCoeff_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.clearedKernel_eval_eq_zero_of_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.clearedReducedColumn_firstCoeff_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.jetNumerator_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.jetNumerator_firstCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.jetNumerator_firstCoeff_eq_zero_of_other' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.jetNumerator_pair_minor_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.tailDenominator_coalesced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.jetNumerator_eval_coalesced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.six_coefficients_eq_zero_of_relation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPairSeparation.six_specialJets_separate_from_reduced' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

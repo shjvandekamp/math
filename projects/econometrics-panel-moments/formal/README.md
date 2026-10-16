@@ -30,7 +30,7 @@ independence.
 kernel along a relative-time perturbation `(u,v) ↦ (u(1+τε),v(1+νε))`.
 It also proves the cleared derivative identity, zero row sum, and the
 derivative of the prefix-corrected append expression. These are derivative
-identities; independence of the coalescent source jets remains open.
+identities; independence of the complete coalescent source-jet family remains open.
 `SourceLocalJetAlgebra.lean` connects the exact two-branch kernel difference
 to its derivative and proves the special jet's five-term expansion and
 diagonal cancellation. Its fixed tail remains arbitrary; no residue or
@@ -46,13 +46,21 @@ cleared derivative determinant at a common pair of row-form zeros. Its
 actual-word corollary assumes nonzero coordinates, source entries, the
 selected row minor, `ν−τ`, and the tail's row forms and block determinants.
 Tail differentiability, row sums, and determinant nonvanishing are derived
-from the actual ordered kernels. Residue extraction and full source-family
-independence remain outside these formal results.
+from the actual ordered kernels.
 
-The current source-family aggregate checks 377 declarations in a compiled
-36-module closure. The latest check compiled the aggregate against cached
-module outputs; it was
-not a clean rebuild. Its axiom output is saved in
+`SourceMixedPairSeparation.lean` proves that the six off-diagonal special jets
+are independent modulo the entire actual coalesced reduced source family.
+It constructs their polynomial numerators with the exact common denominator,
+proves that first pair coefficients annihilate every leading column, and uses
+the two-column determinants to separate all six coefficients. Polynomial
+injectivity transfers relations on positive coordinates to these observations.
+The local geometric conditions remain explicit: neither their generic
+existence nor old-source independence is assumed or proved. Full equation (24)
+independence remains open in this formalization.
+
+The current source-family aggregate checks 391 declarations in a compiled
+37-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. Its axiom output is saved in
 `source-family-extended-axioms.txt`.
 
 ## Model foundations

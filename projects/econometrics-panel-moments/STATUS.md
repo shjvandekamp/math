@@ -128,13 +128,22 @@ hypothesis whenever its row denominators are nonzero at that point.
 explicit relative-direction factor, stochastic-tail minor transport,
 and the resulting nonzero two-column derivative determinant. Its actual
 ordered-word corollary derives tail invertibility from the model block
-determinants and local coordinate/denominator units. The updated aggregate
-checks 377 declarations in a 36-module compiled closure, using only the
+determinants and local coordinate/denominator units.
+`SourceMixedPairSeparation` adds fourteen checked declarations and now
+separates all six off-diagonal special jets modulo the entire actual
+coalesced reduced family. Its polynomial first-coefficient observations
+annihilate every leading column; the pair determinants separate the six
+jet coefficients. The exact common denominator and polynomial injectivity
+transfer relations on positive coordinates to those pair observations.
+The local geometric conditions remain explicit; no old-source rank
+premise is used and their generic existence is not formalized here.
+The updated aggregate checks 391 declarations in a 37-module compiled
+closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 36-module rebuild. The aggregate took 18.94 seconds with peak
-RSS 2,426,372,096 bytes under the serial memory cap.
-Residue operators, matching-coordinate removability, asymptotic orders,
-and the joint-rank induction remain paper arguments outside this module.
+new clean 37-module rebuild. The aggregate took 40.29 seconds with peak
+RSS 1,757,904,896 bytes under the serial memory cap.
+The remaining matching pivots, generic geometry, asymptotic orders,
+and the full joint-rank induction remain outside these formal results.
 
 Further exact discovery separates identities from rank evidence. The
 coalescent triangle and grid identities match direct rational series checks;

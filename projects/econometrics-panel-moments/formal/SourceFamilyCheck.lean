@@ -3,6 +3,7 @@ import PanelMoments.SourceRelativeTimeJet
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
+import PanelMoments.SourceMixedPairSeparation
 import PanelMoments.SourcePolynomialKernels
 import PanelMoments.SourcePolynomialCriterion
 import PanelMoments.SourceFamily
@@ -477,3 +478,19 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceMixedPairDeterminant.kernel_det
 #print axioms PanelMoments.SourceMixedPairDeterminant.homogeneousWordProduct_det
 #print axioms PanelMoments.SourceMixedPairDeterminant.actualWord_pair_minor_ne_zero
+
+-- Six actual special jets separated from the coalesced reduced source family.
+#print axioms PanelMoments.SourceMixedPairSeparation.firstCoeff_C
+#print axioms PanelMoments.SourceMixedPairSeparation.firstCoeff_X
+#print axioms PanelMoments.SourceMixedPairSeparation.firstCoeff_mul
+#print axioms PanelMoments.SourceMixedPairSeparation.firstCoeff_hasDerivAt
+#print axioms PanelMoments.SourceMixedPairSeparation.clearedKernel_eval_eq_zero_of_pair
+#print axioms PanelMoments.SourceMixedPairSeparation.clearedReducedColumn_firstCoeff_eq_zero
+#print axioms PanelMoments.SourceMixedPairSeparation.jetNumerator_eval
+#print axioms PanelMoments.SourceMixedPairSeparation.jetNumerator_firstCoeff
+#print axioms PanelMoments.SourceMixedPairSeparation.jetNumerator_firstCoeff_eq_zero_of_other
+#print axioms PanelMoments.SourceMixedPairSeparation.jetNumerator_pair_minor_ne_zero
+#print axioms PanelMoments.SourceMixedPairSeparation.tailDenominator_coalesced
+#print axioms PanelMoments.SourceMixedPairSeparation.jetNumerator_eval_coalesced
+#print axioms PanelMoments.SourceMixedPairSeparation.six_coefficients_eq_zero_of_relation
+#print axioms PanelMoments.SourceMixedPairSeparation.six_specialJets_separate_from_reduced
