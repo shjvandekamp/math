@@ -10,7 +10,8 @@ proof that this image fills its ambient space.
 The [Pro21 continuation](https://chatgpt.com/c/6ad15e36-dd64-83ed-9505-b8f7d094c30f)
 and two independent local audits strengthen the increment to 6q+3
 in (ZP41)--(ZP50). With the exact length-six splitting base, the
-strongest resulting bound is 3m²+45 for m>=6. The earlier 4q proof
+later coupled finite certificate gives full scalar rank 210 at length
+seven and the stronger bound 3m²+63 for m>=7; see (ZP80). The earlier 4q proof
 is retained as the axis subargument used in that extension.
 
 Use the actual source subspace N from
@@ -1800,3 +1801,87 @@ automatically. The remaining joint-induction obligation is the
 three-endpoint Schur correction after both scalar and body
 elimination. Separate endpoint surjectivity from (ZP54)--(ZP60)
 does not yet establish that correction.
+
+### Why the last endpoint needs normal information
+
+There is a checked limitation on a further pure-axis simplification.
+Fix positive epsilon, perform the full scalar projection, and then
+eliminate the 2q old ordinary-axis body residues. In the chart
+X1=1, X2=0, x=X0, an actual scalar-zero row satisfies R1=−R0,
+so f=−R1/X0 has no artificial coordinate pole. All state-2 poles
+disappear on this axis by their initial or arrival X2 factor.
+The only remaining poles are simple state-0/1 poles, and f is
+proper because R1/X1 is regular at e0. After the old residues
+are eliminated, necessarily
+
+\[
+ f(x)=\frac{A}{x+\varepsilon}
+       +\frac{B}{x+2\varepsilon}.
+ \tag{ZP79}
+\]
+
+Consequently three pure-X0 endpoint jets have rank at most two
+on this residual space. This applies to the leading w-to-infinity
+Schur block when its normalized body projection has a regular
+limit. It does not bound the finite-w Schur rank, nor justify
+exchanging epsilon and w limits. The third direction must retain
+normal X2 information or a subleading term in w. One concrete
+alternative is to use the two new ordinary residues and the new
+state-2 divided matching residue as the three remaining coordinates.
+Their coupled determinant has not yet been proved nonzero.
+
+Endpoint normalization also matters. The scalar-corrected body
+column C_qn^(11) has the same constant auxiliary endpoint as
+the endpoint lift C_nq^(11), by their terminal-incidence calculation.
+Subtracting that lift is a legitimate regular normalization which
+preserves the boundary body. A universal X0 factor cannot be
+assumed before making this normalization. Both this counterexample
+and the ordered-limit pole argument were independently checked.
+
+
+### Fully coupled finite endpoint certificates and the length-seven consequence
+
+The verifier `source24_zero_prefix_endpoint_schur.py` uses the prescribed
+old scalar basis, all 6q+3 boundary columns, and the 3q inherited
+scalar-kernel trace columns in one scalar projection at positive new u.
+It then projects the same three endpoint columns against the selected
+3q auxiliary body columns, retaining every coefficient in the original
+source family. For this finite check the endpoint columns are
+C_nq^(11), C_nq^(01), and C_n,(q−2)^(11). The two fixtures use
+u_t=7^(t−1), v_t=3^(t−1), w=5, and prime 1,000,003.
+
+| Old q / new n | Scalar rank | Body rank | Endpoint Schur determinant | Full auxiliary rank / determinant |
+|---|---:|---:|---:|---:|
+| 4 / 5 | 105 | 12 | 205708 | 15 / 87247 |
+| 5 / 6 | 153 | 15 | 135971 | 18 / 807353 |
+
+The saved certificate retains the old trace ranks 12 and 15, all
+original source coefficients after both projections, and the exact
+Schur determinant identity. Six additional evaluations check each
+trace and auxiliary polynomial; independent cleared-polynomial
+controls check the component formula. The run took 4.973442 seconds
+and 38,436,864 bytes maximum RSS. These are external exact finite
+certificates, not a uniform endpoint theorem or a Lean proof.
+
+There is a further paper consequence already independent of any
+uniform endpoint argument. The length-six certificate proves generic
+joint scalar/auxiliary rank 153+18=171. Apply the audited boundary
+extension and inherited splitting criterion (ZP33)--(ZP39) with q=6:
+its boundary rank is 153+39=192 and its splitting trace has rank 18.
+Thus the length-seven scalar rank is its full ambient dimension 210.
+The arbitrary-v trace condition follows from the same nonzero rational
+minor that is witnessed at w=5. The open conditions for this trace,
+boundary extension and scalar base intersect before choosing the new
+positive parameters. Consequently (ZP49) now also gives
+
+\[
+ \dim p_2(N)\ge 3m^2+63\quad(m\ge7),\qquad
+ d_m-\dim p_2(N)\le \frac32(m-7)(m+6).
+ \tag{ZP80}
+\]
+
+This uses a finite joint base and the already audited scalar-extension
+step. It does not assume propagation of the joint condition. The
+length-seven assertion and bound are paper results with external
+finite certificates; equation-(24) independence and their Lean
+formalization are separate obligations.

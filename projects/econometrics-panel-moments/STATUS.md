@@ -479,6 +479,25 @@ the splitting trace from this body. The three endpoint directions
 still must survive the exact body Schur correction. This conditional
 paper result is not a Lean theorem, a closed induction for scalar
 fullness, or an all-T proof of equation-(24) independence.
+A checked limitation rules out using three pure-axis endpoint jets
+in the leading auxiliary-line limit: after old-axis elimination,
+the residual rational function has only two new ordinary poles.
+The final direction must retain normal information, such as the
+new state-2 matching value, or subleading auxiliary-line terms.
+
+A fully coupled finite endpoint test now succeeds at q=4,5. It uses
+one prescribed scalar projection and then the exact body Schur
+correction on the same original source coefficients. The resulting
+three-by-three determinants are 205708 and 135971 modulo 1,000,003;
+full auxiliary ranks are 15 and 18. The verifier and original-coordinate
+certificates are in the source24-zero-prefix-endpoint-schur files.
+The length-six joint rank 153+18=171, together with the audited
+boundary extension and inherited trace criterion, proves generic
+scalar rank 210 at length seven. It also improves the propagated
+lower bound to 3m²+63 for m>=7, with deficit at most
+3(m−7)(m+6)/2. These are paper consequences with external finite
+bases; they do not themselves propagate the joint condition or prove
+equation-(24) independence.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -660,6 +679,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    2q-axis-plus-q-matching limit. Prove that all three endpoint
    directions survive the exact body Schur correction on those same
    source coefficients; separate endpoint and body ranks do not suffice.
+   Retain normal information for the third direction: the leading
+   pure-axis endpoint space has dimension at most two after old-body
+   elimination. A concrete alternative uses the two new ordinary
+   residues and the new state-2 divided matching residue.
    The inherited higher jet is coupled to the scalar trace, so
    independently computed ranks cannot simply be added.
    Neither route is yet complete.
