@@ -3924,3 +3924,13 @@ peak RSS before JSON serialization.
 The full matrices, transformations, and geometry checks are saved in
 source24-binary-terminal-jet-results.json. This is additional finite
 evidence, not a uniform nonvanishing proof.
+
+SourceBinaryTerminalAlgebra.lean now checks the actual missing-column
+formula, its derivative, the fixed-head/completed-row derivative, and the
+canonical contraction giving (LC146). Its eight declarations retain
+nonzero baseline row forms and invertibility of the fixed G. They use
+no inverse of the singular terminal kernel. The residue identification,
+inherited-kernel bijection, and conditional rank argument remain paper
+mathematics. The updated cached aggregate checks 510 declarations in
+47 modules in 11.77 seconds, with peak RSS 2,468,528,128 bytes and only
+permitted foundational axioms.

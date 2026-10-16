@@ -198,11 +198,17 @@ its determinant positive for every length. The cancellation ratio is
 defined explicitly; its generic derivation and perturbation to admissible
 geometry remain paper arguments. This specialization is a rational
 extension witness, with one node on an edge and two coincident nodes.
-The updated aggregate checks 502 declarations in a 46-module compiled
+SourceBinaryTerminalAlgebra adds eight checked identities and derivative
+statements for the actual factors (1,epsilon,tau). For a canonical completed
+row the missing-output derivative is -X_1 f. The fixed G inverse and
+baseline denominator conditions are explicit; the singular terminal
+kernel is never inverted. The residue-kernel correspondence and resulting
+conditional rank statement remain paper arguments.
+The updated aggregate checks 510 declarations in a 47-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 46-module rebuild. The aggregate took 21.71 seconds with peak
-RSS 2,429,435,904 bytes under the serial memory cap.
+new clean 47-module rebuild. The aggregate took 11.77 seconds with peak
+RSS 2,468,528,128 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 

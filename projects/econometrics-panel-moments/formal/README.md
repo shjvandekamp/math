@@ -125,10 +125,18 @@ extension witness: one last node lies on a coordinate edge and two coincide.
 Perturbation to admissible generic geometry and source independence are not
 formalized by these modules.
 
-The current source-family aggregate checks 502 declarations in a compiled
-46-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. It took 21.71 seconds with peak
-RSS 2,429,435,904 bytes under the serial memory cap. All checked declarations
+SourceBinaryTerminalAlgebra.lean proves eight identities and derivative
+statements for the actual terminal factors (1,epsilon,tau). The missing
+output column vanishes at zero; a fixed completed row's derivative contracts
+to -X_1 f for canonical data (s_0,f,s_2). Only the fixed G is inverted.
+Its determinant and all baseline row-form units are explicit hypotheses.
+The scalar residue-kernel correspondence and rank criterion remain paper
+arguments.
+
+The current source-family aggregate checks 510 declarations in a compiled
+47-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. It took 11.77 seconds with peak
+RSS 2,468,528,128 bytes under the serial memory cap. All checked declarations
 use only the permitted foundational axioms; the output is saved in
 `source-family-extended-axioms.txt`.
 
