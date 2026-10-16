@@ -345,3 +345,299 @@ Possible source relations are still included in K, so this does not
 rule out balancing after adding other actual source corrections, nor
 refute the desired multiplier closure. It identifies the nonzero
 coefficient imbalance that such a construction must explicitly absorb.
+
+## Exact boundary rank of the prefix correction
+
+The following boundary calculation was independently audited. Specialize
+the new block to G* and (u_n,v_n)=(epsilon,v), with v nonzero, and put
+ell=X0+v X2 and tildeell=X0+2v X2. In the prefix representation (SK15),
+absorb the nonzero A_t(a,b) factors into the coefficients and write
+
+\[
+ \mathcal I_b=X_bj_b,\qquad
+ j_b=d_b+\sum_{t,a}c_{tab}\frac{X_a}{L_{ta}}.
+ \tag{SK18}
+\]
+
+At epsilon=0 the rows zero and one of the new kernel coincide, and
+its column one vanishes. Direct multiplication gives
+
+\[
+ h\bigl(\mathcal I(I-K_n^0)\bigr)
+   =\frac{X_0j_2}{\widetilde\ell}
+       -v\frac{X_0j_0+X_1j_1}{\ell}.
+ \tag{SK19}
+\]
+
+This map is injective on the whole 9q+3-dimensional prefix space.
+It is enough that the old lines are pairwise nonproportional and have
+normalized form X0+a1 X1+a2 X2 with a1 a2 nonzero. If (SK19) vanishes,
+take its residue on any old line L=L_ta and cancel the nonzero rational
+function X_a on that line. Clearing ell tildeell gives
+
+\[
+ X_0\ell c_2-v\widetilde\ell(X_0c_0+X_1c_1)=0
+                  \quad\hbox{on }L.
+\]
+
+At L intersect {X0=0}, both X1 and X2 are nonzero, so c1=0. The
+remaining expression is X0 times the linear form
+(c2−v c0)X0+v(c2−2v c0)X2. This form has no X1 term, whereas L
+does; divisibility by L therefore forces both coefficients to vanish.
+Thus c0=c2=0. Repeat at every old line. For the remaining polynomial
+constants d_b, the X0 X1 coefficient first kills d1, and the same two
+equations kill d0,d2. No old cross-point geometry or source independence
+is needed for this argument.
+
+For the formal residual coefficient kernel K from (SK16), the old row
+has component two zero, hence R_old K_n^0=0 as a whole vector.
+Together with prefix surjectivity on K, (SK14) and (SK19) prove
+
+\[
+ \operatorname{rank}\bigl(hR_{\rm new}^{\,0}|_K\bigr)=9q+3,
+ \qquad
+ \ker\bigl(hR_{\rm new}^{\,0}|_K\bigr)=K\cap Z.
+ \tag{SK20}
+\]
+
+This is an exact boundary rank on formal coefficients. It explains why
+the leading prefix directions must be removed by a scalar correction.
+It does not establish the rank of the corrected residual rows.
+
+For comparison, on the zero-prefix subspace the actual append is pure.
+If R=R1(e1−e0), direct subtraction of rows zero and one gives
+
+\[
+ RK_n=\frac{\varepsilon X_1R_1}{L_{n0}L_{n1}}
+                 (-X_0,\ell,-vX_2),\qquad
+ \left.\frac{RK_n}{\varepsilon}\right|_{\varepsilon=0}
+       =\frac{X_1R_1}{\ell^2}(-X_0,\ell,-vX_2).
+ \tag{SK21}
+\]
+
+The latter map is injective on actual old scalar-zero rows, since its
+component one is X1 R1/ell. It is injective on coefficient vectors only
+if the corresponding old source combinations are already independent.
+More importantly, this is before the new scalar and line corrections:
+its scalar observation is generally nonzero. A sufficient next step is
+to determine its induced kernel after those same actual corrections on
+K intersect Z, and to retain an injective inherited block. The raw
+first-jet injectivity alone is not that statement.
+
+## Scalar fullness using only copied old sources
+
+A stronger consequence of the prefix calculation is now independently
+audited: for every q>=4, the new scalar map is generically onto using
+only the full old E/F coefficient list copied to length n=q+1. This
+statement does not assume old source independence.
+
+Here is the boundary proof. Let S_q be the old scalar ambient and put
+mu=v X0 X2/(ell tildeell). The old zero-prefix scalar theorem supplies
+every row mu H, H in S_q, with zero prefix. The prefix map on the full
+old coefficient list is onto. By changing a coefficient vector within
+Z, its old scalar observation can be prescribed without changing its
+prefix. Hence the scalar image of the copied old list at epsilon=0 is
+
+\[
+ \mu\mathcal S_q+\mathcal T(\operatorname{im}\mathcal I),
+ \qquad \mathcal T(I)=h(I(I-K_n^0)).
+ \tag{SK22}
+\]
+
+The intersection has dimension exactly 3q. More precisely,
+
+\[
+ \mathcal T(I)\in\mu\mathcal S_q
+ \quad\Longleftrightarrow\quad
+ I=j(X_0,0,vX_2),\quad
+ j\in\operatorname{span}\{1,X_a/L_{ta}\},\quad j(e_2)=0.
+ \tag{SK23}
+\]
+
+In this display I denotes a prefix row, not the identity matrix. To
+prove necessity, use (SK18) and divide (SK19) by mu:
+
+\[
+ H=\frac{\ell j_2}{vX_2}
+     -\frac{\widetilde\ell j_0}{X_2}
+     -\frac{\widetilde\ell X_1j_1}{X_0X_2}.
+ \tag{SK24}
+\]
+
+Impose the generic condition that old line intersections with each of
+the axes X0=0 and X2=0 are distinct and avoid the coordinate vertices.
+On any old line L_ta, its residue divided by X_a must be regular at
+both of these axis points. For a matching state a=0 or a=2 this is
+exactly the old matching condition; for the other states X_a is a
+unit there. The potential X0 pole in (SK24) forces c_(ta,1)=0, and
+the potential X2 pole then forces c_(ta,2)=v c_(ta,0). The remaining
+polynomial part is coordinate-regular only if d1=0 and d2=v d0.
+Thus j1=0, j2=v j0, and H=−v j0. An old scalar row vanishes at e2,
+so j0(e2)=0.
+
+Conversely the 3q+1 functions 1 and X_a/L_ta are independent by their
+distinct line residues. Evaluation at e2 is a nonzero functional on
+this space. Its kernel is spanned by
+X_a/L_ta−delta_(a2)/A_t(a,2), since
+
+\[
+ h(E_{ta})=\delta_{a2}-A_t(a,2)X_a/L_{ta}.
+\]
+
+Every such j therefore belongs to S_q, and the prefix
+j(X0,0,vX2) is available. Formula (SK19) gives T(I)=−v mu j,
+proving the converse and the exact intersection dimension. This
+argument uses scalar residue and matching conditions directly; it
+does not substitute a reduced-point ideal description at G*.
+
+By (SK19)'s injectivity and (SK23), (SK22) has dimension
+d_q+(9q+3)−3q=d_q+6q+3. This equals the entire boundary scalar
+ambient from the zero-prefix extension proof. The already proved
+inherited trace-jet construction contributes 3q further scalar
+directions modulo that boundary image. Those normalized columns
+are themselves copied old zero-prefix combinations. Thus
+
+\[
+ \operatorname{rank}\bigl(h\mathcal C_{q+1}\bigr)
+    =d_q+9q+3=d_{q+1},
+ \tag{SK25}
+\]
+
+generically, where C_(q+1) denotes the copied full old E/F list.
+The boundary basis and normalized trace columns give a nonzero
+leading minor, hence positive finite epsilon witnesses at G*.
+Clearing its denominators then gives a nonzero common-G polynomial
+minor. For each fixed q it can be combined with other nonzero
+generic conditions in that same parameter ring.
+
+There is a useful exact consequence for the new-pole tests. Every
+copied old source has the form I−Q K_n, with I free of new poles.
+Its new-line residue is parallel to the corresponding row of
+A_n diag(X). All three output-divided new-pole functionals Psi from
+the joint extension proof therefore kill it exactly. They also kill
+every scalar pivot chosen within C_(q+1), even when its parameter-only
+coefficients contain inverse powers of epsilon. Scalar correction
+using (SK25) does not change these new-pole observations.
+
+## A scalar-first regular determinant under the induction premise
+
+This section was independently audited. Assume explicitly that the
+full old source list is independent at length q; no such assumption
+is made at n=q+1. Intersect its nonzero common-G minor open with
+(SK25), the established shared-new polar minor open, and the required
+geometry open. These are nonzero polynomial conditions in the same
+parameter ring. The argument does not assume that old independence
+holds on the fixed G* slice used to prove (SK25).
+
+Write C for the copied old full list and split the genuinely new
+columns into E (the three local E_na), U (the 9q shared-new F), and
+V (the 9q first-new F). Choose a parameter-only right inverse H and
+coefficient-kernel basis K for hC. For any boundary list B put
+
+\[
+ B^\circ=B-CHh(B),\qquad hCH=I,
+ \quad\operatorname{im}K=\ker(hC).
+ \tag{SK26}
+\]
+
+The scalar-zero list is [CK,E^circ,U^circ,V^circ]. The list CK has
+(2r_q+3q)−d_n=r_q−9q−3 columns. Every column of C has new-line
+residue parallel to v_na=A_n(a,:)diag(X). For a scalar-zero
+combination, its component-two residue is zero. Since A_n(a,2)X2
+is a nonzero function on L_na, the entire new-line residue vanishes.
+It follows that
+
+\[
+ CK\subset W_{01,q}\subset W_{01,n}.
+ \tag{SK27}
+\]
+
+Absence of new poles preserves the old coordinate and matching
+conditions, so the smaller ambient in (SK27) is the actual old one.
+The copied-old list is independent under the induction premise:
+its old-old double residues are the old residues followed by K_n
+at each cross-point. Invertibility of those matrices kills all old
+F coefficients in a putative relation, and the remaining local E
+columns are independent by their distinct single-line residues.
+Consequently CK is independent as well.
+
+Let alpha denote the 9q transverse new-old pole coordinates from
+the original Schur reduction. They kill C and E exactly. On a
+scalar-zero row they detect the full new-old residue: in the basis
+(v_old,v_new), component two zero fixes the second coefficient from
+the first. If all such pair residues vanish, the canonical E/B
+ambient decomposition leaves only old rows and new local E terms;
+the latter's component-two residues force their coefficients to
+vanish. Thus
+
+\[
+ \ker(\alpha|_{W_{01,n}})=W_{01,q}.
+ \tag{SK28}
+\]
+
+The established polar theorem says P=alpha(U) is invertible.
+Because alpha(C)=0, P=alpha(U^circ), with exactly the same actual
+column coefficients. Eliminate those columns from V^circ:
+
+\[
+ V^{\rm reg}=V^\circ-U^\circ P^{-1}\alpha(V^\circ).
+ \tag{SK29}
+\]
+
+Both E^circ and V^reg lie in W01_q. The three E^circ columns are
+independent modulo CK. Indeed, a relation there would place a
+nonzero combination of new E in the copied-old span. Old-old
+residues and old independence first reduce that equality to one
+between old and new local E columns; distinct single-line residues
+then force every coefficient to vanish.
+
+Therefore [CK,E^circ] is an independent list of r_q−9q rows in
+the r_q-dimensional old scalar-zero ambient. The exact remaining
+criterion is
+
+\[
+ \boxed{\quad
+ [V^{\rm reg}]\text{ is a basis of }
+ W_{01,q}/\operatorname{span}[CK,E^\circ].
+ \quad}
+ \tag{SK30}
+\]
+
+This is a 9q-square determinant. Its columns are actual source
+combinations using the same scalar correction (SK26) and polar
+correction (SK29). Clearing by D_q expresses it using old
+scalar-zero polynomials of degree 3q−1. The reduction recovers
+the regular Schur gap in a scalar-first form; it does not prove
+the determinant nonzero.
+
+Nor does the auxiliary theorem alone remove three more columns.
+The polar block can already carry the three new endpoint pivots,
+and the known old-pole block [CK,E^circ], of dimension r_q−9q,
+can carry all 3q old auxiliary pivots. Full scalar, polar and
+one-line ranks are therefore compatible with a deficient remaining
+regular block. This is a limitation of those rank facts, not an
+actual counterexample to source independence.
+
+## The choice of scalar section can erase inherited rows
+
+A [GPT-6 Pro investigation](https://chatgpt.com/c/6ad174d7-709c-83eb-88c8-dd3fe8b08597)
+identified the following sharper caution, checked locally by the primary
+researcher and an independent reviewer. Let U be any actual row subspace
+of span(Z_q) intersect W01_q. At G*, with epsilon v nonzero, (SK10)
+shows that h(R K_n) is injective as a function of R in U. Choose an
+actual row basis of U and copied-old coefficient preimages of its
+appends. Extend their independent scalar images to a basis of the full
+new scalar ambient, choosing copied-old lifts by (SK25). This defines
+a legitimate parameter-only section H with
+
+\[
+ RK_n-CHh(RK_n)=0\qquad(R\in U).
+ \tag{SK31}
+\]
+
+Thus injective corrected append cannot be independent of the section
+choice, even on actual old zero-prefix scalar-zero rows. A proof must
+analyze a particular section together with its complementary columns.
+This does not rule out a useful section, or independence of the entire
+source family. The longer zero-prefix polar/regular recurrence proposed
+in that Pro response has not been adopted as a proved rank result here.

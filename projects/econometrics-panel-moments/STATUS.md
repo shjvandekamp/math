@@ -475,6 +475,26 @@ at least 3q(q−5)/2 arrival-index imbalance directions. These audited
 obstructions concern formal coefficients and do not disprove source
 independence or closure after the required corrections.
 
+The boundary specialization now makes this obstruction exact: its
+scalar observation is injective on the whole append-prefix space.
+Copied append on the old residual coefficient kernel consequently has
+boundary scalar rank 9q+3 and kernel precisely its zero-prefix part.
+The latter has an injective normalized first jet on actual old rows
+before the new scalar/line corrections. Determining the kernel after
+those coupled corrections remains the next transport question; this
+does not supply residual independence.
+
+A stronger audited result now fills the entire new scalar map using
+only copied old full source columns, without assuming their independence.
+The boundary prefix image intersects the inherited old scalar image in
+exactly 3q dimensions; inherited trace jets supply the remaining 3q
+directions. Scalar correction can therefore leave all new-pole tests
+unchanged. Under an explicit shorter-length independence premise, the
+remaining problem is an exact 9q-square determinant in a quotient of
+the old scalar-zero polynomial space. This recasts the existing regular
+Schur gap with all actual corrections retained; its nonvanishing is
+still open. See (SK22)--(SK30) in the scalar-kernel reduction note.
+
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
 this gives generic rank exactly 27 and explains the nine-dimensional
