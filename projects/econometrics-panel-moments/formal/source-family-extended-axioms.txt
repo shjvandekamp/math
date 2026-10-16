@@ -1160,3 +1160,27 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceBinaryTerminalAlgebra.canonical_terminalRow_missing_hasDerivAt' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceFirstBlockCancellation.firstTable_rowForm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_decomposition' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceFirstBlockCancellation.signedForms_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_kernel_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_kernel_wordTail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_eq_scale' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceFirstBlockCancellation.startingRow_kernel_tail_divided' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

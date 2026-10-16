@@ -4414,3 +4414,133 @@ can avoid that edge collision. Neither simplification
 alone supplies a constant-coefficient actual H/J expansion
 of the reset targets. Compatibility with their actual head
 response is the remaining step.
+
+SourceFirstBlockCancellation.lean now proves (LC165)'s
+cleared identity with the existing actual scaled table
+and homogeneous kernel, then transports it through an
+arbitrary right tail and the actual ordered word product.
+The divided-output formula retains its coordinate and
+w-u nonzero hypotheses. All eight declarations passed
+focused compilation and axiom checking; the source has
+no remaining warnings. The updated cached aggregate
+checks 518 declarations across 48 modules in 3.68 seconds,
+with peak RSS 2,417,672,192 bytes and only permitted
+foundational axioms. This adds no residue-rank theorem.
+
+## A two-function correction and the limit of scalar closure
+
+There is a useful exact relation between the first two
+reset targets, but it does not give a bounded iterative
+response by itself. Use X_2=1, y=X_1 and x=X_0=-(y+1)/2.
+Write beta=(vP_n)_1/y, beta_0=beta(Q_1), and
+F=(beta-beta_0)/y. On scalar classes define
+mathcal D h=(x/y)(h-h(Q_1)); its apparent pole at Q_1
+is removable. For terminal time (1,0,T), let
+y_c=2T kappa_c-1 and x_c=-(y_c+1)/2. The actual terminal
+scalar is j_c=2X_c beta/(y-y_c). Direct cancellation gives
+
+\[
+ \mathcal D j_c-\frac{x_c}{y_c}j_c
+  =k_c=\frac{X_c\beta+2xX_c(Q_1)\beta_0}{y\,y_c},
+ \qquad
+ k_0=\frac{xF}{y_0},\quad
+ k_1=\frac{\beta}{y_1},\quad
+ k_2=\frac{F-\beta_0}{y_2}.
+ \tag{LC166}
+\]
+
+Assume the terminal nodes avoid the coordinate edges and
+the usual scalar pivots are nonzero. If Pi removes the
+three j-terminal poles, and a_c are the cancellation
+coefficients of psi, then exactly
+
+\[
+ \Pi(\mathcal D\psi)
+   =\mathcal D(\Pi\psi)+\sum_c a_ck_c .
+ \tag{LC167}
+\]
+
+Modulo constants the correction belongs to span(F,yF).
+Also the reset scalar formula is
+psi(h)=-(3/4)(x/y)(h-h(Q_1)), so the first two targets
+in (LC158) satisfy psi_0=mathcal D psi_1. These relations
+were independently audited. They concern scalar
+cancellation; no commutation with the actual Sigma_n
+or M_T has been asserted.
+
+On the earlier scalar residue space, mathcal D is
+diagonal with eigenvalues lambda_i=X_0(P_i)/X_1(P_i).
+These are pairwise distinct because X_0/X_1 is a Mobius
+coordinate on the fixed line. Generically beta has a
+nonzero residue at every earlier pole. Its residue is
+the product of a prefix component and a tail output
+factor. The prefix component is a nonzero rational
+function, as its value on an edge where that component
+is active is a nonzero binary-determinant product.
+The current time moves its pole node through an open
+part of the line. The tail factor is generically nonzero
+by (LC161). Finite intersection gives simultaneous
+nonvanishing. Therefore
+
+\[
+ \det[\operatorname{Res}(\beta),\operatorname{Res}(\mathcal D\beta),
+       \ldots,\operatorname{Res}(\mathcal D^{3n-1}\beta)]
+ =\left(\prod_i\operatorname{Res}_{P_i}\beta\right)
+       \prod_{i<j}(\lambda_j-\lambda_i)\ne0 .
+ \tag{LC168}
+\]
+
+Consequently the two-function correction in a single
+step cannot simply be iterated in a scalar space of
+uniformly bounded dimension. For any fixed actual
+response M, the sequence M(mathcal D^k beta) has minimal
+annihilating polynomial equal to the product of
+(z-lambda_i) over the nodes with M(e_i) nonzero, where
+e_i is the residue-normalized scalar basis. This follows
+by Vandermonde separation and retains the actual M.
+It does not determine how many such nodes are visible
+to M. A small actual-response recurrence would require
+additional source identities; it is neither excluded
+nor proved by the scalar calculation.
+
+The whole-row canonical commutator makes the remaining
+issue explicit without applying Sigma_n to nonambient
+pieces. Put a_T=e_1G^(-1)diag(L_T), and write
+R_T(h)=p_T(h)-h a_T, where p_T(h) is the homogeneous
+linear polynomial correction determined by the three
+edge values in (LC144). With d=x/y and
+E_T(h)=p_T(h)-h(Q_1)a_T, the exact identity is
+
+\[
+ R_T(\mathcal D h)
+   =d\bigl(R_T(h)-E_T(h)\bigr)+p_T(\mathcal D h).
+ \tag{LC169}
+\]
+
+The corrections use only the three edge values and the
+derivative at Q_1, because
+(mathcal D h)(Q_0)=0,
+(mathcal D h)(Q_2)=-(h(Q_2)-h(Q_1))/2, and
+(mathcal D h)(Q_1)=-h'(Q_1)/2 in this chart. Individual
+terms on the right need not be ambient rows; Sigma_n is
+applied only to their entire sum.
+
+Even after removing these corrections, an actual source
+identity is still needed. Normalize h(Q_1)=0 and impose
+h(Q_0)=h(Q_2)=h'(Q_1)=0. If E_old(y) is the degree-3n
+old-node product, this subspace consists exactly of
+
+\[
+ h(y)=\frac{y^2(y+1)p(y)}{E_{\rm old}(y)},
+ \qquad \deg p\le3n-4 .
+ \tag{LC170}
+\]
+
+It has dimension 3n-3, with the zero space at n=1.
+Both canonical normalizations then vanish, so
+R_T(h)=-h a_T and R_T(mathcal D h)=dR_T(h). In particular
+M_T(mathcal D h)=Sigma_n(dR_T(h)). The multiplication
+law for the actual shorter head functional on this
+explicit large subspace remains unresolved. Finite
+edge and derivative bookkeeping alone does not provide
+that law.

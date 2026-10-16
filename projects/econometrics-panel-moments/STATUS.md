@@ -221,11 +221,15 @@ row the missing-output derivative is -X_1 f. The fixed G inverse and
 baseline denominator conditions are explicit; the singular terminal
 kernel is never inverted. The residue-kernel correspondence and resulting
 conditional rank statement remain paper arguments.
-The updated aggregate checks 510 declarations in a 47-module compiled
+SourceFirstBlockCancellation adds eight checked identities for the
+actual first-block row cancellation, its arbitrary and ordered tails,
+and the divided-output formula with explicit units. It does not assert
+an admissible boundary witness or a source-rank result.
+The updated aggregate checks 518 declarations in a 48-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 47-module rebuild. The aggregate took 11.77 seconds with peak
-RSS 2,468,528,128 bytes under the serial memory cap.
+new clean 48-module rebuild. The aggregate took 3.68 seconds with peak
+RSS 2,417,672,192 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 

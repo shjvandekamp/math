@@ -10,6 +10,7 @@ import PanelMoments.SourceEndpointCoalescenceCoefficient
 import PanelMoments.SourceEndpointCoalescenceKernel
 import PanelMoments.SourceEndpointCoalescenceWitness
 import PanelMoments.SourceBinaryTerminalAlgebra
+import PanelMoments.SourceFirstBlockCancellation
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -633,3 +634,12 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceBinaryTerminalAlgebra.terminalRow_missing_hasDerivAt
 #print axioms PanelMoments.SourceBinaryTerminalAlgebra.canonicalCompleted_contraction
 #print axioms PanelMoments.SourceBinaryTerminalAlgebra.canonical_terminalRow_missing_hasDerivAt
+
+#print axioms PanelMoments.SourceFirstBlockCancellation.firstTable_rowForm
+#print axioms PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_decomposition
+#print axioms PanelMoments.SourceFirstBlockCancellation.signedForms_kernel
+#print axioms PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_kernel
+#print axioms PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_kernel_tail
+#print axioms PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_kernel_wordTail
+#print axioms PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_eq_scale
+#print axioms PanelMoments.SourceFirstBlockCancellation.startingRow_kernel_tail_divided
