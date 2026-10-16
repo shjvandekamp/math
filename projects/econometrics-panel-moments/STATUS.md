@@ -118,11 +118,16 @@ zero row sum, and the fixed-prefix append derivative. Its ten declarations
 passed focused compilation and axiom checking. `SourceLocalJetAlgebra`
 adds nine checked declarations for the exact two-branch collision
 derivative, its five-term expansion, and diagonal cancellation after
-clearing two row denominators. The updated aggregate checks 358 declarations
-in a 34-module compiled closure, using only the permitted foundational
-axioms. This is a cached aggregate check, not a new clean 34-module rebuild.
-The aggregate took 29.07 seconds with peak RSS 2,107,899,904 bytes under
-the serial memory cap.
+clearing two row denominators. The new `SourceMixedPoleJet` adds eight
+checked declarations: it relates the cleared numerator to the actual
+special jet and proves its exact first derivative at a pair of row-form
+zeros. The derivative depends on the tail value, with all tail derivatives
+canceling. The actual ordered kernel tail satisfies the differentiability
+hypothesis whenever its row denominators are nonzero at that point.
+The updated aggregate checks 366 declarations in a 35-module compiled
+closure, using only the permitted foundational axioms. This is a cached
+aggregate check, not a new clean 35-module rebuild. The aggregate took
+34.71 seconds with peak RSS 2,264,137,728 bytes under the serial memory cap.
 Residue operators, matching-coordinate removability, asymptotic orders,
 and the joint-rank induction remain paper arguments outside this module.
 
@@ -535,6 +540,24 @@ this does not prove the required defect determinant. Formula (PP25)
 records that precise remaining transport, including its local-prefix
 subtraction; see (PP21)--(PP25).
 
+For each fixed new state b, the ambient transport now has a uniform
+isomorphism theorem. The old rows whose multiplied new/old transverse
+residues vanish form a complement D_b to the old E rows. After inverse
+append, their old cross-pair residues are multiplied by explicit invertible
+two-dimensional blocks, with determinant f_b(P)^2/det(K_n(P)). Thus
+D_b maps isomorphically to the old ambient space modulo E. Polar
+subtraction gives the equivalent quotient by the cycle rows. The 3q
+transported seed rows for each fixed b stay independent modulo E.
+This is audited paper algebra, not a Lean rank theorem or a proof
+about the full 9q-column source-prefix matrix. The recovered prefix
+has one exactly zero component after changing basis by A_n^{-1}.
+The resulting tail identity and diagonal-sector coefficient law retain
+the actual source completion and the polar correction; they isolate,
+but do not settle, the remaining transversality. Polar subtraction also
+identifies D_b modulo the corrected old zero-prefix sector with the
+9q old-pole prefix coordinates; the transported zero-prefix sector may
+depend on b. See (PP26)--(PP36).
+
 The last-time coalescence alternative now has an audited inherited
 rank result. When A_n=A_q, the ambient append map has a three-dimensional
 kernel, but it meets the actual old source graph trivially. Copied-old
@@ -787,8 +810,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    (PP20) now expresses it as the 9q-square old-pole coefficient matrix
    of the actual source-graph defect after polar elimination, with no
    scalar right inverse. Compute its leading boundary term or prove
-   transversality using the actual old source graph; the five-term
-   pencil alone does not settle it. Then apply the scalar-covariate bridge.
+   transversality using the actual old source graph. The fixed-state
+   ambient transport is now an isomorphism modulo the old E rows by
+   (PP26)--(PP30), but its three state sectors still need a joint
+   source-prefix argument. Neither that isomorphism nor the five-term
+   pencil settles the determinant. Then apply the scalar-covariate bridge.
    None of these open claims is assumed by a completed theorem. Combine
    independence with the proved moment-space dimension to obtain spanning. The completed source-basis theorem remains
    T=4; neither the dimension theorem nor the index count supplies independence.

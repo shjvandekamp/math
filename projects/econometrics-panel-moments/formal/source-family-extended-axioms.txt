@@ -778,3 +778,21 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceLocalJetAlgebra.specialJet_diagonal_cleared' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceMixedPoleJet.denominator_mul_specialJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceMixedPoleJet.clearedSpecial_eq_zero_of_pair' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPoleJet.affinePoint_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceMixedPoleJet.rowForm_affine_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceMixedPoleJet.kernel_affine_differentiableAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPoleJet.homogeneousWordProduct_affine_differentiableAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPoleJet.clearedSpecial_affine_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceMixedPoleJet.clearedSpecial_word_affine_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

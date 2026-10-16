@@ -1,6 +1,7 @@
 import PanelMoments.SourceAppendIdentities
 import PanelMoments.SourceRelativeTimeJet
 import PanelMoments.SourceLocalJetAlgebra
+import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourcePolynomialKernels
 import PanelMoments.SourcePolynomialCriterion
 import PanelMoments.SourceFamily
@@ -452,3 +453,13 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceLocalJetAlgebra.specialJet_expansion
 #print axioms PanelMoments.SourceLocalJetAlgebra.specialJet_diagonal
 #print axioms PanelMoments.SourceLocalJetAlgebra.specialJet_diagonal_cleared
+
+-- Mixed-pair cleared numerator derivatives, including actual ordered kernel tails.
+#print axioms PanelMoments.SourceMixedPoleJet.denominator_mul_specialJet
+#print axioms PanelMoments.SourceMixedPoleJet.clearedSpecial_eq_zero_of_pair
+#print axioms PanelMoments.SourceMixedPoleJet.affinePoint_zero
+#print axioms PanelMoments.SourceMixedPoleJet.rowForm_affine_hasDerivAt
+#print axioms PanelMoments.SourceMixedPoleJet.kernel_affine_differentiableAt
+#print axioms PanelMoments.SourceMixedPoleJet.homogeneousWordProduct_affine_differentiableAt
+#print axioms PanelMoments.SourceMixedPoleJet.clearedSpecial_affine_hasDerivAt
+#print axioms PanelMoments.SourceMixedPoleJet.clearedSpecial_word_affine_hasDerivAt

@@ -394,5 +394,205 @@ that space for arbitrary old rows. In general R_n(f_b R*_ib) is
 not R*_ib. The explicitly nonzero seed determinant therefore does
 not establish nonvanishing of (PP25). Likewise, the polynomial
 prefix of an unmultiplied cycle row does not justify dropping its
-multiplied, transported defect. A factorization or rank-preserving
-property of this precise transport remains an open next step.
+multiplied, transported defect. A rank-preserving property of the
+ambient transport is proved below. Preservation of the source-prefix
+defect determinant remains open.
+
+## Single-pole transport on the ambient quotient
+
+The [single-pole investigation](https://chatgpt.com/c/6ad18c36-7d58-83eb-b6de-cc8aa4aeef65)
+suggested the following stronger transport statement. The proof uses the
+canonical ambient E/local-pair basis, rather than independence of the
+ordered source family. Impose the previous generic geometry, including
+that every new line avoids every old cross-block intersection.
+Write \(\mathcal E_q=\operatorname{span}\{E_{ta}\}\). Fix b, and let
+\(\beta_b(R)\) be the 3q new/old transverse pair coordinates of f_b R
+at the pairs \(h_b=L_i=0\). Multiplication by f_b takes W0_q into
+W0_n: it preserves the old matching conditions and adds the factor X_b
+at the only new matching point. It introduces only the new pole h_b.
+Put
+
+\[
+ D_b=\ker\beta_b\subset W_{0,q}.
+ \tag{PP26}
+\]
+
+On E_i, the only possibly nonzero coordinate of beta_b is its own
+old line i=(t,a). Its double residue is
+\(-X_aX_b v_i\), transverse to v_b: the two line coefficient rows
+are independent, and all coordinates at their intersection are nonzero.
+Thus beta_b restricted to E_q is diagonal and invertible. In particular
+
+\[
+ W_{0,q}=\mathcal E_q\oplus D_b,\qquad
+ \dim D_b=N_q-3q.
+ \tag{PP27}
+\]
+
+Let Omega collect the two-dimensional old cross-block double residues.
+The canonical ambient basis proves that ker(Omega)=E_q and that Omega
+identifies W0_q/E_q with the direct sum of those two-dimensional
+zero-sum row spaces. For R in D_b define
+\(Q_b(R)=R_n(f_bR)\) and \(I_b(R)=I_n(f_bR)\).
+These are defined by (PP14), since f_b R has zero transverse residue.
+At an old cross-block point P_ij, I_b has no double pole and K_n^{-1}
+is regular. Consequently (PP4) gives the exact block formula
+
+\[
+ \Omega_{ij}Q_b(R)
+   =f_b(P_{ij})\,\Omega_{ij}(R)K_n(P_{ij})^{-1}.
+ \tag{PP28}
+\]
+
+Every block is invertible. Right multiplication preserves the zero-sum
+plane because K_n 1=1; its determinant on that plane is
+1/det(K_n), since the induced action on the row-sum quotient is the
+identity. In matching domain and codomain residue bases, the block
+determinant is
+
+\[
+ \frac{f_b(P)^2}{\det K_n(P)}
+ =\frac{X_b(P)^2h_0(P)h_1(P)h_2(P)}
+ {h_b(P)^2\det(G)uvX_0(P)X_1(P)X_2(P)}\ne0.
+ \tag{PP29}
+\]
+
+Combining (PP27)--(PP29), the map
+\(D_b\to W_{0,q}/\mathcal E_q,\ R\mapsto[Q_b(R)]\)
+is an isomorphism. This is a uniform statement for the ambient transport;
+no old source-matrix inverse is used.
+
+On the common-G open where the shared-new polar theorem holds, let
+H_q be the span of the cycle rows H_sd. The restriction beta_b|H_q is
+also invertible, so W0_q=H_q direct-sum D_b. If Pi_b projects along
+H_q onto D_b, the induced map
+
+\[
+ W_{0,q}/H_q\longrightarrow W_{0,q}/\mathcal E_q,
+ \qquad [R]\longmapsto[Q_b(\Pi_bR)]
+ \tag{PP30}
+\]
+
+is an isomorphism. In particular R*_ib=Pi_b B_ib. For a fixed b,
+the 3q seeds R*_ib are independent by their distinct old-pole prefixes
+in (PP22)--(PP24). Their transported rows are therefore independent
+modulo E_q. This conclusion uses old source independence to interpret
+those prefixes. It does not identify their source-graph defects with
+an invertible image of the seed-prefix matrix.
+
+## The recovered component and the actual completion defect
+
+For R in D_b, set k=R diag(X)^{-1}, w=k A^{-1}, and
+g=E(f_b w), so I_b=g A diag(X)=sum_c g_c v_c. The b-component
+of f_b w vanishes on X_b=0. Its divided datum on every old line
+also vanishes there: after cancellation of X_a the old matching
+condition makes w's datum regular, while f_b supplies X_b and h_b
+is a unit. Therefore both the pole coefficients and constant
+coefficient of g_b vanish. Thus
+
+\[
+ g_b=0,\qquad
+ I_b=\sum_{c\ne b}g_cv_c,\qquad
+ Q_b(R)=f_bRK_n^{-1}
+       +\sum_{c\ne b}g_c(v_c-h_ce_c).
+ \tag{PP31}
+\]
+
+Each g_c is a whole element of J_q, of dimension 3q+1. The two
+components in (PP31) are not a rank-two correction over constant
+coefficients.
+
+For the next identities retain the actual copied-old convention
+I_old(E_ta)=E_ta and I_old(F_tsab)=X_a K_t(a,b)e_b. In particular
+this is not the convention that assigns X_a e_a to an old E row.
+Under old source independence define
+\(\operatorname{Tail}_q(R)=I_{\rm old}(R)-R\).
+One has W0_q intersect Prefix_q=E_q: a zero-sum prefix has each
+old-line coefficient vector proportional to the corresponding line
+coefficient vector, and its polynomial part then gives a sum of E's.
+Since I_old is the identity on E_q, this proves
+
+\[
+ \ker\operatorname{Tail}_q=\mathcal E_q,\qquad
+ \operatorname{im}\operatorname{Tail}_q
+       \cap\mathrm{Prefix}_q=\{0\}.
+ \tag{PP32}
+\]
+
+Indeed, if Tail_q(R) is a prefix, so is R; hence R belongs to E_q
+and its tail is zero. Consequently the fixed-b transported tails
+Tail_q(Q_b(R*_ib)) are independent by (PP30). This still gives no
+independence after subtraction of the following known rows.
+
+Write R*_ib=Z_i v_b-W_ib, where
+W_ib=Z_i v_b T_t+H_ib, and set Q_ib=Q_b(R*_ib), I_ib=I_b(R*_ib).
+The full normalized prefix defect in (PP25), before discarding its
+three constant coordinates, obeys
+
+\[
+ \begin{split}
+ \Delta_{ib}&=I_{\rm old}(Q_{ib})-I_{ib}-Z_iX_be_b,\\
+ \Lambda_{ib}&=(f_bW_{ib}+I_{ib})K_n^{-1},\\
+ Q_{ib}&=Z_iX_be_b+I_{ib}-\Lambda_{ib},\\
+ \Delta_{ib}&=\operatorname{Tail}_q(Q_{ib})-\Lambda_{ib}.
+ \end{split}
+ \tag{PP33}
+\]
+
+These follow from v_b K_n^{-1}=h_b e_b. The third equality also
+shows that Lambda has only old poles. Formula (PP31) gives its exact
+b-component:
+
+\[
+ (\Lambda_{ib})_b
+ =X_b\bigl(W_{ib}\operatorname{diag}(X)^{-1}A^{-1}\bigr)_b.
+ \tag{PP34}
+\]
+
+The actual cycle correction H_ib remains in this formula. If gamma_j(Q)
+and mu_j^(ib) are the three-component coefficients on Z_j in
+I_old(Q) diag(X)^{-1} and Delta_ib diag(X)^{-1}, respectively, then
+(PP31) also yields
+
+\[
+ \mu_j^{(ib)} A^{-1}e_b
+ =\gamma_j(Q_{ib})A^{-1}e_b-\delta_{ji}(A^{-1})_{bb}.
+ \tag{PP35}
+\]
+
+This isolates each diagonal b-sector of the target matrix after changing
+the output basis by A^{-1}. It does not exclude the indicated scalar
+from the spectrum of the actual coefficient map. The uniform unresolved
+step is still the nonvanishing of (PP20)/(PP25), with all three sectors
+and the old source prefix retained. The nonzero ambient block determinant
+(PP29) proves neither that target determinant nor independence of the
+equation-(24) source family for every T.
+
+There is a further exact quotient before transport. Put
+Z_q=ker(I_old). The prefix map is onto: its F images contain all
+P_tab, and E_ta+sum_b P_tab=X_a e_a supplies the polynomial rows. The
+cycle prefixes span exactly those three polynomial rows. Since Pi_b
+subtracts only cycle rows, it preserves every old-pole prefix coefficient.
+It follows that
+
+\[
+ \ker\bigl(\operatorname{ResPrefix}_{\rm old}I_{\rm old}|_{D_b}\bigr)
+   =\Pi_b Z_q,\qquad
+ D_b/(\Pi_bZ_q)\simeq\mathbb R^{9q},\qquad
+ \dim\Pi_bZ_q=N_q-12q.
+ \tag{PP36}
+\]
+
+For the nontrivial inclusion, if R in D_b has polynomial prefix, choose
+H in the cycle span with I_old(H)=I_old(R). Then R-H belongs to Z_q
+and Pi_b(R-H)=R. Conversely Pi_b applied to a zero-prefix row has
+polynomial prefix. Surjectivity follows by applying Pi_b to any old
+row with the prescribed old-pole prefix. This proves the dimension
+formula using (PP27).
+
+For one b, the seeds in (PP24) form a specified 3q-dimensional
+subspace of this 9q-dimensional quotient. The map (PP30) injects
+the entire subspace Pi_b Z_q as well. Its transported image may
+depend on b. Establishing how these three images and their seed
+complements interact with the actual source graph is a precise
+remaining route; (PP36) asserts no common invariant subspace.

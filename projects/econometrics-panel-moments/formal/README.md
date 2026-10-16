@@ -34,9 +34,16 @@ identities; independence of the coalescent source jets remains open.
 `SourceLocalJetAlgebra.lean` connects the exact two-branch kernel difference
 to its derivative and proves the special jet's five-term expansion and
 diagonal cancellation. Its fixed tail remains arbitrary; no residue or
-rank claim is included. The current source-family aggregate checks 358
-declarations in a compiled 34-module closure; this latest aggregate
-reused cached dependencies.
+rank claim is included. `SourceMixedPoleJet.lean` proves the actual
+denominator-cleared numerator identity and its first derivative at a pair
+of row-form zeros. The derivative allows an entrywise differentiable tail;
+the actual ordered-kernel-product corollary proves this hypothesis from
+nonzero row denominators in the tail. This does not assert a residue
+asymptotic, nonvanishing, or rank result. The current source-family
+aggregate checks 366 declarations in a compiled 35-module closure. The
+latest check compiled the aggregate against cached module outputs; it was
+not a clean rebuild. Its axiom output is saved in
+`source-family-extended-axioms.txt`.
 
 ## Model foundations
 
