@@ -16,9 +16,35 @@ No journal submission or source-author contact has been made.
 
 ## Active continuation: equation (24) for T >= 5
 
+The user set a research cutoff at 15:10 Europe/Amsterdam on 16 October
+2026 (13:10 UTC). At that time, stop starting Pro rounds and let active
+chats finish. A single extension of at most one hour is authorized only
+if concrete checked evidence puts a breakthrough close; its hard end
+is 16:10 Amsterdam (14:10 UTC). Then consolidate the established Lean
+proofs, publish the confirmed results and remaining research agenda,
+summarize explored approaches, and stop. Pause the still-unfinished
+research goal at that final handoff rather than claiming it complete.
+
 The continuation is **in progress**. The accepted results below are unchanged;
 independence of the particular equation-(24) family for every T is not yet
 proved or Lean checked.
+
+**Latest progress:** generic full paired boundary independence is now
+proved for every length at paper-proof level. The invariant-tail argument
+in [SOURCE24_INVARIANT_TAIL.md](research/SOURCE24_INVARIANT_TAIL.md)
+identifies the accumulated weak image with the functions vanishing at
+zero, infinity, and a fixed nonzero point. Two independent local audits
+checked the induction and specialization bridge. A separate exact
+verifier passed 252 rational identities, including the genuine
+nonzero-h actual base and retained heads; its three nonzero modular
+determinants initialize the uniform argument. This is stronger than
+finite-rank evidence, but the new theorem is not yet formalized end to end.
+The remaining full-source condition is the retained-old Schur determinant
+in (LC213), not paired transversality.
+
+The following paragraphs record the earlier research stages. Their open
+paired-determinant statements are superseded by the invariant-tail result;
+the full-source and formalization gaps remain.
 
 The latest audited paper result proves paired boundary rank at least
 6q-3 per state sector, or 18q-9 across all three sectors, for every

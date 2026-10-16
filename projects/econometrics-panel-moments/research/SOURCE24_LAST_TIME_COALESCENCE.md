@@ -1,7 +1,12 @@
 # Appending a copy of the last old time
 
-**Status: audited paper identities and a partial boundary rank result.
-No all-length independence theorem.**
+**Latest status, 16 October 2026:** the invariant-tail argument at the
+end of this note proves generic full paired boundary rank at every
+length, with an independently reproduced exact finite initialization.
+This is an audited paper result, not an end-to-end Lean theorem.
+Full equation-(24) source independence remains open because the
+retained-old Schur block is not controlled. Earlier open paired
+questions below record the historical route to this result.
 
 Use the actual local E/F source list and prefix map from
 [SOURCE24_PREFIX_PENCIL.md](SOURCE24_PREFIX_PENCIL.md). There are q old
@@ -5792,3 +5797,83 @@ subtraction still matters for the prefix-product and divided-difference
 terms. The cubic quotient does not supply their projection automatically,
 and it is a vector-space quotient, not closure of the actual image
 under multiplication by \(r\). Uniform nonvanishing is still open.
+
+## Explicit cubic transport and a scalar coefficient target
+
+Equations (NH66)--(NH70) give an audited local formula transporting
+cubic representatives modulo the high cubic line. The construction
+first removes the new-point evaluation by the old high line and then
+cancels two outer Laurent coefficients with actual new columns.
+Its result has degree at most three. It retains the old-pole forcing
+from the prefix-product functions; it does not assume multiplication
+acts on the quotient.
+
+A separate audited coefficient reduction is
+\[
+ \det\pi_m(c_0,c_1,c_2)
+   =\frac{b_{\rm new}^3}{27A^2}\mathfrak J_m+O(A^{-1}),
+ \quad
+ \mathfrak J_m=\det\pi_m\left(
+ J(p/r),Jp,(1-2a_1z)P-\frac z2P/r+3z(1-a_1z)JP\right).
+ \tag{LC210}
+\]
+Here \(A\) is the new time ratio tending algebraically to zero.
+The quotient is fixed by the old actual image. After clearing its
+three displayed quadratic denominators and \(27A^2\), the determinant
+has degree at most ten in \(A\) and three in the new weak weight.
+This remains an unproved alternative sufficient coefficient target.
+
+## The invariant tail closes the paired determinant
+
+[SOURCE24_INVARIANT_TAIL.md](SOURCE24_INVARIANT_TAIL.md) gives the
+complete audited paper argument. Along
+\(b_t=\tau a_t/(1+za_t)\), put
+\[
+ E_m=\{c\in\mathcal F_m:c(0)=c(\infty)=c(z)=0\}.
+ \qquad
+ E_{m+1}=\mathcal N_{m+1}\oplus T_{m+1}^{\rm full}E_m.
+ \tag{LC211}
+\]
+This deliberately uses \(\Delta(z)=0\). The singular generic ambient
+inverse is replaced by an explicit one-dimensional kernel calculation:
+the only endpoint-zero old function whose transfer lies in the new
+layer is a multiple of
+\((b_{m+1}-b_m)(1-Ar)D_m\bar\beta/(4b_{m+1}r)\).
+It is nonzero at \(z\), so it misses \(E_m\). The reset gauge
+evaluation determinant is
+\[
+ \det\operatorname{ev}_{0,\infty,z}(1,W_0,W_1)
+ =\frac{\tau^2z(A-a_m)^2}
+ {12(1+zA)^2(1+za_m)^2}>0.
+ \tag{LC212}
+\]
+
+Three initialization steps kill the zero endpoint, infinity endpoint,
+and value at \(z\), respectively. At the prescribed positive rational
+parameters (IT10), an independently written exact verifier checks all
+252 actual-source identities and the square coefficient determinants
+of sizes 10, 13, and 16. Modulo \(1000003\) they are respectively
+162385, 696500, and 789105; every rational denominator is a unit.
+The thirteen five-block weak functions therefore equal \(E_5\).
+The uniform identity (LC211), rather than finite extrapolation, proves
+the same equality for every later length.
+
+The forward formulas are regular on this specialized sequence and
+agree with the actual source construction over the generic parameter
+field. Their nonzero specialized determinants prove rational
+nonidentity, even where a chosen generic inverse is undefined.
+Intersecting with the generic realization conditions yields positive
+parameters with full paired rank \(6m\) per state sector at each fixed
+length. The symbolic two-block base and the separate three- and
+four-block certificates cover the earlier lengths.
+
+Consequently the incoming block \(C_B\) in (LC113) is generically
+invertible. The remaining full-source problem is now precisely
+\[
+ \boxed{\det(D_q+Z_T-Z_BC_B^{-1}C_T)\ne0.}
+ \tag{LC213}
+\]
+Its corrections include the actual insertion error and polynomial
+heads. Full paired rank does not remove them. This determinant,
+the full equation-(24) theorem, and the end-to-end Lean proof of
+the new paired argument remain unfinished.

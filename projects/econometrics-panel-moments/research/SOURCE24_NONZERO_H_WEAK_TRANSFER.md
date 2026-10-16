@@ -6,7 +6,15 @@ directions originating at lengths \(3,\ldots,m\). The endpoint extension
 below includes all four old weak directions from the checked two-block
 base. Their accumulated function rank is \(3m-2\); the justified weak
 residue rank is at least \(3m-3\), because constant functions are invisible
-to those residues. The full paired determinant and Eq. (24) remain open.
+to those residues. The paired determinant was subsequently settled at
+paper-proof level by the independently audited invariant-tail argument
+and exact initialization in
+[SOURCE24_INVARIANT_TAIL.md](SOURCE24_INVARIANT_TAIL.md).
+The statements below that call paired transversality open describe the
+earlier stages of this investigation. The cubic and coefficient routes
+remain useful alternatives, but are no longer needed to prove paired
+nonvanishing. Full Eq. (24) and the end-to-end Lean formalization of
+this new paired theorem remain unfinished.
 
 The actual binary lifting theorem is
 (SL28)--(SL35) of
@@ -1355,3 +1363,141 @@ actual lower-jet response from the terms involving \(p,Jp,JP\).
 The fixed cubic model alone does not prove the three projected
 columns independent. That projection and the resulting determinant
 nonvanishing remain open.
+
+## Explicit transport of the cubic representatives
+
+The cubic model also gives a local formula for the induced quotient
+isomorphism. Let \(m\ge3\), \(k=m+1\), \(a=a_1\), \(A=a_k\), and put
+\[
+ L=L_1r+L_0=(b_k-b_m)r+b_k/A-b_m/a_m,\quad
+ F=ar^2+(2az-2)r-z,\quad H=(r-z)(2-Ar)(1-2Ar).
+ \tag{NH66}
+\]
+For an old cubic \(R\), first impose the actual new-point constraint:
+\[
+ \bar R=R-\frac{R(1/A)}{C_m(1/A)}C_m=(1-Ar)S,\qquad
+ S=s_0+s_1r+s_2r^2.
+ \tag{NH67}
+\]
+This is legitimate when \(C_m(1/A)\ne0\). The representative
+\(c=P_m\bar R/r\) has zero endpoints and \(c(1/A)=0\), so all three
+corrections in the actual full transfer vanish. Directly,
+\[
+ \frac{\mathscr T^{\rm full}_{k,h}c}{P_k}
+       =-\frac{4b_k}{9A}\frac{HS}{r^2}.
+\]
+The normalized first two new columns are
+\[
+ n_0=-\frac{2LF(1-2Ar)}{27Ar^2},\qquad
+ n_1=\frac{LF(2-Ar)}{27Ar}.
+ \tag{NH68}
+\]
+Their exclusive outer coefficients are
+\([r^{-2}]n_0=2zL_0/(27A)\) and
+\([r^3]n_1=-aL_1/27\). Subtracting
+\(12b_ks_0/L_0\) times \(n_0\) and
+\(24b_kAs_2/(aL_1)\) times \(n_1\), then multiplying by \(r\),
+gives the new cubic representative
+\[
+ \boxed{\frac{4b_k}{9A}
+ \left\{
+ \frac{-HS+2s_0(L/L_0)F(1-2Ar)}r
+ -\frac{2As_2}{aL_1}LF(2-Ar)
+ \right\}.}
+ \tag{NH69}
+\]
+The numerator in the first term vanishes at zero; its degree-four
+coefficient cancels the second term's. Thus (NH69) has degree at most
+three. It represents the actual transferred class modulo \(C_k\),
+with the stated generic units \(z,L_0,L_1,C_m(1/A)\) and previous
+denominators nonzero. This formula and its normalization were
+independently audited.
+
+This does not make multiplication by an arbitrary rational function
+an operation on the quotient. For example, with \(J=J_z\),
+\(q=-Ar/(2-Ar)\), \(d=d_k\), and \(p_k=q+dp_m\), the exact
+prefix response still contains
+\[
+ Jp_k-\mathscr T^{\rm full}_{k,h}(Jp_m)
+ =(d-\chi)Jp_m+p_m(z)Jd+Jq
+ +\Delta D_mdQ_{k,h}\frac{(Jp_m)(1/A)}{D_m(1/A)}
+ +\Lambda_0\frac{p_m(z)}zW_0 .
+ \tag{NH70}
+\]
+Here \((Jp_m)(0)=p_m(z)/z\) and \((Jp_m)(\infty)=0\).
+In particular the old-pole terms cannot be omitted as a local
+new-node correction.
+
+## A boundary coefficient of the affine pencil
+
+There is a sharper scalar sufficient target for the affine determinant
+in (NH40). Keep the old parameters fixed, put \(b=b_k\), and let the
+new \(A=a_k\) approach zero algebraically. Write \(p=p_m\), \(D=D_m\),
+\(P=D/(1-ar)\), \(J=J_z\), and define
+\[
+ \Psi=\frac{(1-2az)r+z}{1-ar},\qquad
+ u=J(p/r),\quad v=Jp,\quad
+ w=J\!\left[D(1+z/(2r))\Psi\right].
+ \tag{NH71}
+\]
+All three functions belong to the old restricted ambient space.
+The apparent pole at zero is removable. Their useful exact forms are
+\[
+ u=\frac{Jp-p/r}{z},\qquad
+ w=(1-2az)P-\frac z2P/r+3z(1-az)JP .
+ \tag{NH72}
+\]
+Let \(\pi_m\) be any fixed coordinate map for the actual quotient
+\(\mathcal F_m^{(1)}/\mathcal A_m\), depending only on old parameters,
+and put
+\[
+ \mathfrak J_m=\det[\pi_m(u),\pi_m(v),\pi_m(w)].
+ \tag{NH73}
+\]
+For the ordered preimage frame \(c_0,c_1,c_2\) of (NH40),
+\[
+ \det[\pi_m(c_0),\pi_m(c_1),\pi_m(c_2)]
+ =\frac{b^3}{27A^2}\mathfrak J_m+O(A^{-1}).
+ \tag{NH74}
+\]
+This leading coefficient and the following degree bound have been
+independently audited. To see the coefficient, use
+\(R_x=(Q_{1,h}(r)/Q_{1,h}(x)-r/x)/(1-r/x)\). For fixed
+\(c\in\{2,1/2,1\}\),
+\(R_{c/A}=(A/c)\Psi+O(A^2)\). The three pre-divided-difference
+columns in (NH40) then have leading terms
+\[
+ g_0=\frac{bp}{3Ar}+O(1),\quad
+ g_1=-\frac{bp}{3A}+O(1),\quad
+ g_2=-\frac b3D(1+z/(2r))\Psi+O(A).
+\]
+Applying \(c_i=(1-Ar)Jg_i\) gives signs \(+,-,-\), and hence
+the positive coefficient in (NH74).
+
+Set \(P_c(A)=ac^2+(2az-2)cA-zA^2\). There is a polynomial
+\(\mathcal R_m(A,b)\), with coefficients in the old parameter field,
+such that the same determinant equals
+\[
+ \frac{\mathcal R_m(A,b)}
+ {27A^2P_2(A)P_{1/2}(A)P_1(A)},\qquad
+ \deg_A\mathcal R_m\le10,\quad\deg_b\mathcal R_m\le3,\quad
+ \mathcal R_m(0,b)=a^3b^3\mathfrak J_m .
+ \tag{NH75}
+\]
+For denominator clearing, replace \(c_2\) by \(c_2-zc_0-c_1\).
+Its pre-\(J\) expression is exactly
+\((r-z)\{\Delta[p+DR_{1/A}]-(b-b_m)/3\}\).
+The three columns then have only the respective denominators
+\(3AP_2,3AP_{1/2},3AP_1\). Equation (NH74) cancels the
+otherwise possible \(A^{-3}\) term. At \(A=\infty\),
+\(R_{c/A}\to1\), the first two columns are \(O(A)\), and the
+original third column is \(O(1)\). The determinant is therefore
+\(O(A^2)\); its clearing denominator has degree eight, giving the
+degree-ten bound. Affinity of every column in \(b\) gives degree
+at most three in \(b\).
+
+Nonvanishing of \(\mathfrak J_m\) at every length would suffice for
+this route. It has not been proved here. The coefficient reduction
+does not require the boundary \(A=0\) to be an admissible economic
+parameter: a nonzero rational coefficient would prove nonidentity
+before returning to the positive generic region.
