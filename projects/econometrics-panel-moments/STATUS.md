@@ -137,11 +137,16 @@ jet coefficients. The exact common denominator and polynomial injectivity
 transfer relations on positive coordinates to those pair observations.
 The local geometric conditions remain explicit; no old-source rank
 premise is used and their generic existence is not formalized here.
-The updated aggregate checks 391 declarations in a 37-module compiled
+`SourceScalarPrependAlgebra` adds fourteen checked declarations for the
+actual preserving prepend at Gtilde=I+11^T: row forms, X K(0)=4X,
+the explicit first derivative with HasDerivAt, and the two numerical
+principal-part matrices' determinants and scaling consequences. It does
+not yet prove the principal-part extraction or the independence induction.
+The updated aggregate checks 405 declarations in a 38-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 37-module rebuild. The aggregate took 40.29 seconds with peak
-RSS 1,757,904,896 bytes under the serial memory cap.
+new clean 38-module rebuild. The aggregate took 34.49 seconds with peak
+RSS 1,995,030,528 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 
@@ -688,6 +693,34 @@ recover the nine endpoint margins for arbitrary source combinations;
 the exact higher-jet recursion retains new terminal coefficient
 aggregates, so it has not yet supplied that missing source constraint.
 See (LC45)--(LC46).
+The augmented coordinate theorem further shows that actual copied-old
+columns already span all 9q-6 longitudinal double-pole coordinates,
+so that layer alone cannot detect new directions modulo C. The normalized
+transverse target also contains the special local jets and retains its
+9q-dimensional ceiling; the apparent same-block poles cancel in its
+normalization. See (LC51)--(LC52).
+The weighted prepend extension now attains that entire ceiling. A
+three-quadratic auxiliary base and three new axis poles per prepend prove
+that all 9(q-1) incoming columns together with the nine individual
+first-earlier-time shared columns have transverse observation rank 9q,
+for every fixed real direction with distinct rates. This audited paper
+theorem needs no finite base certificate. The resulting conditional total
+rank is N_q+9q+3. Projection along those actual 9q columns leaves exactly
+9q projected W/S/remaining-shared columns modulo C and the three E jets.
+Their independence is equivalent to full first-jet rank, and would suffice
+for the source induction. It is not proved. See (SP16)--(SP22) and
+(LC53)--(LC54). The remaining generic rank gap is exactly 9q.
+The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
+now proves that local E sources span every fixed-order divided vertex-jet
+target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently
+keep those jets and all three diagonal totals fixed while changing the
+six endpoint-prefix observations arbitrarily. A terminal-pole identity
+eliminates bulk and E coefficients and reduces each boundary sector to
+3(q-1) polynomial coordinates. However, exact augmented-minor certificates
+show that neither its last-pair diagonal margin nor its total-boundary
+diagonal margin is generically recoverable at q=4,5,6. These obstructions
+apply to arbitrary actual coefficient combinations, not to the special
+six recovered rows. Their remaining global constraints still matter.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -872,9 +905,12 @@ silently assumed by either proved theorem, and no result below is claimed.
    source-prefix argument. Neither that isomorphism nor the five-term
    pencil settles the determinant. In the collision route, formalize
    the scalar prepend proof and its exact coordinate base. The full
-   incoming observation theorem and three actual shared sums now give
-   the conditional lower bound N_q+9q-3; prove the remaining corrected shared/incoming transversality
-   and the six leading survivors, keeping the nuisance quotient.
+   transverse theorem now uses all incoming columns and nine individual
+   shared columns to give the conditional lower bound N_q+9q+3. Prove
+   independence of the exact 9q projected W/S/remaining-shared classes
+   modulo C and the three E jets in (LC54), keeping every parameter-only
+   projection correction. This combines the leading and remaining jet
+   questions without assuming the six leading survivors independent.
    Then apply the scalar-covariate bridge.
    None of these open claims is assumed by a completed theorem. Combine
    independence with the proved moment-space dimension to obtain spanning. The completed source-basis theorem remains

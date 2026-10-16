@@ -58,8 +58,17 @@ The local geometric conditions remain explicit: neither their generic
 existence nor old-source independence is assumed or proved. Full equation (24)
 independence remains open in this formalization.
 
-The current source-family aggregate checks 391 declarations in a compiled
-37-module closure. The latest check compiled the aggregate against cached
+`SourceScalarPrependAlgebra.lean` treats the fixed common matrix
+`G̃ = I + 11ᵀ` and the actual time curve `(u,v) = (1+ε,1+2ε)`.
+On `∑ X_a = 0`, with nonzero coordinates, it proves the row forms,
+`X K(0) = 4X`, and the explicit first derivative with `HasDerivAt`.
+It also proves the SP6 and SP14 numerical determinants `1` and `−1/4`,
+including their diagonal scaling consequences under explicit nonzero
+endpoint factors. This module does not prove residue extraction,
+generic existence, or an independence theorem.
+
+The current source-family aggregate checks 405 declarations in a compiled
+38-module closure. The latest check compiled the aggregate against cached
 module outputs; it was not a clean rebuild. Its axiom output is saved in
 `source-family-extended-axioms.txt`.
 

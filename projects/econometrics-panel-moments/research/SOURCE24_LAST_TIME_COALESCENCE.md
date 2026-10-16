@@ -1226,8 +1226,125 @@ with t,s among the m earlier blocks are homogeneous degree-two
 rational functions on L_qc with only the 3m earlier simple poles.
 Clearing their common product gives binary forms of degree 3m+2,
 an ambient space of dimension 3m+3. Thus their stacked transverse
-observation rank is at most 9m+9. This scope excludes the special
-S columns at s=q, which can retain other q-line poles. The ceiling
-shows why a complementary observation is needed to distinguish all
+observation rank is at most 9m+9. The same bound also holds after
+adding the special S columns: as checked below, the L_d normalization
+cancels their apparent other-q-line poles. The ceiling shows why a
+complementary observation is needed to distinguish all
 18m regular incoming/shared columns for large m. Neither (LC50)
 nor this dimension count proves the remaining source transversality.
+
+## What the longitudinal layer already contains
+
+The augmented coordinate theorem also determines the longitudinal
+double-pole map on the actual copied-old span C. For t<=m,
+
+\[
+ C(F_{t,q,a,c})=p_{tac}e_c(I-K_qT_tK_q),
+\]
+\[
+ [L_{qc}^2 C(F_{t,q,a,c})]_{L_{qc}=0}
+ =-X_c^2v_c\left[
+ A_t(a,c)\frac{X_a}{L_{ta}}\frac{(v_cT_t)_c}{X_c}\right].
+ \tag{LC51}
+\]
+
+There is no squared pole on any other q-line. The actual three-column
+sum sum_b C(F_(q,1,c,b)) has squared coefficient
+-X_c^2 v_c (v_cQ)_c/X_c on that same line and none on the other
+two. The final old kernel cancels the displayed X_c division.
+These are exactly the augmented 3m+1 coordinate-c scalar functions
+of the prepend theorem, up to nonzero parameter column factors.
+
+The scalar coefficients are degree-zero rational functions with only
+the 3m earlier simple poles and are regular at the own matching point.
+This target has dimension 3m+1. The augmented theorem therefore proves
+that C maps onto it. The three sectors have disjoint squared-pole
+support, so the full longitudinal map on C has rank 3(3m+1)=9q-6,
+without assuming old-source independence. In this stated coefficient
+space, every longitudinal-only observation annihilating C is zero.
+This does not assert that uncorrected jets with additional matching
+or pair singularities already belong to this space. It shows that a
+useful additional layer must couple longitudinal data to simple poles,
+prefixes, or other actual source-graph information.
+
+For precision, the normalized transverse ceiling also includes the
+special local jets. For a different from b, use d=b on L_qa and d=a
+on L_qb. Their exact observations are
+
+\[
+ \frac{O_a(S_{ab})}{X_a}
+ =A_q(a,b)\ell_a
+       [X_bv_bQ\operatorname{diag}(X)^{-1}A_q^{-1}e_b
+                       -L_b(A_q^{-1})_{bb}],
+\]
+\[
+ \frac{O_b(S_{ab})}{X_b}
+ =-A_q(a,b)X_a\ell_b
+                 v_bQ\operatorname{diag}(X)^{-1}A_q^{-1}e_a.
+ \tag{LC52}
+\]
+
+The other state gives zero. The apparent pair pole in the unnormalized
+squared coefficient is canceled by L_d. Any alternative transverse
+choice gives the negative of this normalized observation by zero sum.
+The final Q kernel cancels coordinate divisions. The diagonal S
+formula and diagonal W formula likewise have degree two and only old
+simple poles; C, off-diagonal W and Z are killed. Thus the entire
+observed family O(B,J,U,V), divided by X_c in each sector, lies in the
+same 9m+9-dimensional target. This corrects the earlier restriction of
+that ceiling to regular U,V: the apparent extra q-line poles occur
+before normalization, not in O itself. The rank bounds above are
+unchanged by this scope correction.
+
+## Full transverse rank and the exact remaining nine-q-column problem
+
+The weighted prepend proof (SP16)--(SP22) now fills the whole transverse
+target for every fixed real direction with three distinct rates. Use
+the actual columns
+
+\[
+ \mathcal H=(V_{t,a,c}:t\le m,a,c)\ \cup\
+              (U_{1,c,b}:c,b).
+ \tag{LC53}
+\]
+
+There are 9m+9=9q such columns. After the common X_c row divisions
+and polynomial clearing on each terminal line, O is a fixed
+9q-dimensional binary coefficient target. O H is invertible on a
+nonempty generic positive common-G/time open. This assertion uses
+the actual individual shared columns, not independent surrogate
+tails, and was independently audited.
+
+Define the parameter-only projection
+Pi_H(Y)=Y-H(OH)^(-1)O(Y). It kills the observed part and fixes both
+C and the three E-difference jets Z, since OC=OZ=0. Under the
+shorter-source independence premise, C has rank N_q and Z is
+independent modulo C by the existing local matching proof. Therefore
+the full leading-plus-first-jet list satisfies the exact identity
+
+\[
+ \operatorname{rank}[B,D']
+ =9q+\operatorname{rank}
+   [C,Z,\Pi_{\mathcal H}W,\Pi_{\mathcal H}S,
+                       \Pi_{\mathcal H}U_{s\ge2}],
+\]
+\[
+ \operatorname{rank}[B,D']\ge N_q+9q+3.
+ \tag{LC54}
+\]
+
+The remaining projected columns number 9+9+9(m-1)=9q. Thus full
+rank of this first-jet list is equivalent to their independence
+modulo span(C,Z). This criterion does not assume the six leading
+off-diagonal W columns independent, require a new ambient-membership
+lemma, or ignore any correction: every projected row retains its
+explicit H(OH)^(-1)O term. It combines the leading and jet gaps in
+one 9q-column problem.
+
+The lower bound gives N_q+39 at q=4 and N_q+48 at q=5. The gap to
+N_(q+1)=N_q+18q+3 is exactly 9q. Nonvanishing of the remaining
+quotient determinant would supply the full first-jet induction step
+and hence actual source independence near the collision. It is not
+proved. The equivalence here is for full first-jet rank; actual source
+independence might also hold through higher jets if this first-jet
+test were deficient.

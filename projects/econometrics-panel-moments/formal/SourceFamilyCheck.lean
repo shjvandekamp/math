@@ -1,5 +1,6 @@
 import PanelMoments.SourceAppendIdentities
 import PanelMoments.SourceRelativeTimeJet
+import PanelMoments.SourceScalarPrependAlgebra
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -494,3 +495,19 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceMixedPairSeparation.jetNumerator_eval_coalesced
 #print axioms PanelMoments.SourceMixedPairSeparation.six_coefficients_eq_zero_of_relation
 #print axioms PanelMoments.SourceMixedPairSeparation.six_specialJets_separate_from_reduced
+
+-- Actual preserving-prepend identities and the two fixed numerical matrices.
+#print axioms PanelMoments.SourceScalarPrependAlgebra.prependTable_entry
+#print axioms PanelMoments.SourceScalarPrependAlgebra.preserving_rowForm
+#print axioms PanelMoments.SourceScalarPrependAlgebra.preserving_rowFormJet
+#print axioms PanelMoments.SourceScalarPrependAlgebra.prepend_rowForm
+#print axioms PanelMoments.SourceScalarPrependAlgebra.prepend_kernel_zero
+#print axioms PanelMoments.SourceScalarPrependAlgebra.prepend_preserves_row
+#print axioms PanelMoments.SourceScalarPrependAlgebra.prepend_kernelJet_row
+#print axioms PanelMoments.SourceScalarPrependAlgebra.prepend_row_hasDerivAt
+#print axioms PanelMoments.SourceScalarPrependAlgebra.firstObservationMatrix_det
+#print axioms PanelMoments.SourceScalarPrependAlgebra.symmetricObservationMatrix_det
+#print axioms PanelMoments.SourceScalarPrependAlgebra.firstObservation_scaled_det
+#print axioms PanelMoments.SourceScalarPrependAlgebra.symmetricObservation_scaled_det
+#print axioms PanelMoments.SourceScalarPrependAlgebra.firstObservation_scaled_det_ne_zero
+#print axioms PanelMoments.SourceScalarPrependAlgebra.symmetricObservation_scaled_det_ne_zero

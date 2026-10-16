@@ -332,3 +332,126 @@ Two independent local reviewers checked the polynomial base, the
 principal-part determinant, the exceptional directions, and the
 intersection of the three sector opens. These are audited paper
 theorems, not yet arbitrary-length Lean independence theorems.
+
+## Three individual shared columns fill the transverse target
+
+The preceding argument extends to the three individual shared columns,
+not only their sum. This yields the full 3m+3-dimensional observation
+space in each sector. The proof below is independently audited and
+uses a three-quadratic auxiliary base, with no finite base certificate.
+
+Replace the fixed common matrix by the positive family
+
+\[
+ \widetilde G_r=\operatorname{diag}(r_0,r_1,r_2)+\mathbf1\mathbf1^T,
+ \quad r_a>0,\quad w_a=1/r_a,\quad S=1+\sum_a w_a.
+ \tag{SP16}
+\]
+
+Normalize its first column by row scaling and, for terminal state zero,
+choose terminal factors (r_0+1,r_0+1). The actual terminal row is
+(1,1,1), so v=X on sum X_a=0. Let A be this terminal table, B=A^(-1),
+H=A diag(0,tau,nu) A^(-1), h=H_01, k=H_02. Write L=L_q,
+eta=dot L_0=hL_1+kL_2 on the line, and
+l=hL_1 e_0+eta e_1. Define the scalar functions
+
+\[
+ f_{ta}=\frac{X_a}{L_{ta}}XT_t l,\qquad
+ g_b=X_b(e_bQ_m l)-\eta L_1 B_{b1},\qquad
+ \beta_m=XQ_m l=\sum_b g_b.
+ \tag{SP17}
+\]
+
+Earlier forms are computed with Gtilde_r; normalization only rescales
+the deletion columns. For m>=1 these f columns are the actual incoming
+observations after their nonzero transition factors and common X_0
+factor are removed. The three g columns are exactly the observations
+of the three individual actual U_(1,0,b), divided by X_0, since the
+terminal row entries are one. P_1=Q_m is the actual increasing word.
+
+At m=0, Q_0=I. The three g columns are auxiliary quadratics, not
+additional source columns at a zero-length horizon. On L_0=0 they are
+
+\[
+ g_0=\kappa L_1L_2,\qquad
+ g_1=B_{12}(hL_1+kL_2)L_2,\qquad
+ g_2=-B_{21}(hL_1+kL_2)L_1,
+\]
+\[
+ \kappa=hB_{02}-kB_{01}=\frac{\nu-\tau}{\det A}.
+ \tag{SP18}
+\]
+
+In the basis (L_1^2,L_1L_2,L_2^2), their determinant is
+-kappa B_12 B_21 h k. It is generically nonzero for every fixed
+distinct-rate direction. More explicitly,
+
+\[
+ h=\frac{w_1[\tau(1+w_0)+(\tau-\nu)w_2]}{(r_0+1)S},\qquad
+ k=\frac{w_2[\nu(1+w_0)+(\nu-\tau)w_1]}{(r_0+1)S},
+ \quad B_{12}=B_{21}=-\frac{w_1w_2}{(r_0+1)S}.
+ \tag{SP19}
+\]
+
+For example, sufficiently large positive r_a make h and k nonzero,
+because tau and nu are nonzero. Also nu-tau is nonzero. At the three
+axis representatives from (SP6),
+
+\[
+ (\beta_0(P_0),\beta_0(P_1),\beta_0(P_2))
+       =(\tau-\nu,-r_0h,r_0k).
+ \tag{SP20}
+\]
+
+These endpoint values propagate through each earlier kernel by its
+active binary determinant, as in the proof of (SP14).
+
+Prepend an earlier time with factors (1+epsilon,1+2epsilon). Put
+D=diag(0,1,2) and ell=X_1+2X_2; this artificial direction is again
+independent of the prescribed terminal perturbation. At epsilon=0,
+
+\[
+ K^\circ=I+\begin{pmatrix}w_0/X_0\\w_1/X_1\\w_2/X_2\end{pmatrix}X,
+ \qquad XK^\circ=SX.
+ \tag{SP21}
+\]
+
+The inherited f columns tend to S f. The new g vector tends to
+g+w beta, so its change-of-basis matrix is I+w 1^T, with determinant
+S. Retain those three columns. Scale each new deletion column by r_a,
+calling the result C_a; then C_a(0)=beta_m. The new full-product scalar
+beta_new=sum_b g_(b,new) tends to S beta_m. Thus all three
+C_a-beta_new/S vanish at epsilon=0.
+
+For completeness, the actual derivative identity is
+X dot K=(S-1)XD-(sum_a w_a D_aa)X-ell w^T
+-ell(sum_a w_a^2/X_a)X. Its first three terms are regular at the
+axis points after multiplication by the old polynomial observation.
+Dividing the three vanishing column combinations by epsilon and taking
+the principal parts [X_i F/ell] at P_i gives
+
+\[
+ \operatorname{diag}(-w_i\beta_m(P_i))
+                   (I-w\mathbf1^T/S),\qquad
+ \det(I-w\mathbf1^T/S)=1/S.
+ \tag{SP22}
+\]
+
+All inherited limiting columns are regular at these points. The endpoint
+values and ell(P_i) are nonzero, so (SP22) supplies three independent
+new directions modulo the inherited span. Its pole-free part is handled
+by the induction hypothesis and the invertible inherited change above.
+Starting from (SP18) proves independence of all 3m f columns and all
+three g columns for every m>=1. At each step the old nonzero-minor,
+endpoint and row-form conditions intersect in the same positive-time
+domain for the fixed selected Gtilde_r. Small positive epsilon then
+provides the next witness.
+
+Permuting states and intersecting their nonzero-minor opens proves the
+simultaneous statement in the unrestricted common-G parameter family:
+for every fixed real direction with three distinct rates, the actual
+9m incoming columns and the nine individual shared columns with s=1
+have normalized transverse observation rank 9m+9. The binary degree
+bound in (LC52) shows that this is the full target. The resulting
+conditional source-rank bound and exact remaining 9q-column problem
+are stated in (LC53)--(LC54). Full source independence is still open.
