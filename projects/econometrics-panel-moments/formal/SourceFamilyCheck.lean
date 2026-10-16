@@ -1,6 +1,7 @@
 import PanelMoments.SourceAppendIdentities
 import PanelMoments.SourceRelativeTimeJet
 import PanelMoments.SourceScalarPrependAlgebra
+import PanelMoments.SourceWeightedPrependAlgebra
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -511,3 +512,20 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceScalarPrependAlgebra.symmetricObservation_scaled_det
 #print axioms PanelMoments.SourceScalarPrependAlgebra.firstObservation_scaled_det_ne_zero
 #print axioms PanelMoments.SourceScalarPrependAlgebra.symmetricObservation_scaled_det_ne_zero
+
+-- Actual weighted-prepend identities and finite coefficient determinants.
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weightedPrependTable_entry
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weighted_rowForm
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weighted_rowFormJet
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weighted_prepend_rowForm
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weighted_prepend_kernel_zero
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weighted_prepend_preserves_row
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weighted_kernelJet_entry
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weighted_prepend_kernelJet_row
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weighted_prepend_row_hasDerivAt
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weightedObservationMatrix_det
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weightedCorrectionMatrix_det
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weightedObservationMatrix_det_ne_zero
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.weightedCorrectionMatrix_det_ne_zero
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.quadraticCoefficientMatrix_det
+#print axioms PanelMoments.SourceWeightedPrependAlgebra.quadraticCoefficientMatrix_det_ne_zero

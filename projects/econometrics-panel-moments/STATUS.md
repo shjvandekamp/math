@@ -142,11 +142,17 @@ actual preserving prepend at Gtilde=I+11^T: row forms, X K(0)=4X,
 the explicit first derivative with HasDerivAt, and the two numerical
 principal-part matrices' determinants and scaling consequences. It does
 not yet prove the principal-part extraction or the independence induction.
-The updated aggregate checks 405 declarations in a 38-module compiled
+`SourceWeightedPrependAlgebra` adds fifteen checked declarations for the
+actual weighted prepend at Gtilde=diag(r)+11^T: row forms, X K(0)=S X,
+the reciprocal-coordinate derivative and its HasDerivAt bridge, the
+two rank-one determinants S and 1/S, and the explicit three-quadratic
+coefficient determinant. Residue extraction and the all-length induction
+remain paper arguments.
+The updated aggregate checks 420 declarations in a 39-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 38-module rebuild. The aggregate took 34.49 seconds with peak
-RSS 1,995,030,528 bytes under the serial memory cap.
+new clean 39-module rebuild. The aggregate took 39.75 seconds with peak
+RSS 1,807,171,584 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 
@@ -710,6 +716,16 @@ rank is N_q+9q+3. Projection along those actual 9q columns leaves exactly
 Their independence is equivalent to full first-jet rank, and would suffice
 for the source induction. It is not proved. See (SP16)--(SP22) and
 (LC53)--(LC54). The remaining generic rank gap is exactly 9q.
+The new audited membership argument (LC55)--(LC61) puts those actual
+projected columns in im(T_q) plus the three E jets. It removes mixed
+cubic poles, matching defects, longitudinal double poles using actual
+copied columns, and simple terminal-pair residues, while retaining the
+fixed and moving matching conditions. The remaining test is now an
+explicit 9q-by-9q matrix of old-pole prefix coefficients of the actual
+source-graph defect. Its definition is independent of the collision
+preimage ambiguity. Computing I_old for the recovered rows and proving
+this matrix nonsingular remain open; ambient recovery alone does not
+supply the actual source prefixes.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently
@@ -909,8 +925,12 @@ silently assumed by either proved theorem, and no result below is claimed.
    shared columns to give the conditional lower bound N_q+9q+3. Prove
    independence of the exact 9q projected W/S/remaining-shared classes
    modulo C and the three E jets in (LC54), keeping every parameter-only
-   projection correction. This combines the leading and remaining jet
-   questions without assuming the six leading survivors independent.
+   projection correction. Their ambient membership is now proved, and
+   (LC61) gives their exact 9q-square source-prefix defect determinant.
+   Derive a structural nonzero leading term or a prepend recurrence for
+   that matrix, retaining I_old of each recovered row. This combines the
+   leading and remaining jet questions without assuming the six leading
+   survivors independent.
    Then apply the scalar-covariate bridge.
    None of these open claims is assumed by a completed theorem. Combine
    independence with the proved moment-space dimension to obtain spanning. The completed source-basis theorem remains

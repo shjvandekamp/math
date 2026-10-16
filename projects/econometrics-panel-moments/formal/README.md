@@ -67,8 +67,18 @@ including their diagonal scaling consequences under explicit nonzero
 endpoint factors. This module does not prove residue extraction,
 generic existence, or an independence theorem.
 
-The current source-family aggregate checks 405 declarations in a compiled
-38-module closure. The latest check compiled the aggregate against cached
+`SourceWeightedPrependAlgebra.lean` extends the actual prepend identities to
+`G̃ = diag(r) + 11ᵀ`. With `w_a = 1/r_a` and `S = 1 + ∑ w_a`, it proves
+`X K(0) = SX` and the weighted first derivative, assuming nonzero `r_a`
+and coordinates on `∑ X_a = 0`. It also proves the finite determinants
+`det(I + w1ᵀ) = S`, `det(I − w1ᵀ/S) = 1/S` when `S ≠ 0`, and the
+explicit three-quadratic coefficient determinant `−κ B₁₂ B₂₁ h k`.
+These are kernel and matrix identities; residue extraction, generic
+nonvanishing of the observation factors, and source independence are
+not asserted by this module.
+
+The current source-family aggregate checks 420 declarations in a compiled
+39-module closure. The latest check compiled the aggregate against cached
 module outputs; it was not a clean rebuild. Its axiom output is saved in
 `source-family-extended-axioms.txt`.
 

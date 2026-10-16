@@ -1348,3 +1348,165 @@ and hence actual source independence near the collision. It is not
 proved. The equivalence here is for full first-jet rank; actual source
 independence might also hold through higher jets if this first-jet
 test were deficient.
+
+## A concrete prefix target for the remaining columns
+
+The remaining quotient in (LC54) admits the following independently
+audited paper reduction. Retain the generic old geometry, the full
+transverse frame (LC53), and the scalar longitudinal fullness (LC51).
+In addition, at each q-line pair P_ab require both ell_a(P_ab) and
+ell_b(P_ab) nonzero, and at each own matching point require
+ell_c(M_c) nonzero. These are generic conditions for each fixed
+direction with three distinct rates: a generic row b avoids the plane
+spanned by row a and row a times D. Their nonempty opens can therefore
+be intersected with the preceding common-G/time opens.
+
+For every one of the 9q projected columns Y in (LC54),
+
+\[
+ Y\in\operatorname{im}T_q\oplus\operatorname{span}(Z_0,Z_1,Z_2).
+ \tag{LC55}
+\]
+
+This is a membership statement for these actual projected source
+columns, not an identification of every rational row killed by O.
+Here is a constructive proof, retaining the source tangent conditions.
+
+Every leading row or first jet is the first coefficient of a family
+Y_epsilon of ambient source rows with Y_0=0. For a leading row,
+multiply its actual family by epsilon; for a jet, use its actual
+vanishing difference. The projection coefficients in Pi_H are
+parameter constants independent of X and epsilon, so this remains
+true after projection and linear combinations.
+
+At a q-line pair, the possible total-order-three part of such a
+first coefficient has the universal form
+
+\[
+ \left(\frac{\ell_a}{L_a^2L_b}
+       -\frac{\ell_b}{L_aL_b^2}\right)z_{ab},
+ \qquad z_{ab}\mathbf1=0,
+ \tag{LC56}
+\]
+
+with all coefficients evaluated at P_ab. To see the relative sign,
+the two mixed denominators in the vanishing family have opposite
+constant coefficients at the collision; differentiating their moving
+factors gives (LC56). A term with two visits to the same state has
+no third-order single-line part, as in the diagonal cancellation
+already used in (LC20). Evaluating O_a and O_b at P_ab gives,
+up to their nonzero normalization factors, ell_a z_ab lambda_b and
+-ell_b z_ab lambda_a. The two contractions separate the zero-sum
+row plane, since v_a and v_b are independent there. Thus OY=0
+forces z_ab=0 at every pair.
+
+The remaining squared coefficient on L_c is longitudinal, h_c v_c.
+The fixed matching condition gives h_c(M_c)=0. Consequently its
+divided matching observation (LC19) is a scalar multiple
+eta_c A_q(c,:). Subtract the unique multiple
+eta_c/ell_c(M_c) of Z_c. Equation (LC21) shows that the new divided
+coefficient vanishes to second order, so h_c is divisible by X_c^2
+on L_c. There are no residual other-q-line poles in this squared
+coefficient: those would have appeared in (LC56). What remains is
+exactly the degree-zero, old-simple-pole longitudinal target of
+(LC51). Its full 3m+1-dimensional scalar basis in each sector
+therefore removes every squared pole by subtracting actual copied
+columns C. This step requires only the scalar interpolation inverse,
+not the full old-source inverse.
+
+The row now has only simple q-line poles. At each unordered pair
+a,b remove its two simple-pair residues with the two ambient rows
+
+\[
+ J_{ab}=\frac{X_aX_b}{L_a}e_b(I-K_q)
+       =T_q(0,I_{ab}),\qquad
+ I_{ab}=\frac{X_aX_b}{L_a}e_b.
+ \tag{LC57}
+\]
+
+These are admissible prefixes. Their pair coefficients are
+-X_aX_b v_b and -X_aX_b v_a, which span the zero-sum row plane.
+They introduce no squared q-line pole or earlier-line pole.
+
+It remains essential to check the divided matching condition after
+these subtractions; pole cancellation alone would not suffice.
+Every subtracted row still has a vanishing ambient family: for a
+row in im(T_q), use epsilon T_n(R,I), and for Z use the original
+vanishing source difference. Let D_old be the product of the old
+row forms and D_new(epsilon) the product of the moving new ones.
+For each output j its cleared divided polynomial has an expansion
+
+\[
+ p_{\varepsilon,j}
+  =D_{\rm old}D_{\rm new}(\varepsilon)
+                 Y_{\varepsilon,j}/X_j
+  =\varepsilon p_{1,j}+\varepsilon^2p_{2,j}+\cdots.
+ \tag{LC58}
+\]
+
+It vanishes both at the fixed old matching point M_c and at the
+moving new matching point M_c(epsilon). Hence
+p_1(M_c)=p_2(M_c)=0 and d p_1(M_c)[M_c'(0)]=0. Once the squared
+pole has been removed, locally
+p_1=unit times L_c times (L_c Y_j/X_j). The matching point has
+nonzero normal velocity, since ell_c(M_c) is nonzero. The derivative
+condition therefore gives (L_c Y_j/X_j)(M_c)=0, including the
+divided output j=c condition. All other old matching, coordinate,
+zero-sum and same-block conditions are inherited or were explicitly
+removed above. The resulting row S belongs to W0_q.
+
+Finally W0_q is contained in im(T_q). Apply the existence formulas
+(PP3)--(PP6) with A=A_q:
+
+\[
+ k=S\operatorname{diag}(X)^{-1},\quad
+ j=E(kA_q^{-1})A_q,\quad I=j\operatorname{diag}(X),
+ \qquad R=I+(S-I)K_q^{-1}.
+ \tag{LC59}
+\]
+
+The existence proof still gives R in W0_q and T_q(R,I)=S when
+the new lines coincide with the q-lines. Its factors L_qc only
+multiply the interpolated residues. The separate uniqueness proof
+in PP uses new/old nonincidence and is not applied here; the exact
+collision ambiguity is instead (LC2). Combining these preimages
+proves membership in (LC55). Moreover Theta annihilates im(T_q):
+each divided double coefficient has two incoming X_c factors.
+Equation (LC21) then proves its intersection with span(Z) is zero.
+
+Under shorter-source independence, choose any ambient preimage
+
+\[
+ Y-\sum_c z_cZ_c=T_q(R_Y,I_Y),\qquad
+ \Gamma(Y)=\operatorname{ResPrefix}_{\rm old}
+                   (I_{\rm old}(R_Y)-I_Y).
+ \tag{LC60}
+\]
+
+The notation ResPrefix_old means the 9q coefficients of X_a/L_ta
+in the three components of the prefix divided by diag(X). By
+(LC2)--(LC3), a different preimage changes its defect only by a
+diagonal polynomial prefix, so these coordinates are well-defined.
+Their vanishing means the defect is such a polynomial prefix;
+the explicit kernel generators then remove it and put Y in
+span(C,Z). Conversely every row in span(C,Z) has zero coordinates.
+Consequently the exact remaining criterion is
+
+\[
+ \det\left[
+   \Gamma(\Pi_{\mathcal H}W),\
+   \Gamma(\Pi_{\mathcal H}S),\
+   \Gamma(\Pi_{\mathcal H}U_{s\ge2})
+       \right]\ne0.
+ \tag{LC61}
+\]
+
+This is a 9q-by-9q matrix in specified old-pole prefix coordinates.
+The longitudinal subtraction uses known actual copied coefficients
+and contributes zero graph defect. The remaining recovered old row
+still requires its actual source prefix I_old(R_Y); replacing that
+map by an arbitrary ambient interpolation would change (LC61).
+The reduction proves neither this determinant's nonvanishing nor a
+recurrence for it. A structural computation of that determinant,
+with all projection and source-prefix corrections retained, remains
+the next all-length obligation.
