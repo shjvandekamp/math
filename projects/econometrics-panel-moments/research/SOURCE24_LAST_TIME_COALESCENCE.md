@@ -3624,3 +3624,303 @@ admissible original-source fixture. The updated cached aggregate checks
 in 21.71 seconds with peak RSS 2,429,435,904 bytes.
 The final three paired directions per sector and
 the retained-old-source determinant remain open.
+
+## Endpoint pivots for every fixed positive weight triple
+
+[Pro44](https://chatgpt.com/c/6ad1bb42-e668-83eb-bd6c-1a98337b2d67)
+gave a different specialization that strengthens the preceding
+equal-weight result to every fixed r_i>0. The following argument was
+checked independently locally. In sector a=0 put
+p=1+r_0, h=1-1/p, s_i=1+r_i, d=s_1-1/p, and g=(p,1,1).
+Take the first n=t-1 time vectors equal to (1,epsilon,epsilon^4),
+and the last vector equal to (1,U,V), where U,V are fixed positive
+generic parameters. Write P=K_epsilon^n, K=K_t, T=K^(-1),
+and B=G^(-1). This B is the common three-state inverse, not a
+paired residue matrix.
+
+Use Q_0=(0,1,-1), Q_1=(1,0,-p), Q_2=(1,-p,0).
+Let rho_c be the actual newest-pole subtraction coefficient
+A(c,0)(vPT)_j/(v_cPT)_j at the last node. The newest corrected
+row is F_c=(J_tc-rho_c U_tc)T, with
+U_tc=X_c e_c(PK-KP). Set Y_jc=(F_c)_j(Q_j);
+then Z_t=E_t^(-1)Y as in (LC115). Choosing
+ell_0=1 and ell_1=ell_2=0, define
+H_j(epsilon)=(e_{ell_j}PT)_j(Q_j) and
+omega_j=(vPT)_j(Q_j). At Q_j write
+e_cK=e_{ell_j}+tau_cj v. The exact decomposition is
+
+\[
+ Y=\operatorname{diag}(H_j)Q\operatorname{diag}(\rho_c)
+       +\operatorname{diag}(\omega_j)\mathcal R,\qquad
+ \mathcal R_{jc}=\rho_c X_c(Q_j)\tau_{cj}
+       -\frac{A(c,0)X_c(Q_j)}{L_c(Q_j)} .
+ \tag{LC139}
+\]
+
+Here Q has rows Q_j and rank two. Set
+D_j=mathcal R_j diag(rho)^(-1)g. The part of det Y
+containing exactly one omega is
+(product rho_c)(-p H_1 H_2 omega_0 D_0
++H_0 H_2 omega_1 D_1-H_0 H_1 omega_2 D_2).
+Every other potentially nonzero term contains at least two omegas.
+This follows from the cofactor rows -p g, g, -g of Q;
+the term with no omega vanishes exactly.
+
+At a fixed interior point and for a zero-sum row z,
+zK_epsilon=epsilon(X_1/X_0)(z.w)(-1,1,0)+O(epsilon^2),
+where w=(1/p,s_1,1) and (-1,1,0).w=d. Thus
+zP=epsilon^n(X_1/X_0)^n d^(n-1)(z.w)(-1,1,0)
++O(epsilon^(n+1)). Put ell=v.w=dX_1+hX_2 and
+write v_c.w=alpha_c ell+beta_c L_c on the new line.
+The subtraction coefficient tends to A(c,0)/alpha_c.
+Direct two-dimensional elimination gives
+
+\[
+\begin{split}
+ \beta_0&=\frac{dV-hs_1U-r_1/p}{dV-hU-r_1},\\
+ \beta_1&=\frac{dV-hs_1^2U-r_1/p^2}{dV-hs_1U-r_1/p},\\
+ \beta_2&=\frac{ds_2V-hs_1U-r_1/p^2}{ds_2V-hU-r_1/p},\\
+ D_0^{(0)}&=(\beta_1-\beta_2)/r_1,\qquad
+ D_2^{(0)}=-(\beta_0-\beta_1)/d .
+\end{split}
+ \tag{LC140}
+\]
+
+The relevant nonidentity checks are explicit:
+beta_0-beta_1 equals
+h r_1 d [V(r_1 U+h)-Ud] divided by
+(dV-hU-r_1)(dV-hs_1U-r_1/p).
+At U=0, beta_1-beta_2 equals
+(r_1 h/p)d(s_2-1)V divided by
+(dV-r_1/p)(ds_2V-r_1/p).
+Both are nonzero rational functions for every fixed positive r.
+The alpha_c are also generically nonzero: the corresponding
+two-form determinants at U=0 are hV, hV/p, hs_2V/p.
+This boundary evaluation proves nonidentity only; choose the actual
+terminal U,V positive and generic.
+
+Write Delta_ij=(1+r_i)(1+r_j)-1 and define
+
+\[
+ h_0=\frac{U-V}{s_1}B_{00},\quad
+ h_1=(1-pV)B_{01},\quad h_2=(1-pU)B_{02},\quad
+ c_2=(1-pU)(pB_{02}+B_{12}/U).
+ \tag{LC141}
+\]
+
+The plus sign in c_2 is essential. All four factors are
+generically nonzero; B's off-diagonal entries are strictly
+negative. Canceled edge products give
+H_0=h_0 epsilon^(-1)+O(1), H_1=h_1+O(epsilon),
+H_2=h_2+O(epsilon), and
+omega_0=-r_1 h_0(-Delta_12/s_1)^(n-1)
+epsilon^(3n-4)+O(epsilon^(3n-3)),
+omega_1=O(epsilon^(4n-3)),
+omega_2=c_2(-Delta_01)^n epsilon^n+O(epsilon^(n+1)).
+For example these orders follow from the exact active-edge
+eigenvalues of K_epsilon,
+-Delta_12 epsilon^3/[(s_1-epsilon^3)(1-s_2 epsilon^3)],
+-Delta_02 epsilon^4/[(1-epsilon^4)(1-p s_2 epsilon^4)],
+and -Delta_01 epsilon/[(1-epsilon)(1-p s_1 epsilon)],
+together with omega_j=delta_epsilon,j^(n-1)
+(v K_epsilon T)_j(Q_j). The product K_epsilon T
+has no coordinate poles.
+
+Let Pi_0=product_c rho_c^(0). In (LC139) the unique
+lowest-order determinant term is the omega_2 term for n>=2,
+and the omega_0 term for n=1. Consequently
+
+\[
+ \det Y=
+ \begin{cases}
+ h_0h_1c_2\Pi_0
+   \dfrac{\beta_0-\beta_1}{d}(-\Delta_{01})^n
+       \epsilon^{n-1}+O(\epsilon^n),&n\ge2,\\[4pt]
+ p h_0h_1h_2\Pi_0(\beta_1-\beta_2)\epsilon^{-1}
+       +O(1),&n=1 .
+ \end{cases}
+ \tag{LC142}
+\]
+
+For n>=2 the competing single-omega_0 order 3n-4 is
+strictly higher than n-1. Every double-omega term is also
+higher; for n=1 those terms start at order zero. Thus no
+uncomputed term can cancel the displayed coefficient.
+E_t is invertible and independent of epsilon.
+
+Choose a positive generic terminal time making all displayed
+factors and local geometry nonzero, then small positive epsilon.
+The formulas for Z_t use P at last nodes and canceled edge
+values, so they remain defined with coincident earlier times.
+Small independent positive perturbations separate those times
+without losing the nonzero determinant. This proves
+
+\[
+ \det Z_t\not\equiv0 \quad(t\ge2),\qquad
+ \operatorname{rank}_{\rm gen} B_q\ge6q-3
+       \quad(q\ge2)
+ \quad\text{for every fixed }r_0,r_1,r_2>0 .
+ \tag{LC143}
+\]
+
+Use (LC117)'s triangular minor and relabel the states for
+other sectors. The simultaneous three-sector bound is 18q-9,
+and the incoming quotient bound is 9q-9, at every such
+fixed weight triple. The final three directions and the
+retained-old-source block remain open. This extension is
+audited paper mathematics, not an additional Lean theorem.
+
+## A binary-terminal first-jet criterion for the final three directions
+
+The following local derivation reduces full paired induction to a
+different three-by-three response. Its rank argument was independently
+audited. Fix sector a=0 and first take G=I+11^T, g=(2,1,1).
+Write q=m+1, m>=1, and assume the shorter actual B_m invertible.
+Keep the earlier times fixed and append (1,epsilon,tau), tau>0.
+All unmarked terminal quantities below are evaluated at epsilon=0;
+the terminal kernel is singular and is never inverted.
+Assume distinct earlier and last nodes, all off coordinate edges,
+and (vP)_1 nonzero at the last nodes, P=K_1...K_m.
+Also require e_1 G^(-1)diag(L_q) nonzero at each last node,
+as holds for positive weighted common G under this geometry.
+
+Let mathcal F_m be the space of homogeneous degree-zero scalar
+rational functions with at most simple earlier poles, modulo constants.
+It has dimension 3m. Put B=G^(-1) and, for a representative f_0, set
+
+\[
+\begin{split}
+ (s_0,k,s_2)&=
+   -(B_{10}f_0(Q_0),B_{11}f_0(Q_1),B_{12}f_0(Q_2))G,\\
+ f&=f_0+k,\qquad s=(s_0,0,\tau s_2),\\
+ C_f&=(s_0,f,s_2)B\operatorname{diag}(L_q),\qquad
+ R_f=s\operatorname{diag}(X)-C_f .
+\end{split}
+ \tag{LC144}
+\]
+
+Here the Q_i are the representatives used above with p=2.
+Adding a constant to f_0 subtracts it from k and leaves all
+other constructed quantities unchanged. The three edge equations
+give the coordinate factors of C_f; R_f is a zero-sum
+homogeneous degree-one row in the shorter ambient space.
+Invertibility of B_m gives a unique augmented expansion
+R_f=R_m(alpha)+lambda v in actual shorter paired columns.
+If sigma(alpha) is the three-component actual head sum, define
+
+\[
+ \Sigma_m(R_f)=\sigma(\alpha)+\lambda g,\qquad
+ M_\tau[f]=\Sigma_m(R_f)-s .
+ \tag{LC145}
+\]
+
+The polynomial ambiguity matters: Sigma_m(v)=g, not zero.
+The map uses only the shorter actual inverse and is not
+recoverable from arbitrary ambient residues without this lift.
+
+The inherited leading residue kernel is canonically ker M_tau.
+Indeed if M_tau[f]=0 then sigma(alpha)=s-lambda g and the
+actual copied row equals
+Y_epsilon=(s-lambda g)diag(X)-C_f K_q(epsilon).
+Its value at zero is -lambda v. Conversely an actual copied
+row with zero leading residues is a multiple of v. Factoring
+its completed old row through G produces the representation
+in (LC144). Its regularity at last nodes, and the nonzero
+inverse-row hypothesis, exclude last poles of f. Coordinate
+factors force the same edge normalization. This correspondence
+is injective: alpha=0 and M_tau[f]=0 imply lambda g=s;
+component 1 forces lambda=0, then f=0.
+
+For fixed inherited coefficients, the actual derivative satisfies
+
+\[
+ \frac{(\partial_\epsilon Y_\epsilon)_1|_{\epsilon=0}}{X_1}
+       =-f .
+ \tag{LC146}
+\]
+
+This follows directly from the missing output column of K_q:
+its first derivative is G(:,1)X_1/L_q.
+Any analytic polynomial gauge changes the scalar derivative by
+a constant, zero in mathcal F_m. Moving last nodes contribute
+no extra scalar residue because the leading divided component
+is constant and f has no last pole.
+
+At each last node N_c define
+
+\[
+ \rho_c=\left.
+    \frac{(v_{qc}P)_1}{A_q(c,0)(vP)_1}\right|_{N_c},
+ \qquad
+ t_c=\frac{(H_{qc}-\rho_cJ_{qc})_1}{X_1}
+       \ \in\mathcal F_m,\qquad
+ W_m(\tau)=[\,M_\tau(t_0)\ M_\tau(t_1)\ M_\tau(t_2)\,].
+ \tag{LC147}
+\]
+
+The scalar terminal pole cancels. For edge calculations cancel
+P e_1/X_1 as
+K_1...K_(m-1)(A_m(:,1)/L_m) before substituting X_1=0.
+No inverse of the singular last table is used.
+
+If det W_m(tau) is nonzero, M_tau is onto, so the inherited
+leading kernel has dimension 3m-3 and its leading rank is 3q.
+The last six columns contribute three distinct terminal scalar
+pole pivots followed by the three t_c classes. Their images under
+M_tau separate the latter from ker M_tau. Hence full leading
+rank is 3q+6 and its coefficient kernel is entirely inherited.
+The missing-output first derivatives of this kernel are
+ker M_tau, of dimension 3q-6. They are disjoint from the
+leading image: first eliminate the three terminal poles, then
+use invertibility of W_m on the remaining three scalar classes.
+Thus the induced first jet is injective on the full leading kernel:
+
+\[
+ \det W_m(\tau)\ne0
+ \ \Longrightarrow\
+ \operatorname{ord}_{\epsilon=0}\det B_q(\epsilon)=3q-6,
+ \qquad \operatorname{rank}_{\rm gen} B_q=6q .
+ \tag{LC148}
+\]
+
+The valuation assertion uses an analytic residue chart whose row
+and column normalizations are units at zero. For q=2 the leading
+matrix is already full rank. The argument extends after relabeling
+and to positive weighted common G with the stated hypotheses.
+Uniform nonvanishing of W_m is not proved.
+
+The prescribed exact diagnostic
+[source24_binary_terminal_response.py](../exploration/source24_binary_terminal_response.py)
+uses r=(1,1,1), sector 0, earlier times (1,8^s,8^(2s)),
+tau=7, and prime 1000003. The response has rank three at
+q=2,3,4, with determinants 122900,147497,252967.
+It checks scalar residues against actual H-rho J and independent
+polynomial clearing, then reconstructs R_f from actual shorter
+columns plus lambda v. The latter is checked at 3m+3 distinct
+unit points against a cleared degree bound 3m+2.
+The only inverses are G and B_m. The saved calculation timing is
+0.059 seconds and 17,317,888 bytes peak RSS before JSON serialization;
+its complete
+certificate is source24-binary-terminal-response-results.json.
+These finite certificates support this particular degeneration;
+they do not prove det W_m nonzero for arbitrary m.
+
+The independent checker
+[source24_binary_terminal_jet.py](../exploration/source24_binary_terminal_jet.py)
+constructs the full actual paired residue matrix over the dual numbers
+at the same fixture, without using M_tau. It differentiates both the
+last-node cross product and its sum normalization. Direct ordered-word
+residues agree coefficientwise with independent polynomial clearing.
+Exact constant left/right transformations put B_0 into diag(I,0)
+and carry B_1 along; the lower-right block is the induced map from
+ker B_0 to coker B_0. At q=2,3,4 the leading ranks are 12,15,18
+and induced derivative ranks 0,3,6. Thus the determinant orders
+are exactly 0,3,6, with coefficients 355755,840736,966235 modulo
+1000003, confirming (LC148)'s prediction at this fixture.
+The complete arrangement becomes generic through the formal
+deformation; the singular last table at zero is explicitly recorded.
+The saved calculation timing is 0.049 seconds and 16,285,696 bytes
+peak RSS before JSON serialization.
+The full matrices, transformations, and geometry checks are saved in
+source24-binary-terminal-jet-results.json. This is additional finite
+evidence, not a uniform nonvanishing proof.

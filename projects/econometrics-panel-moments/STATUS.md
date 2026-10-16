@@ -22,12 +22,18 @@ proved or Lean checked.
 
 The latest audited paper result proves paired boundary rank at least
 6q-3 per state sector, or 18q-9 across all three sectors, for every
-q>=2. It already holds generically at the fixed positive weight
-triple (1,1,1). A genuine positive perturbation proves all terminal
+q>=2 and every fixed positive weight triple. A genuine positive
+perturbation proves all terminal
 endpoint couplings nonzero; an explicit triangular quotient then
 leaves only three incoming directions per sector. Their final
 determinant and the subsequent retained-old-source block remain open.
 This is not yet a Lean theorem or the full source-independence result.
+The new binary-terminal criterion (LC144)--(LC148) reduces full paired
+induction to a three-by-three response using only the shorter paired
+inverse. Its prescribed finite tests pass at q=2,3,4. Direct derivatives
+of the actual full paired matrix independently give leading ranks
+12,15,18 and remaining first-jet ranks 0,3,6. Uniform nonvanishing of
+the response, followed by the retained-old-source step, is still open.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
@@ -900,6 +906,17 @@ Their data domain still grows with length. Equations (LC133)--(LC136)
 show why six natural endpoint and first divided observations alone cannot
 recover the head margins: the last two incoming groups generically fill
 all six. Neither result proves the final-three determinant.
+The independently audited extension (LC139)--(LC143) now proves the
+same endpoint nonsingularity and rank bounds for every fixed positive
+weight triple. It uses common earlier times (1,epsilon,epsilon^4),
+then separates them by a positive perturbation. The unique leading
+determinant term is explicit at every length; the n=1 and n>=2 cases
+use different edge terms. This extension remains paper mathematics.
+The binary-terminal criterion (LC144)--(LC148) instead appends
+(1,epsilon,tau) and identifies the inherited leading kernel with a
+scalar response kernel. A nonzero final three-by-three response gives
+leading rank 3q+6, first-jet rank 3q-6, and full paired rank 6q.
+Its nonvanishing has been verified only at the prescribed finite cases.
 The saved finite boundary checker independently extracts the
 54-square minor 482791 from the prior q=4 matrix, verifies its
 three sector determinants, and gives the remaining 27-square
@@ -938,6 +955,20 @@ certificates are the source24-equal-weight-boundary exploration
 files. One run took 0.17 seconds and 16,564,224 bytes peak RSS.
 These establish finite generic paired bases at fixed r=(1,1,1);
 they do not prove the arbitrary-length final-three determinant.
+The separate binary-terminal response checker at tau=7 gives rank
+three at q=2,3,4, with determinants 122900,147497,252967 modulo
+1000003. It verifies actual shorter-source reconstruction and uses
+only G inverse and B_(q-1) inverse. Its saved calculation timing is
+0.059 seconds and 17,317,888 bytes peak RSS before JSON serialization. Independently, the direct paired-matrix
+dual-number checker gives leading ranks 12,15,18 and induced
+first-jet ranks 0,3,6 at those same lengths. It differentiates the
+moving nodes and their normalization, verifies both coefficients
+by polynomial clearing, and records exact kernel/cokernel
+transformations. The determinant orders are 0,3,6, with leading
+coefficients 355755,840736,966235. Its saved calculation timing is
+0.049 seconds and 16,285,696 bytes peak RSS before JSON serialization. These certificates are the
+source24-binary-terminal-response and source24-binary-terminal-jet
+exploration files; neither is an arbitrary-length proof.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently
@@ -1159,6 +1190,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    response of the shorter actual family. An endpoint-only replacement
    is excluded by (LC136). The simpler endpoint witness (LC138) settles
    preceding pivots only, including after nearby generic perturbation.
+   The extension (LC143) covers every fixed positive weight triple.
+   Alternatively, prove nonvanishing of the binary-terminal response
+   W_m(tau) in (LC147). The conditional first-jet theorem (LC148)
+   and independent finite response/derivative certificates supply a
+   concrete induction target, but its all-length determinant is open.
    Then control the retained-old-source correction in (LC113).
    Formalization of these residue, edge-descent, and asymptotic
    arguments remains unfinished.
