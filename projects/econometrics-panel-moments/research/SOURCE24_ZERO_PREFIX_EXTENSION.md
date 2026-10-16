@@ -1404,3 +1404,45 @@ nonsingular. Simply inserting the new kernel on the left of an old
 scalar relation is not justified by the actual move-first source
 words. Right appending such a relation instead kills it identically
 at the boundary because the new rows 0 and 1 coincide.
+
+There is a further exact test for (ZP61). Choose its actual coefficient
+kernel independently of the auxiliary w, perform the old scalar
+correction, and write f=R1/(X0 X1). On the auxiliary line,
+the normalized body is
+(v−w)²(2v−w)(D_q f)|auxline. Its 3q old-line node evaluations
+determine it. Put delta=1/w and use representatives
+X=(−1,y,delta). The node of L_ta is
+
+\[
+ y_{ta}(\delta)=\frac{1-G_{a2}v_t\delta}{G_{a1}u_t}.
+ \tag{ZP62}
+\]
+
+Evaluation of D_q f there equals the product of the other old line
+values times Res_(L_ta) f. These other factors are units when the
+old X2=0 axis poles are distinct. For a=0,1 the limiting observations
+are the 2q ordinary line residues of f on X2=0. For a=2, put
+b_t=Res_(L_t2)R1/(X2 X1), regular at the matching point by the
+actual source factors. Exactly on this chart,
+Res_(L_t2)f=−delta b_t. Divide these q rows by delta before taking
+the limit. They become the q normalized state-2 matching values
+−b_t at X=(−1,1/(3u_t),0).
+
+Thus full rank of the resulting constrained 2q-plus-q matrix would
+prove body rank 3q. The coefficient kernel is the same throughout;
+its coefficients are not differentiated, and the extra q observations
+are matching values rather than arbitrary extra derivatives. This
+reduction does not assert that the limiting matrix has full rank.
+
+The exact verifier `source24_zero_prefix_body_limit.py` applies these
+observations to the same saved original-source boundary scalar kernels
+at n=4,5,6. The first 2q rows have ranks 6,8,10; the divided state-2
+rows add 3,4,5, giving the full targets 9,12,15. The selected minor
+determinants are 367880,159493,375589 modulo 1,000,003. It checks
+all other line denominators, the zero constant state-2 residues,
+and independent polynomial-cleared controls in both dual orders at
+four selected poles, for every original source column. The original
+kernel hashes and systematic free coordinates are retained. These
+are finite certificates for the pole-limit criterion, not a uniform
+body theorem. The bounded run exited successfully in 0.583 seconds
+with 59,670,528 bytes peak RSS and no guard limitation.

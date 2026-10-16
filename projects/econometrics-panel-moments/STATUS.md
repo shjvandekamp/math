@@ -449,6 +449,14 @@ prove those hypotheses inductively. Uniform auxiliary body spanning
 and the endpoint correction against that body remain open. The body
 map is now reduced to the kernel of the explicit 6q+3 new-source
 quotient coordinates; no old scalar inverse is needed there.
+A further auxiliary-line limit reduces the body map to 2q ordinary
+axis residues and q divided state-2 matching residues on that same
+coefficient kernel. Exact checks at n=4,5,6 give ranks 9,12,15,
+with the expected 2q-plus-q split and nonzero minors
+367880,159493,375589 modulo 1,000,003. Independent polynomial-cleared
+controls verify the constant and first-order residue evaluations.
+The source24-zero-prefix-body-limit files save this finite evidence;
+uniform rank of this smaller constrained matrix remains open.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -628,6 +636,8 @@ silently assumed by either proved theorem, and no result below is claimed.
    endpoint lifts now survive scalar elimination; prove uniform body
    spanning and its endpoint Schur correction with the same source
    coefficients.
+   The body has an exact 2q-axis-plus-q-matching limit, verified at
+   n=4,5,6; prove its constrained minor nonzero for arbitrary q.
    The inherited higher jet is coupled to the scalar trace, so
    independently computed ranks cannot simply be added.
    Neither route is yet complete.
