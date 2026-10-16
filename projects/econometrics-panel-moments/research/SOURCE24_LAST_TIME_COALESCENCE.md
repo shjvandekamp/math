@@ -5735,3 +5735,24 @@ All generators are bounded and have only permitted old poles.
 The dimension bound is independent of length. Closure under transfer
 and the intersection with the accumulated actual image are still open;
 this representation alone does not imply the determinant is nonzero.
+
+The inverse ambient transfer is now explicit as well, by
+(NH48)--(NH55). For an arbitrary scalar, its endpoints and new state-2
+residue prescribe the three correction coefficients. Cancel the two
+new active poles, subtract the resulting value at \(2h\) times the
+normalized overlap function, and divide by \(\chi_{k,h}\). The
+resulting map satisfies
+\[
+ \mathcal P_k\mathscr T^{\rm full}_{k,h}=I,\qquad
+ \ker\mathcal P_k=\mathcal N_k,\qquad
+ L_k=L_{k-1}\mathcal P_k,\quad
+ \ker L_k=\mathcal S_k,\quad\operatorname{rank}L_k=3.
+ \tag{LC208}
+\]
+Here \(L_2\) annihilates the actual four-dimensional base image.
+An exact dual update propagates these three rows using ordinary
+residues and the value at infinity, with explicit line-residue slope
+factors. This avoids an old source inverse. It constructs the
+remaining test
+\(\det[L_k(1),L_k(W_0),L_k(W_1)]\), but does not establish its
+nonvanishing at every length.

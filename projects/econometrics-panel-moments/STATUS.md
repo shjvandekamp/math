@@ -153,6 +153,10 @@ quotient pencil, uniformly in length, remains to be proved.
 All new-parameter preimages also lie in a fixed old span of at most ten
 rational functions (LC207). A compatible recurrence for its intersection
 with the actual accumulated image remains open.
+An audited explicit inverse transfer now propagates three annihilating
+functionals from the actual two-block base (LC208), using local residues
+and endpoint corrections. Their rank is three; proving their determinant
+on the three gauge functions nonzero is still the missing step.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited

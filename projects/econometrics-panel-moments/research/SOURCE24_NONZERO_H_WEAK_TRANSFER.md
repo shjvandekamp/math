@@ -727,13 +727,13 @@ at zero and infinity. All denominators in (NH35) are units by
 For a target \(F=\nu+\rho W_0+\sigma W_1\), set
 
 \[
- \begin{split}
+ \begin{aligned}
  c_0&=F(0)/\kappa_0,&c_\infty&=F(\infty)/\kappa_\infty,\\
  \Lambda_0&=2hA/(A-a_m),&\Lambda_\infty&=-a_m/(A-a_m),\\
  u_1&=\rho+\Lambda_0c_0,&u_2&=\sigma+\Lambda_\infty c_\infty,\\
  G&=\nu+u_1G_1+u_2G_2,&
  c_*&=\frac{G-G(z)\Omega}{\chi_{k,h}}.
- \end{split}
+ \end{aligned}
  \tag{NH36}
 \]
 
@@ -929,7 +929,7 @@ dependence of their pole set on the new parameter. Put \(a=a_1\),
 write \(F_0=p+D_mR_0\), \(F_1=-rp+D_mR_1\), \(F_2=D_mR_2\).
 Then
 \[
- \begin{split}
+ \begin{aligned}
  R_0&=\frac{u_0r+v_0}{1-ar},
  &u_0&=-a\left(1+\frac2{3AQ_0}\right),
  &v_0&=-\frac{2h}{3Q_0},\\
@@ -940,7 +940,7 @@ Then
  &u_\xi&=-a\left(1+\frac1{3AQ_\xi}\right),
  &v_\xi&=-\frac{2h}{3Q_\xi},\\
  R_2&=R_1+2hR_0+(r-2h)R_\xi.
- \end{split}
+ \end{aligned}
  \tag{NH45}
 \]
 Indeed the defining numerators of \(R_0,R_1,R_\xi\) vanish at
@@ -998,3 +998,175 @@ audited. This gives a bounded-dimensional representation of the whole
 preimage family, not a closed transfer recurrence for
 \(\mathcal S_m^{(1)}\cap\mathcal B_m\). That intersection and the
 nonzero-coefficient obligation in (NH40) remain unresolved.
+
+## The inverse transfer on a general scalar
+
+The quotient inverse can be constructed by local evaluations for every
+\(F\in\mathcal F_k\), not only for the three targets in (NH36).
+The following inverse and dual formulas have been independently audited.
+Retain \(k=m+1\ge3\), \(z=2h\), and all the preceding generic
+units. Write \(\chi=\chi_{k,h}\), and distinguish the scaled line
+residues from ordinary \(r\)-residues by
+
+\[
+ \begin{aligned}
+ (p_0,p_1,p_2)&=(2/A,1/(2A),\xi),&
+ \mathcal R_jF&=(l_{kj}F)(p_j)
+                   =l'_{kj}\operatorname{Res}_{r=p_j}F,\\
+ (l'_{k0},l'_{k1},l'_{k2})&=(-A,-2A,-A),&
+ \mathsf N_j&=\Delta_kD_m\beta_j\quad(j=0,1),\\
+ n_j&=\mathcal R_j\mathsf N_j,&
+ \mathsf Z&=\Delta_kD_md_kQ_{k,h}.
+ \end{aligned}
+ \tag{NH48}
+\]
+
+The two \(n_j\) are nonzero, and
+\(\mathcal R_0\mathsf N_1=\mathcal R_1\mathsf N_0=0\).
+Set
+
+\[
+ \begin{aligned}
+ \eta&=\frac1{D_m(\xi)(\xi-z)(4b_k/3+\Delta_k(\xi))},&
+ \lambda&=\eta\mathcal R_2F,\\
+ \alpha_0&=\frac{\Lambda_0}{\kappa_0}F(0),&
+ \alpha_\infty&=\frac{\Lambda_\infty}{\kappa_\infty}F(\infty),\\
+ Y&=F+\lambda\mathsf Z+\alpha_0W_0+\alpha_\infty W_1,&
+ Y_c&=Y-\frac{\mathcal R_0Y}{n_0}\mathsf N_0
+          -\frac{\mathcal R_1Y}{n_1}\mathsf N_1,\\
+ \mathcal P_kF&=\frac{Y_c-Y_c(z)\Omega}{\chi}.&&
+ \end{aligned}
+ \tag{NH49}
+\]
+
+Here \(\Omega\) is the normalized old-pole-only function in (NH35).
+The subtractions defining \(Y_c\) remove the new active poles.
+The final subtraction removes the apparent pole at the zero \(z\)
+of \(\chi\). At the new state-2 pole, put
+\(c_\xi=\lambda D_m(\xi)\). The identity
+\(\mathcal R_2(d_kQ_{k,h})=z-\xi\) gives
+\(\mathcal R_2Y_c=(\xi-z)(4b_k/3)c_\xi\), so division by
+\(\chi\) is regular there and has value \(c_\xi\).
+The endpoint identities in (NH24) give values
+\(F(0)/\kappa_0,F(\infty)/\kappa_\infty\) for the resulting
+old scalar. It has only simple old poles and is bounded at infinity.
+Substitution into (NH23) therefore proves
+
+\[
+ \boxed{\begin{aligned}
+ \mathcal P_kF&\in\mathcal F_m,&
+ \mathscr T^{\rm full}_{k,h}\mathcal P_kF&\equiv F\pmod{\mathcal N_k},\\
+ \mathcal P_k\mathscr T^{\rm full}_{k,h}&=I,&
+ \ker\mathcal P_k&=\mathcal N_k.
+ \end{aligned}}
+ \tag{NH50}
+\]
+
+In particular \(\mathcal P_k\) is surjective. This is the inverse
+of the proved scalar direct sum (NH25), constructed without an old
+paired-matrix or source inverse.
+
+## Three actual quotient functionals and their recurrence
+
+Choose a rank-three linear map \(L_2:\mathcal F_2\to\mathbb K^3\)
+whose kernel is the checked four-dimensional actual base image
+\(\mathcal S_2\), over the generic rational parameter field
+\(\mathbb K\). It can be specified in the seven coordinates given
+by the six ordinary residues and the value at infinity. Define
+
+\[
+ \boxed{L_k=L_m\mathcal P_k,\qquad
+ L_m=L_2\mathcal P_3\cdots\mathcal P_m,\qquad
+ \operatorname{rank}L_m=3,\quad\ker L_m=\mathcal S_m.}
+ \tag{NH51}
+\]
+
+The rightmost map acts first in the composition. Surjectivity in
+(NH50) preserves rank, and its kernel identity together with
+\(\mathcal S_k=\mathcal N_k\oplus
+\mathscr T^{\rm full}_{k,h}\mathcal S_m\) proves the kernel claim.
+Thus these are functionals on the actual recursively promoted space;
+no arbitrary ambient complement is substituted for that space.
+
+One can propagate them using divided differences at \(z\). Write
+\(F_{[j]}=F^{(j)}(z)/j!\) for normalized Taylor coefficients.
+Formula (NH49), with \(\Omega_{[0]}=1\), gives
+
+\[
+ (\mathcal P_kF)_{[j]}=\frac3{4b_k}
+ \left[(1-Az)(Y_{c,[j+1]}-Y_{c,[0]}\Omega_{[j+1]})
+       -A(Y_{c,[j]}-Y_{c,[0]}\Omega_{[j]})\right].
+ \tag{NH52}
+\]
+
+A pullback raises the needed Taylor order by at most one. Starting
+with residue/infinity functionals at length two, the three rows of
+\(L_m\) can therefore be expressed using current pole residues,
+endpoint values, and derivatives at \(z\) through order at most
+\(m-3\) for \(m\ge3\). The potential highest-jet multiplier is
+\(3(1-Az)/(4b_k)\ne0\). This is an upper bound on the required
+order, not a claim that all those coefficients are nonzero, and not
+a fixed-order differential closure of the span in (NH47).
+
+Alternatively, the dual recurrence stays entirely in residue coordinates.
+For one old functional write
+\(\ell(c)=a_\infty c(\infty)+\sum_\rho w_\rho
+\operatorname{Res}_\rho c\), where \(\rho\) runs over old nodes.
+For \(U\in\{W_0,W_1,\mathsf Z,\mathsf N_0,\mathsf N_1\}\), set
+
+\[
+ \theta=\sum_\rho\frac{w_\rho}{\chi(\rho)}
+                       \operatorname{Res}_\rho\Omega,\qquad
+ \Gamma_U=\sum_\rho\frac{w_\rho}{\chi(\rho)}
+           \operatorname{Res}_\rho\bigl(U-U(z)\Omega\bigr).
+ \tag{NH53}
+\]
+
+Define the five coefficients
+
+\[
+ \begin{aligned}
+ A_0&=\frac{\Lambda_0}{\kappa_0}
+       \left(\Gamma_{W_0}-\frac{\mathcal R_0W_0}{n_0}
+                                        \Gamma_{\mathsf N_0}\right),\\
+ A_\infty&=\frac{\Lambda_\infty}{\kappa_\infty}
+       \left(\Gamma_{W_1}-\frac{\mathcal R_1W_1}{n_1}
+                                        \Gamma_{\mathsf N_1}\right),\\
+ B_0&=-\Gamma_{\mathsf N_0}/n_0,\qquad
+ B_1=-\Gamma_{\mathsf N_1}/n_1,\\
+ B_2&=\eta\left(\Gamma_{\mathsf Z}
+       -\frac{\mathcal R_0\mathsf Z}{n_0}\Gamma_{\mathsf N_0}
+       -\frac{\mathcal R_1\mathsf Z}{n_1}\Gamma_{\mathsf N_1}\right).
+ \end{aligned}
+ \tag{NH54}
+\]
+
+Expanding (NH49), using
+\(\mathcal R_0W_1=\mathcal R_1W_0=0\), gives the exact update
+
+\[
+ \boxed{\ell(\mathcal P_kF)=
+  \frac{a_\infty}{\kappa_\infty}F(\infty)
+  +\sum_\rho\frac{w_\rho}{\chi(\rho)}\operatorname{Res}_\rho F
+  -\theta F(z)+A_0F(0)+A_\infty F(\infty)
+  +\sum_{j=0}^2B_j\mathcal R_jF.}
+ \tag{NH55}
+\]
+
+For bounded simple-pole functions,
+\(F(z)=F(\infty)+\sum_x\operatorname{Res}_xF/(z-x)\) and
+\(F(0)=F(\infty)-\sum_x\operatorname{Res}_xF/x\), with the sums
+over all current nodes. Thus (NH55) is again a residue/infinity
+functional: its old-node weight is
+\(w_\rho/\chi(\rho)-\theta/(z-\rho)-A_0/\rho\), its new-node
+weight is \(-\theta/(z-p_j)-A_0/p_j+B_jl'_{kj}\), and its
+infinity coefficient is
+\(a_\infty/\kappa_\infty-\theta+A_0+A_\infty\).
+The line-residue slopes in (NH48) are essential in this conversion.
+
+This provides an explicit recurrence for all three quotient rows using
+known binary functions and local residues. The remaining test is still
+\(\det[L_k(1),L_k(W_0),L_k(W_1)]\ne0\), or equivalently the
+preimage pencil (NH40) evaluated by \(L_m\). Neither the inverse
+formula nor propagation of the three annihilators proves that determinant
+nonzero. Full paired independence and Eq. (24) remain open.
