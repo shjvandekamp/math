@@ -723,9 +723,14 @@ copied columns, and simple terminal-pair residues, while retaining the
 fixed and moving matching conditions. The remaining test is now an
 explicit 9q-by-9q matrix of old-pole prefix coefficients of the actual
 source-graph defect. Its definition is independent of the collision
-preimage ambiguity. Computing I_old for the recovered rows and proving
-this matrix nonsingular remain open; ambient recovery alone does not
-supply the actual source prefixes.
+preimage ambiguity. The subsequent construction (LC62)--(LC70) now
+computes all these coefficients using the actual old F cross-pair
+residue inverse and explicit coordinate-edge and divided matching
+evaluations. Its final terminal-only space has dimension twelve,
+with nine locally recoverable coordinates modulo E_q. This replaces
+the full I_old inversion while retaining all grouped source-prefix
+margins. A structural recurrence or nonzero determinant coefficient
+for the resulting matrix remains open.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently
@@ -927,8 +932,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    modulo C and the three E jets in (LC54), keeping every parameter-only
    projection correction. Their ambient membership is now proved, and
    (LC61) gives their exact 9q-square source-prefix defect determinant.
-   Derive a structural nonzero leading term or a prepend recurrence for
-   that matrix, retaining I_old of each recovered row. This combines the
+   Its entries now have the local extraction formulas (LC62)--(LC70),
+   using the actual old F cross-pair inverse instead of a full I_old
+   inversion. Derive a structural nonzero leading term or a prepend
+   recurrence for that matrix, retaining every source margin. This combines the
    leading and remaining jet questions without assuming the six leading
    survivors independent.
    Then apply the scalar-covariate bridge.

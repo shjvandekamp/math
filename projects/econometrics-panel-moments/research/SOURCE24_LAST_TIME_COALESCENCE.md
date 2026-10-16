@@ -1510,3 +1510,193 @@ The reduction proves neither this determinant's nonvanishing nor a
 recurrence for it. A structural computation of that determinant,
 with all projection and source-prefix corrections retained, remains
 the next all-length obligation.
+
+## Computing every defect coordinate by local extraction
+
+The [complementary-observation investigation](https://chatgpt.com/c/6ad1a136-2ed4-83eb-877e-ce9f7f4f96fd)
+proposed an explicit earlier-line extraction. Local derivation and
+independent audit identify it with the negative of (LC60). A further
+local calculation below recovers the terminal nine coordinates as well.
+Thus the full old-source inverse in the abstract definition can be
+replaced by the old F cross-pair residue inverse followed by scalar
+line evaluations. This remains a conditional construction under
+shorter-source independence, not a determinant nonvanishing proof.
+
+Let D stack two components of every cross-block old double residue,
+with fixed projective representatives, and put
+
+\[
+ \mathscr D_q=[D(F_{tsab})]_{t\ne s,a,b},\qquad
+ T_K=A_q^{-1}\operatorname{diag}(L_q)-\operatorname{diag}(X).
+ \tag{LC62}
+\]
+
+There are 9q(q-1) rows and columns in script D_q. This matrix is
+invertible under the old-source premise. Indeed the kernel of D on
+W0_q is exactly the old E span: after the cross-pair residues vanish,
+each line residue is a quadratic polynomial row. Coordinate factors
+and the divided matching condition make its j-component a constant
+times X_a X_j. Zero sum on L_ta=0 makes that constant vector a
+multiple of A_t(a,:), so an E_ta removes the residue. The remaining
+polynomial row has degree one, output-coordinate factors and zero
+sum, hence is zero. The actual old E/F basis then makes the F block
+square and nonsingular.
+
+For a residual Y in (LC55), remove its unique zZ part using Theta
+and (LC21), and write Y0=Y-sum z_c Z_c. Multiplication by
+K^-1=diag(X)^-1 A^-1 diag(L) leaves only simple terminal poles:
+the off-state squared coefficients are exactly O, and the own-state
+factor L_c removes one pole. The actual collision pole restrictions
+and OY=0 are essential here. Coordinate factors remove the apparent
+axis divisions. Define
+
+\[
+ \alpha=\mathscr D_q^{-1}D(Y_0K^{-1}),\qquad
+ \widehat Y=Y_0-\sum_{t\ne s,a,b}\alpha_{tsab}C(F_{tsab}).
+ \tag{LC63}
+\]
+
+The same alpha can be computed from Y because Z K^-1 has only
+terminal poles. The exact copied identity is
+
+\[
+ C(F_{tsab})K^{-1}
+   =F_{tsab}+\frac{X_a}{L_{ta}}A_t(a,b)e_bT_K.
+ \tag{LC64}
+\]
+
+Its second term has only a single old denominator. Therefore
+D(Yhat K^-1)=0. By (LC55), any ambient preimage of Yhat has old
+row in the kernel of D, hence an E combination. This is the only
+source inverse used below; the F coefficients alpha remain actual
+source coefficients throughout.
+
+For an earlier line i=(t,a), t<=m, set
+w_i=(L_i Yhat K^-1/X_a)|_{L_i=0}. All cross-pair residues have
+been removed, same-earlier-block residues were absent, and the
+inherited divided matching condition supplies the X_a factor.
+Thus w_i is a homogeneous linear zero-sum polynomial row on the
+line. Put P_ij={L_i=X_j=0}, and recover
+
+\[
+ h_i=\left(\frac{w_{i,j}(P_{ij})}{L_{qj}(P_{ij})}\right)_{j=0}^2 A_q,
+ \qquad w_i=h_iT_K-\lambda_i v_i,
+ \qquad G_i=h_i+\lambda_i A_t(a,:).
+ \tag{LC65}
+\]
+
+All denominators L_qj(P_ij) are units by generic earlier/terminal
+nonincidence. At j=a, the definition requires exact division by X_a
+before evaluation; the undivided matching value would lose data.
+The first formula makes every component of w_i-h_iT_K vanish at
+its coordinate-edge point. Each is therefore a multiple of X_j;
+zero sum on L_i makes the coefficient vector proportional to A_i.
+This proves the second formula and uniqueness of lambda_i. It can
+be read from any component after division by its nonzero A_i,j X_j.
+
+These three numbers G_i equal minus the three earlier-line
+coordinates of Gamma(Y). To check the sign directly, let the old
+E coefficient of an ambient preimage be lambda_i and its prefix
+pole coefficient be h_i. Then the actual E prefix is E_i, whose
+pole coefficient is -A_i, so I_old(R)-I has coefficient
+-lambda_i A_i-h_i=-G_i.
+
+There is a useful equivalent correction formula. Define G_tail
+by applying this extraction to Y0 K^-1-sum alpha F, subtracting
+ordinary old F after transport. Subtracting the actual copied
+columns instead gives
+
+\[
+ G_i^{\rm actual}=G_i^{\rm tail}
+              -\sum_{s\ne t,b}\alpha_{tsab}A_t(a,b)e_b.
+ \tag{LC66}
+\]
+
+The subtraction changes h_i by the displayed row and leaves
+lambda_i unchanged. These are the actual grouped source-prefix
+margins. A tail-only calculation that omits them computes a
+different matrix.
+
+For g a constant row define the admissible ambient representative
+N_i(g)=(X_a/L_i)g diag(X)(I-K)=T_q(0,(X_a/L_i)g diag(X)).
+Remove all earlier poles by setting
+
+\[
+ R_0=\widehat Y-\sum_{t\le m,a}
+                   \{\lambda_i E_i+N_i(G_i)\}.
+ \tag{LC67}
+\]
+
+After right multiplication by K^-1, the residue of the subtracted
+row, divided by X_a, is
+-lambda_i A_i A^-1 diag(L)+G_i T_K
+=h_i T_K-lambda_i v_i. Thus (LC67) has only terminal q-line
+poles and belongs to im(T_q). Neither E_i nor N_i(g) introduces
+a cross-block double residue after right transport. The E terms
+have zero graph defect; N_i(G_i) has defect -G_i at precisely its
+own prefix line.
+
+The terminal-only space in im(T_q) has the explicit basis
+
+\[
+ \{E_{qa}:a=0,1,2\}\ \cup\
+ \{N_{qa}(e_b):a,b=0,1,2\}.
+ \tag{LC68}
+\]
+
+For spanning, the old row of an ambient preimage has zero
+cross-pair residues and is E-only. Absence of earlier poles and
+the injectivity of (LC65) force all earlier E and prefix
+coefficients to vanish. The preimage therefore has only terminal
+E rows, terminal prefix poles and a diagonal polynomial prefix.
+The last part times (I-K) is an E_q combination. Rewriting
+T_q(R,I)=R+(I-R)(I-K) proves spanning by (LC68).
+
+The following local inverse proves independence and supplies its
+nine quotient coordinates modulo E_q. For each terminal line let
+w_a=(L_a R_0 K^-1/X_a)|_{L_a=0}. If the terminal old row has
+coefficient lambda_a and the terminal prefix pole has row h_a,
+then
+
+\[
+ w_a=h_aT_K-\lambda_av_a=G_aT_K,
+ \qquad G_a=h_a+\lambda_aA_q(a,:),
+ \tag{LC69}
+\]
+
+because A_q(a,:)T_K=L_a e_a-v_a. In particular w_a is a linear
+polynomial row. For j different from a, take P_aj={L_a=X_j=0}
+and set g_j=w_a,j(P_aj)/L_j(P_aj). These two ratios are
+(G_a A^-1)_j. The own component on the entire line gives the
+constant delta_a=-w_a,a/X_a=G_a,a. Complete the three-variable
+solve by
+
+\[
+ g_a=\frac{\delta_a-\sum_{j\ne a}g_jA_q(j,a)}{A_q(a,a)},
+ \qquad G_a=gA_q.
+ \tag{LC70}
+\]
+
+The coefficient A_q(a,a) is nonzero. The exact quotient defining
+delta_a can be evaluated at any point of L_a with X_a nonzero;
+it is not an assumed value at the matching point. This inverse
+recovers all nine terminal prefix-defect coordinates with the
+same minus sign as (LC65). It also proves the nine N_q classes
+independent modulo the three E_q rows, so (LC68) has dimension
+twelve. The three E_q rows themselves are independent by their
+distinct line residues.
+For a fixed ordering d,e of the other two states, the linear map
+G_a to ((G_a A^-1)_d,(G_a A^-1)_e,G_a,a) has determinant
+plus or minus A_q(a,a)/det(A_q). Thus the three terminal solves
+together contribute the explicit nonzero factor
+plus or minus A_00 A_11 A_22/(det A)^3.
+
+Stack (LC65) for all earlier lines and (LC70) for the terminal
+lines. The resulting 9q-vector is exactly -Gamma(Y), including
+every projection correction and source margin. Consequently
+(LC61) can be computed using script D_q inverse and these local
+linear solves, without evaluating the full map I_old on arbitrary
+recovered rows or invoking the PP interpolation inverse. This
+does not remove the old-source dependence: it is retained in the
+actual F residue matrix and its inverse. No prepend recurrence or
+uniform nonzero determinant coefficient has yet been proved.
