@@ -741,6 +741,29 @@ the paper observation formulas, interpolation and actual projection
 coefficients. One bounded run used 5.24 seconds and 41 MB; the code
 was independently audited. It verifies this decomposition at the
 existing finite fixture and supplies no all-length inference.
+The direct extraction (LC71)--(LC76) further writes the actual
+defect matrix as -G+M D_q^-1 B, where D_q is the old F cross-pair
+matrix and M consists of explicit shared-head source margins plus
+old divided matching values. An invertible row change splits its
+target into 6q sparse margin rows and 3q matching rows. This is an
+audited matrix identity, not a new rank bound. A prepend recurrence
+must still control both blocks and the first-slot-dependent inserted
+word correction (LC77). It must also justify old rank on the special
+diagonal-plus-ones common-G family, rather than inheriting that rank
+from unrestricted generic G.
+The prescribed weighted family now has exact finite old-source bases:
+at r=(2,3,5) and economic times, the actual F pair-residue matrices
+have ranks 54 and 108 for q=3 and q=4. Their determinants are 70515
+and 866635 modulo 1000003 in the stated pair-vector coordinates.
+All geometry and independent polynomial-clearing controls pass.
+This supplies restricted-family base cases, not a rank theorem for
+larger q.
+A second audited membership proof uses the saturated flat limit of
+the generic ambient. It proves A0=span(H) direct-sum im(T_q)
+direct-sum span(Z), with dimension N_(q+1), without old-source
+independence or the earlier extra pair-motion conditions. See
+(LC78)--(LC80). The actual source span still has to fill this
+ambient; that is precisely the remaining determinant obligation.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently
@@ -945,7 +968,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    Its entries now have the local extraction formulas (LC62)--(LC70),
    using the actual old F cross-pair inverse instead of a full I_old
    inversion. Derive a structural nonzero leading term or a prepend
-   recurrence for that matrix, retaining every source margin. This combines the
+   recurrence for that matrix, retaining every source margin. The direct
+   block form (LC75)--(LC76) splits the target into 6q sparse margin
+   and 3q matching rows. Control both blocks under the actual inserted
+   word correction (LC77), and justify old rank on any preserving
+   specialization used. This combines the
    leading and remaining jet questions without assuming the six leading
    survivors independent.
    Then apply the scalar-covariate bridge.

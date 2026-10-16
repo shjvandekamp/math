@@ -1737,3 +1737,240 @@ coordinate matrix, not the canonical graph-coordinate matrix (LC61).
 The two tests have the same rank under the proved identification,
 but their determinants need not coincide. This is external exact
 finite evidence, not a Lean result or an all-q nonvanishing theorem.
+
+## A direct block matrix with sparse source-margin rows
+
+The local extraction can also be performed before subtracting the F
+columns. This gives an explicit Schur form with a fixed actual-source
+correction matrix. For i=(t,a), define on the old ambient space
+
+\[
+ e_i(R)=-\frac1{A_t(a,a)}
+       \left[\frac{L_iR_a}{X_a^2}\right]_{L_i=0}(M_i).
+ \tag{LC71}
+\]
+
+The quotient is canceled on the line before matching evaluation.
+The ambient coordinate and matching conditions make it regular, and
+e_i(E_j)=delta_ij. For Y0=Y-sum zZ=T_q(R,I), let h_i be the pole
+coefficient of I diag(X)^-1 at X_a/L_i and set
+
+\[
+ G_i(Y_0)=h_i+A_t(a,:)e_i(R).
+ \tag{LC72}
+\]
+
+This is independent of the collision preimage ambiguity: at a terminal
+kernel generator, the changes h_i=A_q(a,:) and e_i(R)=-1 cancel.
+It is a direct local observation of Y0, without computing R or I.
+Indeed u_i=(L_iY0 K^-1/X_a)|_{L_i=0} has the form
+Res_i(R)/X_a+h_iT_K. Its first summand's j-component vanishes at
+P_ij, including j=a by divided matching. On earlier lines the
+three coordinate-edge values therefore recover h_i exactly as in
+(LC65), and
+
+\[
+ e_i(R)=-\frac1{A_t(a,a)}
+       \left[\frac{(u_i-h_iT_K)_a}{X_a}\right](M_i).
+ \tag{LC73}
+\]
+
+Here u_i is generally rational on the line, with cross-pair poles;
+no polynomial or constant-on-the-line assertion is made. All
+evaluation points avoid those poles. At terminal line a, the two
+other coordinate-edge values give (G_a A^-1)_j, j different from a,
+as before. The third datum is now
+delta_a=-[u_a,a/X_a](M_a), evaluated after cancellation at matching.
+It equals G_a,a. Formula (LC70) then recovers G_a. Before the earlier
+and F subtractions, this canceled ratio need not be constant along
+the line. This distinction is necessary for the direct construction.
+
+For an actual old F column define the three-entry block
+
+\[
+ M_{i,F_{tsab}}=
+ \mathbf1_{i=(t,a)}A_t(a,b)e_b+A_i e_i(F_{tsab}),
+ \qquad B(Y_0)=D(Y_0K^{-1}).
+ \tag{LC74}
+\]
+
+All entries are explicit old-source residues or matching values.
+With alpha=script D_q inverse B, the old row decomposes as
+R=sum alpha F+sum_i lambda_i E_i, where
+lambda_i=e_i(R)-sum_F alpha_F e_i(F). Applying the actual source
+prefix conventions gives exactly
+
+\[
+ \Gamma(Y)=-G(Y_0)+M\mathscr D_q^{-1}B(Y_0).
+ \tag{LC75}
+\]
+
+Equivalently M=G(C(F)) and G(C(E))=0. Thus the residual square
+matrix is a Schur complement of the completely specified block
+matrix
+
+\[
+ \begin{pmatrix}
+    \mathscr D_q&B(\mathcal Y_0)\\
+    M&G(\mathcal Y_0)
+   \end{pmatrix},
+ \quad
+ \mathcal Y=(\Pi_H W,\Pi_H S,\Pi_H U_{s\ge2}).
+ \tag{LC76}
+\]
+
+Its determinant is (-1)^(9q) det(script D_q) det(Gamma(mathcal Y)).
+This gives an explicit matrix identity, not a proof of either new
+determinant's nonvanishing.
+
+In each three-row block, quotient by span(A_i). The matching part
+of (LC74) disappears, leaving only the shared-head source margins
+indicator_{i=(t,a)} A_t(a,b)e_b. A parameter-only invertible row
+change therefore splits the target into 6q sparse margin coordinates
+and 3q remaining coordinates that retain the matching terms. The
+split is exact; it provides no rank conclusion by itself. The direct
+observation, source signs, and Schur identity were independently
+audited.
+
+Two concrete issues remain for a preserving-prepend recurrence.
+First, diag(r)+11^T, even after row and column scaling, lies on
+the hypersurface G_01 G_12 G_20=G_02 G_21 G_10. Generic old-source
+independence on unrestricted G does not imply old script D_q is
+invertible throughout, or generically within, that specialization.
+A separate restricted-family theorem or a controlled transverse
+perturbation of G is required. Second, for an actual old source
+whose completed word starts P_s=K_s R_s, insertion of a new
+earliest block Kcirc gives P_s^+=K_s Kcirc R_s and
+
+\[
+ F_{tsab}^{+}=F_{tsab}
+             +p_{tab}e_bK_s(I-K^{\circ})R_s.
+ \tag{LC77}
+\]
+
+The first-slot-dependent factor K_s remains. The scalar preservation
+identity v Kcirc=S v used for the transverse theorem does not
+remove this actual source correction. A useful next lemma must
+control script D_q and M jointly under (LC77), including the
+matching coordinates and all source margins. Neither the old
+independence premise nor full transverse rank supplies that lemma.
+
+The restricted-family issue has exact finite bases. The
+[weighted source script](../exploration/source24_weighted_source_base.py)
+and [saved certificate](../exploration/source24-weighted-source-base-results.json)
+use r=(2,3,5), Gtilde=[[3,1,1],[1,4,1],[1,1,6]], first-column
+row normalization, and times (8^t,8^(2t)). At p=1000003 the actual
+F cross-pair matrices have rank 54 and determinant 70515 at q=3,
+and rank 108 and determinant 866635 at q=4. These determinants
+use the ordered pair basis (v_uc,v_vd) for each vector residue,
+rather than its first two output components. The full ranks give
+finite source bases by the already proved E-kernel characterization.
+
+Strong geometry checks include same-block pairs and coordinate-edge
+incidences. An independent polynomial-cleared numerator verifies all
+three residue components, retaining the actual source factor and
+word order; separate ordinary evaluations check that factor again.
+The fixed fixture was neither replaced nor scanned. One run took
+0.23 seconds externally with peak RSS 18,874,368 bytes. The primary
+and an independent reviewer audited the script without rerunning it.
+These prove nonempty generic rank opens within the preserving family
+at q=3 and q=4 only. The restricted-family rank theorem for arbitrary
+q and the recurrence for the residual matrix remain open.
+
+## The entire flat collision ambient has the direct-sum decomposition
+
+The [flat-collision investigation](https://chatgpt.com/c/6ad1a73b-3900-83eb-89a3-f5d3a9828d96)
+supplies a second, shorter membership proof. Its saturated-lattice
+argument was independently audited locally. It proves a stronger
+ambient statement than (LC55), and does not need that proof's extra
+pair-motion conditions or the longitudinal fullness (LC51).
+
+For generic k-block geometry, an ambient basis consists of E_i and,
+for every unordered cross-block pair i=(t,a), j=(s,b), the two rows
+h_j E_i and h_i E_j, where h_i=X_a/L_i. At the pair their double
+residues are -X_a X_b v_i and -X_a X_b v_j. They are independent
+zero-sum rows and affect no other double residue. After removing
+all these pairs, the same divided matching argument as in (LC62)
+leaves precisely the E span. Consequently this geometric basis
+has dimension N_k, without using actual source independence.
+
+Work over the field F of old parameters and use the formal
+common-G deformation A_n(epsilon)=A_q diag(1,1+tau epsilon,
+1+nu epsilon). Clear the divided output rows by the product
+D_epsilon of all old and new row forms. This embeds the generic
+(q+1)-block ambient into a fixed finite-dimensional homogeneous
+polynomial space V over F((epsilon)). Let
+
+\[
+ \mathcal L=W_\varepsilon^{\rm cleared}\cap V[[\varepsilon]],
+ \qquad
+ \mathcal A_0=
+   D_0^{-1}(\mathcal L/\varepsilon\mathcal L)
+                 \operatorname{diag}(X).
+ \tag{LC78}
+\]
+
+The power-series intersection is a finitely generated torsion-free
+module over the discrete valuation ring F[[epsilon]]. It is free
+of rank N_(q+1). Saturation gives
+L intersect epsilon V[[epsilon]]=epsilon L, so its reduction
+injects into V. Since D_0 is a nonzero polynomial even though
+its terminal factors repeat, the displayed rational-row map is
+injective and dim A0=N_(q+1). This is the saturated flat limit,
+not the solution space of naively specialized ambient equations.
+
+All actual leading columns belong to A0. Every stated first jet
+also belongs: clear its actual vanishing source difference and
+divide by epsilon, whose constant coefficient is zero before the
+division. The resulting power-series lattice element reduces to
+D_0 times that divided jet.
+
+Every ambient append image also lifts. If R=r diag(X) is in W0_q
+and I=j diag(X) is a prefix, the divided row of T_n(R,I) is
+
+\[
+ j+(r-j)\operatorname{diag}(X_a/L_{na})A_n.
+ \tag{LC79}
+\]
+
+It preserves old matching and same-block conditions. Its new-line
+residue has an explicit X_a factor, giving the new matching
+condition, and a single new kernel introduces no same-new-block
+double residue. Coordinate factors and zero sum are preserved.
+Thus T_n(R,I) belongs to the generic new ambient and has a regular
+cleared limit, proving im(T_q) is contained in A0. By (LC2) its
+dimension is N_q+9q. The three Z directions also lie in A0 and
+are independent modulo im(T_q) by their divided matching
+observations (LC19)--(LC21).
+
+Finally the actual frame H in (LC53) lies in A0 and has 9q
+independent O images, while O kills im(T_q) and Z. Therefore
+their direct sum has dimension
+(N_q+9q)+3+9q=N_(q+1), the whole flat ambient:
+
+\[
+ \mathcal A_0=
+   \operatorname{span}\mathcal H
+        \oplus\operatorname{im}T_q
+        \oplus\operatorname{span}Z,
+ \qquad
+ \ker(O|_{\mathcal A_0})=
+        \operatorname{im}T_q\oplus\operatorname{span}Z.
+ \tag{LC80}
+\]
+
+No old-source independence is used in this ambient decomposition.
+It uses generic geometry, the ambient kernel calculation, and the
+proved full transverse frame. O may initially be regarded as taking
+values in all rational line observations; the dimension argument
+then forces its image to equal O(H). Thus it does not presuppose
+that every flat-limit row has the bounded binary-form observations.
+Alternatively the fixed 9q line evaluations witnessing O(H) give
+the same direct-sum argument.
+
+This proves membership for every actual residual in (LC54) with
+fewer auxiliary hypotheses and identifies the entire flat ambient.
+It does not identify the actual source span with that ambient.
+Under shorter-source independence the exact source rank is still
+N_q+9q+3+rank(Gamma(mathcal Y)), and the remaining determinant
+(LC61), equivalently (LC76), is still unproved for arbitrary q.
