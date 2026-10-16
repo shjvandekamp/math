@@ -442,12 +442,13 @@ source24-zero-prefix-boundary-extension files.
 The sharper auxiliary kernel bound is 3q. Exact coupled checks attain
 it at n=4,5,6, with ranks 9,12,15; stacking the splitting trace on the
 same kernel gives 18,24,30. These leave three joint endpoint directions.
-Two conditional paper lemmas now recover the constant and linear
-endpoints after the actual scalar projection. Their hypotheses are
+Three conditional paper lemmas now recover all three endpoint
+coordinates after the actual scalar projection. Their hypotheses are
 old scalar spanning and inherited trace surjectivity; they do not
-prove those hypotheses inductively. The quadratic endpoint and
-uniform auxiliary body spanning remain open, and their ranks must
-be combined on the same source kernel.
+prove those hypotheses inductively. Uniform auxiliary body spanning
+and the endpoint correction against that body remain open. The body
+map is now reduced to the kernel of the explicit 6q+3 new-source
+quotient coordinates; no old scalar inverse is needed there.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -623,9 +624,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    its other-component restriction; the finite q=4,5 checks are
    bases to investigate, not an induction theorem.
    A boundary induction for this joint invariant misses three
-   endpoint coefficients on the actual scalar kernel. Two conditional
-   endpoint lifts now survive scalar elimination; recover the third
-   and prove uniform body spanning with the same source coefficients.
+   endpoint coefficients on the actual scalar kernel. Three conditional
+   endpoint lifts now survive scalar elimination; prove uniform body
+   spanning and its endpoint Schur correction with the same source
+   coefficients.
    The inherited higher jet is coupled to the scalar trace, so
    independently computed ranks cannot simply be added.
    Neither route is yet complete.

@@ -1285,3 +1285,122 @@ under the stated scalar-basis hypotheses. Both lifts were checked
 independently against the actual source words. The quadratic endpoint
 and the uniform auxiliary body rank remain open. Separate body and
 endpoint ranks cannot be added without checking their common kernel.
+
+### A third conditional endpoint lift
+
+Keep the same hypotheses and assume q>=4. Let C2=C_nq^(01) be
+the second candidate above, put s=q−2, and set C3=C_ns^(11).
+For C3 the old word difference V=e1(P1−Ps) has the common final
+blocks q−1 and q. On X2=0, X1=1, each binary suffix determinant
+starts with a_j X0. The preceding difference starts with
+(a_s−a_(s−1))X0. Hence
+
+\[
+ V_0=KX_0^3+O(X_0^4),\qquad
+ K=(a_s-a_{s-1})a_{q-1}a_q\ne0.
+ \tag{ZP58}
+\]
+
+The final old transition also gives
+V2/X2=v_q V0/X0 on this axis after cancellation. Define
+Jxx=partial_0²(p0−p2/v)(e1). Like Jx, it vanishes exactly on
+every appended old row. Direct cancellation in the two new candidates
+gives, with D*=D_q(e1) and delta=a_q−a_(q−1)−(b_q−b_(q−1))/v,
+
+\[
+ \begin{array}{ll}
+ J_x(C2)=6D_*\varepsilon^3\delta,&
+ J_{xx}(C2)=10D_*\varepsilon^2\delta+O(\varepsilon^3),\\
+ J_x(C3)=0,&
+ J_{xx}(C3)=12D_*\varepsilon^3K(1-v_q/v).
+ \end{array}
+ \tag{ZP59}
+\]
+
+For example, the C2 polynomial multiplier on this axis is
+epsilon X0(X0+2epsilon)(X0+3epsilon). Its linear and quadratic
+coefficients are 6epsilon³ and 5epsilon²; the latter second
+derivative accounts for the factor 10.
+
+For both candidates the first scalar coefficient in epsilon lies
+in the boundary image, so the previous projection argument makes
+every scalar-basis coefficient O(epsilon). The Astar1 coefficient is
+exactly zero, since both candidates have zero terminal incidence.
+Only the A columns can affect Jx or Jxx. They have Jx=O(epsilon³)
+and Jxx=O(epsilon²); A_t0 has Jx=0 and Jxx=O(epsilon³).
+The remaining columns retain X2 and contribute neither derivative.
+The leading coefficients in these orders stay bounded as v tends
+to infinity. The terminal new-block terms cancel in p0−p2/v;
+the remaining coefficients involve old divided outputs and their
+derivatives. The old tails contain at least two terminal matrices,
+so derivatives of the initial new kernel do not introduce an
+uncontrolled coefficient at these orders.
+
+The order-epsilon A projection coefficients are O(1/v). Indeed,
+restrict the first scalar coefficient to X2=0. For C2 and C3 this
+restriction is independent of v. Other basis columns have zero
+boundary restriction, whereas the A matrix is v times an invertible
+leading matrix plus an old-only matrix, by (ZP12)--(ZP14).
+Thus its inverse is O(1/v). This bound uses the same scalar
+projection as the endpoint calculation.
+
+For the scalar-zero residuals R2,R3, these bounds give
+
+\[
+ \begin{split}
+ J_x(R2)&=6D_*\varepsilon^3\delta+O(\varepsilon^4),\\
+ J_{xx}(R2)&=10D_*\varepsilon^2\delta+O(\varepsilon^3),\\
+ J_x(R3)&=\varepsilon^4 O(1/v)+O(\varepsilon^5),\\
+ J_{xx}(R3)&=\varepsilon^3
+       [12D_*K(1-v_q/v)+O(1/v)]+O(\varepsilon^4).
+ \end{split}
+ \tag{ZP60}
+\]
+
+First take the coefficient of epsilon^6 in det(Jx,Jxx), then let
+v tend to infinity. Its limit is
+72D*²(a_q−a_(q−1))K, which is nonzero. This ordered expansion
+proves nonvanishing of a rational function; it does not exchange
+an uncontrolled pair of limits.
+
+Both corrected rows have exactly zero constant auxiliary endpoint.
+On scalar-zero rows B_w=−p0|auxline/X1, so the coefficient of w³
+in their linear/quadratic endpoint determinant is
+−det(Jx,Jxx)/2. This determinant is generically nonzero. Together
+with (ZP55), the actual scalar kernel therefore maps onto all three
+endpoint coordinates, under the same old scalar/trace hypotheses.
+This is a conditional paper lemma, independently checked locally.
+It does not by itself prove the full auxiliary rank: the endpoint
+correction against a basis for the remaining coefficients must still
+be retained.
+
+### The remaining body map without an old scalar inverse
+
+The boundary observations in (ZP41)--(ZP49) give an isomorphism from
+the boundary scalar ambient modulo its inherited old ambient to
+6q+3 quotient coordinates: they annihilate the latter, and the
+displayed 6q+3 columns give full rank in a quotient of exactly that
+dimension. Apply these coordinates to all new zero-prefix generators,
+and let Knew be their coefficient kernel. Under old scalar fullness,
+every row in Knew can have its scalar component canceled by an
+appended old zero-prefix row. The latter has component one identically
+zero at the boundary, so this correction does not change B_w.
+
+Conversely, decomposing an actual boundary scalar-kernel row into old
+and new generators puts its new part in Knew. Thus the desired
+auxiliary image is exactly
+
+\[
+ B_w(\text{actual boundary scalar kernel})
+       =B_w(K_{\rm new}).
+ \tag{ZP61}
+\]
+
+This removes the old scalar inverse from the body problem while
+preserving all coefficients. The unresolved uniform condition is
+rank B_w(Knew)=3q. Even after proving that condition, the endpoint
+Schur correction on the same coefficient space must be shown
+nonsingular. Simply inserting the new kernel on the left of an old
+scalar relation is not justified by the actual move-first source
+words. Right appending such a relation instead kills it identically
+at the boundary because the new rows 0 and 1 coincide.
