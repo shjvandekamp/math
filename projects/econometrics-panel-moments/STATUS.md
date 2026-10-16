@@ -809,6 +809,20 @@ corrections. The separate audited Pro39 calculation (LC90)--(LC92)
 exhibits three graph-pair error classes that cannot be absorbed
 by only the eighteen terminal/prepend boundary pairs. Neither
 result supplies the full old-source Schur-complement step.
+The actual accumulated head coefficients now have the bounded
+endpoint formula (LC96)--(LC98). Its three-by-three recovery
+matrix has determinant S^2/product_b(S-w_b)>0 in the positive
+weighted family. After using the terminal residues, only the
+three last incoming coefficients remain unknown. This controls
+the previously growing polynomial head correction, but does not
+yet solve those coefficients or prove the boundary determinant.
+The saved finite boundary checker independently extracts the
+54-square minor 482791 from the prior q=4 matrix, verifies its
+three sector determinants, and gives the remaining 27-square
+new-first Schur determinant 779960 after head elimination.
+This is one exact finite case, not the uniform three-by-three
+recurrence theorem; no source matrix was regenerated and no
+parameters were searched.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently

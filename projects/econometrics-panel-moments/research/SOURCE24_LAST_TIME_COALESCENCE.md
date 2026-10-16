@@ -2272,6 +2272,19 @@ the boundary-block question but does not prove it for every q.
 Even its full rank would leave the retained-old-column Schur
 complement to be proved nonzero.
 
+This extraction is now saved reproducibly in
+source24_boundary_block.py and its results JSON. The three
+18-square sector determinants are 252004, 795650, and 365879,
+with new-head rank nine in every sector. Eliminating all 27
+heads gives a 27-square new-first Schur determinant 779960;
+the selected head minor is 343818. Both permutation signs
+are +1 and their product is 482791. The checker verifies 1,944
+off-sector zeros and 27 separate two-block paired-pole formula
+controls. It uses the saved, previously polynomial-checked
+matrix without regenerating it. One run took 1.46 seconds,
+peak RSS 17,170,432 bytes. This 27-square finite Schur matrix
+is not the three-by-three recursive matrix introduced below.
+
 ## The scalar prepend leaves an explicit graph-pair obstruction
 
 An independently audited calculation from
@@ -2439,3 +2452,87 @@ requires only the shorter paired boundary inverse, rather than
 the full old source inverse. Even a proof of det S_q nonzero
 would still leave the old-source Schur complement needed for
 the original equation-(24) independence theorem.
+
+## Recovering the accumulated head coefficients from endpoint data
+
+The polynomial head corrections in (LC89) depend only on the
+three accumulated head sums, not on every head coefficient
+separately. These sums admit an exact endpoint formula. For q>=2,
+write a paired-sector combination as
+Y=sum_(s,b) x_sb H_sb+sum_(t,c) y_tc J_tc, and put
+sigma_b=sum_s x_sb, h_s=sum_b x_sb X_b e_b,
+mu_t=sum_c y_tc A_t(c,a)X_c/L_tc. All completed terms in Y
+end in K_q except the six last-slot terms
+
+\[
+ E=(h_qK_q+\mu_q v)P^q,\qquad
+ P^q=K_1\cdots K_{q-1}.
+ \tag{LC96}
+\]
+
+They end in K_(q-1). At the coordinate-edge point
+M_b={L_circle,a=X_b=0}, use the active two-state column vector
+eta_(t,b)=A_t[hat b,hat b]^(-1)A_t[hat b,b]. A completed row
+ending in K_t has a preceding row with component b divisible
+by X_b. Its canceled output ratios therefore obey
+(R_b/X_b)(M_b)=sum_(i different from b)
+eta_(t,b,i)(R_i/X_i)(M_b).
+All endpoint denominators and active principal minors are
+assumed nonzero.
+
+Define Phi_q(Y)_b=(Y_b/X_b)(M_b)
+-sum_(i different from b)eta_(q,b,i)(Y_i/X_i)(M_b), and
+Psi_q(E)_b=sum_(i different from b)
+(eta_(q-1,b,i)-eta_(q,b,i))(E_i/X_i)(M_b).
+The preceding identity gives
+
+\[
+ L_q\sigma=\Phi_q(Y)+\Psi_q(E),\qquad
+ (L_q)_{bb}=1,\quad (L_q)_{bi}=-\eta_{q,b,i}\ (i\ne b),
+ \quad
+ L_q=\operatorname{diag}((A_q^{-1})_{bb})^{-1}(A_q^{-1})^{\mathsf T}.
+ \tag{LC97}
+\]
+
+This is a new endpoint matrix L_q, not a row form L_qa.
+It is invertible whenever A_q and its inverse diagonal entries
+are nonzero. In the positive weighted family, write
+w_i=1/r_i, S=1+sum_i w_i, and b_q=(1,u_q,v_q). Then
+eta_(q,b,i)=(b_qb/b_qi)w_i/(S-w_b), and
+det L_q=S^2/product_b(S-w_b)>0, independent of the time factors.
+Thus this particular inverse introduces no new nonvanishing
+problem in the weighted family.
+
+The last-slot dependence can be reduced further. At P_c from
+(LC94), choose an active component j and set
+rho_c=-[Res_(L_qc)(YV)]_j/X_c,
+xi_c=(v_qc P^q V)_j(P_c),
+zeta_c=(v P^q V)_j(P_c), V=K_q^(-1).
+All inherited columns are regular at this q-block pole after
+transport, so
+x_qc=(rho_c-A_q(c,a)zeta_c y_qc)/xi_c.
+The nonzero xi_c are the same pivots as before.
+
+For an explicit coefficient form, put
+U_c=X_c e_c K_q P^q and
+V_c=A_q(c,a)X_c vP^q/L_qc; the latter V_c is a row, distinct
+from the inverse matrix V. Define parameter-only columns
+C_q(:,c)=Psi_q(U_c)/xi_c and
+D_q(:,c)=Psi_q(V_c-A_q(c,a)zeta_c U_c/xi_c). Then
+
+\[
+ \sigma=L_q^{-1}
+       \bigl(\Phi_q(Y)+C_q\rho+D_q y_{\rm last}\bigr).
+ \tag{LC98}
+\]
+
+The exceptional endpoint evaluations in (LC96) use only the
+active two-state products at each M_b. Their finite list of
+unknown coefficients is now the three last incoming y_qc:
+no full list of shorter head coefficients is required to
+compute their accumulated polynomial correction. This identity
+holds for every actual paired-source combination, even without
+assuming the paired source matrix invertible. It does not
+recover y_last or prove det S_q nonzero. Those three remaining
+coefficients, and their interaction with the canceled values
+in (LC95), are the concrete next step.
