@@ -463,6 +463,14 @@ boundary quotient basis. An explicit move-first outgoing column
 supplies the pole missed by the incoming candidates. The remaining
 q matching directions, after the same scalar and axis correction,
 are the current body-rank obligation.
+At q=4,5, exact projection through that prescribed scalar basis
+confirms the 2q axis selector. The C12 and C22 matching families,
+even together, miss one direction. Adding C_2n^(11) completes the
+matching basis in both fixtures: full 3q determinants are
+126855,623902 modulo 1,000,003. The failures, left nullvectors and
+successful source-coordinate corrections are retained in the
+source24-zero-prefix-projected-body files. The resulting explicit
+q-column matching selector still needs a uniform proof.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,

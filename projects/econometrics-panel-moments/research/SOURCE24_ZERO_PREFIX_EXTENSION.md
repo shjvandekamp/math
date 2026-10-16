@@ -1540,8 +1540,52 @@ is therefore
 \]
 
 A nonzero minor of these limiting functions proves a nonzero rational
-minor for generic finite positive v. All pole nonincidences and the
+ordinary-residue minor: all their poles are among the 2q old
+state-0/1 poles, and they tend to zero as y tends to infinity.
+Indeed each U tends to 1, so its differences are O(1/y); also
+D=O(y^−q), Q1=O(y), and the two E limits −D Q1/y, −D Q1 are
+proper for q>=2. A function with zero residues would be a polynomial
+tending to zero, hence zero. The fixed pole positions and vanishing
+A corrections give a nonzero residue minor for generic finite
+positive v. All pole nonincidences and the
 assumed old/full-quotient conditions are simultaneous generic opens
 in the fixed-G* parameter family. This conditional paper lemma was
 independently audited locally. The remaining q matching conditions
 must still be proved after this same scalar and axis elimination.
+
+The fixed-projection verifier `source24_zero_prefix_projected_body.py`
+checks (ZP67) at q=4,5 with old u_t=7^(t−1), v_t=3^(t−1),
+new u=0, v=3^q. Its scalar basis consists of a saved independent
+appended-old subset and the accepted 6q+3 columns, retaining that
+same inverse for every candidate. The axis ranks are 8,10, with
+determinants 85308,883182 modulo 1,000,003.
+
+Each proposed q-column family C_tn^(12) and C_tn^(22) has matching
+rank only q−1, and their union still has rank q−1. Their ordinary
+body-axis observations already vanish. These failed q-column tests
+are preserved. The additional incoming C_2n^(11), after the same
+scalar projection and then the same axis projection, supplies the
+missing matching direction in both fixtures. An explicit completed
+matching selector is
+
+\[
+ C_{tn}^{12}\ (1\le t\le q-1),\qquad C_{2n}^{11}.
+ \tag{ZP68}
+\]
+
+Its matching determinants are 367178,654896, and the combined 3q
+axis/matching determinants are 126855,623902. Canonical left
+nullvectors of the failed union, in old-block order, are
+(97,986380,808981,1) and (21058,99893,6429,26603,1); their
+values on the added column are 947565 and 501704. The raw binary
+incidence weights do not annihilate the fully corrected union;
+the scalar correction must remain in any uniform argument.
+
+The saved output contains the actual source coefficients, scalar
+and axis projections, the failed and completed minors, and
+independent polynomial-cleared residue controls. The initial run
+used 2.246 seconds and 38,502,400 bytes RSS; the completion follow-up
+used 1.972 seconds and 30,212,096 bytes RSS. Both exited successfully
+without reaching the resource guard. These finite results give a
+specific selector to prove uniformly; they do not prove (ZP68)
+works for every q or settle the endpoint Schur correction.
