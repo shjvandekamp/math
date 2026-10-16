@@ -45,7 +45,10 @@ The equation-(24) continuation now has an independently audited
 paired boundary independence at every length. Its actual-source finite
 initialization was independently reconstructed by exact rational arithmetic.
 Lean checks the displayed initialization matrices and several polynomial
-and scalar components; the new paired theorem is not yet formalized end
+and scalar components, including actual two-block source derivatives.
+A second audited [ordered-confluence proof](research/SOURCE24_CONFLUENT_QUOTIENT.md)
+establishes nonvanishing of the actual three-class quotient coefficient.
+The new paired theorem is not yet formalized end
 to end. The remaining full-source condition is the retained-old Schur
 determinant \(D_q+Z_T-Z_BC_B^{-1}C_T\), with all insertion and head
 corrections retained.
@@ -55,7 +58,7 @@ recursive lifts, exact ordered matrix-product images, positive homogeneous
 representations and a conditional polynomial induction criterion. External
 finite source checks at T=5,6 and residue checks through T=8 remain finite
 evidence. The auxiliary binary parity theorem is fully Lean checked.
-[STATUS.md](STATUS.md#active-continuation-equation-24-for-t--5) retains
+[STATUS.md](STATUS.md#stopped-continuation-equation-24-for-t--5) retains
 the detailed progress and distinctions between these results.
 
 ## Verification

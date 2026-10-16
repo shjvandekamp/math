@@ -14,20 +14,20 @@ primary checkout are preserved. The GitHub snapshot contains the proved
 results, saved validation evidence, and the uncompleted next steps below.
 No journal submission or source-author contact has been made.
 
-## Active continuation: equation (24) for T >= 5
+## Stopped continuation: equation (24) for T >= 5
 
-The user set a research cutoff at 15:10 Europe/Amsterdam on 16 October
-2026 (13:10 UTC). At that time, stop starting Pro rounds and let active
-chats finish. A single extension of at most one hour is authorized only
-if concrete checked evidence puts a breakthrough close; its hard end
-is 16:10 Amsterdam (14:10 UTC). Then consolidate the established Lean
-proofs, publish the confirmed results and remaining research agenda,
-summarize explored approaches, and stop. Pause the still-unfinished
-research goal at that final handoff rather than claiming it complete.
+Research stopped at the user-set cutoff, 15:10 Europe/Amsterdam on
+16 October 2026 (13:10 UTC). All accepted Pro chats had finished.
+No optional one-hour research extension was used, since no checked
+result put full-source independence close enough to a proof.
+Final Lean verification and the GitHub handoff continued afterward.
+The cutoff automation was paused. The still-open research objective
+is not claimed complete.
 
-The continuation is **in progress**. The accepted results below are unchanged;
-independence of the particular equation-(24) family for every T is not yet
-proved or Lean checked.
+The continuation is **stopped**. Independence of the particular
+equation-(24) family for every T remains unproved and is not Lean checked.
+The concise handoff, explored routes, and prioritized future work are
+in [RESEARCH_ROUNDUP.md](RESEARCH_ROUNDUP.md).
 
 **Latest progress:** generic full paired boundary independence is now
 proved for every length at paper-proof level. The invariant-tail argument
@@ -42,21 +42,72 @@ finite-rank evidence, but the new theorem is not yet formalized end to end.
 The remaining full-source condition is the retained-old Schur determinant
 in (LC213), not paired transversality.
 
+A second audited route now proves the actual coefficient \(\mathfrak J_m\)
+in (NH73) generically nonzero for every fixed \(m\ge2\).
+[SOURCE24_CONFLUENT_QUOTIENT.md](research/SOURCE24_CONFLUENT_QUOTIENT.md)
+retains the actual endpoint sections through ordered confluence and
+computes the even-length determinant and odd-length first coefficient.
+A separate exact reconstruction passed 73 base identities. Lean checks
+the displayed determinant algebra and all-length coefficient inequalities;
+the confluence and actual quotient identification remain paper arguments.
+
 The supporting Lean formalization now proves the concrete normalized
 tail extension is a linear equivalence with a unique bounded-polynomial
 decomposition. Every factor condition is discharged on an explicit
 interval region. It also proves nonsingularity of the three displayed
 initialization matrices and derives the actual displayed two-block
-binary kernel, heads, and weak functions over the rationals. The current
-source-family aggregate passes 798 axiom checks in a 60-module closure;
-all use only standard foundational axioms. The actual source/time-derivative,
-later initialization, and genericity bridges remain unfinished.
+binary kernel, heads, and weak functions over the reals with exact
+rational constants. The actual kernel derivative and constant source
+combination are now also checked: the source's missing-output derivative
+is minus (r-z) times the displayed weak function. The final
+source-family verifier passed a clean rebuild of 66 modules and all
+1,013 declaration audits, using only standard foundational axioms.
+It took 600.48 seconds with maximum RSS 2,497,609,728 bytes; the two
+existing style warnings are recorded in the saved build log. Complete source-family indexing,
+forward promotion, later initialization, and genericity bridges remain unfinished.
+The literal rational transfer and new generators are also now connected
+in Lean to the concrete normalized polynomial model.
 
 A separate audited full-source obstruction, (PP40)--(PP45), shows that
 the fixed-frame regular rank-one prepend limit has nullity at least
 3q(q-13)/2 for q>=14. Regular correction coefficients give the stronger
 3q(q-9)/2 bound for q>=10. This rules out an invertible zeroth-order
 limit on that path; it does not rule out a higher-jet proof.
+Under old invertibility, (PP46) also bounds the ordinary update rank
+relative to that fixed old matrix below by max(0,3q(q-13)/2). The separate
+rank-two common-matrix degeneration (PP47)--(PP55) proves a cubic-order
+lower bound on the actual raw residue determinant's vanishing order.
+Neither obstruction proves a nonzero leading coefficient or full independence.
+
+The final local full-source checks also establish two obstructions.
+[SOURCE24_COLLISION_JETS.md](research/SOURCE24_COLLISION_JETS.md)
+derives the exact collision observation change, and 187 reconstructed
+checks exhibit nonzero Schur blocks in both old-pair directions.
+[SOURCE24_SOURCE_CONFLUENCE.md](research/SOURCE24_SOURCE_CONFLUENCE.md)
+gives actual constant column operations removing every first retained
+jet, and for q>=3 a coefficient subspace of dimension 3(q^2-5q+8)/2
+vanishing through second order. Its ordinary cubic minor is nonzero for q>=3;
+54 exact checks reconstruct the base coefficient. The same observations
+are already onto on actual new E columns (determinant 3/256), so this
+is not a projected cubic certificate. The saturated-quotient statement
+does not imply an unqualified valuation for the raw residue determinant.
+
+The final cubic algebra now also has a Lean module proving its actual
+homogeneous-kernel connection, entrywise x-derivatives, and observation
+determinants 397/2^37 and 3/256. Its 59 public declarations passed a
+focused axiom audit. The actual time-Taylor/source-circulation bridge
+and the all-length tail factor remain paper arguments; no quotient-rank
+claim is formalized by this module.
+
+[SOURCE24_CONIC_MARKED_LIMIT.md](research/SOURCE24_CONIC_MARKED_LIMIT.md)
+records an audited marked extension of actual double residues, an
+invertible residue/normal-jet observation change, and the companion
+transfer with actual affine heads. The basis requires r+z != 0, and
+the positive interval bounds require additional generic incidence
+exclusions. An explicit three-block exception demonstrates the need
+for that correction. The retained-old insertion error survives; full
+Schur nonvanishing remains open. These are paper arguments, not Lean
+or new numerical rank certificates.
 
 The following paragraphs record the earlier research stages. Their open
 paired-determinant statements are superseded by the invariant-tail result;
@@ -1391,32 +1442,20 @@ silently assumed by either proved theorem, and no result below is claimed.
    leading and remaining jet questions without assuming the six leading
    survivors independent.
    Then apply the scalar-covariate bridge.
-   The paired-boundary route now has a uniform paper rank bound
-   18q-9, by the endpoint coupling and triangular head quotient
-   in (LC115)--(LC123). Prove nonvanishing of the final three
-   incoming quotient directions per state sector; the endpoint
-   coupling's nonzero determinant does not by itself supply them.
-   The explicit three-row inherited interface (LC132) retains the unknown
-   response of the shorter actual family. An endpoint-only replacement
-   is excluded by (LC136). The simpler endpoint witness (LC138) settles
-   preceding pivots only, including after nearby generic perturbation.
-   The extension (LC143) covers every fixed positive weight triple.
-   Alternatively, prove nonvanishing of the binary-terminal response
-   W_m(tau) in (LC147). The conditional first-jet theorem (LC148)
-   and independent finite response/derivative certificates supply a
-   concrete induction target, but its all-length determinant is open.
-   More sharply, prove the coefficient in (LC151) nonzero for every
-   m>=2, starting from the separate q=2 base. Its finite m=2,3 values
-   are nonzero and its first two columns come from the projected
-   selected-first head in (LC152). A compatible source expansion or
-   recurrence for that projection is not yet established. Proper
-   actual-head transport now factors as (LC174) and preserves head
-   ranks on its stated domain. Extend this to the reset projection,
-   retaining the first-block edge singularity and actual commutator
-   corrections; the natural transported lifts alone are insufficient.
-   Then control the retained-old-source correction in (LC113).
-   Formalization of these residue, edge-descent, and asymptotic
-   arguments remains unfinished.
+   The earlier open paired-boundary target has now been settled at
+   paper-proof level by the invariant-tail argument and independently
+   by ordered confluence of the actual three-class quotient. Formalize
+   the remaining source-family indexing, forward promotion, later base
+   initialization and genericity bridges. Then prove the retained-old
+   determinant in (LC113), which the paired theorem does not settle.
+   The final full-source confluence proposes a more specific q=3 test:
+   rank 51 of the second retained coefficient modulo the saturated
+   actual new-source space, followed by a nonzero projected cubic
+   three-by-three minor. Both conditions are still open. The checked
+   ordinary cubic observations cannot serve as those quotient
+   functionals, since they are already onto on the actual new E columns.
+   The current priorities and unintegrated late leads are collected in
+   [RESEARCH_ROUNDUP.md](RESEARCH_ROUNDUP.md).
    None of these open claims is assumed by a completed theorem. Combine
    independence with the proved moment-space dimension to obtain spanning. The completed source-basis theorem remains
    T=4; neither the dimension theorem nor the index count supplies independence.

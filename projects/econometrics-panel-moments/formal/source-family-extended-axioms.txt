@@ -1728,3 +1728,442 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
  Classical.choice,
  Quot.sound]
 'PanelMoments.SourceInvariantTailActualBase.combinedWeak_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.pairColumn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.orderedPairCombination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.sum_pairColumn' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.orderedPairCombination_eq_commutator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.remainingProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.remainingProduct_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.singletonVector_eq_pairColumn' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.sourcePairCombination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.sourcePairCombination_eq_commutator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.oldSuffixProduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.remainingProduct_eq_prepend' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.collapseMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.stochastic_mul_collapse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.commutator_mul_collapse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.kernel_row_sum_of_rowForm_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.sourcePairCombination_zero_of_collapse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.prependTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.prependTable_other' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.rowForm_prependTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.baseNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.jetNumerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.kernel_prependTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.kernel_prependTable_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.prependJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.kernel_prependTable_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.prependTable_oldKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRankOnePrepend.oldSuffixProduct_prependTable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.sourcePairCombination_prependTable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.fixedMatrix_prepend_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRankOnePrepend.sourcePairCombination_prepend_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.G' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.X' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.v' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.timeFactors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.actualTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.actualRowForm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.K' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.rowForms' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.binaryScale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.scaleJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.formJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.binaryK' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.u' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernelJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.prefixNumerator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.mu' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.binaryMu' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.completedH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.completedJ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.weakH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.weakJ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.retainedH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.sourceH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.sourceJ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernel_eq_homogeneous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.completedH_eq_matrix_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.completedJ_eq_vecMul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.actualRowForm_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernel_affine_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernel_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernel_missing_formula' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernel_missing_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.u_eq_last_column' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernel_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernelJet_missing_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.kernel_missing_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.mu_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.mu_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.completedH_missing_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.completedJ_missing_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.sourceH_missing_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.sourceJ_missing_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.completedH_normalized_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.completedJ_normalized_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.sourceH_normalized_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailWeakDerivative.sourceJ_normalized_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.assembleRows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.completedRows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.sourceRows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedCompleted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedSource' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.binaryK_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.binaryMu_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.weakH_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.weakJ_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.actualCompletedH_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.actualCompletedJ_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.completedRows_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.sourceRows_eq_head_sub_completed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedCompleted_eq_matrix_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedSource_eq_matrix_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedSource_eq_head_sub_completed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedCompleted_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedSource_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedSource_zero_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.completedRows_missing_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedCompleted_missing_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedSource_missing_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedSource_missing_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedCompleted_normalized_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.combinedSource_normalized_deriv' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailBaseDerivativeBridge.actual_two_block_base' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.rationalCoordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.determinantProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.delta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.chi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.blockDeterminant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newDenominator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.rationalTransfer' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.beta0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.beta1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.beta2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.barBeta2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.normalizeValue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newDenominator_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.coordinate_div_determinantProduct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.blockDeterminant_mul_qValue' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.rationalTransfer_eq_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.normalize_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.rationalTransfer_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer_beta0_eq_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer_beta1_eq_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer_beta2_eq_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer_barBeta2_eq_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer_beta0_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer_beta1_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer_beta2_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceInvariantTailNormalization.newLayer_barBeta2_normalized' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.quotientMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.replacementRow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.oddReplacementMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.oddCoefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.thirdPower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.coordinateConversionMatrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.quotientMatrix_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.quotientMatrix_even_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.quotientMatrix_even_det_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.quotientMatrix_odd_second_row' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.quotientMatrix_odd_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.oddReplacementMatrix_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.coordinateConversionMatrix_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.coordinateConversionMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.thirdPower_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.thirdPower_le_one_twenty_seven' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.thirdPower_lt_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.three_mul_thirdPower_lt_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.weightedPower_succ_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.weightedPower_le_four_thirds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.weightedPower_lt_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.oddCoefficient_pos_at_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.oddCoefficient_ne_zero_at_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.quotientMatrix_even_det_pos_at_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.quotientMatrix_even_det_ne_zero_at_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.oddReplacementMatrix_det_pos_at_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentQuotientAlgebra.oddReplacementMatrix_det_ne_zero_at_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.Mat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.G' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.X' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.actualTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.numeratorSlope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.numeratorConstant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.denominatorSlope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.denominatorConstant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.K' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.D' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.E' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.xSlope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.columnDiag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.diagonalX' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.U' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.V' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.S' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.Y' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptySources' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.KValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.KDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.UValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.UDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.VValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.VDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.YValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.SDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.YDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.K_eq_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.HasMatrixJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.HasMatrixJet.const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.HasMatrixJet.add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.HasMatrixJet.sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.HasMatrixJet.mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.HasMatrixJet.columnDiag' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.HasMatrixJet.comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.K_hasMatrixJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.U_hasMatrixJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.V_hasMatrixJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.S_hasMatrixJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.diagonalX_hasMatrixJet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.Y_hasMatrixJet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.Y_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.Y_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.Y_deriv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.observationMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.cubicObservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.cubicObservation_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.cubicObservation_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.cubicObservation_det_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptyValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptyDerivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptySources_hasMatrixJet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptySources_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptyObservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptyObservation_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptyObservation_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceConfluentCubicAlgebra.emptyObservation_det_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

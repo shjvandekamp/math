@@ -10,6 +10,10 @@ to those residues. The paired determinant was subsequently settled at
 paper-proof level by the independently audited invariant-tail argument
 and exact initialization in
 [SOURCE24_INVARIANT_TAIL.md](SOURCE24_INVARIANT_TAIL.md).
+The coefficient route (NH73)--(NH75) was subsequently completed as
+well: [SOURCE24_CONFLUENT_QUOTIENT.md](SOURCE24_CONFLUENT_QUOTIENT.md)
+proves generic nonvanishing of the actual three-class coefficient
+at every fixed length, with an independently checked two-block base.
 The statements below that call paired transversality open describe the
 earlier stages of this investigation. The cubic and coefficient routes
 remain useful alternatives, but are no longer needed to prove paired
@@ -1496,8 +1500,11 @@ original third column is \(O(1)\). The determinant is therefore
 degree-ten bound. Affinity of every column in \(b\) gives degree
 at most three in \(b\).
 
-Nonvanishing of \(\mathfrak J_m\) at every length would suffice for
-this route. It has not been proved here. The coefficient reduction
+Nonvanishing of \(\mathfrak J_m\) at every length suffices for
+this route. It is now proved in
+[SOURCE24_CONFLUENT_QUOTIENT.md](SOURCE24_CONFLUENT_QUOTIENT.md),
+which supersedes the earlier open status of this coefficient.
+The coefficient reduction
 does not require the boundary \(A=0\) to be an admissible economic
 parameter: a nonzero rational coefficient would prove nonidentity
 before returning to the positive generic region.

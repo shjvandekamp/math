@@ -47,7 +47,28 @@ PY
 # Lake resolves the environment, then exits before any compiler starts.
 LEAN_PATH=$(lake env printenv LEAN_PATH)
 export LEAN_PATH
-source_modules='Model Polynomial SourceMoments BasisCertificate PermutationMoments MomentLifts SourceFamily SourceCounting PermutationLifts SourceRecursion SourceLifts SourceNewIndices SourceConditional SourceJointImage SourceTransfer KernelProducts SourceTransferOrders SourceSingleBlock SourceReducedCriterion SourceHomogeneous SourceHomogeneousCriterion SourcePolynomialKernels SourceRepeatedPoleAlgebra SourceCoordinateFactors SourceAppendIdentities SourceRelativeTimeJet SourceScalarPrependAlgebra SourceWeightedPrependAlgebra SourceTerminalPrefixExtraction SourceTimeScaling SourceBoundaryEndpointAlgebra SourceEndpointCoalescenceCoefficient SourceEndpointCoalescenceKernel SourceEndpointCoalescenceWitness SourceBinaryTerminalAlgebra SourceFirstBlockCancellation SourceResetHeadObstruction SourceTerminalColumnRelation SourceLocalJetAlgebra SourceMixedPoleJet SourceMixedPairDeterminant SourcePolynomialCriterion SourceMixedPairSeparation BinaryTransferAlgebra BinaryTransferSpan BinaryTransferEndpoints BinaryTransferIndependence BinaryTransferRank BinaryTransferMatrices BinaryTransferPositiveRank'
+# Follow the aggregate's actual project imports, in dependency order. A fixed
+# module list silently omits new proofs and can pass only because caches exist.
+source_modules=$(python3 - <<'PY'
+import pathlib
+import re
+
+seen, active, ordered = set(), set(), []
+def visit(path):
+    for name in re.findall(r'^import (PanelMoments\.[A-Za-z0-9_.]+)', path.read_text(), re.M):
+        if name in active:
+            raise SystemExit(f'Cyclic project import: {name}')
+        if name in seen:
+            continue
+        active.add(name)
+        visit(pathlib.Path(name.replace('.', '/') + '.lean'))
+        active.remove(name)
+        seen.add(name)
+        ordered.append(name.removeprefix('PanelMoments.').replace('.', '/'))
+visit(pathlib.Path('SourceFamilyCheck.lean'))
+print(' '.join(ordered))
+PY
+)
 if [ "$clean_outputs" = true ]; then
   for module_name in $source_modules; do
     output_path=".lake/build/lib/lean/PanelMoments/$module_name"

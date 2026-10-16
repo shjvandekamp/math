@@ -745,3 +745,150 @@ The identities and rank argument in this section were independently
 audited against the literal source definitions. They are paper results;
 the forthcoming formal algebraic identity does not by itself formalize
 the residue specialization or the determinant valuation.
+
+## The ordinary update has growing rank
+
+Assume the old residue matrix \(D_q\) is invertible, on its
+nonempty generic locus whenever that locus has been established.
+The same prepend specialization gives a statement requiring no
+regularity of the Schur matrix or its elimination coefficients.
+Let \(A_\varepsilon=M_\varepsilon-D_q\). Then
+\(A_0J=-D_qJ\) has rank \(r=3\binom q2\). A corresponding minor
+is a unit, so \(\operatorname{rank}A_\varepsilon\ge r\) over the
+Laurent field. The exact correction still factors through \(18q\)
+boundary columns. Rank subtraction therefore gives
+\[
+ \operatorname{rank}(D_q^{-1}H_q-I)
+ =\operatorname{rank}(H_q-D_q)
+ \ge\max\!\left(0,\frac{3q(q-13)}2\right).
+ \tag{PP46}
+\]
+Thus an ordinary update of uniformly bounded rank relative to this
+fixed old matrix cannot explain the full Schur determinant at large
+lengths. This does not exclude displacement rank, a transported
+baseline, or a triangular factorization. The conclusion is conditional
+on old invertibility; it does not establish that missing premise for
+every length.
+
+## A different degeneration: common G of rank two
+
+There is also an independently audited full-source valuation
+obstruction for
+\[
+ G_\varepsilon=
+ \begin{pmatrix}2&1&1\\1&2&1\\3&3&2+\varepsilon/3\end{pmatrix},
+ \qquad\det G_\varepsilon=\varepsilon.
+ \tag{PP47}
+\]
+Keep the time weights generic and positive. At zero, the three lines
+within a block are concurrent. Generic cross-block nodes still have
+nonzero coordinates and lie on no third line, so their moving
+double-residue maps are regular. The matrix discussed below is the
+raw source pair-residue matrix in such a regular frame; a singular
+normalization could change its determinant valuation.
+
+Represent a zero-sum row by its last two coordinates and write
+\[
+ Q_t=
+ \begin{pmatrix}
+ K_t(1,1)-K_t(0,1)&K_t(1,2)-K_t(0,2)\\
+ K_t(2,1)-K_t(0,1)&K_t(2,2)-K_t(0,2)
+ \end{pmatrix},\quad
+ J_t=\mathcal L_t\operatorname{adj}Q_t,
+\]
+where \(\mathcal L_t=L_{t0}L_{t1}L_{t2}\) and
+\(d_t=u_tv_tX_0X_1X_2\). Then \(J_t\) is polynomial and
+\[
+ \det Q_t=\frac{\det G\,d_t}{\mathcal L_t},\qquad
+ Q_tJ_t=(\det G)d_tI_2.
+ \tag{PP48}
+\]
+Only one factor of \(\mathcal L_t\), not its square, occurs in
+the determinant denominator.
+
+At the cross-node \(\lambda=(i,a;p,d)\), with \(i<p\), choose
+\(h_0=(1,0)^\top,h_1=(0,1)^\top,h_2=(1,0)^\top\), and put
+\[
+ n_\lambda=J_q(P_\lambda)\cdots J_p(P_\lambda)h_d,\qquad
+ w_\lambda(F)=r_\lambda(F)n_\lambda.
+ \tag{PP49}
+\]
+Here \(r_\lambda(F)\) is the two-coordinate double residue.
+At \(L_{pd}=0\), the residue of \(Q_p\) is \(u_dw\), where
+\[
+ u_0=(-1,-1)^\top,\quad u_1=(1,0)^\top,\quad u_2=(0,1)^\top,
+ \qquad w=(A_p(d,1)X_1,A_p(d,2)X_2).
+ \tag{PP50}
+\]
+Consequently \(wJ_p(P_\lambda)=0\).
+
+For an actual source with \(k=\max(t,s)\), the canonical suffix gives
+\[
+ F_{tsab}^{(q)}
+ =F_{tsab}^{(k)}U_{k,q}+p_{tab}e_b(I-U_{k,q}),
+ \qquad U_{k,q}=K_{k+1}\cdots K_q.
+ \tag{PP51}
+\]
+If \(k<p\), the block \(p\) occurs in the sorted suffix and is its
+last pole at this node; the residue is a scalar multiple of
+\(wQ_{p+1}\cdots Q_q\). Equations (PP48)--(PP50) give
+\(w_\lambda(F_{tsab}^{(q)})=0\) exactly.
+If \(k\ge p\), the suffix is regular at the node, and the head term
+in (PP51) has at most one old pole. Therefore
+\[
+ w_\lambda(F_{tsab}^{(q)})
+ =(\det G)^{q-k}
+   \left(\prod_{\ell=k+1}^q d_\ell(P_\lambda)\right)
+   r_\lambda(F_{tsab}^{(k)})
+       J_k(P_\lambda)\cdots J_p(P_\lambda)h_d.
+ \tag{PP52}
+\]
+The factor after \((\det G)^{q-k}\) is regular on the stated open
+set. This is an identity of the prescribed source columns with
+their heads retained.
+
+The row frame consisting of the first residue coordinate and
+\(w_\lambda\) is generically a unit at (PP47). Indeed
+\(J_ph_d\) is a nonzero scalar multiple, up to sign, of
+\((w_2,-w_1)^\top\). For \(p=q\) its second coordinate is nonzero.
+For \(p<q\), fix a node \(P=(1,x,y)\) and, solely to certify
+nonidentity, choose each suffix time so that \(ux=vy=1\). Then
+\[
+ K_*=\begin{pmatrix}1/2&1/4&1/4\\1/4&1/2&1/4\\3/8&3/8&1/4\end{pmatrix},
+ \quad Q_*=\begin{pmatrix}1/4&0\\1/8&0\end{pmatrix},
+ \quad J_*=\begin{pmatrix}0&0\\-16&32\end{pmatrix}.
+ \tag{PP53}
+\]
+Since \(J_*^\ell=32^{\ell-1}J_*\), the final second coordinate
+is a nonzero scalar multiple of \(2w_1+w_2\).
+The pole equation only imposes \(w_1+w_2=-G_0(d,0)\), so this
+additional expression is not identically zero. Each frame factor
+is thus a nonzero rational function. Their finite joint nonvanishing
+open, together with the geometric exclusions, meets the positive
+time-weight orthant. Temporary equal suffix times certify individual
+nonidentities; no colliding-node configuration is used as the final
+residue frame.
+
+Put \(N_q=9q(q-1)\) and \(M_q=N_q/2\). There are \(M_q\)
+distinguished rows. A column with maximum selected time \(k\)
+has weight \(q-k\), and there are \(18(k-1)\) such columns.
+Every determinant term must select \(M_q\) distinct columns for
+these rows. Let \(j_*\) be the smallest nonnegative integer such that
+\[
+ 9(j_*+1)(2q-j_*-2)\ge M_q.
+ \tag{PP54}
+\]
+Choosing the cheapest available columns gives
+\[
+ \operatorname{ord}_{\varepsilon=0}\det D_q(G_\varepsilon)
+ \ge \nu_q
+ :=j_*M_q-3j_*(j_*+1)(3q-j_*-2).
+ \tag{PP55}
+\]
+In particular \(\nu_q>0\) for \(q\ge5\); the values at \(q=5,6,7,8\)
+are \(18,45,81,144\), and
+\(\nu_q=\frac32(\sqrt2-1)q^3+O(q^2)\).
+The triangular zeros in (PP52) may force further cancellations:
+the bound need not be sharp. Neither this counting argument nor
+the existence of a minimum-weight matching proves a nonzero
+leading coefficient. That actual coefficient remains unresolved.

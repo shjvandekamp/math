@@ -93,7 +93,7 @@ constructs throughout the project proof sources.
 
 ## Trust and statement checks
 
-The active source-family continuation has a separate, smaller verifier:
+The source-family continuation has a separate verifier:
 
 ```sh
 LEAN_BIN=/path/to/lean-4.34.1/bin ./verify-source-family.sh --clean
@@ -119,6 +119,32 @@ The source-foundation and recursion statement reviews are in
 [SOURCE24_FOUNDATIONS_AUDIT.md](reviews/SOURCE24_FOUNDATIONS_AUDIT.md) and
 [SOURCE24_RECURSION_AUDIT.md](reviews/SOURCE24_RECURSION_AUDIT.md).
 The original two-theorem `verify.sh` entry point is unchanged.
+
+The module list is now derived recursively from the actual project imports
+of SourceFamilyCheck.lean, in dependency order. The earlier fixed list
+omitted later modules and could reuse their cached outputs. The corrected
+script checks pinned dependencies, rebuilds the complete discovered closure
+serially under the memory cap, and audits every requested declaration.
+
+The final 16 October 2026 run passed a **clean 66-module rebuild** and
+all **1,013 declaration audits** with exit zero. It used Lean 4.34.1 and
+the pinned manifest, one compiler at a time, at nice 19 with a 2500 MiB
+cap. Elapsed time was 600.48 seconds; maximum RSS was 2,497,609,728 bytes.
+Only the two existing style warnings in BasisCertificate.lean and
+SourceAppendIdentities.lean appeared. All checked declarations use only
+propext, Classical.choice and Quot.sound. The final evidence is:
+[source build](formal/source-family-final-clean-build.log),
+[timing](formal/source-family-final-clean-timing.txt), and
+[axiom output](formal/source-family-axioms.txt).
+The extended axiom file contains the same current output. This is a
+clean source-family component build on the development host, not the
+unperformed fresh-machine bootstrap or combined main-theorem invocation.
+It does not prove the unresolved equation-(24) rank hypothesis or finish
+the paper paired theorem's source/confluence formalization bridges.
+
+The following paragraphs retain the intermediate verification history.
+Their counts describe those earlier runs; the saved current axiom files
+are updated by later successful audits.
 
 The continuation verifier passed its clean 24-module rebuild and all
 220 axiom checks with exit zero. Evidence:

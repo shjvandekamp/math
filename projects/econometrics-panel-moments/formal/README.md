@@ -144,9 +144,15 @@ nonsingular, by integer column scaling and kernel-checked modular inverses.
 The generator is ../exploration/generate_invariant_tail_lean.py.
 SourceInvariantTailActualBase.lean separately derives the two-block
 binary annihilation, retained heads, and four weak rational functions
-from the displayed H/J formulas over the rationals. This closes their
-literal formula-to-certificate gap; it does not yet identify the formulas
-with the full source-family interface or a time derivative.
+from the displayed H/J formulas over the reals, with exact rational
+constants. SourceInvariantTailWeakDerivative.lean differentiates the
+actual homogeneous kernels and completed H/J rows.
+SourceInvariantTailBaseDerivativeBridge.lean identifies the constant
+Gamma combination's actual source derivative as minus (r-z) times
+the four displayed weak functions. Its normalized derivative has the
+same minus sign. Only the explicit row-form units, and r != z when
+normalizing, are assumed. Complete source-family indexing and later
+initialization matrices are not identified by this bridge.
 
 SourceInvariantTailPolynomialExtension.lean proves injectivity of the
 normalized polynomial extension by four evaluations.
@@ -158,16 +164,51 @@ SourceInvariantTailSchedule.lean discharges every nonzero-factor condition
 from the explicit interval and distinctness assumptions, with
 a=6/5, z=1/10, and the tail weights. Its final unique-decomposition
 theorem has no assumed matrix rank or unspecified evaluation pivot.
+SourceInvariantTailNormalization.lean checks the literal rational
+transfer and all three new generators, including the third-column
+replacement, against that polynomial model with explicit denominator
+units. Reconstruction holds also at r=z; division by r(r-z) has the
+additional nonzero assumptions.
 The source-word identification, later finite initialization, and generic
 specialization bridges remain separate obligations. These modules do not
 assert an end-to-end all-length paired or equation-(24) theorem.
 
-The current source-family aggregate checks 798 declarations in a compiled
-60-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. It took 41.00 seconds with peak
-RSS 2,067,513,344 bytes under the serial memory cap. All checked declarations
-use only the permitted foundational axioms; the output is saved in
-`source-family-extended-axioms.txt`.
+SourceRankOnePrepend.lean proves the actual empty/single-source
+commutator identity, rank-one prepend collapse, and the first kernel
+jet with the old factors fixed. The paper's residue-rank bounds do not
+form part of this module.
+
+SourceConfluentQuotientAlgebra.lean proves the corrected three-class
+matrix determinant, its odd-row replacement determinant, the quotient
+coordinate conversion determinant, and the nonzero coefficient bounds
+for every natural length at least three. It does not identify that
+replacement row as an actual derivative or prove source-space confluence.
+
+SourceConfluentCubicAlgebra.lean identifies its rational K with the
+actual homogeneous kernel, proves entrywise derivatives of K, U, V, S
+and Y at x=1, and proves the ordinary observation determinant 397/2^37.
+The same observations have determinant 3/256 on diag(X)(I-K), so they
+do not annihilate the new empty-source columns. All 59 public declarations
+passed a focused axiom audit. Time-Taylor identification, circulation
+rank, and quotient rank are not asserted by this module.
+
+The source-family verifier now derives its project module list from
+the actual imports of SourceFamilyCheck.lean in dependency order.
+The previous fixed list omitted newly added modules and could rely
+on their cached outputs. Syntax and dependency-order checks passed, followed by the final
+complete clean rebuild below.
+
+The final source-family verifier passed a clean rebuild of all 66 project
+modules and all 1,013 requested declaration audits on 16 October 2026.
+Only propext, Classical.choice and Quot.sound occur. The serial run took
+600.48 seconds, with maximum RSS 2,497,609,728 bytes, under the 2500 MiB
+Lean cap. The only diagnostics were two existing style warnings in
+BasisCertificate.lean and SourceAppendIdentities.lean. Evidence is saved in
+[source-family-final-clean-build.log](source-family-final-clean-build.log),
+[source-family-final-clean-timing.txt](source-family-final-clean-timing.txt),
+and [source-family-axioms.txt](source-family-axioms.txt); the extended axiom
+file is an identical current copy. This verifies the stated formal modules,
+not the still-open full equation-(24) theorem or the unformalized paper bridges.
 
 ## Model foundations
 
