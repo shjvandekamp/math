@@ -447,6 +447,16 @@ restriction or append does not automatically preserve this coefficient
 kernel. Uniform nonvanishing of this residual matrix, and its Lean
 formalization, are the next substantive obligations.
 
+The divided residual polynomial space now has a generic ambient cubic
+append recurrence at the required degree. An external exact three-block
+quintic minor is 450004 modulo 1,000,003; together with the existing
+block-extension theorem it gives the recurrence for every q>=3.
+The source24-triple-quintic files record the certificate. Actual outgoing
+sources realize its multipliers on long-empty difference seeds, but
+realizing them on the full corrected source coefficient kernel remains
+open. This identifies a concrete source-realization lemma rather than
+another ambient dimension question.
+
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
 this gives generic rank exactly 27 and explains the nine-dimensional

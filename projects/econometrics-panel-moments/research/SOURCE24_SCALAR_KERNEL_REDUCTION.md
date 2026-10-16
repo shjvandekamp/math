@@ -192,3 +192,73 @@ scalar-zero row. Its cleared polynomial depends on that coupled
 source correction. The next concrete target is a rank-preserving
 transport for these corrected combinations, or direct nonvanishing
 of the residual determinant in (SK7).
+
+## An ambient append recurrence at the required degree
+
+There is now a useful ambient recurrence for the divided residual space.
+This paragraph uses generic reduced six-point geometry, with Z_[q]
+the union of the three matching and three same-block points per block.
+Put f_(n,a)=X_a prod_(b different from a) L_nb and D_t=prod_b L_tb.
+A triple-block quintic interpolation certificate is sufficient to
+separate every old point in degree 3q−4 for q>=3: choose a triple
+containing the point's block, take its quintic separator, and multiply
+by D_t for every block outside that triple. Cross-nonincidence keeps
+its target value nonzero, and its degree is 5+3(q−3)=3q−4.
+
+Apply the already proved Lean theorem
+`BlockExtension.exists_corrected_cubic_decomposition` at k=3q−4.
+Its input degree is k+5 and its coefficient degree is k+2. Therefore
+
+\[
+ I(Z_{[q+1]})_{3q+1}
+   =\sum_{a=0}^2 f_{n,a} I(Z_{[q]})_{3q-2},\qquad q\ge3.
+ \tag{SK11}
+\]
+
+The inclusion from right to left is immediate; the reverse inclusion
+is the corrected cubic decomposition. Its other hypotheses are the
+nonzero old point representatives, the new block's local line and
+six-point conditions, and nonvanishing of each new line at each old
+point. All are generic geometry conditions. No source rank is used.
+
+The bounded verifier
+[source24_triple_quintic.py](../exploration/source24_triple_quintic.py)
+and its [exact certificate](../exploration/source24-triple-quintic-results.json)
+record the required 18-by-18 minor, equal to 450004 modulo 1,000,003.
+The fixture is G=((1,1,1),(1,30,10),(1,3,2)), with time factors
+(8^t,8^(2t)), t=1,2,3. The full 18-by-21 quintic evaluation matrix,
+point labels, monomials and geometry checks are saved. The run used
+0.001083 seconds and 16,859,136 bytes RSS. The script and certificate
+were independently reviewed without repeating the computation.
+This is an external exact interpolation certificate, not a Lean proof
+of the finite minor.
+
+Its nonzero polynomial minor can be relabeled for each triple. For
+every fixed finite q, multiply all required triple minors and geometric
+nonvanishing conditions in the common-G parameter ring. The product
+is nonzero and has positive real witnesses. This does not assert that
+one prescribed geometric time sequence works at every length.
+Together with the existing block-extension theorem, the certificate
+proves (SK11) generically on paper.
+
+The remaining source-realization issue is precise. For an old
+scalar-zero and line-zero row
+R=X0 X1 ell_w p/D_q (e1−e0), multiplication by X_a/L_na preserves
+both vanishings and has new divided residual polynomial f_(n,a)p.
+For an old long-empty difference
+H_(s,b)=F_empty(1,b)−F_empty(s,b)=X_b e_b(P_s−P_1), actual outgoing
+sources satisfy the exact identity
+
+\[
+ C_{n,s}^{ab}
+   =-A_n(a,b)\frac{X_a}{L_{na}}H_{s,b}.
+ \tag{SK12}
+\]
+
+This realizes cubic transport on those particular seeds. Multiplying
+an old shared difference introduces an additional shared prefix and
+is not automatically an available reduced source column. To use
+(SK11) inductively, one must realize these three multipliers on the
+actual residual coefficient kernel, retaining the same scalar and
+line corrections. That closure is not proved here. Ambient ideal
+generation and the seed identity alone do not imply it.
