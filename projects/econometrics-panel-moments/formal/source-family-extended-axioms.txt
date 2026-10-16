@@ -1184,3 +1184,50 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceFirstBlockCancellation.startingRow_kernel_tail_divided' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.outgoingRow_eq_singleBlockVector' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.incomingScale_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.incomingScalar_function' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.incomingRow_selected_scalar' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.fraction_edge_values' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.fraction_resetData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.resetData_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.resetRow_smul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.fraction_resetRow_expansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.incoming_resetData' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.incoming_resetRow_expansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.coefficientHeadMatrix_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.coefficientHeadMatrix_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.coefficientHeadMatrix_det_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.correctedCoefficientHeadMatrix_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.corrected_lower_minor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.corrected_lower_minor_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.incoming_one_corrected_difference' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceResetHeadObstruction.incoming_one_corrected_difference_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

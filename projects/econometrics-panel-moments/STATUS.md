@@ -61,6 +61,16 @@ head response. Ordinary head transport and scalar spanning alone do
 not establish that recurrence. The actual zero-head prepend identities
 and retained-old correction in (LC175)--(LC177) record the terms that
 still have to be controlled.
+The exact actual de-append update (LC179) now expresses every longer
+head through a three-by-three defect matrix and the shorter head map.
+Its nonvanishing remains the unresolved condition. The reset response
+also has explicit known edge terms and three unknown actual terminal
+charges, by (LC181)--(LC182). A positive one-block example (LC186)--(LC187)
+shows that reset sends zero-head sources to three independent head
+directions; therefore head sums alone cannot close its recurrence.
+The inverse-tail alternative develops coordinate poles of order m-2
+for an explicit first target. This excludes channels with uniformly
+bounded coordinate poles, not every possible finite response state.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
@@ -235,11 +245,17 @@ SourceFirstBlockCancellation adds eight checked identities for the
 actual first-block row cancellation, its arbitrary and ordered tails,
 and the divided-output formula with explicit units. It does not assert
 an admissible boundary witness or a source-rank result.
-The updated aggregate checks 518 declarations in a 48-module compiled
+SourceResetHeadObstruction adds nineteen checked declarations for the
+three actual one-block reset expansions at the positive time (1,2,3),
+their signed incoming scalars and edge normalizations, and the resulting
+coefficient-head determinant 31/24640. The corrected responses have
+nonzero minor -31/3080. These are heads of explicit source coefficients;
+the module does not assume an abstract head map or prove source rank.
+The updated aggregate checks 537 declarations in a 49-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 48-module rebuild. The aggregate took 3.68 seconds with peak
-RSS 2,417,672,192 bytes under the serial memory cap.
+new clean 49-module rebuild. The aggregate took 13.89 seconds with peak
+RSS 2,470,379,520 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 

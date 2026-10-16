@@ -4766,3 +4766,342 @@ correction does not factor through accumulated old
 head margins alone. No triangular actual-source
 coefficient change or nonzero old Schur determinant
 has yet been proved.
+
+## Actual response updates and the reset obstruction
+
+[Pro49](https://chatgpt.com/c/6ad1d439-9fa4-83eb-88b8-3dea52e898c9)
+independently recovered the already checked first-block identity.
+Its binary normalization also has an explicit nonzero product.
+At E=Q_0=(0,-1,1), put
+mu_t=-3u_tw_t/((w_t-2u_t)(2w_t-u_t)).
+The active zero-sum line gives v(E)K_t(E)=mu_t v(E).
+For the binary final column ell_T in (LC158),
+v(E)ell_T(E)=-3/(2T), so
+
+\[
+ \widetilde\beta(E)=-\frac3{2T}\prod_{t=1}^n\mu_t .
+ \tag{LC178}
+\]
+
+Thus this auxiliary normalization is generically nonzero at every
+length. It does not settle the linked three-column determinant.
+
+Pro49 also supplied an explicit version of the actual de-append
+recurrence. Let K be an invertible generic appended kernel with
+table A and row forms L, and put
+T_K=diag(X)(K^{-1}-I)=A^{-1}diag(L)-diag(X).
+For an ambient row S define
+eta_i(S)=[(S diag(X)^{-1})(Q_i)A^{-1}]_i,
+E_K(S)=eta(S)A, and
+U_K(S)=SK^{-1}-E_K(S)T_K. Every output factor is canceled
+before evaluating at an edge. If
+S=UK+h diag(X)(I-K) with U an old ambient row, then
+E_K(S)=h and U_K(S)=U: multiply by K^{-1} and evaluate
+coordinate i at Q_i, where U_i and X_i vanish.
+
+At each terminal pole choose a nonzero transverse residue
+functional tau_c whose kernel is the row A(c,:)diag(X)
+at that pole. If tau_c(S)=0 for all c, then SK^{-1}
+has no terminal poles and U_K(S) is old ambient.
+The inherited actual-subspace condition is precisely
+F_K(S):=Sigma_n(U_K(S))-E_K(S)=0.
+This uses the actual shorter head, not a head assigned
+from edge values.
+
+Let gamma_c=tau_c(J_c) be nonzero, rho_c=tau_c(H_c)/gamma_c,
+V_c=H_c-rho_c J_c, and
+bar R=R-sum_c tau_c(R)J_c/gamma_c. Form the matrix with
+columns F_K(V_c)^T. Whenever it is invertible,
+
+\[
+\begin{split}
+ \Gamma_K&=[F_K(V_0)^T,F_K(V_1)^T,F_K(V_2)^T],\\
+ z&=\Gamma_K^{-1}F_K(\overline R)^T,\\
+ \Sigma_{n+1}(R)
+   &=E_K(\overline R)+\sum_c z_c(e_c-E_K(V_c)).
+\end{split}
+ \tag{LC179}
+\]
+
+Indeed S=bar R-sum z_c V_c has zero transverse residues
+and zero F_K, hence is the actual inherited append of
+U_K(S), with head E_K(S). Restoring the six terminal
+sources proves the formula. Under the shorter paired
+inverse and transverse pivots, invertibility of Gamma_K
+is equivalent to the longer paired inverse. This is
+an exact response update; its nonzero determinant still
+has to be proved. Applying it to a growing scalar
+residue basis is not a bounded-dimensional closure.
+
+More explicitly, the two canonical lifts R^(0),R^(2)
+in (LC149) have old-pole residue directions
+X_0(1/2,-3/4,1/4) and X_2(1/4,-3/4,1/2).
+These are independent at every ordinary old pole.
+Consequently each old ambient row has a unique
+decomposition
+R=R^(0)(h_0)+R^(2)(h_2)+lambda v, with scalar
+classes h_0,h_2. The two actual maps M^(0),M^(2),
+together with Sigma(v)=g, therefore encode the whole
+actual head map. A rational generating function for
+their residue-basis values has 3n poles. Its degree
+grows with n; storing it does not prove a uniform
+nonvanishing invariant.
+
+There is also a simple actual-source obstruction to
+recovering heads from raw coordinate-edge values.
+For a fixed incoming block t put
+d=(2,1/u_t,1/w_t), Delta_i=product_r mu_(r,i), where
+mu_(r,i) is the active binary determinant at Q_i.
+The scalar edge-value matrix of J_t0,J_t1,J_t2 is
+
+\[
+ -\operatorname{diag}(\Delta_0,\Delta_1,\Delta_2)
+ \frac13
+ \begin{pmatrix}
+ 0&2d_1-d_2&2d_2-d_1\\
+ 2d_0-d_2&0&2d_2-d_0\\
+ 2d_0-d_1&2d_1-d_0&0
+ \end{pmatrix}.
+ \tag{LC180}
+\]
+
+The final matrix has determinant -67/486 at (u_t,w_t)=(2,3),
+where all its edge denominators are nonzero. It is thus
+generically invertible. A unique combination of these
+three zero-head sources cancels all three raw edge
+values of any H_sb while preserving its actual head e_b.
+Where the actual graph is defined, its head map on the
+subspace of rows vanishing at all three edges is
+surjective. This does not concern canceled coordinate
+values, derivatives, or observations also retaining residues.
+
+[Pro50](https://chatgpt.com/c/6ad1d75f-cec0-83ed-8a08-a766cb893bd5)
+made the terminal contribution to RESET0 explicit.
+Write E_m(F)_j=[F diag(X)^{-1}A_m^{-1}]_j(Q_j).
+For the actual expansion with coefficients alpha,beta,lambda,
+put a_m=(alpha_m0,alpha_m1,alpha_m2),
+zeta_m=sum_c beta_mc g_c X_c/L_mc, and
+U_m=a_m diag(X)K_m+zeta_m v. Literal ordered-source
+expansion gives
+
+\[
+ \Sigma_m(R)=
+ \bigl(E_m(R)+\tau_m(R)\bigr)A_m,\qquad
+ \tau_m(R)=E_m(U_mP_{m-1}).
+ \tag{LC181}
+\]
+
+Every inherited completed term ends in K_m, and
+E_m(SK_m)=0 for a preceding coordinate-divisible row S.
+The polynomial gauge contributes lambda g.
+Thus the remaining charge tau_m is an explicit linear
+combination of the six actual terminal coefficients.
+Its coordinate j uses only the four with state index
+different from j. Its multipliers follow the finite
+edge transfer of P_(m-1)diag(X)^{-1}.
+This is the endpoint identity (LC98) in inverse-column
+coordinates: E_m(F)_j=(A_m^{-1})_jj Phi_m(F)_j.
+It does not determine the six coefficients.
+
+For h_j=h(Q_j), set s=(2h_0-3h_1+h_2)/4,
+Delta=h_2-h_1,
+eta_1=d/dy h(1,y,-2-y)|_(y=0), and
+eta_2=d/dz h(1,-2-z,z)|_(z=0). The entire lift is
+R^(0)(h)=X_0(2h-3h_1+h_2,-3h+3h_1,h-h_2)/4.
+For A_m=G diag(1,U,W), direct canceled edge evaluation gives
+
+\[
+\begin{split}
+ E_m(R^{(0)}h)_0&=3s/4,\\
+ E_m(R^{(0)}h)_1
+   &=-\bigl((1+(2W)^{-1})\Delta+9\eta_1/U\bigr)/16,\\
+ E_m(R^{(0)}h)_2
+   &=3\bigl(\eta_2/W-(1+(2U)^{-1})\Delta\bigr)/16,\\
+ M^{(0)}(h)A_m^{-1}
+   &=\tau_m(R^{(0)}h)+(0,s/4+E_m(R^{(0)}h)_1,
+                                  s/4+E_m(R^{(0)}h)_2).
+\end{split}
+ \tag{LC182}
+\]
+
+In particular the first transformed coordinate is
+entirely an actual terminal-source charge. The known
+edge values and first derivatives of the three
+first-block targets have a finite product/jet transfer;
+the charges in this identity remain unknown.
+
+Local analysis also identifies the reset/transport
+commutator at every prefix pole. Put
+w=e_1G^{-1}diag(G_:0), E=e_1w, and write the whole
+edge-corrected selected-head lift (LC152) as
+C_c(H)=-(X_c/X_1)HE+P_c(H), with P_c polynomial.
+For a proper tail K and a prefix pole L_i,
+
+\[
+ \operatorname{Res}_i
+   \bigl(C_c(H_{10}^{(m)})-C_c(H_{10}^{(r)})K\bigr)
+  =-\frac{X_c}{X_1}
+       \operatorname{Res}_i(H_{10}^{(r)})[K,E].
+ \tag{LC183}
+\]
+
+Here H_10^(m)=H_10^(r)K+X_0e_0(I-K).
+The appended term and the edge corrections have no
+prefix pole, which proves the formula. The actual
+zero-head prepend commutators (LC175) do not yet
+identify this projected commutator as zero-head.
+Conjugating E introduces coordinate ratios; these
+cannot be used as constant-in-X source coefficients.
+
+## Coordinate poles created by inverse-tail transport
+
+Pro50's direct-adjoint obstruction was checked locally,
+including a correction to its stated pole locations.
+Use the chart X=(1,-2-z,z) near Q_2. Define
+rho_t=(-(2-2u_t),-(1-4u_t),3(1-2u_t))/(4w_t)
+and theta_t=(rho_t)_2. The actual inverse has
+K_t^{-1}=z^{-1}e_2 rho_t+O(1).
+The coordinate factors in the complete reset lift
+cancel its first inverse-kernel pole. With
+T=K_2...K_m and m>=3, the surviving leading coefficient is
+
+\[
+\begin{split}
+ R^{(0)}(h)T^{-1}
+   &=z^{-(m-2)}\Omega_m(h)
+       \left(\prod_{t=3}^{m-1}\theta_t\right)\rho_2
+          +O(z^{-(m-3)}),\\
+ \Omega_m(h)
+   &=\frac{3(1-2u_m)}{16}
+      \left(\frac{\eta_2(h)}{w_m}
+        -\left(1+\frac1{2u_m}\right)(h_2-h_1)\right).
+\end{split}
+ \tag{LC184}
+\]
+
+At m=2 the limit is a general finite row, not the
+displayed rank-one leading term.
+
+For the particular first target h=-X_0 phi_0, choose
+distinct a_t in (1,2), b_t>0, u_t=a_t epsilon and
+w_t=b_t epsilon^3. For each fixed length and finite
+list of these parameters, all poles are ordinary for
+sufficiently small positive epsilon. Their exact
+z locations are
+(2-2u_t)/(u_t-w_t), (1-4u_t)/(2u_t-w_t),
+and (1-2u_t)/(u_t-2w_t); their leading values are
+2/(a_t epsilon), 1/(2a_t epsilon), 1/(a_t epsilon).
+The three scaled intervals (1,2), (1/4,1/2), (1/2,1)
+are disjoint, and distinct a_t separate each family.
+These locations correct the reciprocals stated in
+the external answer. The row forms at all three
+coordinate edges are nonzero for small epsilon.
+
+In the bounded chart y=X_1, X_0=1, cancel the final
+output before expansion. For m>=2, stochasticity
+of earlier factors gives
+h=-a_m epsilon/2-A_m y epsilon^2/4+O(epsilon^3),
+where A_m=a_m(3a_(m-1)-a_m)>0.
+This is an analytic expansion near both derivative
+edges, so eta_2=A_m epsilon^2/4+O(epsilon^3) and
+h_2-h_1=A_m epsilon^2/2+O(epsilon^3).
+Substitution into (LC184) proves
+
+\[
+ [z^{-(m-2)}]R^{(0)}(-X_0\phi_0)T^{-1}
+ =\frac{3^{m-2}a_m(3a_{m-1}-a_m)}
+        {4^{m+1}\prod_{t=2}^m b_t}
+      \epsilon^{5-3m}(-2,-1,3)
+       +O(\epsilon^{6-3m})\ne0 .
+ \tag{LC185}
+\]
+
+Thus these particular inverse-tail rows have coordinate
+pole order exactly m-2. They cannot belong to a channel
+space whose coordinate-pole orders have a fixed bound
+independent of m. This excludes only closures that
+require representing those rows or their principal
+parts with such bounded channels. It does not exclude
+dynamic rational channels, a finite set of other
+observables, or an identity that also carries actual
+source counterterms. It proves neither vanishing nor
+nonvanishing of the determinant (LC151).
+
+## RESET0 does not descend to actual head sums
+
+A local one-block calculation gives an exact stronger
+obstruction than edge-value insufficiency. Take the
+positive time (1,2,3), write x=X_0,y=X_1,z=X_2, and set
+L_0=2x+2y+3z, L_1=x+4y+3z, L_2=x+2y+6z,
+f_c=X_c/L_c. Use the actual one-block H_c and J_c,
+so J_c=-g_cf_cv. The three scalar edge-value triples
+(at Q_0,Q_1,Q_2) are
+f_0=(0,-1/4,-1/2), f_1=(1,0,2/7), f_2=(1/4,2/11,0).
+Their s_0 values are respectively 1/16,4/7,-1/88.
+Direct rational row identities on the fixed line give
+
+\[
+\begin{split}
+ R^{(0)}(f_0)&=\tfrac1{16}H_0-\tfrac5{32}J_0,\\
+ R^{(0)}(f_1)&=\tfrac4{35}H_1-\tfrac{43}{140}J_1
+                                      +\tfrac1{28}v,\\
+ R^{(0)}(f_2)&=-\tfrac1{66}H_2-\tfrac8{33}J_2
+                                      -\tfrac3{44}v .
+\end{split}
+ \tag{LC186}
+\]
+
+These identities use the actual source coefficients.
+For example, at L_1=0 with z=1 one has x=-1/7,y=-5/7.
+Matching the residue of R^(0)(f_1) gives the first two
+coefficients 4/35 and -43/140, and evaluation at Q_0
+gives the remaining coefficient 1/28. The other two
+rows follow the same residue-plus-polynomial calculation.
+Equivalently all three identities can be checked after
+clearing their single displayed row denominator.
+
+Define the reset operator on ambient rows by
+Q(R)=R^(0)(R_1/X_1), canceling the output factor first.
+Every J_c has actual head zero. Nevertheless the
+columns of their reset head matrix are
+
+\[
+ [\Sigma_1Q(J_0),\Sigma_1Q(J_1),\Sigma_1Q(J_2)]
+ =
+ \begin{pmatrix}
+ -1/8&-1/14&3/22\\
+ 0&-3/20&3/44\\
+ 0&-1/28&1/12
+ \end{pmatrix},
+ \qquad \det=\frac{31}{24640}\ne0 .
+ \tag{LC187}
+\]
+
+The factors -g_c relating (LC186) to these columns
+are essential, as are the polynomial-gauge head
+contributions lambda g. Thus the actual head image
+of Q on the zero-head subspace is all three-dimensional
+already at this one-block example.
+
+The corrected M^(0) responses of the same three
+scalars (J_c)_1/X_1 are
+0, (1/2,-3/20,-1/28), and (1/8,3/44,1/12).
+They have rank exactly two: the last two coordinates
+of the latter columns have determinant -31/3080.
+In particular (e_1-e_2) applied to the J_1 response
+is -4/35. Neither the raw reset head nor this corrected
+response factors through the original three head sums.
+This rules out that specific quotient closure; it
+does not preclude an enlarged actual-source state or
+prove anything about the all-length determinant's sign.
+
+The actual row identities, scalar signs, canonical edge data,
+coefficient-head determinant, corrected minor, and signed J_1
+difference are now Lean checked in
+[SourceResetHeadObstruction.lean](../formal/PanelMoments/SourceResetHeadObstruction.lean).
+Its nineteen declarations use the existing actual kernel and
+single-block source. They prove statements about the displayed
+coefficient heads, without postulating an actual head map or
+asserting source independence. The updated cached aggregate
+checks 537 declarations across 49 modules, with only the
+permitted foundational axioms and no warnings.

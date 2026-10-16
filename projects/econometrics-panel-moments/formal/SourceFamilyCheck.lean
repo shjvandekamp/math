@@ -11,6 +11,7 @@ import PanelMoments.SourceEndpointCoalescenceKernel
 import PanelMoments.SourceEndpointCoalescenceWitness
 import PanelMoments.SourceBinaryTerminalAlgebra
 import PanelMoments.SourceFirstBlockCancellation
+import PanelMoments.SourceResetHeadObstruction
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -643,3 +644,23 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_kernel_wordTail
 #print axioms PanelMoments.SourceFirstBlockCancellation.clearedStartingRow_eq_scale
 #print axioms PanelMoments.SourceFirstBlockCancellation.startingRow_kernel_tail_divided
+
+#print axioms PanelMoments.SourceResetHeadObstruction.outgoingRow_eq_singleBlockVector
+#print axioms PanelMoments.SourceResetHeadObstruction.incomingScale_eq
+#print axioms PanelMoments.SourceResetHeadObstruction.incomingScalar_function
+#print axioms PanelMoments.SourceResetHeadObstruction.incomingRow_selected_scalar
+#print axioms PanelMoments.SourceResetHeadObstruction.fraction_edge_values
+#print axioms PanelMoments.SourceResetHeadObstruction.fraction_resetData
+#print axioms PanelMoments.SourceResetHeadObstruction.resetData_smul
+#print axioms PanelMoments.SourceResetHeadObstruction.resetRow_smul
+#print axioms PanelMoments.SourceResetHeadObstruction.fraction_resetRow_expansion
+#print axioms PanelMoments.SourceResetHeadObstruction.incoming_resetData
+#print axioms PanelMoments.SourceResetHeadObstruction.incoming_resetRow_expansion
+#print axioms PanelMoments.SourceResetHeadObstruction.coefficientHeadMatrix_eq
+#print axioms PanelMoments.SourceResetHeadObstruction.coefficientHeadMatrix_det
+#print axioms PanelMoments.SourceResetHeadObstruction.coefficientHeadMatrix_det_ne_zero
+#print axioms PanelMoments.SourceResetHeadObstruction.correctedCoefficientHeadMatrix_eq
+#print axioms PanelMoments.SourceResetHeadObstruction.corrected_lower_minor
+#print axioms PanelMoments.SourceResetHeadObstruction.corrected_lower_minor_ne_zero
+#print axioms PanelMoments.SourceResetHeadObstruction.incoming_one_corrected_difference
+#print axioms PanelMoments.SourceResetHeadObstruction.incoming_one_corrected_difference_ne_zero
