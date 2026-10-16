@@ -124,10 +124,15 @@ special jet and proves its exact first derivative at a pair of row-form
 zeros. The derivative depends on the tail value, with all tail derivatives
 canceling. The actual ordered kernel tail satisfies the differentiability
 hypothesis whenever its row denominators are nonzero at that point.
-The updated aggregate checks 366 declarations in a 35-module compiled
-closure, using only the permitted foundational axioms. This is a cached
-aggregate check, not a new clean 35-module rebuild. The aggregate took
-34.71 seconds with peak RSS 2,264,137,728 bytes under the serial memory cap.
+`SourceMixedPairDeterminant` adds eleven checked declarations for the
+explicit relative-direction factor, stochastic-tail minor transport,
+and the resulting nonzero two-column derivative determinant. Its actual
+ordered-word corollary derives tail invertibility from the model block
+determinants and local coordinate/denominator units. The updated aggregate
+checks 377 declarations in a 36-module compiled closure, using only the
+permitted foundational axioms. This is a cached aggregate check, not a
+new clean 36-module rebuild. The aggregate took 18.94 seconds with peak
+RSS 2,426,372,096 bytes under the serial memory cap.
 Residue operators, matching-coordinate removability, asymptotic orders,
 and the joint-rank induction remain paper arguments outside this module.
 
@@ -556,7 +561,12 @@ the actual source completion and the polar correction; they isolate,
 but do not settle, the remaining transversality. Polar subtraction also
 identifies D_b modulo the corrected old zero-prefix sector with the
 9q old-pole prefix coordinates; the transported zero-prefix sector may
-depend on b. See (PP26)--(PP36).
+depend on b. The earlier odd incoming theorem identifies the joint
+transported-seed rank as 9q for odd q>=5. For even q>=6 the sparse
+incoming theorem and the six-column actual correction give rank at
+least 9q-6, with the remaining incoming dependency test reduced exactly
+to six columns. These are incoming statements before the source-prefix
+projection. See (PP26)--(PP37) and (E17)--(E18).
 
 The last-time coalescence alternative now has an audited inherited
 rank result. When A_n=A_q, the ambient append map has a three-dimensional
@@ -624,6 +634,17 @@ and all three outputs already distinguish the six columns. Triangular
 preimage identities over the finite-field rational-function field.
 All source expansions are dense, so a sparse expansion shortcut fails.
 An all-q formula for these six-row minors remains open.
+A new six-row vertex observation cancels all E coefficients and all
+off-diagonal-state F coefficients from the completed-tail correction.
+Its exact law is OM=B+TS: B is explicit from the recovered scalar
+prefix and the last two blocks, while S consists of nine diagonal-state
+endpoint margins per actual source preimage. At fixed three totals,
+the six boundary margins act invertibly on these observations, so
+their correction cannot be dropped. The saved rational preimages
+verify every identity at q=4,5; the observed determinants are 889110
+and 73357 modulo 1000003. This is a constant-size sufficient test,
+not a uniform nonvanishing theorem. See (LC38)--(LC44) and
+`exploration/source24_vertex_margin_probe.py`.
 A state-relabeling argument also strengthens the growing jet bound:
 it holds for every fixed real direction with distinct weights, and
 fixed direction (1,3) gives gain max(12,3ceil(3(q−1)/2)) over B.

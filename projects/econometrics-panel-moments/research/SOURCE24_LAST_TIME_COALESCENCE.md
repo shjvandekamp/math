@@ -932,3 +932,155 @@ and pole-free remainder still need control. Old scalar independence
 controls F_e, which is a different map. No induction closing that
 gap has been proved. These two stripping observations and their
 limitations were independently checked.
+
+## Six vertex observations and the actual endpoint margins
+
+The [six-column investigation](https://chatgpt.com/c/6ad1920e-6ff0-83ed-ad34-75fc2d0d413c)
+produced the following conservation law, checked locally and independently.
+It applies to the six off-diagonal leading columns in (LC30)--(LC32).
+Retain their actual old-source preimages R_ab and prefixes I_ab=h_ab v_i,
+where i is the third state. Let D_ab=I_old(R_ab)-I_ab and M its
+9q-by-6 old-pole prefix matrix. For k different from j define
+
+\[
+ \mathcal V_{kj}(Y)=
+   (Y_j/X_j)(e_k)-(Y_j/X_j)(e_j),\qquad
+ (\mathcal O M)_{kj,ab}
+ =\sum_t\left[
+   \frac{M_{(t,k,j),ab}}{A_t(k,k)}
+  -\frac{M_{(t,j,j),ab}}{A_t(j,j)}\right].
+ \tag{LC38}
+\]
+
+The coordinate divisions are canceled before evaluating at the effect
+vertices e_k; every row-form denominator is then nonzero. The observation
+kills all polynomial diagonal prefixes, so V(D)=OM regardless of the
+constant-prefix ambiguity. A nonzero determinant of this particular 6-by-6
+observation matrix is sufficient for rank(M)=6; necessity is not asserted.
+
+Write alpha_tsde^(ab) for the actual F coefficients of R_ab, and put
+kappa_t,kj=A_t(k,j)/A_t(k,k). The only coefficients needed in these
+observations of the actual completed tail are
+
+\[
+ \begin{split}
+ S_{q-2,k}^{ab}&=\alpha_{q,q-1,k,k}^{ab}
+                       +\alpha_{q-1,q,k,k}^{ab},\\
+ S_{q-1,k}^{ab}&=\sum_{t\le q-2}
+             (\alpha_{q,t,k,k}^{ab}+\alpha_{t,q,k,k}^{ab}),\\
+ S_{q,k}^{ab}&=\sum_{\substack{t,s<q\\t\ne s}}\alpha_{t,s,k,k}^{ab},
+ \qquad \sigma_k^{ab}=\sum_{\ell=q-2}^q S_{\ell,k}^{ab}.
+ \end{split}
+ \tag{LC39}
+\]
+
+These retain both orientations of the q-boundary terms. With
+B_.ab=V(R_ab-I_ab), the exact identity is
+
+\[
+ \mathcal O M=B+\mathcal T S,\qquad
+ (\mathcal T S)_{kj,ab}
+   =\sum_{\ell=q-2}^q\kappa_{\ell,kj}S_{\ell,k}^{ab}
+          -\sigma_j^{ab}.
+ \tag{LC40}
+\]
+
+Indeed I_old(E)=E, so the E coefficients cancel from I_old(R)-R.
+For a word with at least two kernels, ending in time ell, its j-th
+component divided by X_j at e_k, k different from j, is kappa_ell,kj.
+Every preceding kernel evaluates to the rank-one stochastic matrix
+1 e_k. The scalar prefix X_d K_t(d,e) is nonzero at e_k only when
+d=e=k, in which case it equals one. The actual suffix P_s with t
+omitted ends at max([q] minus {t,s}); its three possible values give
+exactly (LC39). At e_j the corresponding completed-tail value is sigma_j.
+This proves (LC40), including the cancellation of every off-diagonal-state
+F coefficient. It uses the actual ordered words, not arbitrary tails.
+
+The known part also has a closed expression. Put
+
+\[
+ w^{(k)}=\frac{e_kA_{q-1}}{A_{q-1}(k,k)},\qquad
+ \zeta^{(k)}
+ =e_k-w^{(k)}A_q^{-1}
+          \operatorname{diag}(A_q(0,k),A_q(1,k),A_q(2,k)),
+\]
+\[
+ H_{i,k}^{ab}=A_q(i,i)h_{ab}(e_i)
+       -A_q(i,k)\partial_{X_i}h_{ab}(e_k),\qquad k=a,b.
+ \tag{LC41}
+\]
+
+For the column ab, the entries of B at rows
+(ab,ba,ai,bi,ia,ib), respectively, are
+
+\[
+ \bigl(\kappa_{q,ab}\zeta_b^{(a)},\
+       \zeta_a^{(b)},\
+       H_{i,a}^{ab},\
+       H_{i,b}^{ab},\
+       0,\ 0\bigr).
+ \tag{LC42}
+\]
+
+To check this, use R-I=J-h L_i e_i from (LC31). At e_k,
+Q diag(X)^{-1}=1 w^(k), hence Q-KQK^{-1}=1 zeta^(k).
+Also p_ab/X_b at e_a is kappa_q,ab, p_ab/X_a at e_b is one,
+and p_ab has order two at e_i. Vertex vanishing of R gives
+h(e_a)=h(e_b)=0. For output i, the regular expression for J_i
+retains X_a X_b, so its X_i derivative at either e_a or e_b
+is zero. This gives the two H entries in (LC42).
+
+If h=h_*+sum_td h_td X_d/L_td, its needed values are explicit:
+
+\[
+ h(e_i)=h_*+\sum_t\frac{h_{ti}}{A_t(i,i)},\qquad
+ \partial_{X_i}h(e_k)=\sum_t\left[
+  \frac{h_{ti}}{A_t(i,k)}
+  -\frac{h_{tk}A_t(k,i)}{A_t(k,k)^2}\right].
+ \tag{LC43}
+\]
+
+In particular the coefficients h_ti, invisible in an ordinary restriction
+to X_i=0, are retained. Adding c X_i/L_qi changes both terms defining
+H by c, so (LC41)--(LC42) are independent of that gauge.
+The ab/ba two-row, two-column block of B has determinant
+zeta_b^(a) zeta_a^(b)
+(G_ab G_ba/(G_aa G_bb)-1), generically nonzero. This is a block
+of the known part, not a factor of det(OM).
+
+The endpoint correction can itself fill all six observations. Hold the
+three totals sigma_k fixed and use S_(q-2),k, S_(q-1),k as six
+coordinates. For each origin state k, the two output rows j,l give
+the 2-by-2 block with columns
+(kappa_(q-2),kj-kappa_q,kj, kappa_(q-2),kl-kappa_q,kl)
+and the corresponding q-1 differences. With observation order
+(01,02,10,12,20,21), let
+Delta=det[(1,u_t,v_t)] for t=q-2,q-1,q. The resulting determinant is
+
+\[
+ -\frac{\prod_{k\ne j}G_{kj}}{(G_{00}G_{11}G_{22})^2}
+   \frac{\Delta^3}{\prod_{t=q-2}^q u_tv_t}\ne0
+ \tag{LC44}
+\]
+
+on a nonempty generic positive common-G open. The three block signs
+are +,-,+; their denominators are respectively 1, the product of
+the three u's, and the product of the three v's. Thus even after
+fixing the totals, the six formal boundary margins can change the
+six observations arbitrarily. The margins of these particular R_ab
+remain constrained by their actual source expansions. Dropping them
+would invalidate a nonvanishing argument.
+
+The reproducible check in
+`exploration/source24_vertex_margin_probe.py` reads the saved q=4,5
+rational-identity certificates without refitting. For each case it
+independently computes OM from the prefix coefficients, TS from the
+actual source coefficients, and B from h and the last two coefficient
+tables. All 36 equalities (LC40), the twelve h vertex zeros, the
+fixed-total determinant (LC44), and the three known pair-block factors
+pass. Both observed matrices have rank six: their determinants modulo
+1000003 are 889110 at q=4 and 73357 at q=5. Both known B matrices
+also have rank six at these fixtures. Results are saved in
+`exploration/source24-vertex-margin-probe-results.json`.
+These are external exact finite-field certificates. A uniform proof
+that the actual margin correction cannot cancel B is still missing.

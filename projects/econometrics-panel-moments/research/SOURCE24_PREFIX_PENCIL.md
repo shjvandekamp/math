@@ -596,3 +596,25 @@ the entire subspace Pi_b Z_q as well. Its transported image may
 depend on b. Establishing how these three images and their seed
 complements interact with the actual source graph is a precise
 remaining route; (PP36) asserts no common invariant subspace.
+
+The relation to the previously proved incoming theorem is exact.
+Let Z denote the old/old double-residue block of the physical
+polar-corrected incoming columns, already right-transported by
+K_n^{-1}, as in (H1)--(H5). In the same residue coordinates, (PP24)
+gives
+
+\[
+ Z_{t,a,b}=A_t(a,b)\,\Omega_{\rm old}Q_b(R^*_{ib}).
+ \tag{PP37}
+\]
+
+The added Z_i E_nb and the recovered prefix each have at most one
+old pole, even after right multiplication by K_n^{-1}; hence neither
+contributes to these old/old double residues. The audited incoming
+corollary after (D10) therefore proves joint independence of all 9q
+transported seeds modulo E_q for odd q>=5. The even incoming bound
+(E17) gives joint rank at least 9q-6 for even q>=6. These incoming
+statements require no old-source inverse. Applying the actual prefix
+or tail map still uses shorter-source independence, and neither
+incoming statement proves nonvanishing of (PP20). For even q the
+remaining incoming test itself is the six-column map (E18).

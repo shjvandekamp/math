@@ -2,6 +2,7 @@ import PanelMoments.SourceAppendIdentities
 import PanelMoments.SourceRelativeTimeJet
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
+import PanelMoments.SourceMixedPairDeterminant
 import PanelMoments.SourcePolynomialKernels
 import PanelMoments.SourcePolynomialCriterion
 import PanelMoments.SourceFamily
@@ -463,3 +464,16 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceMixedPoleJet.homogeneousWordProduct_affine_differentiableAt
 #print axioms PanelMoments.SourceMixedPoleJet.clearedSpecial_affine_hasDerivAt
 #print axioms PanelMoments.SourceMixedPoleJet.clearedSpecial_word_affine_hasDerivAt
+
+-- Explicit two-column mixed-pair derivative determinants and actual-word units.
+#print axioms PanelMoments.SourceMixedPairDeterminant.relative_e0_pair_direction
+#print axioms PanelMoments.SourceMixedPairDeterminant.minor01_vecMul_of_row_sum
+#print axioms PanelMoments.SourceMixedPairDeterminant.rowTail_pair_minor
+#print axioms PanelMoments.SourceMixedPairDeterminant.clearedPairDerivative_minor
+#print axioms PanelMoments.SourceMixedPairDeterminant.relativePairDerivative_minor
+#print axioms PanelMoments.SourceMixedPairDeterminant.relativePairDerivative_minor_ne_zero
+#print axioms PanelMoments.SourceMixedPairDeterminant.kernel_row_sum_of_nonzero
+#print axioms PanelMoments.SourceMixedPairDeterminant.homogeneousWordProduct_row_sum_of_nonzero
+#print axioms PanelMoments.SourceMixedPairDeterminant.kernel_det
+#print axioms PanelMoments.SourceMixedPairDeterminant.homogeneousWordProduct_det
+#print axioms PanelMoments.SourceMixedPairDeterminant.actualWord_pair_minor_ne_zero

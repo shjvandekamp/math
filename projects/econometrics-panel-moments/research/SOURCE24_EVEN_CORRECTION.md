@@ -220,3 +220,51 @@ E14's incoming matrix was not independently rebuilt by full regular Laurent
 elimination, and E16 was audited mathematically rather than tested by this
 script. No downloaded implementation was run. These finite ranks do not
 prove all-even-m incoming rank or mapped injectivity.
+
+## A uniform lower bound and a six-dimensional remaining test
+
+The auxiliary sparse family in (H5) is defined at even m as well.
+The six boundary pivots (H13)--(H15) use only m>=5. The remaining
+deletion-word argument (H16)--(H17) uses the all-k theorem with
+k=m-1>=4. Neither auxiliary proof requires odd parity; parity entered
+when identifying the sparse family with the actual leading operator.
+Consequently Z_sparse has generic full column rank 9m for every
+even m>=6. Combining this with the six-column correction in (E15)
+proves the uniform incoming bound
+
+\[
+ \operatorname{rank}Z_{\rm even}\ge9m-6
+ \qquad(m\ge6\text{ even}).
+ \tag{E17}
+\]
+
+This uses the generic even polar first-jet theorem to define the
+correction coefficients. It does not require the old source matrix O.
+It also does not promote the finite m=4 calculation into an induction
+base for a different theorem.
+
+Write the actual correction as Z_even=Z_sparse+C Theta, with C
+having six columns. Choose a parameter-only left inverse A of
+Z_sparse on a full-rank open. The possible dependency space of
+Z_even is isomorphic to the kernel of the six-column map
+
+\[
+ y\longmapsto
+ \begin{pmatrix}
+  (I-Z_{\rm sparse}A)Cy\\
+  (I_6+\Theta AC)y
+ \end{pmatrix}.
+ \tag{E18}
+\]
+
+Indeed, for Z_even x=0 put y=Theta x. Multiplying by A gives
+x=-ACy, and substitution gives both equations in (E18).
+Conversely those equations imply Z_even(-ACy)=0 and
+Theta(-ACy)=y, so the two constructions are inverse. In particular
+every nonzero dependency has a nonzero six-vector y.
+The sufficient condition det(I_6+Theta AC) nonzero is stronger than
+the exact injectivity criterion (E18). The shared-new first-jet
+nonvanishing theorem alone establishes neither of these conditions.
+Even if (E18) is injective, the later actual source-prefix projection
+still has to be handled. These implications were independently audited
+as paper algebra; no new finite calculation or Lean proof is claimed.

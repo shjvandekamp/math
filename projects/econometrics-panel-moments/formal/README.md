@@ -39,9 +39,19 @@ denominator-cleared numerator identity and its first derivative at a pair
 of row-form zeros. The derivative allows an entrywise differentiable tail;
 the actual ordered-kernel-product corollary proves this hypothesis from
 nonzero row denominators in the tail. This does not assert a residue
-asymptotic, nonvanishing, or rank result. The current source-family
-aggregate checks 366 declarations in a compiled 35-module closure. The
-latest check compiled the aggregate against cached module outputs; it was
+asymptotic, nonvanishing, or rank result.
+
+`SourceMixedPairDeterminant.lean` proves an explicit nonzero two-column
+cleared derivative determinant at a common pair of row-form zeros. Its
+actual-word corollary assumes nonzero coordinates, source entries, the
+selected row minor, `ν−τ`, and the tail's row forms and block determinants.
+Tail differentiability, row sums, and determinant nonvanishing are derived
+from the actual ordered kernels. Residue extraction and full source-family
+independence remain outside these formal results.
+
+The current source-family aggregate checks 377 declarations in a compiled
+36-module closure. The latest check compiled the aggregate against cached
+module outputs; it was
 not a clean rebuild. Its axiom output is saved in
 `source-family-extended-axioms.txt`.
 
