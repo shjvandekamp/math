@@ -7,6 +7,8 @@ import PanelMoments.SourceTimeScaling
 import PanelMoments.SourceBoundaryEndpointAlgebra
 import PanelMoments.SourceRepeatedPoleAlgebra
 import PanelMoments.SourceEndpointCoalescenceCoefficient
+import PanelMoments.SourceEndpointCoalescenceKernel
+import PanelMoments.SourceEndpointCoalescenceWitness
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -607,3 +609,17 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det
 #print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det_pos
 #print axioms PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det_pos_pow
+
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.old_rowForm
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.old_kernel_inactive_row
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.old_kernel_inactive_column
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.old_kernel_action
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.old_kernel_power_action
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.exceptionalInput_inactive
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.exceptionalInput_div
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.exceptionalInput_sum_div
+#print axioms PanelMoments.SourceEndpointCoalescenceKernel.exceptionalRow_active_ratio
+#print axioms PanelMoments.SourceEndpointCoalescenceWitness.exceptionalRow_div_edge
+#print axioms PanelMoments.SourceEndpointCoalescenceWitness.idealCoupling_eq
+#print axioms PanelMoments.SourceEndpointCoalescenceWitness.idealCoupling_det
+#print axioms PanelMoments.SourceEndpointCoalescenceWitness.idealCoupling_det_pos

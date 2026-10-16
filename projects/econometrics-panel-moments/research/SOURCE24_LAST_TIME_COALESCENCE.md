@@ -3343,3 +3343,284 @@ algebraically. Their independence after correcting the
 simultaneously splitting earlier columns is unproved;
 the four-term expression alone does not give the final
 three pivots.
+
+## An explicit three-scalar interface independent of the appended time
+
+[Pro42](https://chatgpt.com/c/6ad1b460-b4cc-83ed-8db3-abba27d943ac)
+supplied a different description of the inherited correction,
+checked independently locally. Take sector a=0, put
+k_i=1+r_i, g=(k_0,1,1), and use coordinate-edge
+representatives Q_0=(0,1,-1), Q_1=(1,0,-k_0),
+Q_2=(1,-k_0,0). Write m=q-1 and A=A_q. The actual
+polynomial head correction for a constant row h is
+
+\[
+ \Phi_A(h)=h\operatorname{diag}(X)(V_q-I)
+          =hA^{-1}\operatorname{diag}(L_q)
+             -h\operatorname{diag}(X).
+ \tag{LC127}
+\]
+
+Every homogeneous linear zero-sum polynomial row T has
+a unique decomposition T=cv+Phi_A(h). The three
+undivided edge values recover h, and one further scalar
+value recovers c. More generally, for any zero-sum
+rational row W regular at the coordinate edges define
+
+\[
+ h_A(W)=
+   \left(\frac{W_i(Q_i)}{L_{qi}(Q_i)}\right)_{i=0}^2 A,
+ \qquad
+ c_A(W)=\bigl(W-\Phi_A(h_A(W))\bigr)_1(Q_0),
+ \qquad d_A(W)=h_A(W)-c_A(W)g .
+ \tag{LC128}
+\]
+
+The chosen representative has v_1(Q_0)=1. This
+four-value functional is defined on rational rows;
+only the decomposition assertion requires W polynomial.
+It obeys d_A(Phi_A(h))=h, d_A(v)=-g,
+d_A(vV_q)=0. For a polynomial row T,
+Eval_q(T)=-diag(X_c(P_c))d_A(T)^T.
+
+Let R(c) be an actual shorter paired combination, h(c)
+its three accumulated head coefficients, and
+ell_0(R)=R_1(Q_0). Its coordinate factors imply
+h_A(R)=0 and d_A(R)=-ell_0(R)g. Thus the inherited
+interface is the constant row
+mu(c)=h(c)-ell_0(R(c))g. Unlike d_A itself, this
+interface depends only on the shorter family and the
+fixed new line, not on the appended time.
+
+There is an explicit source table for it. At Q_0 let
+R_t be the active two-state restriction of K_t, put
+d_12=k_1k_2-1, and set
+
+\[
+ \delta_t=\det R_t
+   =-\frac{d_{12}u_tv_t}
+      {(k_1u_t-v_t)(u_t-k_2v_t)},\quad
+ \Delta=\prod_{t=1}^m\delta_t,\quad
+ p_s=\left(R_s\prod_{j\ne s}^{\rm increasing}R_j\right)_{12}.
+ \tag{LC129}
+\]
+
+These are the actual selected-first words. Their other
+off-diagonal entry is 1-Delta-p_s. Consequently
+ell_0(H_s0)=0, ell_0(H_s1)=p_s,
+ell_0(H_s2)=1-Delta-p_s, and
+
+\[
+ \ell_0(J_{t0})=0,\qquad
+ \ell_0(J_{t1})=\frac{\Delta}{d_{12}}
+          \left(\frac1{v_t}-\frac{k_2}{u_t}\right),\qquad
+ \ell_0(J_{t2})=\frac{\Delta}{d_{12}}
+          \left(\frac1{u_t}-\frac{k_1}{v_t}\right).
+ \tag{LC130}
+\]
+
+For example the incoming deletion tail multiplies the
+zero-sum active row by Delta/delta_t; its exterior
+A_t(c,0)X_c/L_tc factor gives (LC130). Define
+U=[[1,0,-k_0],[0,1,-1],[0,0,1]] and let the
+three-row coefficient map mathcal I_m satisfy
+mathcal I_m c=U mu(c)^T. Its columns are
+
+\[
+\begin{array}{c|c}
+ H_{s0}&(1,0,0)^{\mathsf T}\\
+ H_{s1}&(0,1,-p_s)^{\mathsf T}\\
+ H_{s2}&(-k_0,-1,\Delta+p_s)^{\mathsf T}\\
+ J_{t0}&0\\
+ J_{t1}&(0,0,\frac{\Delta}{d_{12}}(k_2/u_t-1/v_t))^{\mathsf T}\\
+ J_{t2}&(0,0,\frac{\Delta}{d_{12}}(k_1/v_t-1/u_t))^{\mathsf T}.
+\end{array}
+ \tag{LC131}
+\]
+
+Every head triplet has determinant Delta, which is
+nonzero on the coordinate-edge geometry. The first two
+rows are unweighted head margins; all incoming source
+dependence enters one explicit scalar endpoint balance.
+
+Now assume B_m invertible, take W_d=C_dV_q from
+(LC95), let b_d be its earlier residue data, and
+alpha_d=B_m^(-1)b_d. The actual polynomial remainder is
+T_d=W_d-R(alpha_d)-Phi_A(h(alpha_d)). Therefore
+
+\[
+ U\operatorname{diag}(X_c(P_c))^{-1}S_q
+  =\mathcal I_m B_m^{-1}[\,b_0\ b_1\ b_2\,]
+       -[\,U d_A(W_d)^{\mathsf T}\,]_{d=0}^2 .
+ \tag{LC132}
+\]
+
+This preserves the inherited head correction exactly.
+It replaces its description by three explicit dual rows
+mathcal I_m B_m^(-1), independent of the appended time.
+Those rows still act on a growing residue-data space.
+Their values on the particular three inputs b_d, and
+nonvanishing of (LC132), remain unproved. The nonzero
+head-triplet determinant Delta does not settle that issue.
+
+## Endpoint values and first divided jets cannot recover the head margins
+
+The same Pro42 calculation supplies a uniform obstruction
+to an endpoint-only simplification of (LC132). For a
+coordinate-divisible zero-sum row define ell_i(Y) by
+Y(Q_i)=ell_i(Y)v(Q_i), and define the first divided
+observation nu_i(Y)=(Y_i/X_i)(Q_i). For the three
+incoming columns of any one block, their three-by-three
+ell-value matrix is generically invertible for every
+fixed positive r.
+
+To verify this, remove the nonzero row factors given by
+the deletion-tail binary determinants and the nonzero
+column factors A_t(c,0). The remaining matrix has entries
+X_c(Q_i)/L_tc(Q_i) and zero diagonal. With time (u,v),
+its determinant numerator after a common denominator is
+
+\[
+ N(u,v)=(k_1u-v)(1-k_0k_2v)(1-u)
+       -(u-k_2v)(1-v)(1-k_0k_1u),\qquad
+ N(0,v)=v(r_2+k_2r_0v).
+ \tag{LC133}
+\]
+
+This polynomial is nonzero. Small positive u and generic
+positive v give an admissible witness; the zero value
+u=0 is used only to certify polynomial nonidentity.
+
+For an incoming row whose completed deletion word ends
+at block tau, the canceled endpoint relation (LC97)
+gives nu_i=rho_tau,i ell_i, where, writing
+d_ij=k_i k_j-1,
+
+\[
+ \rho_{t0}=\frac{r_1/v_t+r_2/u_t}{d_{12}},\qquad
+ \rho_{t1}=\frac{u_t(k_0r_2+r_0/v_t)}{d_{02}},\qquad
+ \rho_{t2}=\frac{v_t(k_0r_1+r_0/u_t)}{d_{01}} .
+ \tag{LC134}
+\]
+
+These follow directly from rho_ti=sum_(j different from i)
+eta_tij g_j. For m>=2 take the six incoming columns
+from blocks m-1,m. Write E_t for their three-by-three
+ell-value matrix, and R_t^edge=diag(rho_ti). Their
+six-observation determinant factors as
+
+\[
+ \det\begin{pmatrix}
+ E_{m-1}&E_m\\
+ R_m^{\rm edge}E_{m-1}&R_{m-1}^{\rm edge}E_m
+ \end{pmatrix}
+  =\det E_{m-1}\det E_m
+     \prod_i(\rho_{m-1,i}-\rho_{m,i}).
+ \tag{LC135}
+\]
+
+The different terminal blocks are essential: deleting
+m-1 leaves a word ending at m, while deleting m leaves
+one ending at m-1. At times (u,v) and (lambda u,lambda v),
+
+\[
+ \prod_i(\rho_{m-1,i}-\rho_{m,i})
+ =\frac{(\lambda-1)^3}{\lambda}
+  \frac{k_0^2 r_1r_2(r_1u+r_2v)}{d_{01}d_{02}d_{12}} .
+ \tag{LC136}
+\]
+
+At lambda=1 the two endpoint matrices coincide and have
+a generically nonzero determinant by (LC133). Small
+nonzero lambda-1 therefore gives a nonzero determinant
+in (LC135), with positive time factors. The argument and
+its signs were independently audited.
+
+Thus these six incoming columns generically span all
+six observations (ell_0,ell_1,ell_2,nu_0,nu_1,nu_2),
+for every fixed positive r and m>=2. No nonzero linear
+functional of these observations can annihilate all
+incoming columns. In particular, they cannot alone
+recover either nonzero head-margin functional in
+(LC131). This rules out that specific shortcut; it
+does not prove dependence of the paired family.
+
+## A simpler uniform witness for the endpoint determinant
+
+The uniform endpoint proof has a shorter alternative to
+the coupled small-parameter estimates in (LC123). A local
+calculation, checked by two independent audits, evaluates
+the rational expression (LC120) at z_*=(3/2,1,1).
+Write A=4^m, B=3^m, m>=1. Then
+
+\[
+ \widehat D_q(z_*)=
+ \begin{pmatrix}0&a&a\\b&0&c\\b&c&0\end{pmatrix},
+ \qquad
+ a=\frac{2B}{A-1},\quad
+ b=-\frac{(A+5)B+3A}{30(A-1)},\quad
+ c=\frac{A-(A+6)B}{9(A-1)} .
+ \tag{LC137}
+\]
+
+Consequently
+
+\[
+ \det\widehat D_q(z_*)
+  =\frac{2B\bigl((A+5)B+3A\bigr)
+             \bigl((A+6)B-A\bigr)}{135(A-1)^3}>0.
+ \tag{LC138}
+\]
+
+Positivity follows already from A>1 and B>=3. Every
+denominator in (LC120) is nonzero at z_*, so this
+expression is regular and remains nonzero nearby.
+
+The point z_* is not an admissible source specialization:
+the state-zero last node lies on a coordinate edge, and
+the state-one and state-two last nodes coincide. The
+original transformed cancellation observations are
+degenerate there. Equation (LC137) evaluates their
+canceled rational extension, not an original residue
+matrix at that point.
+
+First choose a nearby positive generic z where det
+widehat D_q remains nonzero, the last nodes are distinct
+and away all coordinate edges, and the transformed
+cancellation pivots xi_c are nonzero. The excluded
+conditions are proper algebraic subsets. In particular
+the limiting identity
+xi_c=t_m(U+z_c)(vV_q)_j shows the needed pivot
+nonvanishing on the usual geometry, with an active
+component j chosen nonzero.
+
+Fix that z before perturbing the first m time blocks
+away from g. At the fixed last nodes all limiting
+coordinates and old row forms are nonzero, so the
+interior ordered products and cancellation ratios are
+ordinarily continuous. At coordinate edges the actual
+row products stay in the closed active two-state
+blocks; their entries and the eta coefficients are
+continuous there. Thus D_q tends to widehat D_q(z).
+Small generic positive earlier-time perturbations give
+det D_q nonzero and restore the full arrangement
+geometry. Normalize each time vector by its first entry.
+
+This two-stage continuity argument proves the same
+uniform endpoint theorem and the rank bounds after
+(LC123). It needs no simultaneous epsilon/delta order
+estimates.
+
+The actual active-block and exceptional-row identities are now checked
+in SourceEndpointCoalescenceKernel.lean (nine declarations). The four
+declarations in SourceEndpointCoalescenceWitness.lean define the ideal
+coupling directly from actual exceptional rows and the existing endpoint
+coefficients, derive (LC137), and prove (LC138) positive for every m>=1.
+The cancellation ratio is explicit in these definitions; its extraction
+from generic pole ratios and the ordered perturbation argument above
+remain paper mathematics. In particular, the formal witness is not an
+admissible original-source fixture. The updated cached aggregate checks
+502 declarations across 46 modules, using only foundational axioms,
+in 21.71 seconds with peak RSS 2,429,435,904 bytes.
+The final three paired directions per sector and
+the retained-old-source determinant remain open.

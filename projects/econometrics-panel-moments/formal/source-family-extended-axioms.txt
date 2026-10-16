@@ -1101,3 +1101,40 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceEndpointCoalescenceCoefficient.coefficientMatrix_det_pos_pow' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.old_rowForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.old_kernel_inactive_row' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.old_kernel_inactive_column' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.old_kernel_action' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.old_kernel_power_action' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.exceptionalInput_inactive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.exceptionalInput_div' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.exceptionalInput_sum_div' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceKernel.exceptionalRow_active_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceWitness.exceptionalRow_div_edge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceWitness.idealCoupling_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceWitness.idealCoupling_det' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceEndpointCoalescenceWitness.idealCoupling_det_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -114,10 +114,21 @@ matrix, including A=4^m and B=3^m for every m>=1. Its ten declarations
 do not identify that matrix with an actual source asymptotic coefficient;
 residue extraction, limit control, and source independence remain separate.
 
-The current source-family aggregate checks 489 declarations in a compiled
-44-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. It took 40.23 seconds with peak
-RSS 1,832,435,712 bytes under the serial memory cap. All checked declarations
+SourceEndpointCoalescenceKernel.lean proves nine actual-kernel identities
+on the closed active binary block, including the 3^m power formula and the
+exceptional-row ratios used in the endpoint calculation. Its cancellation
+ratio is explicitly defined; deriving that ratio from generic poles remains
+a paper argument. SourceEndpointCoalescenceWitness.lean adds four theorems
+evaluating the actual exceptional rows at z=(3/2,1,1) and proving the resulting
+three-by-three determinant positive for every m>=1. This is a rational
+extension witness: one last node lies on a coordinate edge and two coincide.
+Perturbation to admissible generic geometry and source independence are not
+formalized by these modules.
+
+The current source-family aggregate checks 502 declarations in a compiled
+46-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. It took 21.71 seconds with peak
+RSS 2,429,435,904 bytes under the serial memory cap. All checked declarations
 use only the permitted foundational axioms; the output is saved in
 `source-family-extended-axioms.txt`.
 

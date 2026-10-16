@@ -184,11 +184,19 @@ SourceEndpointCoalescenceCoefficient adds ten checked declarations for
 the explicit endpoint first coefficient matrix. Its determinant is
 strictly positive for A>1 and B>=3, in particular A=4^m and B=3^m
 for every m>=1. Actual asymptotic extraction remains a paper argument.
-The updated aggregate checks 489 declarations in a 44-module compiled
+SourceEndpointCoalescenceKernel adds nine actual-kernel identities for
+the closed active binary block, its 3^m powers, and the exceptional-row
+ratios. SourceEndpointCoalescenceWitness adds four theorems deriving the
+explicit endpoint matrix at z=(3/2,1,1) from those actual rows and proving
+its determinant positive for every length. The cancellation ratio is
+defined explicitly; its generic derivation and perturbation to admissible
+geometry remain paper arguments. This specialization is a rational
+extension witness, with one node on an edge and two coincident nodes.
+The updated aggregate checks 502 declarations in a 46-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 44-module rebuild. The aggregate took 40.23 seconds with peak
-RSS 1,832,435,712 bytes under the serial memory cap.
+new clean 46-module rebuild. The aggregate took 21.71 seconds with peak
+RSS 2,429,435,904 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 
@@ -882,6 +890,16 @@ Consequently paired rank is at least 6q-3 per sector and
 18q-9 globally for every q>=2. The incoming quotient has
 rank at least 9q-9. Its final three-by-three determinant
 per sector and the full remaining source block are open.
+The shorter proof in (LC137)--(LC138) replaces the delicate simultaneous
+limit by an explicit positive determinant at z=(3/2,1,1): first move to a
+nearby generic positive terminal time, then coalesce the earlier times.
+Both interior and active-edge products are continuous in this order.
+The audited interface (LC127)--(LC132) also reduces the inherited
+correction to three explicit dual rows independent of the appended time.
+Their data domain still grows with length. Equations (LC133)--(LC136)
+show why six natural endpoint and first divided observations alone cannot
+recover the head margins: the last two incoming groups generically fill
+all six. Neither result proves the final-three determinant.
 The saved finite boundary checker independently extracts the
 54-square minor 482791 from the prior q=4 matrix, verifies its
 three sector determinants, and gives the remaining 27-square
@@ -1137,6 +1155,10 @@ silently assumed by either proved theorem, and no result below is claimed.
    in (LC115)--(LC123). Prove nonvanishing of the final three
    incoming quotient directions per state sector; the endpoint
    coupling's nonzero determinant does not by itself supply them.
+   The explicit three-row inherited interface (LC132) retains the unknown
+   response of the shorter actual family. An endpoint-only replacement
+   is excluded by (LC136). The simpler endpoint witness (LC138) settles
+   preceding pivots only, including after nearby generic perturbation.
    Then control the retained-old-source correction in (LC113).
    Formalization of these residue, edge-descent, and asymptotic
    arguments remains unfinished.
