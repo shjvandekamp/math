@@ -1589,3 +1589,214 @@ used 1.972 seconds and 30,212,096 bytes RSS. Both exited successfully
 without reaching the resource guard. These finite results give a
 specific selector to prove uniformly; they do not prove (ZP68)
 works for every q or settle the endpoint Schur correction.
+
+### The common matching image and its additional direction
+
+The finite failures above have an exact explanation. Use the chart
+X0=1 and y=X1 at each state-2 matching point y_t=−1/(3u_t).
+Let Q^t be the ascending old product with t omitted, and put
+
+\[
+ U_t=(Q^t)_{01}\big|_{(1,y_t,0)},\quad
+ W_{ti}=(Q^t)_{i2}/X_2\big|_{(1,y_t,0)},\quad
+ \widehat D_t=\prod_{j\ne t}d_j(y_t),
+\]
+
+where d_j is the state-0/1 binary determinant from (ZP63).
+For a row R with zero scalar X2-axis restriction write
+b_t(R)=Res_(L_t2)R1/(X2 X1) at the matching point, and
+mathfrak_m_t(R)=Res_(L_t2)(h/mu) there. Actual source factors
+make the displayed matching values regular. Define the old-only
+or bounded-in-v quantities
+
+\[
+ k_t=-U_t/y_t,\qquad m_t=1-W_{t0}/v,\qquad
+ n_t=y_t(W_{t0}-W_{t1}),\qquad
+ a_t=v\widehat D_t+k_t n_t/m_t.
+ \tag{ZP69}
+\]
+
+The body and scalar matching values of M_t2 are respectively k_t
+and m_t, supported only at t. The B_s1 columns have body vector
+v(−Dhat_1 e1+Dhat_s es) and scalar matching vector
+n1 e1−ns es. Thus eliminating scalar matching changes their body
+matrix to the star-incidence matrix with columns
+
+\[
+ -a_1e_1+a_se_s,\qquad 2\le s\le q.
+ \tag{ZP70}
+\]
+
+It has generic rank q−1, since a_t/v tends to the nonzero Dhat_t.
+Raw C_tn^(12) and C_tn^(22) have both matching vectors zero.
+Their scalar X2-axis restrictions are zero too, so they need no
+A correction. E2,T1,T2,B_s2 and M_t0 also have both matching
+vectors zero. Consequently all corrected C12/C22 matching columns
+belong to (ZP70)'s image. This is a shared structural ceiling,
+not merely a conclusion from the finite ranks. With the matching
+scalar correction retained, the exact functional
+
+\[
+ \Phi_v(R)=\sum_{t=1}^q
+ \frac{b_t(R)-k_t\mathfrak m_t(R)/m_t}{a_t}
+ \tag{ZP71}
+\]
+
+annihilates all these correction columns. In particular, raw
+incidence weights alone are insufficient at finite v.
+
+There is a uniform extra direction for q>=3. Write a=u1, b=u2,
+kappa=(a−b)/(ab), l(y)=kappa(1+2by), and
+E_a=F_empty,n,a−F_empty,1,a for a=0,1. These E_a are the
+actual empty differences, not a previously axis-corrected E column.
+Use the actual combination
+
+\[
+ V=D_{21}-\kappa(E_0-Astar_0)
+             -2b\kappa(E_1-Astar_1).
+ \tag{ZP72}
+\]
+
+The binary identity H2/Q1=kappa(y^−1+2b) proves that its body
+axis is zero exactly. Its scalar X2 axis is also exactly zero:
+before the common nonempty tail K3...Kq, the binary row identity is
+y e0(K2−K1)−l e0(K2−K1K2)=0. Apply it to the tail's normal
+output-2 column; the other derivative terms vanish because that
+tail has zero output-2 column on the axis. Hence V needs no A
+correction.
+
+Adding C_2n^(12), which already belongs to the common matching
+image after correction, and discarding an appended old row reduces
+the relevant values to J K3...Kq. In the chart X0=1, put
+l_row=kappa e0+2b kappa y e1. The local row is
+
+\[
+ J=(y e_1-l_{row})K_1K_nK_2
+      -y e_1K_2K_nK_1+l_{row}K_nK_1K_2.
+ \tag{ZP73}
+\]
+
+Its binary axis is zero. The coefficient of v in its first X2
+derivative is
+(y−l)(e2−e0)K2−y(e2−e0)K1+l(e2−e0)K1K2.
+The leading body matching residues are supported at old blocks
+1 and 2 only. After dividing by their v Dhat factors they are
+
+\[
+ \left(\frac1{d_2}-\frac l y\right)_{y=-1/(3a)},\qquad
+ \left(-\frac{y-l}{y d_1}\right)_{y=-1/(3b)}.
+ \tag{ZP74}
+\]
+
+Every later determinant cancels in these ratios. Later state-2
+residues gain an additional X2 from J's zero binary axis and do not
+contribute at this order. At the noncolliding choice a=1,b=4 the
+sum in (ZP74) is 10/3−55/3=−15, so it is a nonzero rational
+function. The raw scalar matching of J K3...Kq is O(1) as v tends
+to infinity: its normalization divides the second output-2
+coefficient by v, while the final old output supplies an X2, so
+only first derivatives of K_n, of degree at most one in v, enter.
+The k_t/m_t correction is bounded and therefore cannot cancel
+(ZP74). All remaining scalar corrections are annihilated by
+Phi_v exactly; no bound on their coefficients is assumed.
+Thus Phi_v(V) is generically nonzero. Since V differs from the
+additional C_2n^(11) only by accepted scalar columns and the
+ordinary-axis selector, it proves precisely the required extra
+matching direction. The local residues and correction argument
+were independently audited.
+
+### The remaining q−1 directions by Laurent interpolation
+
+For this calculation use the other axis, X0=0, X1=x, X2=1.
+Set z_t=v_t/u_t, sigma=1/2, tau=2/3, c=tau−sigma=1/6, and
+
+\[
+ J_i=\frac{(x+\sigma z_i)(x+\tau z_i)}{c z_i x},\quad
+ U_i=\frac{x+\sigma z_i}{c z_i},\quad
+ P_j=\prod_{i\le j}J_i,\quad
+ S_j=\sum_{i\le j}U_iP_{i-1}.
+ \tag{ZP75}
+\]
+
+The previously accepted move-first differences obey
+Lambda_s=(P_(s−1)−1)U_s−(J_s−1)S_(s−1). They depend only on
+z1,...,zs and have nonzero extreme powers 1−s and s−1 generically.
+For C_tn^(12), its scalar axis divided by Delta is exactly
+
+\[
+ F_t=\frac\sigma c(x+\tau z_t)
+       \sum_{i\ne t}U_i\prod_{j<i,\ j\ne t}J_j.
+ \tag{ZP76}
+\]
+
+This follows by canceling its departure factor against J_t in
+V^t/Delta. The support of F_t is contained in [2−q,q]. In the
+full axis basis {1,x,Lambda_s,x Lambda_s:2<=s<=q}, only Lambda_q
+has power 1−q. Its coefficient is therefore zero. Only B_q2 among
+the B/T columns can have nonzero final vertex derivative j, and
+the raw C12 derivative is zero. The M derivatives are also zero.
+Thus the final E correction is exactly zero, and the total B_s1
+coefficients are the raw Laurent x Lambda_s coefficients. They
+are independent of the new v.
+
+It remains to prove F_1,...,F_(q−1) independent modulo
+{1,x,Lambda_2,...,Lambda_(q−1)} in Laurent support [2−q,q].
+First assume q>=3, put k=q−1, and let z_q tend to zero,
+retaining z1,...,zk as
+independent parameters. Since U_q=sigma/c+x/(c z_q), the
+leading coefficient in z_q^−1 of each F_t, t<=k, is
+
+\[
+ L_t=\frac\sigma{c^2}\frac{x^2P_k}{U_t}.
+ \tag{ZP77}
+\]
+
+The k leading columns span
+x^(2−k) prod_(i<=k)(x+tau z_i) times all polynomials of degree
+at most k−1: after the common factor is removed, they are nonzero
+multiples of the deleted-factor basis prod_(i!=t)(x+sigma z_i).
+In any relation with 1,x,Lambda_2,...,Lambda_k, the unique lowest
+power x^(1−k) first kills Lambda_k. Evaluate what remains at
+x_i=−tau z_i, 1<=i<=k. The leading columns vanish there.
+The evaluation matrix B_k of
+{1,x,Lambda_2,...,Lambda_(k−1)} at these k nodes is generically
+invertible. Indeed B_2 has determinant tau(z1−z2). For k>=3,
+expand along the last row as z_k tends to zero. Only its last
+entry has power z_k^(2−k); its cofactor is det B_(k−1). If
+ell_(k−1)^− denotes the nonzero lowest Laurent coefficient of
+Lambda_(k−1), then
+
+\[
+ \det B_k=\det B_{k-1}\,\ell_{k-1}^-
+           (-\tau)^{2-k}z_k^{2-k}+O(z_k^{3-k}).
+ \tag{ZP78}
+\]
+
+This proves nonvanishing inductively. The evaluation forces all
+remaining quotient coefficients to vanish, and the deleted-factor
+basis then kills all leading-column coefficients. The leading
+coefficient of the original determinant in z_q^−k is consequently
+nonzero. The case q=2 is direct: its single leading F column has
+a nonzero quadratic coefficient modulo 1,x.
+
+Hence C_tn^(12), 1<=t<=q−1, supplies all q−1 directions in
+(ZP70). Together with the independently audited additional direction,
+this proves the matching selector (ZP68) has generic rank q.
+Together with (ZP67), the entire body pole-limit matrix has rank
+3q. These degenerations prove nonzero rational functions; their
+nonempty generic open conditions intersect with the assumed old
+scalar-full and boundary-quotient conditions, including positive
+parameters.
+
+Consequently, for q>=4 under old scalar fullness, the actual
+boundary scalar kernel has auxiliary body rank 3q. This is a
+conditional paper theorem, independently audited locally, not a Lean
+theorem or a closed induction
+for scalar fullness. If the stronger old joint scalar/auxiliary
+condition is assumed, inherited scalar-kernel appends are zero as
+whole boundary rows and have onto splitting trace Theta. They
+therefore supply 3q additional directions separated from the body
+automatically. The remaining joint-induction obligation is the
+three-endpoint Schur correction after both scalar and body
+elimination. Separate endpoint surjectivity from (ZP54)--(ZP60)
+does not yet establish that correction.

@@ -445,8 +445,9 @@ same kernel gives 18,24,30. These leave three joint endpoint directions.
 Three conditional paper lemmas now recover all three endpoint
 coordinates after the actual scalar projection. Their hypotheses are
 old scalar spanning and inherited trace surjectivity; they do not
-prove those hypotheses inductively. Uniform auxiliary body spanning
-and the endpoint correction against that body remain open. The body
+prove those hypotheses inductively. Auxiliary body spanning now has
+a conditional uniform paper proof; the endpoint correction against
+that body remains open. The body
 map is now reduced to the kernel of the explicit 6q+3 new-source
 quotient coordinates; no old scalar inverse is needed there.
 A further auxiliary-line limit reduces the body map to 2q ordinary
@@ -455,22 +456,29 @@ coefficient kernel. Exact checks at n=4,5,6 give ranks 9,12,15,
 with the expected 2q-plus-q split and nonzero minors
 367880,159493,375589 modulo 1,000,003. Independent polynomial-cleared
 controls verify the constant and first-order residue evaluations.
-The source24-zero-prefix-body-limit files save this finite evidence;
-uniform rank of this smaller constrained matrix remains open.
+The source24-zero-prefix-body-limit files save this finite evidence.
 The ordinary 2q-axis part now has an independently audited uniform
 paper proof, conditional on old scalar fullness and the accepted
 boundary quotient basis. An explicit move-first outgoing column
-supplies the pole missed by the incoming candidates. The remaining
-q matching directions, after the same scalar and axis correction,
-are the current body-rank obligation.
+supplies the pole missed by the incoming candidates.
 At q=4,5, exact projection through that prescribed scalar basis
 confirms the 2q axis selector. The C12 and C22 matching families,
 even together, miss one direction. Adding C_2n^(11) completes the
 matching basis in both fixtures: full 3q determinants are
 126855,623902 modulo 1,000,003. The failures, left nullvectors and
 successful source-coordinate corrections are retained in the
-source24-zero-prefix-projected-body files. The resulting explicit
-q-column matching selector still needs a uniform proof.
+source24-zero-prefix-projected-body files.
+The matching selector now also has a uniform paper proof. Its
+first q−1 directions reduce to Laurent interpolation after a last-time
+degeneration; a local two-block residue calculation supplies the
+remaining direction, with nonzero value −15 at u1=1,u2=4. All scalar
+corrections are retained. Thus old scalar fullness implies boundary
+auxiliary body rank 3q for q>=4. Under the stronger old joint
+hypothesis, inherited whole-row-zero columns automatically separate
+the splitting trace from this body. The three endpoint directions
+still must survive the exact body Schur correction. This conditional
+paper result is not a Lean theorem, a closed induction for scalar
+fullness, or an all-T proof of equation-(24) independence.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -647,12 +655,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    bases to investigate, not an induction theorem.
    A boundary induction for this joint invariant misses three
    endpoint coefficients on the actual scalar kernel. Three conditional
-   endpoint lifts now survive scalar elimination; prove uniform body
-   spanning and its endpoint Schur correction with the same source
-   coefficients.
-   The body has an exact 2q-axis-plus-q-matching limit, verified at
-   n=4,5,6. The 2q axis directions have a conditional uniform proof;
-   prove the remaining q matching minor after those same corrections.
+   endpoint lifts now survive scalar elimination. The auxiliary body
+   now has a conditional uniform 3q-rank proof through its
+   2q-axis-plus-q-matching limit. Prove that all three endpoint
+   directions survive the exact body Schur correction on those same
+   source coefficients; separate endpoint and body ranks do not suffice.
    The inherited higher jet is coupled to the scalar trace, so
    independently computed ranks cannot simply be added.
    Neither route is yet complete.
