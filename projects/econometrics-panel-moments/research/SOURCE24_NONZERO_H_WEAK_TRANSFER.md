@@ -658,3 +658,343 @@ Thus (NH32) is an explicit three-dimensional test, with both actual
 gauge functions known. Its vanishing or nonvanishing has not been
 established uniformly in \(k\). The direct-sum transfer alone does
 not prove this transversality, and does not yet close paired induction.
+
+## Separating the gauge space from the new weak image
+
+The following reductions are independently audited paper arguments. They
+concern the particular recursively promoted actual space \(\mathcal S_m\)
+in (NH26), not the space of every possible higher-order weak coefficient.
+Continue to write \(k=m+1\), with \(m\ge2\), and put
+
+\[
+ z=2h,\qquad
+ \ell=\frac{b_k-b_m}{3},\qquad
+ \omega=\frac{b_k/A-b_m/a_m}{3},\qquad
+ \Delta_k=\ell+\frac\omega r,\qquad
+ \zeta=-\frac\omega\ell.
+ \tag{NH33}
+\]
+
+In addition to the earlier units, suppose \(\ell\ne0\),
+\(A b_m-a_m b_k\ne0\), and \(\zeta\) avoids the old and new
+poles. These are generic conditions compatible with positive parameters.
+Every member of \(\mathcal N_k\) vanishes at \(0,\infty,\zeta\).
+Write \(w_{00}=W_0(0)\), \(w_{1\infty}=W_1(\infty)\), as in
+(NH22). Evaluation of \((1,W_0,W_1)\) at these three points gives
+
+\[
+ \begin{pmatrix}
+ 1&w_{00}&0\\
+ 1&0&w_{1\infty}\\
+ 1&-\ell&\ell\zeta
+ \end{pmatrix},\qquad
+ \det=
+ \frac{(A b_m-a_m b_k)(b_k-b_m)}{12Aa_m}\ne0.
+ \tag{NH34}
+\]
+
+Indeed the determinant before simplification is
+\(w_{00}w_{1\infty}+\ell w_{1\infty}
+-\ell\zeta w_{00}\). Substitution of (NH22) proves the displayed
+factorization. Therefore
+\(\dim\mathcal V_k=3\) and \(\mathcal V_k\cap\mathcal N_k=0\).
+This is a sufficient generic evaluation test. At either excluded weight
+value where its determinant vanishes, it does **not** establish an
+intersection of the two function spaces.
+
+## An explicit old preimage of the three-dimensional test
+
+Let \(Q=Q_{1,h}\), and use \(\overline\beta\) from (NH12). Define
+
+\[
+ \begin{split}
+ \Omega(r)&=
+ \frac{\Delta_k(r)D_m(r)\overline\beta(r)}
+      {\Delta_k(z)D_m(z)\overline\beta(z)},\\
+ G_1&=W_0+\frac{\Delta_kD_m\beta_0}{Q(2/A)},\qquad
+ G_2=W_1+\frac{\Delta_kD_m\beta_1}{Q(1/(2A))}.
+ \end{split}
+ \tag{NH35}
+\]
+
+The two added terms cancel, respectively, the only new state-0 pole of
+\(W_0\) and the only new state-1 pole of \(W_1\). Thus \(G_1,G_2\)
+have only old poles. The same is true of \(\Omega\), which belongs
+to \(\mathcal N_k\), has value one at \(z\), and has values zero
+at zero and infinity. All denominators in (NH35) are units by
+(NH11)--(NH13).
+
+For a target \(F=\nu+\rho W_0+\sigma W_1\), set
+
+\[
+ \begin{split}
+ c_0&=F(0)/\kappa_0,&c_\infty&=F(\infty)/\kappa_\infty,\\
+ \Lambda_0&=2hA/(A-a_m),&\Lambda_\infty&=-a_m/(A-a_m),\\
+ u_1&=\rho+\Lambda_0c_0,&u_2&=\sigma+\Lambda_\infty c_\infty,\\
+ G&=\nu+u_1G_1+u_2G_2,&
+ c_*&=\frac{G-G(z)\Omega}{\chi_{k,h}}.
+ \end{split}
+ \tag{NH36}
+\]
+
+This is the unique old preimage in the direct-sum decomposition (NH25):
+
+\[
+ c_*\in\mathcal F_m,\qquad c_*(\xi)=0,\qquad
+ \mathscr T^{\rm full}_{k,h}(c_*)\equiv F\pmod{\mathcal N_k}.
+ \tag{NH37}
+\]
+
+For the verification, \(G-G(z)\Omega\) has only simple old poles
+and vanishes at \(z\), so division by the simple zero of \(\chi\)
+is removable. The reciprocal of \(\chi\) vanishes at \(\xi\),
+and the numerator is regular there, giving \(c_*(\xi)=0\).
+The resulting function is bounded at infinity. At the two endpoints,
+\(\kappa_0=\chi(0)-\Lambda_0w_{00}\) and
+\(\kappa_\infty=\chi(\infty)-\Lambda_\infty w_{1\infty}\)
+show that its values are exactly \(c_0,c_\infty\). Substituting in
+(NH23) leaves \(F\) modulo the three terms in \(\mathcal N_k\)
+used in (NH35)--(NH36). Uniqueness follows from (NH25).
+
+Let \(\mathcal U_k\subset\mathcal F_m\) be the preimage of
+\(\mathcal V_k\) modulo \(\mathcal N_k\). By (NH34) it has
+dimension three. The exact actual-space condition is now
+
+\[
+ \mathcal S_k\cap\mathcal V_k=0
+ \quad\Longleftrightarrow\quad
+ \mathcal S_m\cap\mathcal U_k=0.
+ \tag{NH38}
+\]
+
+In particular, every member of \(\mathcal U_k\) vanishes at the
+new point \(\xi\). It is not literally the previous gauge space,
+which contains the constant function one. No replacement of the old
+actual space by an arbitrary ambient complement is made here.
+
+## An affine pencil in the new weak weight
+
+There is a useful frame for the same preimage with polynomial dependence
+on \(b_k\). Put
+
+\[
+ p=(K_1^0\cdots K_m^0)_{01},\qquad
+ q_0=\frac{-Ar}{2-Ar},\qquad q_1=\frac{-2Ar}{1-2Ar}.
+\]
+
+Binary affine composition, with the indicated word order, gives
+\(B_{{\rm new},0}=p+D_mq_0\) and
+\(B_{{\rm new},1}=-r(p+D_mq_1)\). Define
+
+\[
+ \begin{array}{c|c|c}
+ i&F_i&L_i\\ \hline
+ 0&p+D_m(q_0+\beta_0/Q(2/A))&1\\
+ 1&-rp+D_m(-rq_1+\beta_1/Q(1/(2A)))&-r\\
+ 2&D_m\overline\beta&0
+ \end{array}
+ \qquad
+ g_i=\Delta_kF_i+\frac{b_m-b_k}{3}L_i.
+ \tag{NH39}
+\]
+
+Thus \(g_0=G_1\), \(g_1=G_2\), and
+\(g_2=\Delta_kD_m\overline\beta\). The subspace of
+\(\mathcal V_k+\mathcal N_k\) with its new state-0 and state-1
+poles removed has basis \(1,g_0,g_1,g_2\): the two new-pole
+conditions are independent, and (NH34) excludes a remaining intersection.
+Imposing value zero at \(z\) gives the frame
+\(g_i-g_i(z)\). Division by \(\chi\), omitting the common nonzero
+factor \(3/(4b_k)\), therefore gives a basis of \(\mathcal U_k\):
+
+\[
+ \begin{split}
+ c_i&=\frac{1-Ar}{r-z}\bigl(g_i(r)-g_i(z)\bigr)
+          =b_k u_i-b_m v_i,\\
+ u_i&=\mathcal D_{A,z}\bigl(\mathcal A_kF_i-L_i/3\bigr),\\
+ v_i&=\mathcal D_{A,z}\bigl(\mathcal A_mF_i-L_i/3\bigr),\\
+ \mathcal D_{A,z}f&=\frac{1-Ar}{r-z}\bigl(f(r)-f(z)\bigr).
+ \end{split}
+ \tag{NH40}
+\]
+
+Here \(u_i,v_i\) depend on the old parameters, \(A,h\), but not
+on \(b_k\). Choose any coordinates on the three-dimensional old
+quotient \(\mathcal F_m/\mathcal S_m\). In these coordinates the
+remaining test is the determinant of the three columns in (NH40), an
+affine matrix pencil in \(b_k\), whose determinant has degree at most
+three. No exact degree, particular factor, sign, or nonzero coefficient
+has been proved. In particular, the two factors in the sufficient
+evaluation test (NH34) are not thereby factors of this actual quotient
+determinant. The unresolved obligation is to prove that at least one
+coefficient of this polynomial is nonzero for the actual old quotient,
+uniformly in the length.
+
+## Restriction to binary poles and the first state-2 pole
+
+The preimage test can be restricted further without an old source
+inverse. Let \(\mathcal F_m^{(1)}\) be the bounded rational functions
+whose only possible poles are the \(2m\) old state-0 and state-1
+nodes, together with \(1/a_1\). Define the actual subspace
+
+\[
+ \dim\mathcal F_m^{(1)}=2m+2,\qquad
+ \mathcal S_m^{(1)}=\mathcal S_m\cap\mathcal F_m^{(1)}.
+ \tag{NH41}
+\]
+
+Every function in \(\mathcal U_k\) lies in \(\mathcal F_m^{(1)}\).
+To see this directly from (NH39), the word defining \(p\) starts in
+state zero and every binary kernel has zero output-2 column. It therefore
+uses only binary row denominators. The factors \(D_m\) also have only
+binary poles, while \(Q_{1,h}\), and consequently
+\(\overline\beta\), can add only the first state-2 pole. The
+cancellations and divided differences above introduce no other old
+poles. The same observation proves
+\(\mathcal N_k\subset\mathcal F_k^{(1)}\).
+
+For any old state-2 node \(1/a_t\), \(t\ge2\), the only term of
+(NH23) with a pole there is \(\chi_{k,h}c\). Its residue is the
+old residue multiplied by the nonzero value \(\chi_{k,h}(1/a_t)\).
+At the new state-2 node, the earlier pole calculation shows that the
+residue vanishes exactly when \(c(\xi)=0\). Thus the actual recursive
+decomposition \(\mathcal S_k=\mathcal N_k\oplus
+\mathscr T^{\rm full}_{k,h}\mathcal S_m\) restricts exactly to
+
+\[
+ \boxed{\mathcal S_{m+1}^{(1)}
+  =\mathcal N_{m+1}\oplus
+    \mathscr T^{\rm full}_{m+1,h}
+       \bigl(\mathcal S_m^{(1)}\cap\ker\operatorname{ev}_{1/a_{m+1}}\bigr).}
+ \tag{NH42}
+\]
+
+On this restricted domain \(\lambda=0\), so the transfer simplifies
+to \(\chi c-\Lambda_0c(0)W_0-\Lambda_\infty c(\infty)W_1\).
+This simplification retains both actual endpoint corrections.
+
+For completeness, the base has \(\dim\mathcal S_2^{(1)}=3\)
+generically. The four-dimensional base image loses one dimension on
+removing its second state-2 pole. A concrete nonzero witness follows
+from (TB11), (TB16)--(TB18) in
+[SOURCE24_BINARY_TWO_BLOCK_BASE.md](SOURCE24_BINARY_TWO_BLOCK_BASE.md).
+At \(h=0\), \(b_1=b_2=\beta\), \(a_1=1,a_2=3\), its actual
+completed-kernel vector is
+
+\[
+ \kappa_{22}=j_{22}-\frac56h_{21}-\frac13h_{22}
+                    +\frac12h_{11}-\frac14j_{20}-\frac1{12}j_{10}.
+ \tag{NH43}
+\]
+
+In the weak scalar \(c=[\delta]C_2/r\), only \(j_{22},h_{22},j_{10}\)
+can have a pole at \(r=1/3\). Their coefficients of \(1/(1-3r)\)
+are respectively \(0,-4\beta/5,4\beta/5\). Formula (NH43)
+therefore has coefficient \(\beta/5\), or ordinary residue
+\(-\beta/15\). All six nodes are distinct. This rational witness
+need not lie in \(a_t\in(1,2)\): it proves the residue's cleared
+polynomial is nonzero, hence it is nonzero generically on that positive
+open set as well. Binary rank is constant near the checked base, so its
+exact-sum-zero binary kernel admits a regular local continuation in
+\(h\); the residue nonvanishing continues to generic nonzero \(h\).
+
+At each subsequent step, evaluation at the independent new point
+\(1/a_{m+1}\) has rank one on the nonzero old rational-function
+space \(\mathcal S_m^{(1)}\). A nonzero rational function cannot
+vanish identically as that point varies in an interval. Consequently
+(NH42) adds exactly two dimensions and proves
+
+\[
+ \boxed{\dim\mathcal S_m^{(1)}=2m-1,\qquad
+ \mathcal S_k\cap\mathcal V_k=0
+ \Longleftrightarrow
+ \mathcal S_m^{(1)}\cap\mathcal U_k=0.}
+ \tag{NH44}
+\]
+
+The smaller ambient quotient
+\(\mathcal F_m^{(1)}/\mathcal S_m^{(1)}\) still has dimension
+three. Its natural map to \(\mathcal F_m/\mathcal S_m\) is
+injective and therefore an isomorphism. It may replace that quotient
+in the affine pencil (NH40). Equations (NH42)--(NH44) give an exact
+evaluation recurrence for the actual accumulated space, but do not
+establish the remaining determinant's nonvanishing. No conclusion
+about full paired independence or Eq. (24) follows without that step.
+
+## A fixed old span for the entire new-parameter preimage family
+
+The functions in (NH39) admit exact cancellations that remove all
+dependence of their pole set on the new parameter. Put \(a=a_1\),
+\(Q_0=Q(2/A)\), \(Q_1=Q(1/(2A))\), \(Q_\xi=Q(1/A)\), and
+write \(F_0=p+D_mR_0\), \(F_1=-rp+D_mR_1\), \(F_2=D_mR_2\).
+Then
+\[
+ \begin{split}
+ R_0&=\frac{u_0r+v_0}{1-ar},
+ &u_0&=-a\left(1+\frac2{3AQ_0}\right),
+ &v_0&=-\frac{2h}{3Q_0},\\
+ R_1&=\frac{r(u_1r+v_1)}{1-ar},
+ &u_1&=a\left(1+\frac1{6AQ_1}\right),
+ &v_1&=\frac{2h}{3Q_1},\\
+ R_\xi&=\frac{u_\xi r+v_\xi}{1-ar},
+ &u_\xi&=-a\left(1+\frac1{3AQ_\xi}\right),
+ &v_\xi&=-\frac{2h}{3Q_\xi},\\
+ R_2&=R_1+2hR_0+(r-2h)R_\xi.
+ \end{split}
+ \tag{NH45}
+\]
+Indeed the defining numerators of \(R_0,R_1,R_\xi\) vanish at
+\(2/A,1/(2A),1/A\), respectively. Polynomial division gives
+the displayed coefficients. For the last identity use
+\[
+ d_kQ_{k,h}=2h q_0-rq_1+(r-2h)\frac{-Ar}{1-Ar},
+ \qquad
+ R_\xi=\frac{-Ar+Q/Q_\xi}{1-Ar}.
+\]
+Substituting the definition of \(\overline\beta\) proves (NH45).
+In particular its numerator has degree at most two, with coefficients
+\[
+ \begin{split}
+ [r^2](1-ar)R_2&=\frac a{6A}\left(\frac1{Q_1}-\frac2{Q_\xi}\right),\\
+ [r](1-ar)R_2&=\frac{2h}3
+  \left[\frac1{Q_1}-\frac1{Q_\xi}
+       +\frac aA\left(\frac1{Q_\xi}-\frac2{Q_0}\right)\right],\\
+ [1](1-ar)R_2&=\frac{4h^2}3
+                       \left(\frac1{Q_\xi}-\frac1{Q_0}\right).
+ \end{split}
+ \tag{NH46}
+\]
+
+Let \(P=D_m/(1-ar)\) and
+\(Jf=(f(r)-f(z))/(r-z)\), with \(z=2h\ne0\).
+Modulo constants, the three \(g_i\) belong to
+\(\operatorname{span}\{p-1,p/r,r(p-1),P/r,P,Pr,Pr^2\}\).
+For example the polynomial term in \(g_1\) combines with its
+\(-r\Delta_kp\) term to give a multiple of \(r(p-1)\).
+The identities
+\[
+ J(rf)=f+zJf,\qquad
+ J(f/r)=\frac{Jf-f/r}{z},\qquad
+ (1-Ar)Jf=(1-Az)Jf-A(f-f(z))
+\]
+now give, for every admissible choice of new \(A,b_k\),
+\[
+ \boxed{\mathcal U_k\subseteq
+  \mathcal B_m:=
+  \operatorname{span}\{1,p,p/r,r(p-1),Jp,P/r,P,Pr,Pr^2,JP\},
+  \qquad \dim\mathcal B_m\le10.}
+ \tag{NH47}
+\]
+This is a space fixed by the old parameters and \(h\). At zero,
+\(p=O(r)\) and \(P=O(r^m)\); at infinity,
+\(p=1+O(1/r)\) and \(P=O(r^{-m-1})\).
+These facts establish boundedness and regularity of every displayed
+generator for \(m\ge2\). The divided difference removes the apparent
+pole at \(z\), and introduces no higher-order old poles. Thus
+\(\mathcal B_m\subseteq\mathcal F_m^{(1)}\).
+
+The exact cancellations and spanning assertion were independently
+audited. This gives a bounded-dimensional representation of the whole
+preimage family, not a closed transfer recurrence for
+\(\mathcal S_m^{(1)}\cap\mathcal B_m\). That intersection and the
+nonzero-coefficient obligation in (NH40) remain unresolved.

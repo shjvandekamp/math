@@ -5679,3 +5679,59 @@ heads and row sums. Condition (LC204) itself remains unproved.
 The scalar polynomial certificate underlying (LC203) is now checked
 by eight Lean theorems; this does not formalize the transfer or
 establish (LC204).
+
+## An old quotient pencil and the restricted pole recurrence
+
+The next audited reduction, (NH33)--(NH44) in the same note, separates
+the actual gauge space from the three new weak directions. With
+\(A=a_k\), \(m=k-1\), evaluate at zero, infinity, and the finite root
+of \(\Delta_k=b_k\mathcal A_k-b_m\mathcal A_m\). The evaluation
+determinant of \(1,W_0,W_1\) is
+\[
+ \frac{(A b_m-a_m b_k)(b_k-b_m)}{12Aa_m}.
+ \tag{LC205}
+\]
+It is generically nonzero, proving \(\mathcal V_k\cap\mathcal N_k=0\).
+An explicit pole-cancelled preimage \(\mathcal U_k\subset\mathcal F_m\)
+then converts (LC204) to \(\mathcal S_m\cap\mathcal U_k=0\).
+Every preimage vanishes at \(1/A\). Its three basis columns can be
+chosen affine in the new weight \(b_k\). Thus their determinant in the
+actual old three-dimensional quotient is a polynomial of degree at
+most three in \(b_k\). The evaluation determinant (LC205) does not
+determine factors or nonvanishing of this different determinant.
+
+All these preimages use only binary old poles and the first state-2
+pole. In that ambient space, of dimension \(2m+2\), the recursively
+promoted actual image satisfies
+\[
+ \mathcal S_{m+1}^{(1)}
+ =\mathcal N_{m+1}\oplus
+   \mathscr T^{\rm full}_{m+1,h}
+    \bigl(\mathcal S_m^{(1)}
+          \cap\ker\operatorname{ev}_{1/a_{m+1}}\bigr),
+ \qquad \dim\mathcal S_m^{(1)}=2m-1.
+ \tag{LC206}
+\]
+The base dimension follows from an explicit nonzero second-state-2
+residue in the four-dimensional two-block weak image; generic
+evaluation removes one dimension at each append. The smaller quotient
+is exactly the same three-dimensional quotient for this test. The
+remaining task is to prove that at least one coefficient of its affine
+pencil determinant is nonzero uniformly in length. No full paired or
+equation-(24) independence conclusion is asserted.
+
+Exact cancellation of the three scalar numerators gives a further
+bounded representation, (NH45)--(NH47). Put
+\(p=(K_1^0\cdots K_m^0)_{01}\),
+\(P=D_m/(1-a_1r)\), and \(Jf=(f(r)-f(2h))/(r-2h)\). Every
+new-parameter preimage lies in the fixed old space
+\[
+ \mathcal B_m=\operatorname{span}
+ \{1,p,p/r,r(p-1),Jp,P/r,P,Pr,Pr^2,JP\},
+ \qquad \dim\mathcal B_m\le10.
+ \tag{LC207}
+\]
+All generators are bounded and have only permitted old poles.
+The dimension bound is independent of length. Closure under transfer
+and the intersection with the accumulated actual image are still open;
+this representation alone does not imply the determinant is nonzero.

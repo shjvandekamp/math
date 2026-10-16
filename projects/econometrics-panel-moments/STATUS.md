@@ -142,6 +142,17 @@ proof of full paired independence or of equation (24) for every T.
 The two actual gauge updates now reduce the remaining leading determinant
 to the explicit intersection test (LC204): the promoted weak image must
 be transverse to span{1,W_0,W_1}. Its uniform nonvanishing is still open.
+The new terminal layer is now separated from that three-dimensional
+space by an explicit evaluation determinant. Pulling the test back to
+the old actual quotient gives a three-by-three affine pencil in the new
+weak weight, with determinant of degree at most three (LC205). An exact
+recurrence restricts the accumulated image to binary poles and the first
+state-2 pole; its dimension is 2m-1 in an ambient space of dimension
+2m+2. These are audited reductions. A nonzero coefficient of the actual
+quotient pencil, uniformly in length, remains to be proved.
+All new-parameter preimages also lie in a fixed old span of at most ten
+rational functions (LC207). A compatible recurrence for its intersection
+with the actual accumulated image remains open.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
