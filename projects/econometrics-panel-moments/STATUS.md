@@ -39,6 +39,18 @@ Its first determinant coefficient is the explicit three-column graph
 response in (LC151). It vanishes at one block, but the prescribed
 two- and three-block coefficients are nonzero. Proving this coefficient
 nonzero for every m>=2 is the current concrete induction target.
+The recursive formula (LC156)--(LC159) now computes its first
+coefficient when the last old time itself approaches a binary
+terminal. It retains the actual head correction, including the
+finite component k+z_1. Its prescribed exact matrices at enlarged
+lengths m=3,4 have rank three, with determinants 130838 and 225819
+modulo 1000003. The recursive formula and finite certificates are
+audited; their uniform nonvanishing is not proved.
+Each individual terminal scalar curve now has an audited all-length
+spanning proof, and the whole response determinant has the bounded
+rational form (LC163). The first-block cancellation (LC164)--(LC165)
+is explicit. The next step is a compatible recurrence for its actual
+head response; scalar spanning alone does not establish that recurrence.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited

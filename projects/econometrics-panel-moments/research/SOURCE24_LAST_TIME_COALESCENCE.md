@@ -4138,3 +4138,279 @@ so eliminating them introduces an old-body correction.
 Neither (LC154) nor tail invertibility away from the edges
 removes that correction. The binary-terminal construction
 above explicitly accounts for the inherited leading kernel.
+
+## A recursive coefficient with the actual head correction retained
+
+Write D_m for the three-column matrix on the right side of
+(LC151), without its scalar factor 1/g_2. This notation in
+this section is distinct from the full source matrix and the
+terminal endpoint coupling. Keep G=I+11^T and sector 0.
+Take m=n+1 and make its last old time (1,delta,T), T>0.
+Assume the shorter actual B_n and W_n(T) are invertible,
+with all the unit residue-chart and node hypotheses of
+(LC144)--(LC148). Work with analytic ambient families near
+delta=0. The first-jet isomorphism in (LC148) implies that
+the augmented actual source-coordinate inverse has at most
+a simple pole in delta.
+
+There is an explicit way to obtain the part of this pole
+needed for D_m. At delta=0 let j_c=(J_mc)_1/X_1 and let
+t_c=(H_mc-rho_c J_mc)_1/X_1, using the actual representatives,
+not independently normalized scalar classes. Given the scalar
+output psi=(R_0)_1/X_1 of an analytic target family, choose
+a_c to cancel its three terminal poles with j_c. Set
+
+\[
+\begin{split}
+ h_0&=\psi-\sum_c a_cj_c,\qquad
+ z=W_n(T)^{-1}M_T[h_0],\\
+ [f]&=-[h_0]+\sum_c z_c[t_c]\in\ker M_T,\\
+ k&=\psi-\sum_c a_cj_c-\sum_c z_ct_c+f,\qquad
+ b(\psi)=k+z_1 .
+\end{split}
+ \tag{LC156}
+\]
+
+Here f is the single canonical representative from (LC144);
+k is constant. Canonicalizing the j_c or t_c separately
+would change k and lose the stated head formula. The
+augmented head functional of the analytic target obeys
+
+\[
+ [\delta^{-1}]\Sigma_m(R_\delta)
+    =(s_0(f),0,T s_2(f)),\qquad
+ [\delta^0](\Sigma_m(R_\delta))_1=b(\psi).
+ \tag{LC157}
+\]
+
+To prove this, identify the pole coefficient of the source
+inverse with the inherited kernel from (LC146). Its scalar
+first variation is -f and its augmented head is
+(s_0(f),0,T s_2(f)). The leading scalar identity is exactly
+psi=-f+sum a_cj_c+sum z_ct_c+k. Incoming j-columns have
+zero head; a t-column has head e_c. The remaining inherited
+and polynomial-gauge constant k has augmented head component
+one equal to k. This proves k+z_1. Changes of order delta
+in the target can affect the finite inverse only through
+the pole-residue map, whose head component one is zero.
+The same observation excludes a second-source-derivative
+contribution to this component. These statements were
+independently audited; they assert no nonzero determinant.
+
+For the specific targets in (LC151), set
+theta=P_n(G(:,1)/L_m^0), with componentwise division.
+The actual canceled product column satisfies
+phi_m=delta theta+O(delta^2). Define beta_tilde=v theta,
+k_tilde=(theta_0-theta_2)(E)/beta_tilde(E), and
+chi_tilde=[X_2(theta_0-theta_2)-k_tilde beta_tilde]/X_0.
+Require beta_tilde(E) nonzero, so this removable-edge
+construction is analytic. The three scalar classes in D_m
+are delta times analytic classes with leading values
+
+\[
+ \widehat h_0=-X_0\theta_0,\qquad
+ \widehat h_1=-X_1\theta_0,\qquad
+ \widehat h_2=\Lambda\widetilde\chi .
+ \tag{LC158}
+\]
+
+For each one form the reset-at-zero lift
+R^(0)(hhat_i) from (LC149), divide its component one by X_1,
+and apply (LC156), obtaining f_i and b_i. Then
+
+\[
+ [\delta]\det D_m(\delta)=
+ \det\begin{pmatrix}
+ s_0(f_0)&s_0(f_1)&s_0(f_2)\\
+ b_0&b_1&b_2\\
+ T s_2(f_0)&T s_2(f_1)&T s_2(f_2)
+ \end{pmatrix}.
+ \tag{LC159}
+\]
+
+Indeed the constant columns of D_m lie in the plane with
+component one zero, and their values are given by (LC157).
+The first coefficient in the missing row is b_i. Target
+derivatives enter only the other two rows and cannot
+contribute to this determinant coefficient. Subtracting
+delta s_0(hhat_i)e_0 in the reset response likewise does
+not affect it. No rank-two assumption on the constant
+plane is required. At m=2, ker M_1(T)=0 under the stated
+W_1 hypothesis, the inverse is bounded, and det D_2 is
+instead O(delta^3). This degeneration therefore starts
+with a separate two-block coefficient base.
+
+The prescribed checker
+[source24_binary_terminal_recursive_coefficient.py](../exploration/source24_binary_terminal_recursive_coefficient.py)
+uses n=2,3, the earlier 8-power fixture, T=7 and prime
+1000003. It uses only the actual shorter B_n inverse and
+the saved W_n inverse. It checks theta against the actual
+enlarged-word derivative, independently clears old and
+terminal residues, evaluates the two removable edge
+quotients by exact dual arithmetic, cancels terminal
+poles, and reconstructs the shorter actual rows plus
+lambda v. It also checks M_n(f_i)=0 and the full constant
+identity in (LC156). The scalar and row reconstruction
+degree bounds are 3n+5 and 3n+6, using 3n+7 distinct
+unit points. The saved coefficient matrices have rank
+three and determinants 130838 and 225819, respectively.
+The calculation took 0.289 seconds and 18,989,056 bytes
+peak RSS before JSON serialization. The script and
+source24-binary-terminal-recursive-coefficient-results.json
+passed a separate static audit.
+
+These are exact finite certificates of (LC159)'s matrix.
+Its identification with the full coefficient uses the
+audited paper argument, not a directly expanded enlarged
+determinant. Uniform nonvanishing of (LC159) is still open;
+no parameter sweep or enlarged singular inverse was used.
+
+## Scalar spanning and a bounded polynomial terminal response
+
+[Pro46](https://chatgpt.com/c/6ad1c6cb-6d94-83ed-a9f5-95b0978a7b16)
+independently recovered the affine pencil and first-jet
+criterion, and supplied the following all-length scalar
+statement. Its coprimality and spanning arguments passed a
+local independent audit. They do not assume paired
+independence. Use the chart X=(z,-(g_0z+g_2)/g_1,1),
+let n=3m, and put
+
+\[
+ D(z)=\prod_{t,c}L_{tc}(z),\quad
+ \phi=P e_1/X_1=U(z)/D(z),\quad
+ B(z)=\sum_i g_iX_iU_i(z),\quad
+ A(z)=z(U_0(z)-U_2(z)).
+ \tag{LC160}
+\]
+
+The output coordinate is canceled in the actual last
+kernel before evaluating edges. Generically deg D=n,
+deg U_i<=n-1, deg B=n, and gcd(A,B)=1. Here B(z) is a
+scalar polynomial, not a paired residue matrix.
+
+For completeness, away from coordinates and old poles,
+A=B=0 would force all three entries of phi to coincide.
+The actual P is invertible and stochastic there, so it
+cannot send e_1 to a constant vector. At an old pole
+(t,c), U is a scalar multiple of
+K_1...K_(t-1)e_c. Its scalar tail factor is generically
+nonzero: specialize the later times to g, up to a common
+positive rescaling. With r_i>0 and S=sum_i 1/r_i, those
+kernels are K_*=I+u v, u_i=1/(r_i g_i X_i), and
+
+\[
+ \frac{(v_{tc}K_*^k)_1}{X_1}
+ =A_t(c,1)+\frac{(1+S)^k-1}{S}\,
+       g_1\sum_j\frac{G_{cj}b_{tj}}{r_jg_j}>0 .
+ \tag{LC161}
+\]
+
+The prefix is again invertible and stochastic, excluding
+a constant residue vector. At Q_0 and Q_2, beta=v phi
+equals g_1 times the product of the active two-state
+determinants, which is nonzero. At Q_1,
+phi_0-phi_2 is the product of the preceding active
+02 determinants times
+b_m1(L_m2-L_m0)/(L_m0L_m2). Its last numerator is
+r_2b_m2X_2-r_0b_m0X_0, nonzero since the two active
+coordinates have opposite signs. This also excludes the
+last edge; the Q_2 value gives deg B=n.
+
+Define the polynomial Bezoutian and its adjusted curve by
+
+\[
+ \mathcal C(z,p)=\frac{B(p)A(z)-A(p)B(z)}{z-p},
+ \qquad
+ \Psi(z,p)=B(p)U_2(z)+\mathcal C(z,p).
+ \tag{LC162}
+\]
+
+The coefficient matrix of mathcal C is invertible by
+coprimality. One elementary verification reduces modulo
+B(z): mathcal C is minus multiplication by A applied to
+(B(z)-B(p))/(z-p). Multiplication by A is invertible in
+the quotient, and the latter divided-difference matrix
+has nonzero leading antidiagonal. An annihilator of the
+curve Psi first kills U_2, from its coefficient of p^n,
+and then kills every Bezoutian coefficient. Hence Psi
+spans the polynomials of degree less than n.
+
+For p_c=-kappa_c tau, (LC150) gives
+B(p_c)t_c=delta_c1 B(p_c)-X_c Psi(z,p_c)/D(z).
+Multiplication by X_c modulo D is invertible because no
+old node is on that coordinate edge. Thus, for each fixed
+c, the scalar residue curve t_c(tau) spans all mathcal F_m.
+Restricting tau to any admissible positive open interval
+does not change this rational-function spanning statement.
+It does not prove independence of the three linked samples
+after the simultaneously varying actual operator M_tau.
+
+If the actual shorter inverse exists, let
+N_c(tau)=-(M^(0)+tau M^(2))[X_c Psi(z,-kappa_c tau)/D].
+It is a vector polynomial of degree at most n+1 and
+N_c=B(-kappa_c tau)M_tau(t_c). At zero its three columns
+have a g-weighted dependence. At the highest degree their
+rescaled leading coefficients are M^(2)(X_cU_2/D), which
+also have a g-weighted dependence. Consequently
+
+\[
+ \det W_m(\tau)
+   =\frac{\tau\,\mathcal P_m(\tau)}
+           {\prod_{c=0}^2B(-\kappa_c\tau)},
+ \qquad \deg\mathcal P_m\le9m+1 .
+ \tag{LC163}
+\]
+
+The polynomial mathcal P_m is allowed to be zero. This is
+a bounded rational identity retaining the actual shorter
+graph, not a uniform nonvanishing theorem.
+
+[Pro47](https://chatgpt.com/c/6ad1cb7c-6fa0-83eb-857f-b7653a528c79)
+independently recovered the removable old-pole collisions
+and both endpoint-coefficient constructions. One useful
+simplification, also derived directly locally, is that for
+G=I+11^T and first old time (1,u,w),
+
+\[
+ \frac{(\phi_0-\phi_2)(E)}{\beta(E)}
+     =\frac{2u-w}{3(w-u)},\qquad E=(0,-1,1).
+ \tag{LC164}
+\]
+
+After K_1, both e_0-e_2 and v are supported on the active
+12 zero-sum line at E. Every later kernel multiplies both
+by the same active determinant, so the ratio depends only
+on K_1. Substitution into its two rows gives (LC164).
+The same formula holds for theta in (LC158) by taking the
+leading delta coefficient under the nonzero beta_tilde
+hypothesis. Factoring this first-block cancellation through
+the remaining ordered word gives a further exact identity.
+Put x=X_0, y=X_1, z=X_2, C=1/[3(w-u)] and
+d=(2(u+w-3),1-2w,1-2u). With k from (LC164), direct
+row algebra gives
+
+\[
+ \frac{[z(e_0-e_2)-kv]K_1}{x}
+       =C(4e_0+dK_1),\qquad
+ \chi=C(4e_0+dK_1)K_2\cdots K_m\,\frac{e_1}{X_1}.
+ \tag{LC165}
+\]
+
+A division-free verification is especially simple. Set
+ell=3(w-u)z(e_0-e_2)-(2u-w)v. On 2x+y+z=0 one has
+ell-xd=(3L_10,-L_11,-L_12), and multiplying the latter
+row by the actual K_1 gives 4x e_0. This proves
+ell K_1=x(4e_0+dK_1). Appending the ordered tail changes
+neither the order nor the coefficients. The same identity
+applies to chi_tilde by using G(:,1)/L_terminal as the
+final column. Root and a separate local derivation agree.
+
+The choice u=1/2,w=5/2 reduces this row to
+(2/3)(e_0-e_1K_1), but also puts L_12 at Q_2. It is a
+rational boundary specialization, not an admissible
+ordinary paired-residue witness. Taking u+w=3 generically
+removes d_0 while retaining two first-block row poles and
+can avoid that edge collision. Neither simplification
+alone supplies a constant-coefficient actual H/J expansion
+of the reset targets. Compatibility with their actual head
+response is the remaining step.
