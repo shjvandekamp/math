@@ -245,3 +245,163 @@ control match the existing actual paired evaluator. See (LC198) and
 the saved script and certificate. This confirms the order bound at
 that fixture, not equality or nonvanishing for arbitrary length.
 
+## Bounded weak outputs force an additional all-length defect
+
+The following refinement is an independently audited paper argument.
+Its polynomial-space observation was suggested by
+[Pro research response 53](https://chatgpt.com/c/6ad1e8a7-9ac8-83ed-be7d-3d0e7e81cb59);
+the actual lifting, endpoint conditions, and analytic extension were
+checked locally. It is not formalized in Lean.
+
+Put \(\nu_m=(3m^2-7m+2)/2\). Over the rational field of generic
+positive table parameters, the jointly analytic determinant satisfies
+
+\[
+ \boxed{\det B_m(h,\delta)\in
+        \delta^{\nu_m}(h,\delta)^{m-4}\quad(m\ge5).}
+ \tag{SF13}
+\]
+
+Here the right side is an ideal in the local formal power-series ring.
+In particular,
+
+\[
+ \begin{split}
+ \operatorname{ord}_\delta\det B_m(0,\delta)
+       &\ge \nu_m+m-4,\\
+ \operatorname{ord}_\epsilon\det B_m(\epsilon,\epsilon^2)
+       &\ge 2\nu_m+m-4=3m^2-6m-2.
+ \end{split}
+ \tag{SF14}
+\]
+
+These bounds do not assert nonvanishing or equality. They give orders
+at least 43 and 70 on the diagonal path for \(m=5,6\), respectively.
+
+First work at \(h=0\), and write \(E_n^0=\prod_{t\le n,c}l_{tc}\).
+Use the actual binary scalar section (SL28)--(SL35). Suppose an exact
+zero-sum completed combination is
+\(C_n=\delta^j q+O(\delta^{j+1})\), and put \(w=q_2\).
+Assume \(w\) is bounded at infinity. Completed output zero is bounded
+there, so \(q_1=-q_0-w\) is also bounded. Both \(q_1\) and \(w\)
+vanish at zero. For \(k=n+1\), set
+
+\[
+ A=a_k,\quad \xi=1/A,\quad
+ M_k=r\Delta_k,\quad
+ U_Z=D_nd_kQ_k,\quad
+ \lambda=\frac{w(\xi)}{\xi D_n(\xi)},\quad
+ f=q_1+\frac{e_k}{d_k}w-\lambda D_nQ_k.
+ \tag{SF15}
+\]
+
+The only possible new pole of \(f\), at \(\xi\), cancels. Its old
+poles remain simple; it is bounded at infinity and zero at the origin.
+Consequently it has an actual shorter binary lift. Append that lift
+and add \(\lambda Z_k\), with \(Z_k=C^H_{k1}+C^H_{k2}\).
+Its binary output is exactly \((qK_k^0)_1\). Subtracting
+\(\delta^j\) times this correction raises the completed-row order
+by one and gives next weak output
+
+\[
+ w_{\mathrm{next}}
+       =\chi_k w-\lambda M_kU_Z,\qquad
+ \chi_k=\frac{4b_kr}{3(1-a_kr)}.
+ \tag{SF16}
+\]
+
+This is (BW20) after replacing \(c\) by \(w/r\). It is an identity
+for actual coefficients. Unknown higher coefficients contribute
+nothing to this weak output because \(K_k^0e_2=0\).
+
+At zero, \(\chi_k=O(r)\) and \(M_kU_Z=O(r^{n+2})\).
+At infinity, \(\chi_k\) is bounded and
+\(M_kU_Z=O(r^{1-n})\). Thus
+
+\[
+ w=O(r^n)\text{ at }0,\quad w=O(1)\text{ at infinity}
+ \ \Longrightarrow\
+ w_{\mathrm{next}}=O(r^{n+1})\text{ at }0,\quad
+ w_{\mathrm{next}}=O(1)\text{ at infinity}.
+ \tag{SF17}
+\]
+
+Every new origin-\(n\) vector from (BW8), \(n\ge3\), has
+\(w=M_nB\), where its terminal binary contribution \(B\) is
+\(O(r^n)\) at zero and \(O(r^{2-n})\) at infinity.
+Its weak output is therefore \(O(r^n)\) at zero and bounded at infinity.
+
+At origin two, the four-dimensional kernel also has
+\(w=O(r^2)\) at zero. To see this directly, write its two
+state-zero head coefficients as \(\alpha_{10},\alpha_{20}\).
+The exact zero-sum condition gives
+\(\alpha_{10}+\alpha_{20}=0\). The coefficient of \(r\) in its
+binary first output is
+\(-\tfrac12(a_2\alpha_{10}+a_1\alpha_{20})\); every other column
+has order at least two. Distinct \(a_1,a_2\) force both coefficients
+to be zero. The remaining head and incoming columns have weak output
+of order at least two at zero, as follows directly from the last
+weak column of the actual kernels. All these weak functions grow
+at most linearly at infinity. Killing that one slope functional
+selects at least three independent bounded origin-two vectors.
+
+Promote these three vectors and all three new vectors at each
+subsequent prefix through length \(m\), using (SF15)--(SF16).
+There are \(3m-3\) such vectors. Their final weak outputs have only
+the \(3m\) simple binary poles, are bounded at infinity, and vanish
+to order at least \(m\) at zero. Each therefore has the form
+
+\[
+ w(r)=\frac{r^m p(r)}{E_m^0(r)},\qquad \deg p\le2m.
+ \tag{SF18}
+\]
+
+This scalar space has dimension \(2m+1\). Ordinary residues are a
+linear map from it, so the corresponding weak-residue columns have
+rank at most \(2m+1\).
+
+Complete the three bounded origin-two vectors to a basis of its
+four-dimensional kernel, and use the nested actual kernel basis.
+Promote every kernel vector all the way through \(m\). An origin-\(n\)
+column then has completed order \(m-n+1\). In the residue matrix
+with lower output divided by \(\delta\), extract
+\(\delta^{m-n}\) from it. The extracted powers total
+
+\[
+ 4(m-2)+3\sum_{n=3}^m(m-n)=\nu_m.
+ \tag{SF19}
+\]
+
+Each normalized leading upper column is zero. The \(3m-3\) selected
+lower columns factor through (SF18), so the remaining square matrix
+has boundary rank defect at least
+\((3m-3)-(2m+1)=m-4\).
+
+For the joint ideal statement, an analytic choice of the lifting
+basis is essential. The binary scalar section has a minor nonzero
+at \(h=0\), by the explicit basis (SL28)--(SL35), so it extends
+analytically in \(h\) near zero. The fixed-rank nested coefficient
+kernels admit compatible analytic bases there. At every promotion,
+extend the prescribed \(h=0\) correction in the analytic exact-zero-sum
+coefficient bundle, then repair its binary error using the analytic
+section. This repair vanishes at \(h=0\). The binary error is admissible:
+the appended zero-sum leading row has first output bounded at
+infinity, zero at the origin, and only the prescribed simple poles.
+All changes beyond the initial basis carry positive powers of
+\(\delta\). Hence their coefficient matrix remains a unit at
+\((h,\delta)=(0,0)\).
+
+After extracting (SF19), the resulting matrix is analytic in both
+variables and has constant-term rank defect at least \(m-4\).
+A constant invertible row and column change makes that many rows
+zero at the origin; every determinant term then contains at least
+\(m-4\) factors from the ideal \((h,\delta)\).
+Multiplying back by the unit coefficient determinant proves (SF13).
+Substitution gives (SF14).
+
+The stronger six-block bound 70 uses this rank defect and analytic
+lifting. It does not follow from the single vanishing coefficient
+(BW40), which by itself only implies order 69. The finite order-71
+certificate (LC200) is compatible with the stronger bound but does
+not determine its all-parameter sharpness.
+

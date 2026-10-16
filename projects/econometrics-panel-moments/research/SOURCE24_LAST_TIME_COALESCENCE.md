@@ -5567,3 +5567,26 @@ actual transfer away from h=0, and find a nonzero graded coefficient
 uniformly in the length. The oldest four-dimensional layer and the
 retained-old-source determinant must also be controlled. None of the
 boundary saturation or finite nonvanishing results closes those steps.
+
+The oldest layer supplies a further audited improvement. At least three
+of its four weak outputs are bounded at infinity and vanish to order
+two at zero. The actual weak transfer preserves boundedness and raises
+the zero order once per append. Together with all later-origin columns,
+this puts 3m-3 normalized leading columns in a scalar space of dimension
+2m+1. The full proof, including an analytic extension of the actual
+binary corrections near h=0, is (SF13)--(SF19) in
+[SOURCE24_SMALL_TIME_FILTRATION.md](SOURCE24_SMALL_TIME_FILTRATION.md).
+It proves
+
+\[
+ \det B_m(h,\delta)\in
+       \delta^{(3m^2-7m+2)/2}(h,\delta)^{m-4},
+ \qquad
+ \operatorname{ord}_\epsilon\det B_m(\epsilon,\epsilon^2)
+       \ge3m^2-6m-2\quad(m\ge5).
+ \tag{LC201}
+\]
+
+In particular the six-block lower bound is now 70. Unlike the argument
+for (LC199) alone, this uses a rank defect of at least two in an analytic
+normalized matrix. It still does not prove the next coefficient nonzero.

@@ -117,6 +117,14 @@ cancellations and the oldest four-dimensional layer, followed by the
 retained-old-source determinant. Equation-(24) independence for all
 T>=5 remains open.
 
+An additional audited argument now includes three bounded weak outputs
+from the oldest layer. After actual promotion, 3m-3 columns factor through
+a 2m+1-dimensional scalar space. Analytic lifting near h=0 upgrades
+this rank defect to the joint ideal statement (LC201), giving diagonal
+order at least 3m^2-6m-2 for every m>=5. The six-block bound is therefore
+70; the earlier single-coefficient argument alone gave 69. Equality and
+uniform nonvanishing remain unresolved.
+
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
 induction and an external exact finite base. This auxiliary theorem
