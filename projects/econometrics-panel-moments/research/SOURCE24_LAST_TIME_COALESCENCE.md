@@ -929,9 +929,12 @@ Hence the enlarged scalar family is independent exactly when
 F↦F K_n e_e−b∑_a ell_a(F)X_a/L_na is injective on that old
 vector span. Its new poles cancel by construction; its old residues
 and pole-free remainder still need control. Old scalar independence
-controls F_e, which is a different map. No induction closing that
-gap has been proved. These two stripping observations and their
-limitations were independently checked.
+controls F_e, which is a different map. This append argument by itself
+does not close the gap. A subsequent prepend induction proves the
+scalar independence directly; see (SP1)--(SP15) in
+[the scalar prepend proof](SOURCE24_SCALAR_PREPEND.md) and (LC47) below.
+These two stripping observations and their limitations were independently
+checked.
 
 ## Six vertex observations and the actual endpoint margins
 
@@ -1084,3 +1087,147 @@ also have rank six at these fixtures. Results are saved in
 `exploration/source24-vertex-margin-probe-results.json`.
 These are external exact finite-field certificates. A uniform proof
 that the actual margin correction cannot cancel B is still missing.
+
+First vertex jets alone cannot extract even one nonzero linear functional
+of the nine margins for arbitrary actual old-source combinations. For
+each k different from j, an off-diagonal source F_ts,k,j has exactly
+one nonzero first vertex datum:
+
+\[
+ (F_{ts,k,j})_j/X_j\big|_{e_k}=\kappa_{t,kj}.
+ \tag{LC45}
+\]
+
+All its other such data vanish, and all its margins (LC39) are zero.
+The six off-diagonal choices therefore span the six first-jet
+observations without changing any diagonal margin. Every prescribed
+nine-vector of margins can first be realized by diagonal sources,
+since all three terminal groups are nonempty, then have its first
+vertex jets canceled by these six nuisance columns. This is a
+statement about arbitrary source combinations. It does not exclude a
+special relation for the six R_ab or recovery using higher jets or
+pole data.
+
+Higher jets admit an exact ordered recursion. At a fixed vertex e_k
+write Pi_k=1 e_k and M_t=K_t-Pi_k. Then M_t Pi_k=0 and every
+entry of M_t vanishes at e_k. For a word of length L,
+
+\[
+ K_{t_1}\cdots K_{t_L}
+ =\Pi_k+\sum_{r=1}^{L-1}
+       \Pi_k M_{t_{L-r+1}}\cdots M_{t_L}
+       +M_{t_1}\cdots M_{t_L}.
+ \tag{LC46}
+\]
+
+This follows by multiplication and M_t Pi_k=0. In the local ring
+at e_k, a product of r such M's lies in the r-th power of the
+maximal ideal. Thus a jet of degree d<L depends only on the last
+d blocks. Applied to completed source tails, second jets introduce
+terminal-pair aggregates of diagonal coefficients and terminal-single
+aggregates of off-diagonal coefficients, because the latter prefixes
+already vanish to first order at a vertex. The recursion retains these
+additional terms; it does not yet provide a dual recovering (LC39)
+without the actual old-source inverse.
+
+## Full incoming observation rank and the stronger conditional bound
+
+The independently audited [scalar prepend proof](SOURCE24_SCALAR_PREPEND.md)
+now proves generic independence of all 3m scalar ordered-deletion
+functions for every m>=3, augmented by the full-product scalar.
+It uses one fixed positive common matrix, a preserving prepend limit,
+three coordinate-axis principal parts, and an externally checked
+10-by-10 integer-polynomial base determinant, nonzero modulo 17.
+Its polynomial-observation extension starts at m=0 without a finite
+base and applies to (LC33). The coordinate theorem handles the two
+exceptional directions for that specialization. State permutations
+and intersection of the three sector opens then give full uncorrected
+incoming observation rank 9m for every fixed real direction whose
+three rates are distinct, with m=q-1>=3.
+
+The earlier nuisance quotient must still be retained. By (LC26)--(LC28),
+O(span(B,J)) has dimension at most twelve: only the three diagonal W
+columns and nine special S jets contribute. The three E jets are
+invisible. Thus the incoming observations retain at least 9m-12
+independent classes after this quotient. The exact correction by the
+twelve local pivots disappears in that same quotient, and those twelve
+pivots can subsequently be added. It follows that
+
+\[
+ \operatorname{rank}[B,D']-\operatorname{rank}B\ge9(q-1),
+ \qquad q\ge4.
+ \tag{LC47}
+\]
+
+Under shorter-source independence, rank B>=N_q+3 and hence the total
+rank is at least N_q+9q-6. This improves (LC29) and (LC35), giving
+N_q+30 at q=4 and N_q+39 at q=5. It does not remove the nuisance
+loss by assumption and does not count the auxiliary full-product
+scalar as an extra actual source column. Full independence would need
+N_(q+1)=N_q+18q+3. In particular, the corrected shared jets, their
+overlap with the incoming block, and the six off-diagonal leading
+survivors still require proof. The statement concerns generic
+independent time factors, not a prescribed curve such as v_t=u_t^2.
+
+The augmented part supplies three additional actual shared-jet
+directions. Let P_s start with K_s and then contain the other m
+earlier blocks in increasing order, and set ell_c=dot L_qc. The
+shared-new derivative is exactly
+
+\[
+ U_{s,a,b}=X_a\dot K(a,b)e_b(I-P_sK)
+              +X_aK(a,b)e_bP_s\dot K.
+ \tag{LC48}
+\]
+
+Its squared-pole transverse observation is zero on L_qc unless a=c.
+For a=c, the same Laurent expansion as (LC12) gives
+
+\[
+ \frac{O_c(U_{s,c,b})}{A_q(c,b)X_c}
+ =X_b\left[H_{cd}L_d(P_s)_{bc}
+                +\ell_c(P_s)_{bd}\right]
+                -\ell_cL_d(A_q^{-1})_{bd}.
+ \tag{LC49}
+\]
+
+Indeed the transverse squared coefficient before contraction is
+A_q(c,b)X_cX_b[e_bP_s Omega-ell_c e_b], modulo v_c.
+Contracting with L_d lambda_d proves (LC49). Sum the actual three
+columns over b. The last term cancels because
+sum_b A_q(c,b)(A_q^(-1))_bd=0 for d different from c.
+For s=1, P_1=Q, so the summed observation divided by X_c is
+v_cQ[H_cd L_d e_c+ell_c e_d]. Since v_cQ is zero-sum and
+ell_c=H_cd L_d+H_ce L_e on the line, this is precisely the
+augmented full-product scalar in (SP13)--(SP15).
+
+Consequently the incoming columns and the three shared sums
+sum_b U_(1,c,b), c=0,1,2, have observed rank 9m+3. Applying the
+same at-most-twelve-dimensional nuisance quotient and adding the
+twelve actual local pivots strengthens (LC47) to
+
+\[
+ \operatorname{rank}[B,D']-\operatorname{rank}B\ge9(q-1)+3,
+ \qquad
+ \operatorname{rank}[B,D']\ge N_q+9q-3
+ \quad\hbox{under shorter-source independence}.
+ \tag{LC50}
+\]
+
+The totals are N_q+33 at q=4 and N_q+42 at q=5. These three
+extra directions are actual sums of shared jets, not artificial
+extra source columns. Two independent local derivations and an
+independent audit checked the observation, cancellation and quotient
+count.
+
+There is also an exact ceiling on this observation's usefulness.
+After dividing by X_c, all regular incoming/shared observations
+with t,s among the m earlier blocks are homogeneous degree-two
+rational functions on L_qc with only the 3m earlier simple poles.
+Clearing their common product gives binary forms of degree 3m+2,
+an ambient space of dimension 3m+3. Thus their stacked transverse
+observation rank is at most 9m+9. This scope excludes the special
+S columns at s=q, which can retain other q-line poles. The ceiling
+shows why a complementary observation is needed to distinguish all
+18m regular incoming/shared columns for large m. Neither (LC50)
+nor this dimension count proves the remaining source transversality.

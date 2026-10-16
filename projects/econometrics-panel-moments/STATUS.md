@@ -654,6 +654,32 @@ fixed-curve or full-rank theorem. The extended stripping lemma and
 exact scalar deletion recurrence identify further correction terms
 that still need control; see (LC33)--(LC37).
 
+The scalar gap is now closed by a preserving prepend induction.
+For every m>=3, all 3m scalar deletion functions plus the full-product
+scalar are generically independent for one fixed positive common G.
+The base coefficient determinant is 9 modulo 17, reconstructed directly
+from integer polynomial kernels; an independent first-prepend coefficient
+is 13 modulo 17 and agrees with the proved determinant recurrence.
+The polynomial-observation extension starts at m=0 and yields full
+uncorrected incoming observation rank 9(q-1) for every fixed real
+direction with three distinct rates. After retaining the twelve-dimensional
+nuisance quotient and re-adding its twelve actual pivots, the conditional
+total source-rank bound improves to N_q+9q-6 for q>=4. Three actual
+shared-jet sums realize the augmented full-product scalars and improve
+this further to N_q+9q-3. The same transverse observation has an exact
+9(q-1)+9 ambient ceiling on the regular incoming/shared family, so a
+complementary layer is needed for full rank. This is an
+audited arbitrary-length paper theorem with an external exact coordinate
+base, not an arbitrary-length Lean rank theorem or full source independence.
+See [the scalar prepend proof](research/SOURCE24_SCALAR_PREPEND.md),
+(LC47)--(LC50), and the source24-scalar-prepend certificate files.
+The next collision target is the joint corrected incoming/shared rank
+and the six leading off-diagonal survivors. First vertex jets cannot
+recover the nine endpoint margins for arbitrary source combinations;
+the exact higher-jet recursion retains new terminal coefficient
+aggregates, so it has not yet supplied that missing source constraint.
+See (LC45)--(LC46).
+
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
 this gives generic rank exactly 27 and explains the nine-dimensional
@@ -835,7 +861,12 @@ silently assumed by either proved theorem, and no result below is claimed.
    ambient transport is now an isomorphism modulo the old E rows by
    (PP26)--(PP30), but its three state sectors still need a joint
    source-prefix argument. Neither that isomorphism nor the five-term
-   pencil settles the determinant. Then apply the scalar-covariate bridge.
+   pencil settles the determinant. In the collision route, formalize
+   the scalar prepend proof and its exact coordinate base. The full
+   incoming observation theorem and three actual shared sums now give
+   the conditional lower bound N_q+9q-3; prove the remaining corrected shared/incoming transversality
+   and the six leading survivors, keeping the nuisance quotient.
+   Then apply the scalar-covariate bridge.
    None of these open claims is assumed by a completed theorem. Combine
    independence with the proved moment-space dimension to obtain spanning. The completed source-basis theorem remains
    T=4; neither the dimension theorem nor the index count supplies independence.
