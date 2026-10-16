@@ -482,9 +482,14 @@ scalar observation is injective on the whole append-prefix space.
 Copied append on the old residual coefficient kernel consequently has
 boundary scalar rank 9q+3 and kernel precisely its zero-prefix part.
 The latter has an injective normalized first jet on actual old rows
-before the new scalar/line corrections. Determining the kernel after
-those coupled corrections remains the next transport question; this
-does not supply residual independence.
+before the new scalar/line corrections. An adapted scalar section now
+preserves exactly its old zero-prefix source kernel: a common complement
+to two separate trace kernels prevents the trace pivots from erasing
+the old joint kernel, and old double residues survive the ordinary
+scalar correction. This is audited at G* with generic old times;
+injectivity there still needs old independence at that same slice.
+Preservation through the subsequent line correction remains open.
+See (SK32)--(SK38); this does not supply residual independence.
 
 A stronger audited result now fills the entire new scalar map using
 only copied old full source columns, without assuming their independence.
@@ -515,6 +520,21 @@ remaining criterion is a 9q-square determinant of old-pole prefix
 coefficients. This removes the scalar right inverse and the arbitrary
 three-column quotient from the target, while retaining the actual
 old source graph. Its nonvanishing is unproved; see (PP14)--(PP20).
+
+The last-time coalescence alternative now has an audited inherited
+rank result. When A_n=A_q, the ambient append map has a three-dimensional
+kernel, but it meets the actual old source graph trivially. Copied-old
+sources therefore stay independent under the shorter-length premise.
+Exact ordered collisions leave only nine potentially new leading pair
+rows; three diagonal ones are generically independent modulo the whole
+ambient append image. The other six and the derivative directions
+remain separate obligations. See
+`research/SOURCE24_LAST_TIME_COALESCENCE.md`.
+The exact relative-(1,2) first-jet tests are now full for q=4 and q=5:
+their ranks are 195 and 288, with leading minor coefficients 23466 and
+597175 modulo 1000003, at epsilon orders 66 and 84. The earlier u-only
+q=4 test has sampled rank 193. These are external finite certificates;
+uniform nonvanishing of the actual derivative block remains open.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,

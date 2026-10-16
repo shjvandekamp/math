@@ -651,3 +651,118 @@ analyze a particular section together with its complementary columns.
 This does not rule out a useful section, or independence of the entire
 source family. The longer zero-prefix polar/regular recurrence proposed
 in that Pro response has not been adopted as a proved rank result here.
+
+## An adapted scalar section preserves the old first-jet kernel
+
+A subsequent [GPT-6 Pro investigation](https://chatgpt.com/c/6ad17b00-05a8-83eb-b7e3-fd5ce357c926)
+gives a positive counterpart to (SK31), checked locally and independently.
+The result here is only its adapted scalar first-jet statement. It uses
+fixed G*, generic old times, and generic line parameters v,w; it does
+not assume old source independence. Write V for the actual old row map,
+Z for the formal zero-prefix space, and set
+
+\[
+ U=Z\cap\ker(hV),\qquad U_w=\ker(T_w:U\to\mathcal B_{3q-1}),
+ \qquad N_q=Z\cap\ker V.
+ \tag{SK32}
+\]
+
+Here T_z is the old scalar-zero polynomial trace on X0+z X2=0,
+with its 3q binary coefficients. The joint theorem makes each T_z
+onto separately. No joint two-line surjectivity is needed. Choose
+actual coefficient right inverses A_w,A_v and put
+
+\[
+ T=A_w+\zeta A_v.
+ \tag{SK33}
+\]
+
+For generic parameter-only zeta, both T_w T and T_v T are invertible:
+the first determinant has constant term one, and the second has leading
+coefficient one. Thus im(T) is a common complement to both trace kernels.
+
+Choose an ordinary boundary coefficient-pivot matrix C0coef as follows.
+Take d_q=r_q+3q zero-prefix lifts of a basis of the old scalar image.
+Add old-scalar-zero lifts of the 6q+3 prefixes
+(X0,0,0), (0,X1 b,0), (0,0,X2 b), where b runs through a basis of J_q.
+Such actual lifts are obtained by taking formal prefix preimages and
+subtracting zero-prefix scalar lifts. Their boundary scalar images are
+independent by (SK22): the exceptional overlap has j0=j and j(e2)=0,
+whereas this selected j0 is constant. The full ordinary pivot count is
+r_q+9q+3. At epsilon zero, the component-one image of every ordinary
+pivot is X1 j1, hence has only simple old poles.
+
+For c in U define J_epsilon(c)=C_epsilon(c)/epsilon, where
+C_epsilon(c) is copied append. The full-vector identity gives
+
+\[
+ J_\varepsilon(c)=
+ \frac{X_1(Vc)_1}{L_{n0}L_{n1}}
+       (-X_0,\ell,-vX_2),\qquad \ell=X_0+vX_2.
+ \tag{SK34}
+\]
+
+The actual scalar pivot list
+B_epsilon=[C_epsilon(C0coef),J_epsilon(T)] has d_n=r_q+12q+3
+columns. Its leading scalar rank is d_n: the ordinary pivots have
+at most a simple ell pole, while the normalized trace pivots have
+independent double-ell data T_v T. Clearing by D_n and inverting
+a coefficient minor nonzero at epsilon zero therefore defines an
+actual scalar section sigma_epsilon regular at zero. Put
+
+\[
+ Y_\varepsilon(c)=J_\varepsilon(c)
+       -B_\varepsilon\sigma_\varepsilon hJ_\varepsilon(c).
+ \tag{SK35}
+\]
+
+These are regular actual scalar-zero rows. Write the scalar-correction
+coefficients in the two pivot groups as alpha_epsilon,beta_epsilon.
+Their leading double-ell data force
+
+\[
+ \beta_0=(T_vT)^{-1}T_vc,\qquad
+ \bar c=c-T\beta_0\in\ker T_v.
+ \tag{SK36}
+\]
+
+Consequently Y0(c)=J0(cbar)−C0(C0coef alpha0). At any old cross-block
+node P_ij avoiding ell, the ordinary correction has no double pole in
+component one, and hence
+
+\[
+ [L_iL_j(Y_0(c))_1](P_{ij})
+   =\frac{X_1(P_{ij})}{\ell(P_{ij})}
+        [L_iL_j(V\bar c)_1](P_{ij}).
+ \tag{SK37}
+\]
+
+Every multiplier is nonzero. Old cross-pair residues detect actual
+scalar-zero old rows at G*, despite its same-block coordinate-edge
+collisions. To see this directly, each actual source denominator uses
+at most one line from each block. Vanishing cross residues therefore
+leaves a quadratic polynomial residue on each old line. For a row
+R=(−R1,R1,0), coordinate divisibility makes that residue a multiple
+of X0 X1. At departure state a=0 or a=1, the corresponding divided
+matching condition kills this multiple. At a=2 the additional X2
+factor kills it instead. The other-block lines avoid these points
+for generic old times. With every residue removed, the remaining
+degree-one polynomial row is divisible by X0 X1 and is zero.
+
+If c belongs to U_w and Y0(c)=0, (SK37) thus gives V(cbar)=0.
+It follows that T_w cbar=0; since T_w c=0 and T_w T is invertible,
+beta0=0. Thus Vc=0. Conversely every c in N_q has zero pure append
+identically. This proves the exact statement
+
+\[
+ \boxed{\ \ker(Y_0|_{U_w})=N_q.\ }
+ \tag{SK38}
+\]
+
+The adapted scalar correction adds no kernel on this old joint-kernel
+sector. If old source independence holds at G* itself, its leading map
+is injective of dimension r_q−12q−3. Generic independence in the full
+common-G family does not imply that fixed-slice premise. Preservation
+under a subsequent line-pivot correction is also not asserted. The
+larger inherited-sector, saturation, and remaining-Schur proposals in
+the Pro response have not been adopted as proved results here.
