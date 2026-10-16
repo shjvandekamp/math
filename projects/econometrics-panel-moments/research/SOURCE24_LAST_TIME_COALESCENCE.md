@@ -4544,3 +4544,225 @@ law for the actual shorter head functional on this
 explicit large subspace remains unresolved. Finite
 edge and derivative bookkeeping alone does not provide
 that law.
+
+## Proper tail transport of the actual head graph
+
+[Pro48](https://chatgpt.com/c/6ad1cec4-13e8-83eb-9ad0-b37bf8146e02)
+supplied additional actual-word identities, independently
+checked locally. First, write Delta=w-u for the first
+old time (1,u,w), a=2(1-w)/Delta, lambda=w/Delta, and
+T=K_2...K_m. Since
+L_10=Delta(aX_0-X_1), the first two scalar targets obey
+
+\[
+ M^{(0)}(t_1(0))
+   =aM^{(0)}(t_0(0))+\Delta^{-1}M^{(0)}(L_{10}\phi_0),
+ \qquad
+ L_{10}\phi_0=v_{10}T e_1/X_1 .
+ \tag{LC171}
+\]
+
+The second scalar has no first-block pole. At m=1 it is
+the constant u, directly explaining the dependence of
+the first two columns. The associated ambient row
+S_m=X_1(e_1-e_0P_m) satisfies exactly
+S_m=aH_10+lambda v-Delta^(-1)v_10(I-T).
+The last term has to retain its actual longer head.
+Having fewer poles does not identify the longer head
+with the head for the shorter set of blocks.
+
+Let R have an actual augmented expansion on a prefix
+of length r, with head h=Sigma_r(R), and append the
+proper ordered tail T=K_(r+1)...K_m. Literal source
+appending gives H_sc^(m)=H_sc^(r)T+X_ce_c(I-T)
+and J_tc^(m)=J_tc^(r)T. Including the polynomial
+lambda v term in h, the reused coefficient expansion
+is iota(R)=RT+h diag(X)(I-T). Thus, wherever the
+longer actual graph is defined on these ambient rows,
+
+\[
+ \Sigma_m(RT)=\mathcal A_{r,m}\Sigma_r(R),\qquad
+ \mathcal A_{r,m}
+   =I-\bigl[\Sigma_m(X_ce_c(I-T))\bigr]_{c=0}^2 .
+ \tag{LC172}
+\]
+
+For example, invertibility of the longer paired basis
+supplies the required domain. The formal reused-
+coefficient identity itself needs no longer independence.
+Ambient membership alone does not justify assigning
+an actual head before the graph is well-defined.
+
+These actual three-by-three maps satisfy a cocycle:
+for r<k<m with all three graphs defined,
+
+\[
+ \mathcal A_{r,m}=\mathcal A_{k,m}\mathcal A_{r,k}.
+ \tag{LC173}
+\]
+
+Apply (LC172) successively and use actual prefix heads
+with head sums e_0,e_1,e_2. In particular the natural
+ambient lift Y_m^chi=Lambda Z_1K_2...K_m, where
+Z_1=C(4e_0+dK_1) from (LC165), obeys
+Sigma_m(Y_m^chi)=mathcal A_(2,m)Sigma_2(Y_2^chi).
+It is ambient for m>=2: Z_1 is regular at all coordinate
+edges, and the nonempty tail supplies the output factors.
+At length one Lambda Z_1 is not ambient; its component
+zero at E equals 4/[3(w-u)]. Similarly
+Sigma_m(S_m)=e_1+mathcal A_(1,m)(a e_0+lambda g-e_1).
+These are heads of the natural lifts, not of their
+reset projections.
+
+The prescribed local checker
+[source24_tail_head_transport.py](../exploration/source24_tail_head_transport.py)
+verifies Pro48's supplied two-block coefficient certificate
+at the existing 8-power fixture and prime 1000003. Its
+13-by-3 augmented coefficient matrix reconstructs
+U_c=X_ce_c(I-K_2). Independent clearing of the six row
+forms gives degree at most seven; all coordinate
+identities hold at eight distinct unit points. An
+independent 13-by-13 augmented evaluation minor has
+determinant 434633. The head correction matrix is
+
+\[
+ C_2=\begin{pmatrix}
+ 688408&635383&967637\\
+ 397861&205281&662190\\
+ 722218&249541&876733
+ \end{pmatrix}\pmod {1000003},
+ \qquad \det C_2=755800 .
+\]
+
+The polynomial gauge coefficients contribute lambda g
+to these heads. The same certificate gives
+Sigma_2(vK_2)=(20175,336814,429300), not g.
+The separate proper-transport certificate gives det(I-C_2)=241168.
+Thus both the correction and the proper head transport
+are full rank at this fixture. The complete evidence is
+source24-tail-head-transport-results.json; no replacement
+fixture or parameter sweep was used.
+
+There is a stronger all-length factorization of the
+one-step map. Distinguish the endpoint matrix
+D_m^end from the coefficient matrix D_m in (LC151).
+Let S_m be the actual paired Schur matrix (LC95),
+bar D_m^end=L_m^(-1)D_m^end, and
+X_m=diag(X_c(P_c)) in exactly the canceled-value
+normalization of (LC95). Assuming the shorter and
+longer paired bases and the specified pivots invertible,
+
+\[
+ \boxed{\mathcal A_{m-1,m}
+       =\overline D_m^{\,\rm end}S_m^{-1}X_m.}
+ \tag{LC174}
+\]
+
+Indeed U_b=X_be_b(I-K_m) has
+U_bV_m=X_be_b(V_m-I), a polynomial row with zero
+earlier residues and zero transported terminal residues.
+Its remaining canceled values are -X_me_b.
+The exact (LC95) elimination therefore gives its last
+incoming coefficient vector as -S_m^(-1)X_me_b;
+there is no shorter interpolation right-hand side.
+Also Phi_m(U_b)=L_me_b. Applying the augmented version
+of (LC98) yields
+Sigma_m(U_b)=e_b-bar D_m^end S_m^(-1)X_me_b,
+which proves the formula.
+
+Equivalently the last incoming coefficients of RK_m
+are S_m^(-1)X_m Sigma_(m-1)(R). On the already proved
+generic endpoint-nonvanishing set, (LC174) is invertible.
+Consequently proper tail transport preserves the
+zero-head kernel and every head-response rank whenever
+all intermediate paired graphs are defined. It multiplies
+three-column head determinants by the product of the
+corresponding nonzero factors det(bar D_m^end)det(X_m)/det(S_m).
+The argument is conditional on the paired bases; it
+does not prove their existence or that the reset
+projection commutes with transport.
+
+## Zero-head prepend commutators and the retained-old correction
+
+Pro48 also gave an exact commutator form with actual
+coefficient heads accounted for. Conjugate by effect
+coordinates, T_t=diag(X)K_tdiag(X)^(-1), and write
+h=(1/2,1,1)^T, S=I+hg, S^(-1)=I-hg/4.
+The preserving time (1,1/2,1/2) gives the rationally
+extended conjugated kernel S on the fixed line.
+For a prepended actual kernel N let U=S^(-1)N and
+D_s=diag((A_sh)_c/A_s(c,0)). The identity
+D_sT_se_0=T_sh gives the genuine inherited changes
+Hhat_s=H_s^+-D_sJ_s^+/4 and Jhat_s=J_s^+/4, namely
+Hhat_s=I-T_sUT_except_s and
+Jhat_s=-T_se_0gUT_except_s. Their displayed head matrices
+are I and zero.
+
+Put V=T_2...T_m and C=e_0g. For the actual new sources
+H_*=I-NT_1V and J_*=-Ne_0gT_1V define
+
+\[
+\begin{split}
+ F_H&=H_*-S\widehat H_1+hg=S[T_1,U]V,\\
+ F_J&=J_*-(Se_0)g\widehat H_1+(Se_0)g=S[CT_1,U]V .
+\end{split}
+ \tag{LC175}
+\]
+
+Both displayed actual augmented head sums are zero,
+even before longer paired independence is known. Thus
+wherever the longer graph exists it kills these rows.
+The order of every factor and the constant-in-X
+coefficient changes are explicit.
+
+At N=S both commutators vanish, but this does not make
+the block invisible to the reset construction. Along
+the actual path (1,1/2+epsilon d_1,1/2+epsilon d_2),
+d_1 different from d_2, the new first-block edge constant is
+
+\[
+ k_0(\epsilon)=\frac1{6\epsilon(d_2-d_1)}
+       +\frac{2d_1-d_2}{3(d_2-d_1)} .
+ \tag{LC176}
+\]
+
+For generic nonzero epsilon, row zero of N(Q_0) is
+zero, whereas row zero of S is (2,1/2,1/2). Edge
+evaluation and the preserving specialization cannot
+be interchanged. A recurrence must retain this edge
+singularity as well as the head correction in (LC172).
+
+The full source problem has a further distinct
+correction. With the head quotient notation in (LC113),
+alpha=C_B^(-1)C_T and gamma=Pi_T-Pi_B alpha, its
+regularized retained row is T-Balpha-Ngamma, up to
+polynomial new-line profiles removable by the new E
+rows. Its old Schur block is exactly the old-pair
+residue matrix of that actual row. The implication
+C(T-Balpha)=0 does not make its head correction
+invisible at old pairs. For two old blocks an actual
+new-head source has old double residue
+
+\[
+ -\frac{X_cA_\circ(c,a)X_a}{L_{\circ c}}\,
+       A_s(a,d)X_d\,v_{td}
+       \quad\text{at }L_{sa}=L_{td}=0 .
+ \tag{LC177}
+\]
+
+It is generically nonzero although this column lies
+in the kernel of the new-line head quotient C.
+Moreover, with three old blocks the insertion error
+of a retained zero-prefix difference F_12-F_13 is
+p e_b[K_2(I-K_circle)K_3-K_3(I-K_circle)K_2].
+At L_2d=L_3e=0 and b=d different from e its double
+residue is p[v_2d(I-K_circle)]_e v_3e, generically
+nonzero. For example, let the circle's two nonzero-state
+time factors tend to zero; K_circle tends to 1e_0
+and v_2d K_circle tends to zero, leaving a nonzero
+generic component. Small positive perturbations
+restore the arrangement. Thus this insertion
+correction does not factor through accumulated old
+head margins alone. No triangular actual-source
+coefficient change or nonzero old Schur determinant
+has yet been proved.

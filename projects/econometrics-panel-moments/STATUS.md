@@ -49,8 +49,18 @@ audited; their uniform nonvanishing is not proved.
 Each individual terminal scalar curve now has an audited all-length
 spanning proof, and the whole response determinant has the bounded
 rational form (LC163). The first-block cancellation (LC164)--(LC165)
-is explicit. The next step is a compatible recurrence for its actual
-head response; scalar spanning alone does not establish that recurrence.
+is explicit and Lean checked. Proper tail transport now has an exact
+three-by-three actual-head map and a cocycle, with the conditional
+factorization (LC174) through the endpoint coupling and paired Schur
+matrix. This map is invertible wherever the stated paired bases and
+generic endpoint pivots are invertible; it does not prove those paired
+bases exist. The prescribed two-block exact certificate also verifies
+the actual head correction, including its polynomial gauge coefficient.
+The next step is a compatible recurrence for the reset projection's
+head response. Ordinary head transport and scalar spanning alone do
+not establish that recurrence. The actual zero-head prepend identities
+and retained-old correction in (LC175)--(LC177) record the terms that
+still have to be controlled.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
@@ -1240,7 +1250,11 @@ silently assumed by either proved theorem, and no result below is claimed.
    m>=2, starting from the separate q=2 base. Its finite m=2,3 values
    are nonzero and its first two columns come from the projected
    selected-first head in (LC152). A compatible source expansion or
-   recurrence for that projection is not yet established.
+   recurrence for that projection is not yet established. Proper
+   actual-head transport now factors as (LC174) and preserves head
+   ranks on its stated domain. Extend this to the reset projection,
+   retaining the first-block edge singularity and actual commutator
+   corrections; the natural transported lifts alone are insufficient.
    Then control the retained-old-source correction in (LC113).
    Formalization of these residue, edge-descent, and asymptotic
    arguments remains unfinished.
