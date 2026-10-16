@@ -237,3 +237,202 @@ independent modulo C generically, and prove that the 18q−6 actual
 vanishing-column derivatives in a suitable common-G direction are
 independent modulo [C,W]. The successful two finite cases motivate
 that target but do not discharge either obligation at arbitrary q.
+
+## Fixed generator and transverse squared-pole blocks
+
+For a relative direction D=diag(0,τ,ν), put H=G D G^(-1).
+The first column of G is 1, so H1=0. Writing L=A_q X gives
+dot L=HL. Direct differentiation of K=diag(L)^(-1)A_q diag(X)
+then gives the right logarithmic derivative
+
+\[
+ B:=\dot K K^{-1}
+   =\operatorname{diag}(L)^{-1}H\operatorname{diag}(L)
+       -\operatorname{diag}((HL)_a/L_a).
+ \tag{LC11}
+\]
+
+Thus H is independent of the q-time factors. For a first-new
+difference in (LC6), with T the increasing product omitting t and q,
+its derivative multiplied on the right by K^(-1) is
+p_(t,a,b) e_b [KT,B]. This is an effect-dependent commutator, not a
+constant change of source coefficients.
+
+Fix a q-line c and write z=L_qc. At an ordinary point on it, expand
+K=R/z+S+O(z), dot K=−ell R/z²+V/z+O(1), where
+R=e_c v_c, v_c=(A_q(c,j)X_j)_j, and ell=dot L_qc on the line.
+Set Ω=V+ell S. The cubic terms in KT dot K−dot K TK cancel;
+the squared-pole coefficient is RTΩ−ΩTR. Modulo the line spanned
+by v_c, the row e_b therefore has coefficient
+
+\[
+ p_{t,a,b}\,\delta_{bc}\,[v_c T\Omega].
+ \tag{LC12}
+\]
+
+The whole ambient append image has squared-pole coefficient parallel
+to v_c, so this transverse observation kills that image. It need
+not kill the nine additional W_ab leading source columns. In
+particular, (LC12) alone does not give pivots modulo the full base
+[C,W_ab].
+
+For d≠c choose the column λ_d=diag(X)^(-1)A_q^(-1)e_d.
+Then v_c λ_d=0 on the line and Kλ_d=e_d/L_qd. Retaining the
+variation of λ_d in the Laurent expansion gives
+Ωλ_d=H_cd e_c+(ell/L_qd)e_d. Consequently the nonzero b=c block
+in (LC12), after this transverse scalar observation, consists of
+
+\[
+ p_{t,a,c}\left[
+ H_{cd}(v_cT)_c+\frac{\dot L_{qc}}{L_{qd}}(v_cT)_d
+ \right],\qquad t<q,\quad a=0,1,2.
+ \tag{LC13}
+\]
+
+All identities are at generic points where the other displayed
+denominators and coordinates are nonzero. Each c gives 3(q−1)
+candidate functions; their joint rank is a new obligation.
+
+There is a particularly simple algebraic specialization. Let C be
+the directed cycle matrix and choose the Fourier columns of G in
+the order of C's eigenvalues 1,ω,ω², where ω³=1 and ω≠1.
+With (τ,ν)=(ω−1,ω²−1), one has H=C−I. If d is the successor
+of c and e is the remaining state, then on L_qc=0,
+dot L_qc=L_qd. Because v_cT is zero-sum, (LC13) becomes
+
+\[
+ -p_{t,a,c}(v_cT)_e.
+ \tag{LC14}
+\]
+
+The Fourier matrix has nonzero entries, determinant, and two-by-two
+minors. Independent generic time factors can avoid the remaining
+line incidences. This is a complex algebraic specialization, not a
+positive economic fixture. A nonzero minor proved here would
+establish generic common-G nonvanishing after clearing denominators;
+generic old-source independence cannot simply be assumed at this
+particular G.
+
+The fixed-terminal simplification also has a concrete limitation.
+For just two other blocks, let g_a=A_q(c,a) and
+f_(t,a)=p_(t,a,c)(v_c K_other)_e. Direct multiplication gives
+
+\[
+ \sum_a\frac{g_a A_1(a,e)}{A_1(a,c)} f_{1,a}
+ =\frac{X_c}{X_e}(v_cK_1)_e(v_cK_2)_e
+ =\sum_a\frac{g_a A_2(a,e)}{A_2(a,c)} f_{2,a}.
+ \tag{LC15}
+\]
+
+These are nonzero constant coefficients, so the six functions are
+dependent. This identity holds for the fixed-terminal family even
+without Fourier G. It does not settle the required longer deletion
+blocks or the complete coalescent jet family. In particular, one
+cannot infer (LC14)'s independence from nonzero individual endpoints
+or an unrelated moved-word rank theorem.
+
+Writing m=q−1, Δ_t=∏_a L_ta, B_t=Δ_t K_t and D_old=∏_t Δ_t
+gives a useful exact binary-polynomial form on L_qc=0. Put
+
+\[
+ N_t=\frac{v_c B_1\cdots B_{t-1}B_{t+1}\cdots B_m e_e}{X_e},
+ \qquad f^{\rm cub}_{ta}=X_a\prod_{b\ne a}L_{tb}.
+ \tag{LC16}
+\]
+
+Output-coordinate divisibility makes N_t a polynomial of degree
+3m−3. Dividing the column p_(t,a,c)(v_cT)_e by the common factor
+X_c X_e and the nonzero constant A_t(a,c) gives
+N_t f^cub_(ta)/D_old. Thus the precise fixed-terminal target is
+independence of 3m actual degree-3m binary forms N_t f^cub_(ta).
+The N_t retain their ordered matrix-product constraints. For m=2,
+N_1 lies in the span of the second block's three cubics and N_2
+in the first block's span; the shared product N_1N_2 explains
+(LC15). That argument does not extend by appending an arbitrary
+prefix, because its required coefficients would depend on X.
+Finite-residue observations can miss a constant rational function,
+so independence of these forms is also distinct from independence
+of their pole-coordinate columns.
+
+The bounded [cyclic probe](../exploration/source24_cyclic_transverse_probe.py)
+and [saved exact output](../exploration/source24-cyclic-transverse-probe-results.json)
+use p=1000003, Fourier G, old times (2^t,5^t), and q-time (97,193).
+For each c=0,1,2, the evaluation ranks are:
+
+| m=q−1 | Columns | Rank for every c |
+|---|---:|---:|
+| 2 | 6 | 5 |
+| 3 | 9 | 9 |
+| 4 | 12 | 12 |
+| 5 | 15 | 15 |
+
+For m=2 the separate exact relation supplies the upper bound.
+The other ranks are full finite witnesses, not an all-m proof.
+The script checks the cycle orientation, actual completed-word
+residues, and the nine cancelling numerator pairs in (LC15).
+It saves evaluation matrices, points, labels, hashes, and nonzero
+minors. One run took 0.16 seconds with peak RSS 15,335,424 bytes;
+the primary reviewed the code without a second arithmetic run.
+
+## Six special jets are uniformly independent modulo the full base
+
+The same-block q-line intersections give a different observation
+that kills the entire leading base, including all nine W_ab.
+Fix P_cd=L_qc∩L_qd, c≠d, and use local coordinates z=L_qc,
+w=L_qd. Assume all coordinates of P_cd are nonzero and all other
+old lines avoid it. Then Q=K_1...K_(q−1) is regular and invertible
+there. Every column of [C,W] has total pole order at most two under
+(z,w)↦ρ(z,w): each term contains at most two q/new factors.
+
+For the special difference D_ab=F_(n,q,a,b)−F_(q,n,a,b), its
+actual derivative is
+
+\[
+ D'_{ab}=\dot p_{qab}e_b(I-K_qQ)+p_{qab}e_b\dot K_qQ.
+ \tag{LC17}
+\]
+
+Set n_ab=A_q(a,b)X_aX_b, evaluated at P_cd. Its homogeneous
+degree-minus-three principal part, for the two relevant columns, is
+
+\[
+ [D'_{cd}]_{-3}
+  =n_{cd}\left(\frac{\dot L_{qc}}{z^2w}
+                    -\frac{\dot L_{qd}}{zw^2}\right)v_dQ,
+ \qquad
+ [D'_{dc}]_{-3}
+  =-n_{dc}\left(\frac{\dot L_{qc}}{z^2w}
+                    -\frac{\dot L_{qd}}{zw^2}\right)v_cQ.
+ \tag{LC18}
+\]
+
+All coefficients and rows on the right are evaluated at P_cd.
+The other special columns have zero degree-minus-three part at
+this pair. For a=b the apparent single-line cubic pole cancels.
+The rows v_c,v_d are independent zero-sum rows because A_q diag(X)
+is invertible; multiplication by Q preserves their independence.
+Both n_cd and n_dc are nonzero.
+
+If 0,τ,ν are pairwise distinct, dot L_qc and dot L_qd cannot both
+vanish at P_cd. Otherwise X and diag(0,τ,ν)X would lie in the
+same one-dimensional common kernel of rows c,d of A_q and hence
+be proportional. With all three coordinates of X nonzero, this
+would force 0=τ=ν. At each pair, select the coefficient of z^(-2)w^(-1)
+when dot L_qc is nonzero, or of z^(-1)w^(-2) otherwise. This gives
+a two-dimensional observation with an invertible two-column block.
+
+The three unordered pairs therefore supply six independent
+observations and a block-diagonal invertible matrix on the six
+off-diagonal special jets. All observations annihilate [C,W].
+Consequently these six jets are independent modulo the **entire**
+leading base for every q≥2 on the stated geometry open. This result
+requires no old-source independence premise. Combined with (LC9),
+under that premise the leading-plus-first-jet rank is at least N_q+9.
+
+Other jet columns may have nonzero values under these six
+observations. They must be corrected by the six special pivots
+before subsequent residue tests. If all nine leading W columns
+are independent modulo C, this removes six of the 18q−6 derivative
+columns and leaves 18q−12 corrected columns to settle. The formulas
+(LC13)--(LC16) alone do not account for that correction, so their
+finite ranks cannot be added directly to this six-dimensional gain.

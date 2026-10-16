@@ -26,6 +26,14 @@ for the complete workflow and [../THEOREM.md](../THEOREM.md) for exact scope.
 The arbitrary-period theorem does not prove general-period source-family
 independence.
 
+`SourceRelativeTimeJet.lean` proves the derivative of the actual homogeneous
+kernel along a relative-time perturbation `(u,v) ↦ (u(1+τε),v(1+νε))`.
+It also proves the cleared derivative identity, zero row sum, and the
+derivative of the prefix-corrected append expression. These are derivative
+identities; independence of the coalescent source jets remains open.
+The current source-family aggregate checks 349 declarations in a compiled
+33-module closure; this latest aggregate reused cached dependencies.
+
 ## Model foundations
 
 - `Model.lean`: strictly positive normalized transitions and path likelihoods;

@@ -1,4 +1,5 @@
 import PanelMoments.SourceAppendIdentities
+import PanelMoments.SourceRelativeTimeJet
 import PanelMoments.SourcePolynomialKernels
 import PanelMoments.SourcePolynomialCriterion
 import PanelMoments.SourceFamily
@@ -427,3 +428,15 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceAppendIdentities.denominator_mul_append_scalar_split
 #print axioms PanelMoments.SourceAppendIdentities.divided_cleared_pole_factorization
 #print axioms PanelMoments.SourceAppendIdentities.endBlock_outputDivided_pole_cancellation
+
+-- Actual relative-time derivatives, with the fixed-prefix correction retained.
+#print axioms PanelMoments.SourceRelativeTimeJet.perturbTable_zero
+#print axioms PanelMoments.SourceRelativeTimeJet.perturbTable_other
+#print axioms PanelMoments.SourceRelativeTimeJet.rowForm_perturbTable
+#print axioms PanelMoments.SourceRelativeTimeJet.kernel_perturbTable
+#print axioms PanelMoments.SourceRelativeTimeJet.kernel_hasDerivAt
+#print axioms PanelMoments.SourceRelativeTimeJet.kernelJet_cleared
+#print axioms PanelMoments.SourceRelativeTimeJet.kernelJet_row_sum
+#print axioms PanelMoments.SourceRelativeTimeJet.vecMul_kernel_hasDerivAt
+#print axioms PanelMoments.SourceRelativeTimeJet.prefix_corrected_append_hasDerivAt
+#print axioms PanelMoments.SourceRelativeTimeJet.rowFormJet_relativeDirection

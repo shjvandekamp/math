@@ -112,10 +112,14 @@ whole-vector boundary annihilation, exact scalar splitting, and the
 output-divided pole cancellation using the existing homogeneous and
 cleared model kernels. Focused compilation and twelve further axiom
 checks passed. The full-vector scalar-zero append factorization now
-adds two further checked declarations. The updated aggregate checks
-339 declarations in a
-32-module compiled closure, using only the permitted foundational axioms.
-This is a cached aggregate check, not a new clean 32-module rebuild.
+adds two further checked declarations. `SourceRelativeTimeJet` now proves
+the actual relative-time kernel derivative, its cleared polynomial identity,
+zero row sum, and the fixed-prefix append derivative. Its ten declarations
+passed focused compilation and axiom checking. The updated aggregate checks
+349 declarations in a 33-module compiled closure, using only the permitted
+foundational axioms. This is a cached aggregate check, not a new clean
+33-module rebuild. The aggregate took 47.50 seconds with peak RSS
+1,824,522,240 bytes under the serial memory cap.
 Residue operators, matching-coordinate removability, asymptotic orders,
 and the joint-rank induction remain paper arguments outside this module.
 
@@ -535,6 +539,23 @@ their ranks are 195 and 288, with leading minor coefficients 23466 and
 597175 modulo 1000003, at epsilon orders 66 and 84. The earlier u-only
 q=4 test has sampled rank 193. These are external finite certificates;
 uniform nonvanishing of the actual derivative block remains open.
+The right logarithmic derivative now gives three explicit transverse
+squared-pole blocks, each with 3(q−1) first-new columns. A Fourier/cycle
+specialization reduces them to fixed-terminal deletion functions, but
+the two-block deletion family has an exact constant-coefficient relation.
+These observations neither give independence at longer lengths nor
+eliminate the nine surviving leading rows; see (LC11)--(LC16).
+Exact cyclic fixtures have full deletion ranks 9, 12, and 15 at
+m=3,4,5 for all three states, while the separate two-block relation
+gives rank exactly 5 there. A different local argument now proves a
+uniform six-dimensional jet gain modulo the entire leading base:
+the six off-diagonal special jets have invertible mixed third-order
+pole blocks at the three same-block intersections. This requires
+generic geometry and distinct relative weights, but no old-source
+independence. With that premise it raises the established total
+first-jet lower bound to N_q+9. The remaining jets require the actual
+six-pivot corrections; their uncorrected ranks cannot be added.
+See (LC17)--(LC18); this new uniform result is an audited paper proof.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,

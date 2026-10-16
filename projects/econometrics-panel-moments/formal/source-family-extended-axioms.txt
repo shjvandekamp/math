@@ -751,3 +751,17 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceAppendIdentities.endBlock_outputDivided_pole_cancellation' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.perturbTable_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.perturbTable_other' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.rowForm_perturbTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.kernel_perturbTable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.kernel_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.kernelJet_cleared' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.kernelJet_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.vecMul_kernel_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.prefix_corrected_append_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRelativeTimeJet.rowFormJet_relativeDirection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
