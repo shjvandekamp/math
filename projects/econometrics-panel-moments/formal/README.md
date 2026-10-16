@@ -133,10 +133,39 @@ Its determinant and all baseline row-form units are explicit hypotheses.
 The scalar residue-kernel correspondence and rank criterion remain paper
 arguments.
 
-The current source-family aggregate checks 510 declarations in a compiled
-47-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. It took 11.77 seconds with peak
-RSS 2,468,528,128 bytes under the serial memory cap. All checked declarations
+SourceWeakHermitePolynomial.lean verifies the cubic Hermite polynomial
+identities used by the actual quotient calculation.
+SourceInvariantTailAlgebra.lean proves the tail-weight identities,
+endpoint factors, and the nonzero three-evaluation determinant.
+
+SourceInvariantTailBaseData.lean and SourceInvariantTailBaseCertificate.lean
+prove that the three displayed rational initialization matrices are
+nonsingular, by integer column scaling and kernel-checked modular inverses.
+The generator is ../exploration/generate_invariant_tail_lean.py.
+SourceInvariantTailActualBase.lean separately derives the two-block
+binary annihilation, retained heads, and four weak rational functions
+from the displayed H/J formulas over the rationals. This closes their
+literal formula-to-certificate gap; it does not yet identify the formulas
+with the full source-family interface or a time derivative.
+
+SourceInvariantTailPolynomialExtension.lean proves injectivity of the
+normalized polynomial extension by four evaluations.
+SourceInvariantTailConcretePolynomials.lean supplies its actual displayed
+polynomials and verifies the evaluation conditions.
+SourceInvariantTailBoundedExtension.lean proves the degree bounds, equal
+dimensions, linear equivalence, and unique decomposition.
+SourceInvariantTailSchedule.lean discharges every nonzero-factor condition
+from the explicit interval and distinctness assumptions, with
+a=6/5, z=1/10, and the tail weights. Its final unique-decomposition
+theorem has no assumed matrix rank or unspecified evaluation pivot.
+The source-word identification, later finite initialization, and generic
+specialization bridges remain separate obligations. These modules do not
+assert an end-to-end all-length paired or equation-(24) theorem.
+
+The current source-family aggregate checks 798 declarations in a compiled
+60-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. It took 41.00 seconds with peak
+RSS 2,067,513,344 bytes under the serial memory cap. All checked declarations
 use only the permitted foundational axioms; the output is saved in
 `source-family-extended-axioms.txt`.
 

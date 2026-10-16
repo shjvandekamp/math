@@ -42,6 +42,22 @@ finite-rank evidence, but the new theorem is not yet formalized end to end.
 The remaining full-source condition is the retained-old Schur determinant
 in (LC213), not paired transversality.
 
+The supporting Lean formalization now proves the concrete normalized
+tail extension is a linear equivalence with a unique bounded-polynomial
+decomposition. Every factor condition is discharged on an explicit
+interval region. It also proves nonsingularity of the three displayed
+initialization matrices and derives the actual displayed two-block
+binary kernel, heads, and weak functions over the rationals. The current
+source-family aggregate passes 798 axiom checks in a 60-module closure;
+all use only standard foundational axioms. The actual source/time-derivative,
+later initialization, and genericity bridges remain unfinished.
+
+A separate audited full-source obstruction, (PP40)--(PP45), shows that
+the fixed-frame regular rank-one prepend limit has nullity at least
+3q(q-13)/2 for q>=14. Regular correction coefficients give the stronger
+3q(q-9)/2 bound for q>=10. This rules out an invertible zeroth-order
+limit on that path; it does not rule out a higher-jet proof.
+
 The following paragraphs record the earlier research stages. Their open
 paired-determinant statements are superseded by the invariant-tail result;
 the full-source and formalization gaps remain.

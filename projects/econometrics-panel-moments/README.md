@@ -31,6 +31,8 @@ Read [THEOREM.md](THEOREM.md) for precise statements and domains,
 [DEPENDENCIES.md](DEPENDENCIES.md) for the formal dependency map.
 [STATUS.md](STATUS.md) records the confirmed results and
 [next steps that are not completed](STATUS.md#next-steps--not-completed).
+The [research roundup](RESEARCH_ROUNDUP.md) separates the completed
+theorems, new paired-independence proof, explored routes and remaining work.
 The original request is preserved in [BRIEF.txt](BRIEF.txt).
 
 The next work is to test the combined verifier and dependency bootstrap in a
@@ -38,27 +40,23 @@ fresh environment, prove the particular source family's basis property for
 arbitrary T, and refresh the novelty audit before seeking external review.
 These are future tasks, not additional verified claims.
 
-The active equation-(24) continuation has Lean-checked general validity,
-exact index counts, actual source-function recursion, a conditional
-induction criterion, and the normalized matrix-product images with their exact
-selected-first, ascending-remainder orders and a reversible single-block
-reduction linked to that criterion, including an injective positive homogeneous
-representation of the actual columns and a polynomial criterion obtained
-by clearing one positive common denominator,
-plus external exact full-rank checks at
-T=5,6, and a quadratic-size residue reduction checked by exact computation
-through T=8. The original conic witness
-has an exact T5 residue failure; a perturbed economic witness passes the finite
-checks. The auxiliary binary parity rank theorem is now Lean checked for
-the actual reordered transfer words and their stochastic matrix products on
-the positive domain. Together with an audited paper perturbation
-argument, it proves nonvanishing of the shared-new polar half at every length on the
-common-G, independent-time family. An audited deletion-word induction, using
-an external exact base certificate, also proves full incoming rank at every
-odd auxiliary length at least five. Injectivity of the subsequent old-source
-map, the regular Schur half, and the all-T determinant proof remain open. See
-[the continuation note](research/SOURCE24_INDUCTION.md) and
-[the updated status](STATUS.md#active-continuation-equation-24-for-t--5).
+The equation-(24) continuation now has an independently audited
+[invariant-tail proof](research/SOURCE24_INVARIANT_TAIL.md) of generic
+paired boundary independence at every length. Its actual-source finite
+initialization was independently reconstructed by exact rational arithmetic.
+Lean checks the displayed initialization matrices and several polynomial
+and scalar components; the new paired theorem is not yet formalized end
+to end. The remaining full-source condition is the retained-old Schur
+determinant \(D_q+Z_T-Z_BC_B^{-1}C_T\), with all insertion and head
+corrections retained.
+
+The continuation also has Lean-checked source validity, index counts,
+recursive lifts, exact ordered matrix-product images, positive homogeneous
+representations and a conditional polynomial induction criterion. External
+finite source checks at T=5,6 and residue checks through T=8 remain finite
+evidence. The auxiliary binary parity theorem is fully Lean checked.
+[STATUS.md](STATUS.md#active-continuation-equation-24-for-t--5) retains
+the detailed progress and distinctions between these results.
 
 ## Verification
 
@@ -78,9 +76,11 @@ axiom dependencies. No proof holes, custom rank axioms, or native computation
 oracle are used.
 
 Lean 4.34.1, Mathlib and all transitive revisions are pinned under `formal/`.
-The exact exploration uses Python's standard library. External calculations
-supply discovery data; every certificate used by a theorem is checked by
-Lean's kernel. Dependency sources and compiled caches are not vendored.
+The exact exploration uses Python's standard library. Every certificate used
+by the two main Lean theorems is checked by Lean's kernel. New paper results
+and external initialization calculations are labeled separately; they do
+not silently extend the formal theorem statements. Dependency sources and
+compiled caches are not vendored.
 
 The GitHub branch is
 [`research/econometrics-panel-moments-20261015-01a13f56`](https://github.com/shjvandekamp/math/tree/research/econometrics-panel-moments-20261015-01a13f56/projects/econometrics-panel-moments).

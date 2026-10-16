@@ -618,3 +618,130 @@ statements require no old-source inverse. Applying the actual prefix
 or tail map still uses shorter-source independence, and neither
 incoming statement proves nonvanishing of (PP20). For even q the
 remaining incoming test itself is the six-column map (E18).
+
+## Conic restriction and its transverse parameter
+
+The new invariant-tail proof establishes generic paired independence;
+it does not remove the actual graph condition (PP13). A useful exact
+restriction of the five-term graph pencil is available nonetheless.
+Set \(v=(\tau u+\varepsilon)/(1+zu)\). Then (PP11) gives
+\[
+\begin{aligned}
+ (1+zu)\mathcal F(u,v)
+ ={}&F_0+u(zF_0+F_1+\tau F_3)\\
+ &+u^2(zF_1+F_2+\tau F_4)+zu^3F_2
+   +\varepsilon(F_3+uF_4).
+\end{aligned}
+ \tag{PP38}
+\]
+This is a cubic graph pencil with an affine transverse deformation.
+Its coefficients retain the actual old-source inverse through
+\(I_{\rm old}\); they can be constructed by one old source solve.
+It is not a degree bound for the full determinant in (PP13), whose
+corrected new columns also depend on \(u,v\).
+
+Generic fullness of the five-term pencil is insufficient to conclude
+fullness on the conic. The permitted scalar pencil
+\[
+ v+zuv-\tau u
+ \tag{PP39}
+\]
+is generically nonzero but vanishes identically when \(\varepsilon=0\).
+Thus a nonzero conic or transverse coefficient must still be proved
+for the actual corrected determinant.
+
+This specialization uses the symmetric common \(G\) and time factors
+\((1,a,\delta\tau a/(1+za))\). It differs from the earlier Vandermonde
+conic in SOURCE24_CONIC.md, where all state/time lines lie on one
+common dual conic. Here each fixed-state family has a quadratic
+parametrization, generally on a different conic. The earlier
+three-block rank obstruction cannot be transferred without an
+additional argument.
+
+## Rank-one prepend: a forced singular regular limit
+
+Keep all old blocks fixed and generic, and set the new earliest time
+factors to \((1,\varepsilon u,\varepsilon v)\), with the same fixed
+common \(G\). At old cross-points with \(X_0\ne0\) and \(G_{i0}\ne0\),
+the new kernel is regular and tends to \(\Pi_0=\mathbf1e_0\).
+Let \(T_{tsab}\) be the actual retained old source with the new kernel
+inserted first in its ascending tail. For each unordered pair \(t<s\)
+and state \(a\), the heads and the two ordered completions give
+\[
+ E_{ta}-E_{sa}+\sum_b(T_{tsab}-T_{stab})
+ =-X_a e_a[K_t,K_s]K_\varepsilon R_{ts}.
+ \tag{PP40}
+\]
+Here \(R_{ts}\) is the old ascending product omitting \(t,s\).
+The right side vanishes at zero because
+\([K_t,K_s]\mathbf1=0\). This identity retains the heads; deleting
+them before forming the relation is invalid.
+
+The coefficients of the \(T\) terms form a constant matrix \(J\)
+with \(r=3\binom q2\) independent columns: each pair/state column
+has six nonzero entries, and these supports are disjoint.
+The \(E\) terms have no old cross-pair double residues. Consequently
+\[
+ M_0J=0,\qquad M_\varepsilon=D_{\rm old}(T).
+ \tag{PP41}
+\]
+Write the exact retained Schur matrix in this fixed observation frame
+as \(S_\varepsilon=M_\varepsilon-U_\varepsilon\Theta_\varepsilon\),
+where \(U_\varepsilon=D_{\rm old}[N\ B]\) has \(18q\) columns.
+Suppose \(S_\varepsilon\) has an entrywise finite limit. Then
+\(C_\varepsilon=M_\varepsilon-S_\varepsilon\) is regular, even if
+\(\Theta_\varepsilon\) has poles. Its rank is at most \(18q\) over
+the Laurent field. Specializing its vanishing minors proves
+\(\operatorname{rank}C_0\le18q\). On the \(r\)-dimensional image of
+\(J\), \(S_0=-C_0\), so
+\[
+ \operatorname{nullity}S_0\ge
+ \max\!\left(0,\frac{3q(q-13)}2\right).
+ \tag{PP42}
+\]
+Thus this regular zeroth-order limit is necessarily singular for
+\(q\ge14\); at \(q=14\) its nullity is at least 21. If its entries
+are regular power series, its determinant has at least this order
+of vanishing.
+
+There is a stronger conclusion when the actual correction coefficients
+\(\Theta_\varepsilon\) are also regular. The literal new-head columns
+have limits
+\[
+ N_s^{ab}(0)=\delta_{b0}X_a e_0(I-P_s^{\rm old}),
+ \qquad
+ B_t^{ab}(0)=X_aK_t(a,b)(e_b-e_0R_t).
+ \tag{PP43}
+\]
+Only \(3q\) of the \(N\) columns survive, alongside at most \(9q\)
+incoming directions. Hence \(\operatorname{rank}U_0\le12q\), and
+\[
+ \operatorname{nullity}S_0\ge
+ \max\!\left(0,\frac{3q(q-9)}2\right).
+ \tag{PP44}
+\]
+This refinement requires regular correction coefficients, not merely
+a regular product: \(\operatorname{diag}(1,\varepsilon)\,
+\operatorname{diag}(1,\varepsilon^{-1})=I\) shows the distinction.
+
+For the first jet, put
+\[
+ \alpha_i=u\frac{G_{i1}X_1}{G_{i0}X_0},\qquad
+ \beta_i=v\frac{G_{i2}X_2}{G_{i0}X_0},\qquad
+ H_i=(-\alpha_i-\beta_i,\alpha_i,\beta_i).
+\]
+Then \(K_\varepsilon=\Pi_0+\varepsilon H+O(\varepsilon^2)\),
+and the first coefficient of (PP40) is
+\[
+ -X_a e_a[K_t,K_s]H R_{ts}.
+ \tag{PP45}
+\]
+Its rank on the actual new-pole-silent coefficient kernel remains
+unproved. These bounds exclude an invertible regular leading limit
+in the stated fixed frame. They do not exclude finite-\(\varepsilon\)
+independence, a higher-jet proof, or singular changes of basis.
+
+The identities and rank argument in this section were independently
+audited against the literal source definitions. They are paper results;
+the forthcoming formal algebraic identity does not by itself formalize
+the residue specialization or the determinant valuation.

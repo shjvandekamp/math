@@ -285,3 +285,98 @@ of \(C_B\). All insertion and polynomial-head corrections remain
 in (IT17). Proving that determinant, formalizing the complete new
 argument, and connecting the result to the full equation-(24)
 family are unfinished work.
+
+## Polynomial form of the tail step
+
+The following normalization was derived locally and independently audited.
+It gives an elementary polynomial route to (IT4), with no residue operator
+or function-space rank premise inside its separation argument.
+Put \(a=a_1\) and
+\[
+ \Lambda_m=\prod_{t\le m}(2-a_tr)(1-2a_tr)(1-a_tr),\quad
+ U_m=\prod_{t\le m}(1-a_tr),\quad C_m=(-3)^m\prod_{t\le m}a_t.
+ \tag{IT18}
+\]
+Then \(D_m=C_mr^mU_m/\Lambda_m\). The map
+\[
+ P\longmapsto c=\frac{r(r-z)P}{\Lambda_m},\qquad
+ \deg P\le3m-3,
+ \tag{IT19}
+\]
+identifies the polynomial space with \(E_m\): vanishing at infinity
+removes the top numerator coefficient, and the other two evaluations
+give the factors \(r(r-z)\).
+
+Write \(N_A=Ar^2+(2Az-2)r-z\) and
+\(H_A=(r-z)(2-Ar)(1-2Ar)\). Direct substitution into (IT5) gives
+\[
+ \frac{\Lambda_{m+1}Tc}{r(r-z)}
+ =F P+P(\xi)K,\quad F=\frac{4b}{3}H_A,\quad
+ K=\frac{\ell A(\xi-z)r^{m-1}U_mN_A}
+          {\xi^{m-1}U_m(\xi)}.
+ \tag{IT20}
+\]
+In particular
+\[
+ F(\xi)+K(\xi)=-(\xi-z)\eta,\qquad
+ \eta=\frac{4b}{3}+\Delta_k(\xi)\ne0.
+ \tag{IT21}
+\]
+For the three normalized new columns, let
+\(B_m=\ell C_mr^{m-2}U_m/(1-ar)\). Their polynomial factors are
+\[
+\begin{aligned}
+ n_0&=\tfrac23N_a(1-2Ar)(1-Ar),\\
+ n_1&=-\tfrac r3N_a(2-Ar)(1-Ar),\\
+ n_2&=-Ar(1-ar)N_A+
+       \frac{(r-z)N_a(2-Ar)(1-2Ar)}{3Q_{1,h}(\xi)}.
+\end{aligned}
+ \tag{IT22}
+\]
+Thus the original ordered generators normalize to \(B_mn_j\).
+Use the invertible column change
+\[
+ \bar n_2=n_2+\frac{z\,n_0}{Q_{1,h}(2/A)}
+                   +\frac{n_1}{Q_{1,h}(1/(2A))}.
+ \tag{IT23}
+\]
+Every \(n_j(\xi)\) is zero. At \(p_0=2/A,p_1=1/(2A)\),
+\[
+\begin{array}{c|cc}
+ &p_0&p_1\\ \hline
+ n_0&2N_a(p_0)&0\\
+ n_1&0&-N_a(p_1)/(8A)\\
+ n_2&-6z(1-2a/A)&3(1-a/(2A))/(8A)
+\end{array}
+ \tag{IT24}
+\]
+so \(\bar n_2(p_0)=\bar n_2(p_1)=0\). Also
+\[
+ \bar n_2(z)
+ =(1-az)(2-Az)(1-2Az)(1-Az)\bar\beta(z)\ne0.
+ \tag{IT25}
+\]
+The common factor \(B_m\) is nonzero at all three nodes
+\(p_0,p_1,z\) under the established tail conditions.
+
+Now suppose
+\[
+ xB_mn_0+yB_mn_1+wB_m\bar n_2+FP+P(\xi)K=0.
+ \tag{IT26}
+\]
+Evaluation at \(\xi\) first gives \(P(\xi)=0\), by (IT21).
+Evaluation at \(p_0\), then \(p_1\), then \(z\) gives
+\(x=y=w=0\), by (IT24)--(IT25). Finally \(FP=0\) and
+\(F\ne0\) imply \(P=0\). This proves joint injectivity of
+the three new scalars and the old polynomial.
+The degree bounds are
+\(\deg(FP)\le3m\), \(\deg K\le2m+1\), and
+\(\deg(B_mn_j)\le2m+2\le3m\) for \(m\ge2\).
+The domain and target therefore both have dimension \(3m+1\);
+the polynomial extension is an isomorphism.
+
+The general four-evaluation separation mechanism and the displayed
+concrete polynomial identities are being formalized separately.
+Their identification with actual promoted source columns is still
+the external algebra (IT18)--(IT23); this paragraph does not claim
+an end-to-end Lean proof of paired or full-source independence.
