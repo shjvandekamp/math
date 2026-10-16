@@ -85,7 +85,21 @@ matches all 324 entries of a single rational control to the existing
 actual evaluator. This is an external finite certificate, not Lean or
 an all-length result. The common-tail identity (LC195) now identifies
 the next scalar observation, including the indispensable tail-node
-evaluation; its rank after actual later-column corrections is open.
+evaluation. Its shorter completed-output family now has an audited
+full 3k+1 scalar spanning proof for every k>=3. A separate constructive
+binary basis, valid for k>=2, supplies actual coefficient lifts with
+exact zero scalar row sum. Those lifts give the stronger all-length
+valuation lower bound (3m^2-7m+2)/2 in the independent weak parameter,
+or 3m^2-7m+2 along the epsilon path (LC197).
+The prescribed four-block exact certificate is sharp at order 22,
+with nonzero coefficient 748106 modulo 1000003 and pivot valuations
+seventeen zeros, three twos, and four fours. All 576 rational-control
+entries match the existing actual evaluator. These new uniform scalar
+and valuation results are audited paper proofs; the four-block result
+is external finite evidence. The current target is a nonzero graded
+determinant after the actual lifts, followed by the retained-old-source
+step. Neither the scalar spanning results nor the lower bound proves
+that determinant nonzero for every length.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited

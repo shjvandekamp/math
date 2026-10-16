@@ -5417,3 +5417,83 @@ requires actual nondiagonal elimination of higher
 coefficients. The finite certificate (LC194) performs
 that elimination successfully at m=3; it does not
 yet provide a uniform construction.
+
+## Actual scalar bases and the quadratic small-time filtration
+
+The shorter scalar question after (LC195) is now resolved by the audited
+paper proof in
+[SOURCE24_SCALAR_LAURENT_SPANNING.md](SOURCE24_SCALAR_LAURENT_SPANNING.md).
+At h=0, every k>=3 actual completed-output family spans its full
+3k+1-dimensional first-weak-output scalar ambient. After dividing by
+the product of binary active determinants, the proof uses k distinct
+state-2 pole pivots and 2k+1 Laurent directions. The moved-first word
+differences have nonzero outer coefficients proportional to
+a_s-a_(s-1). The omitted-last incoming column supplies an essential
+central direction that the other columns miss.
+
+A separate consequence, valid already at k=2, is stronger for lifting:
+actual coefficient combinations with exact zero scalar row sum span
+every bounded rational first-output function with the 3k prescribed
+simple poles and value zero at r=0. Its explicit basis uses the head
+sums, the moved-first differences through the last index, and two
+cleaned incoming columns. The regular continuation
+2h C^H_s0+C^H_s1+C^H_s2 preserves exact zero row sum for all delta.
+Thus these are actual coefficient lifts for generic h, with their
+polynomial source heads retained.
+
+The resulting audited determinant argument is written in
+[SOURCE24_SMALL_TIME_FILTRATION.md](SOURCE24_SMALL_TIME_FILTRATION.md).
+The binary completed-prefix coefficient kernel has dimension 3n-2
+for n>=2 and embeds under actual right append. Four kernel vectors
+start at n=2, with three new vectors at each subsequent prefix.
+The scalar basis cancels each appended leading error by actual
+coefficients, raising its completed-row order by one. A common
+actual denominator proves that these leading errors have only
+simple poles; no unproved closure under differentiation is used.
+After the final two blocks, extracting the column factors and
+counting the remaining transverse rows gives
+
+\[
+ \operatorname{ord}_{\delta}\det B_m(h,\delta)
+   \ge\frac{3m^2-7m+2}{2},\qquad
+ \operatorname{ord}_{\epsilon}
+      \det B_m(\epsilon,\epsilon^2)
+   \ge3m^2-7m+2
+       \quad(m\ge3).
+ \tag{LC197}
+\]
+
+The original normalized matrix is jointly analytic at h=delta=0,
+so generic-h divisibility extends there even if a chosen lifting
+basis has h-poles. No six-terminal-row pivot is assumed.
+The first lower bound 3m-5 is therefore not sharp for m>=4.
+
+A single new four-block exact certificate tests the resulting next
+prediction. With a=(5/4,3/2,7/4,15/8), b=(1,2,3,4), prime 1000003,
+and fixed precision 25, it obtains
+
+\[
+ \operatorname{rank}B_4(0)=17,\qquad
+ \det B_4(\epsilon,\epsilon^2)
+     =748106\,\epsilon^{22}+O(\epsilon^{23})
+          \pmod {1000003}.
+ \tag{LC198}
+\]
+
+Its pivot valuations are seventeen zeros, three twos, and four
+fours. All 576 entries of a separate rational control at epsilon=2
+match the existing actual paired evaluator. Every series inverse
+is a unit and is recorded and checked; minimum-valuation elimination
+retains absolute precision 25. The saved script and full certificate
+are
+[source24_small_time_four_blocks.py](../exploration/source24_small_time_four_blocks.py)
+and source24-small-time-four-blocks-results.json. The sole execution
+used 0.52 seconds and 23.2 MB external peak RSS. Local source and
+certificate review passed; no replacement fixture or increased
+precision was used.
+
+These two finite cases make the quadratic bound sharp at m=3 and
+m=4 for the displayed fixtures only. A nonzero graded determinant
+for arbitrary m remains the required theorem on this route.
+The scalar lifts and the valuation lower bound do not prove paired
+independence or the subsequent retained-old-source block.
