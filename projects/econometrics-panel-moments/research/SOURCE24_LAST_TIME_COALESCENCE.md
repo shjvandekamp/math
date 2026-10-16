@@ -436,3 +436,239 @@ are independent modulo C, this removes six of the 18q−6 derivative
 columns and leaves 18q−12 corrected columns to settle. The formulas
 (LC13)--(LC16) alone do not account for that correction, so their
 finite ranks cannot be added directly to this six-dimensional gain.
+
+## Matching observations complete a twelve-jet local block
+
+The following extension was proposed in the
+[Pro coalescence investigation](https://chatgpt.com/c/6ad18533-9628-83eb-ace3-46e2a2400a7e)
+and checked locally by the primary and an independent mathematical
+reviewer. It adds the three local E derivatives and the three diagonal
+special derivatives to the six pivots above. It remains a paper proof.
+
+Let M_a=L_qa∩{X_a=0}, and assume every other old denominator is
+nonzero there. In the chart X_j=1, j=a+1 modulo 3, use x=X_a as
+coordinate on L_qa. Define the divided double coefficient and its
+linear Taylor observation by
+
+\[
+ \widehat\rho_a(H)
+   =\left.L_{qa}^2 H\operatorname{diag}(X)^{-1}\right|_{L_{qa}=0},
+ \qquad \Theta_a(H)=[x^1]\widehat\rho_a(H).
+ \tag{LC19}
+\]
+
+Keep output components a,j of Θ_a. Coordinate divisibility makes
+the divided expression regular near M_a for the actual base and
+jet rows. On every base column, it is O(x²). Indeed a double q-line
+pole in a completed source term requires two visits to state a at
+the two q/new positions. Each visit supplies an incoming X_a; an
+initial visit instead uses the exterior X_a. Division by the final
+output coordinate removes the final outgoing factor, not either
+incoming factor. Equivalently, for a copied append row the relevant
+old residue's a-component has both its incoming and output X_a,
+and the final appended kernel supplies a separate final output.
+For W_aa the factor A_aa X_a² is explicit. Other W_ab have no
+double pole on that line. Thus Θ_a annihilates the entire base.
+
+Write Z_a=−X_a e_a dot K and S_ab=D'_ab from (LC17), and let
+d=(0,τ,ν), D=diag(d). Exact expansion gives
+
+\[
+ Z_a=\frac{X_a\ell_a v_a}{L_a^2}
+              -\frac{X_a v_aD}{L_a},
+ \qquad
+ S_{aa}=A_{aa}X_a^2\left[
+ \frac{d_a e_a}{L_a}
+ +\frac{v_a(D-d_a I)Q-\ell_a e_a}{L_a^2}\right].
+ \tag{LC20}
+\]
+
+Here L_a=L_qa and ell_a=dot L_qa. Since q≥2, Q is a nonempty
+product, so Q diag(X)^(-1) is regular at M_a: the final old kernel
+provides every output-coordinate factor. Hence the first numerator
+term of the divided double coefficient of S_aa remains O(x²).
+The other term loses one X_a on division of its a-component. Therefore
+
+\[
+ \Theta_a(Z_a)=\ell_a(M_a)A_q(a,:),\qquad
+ \Theta_a(S_{aa})=-A_{aa}\ell_a(M_a)e_a.
+ \tag{LC21}
+\]
+
+Different q-lines give zero on these six columns. The two-component
+block on (Z_a,S_aa) has determinant A_aa A_aj ell_a(M_a)².
+Writing A_q(a,:)=(1,r_a,s_a), the three chosen charts give
+ell_0(M_0)=(τ−ν)r_0, ell_1(M_1)=νs_1, ell_2(M_2)=−τ.
+Their three determinants therefore multiply to
+
+\[
+ \tau^2\nu^2(\tau-\nu)^2 r_0^3 r_1 s_1^3 s_2\ne0.
+ \tag{LC22}
+\]
+
+The six same-block observations in (LC18) annihilate every Z_a
+and S_aa. The matching observations may see the off-diagonal S,
+but this creates only a lower off-diagonal block. Combining the
+six same-block scalar observations and the six matching observations
+as Φ, and ordering
+J=(S_01,S_10,S_02,S_20,S_12,S_21,Z_0,S_00,Z_1,S_11,Z_2,S_22),
+the twelve-square matrix Φ(J) is block triangular and invertible.
+It annihilates **every** base column. Thus all twelve local jets
+are independent modulo [C,W], uniformly for q≥2 on the geometry
+open and for distinct relative weights. Old-source independence
+is not needed for this local theorem.
+
+This gives a fully specified constant-in-X correction
+
+\[
+ \Pi H=H-J\,\Phi(J)^{-1}\Phi(H),\qquad
+ \Pi B=B,\quad \Pi J=0.
+ \tag{LC23}
+\]
+
+The off-diagonal matching block is retained by the inverse; it is
+not discarded. Only the 9(q−1) shared-new jets and 9(q−1) first-new
+jets remain after this correction. There is an exact rank identity
+
+\[
+ \operatorname{rank}[B,D']
+ =12+\operatorname{rank}[C,W,\Pi D'_{\rm shared},\Pi D'_{\rm first}].
+ \tag{LC24}
+\]
+
+Under shorter-source independence, (LC9) gives independent C and
+the three diagonal W, so the established lower bound strengthens
+to N_q+15. Modulo their span, full first-jet independence is exactly
+the independence of the six off-diagonal W and the 18(q−1) corrected
+jets: 18q−12 specified columns. This retains the six leading W
+directions as an open obligation rather than presuming full base
+rank. Uniform nonvanishing of this remaining quotient is unproved.
+
+## A uniform vector deletion lemma and its projection limit
+
+There is a separate uniform induction on the fixed terminal q-line.
+For m earlier blocks, let v=v_c and T_t be their increasing product
+omitting t. The 3m vector rows
+
+\[
+ \frac{X_a}{L_{ta}}\,vT_t,\qquad 1\le t\le m,\quad a=0,1,2,
+ \tag{LC25}
+\]
+
+are generically independent over coefficients constant in the effect
+coordinate. This uses the common-G model and requires no source-family
+independence premise. For m=1, their three distinct simple poles on
+the fixed q-line isolate the three coefficients.
+
+Append an earlier block n after the existing m blocks, keeping the
+terminal q-line fixed. In a relation, the old deletion rows become
+(X_a/L_ta)vT_t K_n; the three new rows are (X_a/L_na)vP_old.
+Multiplication on the right by K_n^(-1) removes K_n from every old
+term. At the three new intersections, these terms have no pole.
+The residue of the a-th new term is its coefficient times
+X_a vP_old K_n^(-1).
+
+The inverse is regular of rank two at L_na=0, with left kernel
+spanned by v_na. Its displayed row is generically nonzero. To see
+this within the common-G parameter family, fix a point X on the
+terminal line with all coordinates nonzero and all earlier kernels
+invertible. The fixed row vP_old is nonzero. Vary (u_n,v_n) subject
+to L_na(X)=0: v_na varies along a nonconstant affine line in the
+zero-sum plane with fixed nonzero first coordinate X_0. That affine
+line cannot lie in the fixed one-dimensional span of vP_old.
+Each of the three residue conditions is therefore a nonempty
+algebraic open. Their product is nonzero, so all new coefficients
+vanish generically. Old independence persists under adjoining the
+new time parameters, completing the induction.
+
+This lemma was independently audited. It does not imply scalar
+deletion independence: (LC15) is an explicit counterexample to that
+inference at m=2. Nor does it prove preservation under Π or after
+quotienting by the leading W directions. Recovering a suitable vector
+observation from the actual corrected incoming/shared rows is a
+concrete next step.
+
+## Two directions give a growing one-direction lower bound
+
+The vector lemma does give a uniform rank bound without claiming
+that a scalar projection preserves independence. Fix the transverse
+observation O consisting of the three squared-q-line coefficients,
+each contracted with λ_d for a fixed d≠c. The choice of O does not
+depend on the perturbation direction. Write m=q−1.
+
+On L_qc, choose the third state e and put t=L_qe/L_qd. Since
+ell_c=H_cd L_qd+H_ce L_qe there, (LC13) acts on the two independent
+coordinates ((v_cT)_c,(v_cT)_d) by the row
+(H_cd,H_cd+t H_ce). For the two coordinate directions τ and ν,
+the determinant of these two rows is
+
+\[
+ t\,G_{c1}G_{c2}
+ \det (G^{-1})_{\{1,2\},\{d,e\}}
+   =\pm t\,\frac{G_{c0}G_{c1}G_{c2}}{\det G}\ne0.
+ \tag{LC26}
+\]
+
+The inverse-minor identity gives the equality, and the displayed
+factors are nonzero rational functions on the generic line. Any
+two independent direction pairs give the same conclusion. In
+particular take δ_1=(1,2), δ_2=(1,3), so both also satisfy the
+twelve-pivot hypotheses.
+
+The stacked uncorrected incoming observations therefore have
+full 9m column rank: each of the three b=c sectors recovers its
+3m vector deletion columns from (LC25). This assertion concerns
+one common coefficient vector across the two directions. It does
+not imply that a single-direction matrix pencil has full rank.
+
+For each direction i, quotient the observation target by
+O(span(B,J_i)), where J_i is its actual twelve-column local jet
+family. The observation kills C and every off-diagonal W; only
+three diagonal W may survive. It also kills all three Z_a, whose
+squared coefficient is X_a ell_a v_a. Only nine special S columns
+may survive. Hence each quotient removes at most 3+9=12 dimensions.
+The two quotient targets together remove at most 24, leaving
+stacked incoming rank at least max(0,9m−24).
+
+Let r_i be the incoming source rank modulo span(B,J_i). The
+observed quotient ranks are no larger than r_i. Thus
+
+\[
+ r_1+r_2\ge9m-24,\qquad
+ \max_i r_i\ge\max\left(0,\left\lceil\frac{9m-24}{2}\right\rceil\right).
+ \tag{LC27}
+\]
+
+The twelve local classes are independent modulo B, so they can
+now be added: the incoming ranks in (LC27) were measured **after**
+quotienting by those classes. For at least one of the two directions,
+and therefore for a generic direction by nonvanishing of that minor,
+
+\[
+ \operatorname{rank}[B,D']-\operatorname{rank}B
+ \ge\max\left(12,\left\lceil\frac{9(q-1)}2\right\rceil\right).
+ \tag{LC28}
+\]
+
+This argument never adds the uncorrected incoming rank to the
+twelve pivots. It retains both direction-dependent correction
+spaces and their possible intersections with the base. All generic
+conditions used above can be intersected in the same common-G
+parameter field.
+
+Combining with the shorter-source premise and (LC9) gives
+
+\[
+ \operatorname{rank}[B,D']
+ \ge N_q+3+\max\left(12,\left\lceil\frac{9(q-1)}2\right\rceil\right).
+ \tag{LC29}
+\]
+
+For q=4 this is N_q+17; for q=5 it is N_q+21. A corresponding
+minor of the actual new source family has a nonzero leading
+epsilon coefficient after extracting one epsilon from each
+selected vanishing column, so this is also a conditional generic
+source-rank lower bound. It is strictly weaker than the required
+full rank N_(q+1)=N_q+18q+3. The two-direction argument and its
+quotient loss count were independently audited; they are not Lean
+formalized and do not prove a regular full-rank pencil.

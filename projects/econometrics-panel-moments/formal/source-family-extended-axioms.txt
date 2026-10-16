@@ -765,3 +765,16 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceRelativeTimeJet.rowFormJet_relativeDirection' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.prefix_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.specialDifference_hasDerivAt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.prefix_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.prefixJet_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.kernel_mul_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.kernelJet_mul_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.specialJet_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.specialJet_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceLocalJetAlgebra.specialJet_diagonal_cleared' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

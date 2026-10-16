@@ -115,11 +115,14 @@ checks passed. The full-vector scalar-zero append factorization now
 adds two further checked declarations. `SourceRelativeTimeJet` now proves
 the actual relative-time kernel derivative, its cleared polynomial identity,
 zero row sum, and the fixed-prefix append derivative. Its ten declarations
-passed focused compilation and axiom checking. The updated aggregate checks
-349 declarations in a 33-module compiled closure, using only the permitted
-foundational axioms. This is a cached aggregate check, not a new clean
-33-module rebuild. The aggregate took 47.50 seconds with peak RSS
-1,824,522,240 bytes under the serial memory cap.
+passed focused compilation and axiom checking. `SourceLocalJetAlgebra`
+adds nine checked declarations for the exact two-branch collision
+derivative, its five-term expansion, and diagonal cancellation after
+clearing two row denominators. The updated aggregate checks 358 declarations
+in a 34-module compiled closure, using only the permitted foundational
+axioms. This is a cached aggregate check, not a new clean 34-module rebuild.
+The aggregate took 29.07 seconds with peak RSS 2,107,899,904 bytes under
+the serial memory cap.
 Residue operators, matching-coordinate removability, asymptotic orders,
 and the joint-rank induction remain paper arguments outside this module.
 
@@ -524,6 +527,13 @@ remaining criterion is a 9q-square determinant of old-pole prefix
 coefficients. This removes the scalar right inverse and the arbitrary
 three-column quotient from the target, while retaining the actual
 old source graph. Its nonvanishing is unproved; see (PP14)--(PP20).
+A sparse source expansion now computes the pre-transport seed prefixes
+explicitly: the polar-corrected old seeds have a block-diagonal old-pole
+prefix matrix with determinant ±det(A_n)^(3q). The subsequent scalar
+multiplier and inverse-append transport still change the old row, so
+this does not prove the required defect determinant. Formula (PP25)
+records that precise remaining transport, including its local-prefix
+subtraction; see (PP21)--(PP25).
 
 The last-time coalescence alternative now has an audited inherited
 rank result. When A_n=A_q, the ambient append map has a three-dimensional
@@ -556,6 +566,27 @@ independence. With that premise it raises the established total
 first-jet lower bound to N_q+9. The remaining jets require the actual
 six-pivot corrections; their uncorrected ranks cannot be added.
 See (LC17)--(LC18); this new uniform result is an audited paper proof.
+The matching-point extension now proves all twelve local jets independent
+modulo the entire base: three E derivatives and three diagonal special
+derivatives add six further pivots. Their matching determinant is
+τ²ν²(τ−ν)² r_0³ r_1 s_1³ s_2, and the full observation matrix is
+block triangular with the previous six-pivot block. Under shorter-source
+independence the lower bound is therefore N_q+15. The exact projection
+retains every correction and leaves six leading off-diagonal W columns
+and 18(q−1) corrected incoming/shared jets modulo C and the three
+diagonal W: a specified 18q−12-column open rank problem.
+A separate common-G residue induction proves vector deletion independence
+for every number of earlier blocks; it does not imply scalar projection
+or corrected quotient independence. See (LC19)--(LC25).
+Two independent relative directions nevertheless recover that vector
+family through the stacked incoming transverse observations. Each
+direction loses at most twelve dimensions on quotienting by the
+leading base and local jets, because the three E jets are invisible
+to this observation. The resulting audited one-direction bound is
+rank[B,D'] ≥ N_q+3+max(12,ceil(9(q−1)/2)) under shorter-source
+independence. It gives N_q+17 at q=4 and N_q+21 at q=5, with all
+correction losses retained. This is not full rank or a regular-pencil
+proof; see (LC26)--(LC29).
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,

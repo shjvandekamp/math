@@ -323,3 +323,76 @@ criteria without asserting a degree bound for their boundary
 matrices. The actual source-specific map I_old and the full polar
 correction remain in (PP20). Proving its determinant nonzero for
 every q is still the unresolved source-independence step.
+
+## Sparse actual seeds before inverse-append transport
+
+The [Pro prefix investigation](https://chatgpt.com/c/6ad180d3-2498-83eb-9d9b-1a1397221300)
+gave the following source-specific seed calculation, subsequently
+checked locally and independently. Keep the shorter-source independence
+premise when interpreting I_old as an intrinsic map on old rows.
+Let r(t) be the least old time other than t, and T_t the increasing
+product of the old kernels omitting t. The old cycle rows satisfy
+
+\[
+ H_{sd}=X_de_d(I-P_s^{[q]})
+       =E_{sd}+\sum_e F_{s,r(s),d,e},\qquad
+ I_{\rm old}(H_{sd})=X_de_d.
+ \tag{PP21}
+\]
+
+For new state b set h_b=L_nb, v_b=A_n(b,:)diag(X), f_b=X_b/h_b.
+For old line i=(t,a), put Z_i=X_a/L_ta and define the sparse old row
+
+\[
+ B_{ib}=\sum_d\frac{A_n(b,d)}{A_t(a,d)}F_{t,r(t),a,d}
+       =Z_i v_b(I-T_t),\qquad I_{\rm old}(B_{ib})=Z_i v_b.
+ \tag{PP22}
+\]
+
+These use the actual increasing suffix and constant-in-X coefficients.
+The new boundary rows have the exact decomposition
+
+\[
+ U_{s,b,d}=A_n(b,d)f_bH_{sd},\qquad
+ \frac{V_{t,a,b}}{A_t(a,b)}=f_bB_{ib}+Z_iE_{nb}.
+ \tag{PP23}
+\]
+
+Each row in this display has only the new pole h_b. The invertible
+polar matrix is therefore block diagonal by b. Its correction picks
+a unique H_ib in the span of the 3q cycle rows, giving
+
+\[
+ \frac{\overline V_{t,a,b}}{A_t(a,b)}
+   =f_b R^*_{ib}+Z_iE_{nb},\qquad R^*_{ib}=B_{ib}-H_{ib}.
+ \tag{PP24}
+\]
+
+The cycle rows are independent because a relation among them would
+give a kernel in a polar b-block. Their prefixes are polynomial
+coordinate rows. Consequently the old-pole prefix coefficients of
+I_old(R*_ib) are exactly those of Z_i v_b. Across all i,b their
+9q-square matrix has a block A_n (up to transposition) for each of
+the 3q old lines, and determinant ±det(A_n)^(3q), which is nonzero.
+This seed result retains the shared-new correction and does not
+require inversion of the complete old source matrix.
+
+The transport is still essential. The row Z_i E_nb has ambient
+preimage (0,Z_i X_b e_b). Thus f_b R*_ib is polar-zero by (PP24),
+and the normalized target column in (PP20) is exactly
+
+\[
+ \operatorname{ResPrefix}_{\rm old}\left[
+ I_{\rm old}(R_n(f_bR^*_{ib}))-I_n(f_bR^*_{ib})-Z_iX_be_b
+ \right].
+ \tag{PP25}
+\]
+
+Membership in the ambient transverse kernel follows for these
+specific seeds from (PP24); multiplication by f_b need not preserve
+that space for arbitrary old rows. In general R_n(f_b R*_ib) is
+not R*_ib. The explicitly nonzero seed determinant therefore does
+not establish nonvanishing of (PP25). Likewise, the polynomial
+prefix of an unmultiplied cycle row does not justify dropping its
+multiplied, transported defect. A factorization or rank-preserving
+property of this precise transport remains an open next step.

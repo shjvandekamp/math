@@ -31,8 +31,12 @@ kernel along a relative-time perturbation `(u,v) ↦ (u(1+τε),v(1+νε))`.
 It also proves the cleared derivative identity, zero row sum, and the
 derivative of the prefix-corrected append expression. These are derivative
 identities; independence of the coalescent source jets remains open.
-The current source-family aggregate checks 349 declarations in a compiled
-33-module closure; this latest aggregate reused cached dependencies.
+`SourceLocalJetAlgebra.lean` connects the exact two-branch kernel difference
+to its derivative and proves the special jet's five-term expansion and
+diagonal cancellation. Its fixed tail remains arbitrary; no residue or
+rank claim is included. The current source-family aggregate checks 358
+declarations in a compiled 34-module closure; this latest aggregate
+reused cached dependencies.
 
 ## Model foundations
 

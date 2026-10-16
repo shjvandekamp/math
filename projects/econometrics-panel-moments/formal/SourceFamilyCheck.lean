@@ -1,5 +1,6 @@
 import PanelMoments.SourceAppendIdentities
 import PanelMoments.SourceRelativeTimeJet
+import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourcePolynomialKernels
 import PanelMoments.SourcePolynomialCriterion
 import PanelMoments.SourceFamily
@@ -440,3 +441,14 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceRelativeTimeJet.vecMul_kernel_hasDerivAt
 #print axioms PanelMoments.SourceRelativeTimeJet.prefix_corrected_append_hasDerivAt
 #print axioms PanelMoments.SourceRelativeTimeJet.rowFormJet_relativeDirection
+
+-- Two-branch collision derivatives and their exact diagonal cancellation.
+#print axioms PanelMoments.SourceLocalJetAlgebra.prefix_hasDerivAt
+#print axioms PanelMoments.SourceLocalJetAlgebra.specialDifference_hasDerivAt
+#print axioms PanelMoments.SourceLocalJetAlgebra.prefix_formula
+#print axioms PanelMoments.SourceLocalJetAlgebra.prefixJet_formula
+#print axioms PanelMoments.SourceLocalJetAlgebra.kernel_mul_tail
+#print axioms PanelMoments.SourceLocalJetAlgebra.kernelJet_mul_tail
+#print axioms PanelMoments.SourceLocalJetAlgebra.specialJet_expansion
+#print axioms PanelMoments.SourceLocalJetAlgebra.specialJet_diagonal
+#print axioms PanelMoments.SourceLocalJetAlgebra.specialJet_diagonal_cleared
