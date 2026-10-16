@@ -157,6 +157,12 @@ An audited explicit inverse transfer now propagates three annihilating
 functionals from the actual two-block base (LC208), using local residues
 and endpoint corrections. Their rank is three; proving their determinant
 on the three gauge functions nonzero is still the missing step.
+The actual quotient now also has a uniform explicit cubic model (LC209):
+endpoint jets have full rank, and their four-dimensional ambient kernel
+meets the actual image in one known cubic line. The base minor and
+induction are independently audited. Projecting the actual gauge functions
+into this model, and proving the resulting determinant nonzero, remain
+unfinished.
 
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited

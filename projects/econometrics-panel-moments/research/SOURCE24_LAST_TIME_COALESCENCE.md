@@ -5756,3 +5756,39 @@ factors. This avoids an old source inverse. It constructs the
 remaining test
 \(\det[L_k(1),L_k(W_0),L_k(W_1)]\), but does not establish its
 nonvanishing at every length.
+
+## The actual quotient has an explicit cubic model
+
+The endpoint Hermite argument in (NH56)--(NH65) now identifies that
+quotient more concretely. On
+\(\mathcal A_m=\mathcal S_m\cap\mathcal F_m^{(1)}\), the jets of
+orders zero through \(m-2\) at zero and infinity have full rank
+\(2m-2\). The two-block base follows from an explicit
+endpoint/second-state-2-residue minor with first coefficient
+\(3\beta^3/[4a_1^2a_2^3(2a_1-a_2)]\) in \(z=2h\).
+At each append, the old one-dimensional high-order kernel adjusts
+the new-point evaluation without altering lower jets; the three new
+directions supply two independent next jets. Their common kernel
+is the explicit high-order line at the next length.
+
+Consequently, with
+\(E_m=(1-a_1r)\prod_{t\le m}(2-a_tr)(1-2a_tr)\),
+\[
+ \mathcal F_m^{(1)}=\mathcal A_m+\mathcal H_m,\qquad
+ \mathcal H_m=\frac{r^{m-1}}{E_m}\mathbb K[r]_{\le3},\qquad
+ \mathcal A_m\cap\mathcal H_m
+  =\operatorname{span}\left\{\frac{r^{m-1}}{E_m}C_m(r)\right\}.
+ \tag{LC209}
+\]
+For \(m\ge3\), \(C_m\) is the explicit cubic in (NH64), a linear
+factor from the last two weak weights times a displayed quadratic.
+This is an independently audited model of the actual quotient.
+It uses generic unequal appended weights; equal weights serve only
+as the base witness.
+
+The remaining determinant is therefore a three-dimensional cubic
+test, after subtracting the actual lower-jet response. That
+subtraction still matters for the prefix-product and divided-difference
+terms. The cubic quotient does not supply their projection automatically,
+and it is a vector-space quotient, not closure of the actual image
+under multiplication by \(r\). Uniform nonvanishing is still open.
