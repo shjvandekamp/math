@@ -125,6 +125,21 @@ order at least 3m^2-6m-2 for every m>=5. The six-block bound is therefore
 70; the earlier single-coefficient argument alone gave 69. Equality and
 uniform nonvanishing remain unresolved.
 
+The two-block base now has an explicit symbolic proof: two actual
+polynomial gauges and four completed-kernel vectors give a nonzero
+normalized residue determinant. An independent exact calculation
+verifies all 85 displayed identities over Q(a,c,r), with no numerical
+parameter specialization (LC202).
+At generic nonzero h, a new coordinate evaluation eliminates the
+boundary overlap and proves separation of every later-origin weak
+layer (LC203). Actual corrections for both endpoint values extend
+this to a direct sum on the full bounded scalar ambient. All four
+old weak functions propagate, but residues annihilate constant weak
+scalars. The justified actual graded residue rank is at least 6m-3:
+one infinity/constant direction and two polynomial gauges remain
+to be controlled together. This is audited paper progress, not a
+proof of full paired independence or of equation (24) for every T.
+
 An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
 induction and an external exact finite base. This auxiliary theorem

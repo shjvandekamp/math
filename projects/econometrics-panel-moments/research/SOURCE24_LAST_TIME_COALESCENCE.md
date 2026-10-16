@@ -5590,3 +5590,73 @@ It proves
 In particular the six-block lower bound is now 70. Unlike the argument
 for (LC199) alone, this uses a rank defect of at least two in an analytic
 normalized matrix. It still does not prove the next coefficient nonzero.
+
+## Symbolic two-block base and separation away from the boundary
+
+The actual normalized two-block base now has a symbolic proof, in
+[SOURCE24_BINARY_TWO_BLOCK_BASE.md](SOURCE24_BINARY_TWO_BLOCK_BASE.md).
+For distinct a,c in (1,2) and common positive weak weight beta, four
+explicit completed binary-kernel vectors have retained heads
+plus or minus v/a and v/c. Two explicit actual polynomial gauges
+complete the six-dimensional kernel of the upper residue map.
+Their two-by-two weak-residue pivot is nonzero. After removing those
+gauge columns, the remaining four-by-four actual weak matrix Q has
+
+\[
+ \det Q=
+ \frac{9\beta^4}{64a^6c^6(a-2c)^2(2a-c)^2}\ne0.
+ \tag{LC202}
+\]
+
+An explicit two-by-two Schur elimination proves this formula.
+The separate standard-library symbolic calculation derives the actual
+ordered completed rows and verifies all 85 binary, head, weak-output,
+and gauge-adjusted residue identities by exact polynomial cross
+multiplication over Q(a,c,r). Its script and certificate are
+[source24_binary_two_block_symbolic.py](../exploration/source24_binary_two_block_symbolic.py)
+and source24-binary-two-block-symbolic-results.json. The sole execution
+took 0.43 seconds and 16.9 MB peak RSS. Source and certificate review
+passed. This proves the normalized B_2 limit invertible, and supplies
+its generic continuation; it does not provide an all-length induction
+by itself.
+
+At generic nonzero h, the repeated weak layers behave differently from
+the boundary saturation in (LC199). The audited actual-column proof is
+[SOURCE24_NONZERO_H_WEAK_TRANSFER.md](SOURCE24_NONZERO_H_WEAK_TRANSFER.md).
+Use the weak scalar c=q_2/(r-2h). On the space with values zero at zero
+and infinity, the next actual transfer has zero kernel modulo its three
+new terminal directions. The new-state-2 pole first forces c(1/a_k)=0.
+After canceling the other two new poles, the possible overlap is one
+explicit line. Its value at r=2h is nonzero:
+
+\[
+ \overline\beta(2h)
+ =-\frac{6Ah^2(4a^2-5aA+4A^2)}
+ {[2(a-A)+Ah(4a-A)]\,[a-4A+8Ah(a-A)]},
+ \quad A=a_k,\ a=a_1.
+ \tag{LC203}
+\]
+
+The transferred old function vanishes there. Since
+4a^2-5aA+4A^2=4(a-A)^2+3aA is positive, the overlap is zero on the
+stated generic positive open. This proves separation of all
+3(m-2) actual later-origin weak directions.
+
+Two actual head differences extend the transfer to arbitrary endpoint
+values. Their endpoint response is diagonal, with nonzero generic
+multipliers; with common weak weight beta they are -3h beta and
+-beta/a_k. Consequently the full bounded scalar ambient is the direct
+sum of the three new directions and the transferred old ambient.
+All four old weak functions therefore propagate independently with
+the later directions.
+
+The observation distinction is essential: residues of (r-2h)c kill
+constant c. Selecting the three-dimensional old subspace with
+c(infinity)=0 avoids that kernel and gives 3m-3 independent weak
+residue directions, alongside 3m upper binary pivots. This constructs
+a rank-at-least-6m-3 graded subsystem. It leaves one infinity/constant
+direction and two actual polynomial gauges unresolved. The generic-h
+endpoint basis may have poles at h=0; no regular boundary normalization
+or exact diagonal valuation follows from this separation result.
+The remaining task is to control those three directions together,
+then the retained-old-source determinant.
