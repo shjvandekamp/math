@@ -20,7 +20,16 @@ The continuation is **in progress**. The accepted results below are unchanged;
 independence of the particular equation-(24) family for every T is not yet
 proved or Lean checked.
 
-The latest paper result proves uniform full scalar/auxiliary rank of
+The latest audited paper result proves paired boundary rank at least
+6q-3 per state sector, or 18q-9 across all three sectors, for every
+q>=2. It already holds generically at the fixed positive weight
+triple (1,1,1). A genuine positive perturbation proves all terminal
+endpoint couplings nonzero; an explicit triangular quotient then
+leaves only three incoming directions per sector. Their final
+determinant and the subsequent retained-old-source block remain open.
+This is not yet a Lean theorem or the full source-independence result.
+
+An earlier paper result proves uniform full scalar/auxiliary rank of
 actual zero-prefix source combinations for all m>=4. It uses an audited
 induction and an external exact finite base. This auxiliary theorem
 reduces the remaining source problem to a smaller actual determinant;
@@ -165,11 +174,17 @@ coordinate. It proves the coordinate-edge relation and the endpoint
 recovery determinant S^2/product_b(S-w_b)>0, with no division by a
 zero edge coordinate. It does not formalize residue interpolation
 or source independence.
-The updated aggregate checks 463 declarations in a 42-module compiled
+SourceRepeatedPoleAlgebra adds sixteen checked declarations connecting
+the actual polynomial-cleared kernel at one row pole to its rank-one
+value. It proves arbitrary positive-length power formulas, their
+conditional nonvanishing, and the corresponding actual cleared word
+products when the time blocks agree. Parameter existence and pole
+extraction remain outside this module.
+The updated aggregate checks 479 declarations in a 43-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 42-module rebuild. The aggregate took 37.72 seconds with peak
-RSS 1,968,766,976 bytes under the serial memory cap.
+new clean 43-module rebuild. The aggregate took 56.34 seconds with peak
+RSS 1,661,157,376 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 
@@ -851,8 +866,18 @@ elimination (LC112)--(LC113) retains the actual inserted
 kernel and the old-body correction D_q+Z_T. Applying this
 quotient to incoming columns gives a delayed-output
 structure, but its newest columns still feed earlier poles.
-Nonvanishing of that incoming quotient and of the full
-remaining source block are the next unproved steps.
+The newly audited (LC115)--(LC117) identify its first edge
+pivots as Z_t=-L_t^(-1)D_t, where D_t is the endpoint
+coupling, not the full old-source matrix. Incoming groups
+1,...,q-1 have a block triangular quotient submatrix with
+diagonal I_3,Z_2,...,Z_(q-1). The positive coalescence proof
+(LC118)--(LC123) makes every endpoint D_t generically
+invertible at fixed r=(1,1,1). It preserves the distinction
+between the interior 4^m and active-edge 3^m products.
+Consequently paired rank is at least 6q-3 per sector and
+18q-9 globally for every q>=2. The incoming quotient has
+rank at least 9q-9. Its final three-by-three determinant
+per sector and the full remaining source block are open.
 The saved finite boundary checker independently extracts the
 54-square minor 482791 from the prior q=4 matrix, verifies its
 three sector determinants, and gives the remaining 27-square
@@ -860,6 +885,27 @@ new-first Schur determinant 779960 after head elimination.
 This is one exact finite case, not the uniform three-by-three
 recurrence theorem; no source matrix was regenerated and no
 parameters were searched.
+The subsequent sector-0 recurrence checker now verifies the actual
+three-by-three S matrices at old q=2,3, with determinants 671017
+and 930959 modulo 1000003. It reconstructs both transformed
+observations and retains the transported head correction. The
+endpoint head sums and the canonical-interpolant feedback identity
+also pass, with a nonzero feedback term. One guarded run took
+0.17 seconds and 19,447,808 bytes peak RSS. The separate terminal
+edge-pivot check gives nonzero three-by-three determinants 345725
+and 378997 at those same lengths, in 0.17 seconds and 18,612,224
+bytes peak RSS. These are exact finite regressions of the new
+formulas, not a proof of uniform nonvanishing.
+The separate exact symbolic checker
+source24_endpoint_coalescence.py verifies the leading endpoint
+matrix and determinant for both the calculation direction and
+the genuine geometric curve. It uses rational polynomials and
+truncated power series, without parameter search. The determinant
+coefficient is positive for every m>=1 by the displayed elementary
+inequality. Its single run took 0.13 seconds with peak RSS
+14,073,856 bytes. Identification with actual ordered source
+endpoints and control of the singular limit come from the
+independently audited paper argument, not that algebra checker.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently
@@ -1072,6 +1118,14 @@ silently assumed by either proved theorem, and no result below is claimed.
    leading and remaining jet questions without assuming the six leading
    survivors independent.
    Then apply the scalar-covariate bridge.
+   The paired-boundary route now has a uniform paper rank bound
+   18q-9, by the endpoint coupling and triangular head quotient
+   in (LC115)--(LC123). Prove nonvanishing of the final three
+   incoming quotient directions per state sector; the endpoint
+   coupling's nonzero determinant does not by itself supply them.
+   Then control the retained-old-source correction in (LC113).
+   Formalization of these residue, edge-descent, and asymptotic
+   arguments remains unfinished.
    None of these open claims is assumed by a completed theorem. Combine
    independence with the proved moment-space dimension to obtain spanning. The completed source-basis theorem remains
    T=4; neither the dimension theorem nor the index count supplies independence.

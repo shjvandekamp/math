@@ -1045,3 +1045,41 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det_ne_zero' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.rowMatrix_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.rowMatrix_pow_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix_pow_succ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix_pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix_pow_right' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix_pow_right_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.vecMul_scaled_rowMatrix_pow_right' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.clearedKernel_eval_at_rowPole' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.rowPoleScale_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.normalized_clearedKernel_at_rowPole' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.clearedKernel_pow_at_rowPole' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.clearedKernel_pow_at_rowPole_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_eval_repeated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_at_rowPole' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_at_rowPole_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

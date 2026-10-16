@@ -5,6 +5,7 @@ import PanelMoments.SourceWeightedPrependAlgebra
 import PanelMoments.SourceTerminalPrefixExtraction
 import PanelMoments.SourceTimeScaling
 import PanelMoments.SourceBoundaryEndpointAlgebra
+import PanelMoments.SourceRepeatedPoleAlgebra
 import PanelMoments.SourceLocalJetAlgebra
 import PanelMoments.SourceMixedPoleJet
 import PanelMoments.SourceMixedPairDeterminant
@@ -579,3 +580,19 @@ example (N : ℕ) : Fintype (PanelMoments.SourceFamily.SourceIndex N) := inferIn
 #print axioms PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det
 #print axioms PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det_pos
 #print axioms PanelMoments.SourceBoundaryEndpointAlgebra.endpointMatrix_det_ne_zero
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.rowMatrix_mul
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.rowMatrix_pow_succ
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix_pow_succ
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix_pow
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix_pow_right
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.vecMul_rowMatrix_pow_right_ne_zero
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.vecMul_scaled_rowMatrix_pow_right
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedKernel_eval_at_rowPole
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.rowPoleScale_ne_zero
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.normalized_clearedKernel_at_rowPole
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedKernel_pow_at_rowPole
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedKernel_pow_at_rowPole_ne_zero
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_eval_repeated
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_at_rowPole
+#print axioms PanelMoments.SourceRepeatedPoleAlgebra.clearedWordProduct_at_rowPole_ne_zero

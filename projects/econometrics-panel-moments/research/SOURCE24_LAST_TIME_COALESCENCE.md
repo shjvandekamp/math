@@ -2937,3 +2937,321 @@ incoming columns may expose a useful matrix structure.
 The newest incoming group still produces earlier residues,
 so this property alone does not make C_B triangular or
 prove its determinant nonzero.
+
+## The direct canceled-value term is a nonzero diagonal matrix
+
+Before the inherited correction in (LC95), the three canceled
+columns already have an explicit nonzero diagonal evaluation.
+At P_d, write P=K_1...K_(q-1) and use any fixed exterior
+coordinate on the two-dimensional zero-sum row plane. Then
+
+\[
+ \operatorname{Eval}_q\bigl((C_dV_q)_{d=0}^2\bigr)
+      =\operatorname{diag}(\kappa_0,\kappa_1,\kappa_2),
+ \qquad
+ \kappa_d=
+ X_d A_q(d,a)\det(P|_{\mathbf1^\perp})
+ \frac{v\wedge v_{qd}}{(v_{qd}P)\wedge v_{qd}} .
+ \tag{LC114}
+\]
+
+All quantities in column d are evaluated at P_d. The
+denominator is nonzero precisely when the already-used
+transformed head pivot is nonzero. The numerator is
+nonzero on the geometric open set: the two line normals
+are independent, all coordinates are units, and all earlier
+kernels are invertible at P_d.
+
+To check the formula, put r_d=A_q(d,a)zeta_d/xi_d.
+The original residue of C_d is
+X_d(r_d v_qd-A_q(d,a)v)P. Its product with V_q vanishes,
+so it equals kappa_d v_qd. Wedge this identity with
+v_qd P and use the determinant of P on the zero-sum plane
+to obtain (LC114), including its sign. The canceled-value
+functional in (LC94) equals one on v_qd. At any other
+newest node P_c, C_d is regular and column c of V_q
+vanishes, giving the off-diagonal zeros.
+
+Thus singularity of S_q cannot come from a missing direct
+diagonal pivot. It can still come from cancellation with the
+actual shorter interpolation correction:
+S_q=diag(kappa_d)-Eval_q(transported shorter preimages).
+No bound, sign, or vanishing of that correction follows
+from the diagonal formula.
+
+The saved finite checker
+[source24_boundary_recurrence.py](../exploration/source24_boundary_recurrence.py)
+independently reconstructs (LC94)--(LC95) in sector a=0
+from the previously saved weighted three- and four-block
+source matrices. In its normalized affine chart the actual
+old-q=2,3 remaining determinants are 671017 and 930959
+modulo 1000003. It verifies the shorter head corrections
+against actual words, both residue coordinates, the block
+determinant factorizations, (LC98), and the plus sign and
+polynomial gauge in (LC102). The feedback term is nonzero
+in this fixture. Its ordinary-word affine-remainder controls
+use more points than the cleared polynomial degree, so they
+certify the corresponding finite-field identities. The
+source matrices were not regenerated and no parameters were
+searched. One guarded run passed in 0.17 seconds with peak
+RSS 19,447,808 bytes. This remains a finite certificate,
+not a uniform determinant theorem or a Lean proof.
+
+## The incoming edge pivots equal the endpoint coupling
+
+There is an exact link between the descent in (LC108) and
+the endpoint formula (LC98). For t>=2 and each incoming
+column define
+
+\[
+ R_{tc}=J_{tc}^{(t)}-r_{tc}U_{tc}^{(t)},\qquad
+ r_{tc}=A_t(c,a)\zeta_{tc}/\xi_{tc},\qquad
+ Y_t(:,c)=e(R_{tc}V_t),\qquad Z_t=\mathcal E_t^{-1}Y_t .
+ \tag{LC115}
+\]
+
+Here Y_t is a three-by-three matrix, not an original source
+row. The head difference U_tc has accumulated head sum zero.
+Consequently R_tc has zero head sum, zero newest transformed
+residue rho, and last incoming coefficient vector e_c.
+Equation (LC98) gives Phi_t(R_tc)=-D_t(:,c). For every
+coordinate-divisible row regular at the edges,
+
+\[
+ e(RV_t)=
+ \operatorname{diag}\bigl(L_{tj}(Q_j)(A_t^{-1})_{jj}\bigr)
+ \Phi_t(R),\qquad
+ \mathcal E_t=
+ \operatorname{diag}\bigl(L_{tj}(Q_j)(A_t^{-1})_{jj}\bigr)L_t .
+ \quad\text{Thus}\quad
+ Z_t=-L_t^{-1}D_t=-\overline D_t .
+ \tag{LC116}
+\]
+
+This uses undivided edge values after inverse transport,
+and canceled coordinate ratios before transport. Confusing
+the two evaluations would change the matrix. The diagonal
+entries of Y_t and D_t are zero: at Q_c the active
+coordinate ratios of the completed terms in R_tc vanish,
+because their input has a factor X_c and the earlier
+product is nonempty. The endpoint identity then gives the
+remaining canceled component. The normalized matrix Z_t
+need not have zero diagonal.
+
+Choose the one-node complementary lifts in (LC109) to be
+the actual incoming columns J_1d, using the direct paired
+one-node base. Take incoming groups t=1,...,q-1 and only
+the quotient rows gamma and the defects indexed m=3,...,q
+in (LC111). The delay property makes this square submatrix
+block upper triangular, in those orders, with diagonal
+
+\[
+ I_3,\ Z_2,\ldots,Z_{q-1}.
+ \tag{LC117}
+\]
+
+Indeed an incoming group t has z_m=0 above level t, and
+its first edge value is z_t=Z_t. Its defect in row m=t+1
+is therefore Z_t; all later defect rows vanish. Earlier
+defects may be nonzero, which is why this is a submatrix
+statement rather than triangularity of the entire quotient.
+If D_2,...,D_(q-1) are invertible, these 3(q-1) incoming
+columns are independent modulo all 3q heads and the
+polynomial row v. Hence the paired residue rank is at
+least 6q-3 in that sector. For q=2 the list of D conditions
+is empty. This conclusion does not assume shorter paired
+matrices invertible. The three remaining quotient rows and
+the last incoming group still require a determinant argument.
+
+The local independent audit checked the sign, normalization,
+and block ordering in (LC115)--(LC117). The separate saved
+finite probe
+[source24_boundary_edge_pivots.py](../exploration/source24_boundary_edge_pivots.py)
+uses the already saved recurrence data and finds det Z_2
+=345725 and det Z_3=378997 modulo 1000003 in sector zero.
+Both have rank three, and their unnormalized Y matrices
+have zero diagonal. Its single guarded run took 0.17 seconds
+with peak RSS 18,612,224 bytes. These checks alone do not
+prove the conditions of (LC117) at arbitrary length.
+
+## Uniform nonvanishing of the endpoint coupling
+
+The endpoint condition in (LC117) can now be proved for
+every length. This argument was proposed in
+[Pro43](https://chatgpt.com/c/6ad1b6c5-4e90-83ed-9a86-e33effd8d4c1);
+two local audits independently derived its canceled-edge
+formula, leading determinant, and genuine perturbation.
+It is a paper theorem, not a Lean theorem.
+
+Fix r=(1,1,1), so G=I+11^T, and start with sector a=0,
+new time (1,1,1), and g=(2,1,1). Let m=q-1>=1.
+Time vectors may be multiplied by a common nonzero scalar:
+K, H, J, the cancellation ratios, and the endpoint
+coupling D_q are unchanged. Put Y_i=g_i X_i, so that
+the new line is sum_i Y_i=0 and v=Y. First let all m
+earlier time vectors approach g, while the last one is
+b_q=g componentwise multiplied by z. Write
+
+\[
+ t_m=(4^m-1)/3,\qquad s_m=(3^m-1)/2,\qquad
+ U=\sum_i z_i,\quad T=\sum_i z_i^{-1}.
+ \tag{LC118}
+\]
+
+At an interior point of the new line the limiting kernel
+is K_*=I+d v, where d_i=1/Y_i and vd=3. Thus the
+actual ordered product tends to P_*=I+t_m d v.
+At the last node L_qc=0, v_qc V_q=0 and
+v_qc d=U+z_c. Consequently the cancellation ratio tends to
+
+\[
+ r_c=\frac{A_q(c,a)4^m}{t_m(U+z_c)}.
+ \tag{LC119}
+\]
+
+At a coordinate edge Q_b one must first evaluate the
+actual canceled products on the active two-state block.
+That block has v_active d_active=2, so its m-fold product
+is I+s_m d_active v_active. Substituting the full
+three-state limiting kernel at the edge would incorrectly
+replace this 3^m dependence by 4^m.
+
+For b different from c let e be the third state. The
+limiting endpoint coupling has zero diagonal and
+
+\[
+ \widehat D_q(b,c)=
+ \frac{b_{qa}g_b}{3(2z_c-z_e)}
+ \left[
+ 3^m(3-z_bT)
+ -\frac{4^m}{t_m(U+z_c)}
+ \left\{U+z_c-4z_b+
+ s_m(U+z_c-z_b)(3-z_bT)\right\}
+ \right].
+ \tag{LC120}
+\]
+
+Here a=0 and b_qa=2z_0 before normalizing the time vector.
+For a direct check, eta_(q-1,b,i)-eta_(q,b,i) tends to
+g_b(1-z_b/z_i)/(3g_i). At Q_b take the exceptional
+completed row E_c=(A_q(c,a)X_c v/L_qc-r_c X_c e_c K_q)P.
+Its active ratios, expressed after division by Y_i, are
+
+\[
+ \frac{b_{qa}Y_c}{L_{qc}}
+ \left[
+ 3^m-\frac{4^m}{t_m(U+z_c)}
+ \{z_i(1+\delta_{ic})+s_m(U+z_c-z_b)\}
+ \right].
+\]
+
+Also Y_c/L_qc=1/(2z_c-z_e). The two required sums over
+i different from b are 3-z_bT and U+z_c-4z_b.
+Their substitution gives (LC120), including its sign.
+All denominators in (LC120) are units near z=(1,1,1).
+
+Define
+
+\[
+ k_m=\frac{3\,4^{m-1}}{4^m-1},\qquad
+ \chi_m=3^m-\frac{3k_m}{2}(3^m-1),\qquad
+ p_m=3^m(3k_m-2),\quad
+ \ell_m=\chi_m-k_m,\quad d_m=\chi_m-2k_m .
+ \tag{LC121}
+\]
+
+Expanding (LC120) along z=(1+epsilon,1,1) gives
+
+\[
+ \widehat D_q=
+ \epsilon
+ \begin{pmatrix}
+ 0&4p_m/3&4p_m/3\\
+ 2d_m/3&0&2\ell_m/3\\
+ 2d_m/3&2\ell_m/3&0
+ \end{pmatrix}
+ +O(\epsilon^2),\qquad
+ \det\widehat D_q=
+ \frac{32}{27}p_m\ell_md_m\,\epsilon^3+O(\epsilon^4).
+ \tag{LC122}
+\]
+
+The coefficient is strictly positive for every m>=1.
+Indeed ell_m=(k_m-p_m)/2, d_m=-(k_m+p_m)/2, and
+p_m/k_m=3^(m-1)(1+8/4^m)>1. Thus p_m>k_m>0,
+ell_m<0, and d_m<0. Equivalently the coefficient is
+8 p_m(p_m^2-k_m^2)/27.
+
+The calculation direction itself is geometrically degenerate;
+the following separated perturbation is a genuine witness:
+
+\[
+ b_q=g\odot(1+\epsilon,1+\epsilon^2,1+2\epsilon^2),
+ \qquad
+ b_s=g\odot(1+\delta\alpha_{s0},
+           1+\delta\alpha_{s1},1+\delta\alpha_{s2}),
+ \quad 1\le s\le m,\qquad
+ \delta=\epsilon^{2m+6}.
+ \tag{LC123}
+\]
+
+Choose fixed generic positive alpha_si, take epsilon small
+and positive, and normalize each time vector by its first
+entry. At the three last nodes the matching coordinate has
+orders epsilon^2, epsilon, epsilon respectively; the other
+two coordinates are units after a bounded choice of
+representative. The earlier kernels and their ideal limits
+are O(epsilon^(-2)); their differences are
+O(delta epsilon^(-4)). Telescoping the ordered m-factor
+product gives error O(delta epsilon^(-2m-2)), and V_q
+is O(epsilon^(-2)). Thus the errors in the quantities
+defining xi_c and zeta_c are O(epsilon^2).
+
+Their ideal denominators remain units. More explicitly,
+(vV_q)_j=L_qj(1/z_j-T/4) tends to Y_j/4. Choose an
+active j different from c with Y_j nonzero in the limit.
+Equation (LC119) follows from xi_c=t_m(U+z_c)zeta_c,
+so the cancellation ratios also have O(epsilon^2) errors.
+At the coordinate edges the active binary products and eta
+are regular in the earlier perturbations. Hence the actual
+coupling is D_q=widehat D_q(z)+O(epsilon^2), preserving
+the leading matrix and nonzero cubic determinant in (LC122).
+Generic alpha avoids the finitely many incidence equations.
+This proves generic det D_q nonzero for each q>=2 at
+the fixed weight triple (1,1,1), with positive time witnesses.
+
+Permuting states proves the same theorem in the other two
+new-line sectors. For any fixed q, the finitely many
+nonvanishing conditions for all lengths up to q-1 and
+all sectors have a common nonempty open subset of the
+positive time parameter space. Their simultaneous validity
+does not require the separate witnesses to be identical.
+
+Combining (LC116)--(LC117) with this theorem yields, for
+every q>=2, generic paired boundary rank at least 6q-3
+in each sector and at least 18q-9 over all three sectors.
+Equivalently, the incoming quotient C_B in (LC113) has
+rank at least 9q-9. These bounds hold already at fixed
+r=(1,1,1), hence also generically when the common weights
+vary. This proof does not assert the same statement for
+every other fixed positive weight triple.
+
+Only three incoming directions per sector remain after
+the triangular elimination. Proving their final three-by-three
+determinant nonzero is still open. Even full paired boundary
+rank would leave the retained-old-source block in (LC113);
+the equation-(24) independence theorem for all T is therefore
+still open.
+
+The exact symbolic companion
+[source24_endpoint_coalescence.py](../exploration/source24_endpoint_coalescence.py)
+expands (LC120) on both curves through cubic order in
+Q[k_m,3^m][epsilon]/(epsilon^4). It checks the first matrix
+and cubic determinant in (LC122), and separately clears
+k_m=3A/[4(A-1)] with A=4^m, B=3^m. The determinant
+coefficient simplifies to
+B(A+8)((A+8)^2 B^2-9A^2)/(216(A-1)^3).
+Its single exact run passed in 0.13 seconds with peak
+RSS 14,073,856 bytes. It checks algebra of the supplied
+formula; the actual-source identification and perturbation
+proof above are separate mathematical arguments.

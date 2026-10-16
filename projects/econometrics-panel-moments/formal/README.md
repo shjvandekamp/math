@@ -101,10 +101,17 @@ S^2/product_k(S-w_k), positive for positive weights and independent of
 the nonzero time factors. No residue interpolation or source-independence
 claim is made.
 
-The current source-family aggregate checks 463 declarations in a compiled
-42-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. It took 37.72 seconds with peak
-RSS 1,968,766,976 bytes under the serial memory cap. All checked declarations
+SourceRepeatedPoleAlgebra.lean evaluates the existing polynomial-cleared
+kernel at a row pole, proves its surviving rank-one formula, and computes
+arbitrary positive-length powers and actual equal-block word products.
+Nonvanishing retains explicit nonzero factors and the final-row
+hypothesis. Parameter existence, residue extraction, and source rank
+are not asserted.
+
+The current source-family aggregate checks 479 declarations in a compiled
+43-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. It took 56.34 seconds with peak
+RSS 1,661,157,376 bytes under the serial memory cap. All checked declarations
 use only the permitted foundational axioms; the output is saved in
 `source-family-extended-axioms.txt`.
 
