@@ -457,6 +457,12 @@ with the expected 2q-plus-q split and nonzero minors
 controls verify the constant and first-order residue evaluations.
 The source24-zero-prefix-body-limit files save this finite evidence;
 uniform rank of this smaller constrained matrix remains open.
+The ordinary 2q-axis part now has an independently audited uniform
+paper proof, conditional on old scalar fullness and the accepted
+boundary quotient basis. An explicit move-first outgoing column
+supplies the pole missed by the incoming candidates. The remaining
+q matching directions, after the same scalar and axis correction,
+are the current body-rank obligation.
 
 An actual ordered-path factorization now proves that the component-two
 rank on N is at most 3^m. At m=3, together with the saved nonzero minor,
@@ -637,7 +643,8 @@ silently assumed by either proved theorem, and no result below is claimed.
    spanning and its endpoint Schur correction with the same source
    coefficients.
    The body has an exact 2q-axis-plus-q-matching limit, verified at
-   n=4,5,6; prove its constrained minor nonzero for arbitrary q.
+   n=4,5,6. The 2q axis directions have a conditional uniform proof;
+   prove the remaining q matching minor after those same corrections.
    The inherited higher jet is coupled to the scalar trace, so
    independently computed ranks cannot simply be added.
    Neither route is yet complete.

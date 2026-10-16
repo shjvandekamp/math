@@ -1446,3 +1446,102 @@ kernel hashes and systematic free coordinates are retained. These
 are finite certificates for the pole-limit criterion, not a uniform
 body theorem. The bounded run exited successfully in 0.583 seconds
 with 59,670,528 bytes peak RSS and no guard limitation.
+
+### Uniform ordinary-axis rank of the constrained body
+
+Assume old scalar fullness and the full boundary quotient basis above.
+The first 2q observations in (ZP62) have generic rank 2q on the
+actual scalar kernel. The following proof uses the same scalar
+correction throughout; it does not establish the final q matching
+directions.
+
+On X2=0 put X0=1, y=X1 and define
+
+\[
+ d_t=\frac{u_ty}{(1+u_ty)(1+2u_ty)},\quad
+ D=\prod_{t=1}^q d_t,\quad Q_t=1+2u_ty,\quad J_t=d_t^{-1}.
+ \tag{ZP63}
+\]
+
+Here Q_t is a binary linear factor, not an omitted matrix word.
+Write U_t=e0 Q^t e1 for the ascending old word with t omitted,
+W_t=(e0 Q^t e2/X2)|axis, and U_*,W_* for the full ascending word.
+Put r=R1/(X0 X1). An incoming column with b=0,1 has axis values
+(h,r)=(f(v/X0−W_t),−f U_t/(X0 X1)), where f=X_a K_t(a,b).
+For a=0,1 define D_ta=C_tn^(a1)+A_ta−Astar_a. Summing the
+two binary transition entries gives
+
+\[
+ (h,r)(D_{ta})=
+ \left(X_a(W_1-W_t),-\frac{X_a(U_t-U_1)}{X_0X_1}\right).
+ \tag{ZP64}
+\]
+
+For E_a=F_empty,n,a−F_empty,1,a, the same identity for
+E_a−Astar_a replaces t by *. All displayed scalar axis targets
+are independent of the new v. Their A-axis projection coefficients
+are O(1/v), since that scalar matrix is v times an invertible leading
+matrix plus an old-only matrix. The A component-one axis matrix is
+independent of v. Its correction therefore disappears as v tends
+to infinity. Every subsequent B,T,M,E2 correction has component one
+divisible by X2, and an appended old correction has component one
+identically zero at this boundary. Thus (ZP64)'s limiting r values
+survive the full scalar projection.
+
+Direct deletion from the binary ascending word yields
+
+\[
+ \begin{split}
+ H_t:=\frac{U_t-U_1}{D}&=Q_1-Q_t+h_t,\\
+ h_t&=Q_t\left(1-\prod_{j<t}J_j\right)
+ +(J_t-1)\sum_{i<t}Q_i\prod_{j<i}J_j\\
+ &=\sum_{i<t}\frac{u_i-u_t}{u_i u_t}
+ \left[y^{-1}+2(u_i+u_t)+2u_i u_t y\right]
+ \prod_{j<i}J_j,\\
+ \frac{U_*-U_1}{D}&=Q_1.
+ \end{split}
+ \tag{ZP65}
+\]
+
+Neither U_t nor U_1 has the old L_11 pole: block 1 is omitted
+or first from state 0. Since D has this simple pole, H_t vanishes
+at y=−1/(2u1), and H_t/Q1 is a Laurent polynomial. For t>=3,
+the last summand in h_t has unique extreme powers 1−t and t−1,
+with nonzero coefficients when adjacent u's differ. Dividing by Q1
+gives exact extremes 1−t and t−2. Also H2/Q1 has a nonzero
+y^−1 coefficient. Dividing all limiting r values by −D Q1/y,
+the following 2q−1 functions are independent:
+
+\[
+ 1,\ y,\ H_2/Q_1,\quad
+ H_t/Q_1,\ yH_t/Q_1\quad(3\le t\le q).
+ \tag{ZP66}
+\]
+
+Peel the unique lowest and highest powers for t=q down to 3,
+then the y^−1 term, and finally 1,y. These directions miss the
+L_11 residue exactly; counting them as 2q would be incorrect.
+
+The outgoing column C_n2^(10) supplies that residue. Its scalar
+axis value y(W_*−W_move2) is again independent of v, while its
+limiting r is U_*−U_move2. At L_11, the move-2 word
+K2 K1 K3 ... Kq enters state 1 through K2(0,1)≠0. The row-1
+residue of K1 is a nonzero binary zero-sum row, and the remaining
+binary product has nonzero determinant. Consequently this last
+function has nonzero L_11 residue, unlike (ZP66).
+
+The actual 2q-column selector, before the common scalar correction,
+is therefore
+
+\[
+ E_0,E_1,C_{2n}^{01},
+ \{C_{tn}^{01},C_{tn}^{11}:3\le t\le q\},C_{n2}^{10}.
+ \tag{ZP67}
+\]
+
+A nonzero minor of these limiting functions proves a nonzero rational
+minor for generic finite positive v. All pole nonincidences and the
+assumed old/full-quotient conditions are simultaneous generic opens
+in the fixed-G* parameter family. This conditional paper lemma was
+independently audited locally. The remaining q matching conditions
+must still be proved after this same scalar and axis elimination.
