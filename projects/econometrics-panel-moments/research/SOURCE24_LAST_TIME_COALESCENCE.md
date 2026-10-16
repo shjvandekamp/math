@@ -1974,3 +1974,142 @@ It does not identify the actual source span with that ambient.
 Under shorter-source independence the exact source rank is still
 N_q+9q+3+rank(Gamma(mathcal Y)), and the remaining determinant
 (LC61), equivalently (LC76), is still unproved for arbitrary q.
+
+## Explicit new matching rows under a weighted prepend
+
+There is an audited recurrence for the M side of the joint block
+problem. Use the unnormalized Gtilde=diag(r)+11^T, r_a>0, and
+prepend a block denoted circle with time vector (1,1,1). Its own
+matching point Q_a has X_a=0, X_i=1, X_j=-1 for the other two
+states i,j. Assume all old row forms are nonzero there and all
+time factors are nonzero. Write b_t=(1,u_t,v_t), and let d_t be
+the determinant of the active two-state restriction of K_t at Q_a.
+Set theta_t=[(e_i-e_j)K_t e_a/X_a](Q_a), after cancellation.
+With C_a=r_i+r_j+r_i r_j, direct two-by-two calculation gives
+
+\[
+ d_t=-\frac{C_a b_{ti}b_{tj}}{L_{ti}(Q_a)L_{tj}(Q_a)},\qquad
+ \frac{\theta_t}{d_t}
+   =\frac{b_{ta}}{C_a}
+          \left(\frac{r_i}{b_{tj}}+\frac{r_j}{b_{ti}}\right).
+ \tag{LC81}
+\]
+
+Put Delta=product_t d_t. For a retained old-head source
+F^+_(t,s,c,b), q>=3, let ell=max(old blocks minus {t,s}). Then
+
+\[
+ e_{\circ a}(F^+_{t,s,c,b})
+ =\frac{\Delta}{A_\circ(a,a)}
+    \frac{p_{tcb}(Q_a)}{d_t}
+    \frac{b_{sa}}{L_{sb}(Q_a)d_s}
+    \frac{\theta_\ell}{d_\ell},\qquad c,b\ne a.
+ \tag{LC82}
+\]
+
+If c=a or b=a this matching value is zero. The formula retains
+the actual inserted word K_s Kcircle R_s from (LC77). Indeed its
+new-line residue is -p_tcb (K_s)_ba v_circle,a R_s. Divide by
+X_a twice before matching: entry into a contributes b_sa/L_sb,
+and v_circle,a(Q_a)=e_i-e_j propagates through the nonempty
+binary zero-sum suffix. Every factor before its last block
+contributes d_t; the last contributes theta_ell. The definition
+of e in (LC71) cancels the residue's minus sign. If c or b equals
+a there is one additional X_a, yielding zero. The nonempty suffix
+is why this statement requires q>=3.
+
+For fixed active c,b the off-diagonal time-pair table in (LC82)
+has the form f_t g_s h_max(old minus {t,s}), up to the common
+factor. It admits a rank-at-most-three completion: away from row
+and column q it is h_q f g^T, and every change is supported in
+row q or column q. The exceptional pair {q-1,q} uses h_(q-2).
+Thus this matching row is controlled by separable time aggregates
+and explicit terminal row/column corrections, not arbitrary
+completed-word coefficients.
+
+For the sum over all nine new-head columns grouped by a and a
+fixed first slot s, the three-column sum satisfies
+
+\[
+ M_{\circ a}\left(\sum_bF_{\circ,s,a,b}\right)
+ =A_\circ(a,:)
+      \frac{\Delta}{A_\circ(a,a)}\frac{\theta_\ell}{d_\ell},
+ \quad
+ \ell=\begin{cases}q&s\ne q,\\q-1&s=q.\end{cases}
+ \tag{LC83}
+\]
+
+Its matching functional equals -1 plus the scalar on the right;
+the actual head margin cancels that -1. Omitting either term
+would give the wrong recurrence.
+
+The six new quotient-margin rows can be made especially explicit.
+For each a use x_j/A_circle(a,j)-x_a/A_circle(a,a), j different
+from a, on its three-entry M block. These rows vanish on every
+retained old-head column. On the six new-head columns with b
+different from a at any fixed first slot, they form I_6. Replacing
+the remaining three diagonal columns by the three sums over b
+makes those columns zero in these six rows. These are exact pivots
+in the augmented (D,M) data. They do not prove six new D pivots
+or a source-rank gain. The three new matching rows and the actual
+inserted-word correction to D remain coupled. Equations
+(LC81)--(LC83) compute the matching half of that next problem;
+they do not complete its determinant recurrence.
+
+## Time normalization and two further weighted finite bases
+
+The global time-scaling identity proposed by
+[Pro40](https://chatgpt.com/c/6ad1abf4-9d9c-83eb-a330-66a5d8ae19f5)
+has a direct proof for every fixed length and every common matrix.
+Let H=diag(1,h_1,h_2), with both h_j nonzero, and delta=h_1 h_2.
+Replace every time vector (1,u_t,v_t) by (1,h_1 u_t,h_2 v_t).
+Then Ahat_t=A_t H, Khat_t(Y)=K_t(HY), and each canonical
+cross-product node transforms by Phat=delta H^(-1)P. At that node
+every regular kernel is unchanged, each pole-residue kernel gains
+a factor delta, and the head coordinate P_a gains delta/h_a.
+Consequently, with identical row and column orderings,
+
+\[
+ \widehat{\mathscr D}_{\rm raw}
+   =\mathscr D_{\rm raw}
+       \operatorname{diag}_{(t,s,a,b)}(\delta^3/h_a),\qquad
+ \widehat{\mathscr D}_{\rm pair}
+   =\mathscr D_{\rm pair}
+       \operatorname{diag}_{(t,s,a,b)}(\delta^2/h_a).
+ \tag{LC84}
+\]
+
+Here raw means the first two output components of the actual
+double residue. Pair means the coefficients in (v_i(P),v_j(P)),
+the convention of (LC62). The latter basis vectors each gain
+delta, accounting for the different factors. Thus the determinant
+exponents are respectively 24q(q-1) and 15q(q-1). These formulas
+retain the literal ordered word. They use the exact cross-product
+representatives; arbitrary projective renormalization changes the
+displayed diagonal factors.
+
+Any designated time can therefore be fixed to any nonzero target
+without changing source rank or the common G. Positive targets
+preserve positivity. For the unnormalized weighted family, setting
+a designated time to (r_0+1,r_0+1) makes its normalized row 0
+equal (1,1,1). This transports fixed-length witnesses; it does not
+prove independence on the entire weighted family or at a new length.
+
+The local checker `source24_weighted_extended_base.py` independently
+reproduces the two additional Pro40 finite cases q=5,6, using
+r=(2,3,5) and the initial segments of the single time list
+(2,3),(5,7),(11,13),(17,29),(31,47),(53,73). Modulo 1000003,
+the normalized pair-coordinate matrices have full ranks 180 and
+270, with determinants 440800 and 760635. Separately assembling
+the unnormalized tables and taking the first two output components
+reproduces the external determinants 226299 and 160943 exactly.
+
+The saved JSON includes the actual matrices, ordered columns,
+geometry checks, pivot certificates, and independent polynomial
+clearing of all three output components. It also checks the
+row-normalization change between both residue constructions.
+The single run took 3.00 seconds and peak RSS 36,601,856 bytes.
+These are external exact finite certificates, not Lean theorems.
+Together with the earlier q=3,4 cases, they establish finite bases
+inside the weighted family at four lengths. The all-length
+determinant recurrence remains open.

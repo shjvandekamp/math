@@ -51,7 +51,7 @@ def product(values):
     return result
 
 
-def fixture(q):
+def fixture(q, prescribed_times=None):
     original = [[1 + (R[a] if a == b else 0) for b in range(3)] for a in range(3)]
     multipliers = [Fraction(1, row[0]) for row in original]
     rational = [[multipliers[a] * original[a][b] for b in range(3)] for a in range(3)]
@@ -59,8 +59,9 @@ def fixture(q):
     assert all(row[0] == 1 for row in G)
     G_certificate = residue.modular_rank(G, P)
     assert G_certificate['determinant_mod_prime'] == 61 * pow(3, -1, P) % P
-    times = sparse.factors(q, 'economic')
-    assert times == [(8 ** t, 8 ** (2 * t)) for t in range(1, q + 1)]
+    times = (sparse.factors(q, 'economic') if prescribed_times is None
+             else list(prescribed_times))
+    assert len(times) == q and all(u > 0 and v > 0 for u, v in times)
     tables = [[[value % P for value in row] for row in table]
               for table in sparse.coefficient_tables(G, times)]
     padded = [[row[:] for row in G] for _ in range(2)] + tables
@@ -129,9 +130,9 @@ def polynomial_pair_controls(tables, columns, matrix):
     return rows, dict(cross_pair_records=records, polynomial_clearing_component_checks=checked)
 
 
-def calculate(q):
+def calculate(q, prescribed_times=None):
     started = time.monotonic()
-    tables, padded, data = fixture(q)
+    tables, padded, data = fixture(q, prescribed_times)
     # This stronger check includes same-block intersections and every coordinate
     # axis; fail explicitly at the prescribed fixture rather than replacing it.
     strong_geometry = geometry.check_geometry(q, padded)

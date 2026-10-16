@@ -77,9 +77,19 @@ These are kernel and matrix identities; residue extraction, generic
 nonvanishing of the observation factors, and source independence are
 not asserted by this module.
 
-The current source-family aggregate checks 420 declarations in a compiled
-39-module closure. The latest check compiled the aggregate against cached
-module outputs; it was not a clean rebuild. Its axiom output is saved in
+`SourceTerminalPrefixExtraction.lean` proves the actual terminal-kernel
+identity `T_K K = diag(X)(I − K)`, the terminal coefficient shift, and
+reconstruction of a constant prefix row from its own-line and two
+coordinate-edge observations. The actual inverse corollaries retain explicit
+matrix, coordinate, and row-form nonzero assumptions. These are finite
+algebraic identities; residue extraction, ambient membership, generic
+existence, and source-family rank are not asserted.
+
+The current source-family aggregate checks 435 declarations in a compiled
+40-module closure. The latest check compiled the aggregate against cached
+module outputs; it was not a clean rebuild. It took 38.06 seconds with peak
+RSS 1,831,043,072 bytes under the serial memory cap. All checked declarations
+use only the permitted foundational axioms; the output is saved in
 `source-family-extended-axioms.txt`.
 
 ## Model foundations

@@ -148,11 +148,17 @@ the reciprocal-coordinate derivative and its HasDerivAt bridge, the
 two rank-one determinants S and 1/S, and the explicit three-quadratic
 coefficient determinant. Residue extraction and the all-length induction
 remain paper arguments.
-The updated aggregate checks 420 declarations in a 39-module compiled
+`SourceTerminalPrefixExtraction` adds fifteen checked declarations for
+the actual terminal-kernel identity, coefficient shift, and reconstruction
+of a constant prefix row from own-line and coordinate-edge values. Its
+actual inverse corollaries retain explicit local nonzero assumptions;
+no residue extraction, ambient membership, or source-rank theorem is
+asserted by this module.
+The updated aggregate checks 435 declarations in a 40-module compiled
 closure, using only the
 permitted foundational axioms. This is a cached aggregate check, not a
-new clean 39-module rebuild. The aggregate took 39.75 seconds with peak
-RSS 1,807,171,584 bytes under the serial memory cap.
+new clean 40-module rebuild. The aggregate took 38.06 seconds with peak
+RSS 1,831,043,072 bytes under the serial memory cap.
 The remaining matching pivots, generic geometry, asymptotic orders,
 and the full joint-rank induction remain outside these formal results.
 
@@ -764,6 +770,26 @@ direct-sum span(Z), with dimension N_(q+1), without old-source
 independence or the earlier extra pair-motion conditions. See
 (LC78)--(LC80). The actual source span still has to fill this
 ambient; that is precisely the remaining determinant obligation.
+For the weighted prepend, (LC81)--(LC83) now compute the new
+matching rows of M through explicit two-state determinants and
+last-block factors. Their time-pair tables have rank-at-most-three
+completions, and the six new quotient-margin rows have an explicit
+identity pivot block. These concern the augmented (D,M) data;
+they are not additional source-rank pivots. The corresponding
+inserted-word recurrence for D remains unresolved.
+The global time-scaling formula (LC84) now proves exact rank
+equivalence when any designated time is fixed to a nonzero target,
+within the same common-G family. It transports finite witnesses
+without proving a new-length induction. The independent local
+checker `source24_weighted_extended_base.py` also confirms the
+weighted q=5,6 bases proposed by Pro40: full pair-residue ranks
+180 and 270, determinants 440800 and 760635 modulo 1000003.
+Its independent raw-coordinate construction reproduces 226299
+and 160943. All three polynomial residue components and the
+geometry pass; the single run took 3.00 seconds and 36,601,856
+bytes peak RSS. Together with q=3,4 these are four confirmed
+finite weighted bases, still external certificates rather than
+Lean proofs or an arbitrary-length result.
 The [margin observation analysis](research/SOURCE24_MARGIN_OBSERVATIONS.md)
 now proves that local E sources span every fixed-order divided vertex-jet
 target once q>=(3r^2+11r+6)/2. Actual source combinations can consequently

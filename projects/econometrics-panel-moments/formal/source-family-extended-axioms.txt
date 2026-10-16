@@ -936,3 +936,48 @@ PanelMoments.SourcePolynomialCriterion.linearIndependent_source_of_clearedReduce
 'PanelMoments.SourceWeightedPrependAlgebra.quadraticCoefficientMatrix_det_ne_zero' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.terminalCorrection_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.terminalCorrection_own_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.terminalCorrection_coordinate_edge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.rowForm_diagonal_mul_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.terminalCorrection_mul_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.table_row_terminalCorrection' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.prefix_shift_on_own_line' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.row_reconstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.missing_coordinate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.completeCoordinates_extracted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.terminalObservations_eq_extracted' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.reconstruct_from_terminalObservations' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.actual_inverse_terminalCorrection_mul_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.actual_inverse_prefix_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.SourceTerminalPrefixExtraction.actual_inverse_terminalPrefix_reconstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
