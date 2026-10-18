@@ -1,0 +1,43 @@
+PanelMoments.StructuralCompleteness.three_choice_generic_moment_dimension (T : ℕ) (hT : 1 ≤ T) :
+  (PanelMoments.StructuralGenericity.genericRegion T).Nonempty ∧
+    IsOpen (PanelMoments.StructuralGenericity.genericRegion T) ∧
+      Dense (PanelMoments.StructuralGenericity.genericRegion T) ∧
+        ∀ θ ∈ PanelMoments.StructuralGenericity.genericRegion T,
+          ∀ (r : PanelMoments.State 2),
+            Module.finrank ℝ ↥(PanelMoments.momentSubmodule (PanelMoments.EconomicFamily.parameterTable θ) T r) =
+              3 ^ T + 6 * (T - 1) - (3 * T).choose 2
+PanelMoments.StructuralCompleteness.economic_moment_dimension_add_choose {T : ℕ} (hT : 1 ≤ T)
+  {θ : PanelMoments.EconomicFamily.EconomicParameter T} (hθ : θ ∈ PanelMoments.StructuralGenericity.genericRegion T)
+  (r : PanelMoments.State 2) :
+  Module.finrank ℝ ↥(PanelMoments.momentSubmodule (PanelMoments.EconomicFamily.parameterTable θ) T r) +
+      (3 * T).choose 2 =
+    3 ^ T + 6 * (T - 1)
+PanelMoments.StructuralCompleteness.four_period_moment_dimension {θ : PanelMoments.EconomicFamily.EconomicParameter 4}
+  (hθ : θ ∈ PanelMoments.StructuralGenericity.genericRegion 4) (r : PanelMoments.State 2) :
+  Module.finrank ℝ ↥(PanelMoments.momentSubmodule (PanelMoments.EconomicFamily.parameterTable θ) 4 r) = 33
+'PanelMoments.StructuralCompleteness.three_choice_generic_moment_dimension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralCompleteness.economic_moment_dimension_add_choose' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralCompleteness.four_period_moment_dimension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralGenericity.exceptionalProduct_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralGenericity.genericRegion_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.CubicProducts.productSpan_eq_vanishingSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.CubicProducts.finrank_productSpan_add_six_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.StructuralMoments.momentSubmodule_eq_ker' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.StructuralMoments.restrictionMap_range_eq_productSpan' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralMoments.finrank_moment_add_choose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.HomogeneousLikelihood.isMoment_iff_homogeneousMoment_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.HomogeneousEvaluation.dehomogenizeLinear_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

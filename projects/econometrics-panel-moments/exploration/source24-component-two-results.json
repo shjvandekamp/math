@@ -1,0 +1,6704 @@
+{
+  "status": "Exact modular component-two observation certificates on actual N generators; no all-length theorem.",
+  "normalization": "Pair rows use raw component 2 at the same oriented cross points as O; axis rows use T_(i,2) from feedback_limit. Long empty rows include T_(i,2)(E_ta)=-delta_(i,(t,a)).",
+  "independent_check": "Every long-empty pair and axis observation is independently evaluated from its full t-first ordered transition word, including the removable X0 first jet.",
+  "parity_checks": "B27 triangular block and B28 chart jets; actual binary residue scaling B29 and rank B30; seed identity B32; odd projection and rank identity B33--B35; even kernel compatibility and residual rank B36--B37.",
+  "limitations": "Nonzero minors lift after clearing denominators. Modular deficiencies alone are not real rank upper bounds. W01 identification and uniform surjectivity are not proved here.",
+  "elapsed_seconds": 0.718854042,
+  "maximum_rss_bytes": 23363584,
+  "bounded_limitation": null,
+  "cases": [
+    {
+      "m": 3,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ]
+      ],
+      "geometry": {
+        "normalized_first_coefficients_equal_one": true,
+        "all_line_coefficients_nonzero": true,
+        "distinct_old_lines": true,
+        "all_pair_coordinates_nonzero_including_same_block": true,
+        "no_unintended_three_line_points": true,
+        "every_coordinate_edge_point_is_on_only_its_matching_line": true
+      },
+      "actual_source_geometry": {
+        "cross_line_points": 27,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "actual_source_matrix": {
+        "rows": 54,
+        "columns": 54,
+        "sha256": "a6956189882b6b284c451a7b7db613ae836d32dfa6d51a0736cc2d3d8fb640cd",
+        "rank_certificate": {
+          "rank": 54,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 54,
+            "rows": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              5,
+              3,
+              1,
+              9,
+              7,
+              11,
+              15,
+              13,
+              17,
+              18,
+              24,
+              30,
+              21,
+              25,
+              31,
+              19,
+              26,
+              32,
+              27,
+              28,
+              29,
+              20,
+              23,
+              22,
+              33,
+              34,
+              35,
+              36,
+              37,
+              39,
+              38,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              53,
+              52,
+              50,
+              51
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53
+            ],
+            "determinant_mod_prime": 988215,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 11788
+        }
+      },
+      "N_source_coefficient_matrix": {
+        "rows": 54,
+        "columns": 45,
+        "sha256": "74623b7ebb170c7722de66d64da5a4b7516423359fb6a5b8b47226ead4dde5de",
+        "rank_certificate": {
+          "rank": 45,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 45,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              9,
+              12,
+              15,
+              27,
+              31,
+              33,
+              45,
+              48,
+              51,
+              10,
+              13,
+              16,
+              28,
+              30,
+              34,
+              46,
+              49,
+              52
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44
+            ],
+            "determinant_mod_prime": 1000002,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "source_observation_matrix_sha256": "7a492bfbe79b4e62947270bfc151abfc35cf759d5ce3bba18462368ef93a4eb6",
+      "N_component_two_observations": {
+        "rows": 36,
+        "columns": 45,
+        "sha256": "3197519c37c9941a2bc7aa47e58a5417e5c2b1f09d0b9e8abebf8df7d3dc34c4",
+        "rank_certificate": {
+          "rank": 27,
+          "full_rank": false,
+          "nonzero_minor": {
+            "size": 27,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              26,
+              29
+            ],
+            "determinant_mod_prime": 259187,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "scalar_pair_rows": 27,
+      "axis_rows": 9,
+      "target_observation_rank": 36,
+      "N_generator_count": 45,
+      "N_generators_independent_at_fixture": true,
+      "first_slot_difference_count": 27,
+      "long_empty_count": 9,
+      "selected_output_zero_count": 9,
+      "observation_map_full_row_rank": false,
+      "observation_cokernel_dimension": 9,
+      "exact_modular_coefficient_kernel_dimension": 18,
+      "expected_kernel_dimension_if_surjective": 9,
+      "direct_empty_word_pair_component_checks": 243,
+      "direct_empty_word_axis_component_checks": 81,
+      "removable_X0_first_jet_checks": 27,
+      "local_E_axis_correction_included": true,
+      "parity_annihilator_reduction": {
+        "B_L": {
+          "rows": 9,
+          "columns": 9,
+          "sha256": "f1e33fb8ca599b66e486f4c5ecb2eda836ea164add92facdd0db5b2c6cc0a859",
+          "rank_certificate": {
+            "rank": 9,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 9,
+              "rows": [
+                0,
+                1,
+                2,
+                3,
+                6,
+                7,
+                8,
+                5,
+                4
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 185126,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 814877
+          }
+        },
+        "expected_B_L_parity_rank": 9,
+        "A_L_sha256": "5fe7db5c016fcc5e7ce58cbbe473ee79d5b1b7a8ef2cfa953e561abde6acba38",
+        "block_checks": {
+          "B27_nonzero_diagonal": [
+            699192,
+            334814,
+            126319
+          ],
+          "B27_lower_left_zero": true,
+          "B28_row_zero_chart_first_jet_entries": 18,
+          "B29_binary_residue_entries": 36,
+          "actual_binary_residue_matrix": {
+            "rows": 6,
+            "columns": 6,
+            "sha256": "159e3b5f011e7ba40a86e5391b4d71b54b5ab32df937bf75ec5bd6e290f284a3",
+            "rank_certificate": {
+              "rank": 6,
+              "full_rank": true,
+              "nonzero_minor": {
+                "size": 6,
+                "rows": [
+                  0,
+                  1,
+                  4,
+                  5,
+                  2,
+                  3
+                ],
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "determinant_mod_prime": 31073,
+                "order": "Rows and columns in listed order."
+              },
+              "determinant_mod_prime": 31073
+            }
+          },
+          "binary_row_and_column_labels": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        "selected_minus_c_long_empty_T2_zero": true,
+        "selected_minus_c_long_empty_pair_equals_actual_rho2_U": true,
+        "rho2_U_sha256": "00e0c27bd45f8120db2ee47e204d5619644ddc69e2e7291975941af6245a1c8d",
+        "seed_constants": [
+          {
+            "t": 2,
+            "A": 0,
+            "r": 3,
+            "s": 2,
+            "c_tA": 0
+          },
+          {
+            "t": 2,
+            "A": 1,
+            "r": 3,
+            "s": 2,
+            "c_tA": 141667
+          },
+          {
+            "t": 2,
+            "A": 2,
+            "r": 3,
+            "s": 2,
+            "c_tA": 731122
+          },
+          {
+            "t": 3,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 3,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 76107
+          },
+          {
+            "t": 3,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 751874
+          },
+          {
+            "t": 4,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 4,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 640042
+          },
+          {
+            "t": 4,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 149576
+          }
+        ],
+        "odd_B_L_inverse": {
+          "size": 9,
+          "determinant_mod_prime": 814877,
+          "pivot_rows_in_original_order": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7,
+            8,
+            5,
+            4
+          ],
+          "pivot_columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "inverse_checked": true,
+          "inverse_sha256": "428bc5692381baa42fba17ce40d0f1ae58c90c88a8c15ee4f5887648d4d20f90"
+        },
+        "odd_projected_all_generators_sha256": "d57bfd17e410ccad38ba3bca4f2f6a432f3c9dde6caeea7271f1e588344678eb",
+        "odd_projected_empty_columns_zero": true,
+        "odd_projected_selected_columns_equal_rho2_U": true,
+        "B35_remaining_matrix": {
+          "rows": 27,
+          "columns": 36,
+          "sha256": "7a721618ff4bfbde917e63f20c9b9cf9e34e7f4e99f05023473ab662ae173aaf",
+          "rank_certificate": {
+            "rank": 18,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 18,
+              "rows": [
+                0,
+                3,
+                6,
+                9,
+                2,
+                1,
+                10,
+                11,
+                18,
+                19,
+                4,
+                7,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                9,
+                10,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "determinant_mod_prime": 393587,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "B35_rank_identity_verified": true,
+        "B35_expected_remaining_rank": 18
+      },
+      "pair_row_labels": [
+        [
+          2,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          0,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          0,
+          1
+        ],
+        [
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          2,
+          4,
+          1,
+          0
+        ],
+        [
+          2,
+          4,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          1,
+          2
+        ],
+        [
+          2,
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          4,
+          2,
+          1
+        ],
+        [
+          2,
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          0,
+          2
+        ],
+        [
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          3,
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          2,
+          0
+        ],
+        [
+          3,
+          4,
+          2,
+          1
+        ],
+        [
+          3,
+          4,
+          2,
+          2
+        ]
+      ],
+      "axis_row_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "N_generator_labels": [
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        }
+      ],
+      "interpretation": "The displayed kernel dimension is over F_p for the actual N coefficient map. Identifying it with N intersect W01 uses the separate observation-kernel theorem.",
+      "elapsed_seconds": 0.028116707999999997
+    },
+    {
+      "m": 4,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ]
+      ],
+      "geometry": {
+        "normalized_first_coefficients_equal_one": true,
+        "all_line_coefficients_nonzero": true,
+        "distinct_old_lines": true,
+        "all_pair_coordinates_nonzero_including_same_block": true,
+        "no_unintended_three_line_points": true,
+        "every_coordinate_edge_point_is_on_only_its_matching_line": true
+      },
+      "actual_source_geometry": {
+        "cross_line_points": 54,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "actual_source_matrix": {
+        "rows": 108,
+        "columns": 108,
+        "sha256": "026a36f9e968de2e0823feb25476798d14e92d0da4dd53ac3f277c89101d53b1",
+        "rank_certificate": {
+          "rank": 108,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 108,
+            "rows": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              5,
+              3,
+              1,
+              9,
+              7,
+              11,
+              15,
+              13,
+              17,
+              18,
+              19,
+              20,
+              24,
+              25,
+              26,
+              30,
+              31,
+              32,
+              21,
+              28,
+              33,
+              22,
+              27,
+              34,
+              23,
+              29,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107
+            ],
+            "determinant_mod_prime": 679979,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 679979
+        }
+      },
+      "N_source_coefficient_matrix": {
+        "rows": 108,
+        "columns": 96,
+        "sha256": "875cd88be9b24b8fe15f1fb6c2d1010ffd53d25f586d2246e2d443225a0a9bc0",
+        "rank_certificate": {
+          "rank": 96,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 96,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              18,
+              21,
+              24,
+              45,
+              48,
+              51,
+              72,
+              75,
+              80,
+              99,
+              102,
+              105,
+              19,
+              22,
+              25,
+              46,
+              49,
+              52,
+              74,
+              76,
+              78,
+              100,
+              103,
+              106
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95
+            ],
+            "determinant_mod_prime": 1000002,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "source_observation_matrix_sha256": "28a087c143758d7eac3e2338873619457cf2305c20837d398f866d31405742a8",
+      "N_component_two_observations": {
+        "rows": 66,
+        "columns": 96,
+        "sha256": "af4fa739aa00fe26804ad54b7c6e83673199eac7d5300fd7888e44f167a84d2c",
+        "rank_certificate": {
+          "rank": 66,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 66,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65
+            ],
+            "determinant_mod_prime": 623679,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "scalar_pair_rows": 54,
+      "axis_rows": 12,
+      "target_observation_rank": 66,
+      "N_generator_count": 96,
+      "N_generators_independent_at_fixture": true,
+      "first_slot_difference_count": 72,
+      "long_empty_count": 12,
+      "selected_output_zero_count": 12,
+      "observation_map_full_row_rank": true,
+      "observation_cokernel_dimension": 0,
+      "exact_modular_coefficient_kernel_dimension": 30,
+      "expected_kernel_dimension_if_surjective": 30,
+      "direct_empty_word_pair_component_checks": 648,
+      "direct_empty_word_axis_component_checks": 144,
+      "removable_X0_first_jet_checks": 48,
+      "local_E_axis_correction_included": true,
+      "parity_annihilator_reduction": {
+        "B_L": {
+          "rows": 12,
+          "columns": 12,
+          "sha256": "4ee1e1cbbc18d3855824d692e2354b2e857aff39ea1ea263111e422c503d1964",
+          "rank_certificate": {
+            "rank": 10,
+            "full_rank": false,
+            "nonzero_minor": {
+              "size": 10,
+              "rows": [
+                0,
+                1,
+                2,
+                3,
+                6,
+                7,
+                8,
+                5,
+                4,
+                9
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ],
+              "determinant_mod_prime": 881468,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 0
+          }
+        },
+        "expected_B_L_parity_rank": 10,
+        "A_L_sha256": "d9651255c395b2279aecf290ee43fe80d8d09fd29987e06b39151e373c398648",
+        "block_checks": {
+          "B27_nonzero_diagonal": [
+            805338,
+            954982,
+            368745,
+            787492
+          ],
+          "B27_lower_left_zero": true,
+          "B28_row_zero_chart_first_jet_entries": 32,
+          "B29_binary_residue_entries": 64,
+          "actual_binary_residue_matrix": {
+            "rows": 8,
+            "columns": 8,
+            "sha256": "c7ae5ffe81f2106533c2dd8c1b5044411f1e4d3cce4a934db650b89aef91d23e",
+            "rank_certificate": {
+              "rank": 6,
+              "full_rank": false,
+              "nonzero_minor": {
+                "size": 6,
+                "rows": [
+                  0,
+                  1,
+                  4,
+                  5,
+                  2,
+                  3
+                ],
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "determinant_mod_prime": 706050,
+                "order": "Rows and columns in listed order."
+              },
+              "determinant_mod_prime": 0
+            }
+          },
+          "binary_row_and_column_labels": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ]
+          ]
+        },
+        "selected_minus_c_long_empty_T2_zero": true,
+        "selected_minus_c_long_empty_pair_equals_actual_rho2_U": true,
+        "rho2_U_sha256": "eb0ef403d998e21cd5966c45465bd288b2b735c5fb6c9ebbccf565f9ca5399ec",
+        "seed_constants": [
+          {
+            "t": 2,
+            "A": 0,
+            "r": 3,
+            "s": 2,
+            "c_tA": 0
+          },
+          {
+            "t": 2,
+            "A": 1,
+            "r": 3,
+            "s": 2,
+            "c_tA": 141667
+          },
+          {
+            "t": 2,
+            "A": 2,
+            "r": 3,
+            "s": 2,
+            "c_tA": 731122
+          },
+          {
+            "t": 3,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 3,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 76107
+          },
+          {
+            "t": 3,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 751874
+          },
+          {
+            "t": 4,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 4,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 640042
+          },
+          {
+            "t": 4,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 149576
+          },
+          {
+            "t": 5,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 5,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 294936
+          },
+          {
+            "t": 5,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 562536
+          }
+        ],
+        "even_right_kernel_vectors": [
+          [
+            714492,
+            625000,
+            330945,
+            176737,
+            625003,
+            0,
+            895782,
+            375000,
+            0,
+            856087,
+            1,
+            0
+          ],
+          [
+            16800,
+            326417,
+            6,
+            312284,
+            0,
+            9,
+            496747,
+            0,
+            999994,
+            529624,
+            0,
+            1
+          ]
+        ],
+        "even_right_free_columns": [
+          10,
+          11
+        ],
+        "even_left_kernel_vectors": [
+          [
+            0,
+            123438,
+            721347,
+            0,
+            47292,
+            858532,
+            0,
+            15,
+            673586,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            730237,
+            991894,
+            0,
+            457460,
+            407453,
+            0,
+            669058,
+            250000,
+            0,
+            0,
+            1
+          ]
+        ],
+        "even_left_free_columns": [
+          10,
+          11
+        ],
+        "even_kernel_dimensions_verified": true,
+        "B36_A_L_times_right_kernel": {
+          "rows": 54,
+          "columns": 2,
+          "sha256": "78c93c8b6e12d1fb2dd95671da3f0166cb2425f6bc5004ed97a14c3029daf770",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                0,
+                1
+              ],
+              "determinant_mod_prime": 727537,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "B37_left_kernel_times_difference_axis": {
+          "rows": 2,
+          "columns": 72,
+          "sha256": "4e8ca234816f89c991ccf73bc37937df2e00bd339425aee7aeebbd459e91e9d1",
+          "rank_certificate": {
+            "rank": 2,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 2,
+              "rows": [
+                0,
+                1
+              ],
+              "columns": [
+                4,
+                5
+              ],
+              "determinant_mod_prime": 532415,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "even_selected_columns_leave_left_kernel_directions_unconstrained": true,
+        "even_first_slot_differences_resolve_both_axis_directions": true
+      },
+      "pair_row_labels": [
+        [
+          2,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          0,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          0,
+          1
+        ],
+        [
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          2,
+          4,
+          1,
+          0
+        ],
+        [
+          2,
+          4,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          1,
+          2
+        ],
+        [
+          2,
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          4,
+          2,
+          1
+        ],
+        [
+          2,
+          4,
+          2,
+          2
+        ],
+        [
+          2,
+          5,
+          0,
+          0
+        ],
+        [
+          2,
+          5,
+          0,
+          1
+        ],
+        [
+          2,
+          5,
+          0,
+          2
+        ],
+        [
+          2,
+          5,
+          1,
+          0
+        ],
+        [
+          2,
+          5,
+          1,
+          1
+        ],
+        [
+          2,
+          5,
+          1,
+          2
+        ],
+        [
+          2,
+          5,
+          2,
+          0
+        ],
+        [
+          2,
+          5,
+          2,
+          1
+        ],
+        [
+          2,
+          5,
+          2,
+          2
+        ],
+        [
+          3,
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          0,
+          2
+        ],
+        [
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          3,
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          2,
+          0
+        ],
+        [
+          3,
+          4,
+          2,
+          1
+        ],
+        [
+          3,
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          5,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          0,
+          1
+        ],
+        [
+          3,
+          5,
+          0,
+          2
+        ],
+        [
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          3,
+          5,
+          1,
+          1
+        ],
+        [
+          3,
+          5,
+          1,
+          2
+        ],
+        [
+          3,
+          5,
+          2,
+          0
+        ],
+        [
+          3,
+          5,
+          2,
+          1
+        ],
+        [
+          3,
+          5,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          4,
+          5,
+          0,
+          1
+        ],
+        [
+          4,
+          5,
+          0,
+          2
+        ],
+        [
+          4,
+          5,
+          1,
+          0
+        ],
+        [
+          4,
+          5,
+          1,
+          1
+        ],
+        [
+          4,
+          5,
+          1,
+          2
+        ],
+        [
+          4,
+          5,
+          2,
+          0
+        ],
+        [
+          4,
+          5,
+          2,
+          1
+        ],
+        [
+          4,
+          5,
+          2,
+          2
+        ]
+      ],
+      "axis_row_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "N_generator_labels": [
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 5,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 5,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 5,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 5,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 5,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 5,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        }
+      ],
+      "interpretation": "The displayed kernel dimension is over F_p for the actual N coefficient map. Identifying it with N intersect W01 uses the separate observation-kernel theorem.",
+      "elapsed_seconds": 0.127688958
+    },
+    {
+      "m": 5,
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_fixture": "economic",
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ],
+        [
+          32768,
+          1073741824
+        ]
+      ],
+      "geometry": {
+        "normalized_first_coefficients_equal_one": true,
+        "all_line_coefficients_nonzero": true,
+        "distinct_old_lines": true,
+        "all_pair_coordinates_nonzero_including_same_block": true,
+        "no_unintended_three_line_points": true,
+        "every_coordinate_edge_point_is_on_only_its_matching_line": true
+      },
+      "actual_source_geometry": {
+        "cross_line_points": 90,
+        "coordinates_nonzero": true,
+        "no_third_denominator_line": true,
+        "two_residue_vectors_independent": true,
+        "local_pair_residue_blocks_invertible": true
+      },
+      "actual_source_matrix": {
+        "rows": 180,
+        "columns": 180,
+        "sha256": "fc53b1220e88adb9e93b2c046874491cc28a97bac18cffde943adf4d0007faea",
+        "rank_certificate": {
+          "rank": 180,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 180,
+            "rows": [
+              0,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              5,
+              3,
+              1,
+              9,
+              7,
+              11,
+              15,
+              13,
+              17,
+              18,
+              19,
+              20,
+              24,
+              25,
+              26,
+              30,
+              31,
+              32,
+              21,
+              22,
+              23,
+              27,
+              28,
+              29,
+              33,
+              34,
+              35,
+              36,
+              42,
+              48,
+              39,
+              43,
+              49,
+              37,
+              44,
+              50,
+              45,
+              46,
+              47,
+              38,
+              41,
+              40,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179
+            ],
+            "determinant_mod_prime": 874535,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 874535
+        }
+      },
+      "N_source_coefficient_matrix": {
+        "rows": 180,
+        "columns": 165,
+        "sha256": "186f378a7bdb8e4b4efad31e2924f914e05ba397151f209ad3d88c33adcf8d4d",
+        "rank_certificate": {
+          "rank": 165,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 165,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              27,
+              30,
+              33,
+              63,
+              66,
+              69,
+              99,
+              102,
+              105,
+              135,
+              139,
+              141,
+              171,
+              174,
+              177,
+              28,
+              31,
+              34,
+              65,
+              67,
+              70,
+              100,
+              103,
+              106,
+              137,
+              138,
+              142,
+              172,
+              175,
+              178
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164
+            ],
+            "determinant_mod_prime": 1000002,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "source_observation_matrix_sha256": "e3b678e0c87738fa77a596922df0e65a451d1891950952d6a3c63f720f2e3941",
+      "N_component_two_observations": {
+        "rows": 105,
+        "columns": 165,
+        "sha256": "58fab122a08c68466baff827723f80b81a9e533873c6486156aaca6c0fccbf61",
+        "rank_certificate": {
+          "rank": 105,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 105,
+            "rows": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104
+            ],
+            "columns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              107
+            ],
+            "determinant_mod_prime": 962788,
+            "order": "Rows and columns in listed order."
+          }
+        }
+      },
+      "scalar_pair_rows": 90,
+      "axis_rows": 15,
+      "target_observation_rank": 105,
+      "N_generator_count": 165,
+      "N_generators_independent_at_fixture": true,
+      "first_slot_difference_count": 135,
+      "long_empty_count": 15,
+      "selected_output_zero_count": 15,
+      "observation_map_full_row_rank": true,
+      "observation_cokernel_dimension": 0,
+      "exact_modular_coefficient_kernel_dimension": 60,
+      "expected_kernel_dimension_if_surjective": 60,
+      "direct_empty_word_pair_component_checks": 1350,
+      "direct_empty_word_axis_component_checks": 225,
+      "removable_X0_first_jet_checks": 75,
+      "local_E_axis_correction_included": true,
+      "parity_annihilator_reduction": {
+        "B_L": {
+          "rows": 15,
+          "columns": 15,
+          "sha256": "f23cf9fd4f636fe1a1f38cef8b5615b9fe6f01a42f1ef8cd2ebeff990377c190",
+          "rank_certificate": {
+            "rank": 15,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 15,
+              "rows": [
+                0,
+                1,
+                2,
+                3,
+                6,
+                7,
+                8,
+                5,
+                4,
+                9,
+                12,
+                13,
+                14,
+                11,
+                10
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+              ],
+              "determinant_mod_prime": 869886,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 869886
+          }
+        },
+        "expected_B_L_parity_rank": 15,
+        "A_L_sha256": "33a9489d209982d39966f99e7d8513e6ef4565f04b220d4d747896bc1fb6e5c6",
+        "block_checks": {
+          "B27_nonzero_diagonal": [
+            703692,
+            76427,
+            30715,
+            878468,
+            293779
+          ],
+          "B27_lower_left_zero": true,
+          "B28_row_zero_chart_first_jet_entries": 50,
+          "B29_binary_residue_entries": 100,
+          "actual_binary_residue_matrix": {
+            "rows": 10,
+            "columns": 10,
+            "sha256": "6e032d58003409cfe20c410c55aaebea907fbdeb4a0661c689521dd7ec2c1bf1",
+            "rank_certificate": {
+              "rank": 10,
+              "full_rank": true,
+              "nonzero_minor": {
+                "size": 10,
+                "rows": [
+                  0,
+                  1,
+                  4,
+                  5,
+                  2,
+                  3,
+                  8,
+                  9,
+                  6,
+                  7
+                ],
+                "columns": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9
+                ],
+                "determinant_mod_prime": 852508,
+                "order": "Rows and columns in listed order."
+              },
+              "determinant_mod_prime": 852508
+            }
+          },
+          "binary_row_and_column_labels": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              2
+            ]
+          ]
+        },
+        "selected_minus_c_long_empty_T2_zero": true,
+        "selected_minus_c_long_empty_pair_equals_actual_rho2_U": true,
+        "rho2_U_sha256": "a205fecd827fff683dc2cf7728fce375854ad61d26864c16aee1069b07b7e99f",
+        "seed_constants": [
+          {
+            "t": 2,
+            "A": 0,
+            "r": 3,
+            "s": 2,
+            "c_tA": 0
+          },
+          {
+            "t": 2,
+            "A": 1,
+            "r": 3,
+            "s": 2,
+            "c_tA": 141667
+          },
+          {
+            "t": 2,
+            "A": 2,
+            "r": 3,
+            "s": 2,
+            "c_tA": 731122
+          },
+          {
+            "t": 3,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 3,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 76107
+          },
+          {
+            "t": 3,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 751874
+          },
+          {
+            "t": 4,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 4,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 640042
+          },
+          {
+            "t": 4,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 149576
+          },
+          {
+            "t": 5,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 5,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 294936
+          },
+          {
+            "t": 5,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 562536
+          },
+          {
+            "t": 6,
+            "A": 0,
+            "r": 2,
+            "s": 3,
+            "c_tA": 0
+          },
+          {
+            "t": 6,
+            "A": 1,
+            "r": 2,
+            "s": 3,
+            "c_tA": 692571
+          },
+          {
+            "t": 6,
+            "A": 2,
+            "r": 2,
+            "s": 3,
+            "c_tA": 250690
+          }
+        ],
+        "odd_B_L_inverse": {
+          "size": 15,
+          "determinant_mod_prime": 869886,
+          "pivot_rows_in_original_order": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7,
+            8,
+            5,
+            4,
+            9,
+            12,
+            13,
+            14,
+            11,
+            10
+          ],
+          "pivot_columns": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "inverse_checked": true,
+          "inverse_sha256": "e5458ee431bcbe1050064dfc53fb674fc6a8f3e5de90e4923fe6eaa500543128"
+        },
+        "odd_projected_all_generators_sha256": "bc7f7da52caf585fb1a5a4998ac2379eb1a122869a0306a8637167a076ecb5c4",
+        "odd_projected_empty_columns_zero": true,
+        "odd_projected_selected_columns_equal_rho2_U": true,
+        "B35_remaining_matrix": {
+          "rows": 90,
+          "columns": 150,
+          "sha256": "3fb01c301d0cf61506c96298636b783cdafcbfccabf55d5f591f14c5f453e830",
+          "rank_certificate": {
+            "rank": 90,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 90,
+              "rows": [
+                0,
+                3,
+                6,
+                9,
+                2,
+                1,
+                10,
+                11,
+                18,
+                19,
+                20,
+                27,
+                28,
+                29,
+                36,
+                37,
+                38,
+                39,
+                8,
+                5,
+                4,
+                21,
+                22,
+                23,
+                40,
+                41,
+                42,
+                7,
+                12,
+                13,
+                30,
+                31,
+                32,
+                43,
+                44,
+                45,
+                14,
+                15,
+                16,
+                17,
+                24,
+                25,
+                26,
+                33,
+                34,
+                35,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80,
+                81,
+                82,
+                83,
+                84,
+                85,
+                86,
+                87,
+                88,
+                89
+              ],
+              "determinant_mod_prime": 964078,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "B35_rank_identity_verified": true,
+        "B35_expected_remaining_rank": 90
+      },
+      "pair_row_labels": [
+        [
+          2,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          0,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          2,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          0
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          0,
+          1
+        ],
+        [
+          2,
+          4,
+          0,
+          2
+        ],
+        [
+          2,
+          4,
+          1,
+          0
+        ],
+        [
+          2,
+          4,
+          1,
+          1
+        ],
+        [
+          2,
+          4,
+          1,
+          2
+        ],
+        [
+          2,
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          4,
+          2,
+          1
+        ],
+        [
+          2,
+          4,
+          2,
+          2
+        ],
+        [
+          2,
+          5,
+          0,
+          0
+        ],
+        [
+          2,
+          5,
+          0,
+          1
+        ],
+        [
+          2,
+          5,
+          0,
+          2
+        ],
+        [
+          2,
+          5,
+          1,
+          0
+        ],
+        [
+          2,
+          5,
+          1,
+          1
+        ],
+        [
+          2,
+          5,
+          1,
+          2
+        ],
+        [
+          2,
+          5,
+          2,
+          0
+        ],
+        [
+          2,
+          5,
+          2,
+          1
+        ],
+        [
+          2,
+          5,
+          2,
+          2
+        ],
+        [
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          0,
+          1
+        ],
+        [
+          2,
+          6,
+          0,
+          2
+        ],
+        [
+          2,
+          6,
+          1,
+          0
+        ],
+        [
+          2,
+          6,
+          1,
+          1
+        ],
+        [
+          2,
+          6,
+          1,
+          2
+        ],
+        [
+          2,
+          6,
+          2,
+          0
+        ],
+        [
+          2,
+          6,
+          2,
+          1
+        ],
+        [
+          2,
+          6,
+          2,
+          2
+        ],
+        [
+          3,
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          0,
+          2
+        ],
+        [
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          3,
+          4,
+          1,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          2,
+          0
+        ],
+        [
+          3,
+          4,
+          2,
+          1
+        ],
+        [
+          3,
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          5,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          0,
+          1
+        ],
+        [
+          3,
+          5,
+          0,
+          2
+        ],
+        [
+          3,
+          5,
+          1,
+          0
+        ],
+        [
+          3,
+          5,
+          1,
+          1
+        ],
+        [
+          3,
+          5,
+          1,
+          2
+        ],
+        [
+          3,
+          5,
+          2,
+          0
+        ],
+        [
+          3,
+          5,
+          2,
+          1
+        ],
+        [
+          3,
+          5,
+          2,
+          2
+        ],
+        [
+          3,
+          6,
+          0,
+          0
+        ],
+        [
+          3,
+          6,
+          0,
+          1
+        ],
+        [
+          3,
+          6,
+          0,
+          2
+        ],
+        [
+          3,
+          6,
+          1,
+          0
+        ],
+        [
+          3,
+          6,
+          1,
+          1
+        ],
+        [
+          3,
+          6,
+          1,
+          2
+        ],
+        [
+          3,
+          6,
+          2,
+          0
+        ],
+        [
+          3,
+          6,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          0,
+          0
+        ],
+        [
+          4,
+          5,
+          0,
+          1
+        ],
+        [
+          4,
+          5,
+          0,
+          2
+        ],
+        [
+          4,
+          5,
+          1,
+          0
+        ],
+        [
+          4,
+          5,
+          1,
+          1
+        ],
+        [
+          4,
+          5,
+          1,
+          2
+        ],
+        [
+          4,
+          5,
+          2,
+          0
+        ],
+        [
+          4,
+          5,
+          2,
+          1
+        ],
+        [
+          4,
+          5,
+          2,
+          2
+        ],
+        [
+          4,
+          6,
+          0,
+          0
+        ],
+        [
+          4,
+          6,
+          0,
+          1
+        ],
+        [
+          4,
+          6,
+          0,
+          2
+        ],
+        [
+          4,
+          6,
+          1,
+          0
+        ],
+        [
+          4,
+          6,
+          1,
+          1
+        ],
+        [
+          4,
+          6,
+          1,
+          2
+        ],
+        [
+          4,
+          6,
+          2,
+          0
+        ],
+        [
+          4,
+          6,
+          2,
+          1
+        ],
+        [
+          4,
+          6,
+          2,
+          2
+        ],
+        [
+          5,
+          6,
+          0,
+          0
+        ],
+        [
+          5,
+          6,
+          0,
+          1
+        ],
+        [
+          5,
+          6,
+          0,
+          2
+        ],
+        [
+          5,
+          6,
+          1,
+          0
+        ],
+        [
+          5,
+          6,
+          1,
+          1
+        ],
+        [
+          5,
+          6,
+          1,
+          2
+        ],
+        [
+          5,
+          6,
+          2,
+          0
+        ],
+        [
+          5,
+          6,
+          2,
+          1
+        ],
+        [
+          5,
+          6,
+          2,
+          2
+        ]
+      ],
+      "axis_row_labels": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "N_generator_labels": [
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 4,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 5,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 2,
+          "s": 6,
+          "r": 3,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 3,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 4,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 5,
+          "s": 6,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 3,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 4,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 0,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 1,
+          "b": 2
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 1
+        },
+        {
+          "kind": "first_slot_difference",
+          "t": 6,
+          "s": 5,
+          "r": 2,
+          "a": 2,
+          "b": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 2,
+          "r": 3,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 3,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 4,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 5,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 5,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 5,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "long_empty",
+          "t": 6,
+          "r": 2,
+          "a": 0
+        },
+        {
+          "kind": "long_empty",
+          "t": 6,
+          "r": 2,
+          "a": 1
+        },
+        {
+          "kind": "long_empty",
+          "t": 6,
+          "r": 2,
+          "a": 2
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 2,
+          "r": 3,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 3,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 4,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 5,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 5,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 5,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 6,
+          "r": 2,
+          "a": 0,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 6,
+          "r": 2,
+          "a": 1,
+          "b": 0
+        },
+        {
+          "kind": "selected_output_zero",
+          "t": 6,
+          "r": 2,
+          "a": 2,
+          "b": 0
+        }
+      ],
+      "interpretation": "The displayed kernel dimension is over F_p for the actual N coefficient map. Identifying it with N intersect W01 uses the separate observation-kernel theorem.",
+      "elapsed_seconds": 0.562200125
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+import PanelMoments.EconomicGenericity
+
+#check PanelMoments.three_choice_four_period_generic_completeness
+#print axioms PanelMoments.three_choice_four_period_generic_completeness
+#print axioms PanelMoments.sourceMoment_isMoment
+#print axioms PanelMoments.isMoment_iff_coefficient_kernel
+#print axioms PanelMoments.isMoment_iff_additive_effects
+#print axioms PanelMoments.parameterWitness_table
+#print axioms PanelMoments.Witness.eval_clearedPathPoly
+#print axioms PanelMoments.Witness.sourceRows_bijective
+#print axioms PanelMoments.Witness.evaluationMinor_real_det_ne_zero
+#print axioms PanelMoments.Witness.sourceMinor_real_det_ne_zero
+#print axioms PanelMoments.exceptionalDeterminant_witness
+#print axioms PanelMoments.genericEconomicRegion_dense
+#print axioms PanelMoments.source_basis_of_minors
+#print axioms PanelMoments.economic_source_basis

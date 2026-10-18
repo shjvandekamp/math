@@ -1,0 +1,834 @@
+{
+  "prime": 1000003,
+  "input_file": "source24-boundary-recurrence-results.json",
+  "input_sha256": "fb31992bbbfc66ab94bf8f428efeec121b1de7b8d6824b88bdbb1e542ab858c0",
+  "fixture": {
+    "r": [
+      2,
+      3,
+      5
+    ],
+    "unnormalized_common_matrix": [
+      [
+        3,
+        1,
+        1
+      ],
+      [
+        1,
+        4,
+        1
+      ],
+      [
+        1,
+        1,
+        6
+      ]
+    ],
+    "row_normalization": [
+      "1/3",
+      "1",
+      "1"
+    ],
+    "normalized_common_matrix_rational": [
+      [
+        "1",
+        "1/3",
+        "1/3"
+      ],
+      [
+        "1",
+        "4",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "6"
+      ]
+    ],
+    "normalized_common_matrix_mod_prime": [
+      [
+        1,
+        666669,
+        666669
+      ],
+      [
+        1,
+        4,
+        1
+      ],
+      [
+        1,
+        1,
+        6
+      ]
+    ],
+    "normalized_common_matrix_certificate": {
+      "rank": 3,
+      "full_rank": true,
+      "nonzero_minor": {
+        "size": 3,
+        "rows": [
+          0,
+          1,
+          2
+        ],
+        "columns": [
+          0,
+          1,
+          2
+        ],
+        "determinant_mod_prime": 666689,
+        "order": "Rows and columns in listed order."
+      },
+      "determinant_mod_prime": 666689
+    },
+    "time_factors": [
+      [
+        8,
+        64
+      ],
+      [
+        64,
+        4096
+      ],
+      [
+        512,
+        262144
+      ],
+      [
+        4096,
+        16777216
+      ]
+    ],
+    "actual_coefficient_tables_mod_prime": [
+      [
+        [
+          1,
+          333337,
+          666690
+        ],
+        [
+          1,
+          32,
+          64
+        ],
+        [
+          1,
+          8,
+          384
+        ]
+      ],
+      [
+        [
+          1,
+          666690,
+          668034
+        ],
+        [
+          1,
+          256,
+          4096
+        ],
+        [
+          1,
+          64,
+          24576
+        ]
+      ],
+      [
+        [
+          1,
+          333505,
+          754050
+        ],
+        [
+          1,
+          2048,
+          262144
+        ],
+        [
+          1,
+          512,
+          572861
+        ]
+      ],
+      [
+        [
+          1,
+          668034,
+          259056
+        ],
+        [
+          1,
+          16384,
+          777168
+        ],
+        [
+          1,
+          4096,
+          662996
+        ]
+      ]
+    ],
+    "table_determinants": [
+      343745,
+      996915,
+      418950,
+      501758
+    ]
+  },
+  "chart": {
+    "equation": "sum(X)=1 on the circle line, parameter z=X2",
+    "origin": [
+      800004,
+      200000,
+      0
+    ],
+    "direction": [
+      600013,
+      399989,
+      1
+    ],
+    "edge_parameters": [
+      285715,
+      901642,
+      0
+    ]
+  },
+  "cases": [
+    {
+      "old_blocks": 2,
+      "sector": 0,
+      "pole_ratios": [
+        775145,
+        13722,
+        24938
+      ],
+      "terminal_table_certificate": {
+        "size": 3,
+        "determinant_mod_prime": 418950,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "ac444d5e03bd250f3e4d40dfc7c6359ca66950a1b34e508a06745eb51b547361"
+      },
+      "edge_records": [
+        {
+          "output": 0,
+          "z": 285715,
+          "point": [
+            0,
+            714289,
+            285715
+          ],
+          "row_forms": {
+            "1": [
+              666498,
+              142565,
+              425135
+            ],
+            "2": [
+              987715,
+              107749,
+              204463
+            ]
+          },
+          "divided_Y_columns": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              509429,
+              800866,
+              406910
+            ],
+            [
+              56358,
+              331272,
+              650170
+            ]
+          ]
+        },
+        {
+          "output": 1,
+          "z": 901642,
+          "point": [
+            98362,
+            0,
+            901642
+          ],
+          "row_forms": {
+            "1": [
+              803215,
+              212915,
+              785680
+            ],
+            "2": [
+              208819,
+              429733,
+              86582
+            ]
+          },
+          "divided_Y_columns": [
+            [
+              924614,
+              83066,
+              58373
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              498448,
+              908175,
+              300193
+            ]
+          ]
+        },
+        {
+          "output": 2,
+          "z": 0,
+          "point": [
+            800004,
+            200000,
+            0
+          ],
+          "row_forms": {
+            "1": [
+              399990,
+              999851,
+              599965
+            ],
+            "2": [
+              599901,
+              398774,
+              199695
+            ]
+          },
+          "divided_Y_columns": [
+            [
+              915083,
+              106881,
+              257126
+            ],
+            [
+              24037,
+              397433,
+              308388
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "E_matrix": [
+        [
+          904136,
+          803287,
+          341958
+        ],
+        [
+          931992,
+          996939,
+          490811
+        ],
+        [
+          859034,
+          545391,
+          579104
+        ]
+      ],
+      "E_certificate": {
+        "size": 3,
+        "determinant_mod_prime": 509903,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "b281446545fe3a02af8d3b7bea516effae6d3f1481daba8f78b47ee6a2d7514c"
+      },
+      "e_matrix": [
+        [
+          0,
+          745486,
+          2439
+        ],
+        [
+          776992,
+          0,
+          99430
+        ],
+        [
+          60560,
+          457937,
+          0
+        ]
+      ],
+      "Z_matrix": [
+        [
+          951919,
+          233569,
+          346379
+        ],
+        [
+          257968,
+          996569,
+          507438
+        ],
+        [
+          678479,
+          734653,
+          938864
+        ]
+      ],
+      "Z_certificate": {
+        "shape": [
+          3,
+          3
+        ],
+        "sha256": "e4a305a7e38909a81fb0ad305c4423381cda91327ec4a6d84af753ba2c01f213",
+        "rank_certificate": {
+          "rank": 3,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 3,
+            "rows": [
+              0,
+              1,
+              2
+            ],
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "determinant_mod_prime": 345725,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 345725
+        }
+      },
+      "reconstruction_verified": true,
+      "ordinary_actual_kernel_controls": [
+        {
+          "z": 1,
+          "point": [
+            400014,
+            599989,
+            1
+          ],
+          "transported_columns": [
+            [
+              313200,
+              648590,
+              38213
+            ],
+            [
+              371895,
+              905642,
+              722469
+            ],
+            [
+              634871,
+              620765,
+              744370
+            ]
+          ]
+        },
+        {
+          "z": 2,
+          "point": [
+            24,
+            999978,
+            2
+          ],
+          "transported_columns": [
+            [
+              512501,
+              897765,
+              589740
+            ],
+            [
+              1008,
+              815698,
+              183297
+            ],
+            [
+              895494,
+              108452,
+              996060
+            ]
+          ]
+        }
+      ],
+      "column_labels": [
+        [
+          "J-r*(H-H1)",
+          2,
+          0
+        ],
+        [
+          "J-r*(H-H1)",
+          2,
+          1
+        ],
+        [
+          "J-r*(H-H1)",
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "old_blocks": 3,
+      "sector": 0,
+      "pole_ratios": [
+        603176,
+        639555,
+        916758
+      ],
+      "terminal_table_certificate": {
+        "size": 3,
+        "determinant_mod_prime": 501758,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "96c351281104718abd3ee91d4b35b6b31ed734788b7057bb5e7bd4f8853347bc"
+      },
+      "edge_records": [
+        {
+          "output": 0,
+          "z": 285715,
+          "point": [
+            0,
+            714289,
+            285715
+          ],
+          "row_forms": {
+            "1": [
+              666498,
+              142565,
+              425135
+            ],
+            "2": [
+              987715,
+              107749,
+              204463
+            ],
+            "3": [
+              869317,
+              764846,
+              52825
+            ]
+          },
+          "divided_Y_columns": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              174231,
+              300632,
+              405050
+            ],
+            [
+              270435,
+              248987,
+              991893
+            ]
+          ]
+        },
+        {
+          "output": 1,
+          "z": 901642,
+          "point": [
+            98362,
+            0,
+            901642
+          ],
+          "row_forms": {
+            "1": [
+              803215,
+              212915,
+              785680
+            ],
+            "2": [
+              208819,
+              429733,
+              86582
+            ],
+            "3": [
+              167589,
+              306043,
+              344445
+            ]
+          },
+          "divided_Y_columns": [
+            [
+              957069,
+              509106,
+              417412
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              10385,
+              768442,
+              554881
+            ]
+          ]
+        },
+        {
+          "output": 2,
+          "z": 0,
+          "point": [
+            800004,
+            200000,
+            0
+          ],
+          "row_forms": {
+            "1": [
+              399990,
+              999851,
+              599965
+            ],
+            "2": [
+              599901,
+              398774,
+              199695
+            ],
+            "3": [
+              199183,
+              590173,
+              997547
+            ]
+          },
+          "divided_Y_columns": [
+            [
+              102025,
+              605401,
+              551959
+            ],
+            [
+              674812,
+              132827,
+              965714
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        }
+      ],
+      "E_matrix": [
+        [
+          557095,
+          737755,
+          430041
+        ],
+        [
+          991311,
+          490829,
+          773397
+        ],
+        [
+          573893,
+          27600,
+          478480
+        ]
+      ],
+      "E_certificate": {
+        "size": 3,
+        "determinant_mod_prime": 458582,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "cfb74b5b3a55da848a9c86ddbd005212f0f42f71d94e8f87602121aa8487ef17"
+      },
+      "e_matrix": [
+        [
+          0,
+          608029,
+          765420
+        ],
+        [
+          640526,
+          0,
+          234083
+        ],
+        [
+          825165,
+          184012,
+          0
+        ]
+      ],
+      "Z_matrix": [
+        [
+          304223,
+          343184,
+          851609
+        ],
+        [
+          802856,
+          806244,
+          261813
+        ],
+        [
+          331779,
+          49945,
+          781732
+        ]
+      ],
+      "Z_certificate": {
+        "shape": [
+          3,
+          3
+        ],
+        "sha256": "8d9bd0fc0475ef293d9ebdbc5ca880cac0305f5b72b591a6d0717ab2aec60520",
+        "rank_certificate": {
+          "rank": 3,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 3,
+            "rows": [
+              0,
+              1,
+              2
+            ],
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "determinant_mod_prime": 378997,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 378997
+        }
+      },
+      "reconstruction_verified": true,
+      "ordinary_actual_kernel_controls": [
+        {
+          "z": 1,
+          "point": [
+            400014,
+            599989,
+            1
+          ],
+          "transported_columns": [
+            [
+              177653,
+              534064,
+              288286
+            ],
+            [
+              46335,
+              678075,
+              275593
+            ],
+            [
+              796342,
+              377614,
+              826050
+            ]
+          ]
+        },
+        {
+          "z": 2,
+          "point": [
+            24,
+            999978,
+            2
+          ],
+          "transported_columns": [
+            [
+              775733,
+              473728,
+              750545
+            ],
+            [
+              448904,
+              784571,
+              766531
+            ],
+            [
+              815310,
+              686334,
+              498362
+            ]
+          ]
+        }
+      ],
+      "column_labels": [
+        [
+          "J-r*(H-H1)",
+          3,
+          0
+        ],
+        [
+          "J-r*(H-H1)",
+          3,
+          1
+        ],
+        [
+          "J-r*(H-H1)",
+          3,
+          2
+        ]
+      ]
+    }
+  ],
+  "scope": "Sector0, one saved fixture, t=2,3 only. Sampled singularity would not prove an identically singular family.",
+  "resource_limits": {
+    "seconds": 28,
+    "maximum_rss_bytes": 99614720
+  },
+  "elapsed_seconds": 0.002957500000000002,
+  "maximum_rss_bytes": 18399232
+}

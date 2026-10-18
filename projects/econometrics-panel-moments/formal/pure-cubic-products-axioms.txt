@@ -1,0 +1,42 @@
+'PanelMoments.PureCubicProducts.pureProduct_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PureCubicProducts.pureProduct_snoc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PureCubicProducts.pureProduct_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PureCubicProducts.productSpan_le_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PureCubicProducts.productSpan_finiteDimensional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.PureCubicProducts.mem_vanishingSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PureCubicProducts.pureProduct_vanishes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.PureCubicProducts.productSpan_le_vanishingSpace' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.PureCubicProducts.blockFactor_mul_mem_productSpan' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.PureCubicProducts.cubicCombination_mem_productSpan' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.PureCubicProducts.productSpan_eq_vanishingSpace_succ' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.PureCubicProducts.productSpan_eq_vanishingSpace_of_four' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+       15.42 real         0.93 user         2.31 sys
+          2010628096  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               75118  page reclaims
+               90528  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               15212  voluntary context switches
+               74387  involuntary context switches
+         18908602496  instructions retired
+          9647552741  cycles elapsed
+           328273152  peak memory footprint

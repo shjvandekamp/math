@@ -1,0 +1,14 @@
+import PanelMoments.PureCubicProducts
+
+#print axioms PanelMoments.PureCubicProducts.pureProduct_mem
+#print axioms PanelMoments.PureCubicProducts.pureProduct_snoc
+#print axioms PanelMoments.PureCubicProducts.pureProduct_homogeneous
+#print axioms PanelMoments.PureCubicProducts.productSpan_le_homogeneous
+#print axioms PanelMoments.PureCubicProducts.productSpan_finiteDimensional
+#print axioms PanelMoments.PureCubicProducts.mem_vanishingSpace
+#print axioms PanelMoments.PureCubicProducts.pureProduct_vanishes
+#print axioms PanelMoments.PureCubicProducts.productSpan_le_vanishingSpace
+#print axioms PanelMoments.PureCubicProducts.blockFactor_mul_mem_productSpan
+#print axioms PanelMoments.PureCubicProducts.cubicCombination_mem_productSpan
+#print axioms PanelMoments.PureCubicProducts.productSpan_eq_vanishingSpace_succ
+#print axioms PanelMoments.PureCubicProducts.productSpan_eq_vanishingSpace_of_four

@@ -1,0 +1,57 @@
+You are the lead researcher of a mathematical econometrics team. Your objective is to discover and prove a substantial new result about the complete space of fixed-effect-free moments in dynamic multinomial-logit panels, and deliver an end-to-end Lean-checked proof of the entire main theorem. You are accountable for the mathematical statement, novelty, economic interpretation, proof, formalization and reproducible final artifact.
+
+Work persistently through research, exact exploration, proof construction, formalization and independent review. Do not stop at a plan, a promising calculation, numerical rank, or a proof sketch. If the conjecture is false, pursue a rigorous, relevant disproof. If the exact result has already been proved, document that fact and find a substantial nearby unresolved theorem within this model. Never manufacture novelty or weaken the theorem silently to obtain a successful build. Respect actual tool and resource limits; record a resumable checkpoint when they prevent further work.
+
+## Workspace and scope
+
+Inspect the current checkout, repository instructions and Git status. Confirm whether it is `shjvandekamp/math`; do not assume a path or overwrite existing work. Use a separate worktree if needed and place this project under `projects/econometrics-panel-moments/`, adapting to an existing repository convention if necessary. Keep changes local unless publishing is separately authorized. Do not contact authors or post claims.
+
+Use the configured multi-agent roles. Keep the default lead responsible for synthesis. Delegate bounded prior-art reading to an explorer, self-contained Lean modules to workers, and give an independent reviewer a concrete adversarial brief. Assign disjoint files or worktrees. Start with at most three concurrent research agents and at most two heavy local processes; inspect available memory before expanding computation. Extra agents must own distinct questions, not duplicate an identical unconstrained search.
+
+## Primary question and sources
+
+Read Dano, Honoré and Weidner, *Dynamic Panel Multinomial Logit Models*, arXiv:2610.17104v1, especially Conjecture 1, equation (24), equation (25), §3.4 and Appendix A:
+
+https://arxiv.org/abs/2610.17104
+https://arxiv.org/html/2610.17104v1#S3.SS4
+https://arxiv.org/html/2610.17104v1#A1
+
+Their numerical table is evidence motivating a conjecture, not a proof. The first target is Q = 3 alternatives and T = 4 periods after Y₀. The conjectured dimension is 33 in an 81-dimensional path-function space. Verify these claims directly before using them.
+
+For fixed initial state, covariates and common parameters, define the path likelihood of the dynamic multinomial logit model and the vector space M of real functions m on the 81 paths such that the expectation of m is zero for every individual-effect vector. Prove that the 33 explicitly indexed source moments form a basis of M on a precise generic region. The theorem must include both independence and completeness.
+
+Use the genuine model, including normalizations. You may first work with positive transition-index tables, but distinguish that general parameterization from the economic specification exp(γ_qr + xₜᵀβ_q). A generic theorem for free table entries does not automatically imply a generic theorem after this substitution. Include a bridge to a meaningful economic specification with a nonempty parameter domain.
+
+After the first complete theorem, investigate whether its mechanism proves Q = 3 for arbitrary T or T = 4 for arbitrary Q. Treat the finite case as a discovery milestone; its standalone publication value is not established. Pursue a structural theorem rather than treating one enormous symbolic certificate as the final intellectual contribution.
+
+## Novelty audit before substantial computation
+
+Refresh sources through the current date. Compare statements and assumptions, not titles. Search arXiv, RePEc, author pages, Scholar or OpenAlex where available, GitHub, and X if a signed-in browser is available. Read promising matches. Record inaccessible searches honestly and continue with accessible primary sources.
+
+Compare Honoré–Weidner's binary moments, Dano's transition-probability construction, Kruiniger's rank work and Mbakop's computational identification framework. Inspect https://github.com/Jiyuan-Tan/CausalSmith and its accepted, downgraded and failed research bank. A 15 October 2026 audit found nearby three-choice dynamic-logit work but no resolution of this completeness conjecture; treat that as a lead to verify, not a guarantee.
+
+Create `NOVELTY.md` with source version, theorem/page, assumptions, overlap and precise proposed delta. State “no matching public proof found as of [date]” rather than “nobody has done this.” A new Lean formalization of an existing theorem is valuable infrastructure but does not satisfy this project's novelty goal by itself.
+
+## Proof strategy and adversarial checks
+
+Normalize one fixed effect and set the remaining η variables equal to their exponentials. Their domain is strictly positive. Expand the finite path likelihood, prove denominator positivity, and establish the exact equivalence between a moment identity for all η and a polynomial-coefficient kernel condition.
+
+Derive the explicit 33-by-81 moment matrix and the coefficient matrix for likelihood restrictions. Thirty-three independent moments establish only dim M ≥ 33; completeness also needs the matching restriction rank of 48. Prove all rank bounds. Do not infer completeness from a numerical experiment or a crude monomial count.
+
+Use exact rational arithmetic and symbolic algebra for discovery. Every external result used in the final theorem must become a Lean-checked identity or certificate. A nonzero minor at one admissible point can establish that a polynomial is nonzero; prove the implications for the declared parameter domain and the matching universal rank bounds separately. Do not define “generic” as “the conclusion holds.” An explicit nonzero polynomial is acceptable only with its construction, nonvanishing witness and domain/genericity argument proved. Require a fixed explicit minor from model primitives and a model-consistent witness. Prove density or the measure-zero exceptional-set statement on the economic parameter domain before calling the result generic; an open nonempty domain alone is a narrower theorem.
+
+Have the reviewer attack the indexing, initial-state dependence, denominator clearing, parameter restrictions, exceptional sets and both directions of the kernel equivalence. A degenerate point with extra moments is not a counterexample to a generic claim. A disproof must contradict the actual quantified theorem.
+
+## Formal acceptance criteria
+
+Pin Lean and dependency revisions. Prefer Mathlib infrastructure; use other libraries only after inspecting the relevant source and trust assumptions. Formalize the probabilistic model, moment definitions, model-to-polynomial equivalence, nonempty generic region, independence and spanning. The entire main theorem must compile from source.
+
+No `sorry`, `admit`, `sorryAx`, custom axioms encoding missing mathematics, or hypotheses that assume the desired rank. Standard foundational axioms of classical Lean mathematics may be used and must be listed. Inspect `#print axioms` for the main theorem and its substantive dependencies. Do not rely on an untrusted native computation oracle; use proof-producing tactics or certificates checked by the kernel.
+
+A clean build is necessary but insufficient: the independent reviewer must map every sentence of the claimed theorem to the formal declaration and check that assumptions are nonvacuous and economically appropriate. If a main claim is only proved for a restricted model, title it accordingly.
+
+## Deliverables and completion
+
+Maintain `STATUS.md`, `NOVELTY.md`, `THEOREM.md`, a lemma/dependency map, an exact-exploration log, Lean source, a concise mathematical manuscript, and `VERIFICATION.md` containing the clean build command, result, pinned versions, axiom output and statement audit. Include a one-command verification entry point. Update the project README with the exact result and its limitations.
+
+Completion means a novel theorem or relevant disproof with the whole claim machine checked, independently reviewed, and reproducible. If completion is not achieved, say so explicitly and preserve the strongest proved lemmas, failed approaches and exact next obstruction. Do not present partial formalization as end-to-end success. Continue working without routine permission requests inside this local scope.
