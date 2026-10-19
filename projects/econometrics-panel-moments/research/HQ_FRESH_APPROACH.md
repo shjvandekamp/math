@@ -1,5 +1,30 @@
 # A fresh approach to det H_q (full equation-(24) independence, Q = 3)
 
+## PROOF DASHBOARD (read this first after any restart)
+
+**Target.** For Q = 3, every T >= 1 and every initial outcome, the
+equation-(24) family is a basis of the fixed-effect-free moment space M_T
+for (gamma, beta, x) in an open dense subset of the economic domain
+pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
+
+**Lemma tree** (status as of 19 Oct 2026):
+
+| id | statement | status |
+|---|---|---|
+| L0 | dim M_T = &#124;family&#124; on the economic generic region | PROVED (project, Lean) |
+| L1 | exact split: T-family = 3 lifts of (T-1)-family + E/F quotient images in W_n, n = T-2 | PROVED (project) |
+| L2 | (E,B) basis of W_n; new columns independent iff det R_n != 0 | PROVED (project) |
+| L3 | economic domain is Zariski dense in the product-form family A_t = G' diag(u_t); one nonzero point per n suffices | to write (elementary) |
+| L4 | append the newest block last: old x old block of R_{n+1} is Gamma R_n, Gamma explicit invertible; new-head rows vanish on old columns | EXACT-CHECKED (hq_fresh_append.py), proof is 3 lines (sec. 2) |
+| L5 | det R_{n+1} != 0 given det R_n != 0 (Schur complement on the 18n new rows/columns) | CONJECTURE (the gap) |
+
+**Next-steps queue** (top = next):
+1. Write the expert plan (sec. 2) with routes and kill criteria.
+2. Fast modular R_n (python-flint) for n <= 8 at economic points.
+3. Valuation/Smith-form explorer for det R_n along economic torus degenerations.
+
+**Tools.** math/.venv has python-flint 0.9, sympy 1.14, numpy (gitignored).
+
 Working note, started 18 October 2026. Everything here is labelled
 PROVED, EXACT-CHECKED or CONJECTURE. Nothing in this note is Lean
 checked. The goal is the one open problem of the project: generic
@@ -94,9 +119,74 @@ static model. (ii) Time variation is essential. (iii) The product
 w_q^(t+1) (a point of the economic family itself). These are finite
 checks for T <= 6 only; they prove nothing for T >= 7.
 
+### 1.1 Degenerate product-form points (EXACT-CHECKED, single points)
+
+`exploration/hq_fresh_degenerations.py` (re-run 19 Oct). Table
+pi_t(q,r) = g(q,r) u_t(q); a full modular rank at one rational point
+proves generic independence for every family containing that point; a
+drop proves nothing. Rank / family size:
+
+| case | T=4 | T=5 | T=6 |
+|---|---:|---:|---:|
+| generic G, generic u | 33 | 162 | 606 |
+| G = J + I (S_3-symmetric), generic u | 33 | 162 | 606 |
+| project witness G, u = (1,2,5)^(t+1) (economic point) | 33 | 162 | 606 |
+| Vandermonde (conic) G, generic u | 33 | 162 | 606 |
+| u_1 = u_0 (two earliest periods equal) | 33 | 162 | 606 |
+| u_{T-1} = u_{T-2} (two latest blocks equal) | 33 | 144 | 516 |
+| G with one zero entry | 18 | 81 | 279 |
+| G lower / upper triangular, G = I | 12/0/0 | 38/0/0 | 91/0/0 |
+
+The two earliest periods never enter the top quotient W_n (they are
+peeled by the lift), so u_1 = u_0 is harmless; equal *quotient* blocks
+make the line configuration non-reduced and lose rank. Zeros in G
+destroy rank massively: monomial-limit (tropical) arguments must keep
+all nine g(q,r) at comparable leading order or account for this.
+
+### 1.2 det R_3 (EXACT-CHECKED, two points)
+
+`exploration/hq_fresh_residue_det.py`: R_2 = I exactly; the E/B
+expansion of every F column is reconstructed exactly; det R_3 is a
+ratio whose denominator is a product of natural geometric quantities
+(cross-point coordinates, third-line values) and whose numerator has a
+86-100 digit cofactor free of natural primes. So there is no product
+formula at generic points. This does *not* exclude a monomial leading
+term under a degeneration (every nonzero polynomial has one under a
+generic weight); it only excludes exact triangularity.
+
 ## 2. Route chosen
 
-[to be filled as the work proceeds]
+### 2.0 Append-the-newest-block structure (L4; PROVED, EXACT-CHECKED)
+
+Order blocks by time, 0..n-1 old, n new (latest). The suffix of every
+old column F_{t,s,a,b} is increasing, so the new kernel enters as the
+*last* factor: F'_{t,s,a,b} = h (I - W K_n), h = X_a K_t(a,b) e_b,
+W = old word.
+
+*(A1)* At an old cross point P, K_n is regular and h has a single pole,
+so rho_P(F') = -[L L' h W]_P K_n(P) = rho_P(F) K_n(P). Right
+multiplication by the stochastic K_n(P) preserves the zero-sum plane
+and has determinant det K_n(P) = det A_n prod_i P_i / prod_a L_{na}(P)
+there. Hence the old x old block of R_{n+1} is Gamma R_n with Gamma
+block diagonal and invertible on the geometric open set.
+
+*(A2)* At a new cross point P = L_{uc} cap L_{nd} the only new pole of
+F' is row d of K_n, whose residue is e_d (x) v_{nd}. So rho_P(F') is a
+multiple of v_{nd}(P): the new-head rows (coefficients of B_{n,u,d,c})
+vanish on every old column. With rows (old, N_h, N_s) and columns
+(old, F_{n,s,.,.}, F_{t,n,.,.}):
+
+    R_{n+1} = [ Gamma R_n  Y1   Y2  ]
+              [ 0          Z11  Z12 ]
+              [ X2         Z21  Z22 ]
+
+`exploration/hq_fresh_append.py` checks (A1) and (A2) exactly
+(1620 and 1782 identities at n = 2, 3). Consequently
+det R_{n+1} = det Gamma det R_n det S_n with the 18n x 18n Schur
+complement S_n; the induction needs only det S_n != 0. This is the
+precise form of L5.
+
+[plan and routes: next subsection]
 
 ## 3. Routes tried and why they failed
 
