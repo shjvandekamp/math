@@ -384,7 +384,11 @@ are bases for all 2^n sets H, n <= 6 (all principal head-block minors of R_DHW
 nonzero). One-head blocks D_{t,a}: rank = matching number (CONJECTURE T,
 EXACT-CHECKED n = 4..6). Head-block dominance fails (block-Jacobi spectral radius
 up to ~1100). Near-identity limit killed (defect from equal letter sets).
-In the vertex limit of a non-newest block the head cross blocks do NOT vanish
+For a NON-newest block only the vertex direction (one state suppressed) is
+nondegenerate; every direction with a unique dominant state degenerates (Smith
+sums 18, 39/25, 51-57 for n = 3, 4, 5), so single-block torus degenerations
+cannot shrink the head cross blocks (the multiplier mu^t_ab(P) ~ eps^{w_b - min w}
+is small only for b = the suppressed state). In the vertex limit of a non-newest block the head cross blocks do NOT vanish
 (many zero-valuation entries after rescaling), so that limit is not
 block-triangular by heads.
 
