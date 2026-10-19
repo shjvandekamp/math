@@ -20,6 +20,7 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | K  | ker Lambda_n = headless differences ⊕ j=0 columns; induction step <=> 9n x 9n map T invertible | PROVED + EXACT-CHECKED (sec. 4.7) |
 | C  | generic basis for every T <= 20 (det R_n != 0 at an economic point, n <= 18) | EXACT-CHECKED certificate (sec. 6.2) |
 | Q4 | T = 4, every Q >= 3: the (24) family is independent (spanning open for Q >= 4) | PROVED (sec. 6.1) |
+| Q3 | T = 3, every Q: dim M_3 = Q, so (45) is a basis (DHW leave the upper bound open for Q >= 3) | PROVED (sec. 6.3) |
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
@@ -563,6 +564,71 @@ j >= 2 (double heads mu^{t1} mu^{t2}) appear.
 hq_fresh_certificate.py: det R_n != 0 mod 2^61-1 at one genuine economic point
 for n = 2..18, so the equation-(24) family is a generic basis for every
 T <= 20 (finite result; raw T = 7 matrix also full rank, 2013 x 2187).
+
+### 6.3 T = 3, every Q: the dimension theorem (PROVED)
+
+DHW prove independence of the Q moments (45) at T = 3 and leave the matching
+upper bound open for Q >= 3 (Appendix A.1: the bound (44) is uninformative).
+
+**Proposition.** For every Q >= 2, on an open dense subset of the economic
+domain, dim M_3 = Q; hence the (24) family (= (45)) is a basis of M_3.
+
+*Setting.* By sec. 4.10, M_3 = ker( mu : S_1 (x) H_2 (x) H_3 -> S_{2Q+1} ),
+with h_tr = eta_r prod_{s != r} L_ts (r = previous state), D_t = prod_s L_ts,
+so h_tr L_tr = eta_r D_t. An element of the source is sum_{r,s} phi_rs (x) h_2r (x) h_3s
+with phi_rs in S_1. Base locus of H_3: B = union of Z_ss' = {L_3s = L_3s' = 0}
+(s < s') and Z'_s = {eta_s = L_3s = 0}; every h_3s and D_3 vanish on B.
+
+*Genericity (G).* Write coefficient vectors: after X_i -> X_i / u_3(i),
+L_3s <-> g_s := g(., s), L_2r <-> w ⊙ g_r with w = u_2/u_3 = exp((x_2 - x_3) beta),
+eta_s <-> e_s. Conditions (Q >= 3; Q = 2 is known):
+(G1) rank[w⊙g_r, e_r] = 2 and rank[g_r, g_s] = 2 (s != r)   [L_2r does not divide h_2r];
+(G2) rank[w⊙g_r, g_s, g_s'] = 3 (s != s') and rank[w⊙g_r, e_s, g_s] = 3
+     [L_2r vanishes identically on no component Z_ss', Z'_s of B];
+(G3) rank[g_r, g_s, g_s'] = 3 and rank[g_r, g_s, e_r] = 3 (r, s, s' distinct)
+     [on Pi_r = {L_3r = 0} the forms L_3s (s != r) and eta_r restrict to pairwise
+     non-proportional nonzero forms; the components of B have codimension 2].
+Each is the nonvanishing of some minor in (g, w); (g, w) ranges over the positive
+orthant, which is Zariski dense in C^{QxQ} x C^Q (x_2 - x_3 = 1, beta = log w),
+so one complex witness per condition suffices. Witnesses (1 = all-ones vector,
+J = all-ones matrix, i a state outside the named ones): g = J, w = 1 for
+rank[w⊙g_r, e_r]; g = I, w = 1 for rank[g_r, g_s], rank[g_r, g_s, g_s'] and
+rank[w⊙g_r, g_s, g_s'] with r not in {s, s'}; g = J + I, w = 1 for
+rank[g_r, g_s, e_r] and rank[w⊙g_r, e_s, g_s] (r != s); g = J + I, w = 1 + e_i for
+rank[w⊙g_r, g_r, g_s'] (i not in {r, s'}) and rank[w⊙g_r, e_r, g_r] (i != r).
+(Each reduces to independence of 1, e_a, e_b or of e_i, e_r - e_s', 1 + e_r.)
+
+*Single-block facts* (Q forms, P^{Q-1}; use (G3)).
+(i) S_1 (x) H_3 -> S_{Q+1} is injective. If sum_r phi_r h_3r = 0, reduce mod
+the prime L_3r: phi_r h_3r = 0 mod L_3r and L_3r does not divide h_3r, so
+phi_r = lambda_r L_3r; then D_3 sum lambda_r eta_r = 0, so lambda = 0.
+(iii) I(B)_Q = H_3 ⊕ <D_3>. For f in I(B)_Q, f|Pi_r vanishes on the Q distinct
+hyperplanes {L_3s = 0} (s != r) and {eta_r = 0} of Pi_r, hence equals c_r h_3r|Pi_r
+(degree Q); h_3r' vanishes on Pi_r for r' != r, so f - sum c_r h_3r vanishes on
+every Pi_r and is d D_3. Directness: restrict to Pi_r.
+(ii) I(B)_{Q+1} = S_1 H_3. Same restriction gives f = sum l_r h_3r + l D_3
+(l_r, l in S_1), and l D_3 = sum_s l_s' L_3s h_3s in S_1 H_3 (write l = sum l_s' eta_s).
+
+*Proof of the proposition.* Let sum phi_rs h_2r h_3s = 0, psi_r := sum_s phi_rs h_3s.
+(1) Mod L_2r only the r-term survives; by (G1) L_2r | psi_r, psi_r = L_2r g_r,
+and dividing by D_2: sum_r eta_r g_r = 0.
+(2) psi_r vanishes on B; each component is a linear space (prime ideal) on which
+L_2r is not identically zero (G2), so g_r in I(B)_Q = H_3 ⊕ <D_3> (iii):
+g_r = sum_s c_rs h_3s + d_r D_3.
+(3) 0 = sum_r eta_r g_r = sum_{r,s} c_rs eta_r h_3s + sum_s d_s L_3s h_3s
+    = sum_{r,s} (c_rs + d_s A_3(s,r)) eta_r h_3s,
+so by (i) c_rs = -d_s A_3(s,r): the relation is determined by d in k^Q
+(psi_r = L_2r g_r(d), and phi_rs by psi_r through (i)), and d = 0 gives the
+zero relation (directness in (iii)). Conversely, for every d, g_r(d) lies in I(B)_Q,
+so psi_r := L_2r g_r(d) lies in I(B)_{Q+1} = S_1 H_3 (ii), and reversing (3)
+and (1) gives a relation. Hence dim M_3 = Q exactly; with DHW Proposition 2
+(independence of (45)) the family is a basis. ∎
+
+This also gives an independent proof of the lower bound. EXACT-CHECKED
+(exploration/hq_fresh_generalQ_T3.py, mod 2^61-1): (i)-(iii) at random lines for
+Q = 3..6 (vanishing on B imposed at enough random points of each component),
+and dim M_3 = Q directly from the raw likelihood polynomials at economic
+points for Q = 2..6.
 
 ## 5. Remaining obstruction
 
