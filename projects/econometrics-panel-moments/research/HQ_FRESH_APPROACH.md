@@ -7,21 +7,22 @@ equation-(24) family is a basis of the fixed-effect-free moment space M_T
 for (gamma, beta, x) in an open dense subset of the economic domain
 pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 
-**Lemma tree** (status as of 19 Oct 2026):
+**Lemma tree** (status as of 19 Oct 2026, evening):
 
 | id | statement | status |
 |---|---|---|
 | L0 | dim M_T = &#124;family&#124; on the economic generic region | PROVED (project, Lean) |
 | L1 | exact split: T-family = 3 lifts of (T-1)-family + E/F quotient images in W_n, n = T-2 | PROVED (project) |
 | L2 | (E,B) basis of W_n; new columns independent iff det R_n != 0 | PROVED (project) |
-| L3 | economic domain is Zariski dense in the product-form family A_t = G' diag(u_t); one nonzero point per n suffices | to write (elementary) |
-| L4 | append the newest block last: old x old block of R_{n+1} is Gamma R_n, Gamma explicit invertible; new-head rows vanish on old columns | EXACT-CHECKED (hq_fresh_append.py), proof is 3 lines (sec. 2) |
-| L5 | det R_{n+1} != 0 given det R_n != 0 (Schur complement on the 18n new rows/columns) | CONJECTURE (the gap) |
+| L3 | economic domain Zariski dense in product-form family; one nonzero point per n suffices | PROVED (sec. 2.1), to write in HQ_PROOF |
+| L4 | append the latest block: old x old block of R_{n+1} is Gamma R_n; new-head rows vanish on old columns | PROVED + EXACT-CHECKED (sec. 2.0) |
+| A  | *standard-tail family* G_{t,r,a,b} = B_{t,r,a,b} K_{>r} with E is a basis of W_n for all n, det R^G_{n+1} = det Gamma det R^G_n prod kappa | PROVED (sec. 4) + EXACT-CHECKED (hq_fresh_standard_tail.py) |
+| L5 | det R_n != 0 for the equation-(24) family F, all n; equivalently det C_n != 0, C_n = transition F -> G | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
-1. Write the expert plan (sec. 2) with routes and kill criteria.
-2. Fast modular R_n (python-flint) for n <= 8 at economic points.
-3. Valuation/Smith-form explorer for det R_n along economic torus degenerations.
+1. Find a family closed under appending that is triangular over F (F = F~ + Omega, sec. 4.3).
+2. Inductive structure of C_n (F -> G transition) using Theorem A coordinates.
+3. Write HQ_PROOF.md skeleton with L0-L4 and Theorem A fully proved.
 
 **Tools.** math/.venv has python-flint 0.9, sympy 1.14, numpy (gitignored).
 
@@ -186,12 +187,158 @@ det R_{n+1} = det Gamma det R_n det S_n with the 18n x 18n Schur
 complement S_n; the induction needs only det S_n != 0. This is the
 precise form of L5.
 
-[plan and routes: next subsection]
+### 2.1 Expert plan (written 19 Oct 2026, before the new computations)
 
-## 3. Routes tried and why they failed
+**Is H_q the right object?** H_q came from a *prepend* elimination, which
+creates the correction Z_T. Appending the latest block instead gives the
+exact block Gamma R_n (sec. 2.0), so the right object is the Schur factor
+f_n := det R_{n+1} / (det Gamma det R_n) = det S_n, a rational function
+of the newest block's torus position u_n with the old blocks as
+parameters. Proving f_n not identically zero for each n, at one point
+of the product-form family, is the whole induction step (L5).
 
-[to be filled]
+**Economic genericity is free (L3).** pi_t(q,r) = g(q,r) u_t(q) with
+u_t = exp(x_t beta). For beta with Q-linearly independent coordinates,
+x -> (exp(x_t beta))_t is Zariski dense in the torus^T (distinct
+exponentials are linearly independent), so a polynomial vanishing on
+the economic domain vanishes on the whole product-form family. Hence
+one nonzero point of det R_n on the product-form family (complex or
+real, possibly a limit point handled by valuations) gives an open dense
+economic region. Every degeneration below stays in that family.
 
-## 4. Remaining obstruction
+**What an interpolation geometer sees.** W_{n+1} = H^0(T(3n+1) ⊗ I_Z),
+and the newest block's cubic C gives the residual sequence
+0 -> W_n --(·C)--> W_{n+1} -> (residues on the three new lines) -> 0
+(the left map is the inclusion of vectors without new poles). This is
+Horace with respect to the cubic of the new block. Its defect is that
+appended old columns are not in W_n; their traces are *longitudinal*
+(proportional to v_{nd} on L_{nd}). Specialising the new block toward a
+coordinate line (torus boundary) is the differential-Horace move: the
+limit splits into the old plane and a thin strip around the line, where
+old kernels become *binary* (state i never entered) and concurrent. The
+project already owns binary theorems; the strip is where they belong.
 
-[to be filled]
+**Routes, in order, each with a kill criterion fixed in advance.**
+
+1. *Newest-block torus degeneration* (primary). Old blocks generic and
+   fixed; u_n = lambda(eps) u_0 along weight w (coordinate, two-equal,
+   generic). Compute the eps-valuation and leading coefficient of f_n
+   (Laurent elimination over F_p((eps))), and the Smith exponents of
+   R_{n+1}(eps). Success: some w where the leading coefficient is a
+   product of natural nonzero quantities, or equals a determinant of a
+   binary/old-type matrix already known to be nonzero, uniformly in n.
+   Kill: for n = 2, 3, 4 and all 13 coordinate-type weights the
+   leading coefficient carries a growing irreducible factor (no natural
+   factorisation).
+2. *Full staircase degeneration* along the economic subgroup:
+   u_t = lambda(eps)^{k_t}, k_t rapidly increasing (nested limits).
+   Success/kill as in route 1, for det R_n itself.
+3. *Intrinsic head map.* The Schur factor depends on the old family
+   only through the 9n head sums lambda_{tab} = sum_s (R_n^{-1} x)_{tsab}.
+   Compute Lambda_n = (head sums) o R_n^{-1} and test whether it equals
+   a short combination of natural functionals (residues/values at base
+   points, vertices). Success: closed formula, then the induction is
+   explicit. Kill: Lambda_n dense and unstructured at n = 3, 4.
+4. *Raw-family initial forms* (algebraic statistics). Source moments are
+   cylinder functions (each depends on <= j + 8 coordinates); test
+   whether economic tropical weights give independent initial forms in
+   the tensor basis {1, e_1, e_2}^{⊗T}. Kill: no weight among 500 random
+   and all structured economic weights gives independence at T = 5.
+
+**Software.** python-flint (nmod_mat, nmod_poly) for exact modular and
+Laurent-series linear algebra; Fraction/fmpq for exact identities;
+Singular / Macaulay2 for Hilbert functions and H^0 of T(k) ⊗ I_Z.
+
+**Evidence a referee would accept.** (a) every identity used re-checked
+by one script at random rational points; (b) finite certificates by
+two independent code paths (raw path matrix vs quotient R_n);
+(c) a fresh-subagent review of the final proof, recorded.
+
+## 3. Routes tried and why they failed (19 Oct 2026)
+
+All finite computations below are exact (fmpq or F_p with p = 2^61-1) at
+product-form points; l-adic valuations use epsilon = l = 10007 (1009 as a
+second prime). They are evidence, not proofs.
+
+* **Full rank, evidence.** det R_n != 0 at a genuine economic point
+  (random g, u_t = (1,3,7)^t) for every n <= 8, i.e. T <= 10
+  (hq_fresh_fast.py).
+* **Route 1, newest-block torus degeneration: KILLED.** Only the vertex
+  direction (new lines concurrent at a coordinate vertex) keeps
+  v(det R_{n+1}) = 0, and only for n <= 3. Smith exponents of R_{n+1}(eps)
+  are -1^(3n), 0^(...), 1^(3n + 9n(n-3)/2): the defect is exactly
+  9n(n-3)/2 = (old cross pairs) - 9n, since Gamma loses one rank per old
+  cross pair and the new block can repair at most 9n. All exponents lie
+  in {-1,0,1} (first-order jets suffice), but the first-order map is as
+  large as the problem (hq_fresh_newest_degen.py, hq_fresh_smith.py).
+* **Global degenerations: KILLED at leading order.** Smith defects for
+  n = 3,4,5: persistence G = D + eps H: 30, 63, 117; weak state dependence
+  G = (c_i) + eps H: 30, 73, 185; staircases u_t = eps^{x_t (0,1,2)}: hundreds;
+  vertex-cycling blocks: 0, 17, 52 (hq_fresh_global_degen.py).
+* **Single dominant term: KILLED.** At random tropical points the min-cost
+  matching value of the valuation matrix of R_3 is strictly below
+  v(det R_3) in 28/30 trials (hq_fresh_tropical.py): canonical coordinates
+  cancel tropically.
+* **Route 3, intrinsic head map: KILLED.** Lambda_n = (head sums) o R_n^{-1}
+  is 100% dense at n = 4, 5, both in canonical and in standard-tail
+  coordinates.
+* **Transverse residue tau on the new lines** has rank exactly 9n on the 18n
+  new columns (3n per new line), n = 2..5; T_n - I is dense in all 9x9
+  blocks. So no shortcut through tau alone.
+
+## 4. Theorem A: a basis closed under appending (PROVED)
+
+Notation: blocks 0..n-1 in time order; for t != r put
+K_{>r} := prod_{u > r, u != t, increasing} K_u (empty product = I) and
+
+    G_{t,r,a,b} := B_{t,r,a,b} K_{>r} = h_{tab}(I - K_r) K_{>r},   h_{tab} = X_a K_t(a,b) e_b.
+
+**Theorem A.** On the geometric open set of the product-form family,
+{E_{s,a}} ∪ {G_{t,r,a,b}} is a basis of W_n for every n >= 1, and in
+canonical coordinates
+det R^G_{n+1} = det Gamma_n · det R^G_n · prod_{u<n, c, d} kappa_{u,c,d}, with
+kappa_{u,c,d} = [(v_uc(P) K_{>u}(P)) ∧ v_nd(P)] / [v_uc(P) ∧ v_nd(P)],
+P = L_uc ∩ L_nd, Gamma_n = prod over old cross pairs of det K_n(P).
+
+*Proof.* (i) Membership: W_S K_u ⊂ W_{S ∪ {u}} for a block u not in S (the
+new numerators vanish at the new block's six base points and keep the
+old base-point zeros), and W_S ⊂ W_{S'} for S ⊂ S'; so G ∈ W_n.
+(ii) Appending block n (latest): for old t, r the tail gains K_n as its
+last factor, so G^{(n+1)}_{t,r} = G^{(n)}_{t,r} K_n exactly; the new members
+are G_{t,n} = B_{t,n} (empty tail) and G_{n,r} = B_{n,r} K_{>r}.
+(iii) Canonical coordinates (rows old | N_h | N_s): G K_n has rows
+(Gamma R^G_n | 0 | *) by (A1), (A2); B_{t,n} is a canonical basis vector
+(a unit vector on the N_s rows); B_{n,r,d,b} K_{>r} has a double pole at
+P = L_uc ∩ L_nd only if u = r (row c = b of K_r) or u > r (u in the tail).
+So its N_h block is lower triangular in (u >= r) and the diagonal block
+u = r is diag over c of kappa_{u,c,d} (normalisations cancel). Eliminating
+the N_s rows with the unit columns leaves the block upper-triangular
+matrix [[Gamma R^G_n, *],[0, N_h]], giving the product formula.
+(iv) Nonvanishing: Gamma_n != 0 on the geometric open set. For kappa, fix
+the old blocks and a point P on L_uc; as u_n ranges over the torus,
+L_nd = l_d ∘ u_n ranges over all lines with nonzero coefficients, so
+v_nd(P) ranges over all zero-sum directions; choosing one not parallel
+to v_uc(P) nor to v_uc(P)K_{>u}(P) (nonzero, K_{>u}(P) invertible) gives
+kappa != 0. A product of nonzero rational functions on the irreducible
+parameter space is nonzero. Induction from R^G_1 (empty) completes it. ∎
+
+EXACT-CHECKED: hq_fresh_standard_tail.py verifies the ratio is exactly 1
+and the triangular/diagonal N_h structure for 1..4 old blocks.
+
+### 4.1 Consequence for the equation-(24) family
+
+det R_n = det R^G_n · det C_n where C_n expresses F in the basis G ∪ E.
+det R^G_n is a product of explicit nonzero factors, so **L5 is equivalent
+to det C_n != 0**, and the irreducible 86-100 digit factor of det R_3 lives
+in det C_n. C_n is 35-54% dense for n = 3..5 (no naive triangularity).
+
+### 4.2 Right expansion of F
+
+Write the non-head blocks in order o_1 < ... < o_{n-1}. Then
+F_{t,o_i} = sum_{j >= i} G_{t,o_j} + h K_{o_i}(I - K_{o_1} ... K_{o_{i-1}}) K_{>o_i}:
+the first word-vector of the equation-(24) column is a standard-tail sum,
+the remainder carries a length-two head (t, o_i) and the earlier blocks.
+
+## 5. Remaining obstruction
+
+det C_n != 0 for all n (equivalently L5).
