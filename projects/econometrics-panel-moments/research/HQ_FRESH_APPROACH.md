@@ -479,6 +479,9 @@ Lambda-free; T is dense across new-line sectors for n >= 4).
   two blocks at the same vertex degenerate, at equal or at different rates
   (staircases at e_0: sums 18, 43, 149, 374 for n = 3..6). Killed as a route to a
   fully combinatorial limit.
+* **One-head DHW block D_{0,0} has no recursion either:** its non-natural cofactors
+  at n = 3..6 (13, 41, 94, 148 digits) are pairwise coprime; the support rule
+  only splits off the 3 rows of the newest letter (a diagonal 3x3 block).
 * **No product over head groups:** the big cofactor of det R_n is coprime to the
   product of the single-DHW-head-group cofactors (n = 3, 4).
 * The 9n new-head columns alone have full transverse rank (n = 2..6): the
