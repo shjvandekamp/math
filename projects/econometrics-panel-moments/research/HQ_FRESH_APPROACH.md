@@ -424,6 +424,47 @@ expansion). An induction must therefore carry an invariant about Lambda_n,
 or bypass it by a degeneration in which the new columns' old parts vanish
 while Gamma stays invertible (none exists within the torus).
 
+## 6. General Q (side results)
+
+### 6.1 T = 4, every Q >= 3: independence (PROVED)
+
+**Proposition.** For every Q >= 3 and every initial outcome, the ell(Q,4) =
+3Q^2 + 2Q moments of (24) are linearly independent for parameters in an open
+dense subset of the economic domain.
+
+*Proof.* (i) Split: at T = 4 only j in {0,1} occur and, for Q >= 3, the j = 1
+shared position is unrestricted; the columns with shared position 1 are Q
+disjoint indicator lifts of the T = 3 family (Q moments), independent by
+DHW Proposition 2 (generic x, beta). (ii) Quotient: the conditional-sum map
+C_i(m) = sum_{y_1 = i} m(y) p_y kills the lifts, and telescoping the transformed
+chain gives, up to the nonzero column factor K_1(y0, a), the images
+X_a e_a (I - K_s K_r) (j = 0) and X_a K_t(a,b) e_b (I - K_s) = B_{t,s,a,b} (j = 1),
+with blocks {2,3}; the constant column operation of sec. 0.1 turns the j = 0
+images into E_{s,a}. (iii) Independence of {E_{s,a}} ∪ {B_{t,s,a,b}} in P^{Q-1}:
+multiply a relation by L_ta L_sb and restrict to the codimension-2 subspace
+H_ta ∩ H_sb; only B_{t,s,a,b} and B_{s,t,b,a} survive, with values
+-A_t(a,b) X_a X_b v_sb and -A_s(b,a) X_a X_b v_ta. These are independent vector
+functions there because A_s(b,.) and A_t(a,.) are not proportional and no X_i
+vanishes identically on the subspace (open conditions, nonempty on the economic
+domain), so both coefficients vanish. Single residues -X_a v_sa along H_sa then
+kill the E coefficients. (iv) A relation among all T = 4 columns maps to a
+relation among new images, so the new coefficients vanish; the remaining
+relation among the disjoint lifts vanishes by (i). ∎
+
+EXACT-CHECKED: hq_fresh_generalQ_quotient.py verifies the quotient images for
+Q = 3, 4 at T = 4, 5 (24, 40, 63, 108 identities by brute-force path sums);
+hq_fresh_generalQ.py finds full raw rank at economic points for Q = 3..6
+(T = 4) and Q = 4 (T = 5). *Not proved:* spanning for Q >= 4 (needs the
+dimension dim M_4 = ell(Q,4), the second half of DHW Conjecture 1, known only
+for Q = 2 and, in this project, Q = 3). For Q >= 4 and T >= 5, new columns with
+j >= 2 (double heads mu^{t1} mu^{t2}) appear.
+
+### 6.2 Finite certificate, Q = 3 (EXACT-CHECKED)
+
+hq_fresh_certificate.py: det R_n != 0 mod 2^61-1 at one genuine economic point
+for n = 2..12, so the equation-(24) family is a generic basis for every
+T <= 14 (finite result; raw T = 7 matrix also full rank, 2013 x 2187).
+
 ## 5. Remaining obstruction
 
 det C_n != 0 for all n (equivalently L5, equivalently admissibility of (J_t)).
