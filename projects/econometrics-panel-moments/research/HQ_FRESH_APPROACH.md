@@ -506,6 +506,23 @@ expansion). An induction must therefore carry an invariant about Lambda_n,
 or bypass it by a degeneration in which the new columns' old parts vanish
 while Gamma stays invertible (none exists within the torus).
 
+### 4.10 Tensor (syzygy) form of the whole problem (PROVED, elementary)
+
+With D = L_{1,y0} prod_{t>=2} prod_r L_tr the path polynomial is
+F_y = A_y eta_{y_T} prod_{t=2}^T h_{t, y_{t-1}}, h_tr = eta_r prod_{s != r} L_ts (MANUSCRIPT).
+Identify e_y with A_y · eta_{y_T} ⊗ h_{2,y_1} ⊗ ... ⊗ h_{T,y_{T-1}}. Then
+
+    M_T  =  ker( S_1 ⊗ H_2 ⊗ ... ⊗ H_T  -->  S_{3T-2} )      (multiplication),
+
+the lifts are H_2 ⊗ ker(shorter map), and a source moment is the difference of
+two tau-ordered tensor trains: sum_y [1{y_s1 = q} A^{tau1}_y - 1{y_s2 = q} A^{tau2}_y] e_y,
+where A^tau_y multiplies pi-weights linking the factor of each generated position
+to the factor of the next in the order tau. The basis question is a statement
+about an explicit spanning set of a multi-factor Koszul-type kernel. For general
+Q the block series H_t has base locus a union of codimension-2 linear spaces
+(L_ts ∩ L_ts' and {eta_r = 0} ∩ L_tr), which is why the dimension theorem
+(spanning half) is harder for Q >= 4.
+
 ## 6. General Q (side results)
 
 ### 6.1 T = 4, every Q >= 3: independence (PROVED)
