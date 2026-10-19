@@ -358,6 +358,14 @@ space X_t inside W_{[n]-t}: X_t = span E_{.,.} (canonical basis), span E K_{>.} 
 or the j = 0 span J_t of the subsystem (equation 24). **L5 is the statement that
 (J_t)_t is admissible**: W_n = span(E) ⊕ ⊕_{t,a} mu^t_a(J_t).
 
+**Polynomial form (EXACT-CHECKED).** mu^t_a corresponds to multiplying the
+numerator vector by the cubic m_ta = X_a L_ta' L_ta'' (a', a'' the other two
+states); {m_t0, m_t1, m_t2, D_t = L_t0 L_t1 L_t2} spans I(Z_t)_3 (cubics through
+block t's six base points), and I(Z)_{3n} is exactly spanned by products
+prod_t c_t with c_t in I(Z_t)_3 (dimension (9n^2-3n+2)/2 reached, n = 2..5).
+Each source column is a sum over truncations of its word of nested path
+products mu^t_{ab} mu^s_{bc1} mu^{r1}_{c1c2} ... (E_{r_k, c_k}).
+
 ### 4.4 Word families (EXACT-CHECKED evidence, a conjecture)
 
 hq_fresh_words.py builds any family h_{tab}(I - W_{t,j}). Full rank (mod p) for:
