@@ -436,7 +436,7 @@ Lambda-free; T is dense across new-line sectors for n >= 4).
 * **Step-factor recursion** f_n = det R_{n+1}/(det Gamma det R_n) with the oldest
   block at a vertex: v(f_n) = 0 at n = 2, 3, but lead(f_n)/f_{n-1}(1..n) depends on
   the newest block (hq_fresh_stepfactor.py): no clean recursion.
-* det R_3 is a perfect cube Phi^3 x (natural) in every parameter direction
+* det R_3 is a perfect cube Phi^3 x (natural): exactly, the big integer cofactor at random rational points is a perfect cube (81-112 digits); and in every parameter direction
   tested (deg Phi = 12 along u_new(1)); not so at n = 4 (degree-104 factor
   of multiplicity 1). n = 3 is the case where the family is invariant under all
   block permutations.
