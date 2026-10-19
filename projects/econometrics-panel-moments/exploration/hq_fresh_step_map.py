@@ -88,3 +88,11 @@ for n in (2,3,4,5):
         for j in range(T.ncols()):
             if int(T[i,j])!=0: blk[rowsec[i]][colsec[j]]+=1
     print('   T nonzeros by (row new-line b, col sector d):',blk)
+    if n <= 3:
+        ranks=[[0]*3 for _ in range(3)]
+        for rb in range(3):
+            for cd in range(3):
+                ri=[i for i in range(T.nrows()) if rowsec[i]==rb]; ci=[j for j in range(T.ncols()) if colsec[j]==cd]
+                sub=flint.nmod_mat([[int(T[i,j]) for j in ci] for i in ri],p)
+                ranks[rb][cd]=sub.rank()
+        print('   rank of sector blocks (row b, col d):',ranks)

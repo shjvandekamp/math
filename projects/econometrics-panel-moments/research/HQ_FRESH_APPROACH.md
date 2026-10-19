@@ -369,7 +369,26 @@ prod_t c_t with c_t in I(Z_t)_3 (dimension (9n^2-3n+2)/2 reached, n = 2..5).
 Each source column is a sum over truncations of its word of nested path
 products mu^t_{ab} mu^s_{bc1} mu^{r1}_{c1c2} ... (E_{r_k, c_k}).
 
-### 4.4 Word families (EXACT-CHECKED evidence, a conjecture)
+### 4.4 Word families (EXACT-CHECKED evidence; GW REFUTED, GW-Hall CONJECTURE)
+
+**Correction (agent report, research/AGENT_LIE_NOTES.md):** GW as first stated
+is FALSE for n >= 4 (structural counterexample: a head whose words miss a letter
+u has all B_{t,u}-coordinates zero). The right condition is Hall's condition per
+head (letters matchable to distinct words containing them). DHW words are
+permutations, so DHW satisfies it. *Support rule (Lemma S, zero half PROVED):*
+coordinate (u,v,c,d) of column h_tab(I - W) vanishes unless u, v occur in the
+extended word (t, W) and u is not its last letter (plus state conditions).
+CONJECTURE GW-Hall (n-1 distinct words per head, Hall per head => basis):
+EXACT-CHECKED for n <= 8. Mixed families "DHW on head set H, canonical elsewhere"
+are bases for all 2^n sets H, n <= 6 (all principal head-block minors of R_DHW
+nonzero). One-head blocks D_{t,a}: rank = matching number (CONJECTURE T,
+EXACT-CHECKED n = 4..6). Head-block dominance fails (block-Jacobi spectral radius
+up to ~1100). Near-identity limit killed (defect from equal letter sets).
+In the vertex limit of a non-newest block the head cross blocks do NOT vanish
+(many zero-valuation entries after rescaling), so that limit is not
+block-triangular by heads.
+
+Original record:
 
 hq_fresh_words.py builds any family h_{tab}(I - W_{t,j}). Full rank (mod p) for:
 DHW, s+decreasing, rest-then-s, random full orders, B (s alone), s+one letter,

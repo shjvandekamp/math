@@ -39,6 +39,7 @@ def main():
     ap.add_argument('--param', default='u,-1,1', help='u,t,i (t=-1 newest) or g,i,a')
     ap.add_argument('--npts', type=int, default=120)
     ap.add_argument('--l', type=int, default=10007)
+    ap.add_argument('--nvert', type=int, default=1, help='number of oldest blocks sent to distinct vertices e_0, e_1, e_2')
     args = ap.parse_args()
     n, l = args.n, args.l
     R = Ring(None)
@@ -57,13 +58,15 @@ def main():
             us[x][y] = R(theta)
         else:
             g[x][y] = R(theta)
-        us[0] = [us[0][0] * R(l), us[0][1], us[0][2]]
+        for k in range(args.nvert):
+            us[k] = [us[k][i] * (R(l) if i == k else R(1)) for i in range(Q)]
         A = [[[g[i][a] * us[t][i] for i in range(Q)] for a in range(Q)] for t in range(n)]
         try:
             if not geometry_ok(A, n):
                 continue
             d = R_matrix(A, n, R).det()
-            d1 = R_matrix(A[1:], n - 1, R).det() if n - 1 >= 2 else None
+            rest = A[args.nvert:]
+            d1 = R_matrix(rest, len(rest), R).det() if len(rest) >= 2 else None
         except ZeroDivisionError:
             continue
         v, c = vl(d, l)
@@ -78,7 +81,7 @@ def main():
     vmin = max(vset, key=vset.get)  # generic (most common) valuation
     keep = [(x_, c) for x_, (v, c) in zip(xs, vals) if v == vmin]
     num, den = ratrecon([c for _, c in keep], [x_ for x_, _ in keep], l, len(keep) // 2)
-    print(f'n={n} param={args.param}: valuations {vset}; ratio lead(det R_n)/det R_(n-1)(1..n-1): '
+    print(f'n={n} param={args.param}: valuations {vset}; ratio lead(det R_n)/det R(remaining blocks): '
           f'num deg {num.degree()}, den deg {den.degree()}')
     for name, poly in (('num', num), ('den', den)):
         fac = poly.factor()[1]
