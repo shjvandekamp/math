@@ -440,6 +440,13 @@ Lambda-free; T is dense across new-line sectors for n >= 4).
   tested (deg Phi = 12 along u_new(1)); not so at n = 4 (degree-104 factor
   of multiplicity 1). n = 3 is the case where the family is invariant under all
   block permutations.
+* **Several old blocks at vertices:** nondegenerate (sum 0, n = 3..5) iff the
+  degenerated old blocks sit at pairwise distinct vertices (so at most three);
+  two blocks at the same vertex degenerate, at equal or at different rates
+  (staircases at e_0: sums 18, 43, 149, 374 for n = 3..6). Killed as a route to a
+  fully combinatorial limit.
+* **No product over head groups:** the big cofactor of det R_n is coprime to the
+  product of the single-DHW-head-group cofactors (n = 3, 4).
 * The 9n new-head columns alone have full transverse rank (n = 2..6): the
   single-head collocation for the newest head is invertible.
 
