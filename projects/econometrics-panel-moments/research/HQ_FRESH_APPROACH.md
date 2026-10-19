@@ -20,8 +20,8 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | L5 | det R_n != 0 for the equation-(24) family F, all n; equivalently det C_n != 0, C_n = transition F -> G | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
-1. Find a family closed under appending that is triangular over F (F = F~ + Omega, sec. 4.3).
-2. Inductive structure of C_n (F -> G transition) using Theorem A coordinates.
+1. Admissibility of (J_t) (sec. 4.3): induct with the multiplication structure.
+2. Persistence (near-identity) limit: Lie-algebra form of C_n's defect.
 3. Write HQ_PROOF.md skeleton with L0-L4 and Theorem A fully proved.
 
 **Tools.** math/.venv has python-flint 0.9, sympy 1.14, numpy (gitignored).
@@ -339,6 +339,44 @@ F_{t,o_i} = sum_{j >= i} G_{t,o_j} + h K_{o_i}(I - K_{o_1} ... K_{o_{i-1}}) K_{>
 the first word-vector of the equation-(24) column is a standard-tail sum,
 the remainder carries a length-two head (t, o_i) and the earlier blocks.
 
+### 4.3 Multiplication operators (PROVED, elementary)
+
+For a block u and states c, d put mu^u_{cd} := multiplication by the scalar
+A_u(c,d) X_c / L_{uc}. *Lemma M:* if u is not in S then mu^u_{cd}(W_S) is
+contained in W_{S ∪ {u}} (the numerators acquire L_{uc'} L_{uc''} and X_c, which
+vanish at the six base points of block u; old base-point zeros persist; the
+coordinate syzygy is preserved). With V_b(W) := X_b e_b (I - W):
+
+* B_{t,s,a,b} = mu^t_{ab}(E_{s,b});  G_{t,r,a,b} = mu^t_{ab}(E_{r,b} K_{>r});
+* **F_{t,s,a,b} = mu^t_{ab}(J^{[n]-t}_{s,b})**, where J^{[n]-t}_{s,b} = V_b(K_s P) is
+  the j = 0 source column of the subsystem without block t
+  (and J^S_{s,b} = E_{s,b} + sum_d mu^s_{bd}(J^{S-s}_{min,d})).
+
+Since mu^t_{ab} = A_t(a,b) mu^t_a with mu^t_a = multiplication by X_a/L_{ta}, every
+family above is span(E) + sum_{t,a} mu^t_a(X_t) for a 3(n-1)-dimensional input
+space X_t inside W_{[n]-t}: X_t = span E_{.,.} (canonical basis), span E K_{>.} (G),
+or the j = 0 span J_t of the subsystem (equation 24). **L5 is the statement that
+(J_t)_t is admissible**: W_n = span(E) ⊕ ⊕_{t,a} mu^t_a(J_t).
+
+### 4.4 Word families (EXACT-CHECKED evidence, a conjecture)
+
+hq_fresh_words.py builds any family h_{tab}(I - W_{t,j}). Full rank (mod p) for:
+DHW, s+decreasing, rest-then-s, random full orders, B (s alone), s+one letter,
+"omit s" words, n = 3..6. *All* 216 families with two distinct words per head
+group at n = 3, and 60 random distinct-word families at n = 4, 5, are bases;
+failures occur only when two words of one head group coincide. Conjecture GW:
+any n-1 pairwise distinct words per head group give a basis. (Per-(t,a,b)
+independent choices fail occasionally: 2/80 at n = 3.) All word vectors with
+one head are independent (64 of them at n = 5), so there is no per-head
+direct-sum decomposition behind this.
+
+### 4.5 Degenerations of C_n (EXACT-CHECKED)
+
+Smith sums (R^G, R^F, C) along degenerations, n = 3 | 4: persistence
+G = D + eps H: (0, 30, 30) | (0, 63, 63) -- the standard-tail basis stays
+nondegenerate, all defect is in C_n; weak dependence: (27,30,3) | (108,73,-35);
+newest vertex: (9,0,-9) | (27,0,-27). C_n has mixed signs elsewhere.
+
 ## 5. Remaining obstruction
 
-det C_n != 0 for all n (equivalently L5).
+det C_n != 0 for all n (equivalently L5, equivalently admissibility of (J_t)).
