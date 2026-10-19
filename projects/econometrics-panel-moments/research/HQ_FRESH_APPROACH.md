@@ -398,6 +398,26 @@ newest vertex: (9,0,-9) | (27,0,-27). C_n has mixed signs elsewhere.
 * **Differential Horace at the newest vertex:** the order-1 map on the
   9n(n-3)/2-dimensional kernel again contains the head map Lambda_n.
 
+### 4.7 The head map has an explicit kernel; the exact step map (PROVED + EXACT-CHECKED)
+
+Lambda_n(w) := head sums of the source-family coefficients of w minus the
+E-coefficient spread. Since J_{s,b} = E_{s,b} + sum_d F_{s,r0,b,d} (the j = 0
+reduction), Lambda_n(J_{s,b}) = 0; headless differences F_{t,s,a,b} - F_{t,s',a,b}
+are killed too, and a dimension count gives
+
+    ker Lambda_n = span{F_{t,s,a,b} - F_{t,s',a,b}}  ⊕  span{J_{s,b}}   (dim 9n^2 - 15n).
+
+Appending the latest block N: the old part of the (n+1)-family spans
+Phi_n(W_n) ⊕ span(E_N) with Phi_n(w) = w K_N + sum_{tab} Lambda_n(w)_{tab} B_{t,N,a,b},
+i.e. (ker Lambda_n) K_N ⊕ span{h_{tab}(I - Pi_(t) K_N)}. The old-head new columns
+reduce to commutators: F_{t,N,a,b} - F'_{t,s_min,a,b} = h_{tab}[Pi_(t), K_N], and
+sum_b F_{N,s,a,b} = J_{s,a} K_N + X_a e_a [W_s, K_N]. In the basis
+{F_k K_N, B_{t,N}, B_{N,r} K_{>r}} of W_{n+1}/E (Theorem A), the induction step is
+exactly: T(gamma) = beta(gamma) - Hd·alpha(gamma) is invertible on the
+9n-dimensional tau-kernel B0 of the new columns (hq_fresh_step_map.py: rank
+T = 9n for n = 2..5; Hd·alpha has full rank 9n too, so the step is not
+Lambda-free; T is dense across new-line sectors for n >= 4).
+
 **Structural conclusion.** Every inductive route found so far needs the
 previous level's head map Lambda_n (head sums of the source-family
 expansion). An induction must therefore carry an invariant about Lambda_n,
