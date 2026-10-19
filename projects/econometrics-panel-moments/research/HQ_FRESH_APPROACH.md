@@ -24,9 +24,10 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
-1. Integrate the two exploration agents' reports (Lie/GW angle; inductive-invariant angle).
+1. L5 via the latest-pair collision (AGENT_AG_NOTES sec. 5): prove Coll(m) from P(m-1), or
+   find another Lambda-free route; see sec. 4.11 for the integrated agent results.
 2. An inductive invariant for Lambda_n (the only obstruction found in every route).
-3. general Q: spanning at T = 4 (dimension theorem for Q >= 4).
+3. general Q: spanning at T = 4 (dimension theorem for Q >= 4), building on sec. 6.3.
 
 **Tools.** math/.venv has python-flint 0.9, sympy 1.14, numpy (gitignored).
 
@@ -523,6 +524,24 @@ about an explicit spanning set of a multi-factor Koszul-type kernel. For general
 Q the block series H_t has base locus a union of codimension-2 linear spaces
 (L_ts ∩ L_ts' and {eta_r = 0} ∩ L_tr), which is why the dimension theorem
 (spanning half) is harder for Q >= 4.
+
+### 4.11 Exploration agents (integrated 20 Oct 2026; re-run and reproduced)
+
+research/AGENT_LIE_NOTES.md (combinatorics/Lie angle) and research/AGENT_AG_NOTES.md
+(inductive-invariant angle); scripts exploration/agent_lie_*.py, agent_ag_*.py, all
+re-run, outputs as recorded there. Summary of AG:
+- PROVED identities: Phi_n(w) = H(w) + (w - H(w)) K_N with H(w) = sum Lambda_n(w)_tab h_tab;
+  Lambda_{n+1} o Phi_n = (Lambda_n, eps_n); Head_n ∩ W_n = span{E_ta - E_t'a};
+  P(n) <=> independence of the 9n^2+3 functions {h_tab, h_tab W_ts, X_a e_a}
+  (EXACT-CHECKED n <= 5); given P(n), Lambda_n = projection onto Head_n along Bod_n.
+- REFUTED/KILLED: local residue descriptions of Lambda_n (residues of ker Lambda_n along any
+  line have full rank 6n-5, n = 3,4,5, also at special economic/conic/Moebius points);
+  newest-vertex differential Horace (n = 4); exchange split (cofactor is the whole Phi^3).
+- NEW LEAD: latest-pair collision u_N = u_{N-1}(1 + delta nu) keeps det R_m finite and
+  nonzero (canonical Smith -1^(9m-15), 0, +1^(9m-15); m = 3..6), and intrinsically is
+  exactly first order per coinciding pair (18m-24 exponents 1, m = 3,4,5): Coll(m)
+  (delta = 0 family + first-order jets of the pair differences independent) implies P(m).
+  No product formula through the collision (degree-12 factor at m = 4).
 
 ## 6. General Q (side results)
 
