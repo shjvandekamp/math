@@ -418,6 +418,31 @@ exactly: T(gamma) = beta(gamma) - Hd·alpha(gamma) is invertible on the
 T = 9n for n = 2..5; Hd·alpha has full rank 9n too, so the step is not
 Lambda-free; T is dense across new-line sectors for n >= 4).
 
+### 4.8 More degenerations (EXACT-CHECKED, l = 10007)
+
+* **A non-newest block to a vertex is nondegenerate.** Sending block k
+  (oldest or middle) to vertex concurrency (u_k(0) -> eps u_k(0)) gives Smith
+  exponents -1^{3(n-1)}, 0^{rest}, 1^{3(n-1)} (sum 0) for n = 3..6; the newest
+  block alone has the Gamma defect 9(n-1)(n-4)/2. But the limit determinant is
+  not a product formula relative to the shorter system: at n = 4 the ratio
+  lead(det R_4)/det R_3(blocks 1..3) has irreducible numerator factors of
+  degree 32 and 71 in u_3(1), and det R_3's own cubed factor survives in the
+  denominator (hq_fresh_oldest_vertex.py). Killed as an induction step.
+* **Economic coalescence** u_t(i) = (1 + eps b_i)^{x_t} (all blocks -> one):
+  intrinsic Smith sums (function evaluation at fixed points; hq_fresh_coalesce.py)
+  n = 3: B 90, G 60, F 90; n = 4: B 288, G 168, F 219. At n = 3 det R_3 -> a
+  constant independent of the covariates, but that constant has a cubed
+  degree-10 factor in g(1,2): no product formula.
+* **Step-factor recursion** f_n = det R_{n+1}/(det Gamma det R_n) with the oldest
+  block at a vertex: v(f_n) = 0 at n = 2, 3, but lead(f_n)/f_{n-1}(1..n) depends on
+  the newest block (hq_fresh_stepfactor.py): no clean recursion.
+* det R_3 is a perfect cube Phi^3 x (natural) in every parameter direction
+  tested (deg Phi = 12 along u_new(1)); not so at n = 4 (degree-104 factor
+  of multiplicity 1). n = 3 is the case where the family is invariant under all
+  block permutations.
+* The 9n new-head columns alone have full transverse rank (n = 2..6): the
+  single-head collocation for the newest head is invertible.
+
 **Structural conclusion.** Every inductive route found so far needs the
 previous level's head map Lambda_n (head sums of the source-family
 expansion). An induction must therefore carry an invariant about Lambda_n,
