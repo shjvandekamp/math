@@ -377,6 +377,33 @@ G = D + eps H: (0, 30, 30) | (0, 63, 63) -- the standard-tail basis stays
 nondegenerate, all defect is in C_n; weak dependence: (27,30,3) | (108,73,-35);
 newest vertex: (9,0,-9) | (27,0,-27). C_n has mixed signs elsewhere.
 
+### 4.6 Further killed routes (20 Oct 2026, early)
+
+* **Concurrency (beta_1 = beta_2: all lines of colour a through one point):**
+  canonical Smith exponents look mild, but the E/F functions at the exactly
+  concurrent point have rank defect 2, 7, 16, 28, 42, 58 (n = 2..7): killed.
+* **Function-evaluation screen** (intrinsic, no coordinates): self-similar
+  economic points u_t = lambda^t, geometric subgroup u_t = (1, s_t, s_t^2),
+  S_3-symmetric G = J + cI, symmetric G: all full rank for n <= 7. These give
+  structured base points but no proof; on the geometric (one conic per colour)
+  subfamily det R_3 still has a 67-72 digit cofactor (no product formula).
+* **One DHW head group, the others canonical:** det = prod_a det D_{t,a}
+  (a 3(n-1)-square collocation of the subsystem's j=0 residues at the
+  crossings with L_ta) already has a 50-53 digit cofactor at n = 3.
+* **No multiplicative recursion:** the large cofactors of det R_3, det R_4,
+  det R_5 at nested configurations are pairwise coprime (det S_n carries
+  det R_n in its denominator).
+* **Signs:** det R_n and det R^G_n both change sign on the positive domain
+  (canonical normalisation has poles/zeros there); positivity not usable here.
+* **Differential Horace at the newest vertex:** the order-1 map on the
+  9n(n-3)/2-dimensional kernel again contains the head map Lambda_n.
+
+**Structural conclusion.** Every inductive route found so far needs the
+previous level's head map Lambda_n (head sums of the source-family
+expansion). An induction must therefore carry an invariant about Lambda_n,
+or bypass it by a degeneration in which the new columns' old parts vanish
+while Gamma stays invertible (none exists within the torus).
+
 ## 5. Remaining obstruction
 
 det C_n != 0 for all n (equivalently L5, equivalently admissibility of (J_t)).
