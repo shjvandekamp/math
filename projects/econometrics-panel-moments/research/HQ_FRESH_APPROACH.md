@@ -7,22 +7,25 @@ equation-(24) family is a basis of the fixed-effect-free moment space M_T
 for (gamma, beta, x) in an open dense subset of the economic domain
 pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 
-**Lemma tree** (status as of 19 Oct 2026, evening):
+**Lemma tree** (status 20 Oct 2026):
 
 | id | statement | status |
 |---|---|---|
 | L0 | dim M_T = &#124;family&#124; on the economic generic region | PROVED (project, Lean) |
-| L1 | exact split: T-family = 3 lifts of (T-1)-family + E/F quotient images in W_n, n = T-2 | PROVED (project) |
+| L1 | exact split: T-family = 3 lifts of (T-1)-family + E/F quotient images in W_n, n = T-2 | PROVED (project); images EXACT-CHECKED for Q = 3, 4 (sec. 6.1) |
 | L2 | (E,B) basis of W_n; new columns independent iff det R_n != 0 | PROVED (project) |
-| L3 | economic domain Zariski dense in product-form family; one nonzero point per n suffices | PROVED (sec. 2.1), to write in HQ_PROOF |
-| L4 | append the latest block: old x old block of R_{n+1} is Gamma R_n; new-head rows vanish on old columns | PROVED + EXACT-CHECKED (sec. 2.0) |
-| A  | *standard-tail family* G_{t,r,a,b} = B_{t,r,a,b} K_{>r} with E is a basis of W_n for all n, det R^G_{n+1} = det Gamma det R^G_n prod kappa | PROVED (sec. 4) + EXACT-CHECKED (hq_fresh_standard_tail.py) |
-| L5 | det R_n != 0 for the equation-(24) family F, all n; equivalently det C_n != 0, C_n = transition F -> G | CONJECTURE (the gap) |
+| L3 | economic domain Zariski dense in product-form family; one nonzero point per n suffices | PROVED (sec. 2.1) |
+| L4 | append latest block: old x old block of R_{n+1} is Gamma R_n; new-head rows vanish on old columns | PROVED + EXACT-CHECKED (sec. 2.0) |
+| A  | standard-tail family G = B K_{>r} with E is a basis for all n; det R^G_{n+1} = det Gamma det R^G_n prod kappa | PROVED + EXACT-CHECKED (sec. 4) |
+| K  | ker Lambda_n = headless differences ⊕ j=0 columns; induction step <=> 9n x 9n map T invertible | PROVED + EXACT-CHECKED (sec. 4.7) |
+| C  | generic basis for every T <= 19 (det R_n != 0 at an economic point, n <= 17) | EXACT-CHECKED certificate (sec. 6.2) |
+| Q4 | T = 4, every Q >= 3: the (24) family is independent (spanning open for Q >= 4) | PROVED (sec. 6.1) |
+| L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
-1. Admissibility of (J_t) (sec. 4.3): induct with the multiplication structure.
-2. Persistence (near-identity) limit: Lie-algebra form of C_n's defect.
-3. Write HQ_PROOF.md skeleton with L0-L4 and Theorem A fully proved.
+1. Integrate the two exploration agents' reports (Lie/GW angle; inductive-invariant angle).
+2. An inductive invariant for Lambda_n (the only obstruction found in every route).
+3. general Q: spanning at T = 4 (dimension theorem for Q >= 4).
 
 **Tools.** math/.venv has python-flint 0.9, sympy 1.14, numpy (gitignored).
 
@@ -502,8 +505,8 @@ j >= 2 (double heads mu^{t1} mu^{t2}) appear.
 ### 6.2 Finite certificate, Q = 3 (EXACT-CHECKED)
 
 hq_fresh_certificate.py: det R_n != 0 mod 2^61-1 at one genuine economic point
-for n = 2..12, so the equation-(24) family is a generic basis for every
-T <= 14 (finite result; raw T = 7 matrix also full rank, 2013 x 2187).
+for n = 2..17, so the equation-(24) family is a generic basis for every
+T <= 19 (finite result; raw T = 7 matrix also full rank, 2013 x 2187).
 
 ## 5. Remaining obstruction
 
