@@ -11,7 +11,7 @@ economic domain.  With the proved reduction (lifts + quotient, L1-L2) and the
 four-period base, this proves: the equation-(24) family is a basis of M_T for
 every T <= N+2, for parameters in an open dense subset of the economic domain.
 It proves nothing for larger T.
-Usage: ../../../.venv/bin/python hq_fresh_certificate.py [N]   (default N = 12)
+Usage: ../../../.venv/bin/python hq_fresh_certificate.py [N]   (default N = 12; N = 18 passes in ~2 min)
 """
 import random
 import sys

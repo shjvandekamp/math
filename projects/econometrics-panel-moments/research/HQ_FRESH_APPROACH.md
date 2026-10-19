@@ -18,7 +18,7 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | L4 | append latest block: old x old block of R_{n+1} is Gamma R_n; new-head rows vanish on old columns | PROVED + EXACT-CHECKED (sec. 2.0) |
 | A  | standard-tail family G = B K_{>r} with E is a basis for all n; det R^G_{n+1} = det Gamma det R^G_n prod kappa | PROVED + EXACT-CHECKED (sec. 4) |
 | K  | ker Lambda_n = headless differences ⊕ j=0 columns; induction step <=> 9n x 9n map T invertible | PROVED + EXACT-CHECKED (sec. 4.7) |
-| C  | generic basis for every T <= 19 (det R_n != 0 at an economic point, n <= 17) | EXACT-CHECKED certificate (sec. 6.2) |
+| C  | generic basis for every T <= 20 (det R_n != 0 at an economic point, n <= 18) | EXACT-CHECKED certificate (sec. 6.2) |
 | Q4 | T = 4, every Q >= 3: the (24) family is independent (spanning open for Q >= 4) | PROVED (sec. 6.1) |
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
 
@@ -505,8 +505,8 @@ j >= 2 (double heads mu^{t1} mu^{t2}) appear.
 ### 6.2 Finite certificate, Q = 3 (EXACT-CHECKED)
 
 hq_fresh_certificate.py: det R_n != 0 mod 2^61-1 at one genuine economic point
-for n = 2..17, so the equation-(24) family is a generic basis for every
-T <= 19 (finite result; raw T = 7 matrix also full rank, 2013 x 2187).
+for n = 2..18, so the equation-(24) family is a generic basis for every
+T <= 20 (finite result; raw T = 7 matrix also full rank, 2013 x 2187).
 
 ## 5. Remaining obstruction
 
