@@ -487,6 +487,19 @@ Lambda-free; T is dense across new-line sectors for n >= 4).
 * The 9n new-head columns alone have full transverse rank (n = 2..6): the
   single-head collocation for the newest head is invertible.
 
+### 4.9 Why free tables are easier (observation)
+
+For FREE tables the newest block alone can tend to the identity, K_N = I + eps N.
+Then Gamma -> I, Phi_n(w) -> w, and every new column's leading part is an explicit
+old vector with known head map: F_{t,N} - F'_{t,s_min} = eps h[Pi_(t), N] + ...,
+F_{N,s,a,b} -> delta_ab J_{s,a} with Lambda(J) = 0, and the a != b new-head columns
+are (H(a,b)/D(a,a)) J_{s,b} at first order (explicit, needing second order). So the
+step is Lambda-free (a flat-limit independence of explicit vectors). In the
+economic product form this is impossible: the cycle ratios
+g(i,a)g(a,i)/(g(a,a)g(i,i)) of a block are torus-invariant, so no single block can
+be made more persistent than the others, and torus limits of one block are only
+absorbing (rank 1) or one-state-avoiding (rank 2) kernels.
+
 **Structural conclusion.** Every inductive route found so far needs the
 previous level's head map Lambda_n (head sums of the source-family
 expansion). An induction must therefore carry an invariant about Lambda_n,
