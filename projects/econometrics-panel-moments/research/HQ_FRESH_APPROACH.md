@@ -543,6 +543,35 @@ re-run, outputs as recorded there. Summary of AG:
   (delta = 0 family + first-order jets of the pair differences independent) implies P(m).
   No product formula through the collision (degree-12 factor at m = 4).
 
+### 4.12 More structure and more killed routes (20 Oct 2026)
+
+* **Module picture (PROVED, from L2).** With S_s := span{1} + span{X_a/L_ta : t != s, a}
+  (dim 3n-2), every w in W_n is uniquely sum_{s,b} phi_{s,b} E_{s,b} with phi_{s,b} in S_s
+  (phi = 1 is E_{s,b}, phi = A_t(a,b) X_a/L_ta is B_{t,s,a,b}); dim = 3n(3n-2).
+* **A Lambda-free filtration adapted to the headless part (PROVED).** V_m := W_{<=m} Pi_{>m}
+  (right multiplication by the increasing product of the blocks > m) gives
+  V_0 ⊂ ... ⊂ V_{n-1} = W_n with gr_m ≅ W_{<=m} / W_{<=m-1} K_m (dim 18m + 3);
+  W_{n+1} = W_n K_N ⊕ E_N ⊕ span{B_{t,N}} ⊕ span{B_{N,s}} is Lambda-free.
+  Theorem A's G is adapted. Writing m = max(t,s), every DHW column is
+  F_{t,s} = F^{(<=m)}_{t,s} Pi_{>m} + sum_{r>m} G_{t,r}, so the headless differences
+  D_{t,s} := F_{t,s} - F_{t,s_min(t)} (s_min(t) = min([n] - t)) lie in V_m and append
+  exactly (D K_N); I_t := F_{t,s_min(t)} = h_tab (I - Pi_(t)) = sum_r G_{t,r} sit in the top piece.
+  DHW ≡ {E} ∪ {D} ∪ {I}; the append shear is Lambda_{n-1} (zero on D, -spread on E, unit on I).
+  So the whole difficulty sits in the 9n vectors I_t (equivalently Lambda).
+* **Near-permutation limits g = P_sigma + eps g' (KILLED).** v(det R_n), n = 3,4,5:
+  sigma = id 30, 63, 117; transposition 18, 29, 65; 3-cycles 12, 0, -21 (canonical
+  coordinates blow up). After normalizing each family function by its own leading order,
+  even the canonical family's leading terms are dependent (deep flat limit)
+  (exploration/hq_fresh_nearperm.py).
+* **Shift-invariant economic points u_t = lam^(t+1) (no product formula).** Along
+  lam = (1, theta, c): det R_3 numerator [1]^18 [2]^3 [3]^3 [17]^3 (the cube persists);
+  det R_4 has irreducible factors of degrees 11, 17, 46, 58, 92, 154
+  (exploration/hq_fresh_geom_factor.py).
+* **The cube of det R_3 is not a head-state splitting:** the three principal minors on
+  first-slot state a (= mixed families DHW on head state a, canonical otherwise) share no
+  factor with det R_3 along u_2(1).
+* Lambda_n(B_{u,v,c,d}) is nonzero on every head block for every (u,v) at n = 4, 5.
+
 ## 6. General Q (side results)
 
 ### 6.1 T = 4, every Q >= 3: independence (PROVED)

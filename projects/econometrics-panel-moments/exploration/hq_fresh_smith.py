@@ -41,14 +41,13 @@ def smith_exponents(M, l, K=40):
                 r.append(0)
                 continue
             num, den = int(x.p), int(x.q)
-            vd = _val(den, l)
-            den_u = den // l ** vd
-            # x * l^m = num * l^(m - vd) / den_u
-            e = m - vd
-            val = num * pow(l, e, mod) if e >= 0 else None
-            if val is None:
+            vn, vd = _val(abs(num), l), _val(den, l)
+            num_u, den_u = num // l ** vn, den // l ** vd
+            # x * l^m = num_u * l^(m + vn - vd) / den_u, exponent >= 0 by the choice of m
+            e = m + vn - vd
+            if e < 0:
                 raise ValueError('scaling error')
-            r.append(val * pow(den_u, -1, mod) % mod)
+            r.append(num_u * pow(l, e, mod) * pow(den_u, -1, mod) % mod)
         A.append(r)
     exps = []
     rows = list(range(nr))
