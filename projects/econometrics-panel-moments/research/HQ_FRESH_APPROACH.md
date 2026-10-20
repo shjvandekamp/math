@@ -21,14 +21,15 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | C  | generic basis for every T <= 20 (det R_n != 0 at an economic point, n <= 18) | EXACT-CHECKED certificate (sec. 6.2) |
 | Q4 | T = 4, every Q >= 3: the (24) family is a basis (independence sec. 6.1, dimension sec. 6.4) | PROVED (secs. 6.1, 6.4) |
 | Q3 | T = 3, every Q: dim M_3 = Q, so (45) is a basis (DHW leave the upper bound open for Q >= 3) | PROVED (sec. 6.3) |
+| QD | dim M_T = ell(Q,T) for 3 <= T <= Q+1 (exact count; family a basis iff independent) | PROVED (sec. 6.5) |
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
 1. L5 via the latest-pair collision (AGENT_AG_NOTES sec. 5): prove Coll(m) from P(m-1), or
    find another Lambda-free route; see sec. 4.11 for the integrated agent results.
 2. An inductive invariant for Lambda_n (the only obstruction found in every route).
-3. general Q: T = 4 DONE (sec. 6.4); next the dimension theorem for T >= 5 (fat-point
-   Hilbert functions, sec. 6.4 remark); independence for T >= 5 is as hard as L5.
+3. general Q: T = 4 DONE (sec. 6.4); dimension for T <= Q+1 DONE (sec. 6.5); open: dimension
+   for T > Q+1 (Q >= 4) and independence of (24) for T >= 5.
 
 **Tools.** math/.venv has python-flint 0.9, sympy 1.14, numpy (gitignored).
 
@@ -746,6 +747,54 @@ economic point (Q = 3, 4, 5). Together with sec. 6.1 this settles DHW Conjecture
 with J^{(T)} the fat vanishing ideal of S_1 H_3...H_{T+1} in degree (T-1)Q; matching ell
 needs dim J^{(T)} = (Q+1)^{T-1} exactly when T <= Q (e.g. Q = 4,5,6 at T+1 = 5) but less
 otherwise (Q = 3: 37 at T+1 = 5; Q = 4: 369 at T+1 = 6).
+
+### 6.5 The dimension theorem for every T <= Q + 1 (PROVED)
+
+**Theorem.** For Q >= 2 and 3 <= T <= Q + 1, on an open dense subset of the economic
+domain, dim M_T = ell(Q,T) = Q^T - Q(2+Q-T)(1+Q)^{T-2} (DHW's closed form in this range).
+So the number of linearly independent fixed-effect-free moments is exactly DHW's count;
+the (24) family is a basis iff it is independent (proved for T <= 4, secs. 6.1, 6.3, 6.4).
+
+*Fat ideal.* For blocks 1..k with base loci B_t (sec. 6.3), J^(k) := {f : ord_x f >= #{t : x in B_t}
+for all x}. Every product prod_t c_t with c_t in I(B_t) lies in J^(k); J^(k) is an intersection of
+powers of ideals of linear spaces (strata = intersections of components of distinct B_t), and a
+linear form vanishing identically on no stratum is a nonzerodivisor modulo J^(k).
+
+*Multi-block lemma (k <= Q - 1).* J^(k)_{kQ} = prod_t (H_t ⊕ <D_t>) (dimension (Q+1)^k), and
+J^(k)_{kQ+1} = S_1 prod_t (H_t ⊕ <D_t>) = S_1 H_1 ... H_k.
+Proof. For S ⊆ [k] and r_S = (r_t), let Lambda(S, r_S) = ∩_{t in S} {L_{t r_t} = 0} (codim |S| <= Q-1,
+nonempty). Let f in J^(k)_d, d in {kQ, kQ+1}. On Lambda = Lambda(S, r_S), f| is divisible by
+prod_{t in S} h_{t r_t}|: for t in S, f| vanishes on {L_ts = 0} ∩ Lambda (s != r_t), and if the value r
+occurs m_r times among the r_t, every point of Lambda ∩ {eta_r = 0} lies in m_r of the B_t, so the fat
+condition gives (eta_r|)^{m_r} | f|; the forms involved are distinct primes on Lambda (genericity).
+Descending induction on |S| from k to 0: on Lambda([k], r), f| = c_r prod_t h_{t r_t}| (c_r of degree
+d - kQ); subtract sum_r c~_r prod h_{t r_t} (c~ a lift). At depth |S| = k-j the current f vanishes on all
+deeper strata, so on Lambda(S, r_S): f| = prod_{t in S} h_{t r_t}| * phi with phi vanishing on
+Lambda ∩ {L_us = 0} for every u not in S and every s (h| does not vanish identically there), hence
+divisible by prod_{u not in S} D_u| (degree jQ), so phi = c * prod_{u not in S} D_u| with deg c = d - kQ;
+subtract the lifted term, which vanishes on all deeper strata and on the other strata of the same
+depth (it contains L_{t r'_t} or a D_u). At depth 0 the remainder vanishes on every L_tr, so it is
+c * prod_t D_t. Uniqueness at every step shows the (Q+1)^k products are independent. Finally
+eta_s D_t = L_ts h_ts gives S_1 D_t ⊆ S_1 H_t, so S_1 prod (H_t ⊕ <D_t>) = S_1 prod H_t. ∎
+
+*Proof of the theorem (induction on T).* T = 3 is sec. 6.3. For T -> T+1 (T <= Q) use the fibration
+of sec. 6.4 over the first factor: a relation phi gives psi_r = L_2r g_r, sum eta_r g_r = 0; the kernel is
+⊕_r M_T(blocks 3..T+1) (dimension Q dim M_T); g_r lies in J := J^(T-1)(blocks 3..T+1) in degree
+(T-1)Q because L_2r g_r in V := S_1 H_3...H_{T+1} ⊆ J and L_2r is a nonzerodivisor mod J. By the lemma
+V = J_{(T-1)Q+1} = S_1 J_{(T-1)Q}, so (V : L_2r) = J_{(T-1)Q} and EVERY (g_r) in J_{(T-1)Q}^Q with
+sum eta_r g_r = 0 lifts. Hence
+    dim M_{T+1} = Q dim M_T + Q (Q+1)^{T-1} - dim V = (Q+1) dim M_T + Q(Q+1)^{T-1} - Q^T,
+and the closed form satisfies the same recursion for T <= Q (direct algebra). ∎
+Genericity: every condition is the independence of at most Q distinct forms from {eta_i} ∪ {L_tr},
+so the witness of sec. 6.4 serves for all of them.
+
+EXACT-CHECKED (exploration/hq_fresh_generalQ_dim.py, mod 2^61-1, fat conditions imposed by
+all partial derivatives at random points of every stratum, witness point): (Q,k) = (3,1), (3,2),
+(4,2), (4,3), (5,2), (5,3): dim J_kQ = (Q+1)^k and dim J_{kQ+1} = dim S_1 H...H = Q^{k+1} - ell(Q,k+1);
+raw dim M_T = ell(Q,T) for (Q,T) = (3,3), (3,4), (4,4), (4,5), (5,4), (5,5) at random economic points
+with DISTINCT covariates (a repeated covariate value is a special point: dim M_5 = 624 > 524 at Q = 4).
+For T > Q+1 the products are dependent (Q = 3, T = 5: J_9 has dimension 37 < 64) and the
+dimension needs the base-point interpolation of the project (Q = 3) or more.
 
 ## 5. Remaining obstruction
 

@@ -142,7 +142,7 @@ def run(Q, rng, witness=True):
 def raw_dim_M4(Q, rng):
     g = [[rng.randint(2, 10 ** 6) for _ in range(Q)] for _ in range(Q)]
     w = [rng.randint(2, 10 ** 6) for _ in range(Q)]
-    xs = [rng.randint(1, 30) for _ in range(4)]
+    xs = rng.sample(range(1, 31), 4)   # distinct covariate values (repeats are special points)
     pi = [[[g[q][r] * pow(w[q], xs[t], P) % P for r in range(Q)] for q in range(Q)] for t in range(4)]
     paths = list(it.product(range(Q), repeat=4))
     cols = []
