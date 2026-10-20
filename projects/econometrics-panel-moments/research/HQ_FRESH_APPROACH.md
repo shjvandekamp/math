@@ -785,6 +785,10 @@ V = J_{(T-1)Q+1} = S_1 J_{(T-1)Q}, so (V : L_2r) = J_{(T-1)Q} and EVERY (g_r) in
 sum eta_r g_r = 0 lifts. Hence
     dim M_{T+1} = Q dim M_T + Q (Q+1)^{T-1} - dim V = (Q+1) dim M_T + Q(Q+1)^{T-1} - Q^T,
 and the closed form satisfies the same recursion for T <= Q (direct algebra). ∎
+Closed form = (25): for Q >= T-1 (25) reads ell = sum_{j=0}^{m-2} C(m,j)(m-1-j) Q^{j+1}, m = T-1;
+summing over all j with sum_j C(m,j) Q^j = (1+Q)^m and sum_j j C(m,j) Q^j = mQ(1+Q)^{m-1}, and
+removing the j = m-1 (zero) and j = m (-Q^m) terms gives Q(1+Q)^{m-1}(m-1-Q) + Q^{m+1}
+= Q^T - Q(2+Q-T)(1+Q)^{T-2}.
 Genericity: every condition is the independence of at most Q distinct forms from {eta_i} ∪ {L_tr},
 so the witness of sec. 6.4 serves for all of them.
 
