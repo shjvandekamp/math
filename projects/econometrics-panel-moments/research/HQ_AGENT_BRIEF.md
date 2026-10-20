@@ -57,10 +57,9 @@ of det R_3, R_4, R_5 are coprime), product formulas on structured subfamilies.
 
 ## Evidence and leads
 
-* **Word-family phenomenon (Conjecture GW):** replacing the DHW words by ANY n-1
-  pairwise distinct words per head block t (same set for all (a,b)) still gives a
-  basis: all 216 such families at n = 3, 60 random ones at n = 4, 5 (only equal
-  words fail). All word vectors with one head are independent (64 at n = 5).
+* **Word families:** Conjecture GW (any distinct words) is REFUTED at n = 4; the
+  surviving form GW-Hall (n-1 distinct words per head satisfying Hall's condition)
+  is checked for n <= 8 (AGENT_LIE_NOTES.md). DHW satisfies Hall.
 * det R_3 is a perfect cube Phi^3 times natural factors (n = 3 only).
 * In the persistence limit G = D + eps H the standard-tail lattice is exactly
   nondegenerate while DHW has Smith exponents in {0,1,2} (Lie-algebra limit:
@@ -77,3 +76,26 @@ Directory `projects/econometrics-panel-moments/exploration/`:
 * `hq_fresh_standard_tail.py`, `hq_fresh_step_map.py`, `hq_fresh_smith.py`
   (l-adic Smith exponents), `hq_fresh_newest_degen.py`, `hq_fresh_univariate.py`.
 Notes: `research/HQ_FRESH_APPROACH.md` (full record).
+
+## Updates (20 Oct 2026, late) -- read these too
+
+* **Module picture.** W_n = ⊕_{s,b} S_s E_{s,b} uniquely, S_s = span{1, X_a/L_ta : t != s}.
+* **Lambda-free filtration.** V_m := W_{<=m} Pi_{>m} (right multiplication by the increasing
+  product of blocks > m); W_{n+1} = W_n K_N ⊕ E_N ⊕ span{B_{t,N}} ⊕ span{B_{N,s}}.
+  With s_min(t) = min([n] - t): D_{t,s} := F_{t,s} - F_{t,s_min(t)} lies in V_{max(t,s)} and
+  appends exactly (D K_N); I_t := F_{t,s_min(t)} = h_tab(I - Pi_(t)) = sum_r G_{t,r} sits in the
+  top piece. DHW ≡ {E} ∪ {D} ∪ {I}; all difficulty is in the 9n vectors I (= Lambda).
+* **Collision leads (AGENT_AG_NOTES.md sec. 5 and new):**
+  - latest pair u_N = u_{N-1}(1 + delta nu): intrinsic Smith exponents only 0, 1 with
+    18m - 24 ones (= coinciding family pairs);
+  - NEW: newest with OLDEST, u_N = u_0 (1 + delta nu): intrinsic Smith exponents of the
+    E/F evaluation matrix are 0:105, 1:15 (n=4), 0:183, 1:12 (n=5), 0:274, 1:12 (n=6),
+    i.e. a BOUNDED defect 12 = the forced coincidences F_{N,0} = F_{0,N} (9) and
+    E_N = E_0 (3). At exact coincidence u_N = u_k (k <= N-3) the rank deficit is 12 too.
+    The canonical B family is much more degenerate there (18m - 24 ones), so canonical
+    coordinates blow up (v(det R_n) = -33, -54, -72).
+* **No product formulas anywhere:** persistence leading coefficient at n = 4 has irreducible
+  factors of degrees 4, 14, 21, 26 (along u_3(1)); shift-invariant points u_t = lam^(t+1)
+  give degree 154 at n = 4; collision leading coefficient / det R_{m-1} has degree-88 factors.
+* Scripts added: hq_fresh_nearperm.py, hq_fresh_geom_factor.py; the intrinsic test is
+  hq_fresh_coalesce.family_eval (evaluate E/F or B/G family at fixed points) + hq_fresh_smith.

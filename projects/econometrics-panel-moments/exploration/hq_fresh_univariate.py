@@ -117,7 +117,7 @@ def main():
     if args.mode == 'persist':
         from collections import Counter
         vc = Counter(v for v, _ in vals)
-        vmin = min(vc)
+        vmin = max(vc, key=vc.get)  # generic (most common) valuation
         print(f'persist valuations seen: {dict(vc)}; using v = {vmin}')
         keep = [(x, c) for x, (v, c) in zip(xs, vals) if v == vmin]
         xs, vals = [x for x, _ in keep], [c for _, c in keep]
