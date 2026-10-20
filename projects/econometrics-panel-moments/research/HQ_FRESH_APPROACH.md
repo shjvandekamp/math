@@ -19,7 +19,7 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | A  | standard-tail family G = B K_{>r} with E is a basis for all n; det R^G_{n+1} = det Gamma det R^G_n prod kappa | PROVED + EXACT-CHECKED (sec. 4) |
 | K  | ker Lambda_n = headless differences ⊕ j=0 columns; induction step <=> 9n x 9n map T invertible | PROVED + EXACT-CHECKED (sec. 4.7) |
 | C  | generic basis for every T <= 20 (det R_n != 0 at an economic point, n <= 18) | EXACT-CHECKED certificate (sec. 6.2) |
-| Q4 | T = 4, every Q >= 3: the (24) family is independent (spanning open for Q >= 4) | PROVED (sec. 6.1) |
+| Q4 | T = 4, every Q >= 3: the (24) family is a basis (independence sec. 6.1, dimension sec. 6.4) | PROVED (secs. 6.1, 6.4) |
 | Q3 | T = 3, every Q: dim M_3 = Q, so (45) is a basis (DHW leave the upper bound open for Q >= 3) | PROVED (sec. 6.3) |
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
 
@@ -27,7 +27,8 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 1. L5 via the latest-pair collision (AGENT_AG_NOTES sec. 5): prove Coll(m) from P(m-1), or
    find another Lambda-free route; see sec. 4.11 for the integrated agent results.
 2. An inductive invariant for Lambda_n (the only obstruction found in every route).
-3. general Q: spanning at T = 4 (dimension theorem for Q >= 4), building on sec. 6.3.
+3. general Q: T = 4 DONE (sec. 6.4); next the dimension theorem for T >= 5 (fat-point
+   Hilbert functions, sec. 6.4 remark); independence for T >= 5 is as hard as L5.
 
 **Tools.** math/.venv has python-flint 0.9, sympy 1.14, numpy (gitignored).
 
@@ -677,6 +678,74 @@ This also gives an independent proof of the lower bound. EXACT-CHECKED
 Q = 3..6 (vanishing on B imposed at enough random points of each component),
 and dim M_3 = Q directly from the raw likelihood polynomials at economic
 points for Q = 2..6.
+
+### 6.4 T = 4, every Q: the dimension theorem, hence a basis (PROVED)
+
+**Theorem.** For every Q >= 3, on an open dense subset of the economic domain,
+dim M_4 = 3Q^2 + 2Q = ell(Q,4). With sec. 6.1 (independence) the equation-(24)
+family is a basis of M_4: both halves of DHW Conjecture 1 hold at T = 4.
+
+*Uniform genericity witness (PROVED).* Put g(j,r) = w_r^j, u_t(j) = z_t^j (j = 0..Q-1)
+with w_r = 2^r, z_t = 2^{Qt}; this is an economic point (gamma_jr = jr log 2,
+beta_j = j log 2, x_t = Qt). The coefficient vector of L_tr is ((z_t w_r)^j)_j with
+pairwise distinct positive nodes z_t w_r. Hence any set S of distinct forms from
+{eta_i} ∪ {L_tr} with |S| <= Q is linearly independent: modulo the eta_i in S this is
+a generalized Vandermonde matrix [x_k^{j}] (distinct positive nodes, distinct
+exponents), all of whose maximal minors are nonzero (strict total positivity).
+Every genericity condition below (and in secs. 6.1, 6.3) is the independence of at
+most 4 (at most Q) distinct such forms, so all hold simultaneously on a nonempty
+Zariski-open set containing an economic point, hence on an open dense subset of the
+economic domain (L3).
+
+*Setup.* M_4 = {(phi_rst) in S_1^{Q^3} : sum phi_rst h_2r h_3s h_4t = 0} (sec. 4.10).
+B_t = base locus of block t (sec. 6.3), W_u = {eta_u = L_3u = L_4u = 0} (codim 3,
+nonempty for Q >= 4), and
+    J := I(B_3) ∩ I(B_4) ∩ (∩_u I(W_u)^2)          (W_u omitted when Q = 3).
+Every product h_3s h_4t lies in J (h_3s vanishes on B_3 ⊃ W_u, h_4t on B_4 ⊃ W_u), so
+V_34 := S_1 H_3 H_4 ⊆ J_{2Q+1}, and dim V_34 = Q^3 - Q by the T = 3 theorem
+(sec. 6.3) applied to the pair of blocks (3,4).
+
+*Lemma (two-block ideal).* dim J_{2Q} <= (Q+1)^2; in fact
+J_{2Q} = (H_3 ⊕ <D_3>)(H_4 ⊕ <D_4>).
+Proof. Let f in J_{2Q}. On Pi_3r = {L_3r = 0}, f vanishes on the Q distinct
+hyperplanes {L_3s = 0} (s != r), {eta_r = 0} of Pi_3r, so f| = h_3r| phi_r, deg phi_r = Q;
+likewise f|Pi_4t = h_4t| psi_t. On Lambda_rt := Pi_3r ∩ Pi_4t:
+ - t != r: the factors of h_4t| are pairwise non-proportional and coprime to those of
+   h_3r| (genericity, rank-4 conditions), so h_4t| divides phi_r|, and by degree
+   phi_r| = c_rt h_4t|;
+ - t = r: the common factor eta_r| cancels, prod_{s != r} L_4s| divides phi_r|, so
+   phi_r| = lambda_r prod_{s != r} L_4s| with lambda_r linear; f in I(W_r)^2 restricts to
+   (eta_r|)^2 on Lambda_rr ⊃ W_r, which forces eta_r| | lambda_r, so phi_r| = c_rr h_4r|
+   (for Q = 3, Lambda_rt is a point with h_3r h_4t != 0 there and c_rt is defined directly).
+So f' := f - sum c_rt h_3r h_4t lies in J and vanishes on every Lambda_rt. Then
+f'|Pi_3r = h_3r| phi'_r with phi'_r vanishing on the Q hyperplanes Lambda_rt of Pi_3r,
+so phi'_r = c'_r D_4|; f'' := f' - sum_r c'_r h_3r D_4 vanishes on every Pi_3r, so
+f'' = D_3 g with g in I(B_4)_Q = H_4 ⊕ <D_4> (sec. 6.3 (iii); D_3 vanishes identically on
+no component of B_4). ∎
+
+*Proof of the theorem.* For a relation phi, put psi_r := sum_{s,t} phi_rst h_3s h_4t.
+(1) As in sec. 6.3, psi_r = L_2r g_r with sum_r eta_r g_r = 0.
+(2) The map phi -> (g_r) has kernel ⊕_r M_3^{(34)}, of dimension Q * Q (T = 3 theorem).
+(3) L_2r g_r = psi_r in V_34 ⊆ J and L_2r lies in no associated prime of J (the I(Z),
+Z a component of B_3 ∪ B_4, and I(W_u); J is an intersection of primary ideals), so
+g_r in J_{2Q}. Hence the image lies in K := {(g_r) in J_{2Q}^Q : sum eta_r g_r = 0}, and
+    dim K = Q dim J_{2Q} - dim(S_1 J_{2Q}) <= Q (Q+1)^2 - (Q^3 - Q),
+using the Lemma and S_1 J_{2Q} ⊇ S_1 H_3 H_4 = V_34.
+(4) dim M_4 <= Q^2 + Q(Q+1)^2 - Q^3 + Q = 3Q^2 + 2Q. ∎
+
+Remark: without the double-vanishing condition the bound fails for Q >= 4: the
+elements lambda * h_3r h_4r / eta_r (lambda in S_1) vanish on B_3 ∪ B_4, so
+dim I(B_3 ∪ B_4)_{2Q} = (Q+1)^2 + Q(Q-3); the products vanish doubly on W_r, these do not.
+
+EXACT-CHECKED (exploration/hq_fresh_generalQ_T4.py, mod 2^61-1, at the witness point
+and at random lines): Q = 3, 4, 5: the (Q+1)^2 products are independent, dim J_{2Q} =
+(Q+1)^2, dim I(B_3 ∪ B_4)_{2Q} = (Q+1)^2 + Q(Q-3), dim S_1 H_3 H_4 = Q^3 - Q; and,
+independently, dim M_4 = 33, 56, 85 = 3Q^2 + 2Q from the raw path likelihoods at an
+economic point (Q = 3, 4, 5). Together with sec. 6.1 this settles DHW Conjecture 1 at T = 4.
+*Beyond T = 4:* the same fibration gives dim M_{T+1} <= (Q+1) dim M_T + Q dim J^{(T)} - Q^T
+with J^{(T)} the fat vanishing ideal of S_1 H_3...H_{T+1} in degree (T-1)Q; matching ell
+needs dim J^{(T)} = (Q+1)^{T-1} exactly when T <= Q (e.g. Q = 4,5,6 at T+1 = 5) but less
+otherwise (Q = 3: 37 at T+1 = 5; Q = 4: 369 at T+1 = 6).
 
 ## 5. Remaining obstruction
 
