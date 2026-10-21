@@ -26,8 +26,9 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
-1. L5: P(n) <== Q_cyc(n-1) (sec. 4.13); attack Q_cyc via the intrinsic space S_0 (CONJECTURE I), or
-   find another Lambda-free route; persistence agent (second order) still running.
+1. L5 via E1 (sec. 4.14): build the 18n x 18n first-order new-column step (eps^2-truncated), with the
+   leading head map Lambda'_n(0); find its structure (pole-order triangularity) and a closed form of
+   Lambda'_n(0); propagate (*). In parallel: Q_cyc via the intrinsic S_0 (sec. 4.13, agent running).
 2. An inductive invariant for Lambda_n (the only obstruction found in every route).
 3. general Q: T = 4 DONE (sec. 6.4); dimension for T <= Q+1 DONE (sec. 6.5); open: dimension
    for T > Q+1 (Q >= 4) and independence of (24) for T >= 5.
@@ -588,6 +589,22 @@ research/AGENT_COL_NOTES.md, scripts exploration/agent_col_*.py. u_N = u_0(1 + d
   full-rank head map); latest-pair collision pushes the same 9n-15 dimensions into the jets.
 - New structure: S_0 is independent of the order of the middle blocks (EXACT-CHECKED m = 4,5,6) --
   CONJECTURE I: an intrinsic space; different cut points share exactly W_m.
+
+### 4.14 Persistence limit, intrinsically (agent PER; integrated 21 Oct 2026, re-run and reproduced)
+
+research/AGENT_PER_NOTES.md, scripts exploration/agent_per_*.py. g = I + eps H exactly gives
+K_t(a,a) = f_ta = X_a/(X_a + eps lam_ta), E = -eps f nu, B = -eps(delta_ab + eps c_tab) f f nu; every
+eps-coefficient is a Laurent polynomial (poles on coordinate lines only).
+- EXACT-CHECKED: flat limit W^0 = explicit interpolation space (fixed points P_ta on coordinate lines,
+  fat vertex schemes), dim 9n^2-6n for n <= 14; the canonical lattice realises the pole-order filtration.
+- **CONJECTURE E1 (EXACT-CHECKED n = 4..7, two code paths at n = 4, 5):** with D = diag(eps^[a != b]),
+  D R_n D^{-1} has Smith exponents in {0,1} only (R_n has {0,1,2}); E1(n) => det R_n != 0 (PROVED);
+  fails at n = 3 (needs eps^2). Defect 3(5n^2-9n-2)/2 for n = 4..8 (predicted n = 7, 8 beforehand).
+  Order-0 rank 12n + 3C(n-1,2) (E's, head sums I_t, commutator classes).
+- PROVED reductions: E1 only mod eps^2 (Krull); appending the newest block, E1(n) + (*) (normalised head map
+  regular on L_B', EXACT-CHECKED n = 4,5,6) give the whole old part of E1(n+1); what remains is an
+  18n-dimensional FIRST-ORDER statement about the new columns in which the old system enters only through
+  the head map at eps = 0. This is the most structured form of L5 found so far.
 
 ## 6. General Q (side results)
 
