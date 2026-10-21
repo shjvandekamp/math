@@ -1,4 +1,4 @@
-# Exact moment counts for T ≤ Q+1, and bases for T ≤ 4, in dynamic multinomial logit
+# DHW Conjecture 1 for every T ≤ Q+1 (exact moment counts and bases) in dynamic multinomial logit
 
 Status (20 Oct 2026): complete paper proof, checked by the scripts listed in sec. 7.
 Independent review: see sec. 8.
@@ -26,11 +26,9 @@ Throughout, **generic** means: on an open dense subset of the economic domain.
 **Theorem A (exact count).** For Q ≥ 2 and 3 ≤ T ≤ Q + 1, generically
 dim M_T = ℓ(Q, T) = Q^T − Q (2 + Q − T)(1 + Q)^{T−2}.
 
-**Theorem B (bases).** Generically, the DHW family (24) is a basis of M_3 (every Q ≥ 2) and of
-M_4 (every Q ≥ 3). In particular Conjecture 1 holds at T = 3 and T = 4 for every Q.
-
-(Q = 2 is classical; the proofs below are written for Q ≥ 3 but Theorem A's argument also covers
-Q = 2.)
+**Theorem B (bases).** For Q ≥ 3 and 3 ≤ T ≤ Q + 1 (and for Q = 2, T = 3), generically the DHW family
+(24) is linearly independent, hence (Theorem A) a basis of M_T. So both halves of Conjecture 1 hold
+whenever T ≤ Q + 1; in particular at T = 3 and T = 4 for every Q ≥ 3.
 
 ## 1. Polynomial (tensor) form
 
@@ -181,67 +179,96 @@ Q^{T+1} − Q(Q+1)^{T−1}[(2+Q−T) − 1]), so dim M_T = c_T for 2 ≤ T ≤ Q
 All genericity conditions used are independence conditions of at most Q distinct forms from
 {η_i} ∪ {L_{tr}}, so sec. 2 applies.
 
-## 6. Proof of Theorem B (independence)
+## 6. Proof of Theorem B (independence for 3 ≤ T ≤ Q + 1)
 
-By Theorem A, a family of ℓ(Q, T) elements of M_T is a basis iff it is linearly independent.
+Periods are one-based; K_t is the transition into period t. Write μ^u_c := η_c / L_{uc} (a scalar
+rational function), E_{s,c} := η_c e_c (I − K_s), and for a set R of blocks and s ∈ R
+J^R_{s,c} := η_c e_c (I − K_s Π_{R∖s}) with Π_{R∖s} the increasing (time-ordered) product.
 
-**T = 3 (DHW Proposition 2).** The Q moments (45) are m_q = 1{y_1 = q} − 1{y_2 = q} S(y) with S the
-likelihood ratio of the reverse cycle; at the path y_q = (q, q, c_q), c_q ≠ q, m_{q'}(y_q) = δ_{qq'}(1 − S(y_q)),
-and S(y_q) ≠ 1 generically. (We only cite this; it is DHW's proof.)
+### 6.1 The family, the lifts and the quotient map
 
-**T = 4, Q ≥ 3.** Use one-based periods. The (24) moments at T = 4 are (DHW footnote 7):
-j = 0: s_1 = 1, s_2 ∈ {2, 3}, q_0 ∈ [Q] (2Q moments); j = 1: shared t ∈ {1, 2, 3} (no restriction since
-Q − 2 ≥ 1), {s_1 < s_2} = {1,2,3} ∖ {t}, (q_0, q_1) ∈ [Q]^2 (3Q^2 moments). With p^σ the transformed
-model (DHW (11), (13)), p^σ(y) = K_1(y_0, y_{τ(1)}) Π_{k=2}^4 K_{τ(k−1)+1}(y_{τ(k−1)}, y_{τ(k)}) for the
-generation order τ, and m · p = 1{shared}[1{y_{s_1}=q_0} p^{σ_1} − 1{y_{s_2}=q_0} p^{σ_2}].
+DHW (24) indexes moments by j ∈ [0, T−3], shared periods t_1 < ⋯ < t_j in [T−1], s_1 := min([T−1] ∖ t),
+s_2 ∈ [T−1] ∖ (t ∪ {s_1}), values q = (q_0, …, q_j); the generation orders are
+τ_1 = (t, s_1, r, s_2, T) and τ_2 = (t, s_2, r, s_1, T) (r the remaining periods, increasing), and the restriction
+t_l = l for l ≤ j − (Q−2) is vacuous because j ≤ T − 3 ≤ Q − 2. With p^σ the transformed model (DHW (11), (13)),
+p^σ(y) = K_1(y_0, y_{τ(1)}) Π_{k ≥ 2} K_{τ(k−1)+1}(y_{τ(k−1)}, y_{τ(k)}), and
+m · p = 1{y_{t_l} = q_l ∀l} [1{y_{s_1} = q_0} p^{σ_1} − 1{y_{s_2} = q_0} p^{σ_2}].
 
-*Lifts.* For t = 1 the moment is 1{y_1 = q_1} times the T = 3 moment (45) of the chain started at
-q_1 (periods 2–4); for fixed q_1 these Q moments are independent (Prop. 2 with initial state q_1),
-and different q_1 have disjoint supports: the Q^2 lifts are independent.
+*Lifts* (t_1 = 1). Then s_1 ≥ 2, the restriction rule shifts consistently, and m = 1{y_1 = q_1} m' with m' the
+(24)-moment of the (T−1)-period chain on periods 2,…,T started at y_1 = q_1 (blocks K_2,…,K_T): indeed
+p^σ = K_1(y_0, y_1) p'^{σ'} and p = K_1(y_0,y_1) p'. So the lifts are Q copies (q_1 ∈ [Q]) of the (T−1)-family
+with disjoint supports; by induction on T (the statement is for every initial outcome) they are independent.
 
-*Quotient map.* C(m)_i := Σ_{y : y_1 = i} m(y) p_y(η). C kills every lift (the T = 3 moment has zero
-conditional mean given y_1). Summing the generation-order products (stochastic rows sum to 1):
+*Quotient map.* C(m)_i := Σ_{y : y_1 = i} m(y) p_y(η). For a lift, C(m) = δ_{i q_1} K_1(y_0,q_1) E[m' | y_1 = q_1] = 0.
 
-| moment | τ_1, τ_2 | C(m) |
-|---|---|---|
-| j = 1, t = 2, (s_1, s_2) = (1, 3) | (2,1,3,4), (2,3,1,4) | K_1(y_0,a) K_3(a,b) e_b (I − K_4), a = q_1, b = q_0 |
-| j = 1, t = 3, (s_1, s_2) = (1, 2) | (3,1,2,4), (3,2,1,4) | K_1(y_0,a) K_4(a,b) e_b (I − K_3) |
-| j = 0, s_2 = 2 | (1,3,2,4), (2,3,1,4) | K_1(y_0,q) e_q (I − K_3 K_4) |
-| j = 0, s_2 = 3 | (1,2,3,4), (3,2,1,4) | K_1(y_0,q) e_q (I − K_4 K_3) |
+*New columns* (t_1 ≥ 2, so s_1 = 1). Summing the stochastic factors after the last fixed outcome: the τ_1-term
+generates y_{t_1}, …, y_{t_j} (fixed), then y_1 = q_0 (fixed, forced = i), then free outcomes, giving
+δ_{i q_0} c(q), c(q) := K_1(y_0,q_1) Π_{l<j} K_{t_l+1}(q_l, q_{l+1}) K_{t_j+1}(q_j, q_0);
+the τ_2-term generates the same fixed outcomes, then y_{s_2} = q_0, then the periods r, then y_1 = i, giving
+c(q) (K_{s_2+1} Π_{l} K_{r_l+1})(q_0, i). Hence
 
-(Example, first row: the τ_1 term is δ_{i q_0} K_1(y_0,q_1) K_3(q_1,q_0) after summing y_3, y_4; the τ_2 term
-is K_1(y_0,q_1) K_3(q_1,q_0) K_4(q_0, i) after summing y_4.) Since K_1(y_0, a) = (π_1(a,y_0)/L_{1 y_0}) η_a,
-up to the common nonzero factor 1/L_{1,y_0} and nonzero constants these are
-B_{3,4,a,b}, B_{4,3,a,b}, J_{3,q}, J_{4,q} with h_{tab} := η_a K_t(a,b) e_b, B_{t,s,a,b} := h_{tab}(I − K_s),
-E_{s,q} := η_q e_q (I − K_s), and J_{3,q} = E_{3,q} + Σ_d B_{3,4,q,d}, J_{4,q} = E_{4,q} + Σ_d B_{4,3,q,d}
-(as η_q e_q K_3 = Σ_d h_{3qd}).
+    C(m) = c(q) e_{q_0} (I − K_{s_2+1} Π_l K_{r_l + 1}).                        (6.1)
 
-*Independence of {E_{3,q}, E_{4,q}, B_{3,4,a,b}, B_{4,3,b,a}}* (2Q + 2Q^2 vector functions). In a relation,
-multiply by L_{3a} L_{4b} and restrict to Z := {L_{3a} = L_{4b} = 0} (codimension 2). Every E and every
-B_{3,4,a',b'}, B_{4,3,b',a'} with (a',b') ≠ (a,b) keeps a factor L_{3a} or L_{4b} and vanishes on Z; there
-L_{3a}L_{4b} B_{3,4,a,b} = −A_3(a,b) η_a η_b v_{4b} and L_{3a}L_{4b} B_{4,3,b,a} = −A_4(b,a) η_a η_b v_{3a}, with
-v_{ta}(η) := (A_t(a,i) η_i)_i and A_t(a,i) = π_t(i,a). Generically η_a η_b ≢ 0 on Z and v_{4b}, v_{3a} are not
-proportional on Z (independence conditions of sec. 2: {L_{3a}, L_{4b}, η_a}, {L_{3a}, L_{4b}, η_b}, and at a point
-of Z with all η_i ≠ 0, non-proportionality of the rows A_3(a,·), A_4(b,·)), so both coefficients vanish.
-Then the single residue along {L_{3q} = 0} (resp. L_{4q}) isolates E_{3,q} (resp. E_{4,q}). Finally the
-column operation J ↦ E is unitriangular.
+(For j = 0: c = K_1(y_0, q_0).) Since K_u(a,b) = π_u(b,a) η_b / L_{ua}, c(q) = κ · (η_{q_1}⋯η_{q_j} η_{q_0}) /
+(L_{1 y_0} Π_l L_{t_l+1, q_l}) with κ ≠ 0 a product of π's. So, up to the common factor 1/L_{1,y_0} and κ,
 
-*Conclusion.* A relation among all ℓ(Q,4) = 3Q^2 + 2Q moments maps under C to a relation among the new
-images, so all new coefficients vanish; the remaining relation among the lifts is trivial. With
-Theorem A (dim M_4 = 3Q^2 + 2Q, T = 4 ≤ Q + 1) the family is a basis. ∎
+    C(m) = N(H, q_H; s, q_0) := (Π_{u ∈ H} μ^u_{q_u}) J^{R}_{s, q_0},
+
+with blocks numbered by their period u ∈ {3,…,T} (n := T − 2 blocks), H := {t_l + 1} (head blocks), q_u := q_l
+for u = t_l + 1, R := {3,…,T} ∖ H, s := s_2 + 1 ∈ R. As (t, s_2, q) ranges over the new indices, (H, q_H, s, q_0)
+ranges over ALL tuples with H ⊆ {3,…,T}, |H| ≤ n − 1, s ∈ R, q_H ∈ [Q]^H, q_0 ∈ [Q] (bijectively).
+
+### 6.2 Unitriangularity over canonical multi-heads
+
+Define the canonical columns C(H, q_H; s, q_0) := (Π_{u ∈ H} μ^u_{q_u}) E_{s, q_0}, on the same index set.
+From η_c e_c K_u = Σ_d π_u(d,c) μ^u_c η_d e_d we get, for R ∋ s with next block r_1 = min(R ∖ s),
+J^R_{s,q_0} = E_{s,q_0} + Σ_d π_s(d,q_0) μ^s_{q_0} J^{R∖s}_{r_1, d}, and iterating,
+
+    N(H, q_H; s, q_0) = C(H, q_H; s, q_0) + Σ (constants) · C(H', q'_{H'}; s', q'_0),   |H'| > |H|.
+
+So the matrix of the N's in terms of the C's is unitriangular for any order by decreasing |H|.
+
+### 6.3 The canonical columns are independent when n ≤ Q − 1
+
+Let a relation Σ c(H, q_H; s, q_0) C(H, q_H; s, q_0) = 0 hold. Descending induction on k = |H|, from n − 1 to 0.
+Fix U, a set of k + 1 blocks, and states (q_u)_{u ∈ U}; let Λ := ∩_{u ∈ U} {L_{u q_u} = 0}, of codimension
+k + 1 ≤ n ≤ Q − 1 (nonempty, sec. 2). Multiply the relation by Π_{u ∈ U} L_{u q_u} and restrict to Λ. A column
+C(H', q'; s', q'_0) has simple poles exactly along the |H'| + 1 lines L_{u q'_u} (u ∈ H') and L_{s' q'_0}, one per
+block of H' ∪ {s'}; columns with |H'| > k vanish by induction, and a column with |H'| ≤ k survives the
+restriction only if its lines are exactly {L_{u q_u} : u ∈ U}, i.e. H' ∪ {s'} = U with the given states. These are
+k + 1 columns, one for each s' ∈ U, and
+
+    (Π_{u ∈ U} L_{u q_u}) C(U ∖ s', q; s', q_{s'}) |_Λ = − (Π_{u ∈ U} η_{q_u}) v_{s', q_{s'}},  v_{ua}(η) := (π_u(i,a) η_i)_i.
+
+At a point of Λ with all η_i ≠ 0 (exists: no η_i is in the span of the defining forms) the k + 1 vectors
+v_{s', q_{s'}} = diag(η) (π_{s'}(i, q_{s'}))_i are independent, since the k + 1 ≤ Q − 1 forms L_{s' q_{s'}} are
+(sec. 2). So all coefficients with H ∪ {s} = U vanish; U and the states were arbitrary. ∎
+
+### 6.4 Assembly
+
+A relation among all ℓ(Q,T) moments maps under C to a relation among the N's (lifts are killed); by 6.2 and 6.3
+(n = T − 2 ≤ Q − 1) all new coefficients vanish; the remaining relation among the lifts is trivial by induction.
+For T = 3 there are no lifts and the new columns are the E_{3,q} (n = 1). Hence the (24) family is independent;
+with Theorem A it is a basis. ∎
+
+*Remark (why T > Q + 1 is different).* For n ≥ Q the strata of codimension n are empty and the canonical
+multi-heads with |H| ≥ Q − 1 are dependent on the others (e.g. Q = 3, n = 3: rank 63 of 144); DHW's restriction
+then removes the new columns with j > Q − 2, and the expansion of 6.2 produces higher-head terms that must be
+re-expressed in a smaller basis. For Q = 3, T ≥ 5 this is the open problem (the dense determinant R_n).
 
 ## 7. Machine checks (exploration/, run with math/.venv/bin/python)
 
-* `hq_fresh_generalQ_T3.py`: Lemma 3.1 (i)–(iii) for Q = 3..6 and dim M_3 = Q from raw likelihoods.
-* `hq_fresh_generalQ_T4.py`: two-block lemma, I(B_3 ∪ B_4) vs the fat ideal, dim S_1H_3H_4 = Q^3 − Q,
-  raw dim M_4 = 3Q^2 + 2Q (Q = 3, 4, 5).
-* `hq_fresh_generalQ_dim.py`: Lemma 4.1 for (Q,k) = (3,1),(3,2),(4,2),(4,3),(5,2),(5,3) (fat conditions
-  by all partial derivatives at random points of every stratum, at the witness point) and raw
-  dim M_T = ℓ(Q,T) for (Q,T) up to (5,5), with distinct covariates.
-* `hq_fresh_generalQ_quotient.py`: the quotient images of sec. 6 by brute-force path sums
-  (Q = 3, 4; T = 4, 5); `hq_fresh_generalQ.py`: full rank of the raw (24) family at economic points.
+* `hq_fresh_generalQ_T3.py`: Lemma 3.1 (i)-(iii) for Q = 3..6 and dim M_3 = Q from raw likelihoods.
+* `hq_fresh_generalQ_T4.py`: the two-block case of Lemma 4.1, dim S_1H_3H_4 = Q^3 − Q, raw dim M_4 = 3Q^2 + 2Q.
+* `hq_fresh_generalQ_dim.py`: Lemma 4.1 for (Q,k) = (3,1),(3,2),(4,2),(4,3),(5,2),(5,3) (fat conditions by
+  all partial derivatives at random points of every stratum, witness point) and raw dim M_T = ℓ(Q,T) for
+  (Q,T) up to (5,5), with distinct covariates.
+* `hq_fresh_generalQ_multihead.py`: formula (6.1) for every new column at (Q,T) = (3,4),(4,4),(4,5),(5,5)
+  (exact rational brute-force path sums), and full rank of the canonical multi-heads for
+  (Q,n) = (3,2),(4,2),(4,3),(5,3),(5,4) (rank deficient at (3,3), as the remark predicts).
+* `hq_fresh_generalQ.py`: full rank of the raw (24) family at economic points.
 
-Exactness: all checks are exact modular arithmetic modulo 2^61 − 1 at the stated points; they test the
+All checks are exact modular (2^61 − 1) or exact rational arithmetic at the stated points; they test the
 lemmas at particular points and are not part of the proof.
 
 ## 8. Review
