@@ -20,13 +20,14 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | K  | ker Lambda_n = headless differences ⊕ j=0 columns; induction step <=> 9n x 9n map T invertible | PROVED + EXACT-CHECKED (sec. 4.7) |
 | C  | generic basis for every T <= 20 (det R_n != 0 at an economic point, n <= 18) | EXACT-CHECKED certificate (sec. 6.2) |
 | Q4 | T = 4, every Q >= 3: the (24) family is a basis (independence sec. 6.1, dimension sec. 6.4) | PROVED (secs. 6.1, 6.4) |
+| QC | DHW Conjecture 1 (both halves) for every 3 <= T <= Q + 1 | PROVED (secs. 6.5, 6.6) |
 | Q3 | T = 3, every Q: dim M_3 = Q, so (45) is a basis (DHW leave the upper bound open for Q >= 3) | PROVED (sec. 6.3) |
 | QD | dim M_T = ell(Q,T) for 3 <= T <= Q+1 (exact count; family a basis iff independent) | PROVED (sec. 6.5) |
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
-1. L5 via the latest-pair collision (AGENT_AG_NOTES sec. 5): prove Coll(m) from P(m-1), or
-   find another Lambda-free route; see sec. 4.11 for the integrated agent results.
+1. L5: P(n) <== Q_cyc(n-1) (sec. 4.13); attack Q_cyc via the intrinsic space S_0 (CONJECTURE I), or
+   find another Lambda-free route; persistence agent (second order) still running.
 2. An inductive invariant for Lambda_n (the only obstruction found in every route).
 3. general Q: T = 4 DONE (sec. 6.4); dimension for T <= Q+1 DONE (sec. 6.5); open: dimension
    for T > Q+1 (Q >= 4) and independence of (24) for T >= 5.
@@ -574,6 +575,20 @@ re-run, outputs as recorded there. Summary of AG:
   factor with det R_3 along u_2(1).
 * Lambda_n(B_{u,v,c,d}) is nonzero on every head block for every (u,v) at n = 4, 5.
 
+### 4.13 Oldest-newest collision (agent COL; integrated 21 Oct 2026, re-run and reproduced)
+
+research/AGENT_COL_NOTES.md, scripts exploration/agent_col_*.py. u_N = u_0(1 + delta nu):
+- EXACT-CHECKED: intrinsic defect exactly 12 for n = 5..9 (15 at n = 4), exponents 0/1 only; the only
+  delta = 0 relations are the 12 coincidences E_N = E_0, F_{N,0} = F_{0,N}.
+- PROVED (Theorem C there): P(n) <== Q_cyc(n-1), where Q_cyc(m) is independence of the 9m^2+12m-9 distinct
+  members of the cyclic configuration (0, 1, ..., m-1, 0'); the 12 jets are separated from S_0 by 12 local
+  functionals at the six base points of block 0 (double-pole residues and vanishing orders), with a
+  block-triangular 12 x 12 matrix of natural factors. Q_cyc(m) EXACT-CHECKED m = 4..8, false at m = 3.
+- KILLED as Lambda-free: Q_cyc(m) still contains a 9m x 9m Lambda_m-twisted step T0 (old parts with dense
+  full-rank head map); latest-pair collision pushes the same 9n-15 dimensions into the jets.
+- New structure: S_0 is independent of the order of the middle blocks (EXACT-CHECKED m = 4,5,6) --
+  CONJECTURE I: an intrinsic space; different cut points share exactly W_m.
+
 ## 6. General Q (side results)
 
 ### 6.1 T = 4, every Q >= 3: independence (PROVED)
@@ -799,6 +814,36 @@ raw dim M_T = ell(Q,T) for (Q,T) = (3,3), (3,4), (4,4), (4,5), (5,4), (5,5) at r
 with DISTINCT covariates (a repeated covariate value is a special point: dim M_5 = 624 > 524 at Q = 4).
 For T > Q+1 the products are dependent (Q = 3, T = 5: J_9 has dimension 37 < 64) and the
 dimension needs the base-point interpolation of the project (Q = 3) or more.
+
+### 6.6 DHW Conjecture 1 for every T <= Q + 1 (PROVED)
+
+**Theorem.** For Q >= 3 and 3 <= T <= Q + 1, the equation-(24) family is generically a basis of M_T.
+
+*Quotient images (PROVED by the generation-order sums of sec. 6.1, EXACT-CHECKED for every new column at
+(Q,T) = (3,4), (4,4), (4,5), (5,5)).* A new moment (shared periods t_1 < ... < t_j >= 2, values q_1..q_j, q_0,
+s_1 = 1, s_2) has C(m) = K_1(y_0,q_1) prod_l K_{t_l+1}(q_l, q_{l+1}) K_{t_j+1}(q_j,q_0) e_{q_0}(I - K_{s_2+1} P),
+i.e. up to the common factor 1/L_{1,y_0} and constants N(H, q_H; s, q_0) := (prod_{u in H} X_{q_u}/L_{u q_u}) J^R_{s,q_0}
+with H = {t_l + 1} the head blocks, R the other blocks, s = s_2 + 1 in R and J^R the j = 0 column of R.
+For T <= Q + 1 every j <= T - 3 <= Q - 2 occurs (no DHW restriction), and the index set is all (H, q_H, s, q_0)
+with H a set of blocks, s not in H.
+
+*Unitriangularity (PROVED).* X_c e_c K_u = sum_d A_u(c,d) (X_c/L_uc) X_d e_d expands J^R_{s,q_0} into
+E_{s,q_0} + (terms with one more head) + ..., so N(H; s, q_0) = C(H; s, q_0) + (canonical columns with more heads),
+C(H, q_H; s, q_0) := (prod_{u in H} X_{q_u}/L_{u q_u}) E_{s,q_0}.
+
+*Canonical multi-heads are independent when n = T - 2 <= Q - 1 (PROVED).* Descending in |H|: at a stratum
+∩_{u in H ∪ s} {L_{u q_u} = 0} (codim |H| + 1 <= n <= Q - 1, nonempty) only the |H| + 1 columns with that line set
+survive (one per choice of the E-block s), with iterated residues proportional to v_{s q_s}(x); these |H| + 1 zero-sum
+vectors are independent at a point with all x_i != 0 (independence of <= Q distinct forms, sec. 6.4 witness).
+
+*Assembly.* The lifts (period 1 shared) are Q disjoint copies of the (T-1)-family (independent by induction),
+C kills them, the new images are independent: the family is independent, and dim M_T = ell(Q,T) (sec. 6.5).
+
+EXACT-CHECKED (exploration/hq_fresh_generalQ_multihead.py): images as above (24, 40, 300, 540 new columns);
+canonical multi-head families full rank for (Q,n) = (3,2), (4,2), (4,3), (5,3), (5,4) (4320 columns), and
+deficient for n = Q ((3,3): 63/144) -- which is exactly why Q = 3, T >= 5 (and generally T > Q + 1) is hard:
+there the higher-head terms of the unitriangular expansion must be re-expressed in a smaller basis, producing
+the dense matrix R_n.
 
 ## 5. Remaining obstruction
 
