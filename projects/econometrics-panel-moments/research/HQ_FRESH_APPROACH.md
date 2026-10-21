@@ -601,6 +601,8 @@ eps-coefficient is a Laurent polynomial (poles on coordinate lines only).
   D R_n D^{-1} has Smith exponents in {0,1} only (R_n has {0,1,2}); E1(n) => det R_n != 0 (PROVED);
   fails at n = 3 (needs eps^2). Defect 3(5n^2-9n-2)/2 for n = 4..8 (predicted n = 7, 8 beforehand).
   Order-0 rank 12n + 3C(n-1,2) (E's, head sums I_t, commutator classes).
+- E1 re-confirmed independently through the canonical code path at a new seed (11) for n = 5, 6
+  (agent_per_canonical_check.py; R' exponents 0:63 1:117 and 0:84 1:186).
 - PROVED reductions: E1 only mod eps^2 (Krull); appending the newest block, E1(n) + (*) (normalised head map
   regular on L_B', EXACT-CHECKED n = 4,5,6) give the whole old part of E1(n+1); what remains is an
   18n-dimensional FIRST-ORDER statement about the new columns in which the old system enters only through
@@ -858,7 +860,8 @@ C kills them, the new images are independent: the family is independent, and dim
 
 EXACT-CHECKED (exploration/hq_fresh_generalQ_multihead.py): images as above (24, 40, 300, 540 new columns);
 canonical multi-head families full rank for (Q,n) = (3,2), (4,2), (4,3), (5,3), (5,4) (4320 columns), and
-deficient for n = Q ((3,3): 63/144) -- which is exactly why Q = 3, T >= 5 (and generally T > Q + 1) is hard:
+deficient for n = Q ((3,3): 63/144) -- which is exactly why Q = 3, T >= 5 (and generally T > Q + 1) is hard.
+Raw (24) family full rank (exploration/hq_fresh_generalQ.py) also at (Q,T) = (5,5), (6,5), and (3,5);
 there the higher-head terms of the unitriangular expansion must be re-expressed in a smaller basis, producing
 the dense matrix R_n.
 
