@@ -99,3 +99,16 @@ Notes: `research/HQ_FRESH_APPROACH.md` (full record).
   give degree 154 at n = 4; collision leading coefficient / det R_{m-1} has degree-88 factors.
 * Scripts added: hq_fresh_nearperm.py, hq_fresh_geom_factor.py; the intrinsic test is
   hq_fresh_coalesce.family_eval (evaluate E/F or B/G family at fixed points) + hq_fresh_smith.
+
+## Updates (21 Oct 2026) -- the "room" picture (read this)
+
+* For general Q the quotient images of the new (24) columns are N(H, q_H; s, q0) = (prod_{u in H} X_{q_u}/L_{u q_u}) J^R_{s,q0}
+  (H = head blocks, R = the rest, s in R, J^R the j = 0 column of R). They are UNITRIANGULAR over the canonical
+  multi-heads C(H; s) = (prod_H mu) E_{s,q0} (expand J along its increasing word: each letter becomes a new head).
+  When n <= Q - 1 the canonical multi-heads are independent (iterated residues at codimension-(|H|+1) strata), so
+  DHW Conjecture 1 holds for all T <= Q + 1 (research/GENERALQ_PROOF.md, notes secs. 6.5-6.6).
+* For Q = 3 the strata of codimension >= 3 are empty: the multi-heads with >= 2 heads COLLAPSE (partial fractions on
+  P^2) onto the E/B basis. R_n = I + (collapsed higher-head terms of F_{t,s} = B + sum_d mu^t mu^s (increasing column
+  of the rest)). This collapse is the whole difficulty; R_n - I has full rank (n = 3..6).
+* Oldest-newest collision (research/AGENT_COL_NOTES.md): P(n) <== Q_cyc(n-1) with a local, proved 12-jet step;
+  Q_cyc still contains a 9m x 9m Lambda-twisted step; S_0 is independent of the middle-block order (CONJECTURE I).
