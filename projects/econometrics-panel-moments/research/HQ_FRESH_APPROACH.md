@@ -20,7 +20,7 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | K  | ker Lambda_n = headless differences ⊕ j=0 columns; induction step <=> 9n x 9n map T invertible | PROVED + EXACT-CHECKED (sec. 4.7) |
 | C  | generic basis for every T <= 20 (det R_n != 0 at an economic point, n <= 18) | EXACT-CHECKED certificate (sec. 6.2) |
 | Q4 | T = 4, every Q >= 3: the (24) family is a basis (independence sec. 6.1, dimension sec. 6.4) | PROVED (secs. 6.1, 6.4) |
-| QC | DHW Conjecture 1 (both halves) for every 3 <= T <= Q + 1 | PROVED (secs. 6.5, 6.6) |
+| QC | DHW Conjecture 1 (both halves) for every 3 <= T <= Q + 1, Q >= 3 | PROVED, independently reviewed (research/GENERALQ_PROOF.md) |
 | Q3 | T = 3, every Q: dim M_3 = Q, so (45) is a basis (DHW leave the upper bound open for Q >= 3) | PROVED (sec. 6.3) |
 | QD | dim M_T = ell(Q,T) for 3 <= T <= Q+1 (exact count; family a basis iff independent) | PROVED (sec. 6.5) |
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
