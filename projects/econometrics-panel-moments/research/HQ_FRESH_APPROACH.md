@@ -608,6 +608,17 @@ eps-coefficient is a Laurent polynomial (poles on coordinate lines only).
   18n-dimensional FIRST-ORDER statement about the new columns in which the old system enters only through
   the head map at eps = 0. This is the most structured form of L5 found so far.
 
+### 4.15 Cyclic space S_0 made explicit (agent COL2; integrated 23 Oct 2026, re-run)
+
+research/AGENT_COL2_NOTES.md, scripts exploration/agent_col2_*.py. S_0 (oldest-newest collision, delta = 0)
+equals an explicit order-free space S_loc: the W_n ambient with fat/second-order conditions at the six base
+points of the doubled block (6 conditions per base point instead of 2). EXACT-CHECKED S_0 = S_loc, m = 4..7;
+PROVED S_0^tau ⊆ S_loc for every order tau. CONJECTURE D: dim S_loc = |fam| - 12 (an h^1-vanishing of the
+same type as the dimension theorem). Then Q_cyc(m) <=> the cyclic family spans S_loc. KILLED: position
+freedom of a new middle block (every position gives a Lambda-twisted step of size ~9(m-1)); head-map changes
+under adjacent transpositions are dense and full rank.
+Also: E1 confirmed at n = 8 (series method, seed 33: delta_8 = 369 = 3(5n^2-9n-2)/2, eps L_B' ⊆ L_F' true).
+
 ## 6. General Q (side results)
 
 ### 6.1 T = 4, every Q >= 3: independence (PROVED)
