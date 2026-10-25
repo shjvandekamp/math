@@ -144,6 +144,39 @@ class CardVerifierTests(unittest.TestCase):
             verify_certificate(Certificate(17, 17, Hint(2, 0), CARDS))
         self.assertEqual(raised.exception.code, "root-requirements")
 
+    def test_reused_hint_keeps_each_parent_obligation(self):
+        # Card 2 already uses these same child hints successfully. Card 3
+        # must still check its own ownership, support and current White reply.
+        cases = (
+            ("white-collision", replace(PREDECESSOR,
+                responses=(((1, 0), Hint(1, 0)), PREDECESSOR.responses[1]))),
+            ("requirements", replace(PREDECESSOR, required=PREDECESSOR.required[:-1])),
+            ("support", replace(PREDECESSOR,
+                support=tuple(p for p in PREDECESSOR.support if p != (1, 2)))),
+        )
+        for code, changed in cases:
+            with self.subTest(code=code):
+                with self.assertRaises(InvalidCertificate) as raised:
+                    verify_certificate(Certificate(17, 17, Hint(2, 0), CARDS + (changed,)))
+                self.assertEqual(raised.exception.code, code)
+
+    def test_geometry_does_not_leak_between_certificates(self):
+        with self.assertRaises(InvalidCertificate) as first:
+            verify_certificate(Certificate(17, 17, Hint(2, 0), CARDS))
+        self.assertEqual(first.exception.code, "root-requirements")
+        changed = replace(TERMINAL0, required=TERMINAL0.required + ((100, 100),))
+        with self.assertRaises(InvalidCertificate) as second:
+            verify_certificate(Certificate(17, 17, Hint(2, 0),
+                                           (changed, TERMINAL1, PREDECESSOR)))
+        self.assertEqual(second.exception.code, "requirements")
+
+    def test_parser_keeps_ascii_integer_grammar(self):
+        for token in ("+1", "1_0", "٠", "1.0", "--1"):
+            with self.subTest(token=token):
+                with self.assertRaises(InvalidCertificate) as raised:
+                    parse_text("snaky-cards-txt-v1 17 17 " + token)
+                self.assertEqual(raised.exception.code, "integer")
+
 
 if __name__ == "__main__":
     unittest.main()

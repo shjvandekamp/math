@@ -5,6 +5,9 @@
 It does not import the source repository's checker, constructors, or search
 helpers. No strategy search occurs here.
 
+See [performance measurements and reproduction](PERFORMANCE.md) for the
+bounded geometry cache, strict-parser optimization and baseline comparison.
+
 Run from the repository root:
 
 ```sh

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import dataclass
+from functools import lru_cache
 import hashlib
 import json
 from pathlib import Path
@@ -21,6 +22,7 @@ from typing import Iterable
 
 Point = tuple[int, int]
 SHAPE: tuple[Point, ...] = ((0, 0), (1, 0), (2, 0), (3, 0), (3, 1), (4, 1))
+_INTEGER_TOKEN = re.compile(r"-?[0-9]+")
 
 # These indices are part of the compact format, not the orientation-generation
 # algorithm used below to recognize a terminal Snaky placement.
@@ -115,8 +117,8 @@ def parse_text(text: str) -> Certificate:
     require(bool(tokens) and tokens[0] == "snaky-cards-txt-v1", "format", "wrong format tag")
     values = []
     for position, token in enumerate(tokens[1:], 1):
-        require(re.fullmatch(r"-?[0-9]+", token) is not None,
-                "integer", f"invalid integer token {position}: {token!r}")
+        if _INTEGER_TOKEN.fullmatch(token) is None:
+            raise InvalidCertificate("integer", f"invalid integer token {position}: {token!r}")
         values.append(int(token))
     reader = _Reader(values)
     rows, cols = reader.natural("rows"), reader.natural("columns")
@@ -192,7 +194,12 @@ class CardCheck:
     duplicate_response_keys: int
 
 
-def check_card(cards: tuple[Card, ...], index: int) -> CardCheck:
+def _hint_geometry(cards: tuple[Card, ...], hint: Hint):
+    target = cards[hint.card]
+    return transform(target.required, hint), transform(target.support, hint)
+
+
+def _check_card(cards: tuple[Card, ...], index: int, geometry) -> CardCheck:
     """Check one local implication, with all finite and outside reply classes.
 
     The whole-certificate caller must check every card.  Requirements and support
@@ -219,8 +226,7 @@ def check_card(cards: tuple[Card, ...], index: int) -> CardCheck:
         target = cards[hint.card]
         require(1 <= target.height < card.height, "height-descent",
                 context + f" target height {target.height} is not below {card.height}")
-        need = transform(target.required, hint)
-        region = transform(target.support, hint)
+        need, region = geometry(hint)
         missing = need - black
         require(not missing, "requirements", context + f" requires unowned cells {sorted(missing)}")
         escaped = region - support
@@ -248,11 +254,23 @@ def check_card(cards: tuple[Card, ...], index: int) -> CardCheck:
     return CardCheck(False, tuple(sorted(dependencies)), len(replies), ignored, duplicates)
 
 
+def check_card(cards: tuple[Card, ...], index: int) -> CardCheck:
+    """Check one card independently, without sharing state with other certificates."""
+    return _check_card(cards, index, lambda hint: _hint_geometry(cards, hint))
+
+
 def verify_certificate(certificate: Certificate, max_root_height: int | None = None) -> dict:
     """Check every card, then the empty-board root and finite-board free-cell budget."""
     cards = certificate.cards
     require(bool(cards), "empty", "no cards")
-    checks = [check_card(cards, index) for index in range(len(cards))]
+    # Cache geometry only. Height, ownership, support and the current White
+    # collision are still checked at every hint use. The closure owns this
+    # immutable certificate, so entries cannot leak into another verification.
+    @lru_cache(maxsize=512)
+    def geometry(hint: Hint):
+        return _hint_geometry(cards, hint)
+
+    checks = [_check_card(cards, index, geometry) for index in range(len(cards))]
     hint = certificate.root
     require(0 <= hint.card < len(cards), "root-reference", "root card does not exist")
     root = cards[hint.card]

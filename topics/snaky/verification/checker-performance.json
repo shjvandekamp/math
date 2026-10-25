@@ -1,0 +1,157 @@
+{
+  "baseline_commit": "bc1a91860188a61e73ccca6dd1a6a34082dad59b",
+  "baseline_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10",
+  "cache_limit_entries": 512,
+  "certificates": [
+    {
+      "cards": 3468,
+      "identical_parsing_and_result": true,
+      "inside_checks": 61040,
+      "median_seconds": {
+        "baseline": 3.3805878999410197,
+        "optimized": 2.2894166000187397
+      },
+      "median_speedup": 1.476615439895626,
+      "outside_checks": 3456,
+      "path": "topics\\snaky\\certificate\\snaky19.cards.txt",
+      "samples": {
+        "baseline": [
+          {
+            "parse_seconds": 3.8844059000257403,
+            "total_seconds": 5.901656799949706,
+            "verify_seconds": 2.0172508999239653
+          },
+          {
+            "parse_seconds": 1.8405701000010595,
+            "total_seconds": 3.3805878999410197,
+            "verify_seconds": 1.5400177999399602
+          },
+          {
+            "parse_seconds": 1.8826131999958307,
+            "total_seconds": 3.3620759999612346,
+            "verify_seconds": 1.479462799965404
+          },
+          {
+            "parse_seconds": 1.556127700023353,
+            "total_seconds": 3.342289200052619,
+            "verify_seconds": 1.7861615000292659
+          },
+          {
+            "parse_seconds": 2.4183719999855384,
+            "total_seconds": 4.525062499917112,
+            "verify_seconds": 2.106690499931574
+          }
+        ],
+        "optimized": [
+          {
+            "parse_seconds": 1.1081174000864848,
+            "total_seconds": 2.1902293000603095,
+            "verify_seconds": 1.0821118999738246
+          },
+          {
+            "parse_seconds": 1.2234966000542045,
+            "total_seconds": 2.273414900060743,
+            "verify_seconds": 1.0499183000065386
+          },
+          {
+            "parse_seconds": 1.2123587999958545,
+            "total_seconds": 2.4091682999860495,
+            "verify_seconds": 1.196809499990195
+          },
+          {
+            "parse_seconds": 0.9732757000019774,
+            "total_seconds": 2.293670199927874,
+            "verify_seconds": 1.3203944999258965
+          },
+          {
+            "parse_seconds": 1.2804487999528646,
+            "total_seconds": 2.2894166000187397,
+            "verify_seconds": 1.008967800065875
+          }
+        ]
+      },
+      "sha256": "baf8774e1fc6eea60b1756437e8b3caae0ede5e001b10c0c3787aab51840782e",
+      "verification_peak_traced_bytes": {
+        "baseline": 1022372,
+        "optimized": 4244394
+      }
+    },
+    {
+      "cards": 8734,
+      "identical_parsing_and_result": true,
+      "inside_checks": 144288,
+      "median_seconds": {
+        "baseline": 9.471077199908905,
+        "optimized": 6.434969000052661
+      },
+      "median_speedup": 1.4718139589843242,
+      "outside_checks": 8728,
+      "path": "topics\\snaky\\certificate\\snaky15x15-24.cards.txt",
+      "samples": {
+        "baseline": [
+          {
+            "parse_seconds": 4.418254900025204,
+            "total_seconds": 8.764348599943332,
+            "verify_seconds": 4.3460936999181286
+          },
+          {
+            "parse_seconds": 4.667551799910143,
+            "total_seconds": 9.959735099924728,
+            "verify_seconds": 5.292183300014585
+          },
+          {
+            "parse_seconds": 5.379284199909307,
+            "total_seconds": 9.471077199908905,
+            "verify_seconds": 4.091792999999598
+          },
+          {
+            "parse_seconds": 4.259545900044031,
+            "total_seconds": 8.498357900069095,
+            "verify_seconds": 4.238812000025064
+          },
+          {
+            "parse_seconds": 4.4214335000142455,
+            "total_seconds": 9.886395800043829,
+            "verify_seconds": 5.464962300029583
+          }
+        ],
+        "optimized": [
+          {
+            "parse_seconds": 2.723445799900219,
+            "total_seconds": 6.140255899983458,
+            "verify_seconds": 3.4168101000832394
+          },
+          {
+            "parse_seconds": 2.68069149996154,
+            "total_seconds": 5.831458900007419,
+            "verify_seconds": 3.150767400045879
+          },
+          {
+            "parse_seconds": 3.1116580000380054,
+            "total_seconds": 6.434969000052661,
+            "verify_seconds": 3.3233110000146553
+          },
+          {
+            "parse_seconds": 2.740836900076829,
+            "total_seconds": 6.677482800092548,
+            "verify_seconds": 3.9366459000157192
+          },
+          {
+            "parse_seconds": 3.228151199989952,
+            "total_seconds": 6.73730679997243,
+            "verify_seconds": 3.5091555999824777
+          }
+        ]
+      },
+      "sha256": "ff88668bddcbc4bb4a0dfa9794ac411b1492ddbcb22013621f1723f9cc3ef567",
+      "verification_peak_traced_bytes": {
+        "baseline": 2476672,
+        "optimized": 4740521
+      }
+    }
+  ],
+  "optimized_sha256": "199515d18fc8f5b4bf56ef517fbe4f4299f220de237625db990f6e89c2989206",
+  "order": "alternating baseline-first and optimized-first after warmup",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "python": "3.12.2"
+}
