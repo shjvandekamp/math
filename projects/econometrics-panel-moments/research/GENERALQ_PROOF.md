@@ -3,6 +3,11 @@
 Status (21 Oct 2026): complete paper proof, checked by the scripts listed in sec. 7; independently
 reviewed (sec. 8), with the reviewer's gap and minor points repaired in this version.
 
+**Superseded in scope (27 Oct 2026):** research/GENERALQ_ALLT_PROOF.md extends Theorem A to every T ≥ 3 (capped
+fat-ideal lemma) and proves that a modified family (DHW's index set with the generation orders (t, s_1, s_2, r, T),
+(t, s_2, s_1, r, T)) is a basis for every (Q,T). Its Corollary 4 re-proves Theorem B below. Its (Gen) is the labelled
+version; the two-block statements here are unaffected.
+
 ## 0. Setting and results
 
 Outcomes y_t ∈ [Q] = {1,…,Q} for t = 1,…,T, initial outcome y_0 fixed. For a fixed effect

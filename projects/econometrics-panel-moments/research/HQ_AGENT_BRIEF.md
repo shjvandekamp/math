@@ -112,3 +112,26 @@ Notes: `research/HQ_FRESH_APPROACH.md` (full record).
   of the rest)). This collapse is the whole difficulty; R_n - I has full rank (n = 3..6).
 * Oldest-newest collision (research/AGENT_COL_NOTES.md): P(n) <== Q_cyc(n-1) with a local, proved 12-jet step;
   Q_cyc still contains a 9m x 9m Lambda-twisted step; S_0 is independent of the middle-block order (CONJECTURE I).
+
+## Updates (27 Oct 2026) -- the canonical basis (read this first)
+
+* **The canonical family is a basis for every n (PROVED, reviewed; research/GENERALQ_ALLT_PROOF.md).**
+  Keep DHW's index set (24)-(25) but take the generation orders (t, s1, s2, r, T), (t, s2, s1, r, T)
+  instead of DHW's (t, s1, r, s2, T), (t, s2, r, s1, T). These are valid moments (DHW's Theorem 1). Their
+  new-column images are exactly the canonical E_{s,a}, B_{t,s,a,b} (up to nonzero constants). So the canonical
+  basis {E} ∪ {B} of W_n comes from actual moments, and these moments are a basis of M_T for every T.
+* Hence L5 is literally "DHW's columns are invertible in the canonical basis": det R_n != 0. Nothing else
+  of DHW's Conjecture 1 for Q = 3 is open. (For general Q: the count dim M_T = ell(Q,T) holds for every T; the
+  analogous matrix is unitriangular for T <= Q+1 and dense for T > Q+1.)
+* **Spanning of W_n by {E, B} now has a direct proof** (descending iterated residues: cross points, then lines,
+  then level 0), not via the dimension count.
+* **Do not use common-conic points as witnesses.** At points where all 3n lines are tangent to one conic, e.g. the
+  general-Q witness g(j,r) = w_r^(j-1), u_t(j) = z_t^(j-1), R_3 has rank 51/54 (the non-lift matrix 60/63). The
+  symmetric conic points g = (1-eps)I + eps J, u_t = (1, z_t, z_t^2) also drop rank. R_4 is nonsingular there, but
+  the n = 3 deficit propagates to all T >= 5 through the lifts.
+* Killed on 27 Oct (see HQ_FRESH_APPROACH.md sec. 4.16):
+  - the persistence leading coefficient (no product formula; factors of degree 14, 21, 26 at n = 4);
+  - families interpolating between canonical and DHW words (each has its own irreducible factors);
+  - dense multi-head relations;
+  - no order-free subspaces;
+  - the Q' >= T-1 embedding (it only gives the unrestricted family).
