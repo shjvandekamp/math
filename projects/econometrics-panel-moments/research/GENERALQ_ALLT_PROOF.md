@@ -1,10 +1,11 @@
 # The exact number of fixed-effect-free moments, and an explicit basis, for every T (dynamic multinomial logit, Q ≥ 3)
 
-Status (27 Oct 2026, version 2): complete paper proof, checked by the script of sec. 9.
-* Secs. 1–6 (Theorem 1): independently reviewed, sec. 10. This version repairs the two statements the reviewer
-  found too loose: (Gen) is now stated for the labelled family, and (4.1) has an explicit hypothesis. It also
-  fixes the minor points.
-* Sec. 7 (Theorem 2, explicit basis): added in this version; its review is in sec. 10.
+Status (27 Oct 2026, version 3): complete paper proof, checked by the script of sec. 9, independently reviewed
+in two rounds (sec. 10).
+* Secs. 1–6 (Theorem 1): reviewed in round 1. Repairs made: (Gen) is stated for the labelled family, (4.1) has an
+  explicit hypothesis, and the minor points are fixed.
+* Sec. 7 (Theorem 2 and Corollaries 3, 4): reviewed in round 2. Repairs made: the proof of Corollary 3 is now
+  self-contained, plus the minor points.
 
 This extends Theorem A of research/GENERALQ_PROOF.md from 3 ≤ T ≤ Q + 1 to every T ≥ 3. The proof is
 self-contained; secs. 1–3 restate what is needed from GENERALQ_PROOF.md.
@@ -17,9 +18,10 @@ the model is the Markov chain with transition into period t
     K_t(a, i) = π_t(i, a) η_i / L_{ta}(η),      L_{ta}(η) = Σ_i π_t(i, a) η_i ,
 
 and path probability p_y(η) = Π_{t=1}^T K_t(y_{t−1}, y_t). The **economic domain** (DHW (3)) is
-π_t(q, r) = exp(γ_{qr} + x_t β_q), with scalar covariates x_t and (γ, β, x) in a real vector space; DHW's
-normalisations are irrelevant below. Write g(q,r) := exp γ_{qr} and u_t(q) := exp(x_t β_q), so that
-π_t(q,r) = g(q,r) u_t(q). The **moment space** is M_T := {m ∈ R^{Q^T} : Σ_y m(y) p_y(η) = 0 for all η > 0}.
+π_t(q, r) = exp(γ_{qr} + x_t'β_q), with covariates x_t (scalar or vector) and (γ, β, x) in a real vector
+space; DHW's normalisations are irrelevant below. Write g(q,r) := exp γ_{qr} and u_t(q) := exp(x_t'β_q), so that
+π_t(q,r) = g(q,r) u_t(q). (For vector covariates the scalar witness of sec. 2 embeds by setting the other
+covariates to zero, so genericity carries over.) The **moment space** is M_T := {m ∈ R^{Q^T} : Σ_y m(y) p_y(η) = 0 for all η > 0}.
 DHW (arXiv:2610.17104, eq. (24)) construct ℓ(Q,T) moment functions, counted by their eq. (25):
 
     ℓ(Q,T) = Σ_{j=0}^{T−3} C(T−1−max(j−(Q−2),0), min(Q−2,j)) · (T−2−j) · Q^{j+1},
@@ -37,15 +39,19 @@ every initial outcome, dim M_T = ℓ(Q,T).
 (t, s_1, r, s_2, T), (t, s_2, r, s_1, T) by (t, s_1, s_2, r, T), (t, s_2, s_1, r, T). The resulting ℓ(Q,T)
 moment functions (sec. 7) form a basis of M_T, for every Q ≥ 3 and every T ≥ 3, under the same genericity.
 
-**Corollary 3.** Let Q ≥ 3 and T ≥ 4, and suppose DHW's family for T − 1 periods is a basis for every
-initial outcome. Then DHW's family for T periods is a basis iff a square matrix of size N_Q(T−2) is invertible
-(sec. 7). This is the matrix of DHW's new columns in the canonical basis. It is unitriangular for T ≤ Q + 1.
-For Q = 3 it is R_n, n = T − 2, of HQ_FRESH_APPROACH.md.
+**Corollary 3.** Let Q ≥ 3 and T ≥ 4, consider a block system satisfying (Gen), and suppose DHW's family for
+T − 1 periods is a basis for every initial outcome. Then DHW's family for T periods is a basis iff a certain
+square matrix of size N_Q(T−2) with constant entries is invertible (sec. 7). It is the matrix of DHW's new
+columns in the canonical basis, and it is unitriangular for T ≤ Q + 1.
+
+**Corollary 4.** For 3 ≤ T ≤ Q + 1 and every system satisfying (Gen), DHW's family (24) is a basis of M_T.
+(This re-proves Theorem B of GENERALQ_PROOF.md.)
 
 So the number of linearly independent fixed-effect-free moment conditions is exactly DHW's count for every
 number of periods. Their construction yields an explicit basis for every (Q,T). What remains of Conjecture 1
 for T > Q + 1 (including Q = 3, T ≥ 5) is the invertibility in Corollary 3, for DHW's particular choice of
-generation orders. For Q = 3, Theorem 1 reproves the project's Lean-checked dimension theorem
+generation orders. That invertibility does not follow from (Gen): at the witness of Lemma 2.1 it fails for
+(Q,T) = (3,5) (sec. 8). For Q = 3, Theorem 1 reproves the project's Lean-checked dimension theorem
 dim M_T = 3^T − C(3T,2) + 6(T−1) by a uniform argument.
 
 *Form proved.* Both theorems hold for every positive block system satisfying
@@ -53,10 +59,10 @@ dim M_T = 3^T − C(3T,2) + 6(T−1) by a uniform argument.
 (Gen) every subfamily of at most Q members of the indexed family (η_1, …, η_Q; L_{tr} : t ≥ 2, r ∈ [Q]),
 with pairwise distinct indices, is linearly independent.
 
-(Gen) is about labelled forms. For example, two blocks with equal forms violate it; this is the case
-x_s = x_t, where dim M_T is larger than ℓ(Q,T), e.g. dim M_4 = 39 for Q = 3. (Gen) is inherited by subsystems
-of blocks, and generic economic parameters satisfy it (sec. 2). All inductions are inductions on this
-statement. Only the blocks t ≥ 2 enter: block 1 appears only through the cleared factor L_{1,y_0}.
+(Gen) is about labelled forms. For example, two blocks s ≠ t ≥ 2 with equal forms violate it; this is the
+case x_s = x_t, where dim M_T is larger than ℓ(Q,T), e.g. dim M_4 = 39 for Q = 3. (Gen) is inherited by
+subsystems of blocks, and generic economic parameters satisfy it (sec. 2). All inductions are inductions on
+this statement. Only the blocks t ≥ 2 enter: block 1 appears only through the cleared factor L_{1,y_0}.
 
 ## 1. Polynomial (tensor) form
 
@@ -369,29 +375,64 @@ c(q) = κ · η_{q_1} ⋯ η_{q_j} η_{q_0} / (L_{1,y_0} Π_l L_{t_l+1, q_l}) wi
     ρ(m^can) = (κ / L_{1,y_0}) · Ĉ(H, q_H; s, q_0),    H := {t_l + 1}, q_{t_l+1} := q_l, s := s_2 + 1.
 
 As (t, s_2, q) runs over the non-lift tuples (j = 0 or t_1 ≥ 2, hence j ≤ Q − 2), (H, q_H, s, q_0) runs
-bijectively over the index set of 𝒞 for the blocks 3,…,T (H ⊆ {3,…,T}, |H| ≤ Q − 2, s ∉ H).
+bijectively over the index set of 𝒞 for the blocks 3,…,T (H ⊆ {3,…,T}, |H| ≤ Q − 2, s ∉ H). Equivalently, the
+element g ∈ K attached to m^can is κ times the numerator vector of Ĉ(H, q_H; s, q_0).
 
 *Proof of Theorem 2.* Induction on T, for all (Gen) systems and all initial outcomes. ρ is linear, and its
 kernel is the space of lifts ⊕_{q_1} 1{y_1 = q_1} M_{T−1}(start q_1) (sec. 6, step 2). Its image lies in
 {w(g)/L_{1,y_0} : g ∈ K} (sec. 6, step 3, which uses only (4.1)). By Lemma 5.2 the image therefore has dimension
-at most |𝒞| = N_Q(T−2). By Lemma 7.2(b) the images of the non-lift canonical moments are nonzero multiples of
-the distinct members of 𝒞. By Lemma 5.1 they are independent, so they form a basis of the image (which is
-therefore all of {w(g)/L_{1,y_0} : g ∈ K}).
-For T = 3 there are no lifts, and so the Q canonical moments form a basis of M_3. For T ≥ 4, by induction the
-canonical (T−1)-families are bases of the M_{T−1}(start q_1), and by Lemma 7.2(a) their lifts are the lift
-members. Hence the canonical family is a basis of M_T, and dim M_T = Q ℓ(Q, T−1) + N_Q(T−2) = ℓ(Q,T)
-(sec. 6). This is a second proof of Theorem 1, which does not use Lemma 4.1. ∎
+at most |𝒞| = N_Q(T−2). By Lemma 7.2(b), the elements g attached to the non-lift canonical moments are
+κ times the numerator vectors of the distinct members of 𝒞. By Lemma 5.1 they are independent, so the
+non-lift canonical images form a basis of the image of ρ, which is therefore all of
+{w(g)/L_{1,y_0} : g ∈ K}.
+For T = 3 there are no lift members (j ≤ T − 3 = 0) and the kernel of ρ is ⊕ M_2 = 0 (Lemma 3.1(i)), so the
+Q canonical moments form a basis of M_3. For T ≥ 4, by induction the canonical (T−1)-families are bases of the
+M_{T−1}(start q_1), and by Lemma 7.2(a) their lifts are the lift members. Hence the canonical family is a basis
+of M_T, and dim M_T = Q ℓ(Q, T−1) + N_Q(T−2) = ℓ(Q,T) (sec. 6).
+This is a second proof of Theorem 1. It avoids the conclusion of Lemma 4.1 (the lifting step of sec. 6). But
+Lemma 5.2 still uses the divisibility step (a) from that proof. ∎
 
-*Proof of Corollary 3.* The same exact sequence applies to DHW's family: its lift members (t_1 = 1) are Q
-disjoint copies of its (T−1)-family (GENERALQ_PROOF.md sec. 6.1), and ρ kills them. So, given that the
-(T−1)-families are bases, DHW's family is a basis iff the images of its non-lift members span the image of ρ,
-i.e. iff the matrix of these images in the basis 𝒞 (Lemma 5.2) is invertible. There are N_Q(T−2) of them, so
-the matrix is square. The images are N(H, q_H; s, q_0) = (Π_{u∈H} μ^u_{q_u}) J^R_{s,q_0}, up to the same nonzero
-factors as above (GENERALQ_PROOF.md (6.1)). They expand unitriangularly over all canonical multi-heads
-(GENERALQ_PROOF.md sec. 6.2), with heads H ∪ {s, r_1, …} of size at most T − 3. For T ≤ Q + 1 all of these lie
-in 𝒞, so the matrix is unitriangular. For T > Q + 1 the multi-heads with |H| ≥ Q − 1 must be re-expressed in
-𝒞 by the procedure of Lemma 5.2. For Q = 3 the matrix is R_n, n = T − 2, of HQ_FRESH_APPROACH.md: up to
-constants, 𝒞 = {E_{s,a}} ∪ {B_{t,s,a,b}}. ∎
+*Proof of Corollary 3.* First, the three facts about DHW's family that the argument needs.
+
+(i) *Lifts.* When j ≥ 1 and t_1 = 1, DHW's orders τ_1 = (t, s_1, r, s_2, T), τ_2 = (t, s_2, r, s_1, T) both start
+with period 1. Shifting periods by one gives DHW's orders for the shifted tuple: s'_1 = s_1 − 1, s'_2 = s_2 − 1,
+and r' = r − 1, still increasing. As in Lemma 7.2(a), m^DHW = 1{y_1 = q_1} m'^DHW, and by the bijection of
+sec. 6 the lift members are Q disjoint copies of DHW's (T−1)-family. ρ kills them.
+
+(ii) *Images.* For a non-lift tuple, as in Lemma 7.2(b),
+
+    ρ(m^DHW) = c(q) · e_{q_0} (I − K_{s_2+1} K_{r_1+1} ⋯ K_{r_n+1}),   n := T − j − 3.
+
+The τ_1-term gives δ_{i q_0} c(q). In the τ_2-term, y_{s_2} = q_0 is followed by y_{r_1}, …, y_{r_n} and then y_1,
+generated by the blocks s_2 + 1, r_1 + 1, …, r_n + 1 in turn.
+
+(iii) *Expansion.* With A_0 := K_{s_2+1} and A_m := K_{r_m+1}:
+I − A_0 A_1 ⋯ A_n = Σ_{m=0}^{n} A_0 ⋯ A_{m−1} (I − A_m). Using
+η_a e_a K_b = Σ_{a'} π_b(a', a) μ^b_a η_{a'} e_{a'} repeatedly, each term becomes
+η_{q_0} e_{q_0} A_0 ⋯ A_{m−1}(I − A_m) = Σ_{a_1,…,a_m} [Π_{i<m} π_{b_i}(a_{i+1}, a_i) μ^{b_i}_{a_i}] E_{b_m, a_m},
+where b_0 := s_2 + 1, b_i := r_i + 1 and a_0 := q_0. Multiplied by the head factors Π_{u∈H} μ^u_{q_u}, this is a
+combination with constant coefficients of the canonical multi-heads
+Ĉ(H ∪ {b_0, …, b_{m−1}}; b_m, a_m), whose heads have size j + m ≤ T − 3. The term m = 0 is Ĉ(H, q_H; s, q_0)
+itself, with coefficient 1.
+
+*The corollary.* By (i), ρ kills the lift members, which are Q disjoint copies of DHW's (T−1)-family. These are
+bases by hypothesis, so DHW's family is a basis iff the images of its non-lift members span the image of ρ,
+i.e. iff their elements g ∈ K are a basis of K. By (ii), (iii) and the computation of c(q) after Lemma 7.2,
+each such g is κ(q) times a combination of numerator vectors of multi-heads with constant coefficients, and κ(q)
+is the same constant as for the canonical moment with the same tuple. In the basis of canonical images (the
+κ(q)-multiples of 𝒞, Lemma 5.2), the matrix is therefore square of size N_Q(T−2), with constant entries.
+Order rows and columns by |H|. Every multi-head in (iii) has a head set strictly larger than H, except the
+term m = 0.
+– For T ≤ Q + 1, all of them have heads of size ≤ T − 3 ≤ Q − 2, so they lie in 𝒞, and the matrix is
+  unitriangular.
+– For T > Q + 1, the multi-heads with |H| ≥ Q − 1 must first be re-expressed in 𝒞 by the procedure in the proof
+  of Lemma 5.2. ∎
+
+*Proof of Corollary 4.* For T = 3 the canonical and DHW families coincide (Theorem 2). For 4 ≤ T ≤ Q + 1 use
+induction and Corollary 3: the matrix is unitriangular, hence invertible. ∎
+
+*Remark (Q = 3).* For Q = 3 the matrix of Corollary 3 is R_n, n = T − 2, of HQ_FRESH_APPROACH.md. Up to
+constants, 𝒞 = {E_{s,a}} ∪ {B_{t,s,a,b}} there.
 
 ## 8. Remarks
 
@@ -399,14 +440,29 @@ constants, 𝒞 = {E_{s,a}} ∪ {B_{t,s,a,b}}. ∎
   dim I(Z)_{3k} = 1 + 3k + 9C(k,2) and I(Z)_{3k+1} = S_1 H_1 ⋯ H_k. This is the core of the project's Lean
   theorem. K is the space W_k of HQ_FRESH_APPROACH.md, and Lemma 5.2 is the project's L2, now with a direct
   proof. The non-lift canonical moments have images E_{s,a} (j = 0) and B_{t,s,a,b} (j = 1), up to constants.
-* **Scope of (Gen).**
-  – (Gen) needs distinct time-varying covariates. With x_s = x_t, two blocks have equal labelled forms and
-    the dimension is larger, e.g. Q = 3: dim M_3 = 9 and dim M_4 = 39 instead of 3 and 33.
+* **Scope of (Gen).** (Gen) is sufficient, not necessary: some violations leave the dimensions unchanged
+  (e.g. L_{21} through the vertex {L_{11} = L_{12} = 0}, Q = 3).
+  – (Gen) needs distinct time-varying covariates for the blocks t ≥ 2. With x_s = x_t (s ≠ t ≥ 2), two blocks
+    have equal labelled forms and the dimension is larger, e.g. Q = 3: dim M_3 = 9 and dim M_4 = 39 instead of 3
+    and 33. A tie with block 1 is harmless; with x_1 = x_2, the referee found dim M_T = ℓ at
+    (3,3), (3,4), (3,5), (4,4).
+  – Coinciding slopes β_q also break (Gen); e.g. {η_3, L_{21}, L_{31}} becomes dependent, and dim M_5 = 168
+    for Q = 3.
   – DHW's parsimonious empirical specification (4), z_t(q, y_{t−1}) = γ_q 1{y_{t−1} = q} + X_{t,q} β, has
     L_{tr} − L_{ts} ∈ span(η_r, η_s). So it violates (Gen) identically for Q ≥ 4, and the theorems say
-    nothing there; the reviewer found dim M_T = ℓ numerically for (Q,T) = (4,4), (4,5). For Q = 3, (Gen)
-    holds generically on (4).
+    nothing there; the referee found dim M_T = ℓ numerically for (Q,T) = (4,4), (4,5). For Q = 3 we have not
+    proved (Gen) on (4); the referee found dim M_T = ℓ there for T ≤ 6.
   – The economic domain of the theorems is DHW's general specification (3).
+* **(Gen) does not suffice for DHW's own family when T > Q + 1.** The witness of Lemma 2.1 satisfies (Gen),
+  and all its forms are tangent lines of one conic. There, the referee found (exact over Q):
+  – DHW's (3,5) family has rank 159 < 162, and the matrix of Corollary 3 has rank 60 < 63;
+  – at (3,6), DHW's family has rank 597 < 606, a deficit inherited through the lifts, while the matrix of
+    Corollary 3 has full rank 120;
+  – the canonical family has full rank at these points, as Theorem 2 says.
+  The same deficit appears at every point π_t(j, r) = (z_t w_r)^{j−1} tried. (The project's earlier
+  "Vandermonde common conic, three-block residue rank 51/54" is the same phenomenon.) So a proof of
+  Conjecture 1 for T > Q + 1 needs genericity beyond (Gen), and a witness off this locus. At generic economic
+  points DHW's family is a basis for all (Q,T) tested.
 
 ## 9. Machine checks
 
@@ -437,14 +493,15 @@ The referee checked every step by hand:
 * the fibration;
 * the recursion against (25), including DHW's restriction.
 
-The referee's own exact checks (mod 2^61 − 1):
+The referee's own exact checks (mod 2^61 − 1; witness runs mod the prime 2305844108725321739, because 2 has
+order 61 modulo 2^61 − 1):
 * raw dim M_T = ℓ(Q,T) for Q = 3, T = 3..9, for Q = 4, T = 3..6, and for Q = 5, T = 3..5, at economic, general
   and witness points;
 * the fat ideal from its definition for Q = 3, k = 1..8, and for Q = 4, k = 1..5: dim 𝔍_{kQ}, dim 𝔍_{kQ+1} and
   dim K all as stated;
 * (Gen) at the witness exactly over Z, up to 174436 subsets;
-* stress tests: configurations with extra incidences that still satisfy (Gen) give the generic dimensions, and
-  configurations that break (Gen) move them;
+* stress tests: configurations with extra incidences that still satisfy (Gen) give the generic dimensions.
+  Some violations of (Gen) move the dimensions, others do not;
 * all 56 Table 1 entries.
 
 Findings and their repair in this version:
@@ -463,4 +520,51 @@ Findings and their repair in this version:
    – the inductive form of the statement in Corollary 3;
    – the scope remark of sec. 8.
 
-**Second review (sec. 7, Theorem 2 and Corollary 3).** (pending)
+**Second review (sec. 7 of version 2, Theorem 2 and Corollary 3; same referee, same rules; 27 Oct 2026).**
+Verdict: Theorem 2 is correctly proved; Corollary 3 is true, but its proof cited GENERALQ_PROOF.md for three
+facts.
+
+The referee checked by hand:
+* Lemma 7.1, both parts;
+* Lemma 7.2(a) and (b), noting that the canonical pair puts y_1 at position j + 2, right after y_{s_2};
+* the identification ρ(m) = w(g)/L_{1,y_0} (because h_{2r} ψ_r = η_r D_2 g_r);
+* c(q), the bijection onto the index set of 𝒞, and the induction.
+
+The referee's own exact checks (mod 2^61 − 1, at economic points; general points agree):
+
+| (Q,T) | ℓ | rank canonical / DHW | Corollary 3 matrix |
+|---|---|---|---|
+| (3,4) | 33 | 33 / 33 | unitriangular |
+| (4,4) | 56 | 56 / 56 | unitriangular |
+| (4,5) | 524 | 524 / 524 | unitriangular |
+| (5,4) | 85 | 85 / 85 | unitriangular |
+| (5,5) | 965 | 965 / 965 | unitriangular |
+| (3,5) | 162 | 162 / 162 | full rank, not triangular |
+| (3,6) | 606 | 606 / 606 | full rank |
+| (3,7) | 2013 | 2013 / 2013 | full rank |
+| (4,6) | 3072 | 3072 / 3072 | full rank |
+
+Also:
+* every row of both families is a valid moment;
+* (7.1), Lemma 7.2(a) and the DHW image formula hold for every member, and exactly over Q as polynomial
+  identities at (3,4), (4,4), (3,5);
+* the matrix of Corollary 3 has constant entries;
+* swapping in the canonical pair changes the family for every T ≥ 4, but not its span (generically);
+* the witness finding recorded in sec. 8.
+
+Findings and their repair in this version (all follow the referee's own derivations, which it verified):
+1. Corollary 3's proof was not self-contained. Repaired: facts (i) lifts, (ii) the DHW image formula and
+   (iii) the expansion are now proved in place.
+2. The Q = 3 clause (R_n) was part of Corollary 3's statement without proof here. Moved to a remark.
+3. Minor points, all repaired:
+   – the T = 3 base case now cites M_2 = 0;
+   – it is now said that the second proof of Theorem 1 still uses step (a) of Lemma 4.1's proof;
+   – the multiplier κ/L_{1,y_0} is no longer called a constant;
+   – "unitriangular" now refers to the basis of canonical images;
+   – block labels r_i + 1, and "j ≥ 1 and t_1 = 1";
+   – (Gen) is added to Corollary 3, and Corollary 4 (T ≤ Q + 1) is stated;
+   – scalar vs. vector covariates; s ≠ t ≥ 2 in the x_s = x_t example;
+   – coinciding β_q; the softened claim about specification (4) for Q = 3;
+   – the witness caution;
+   – two misreports of the first round in this section (the witness prime, and the effect of (Gen)
+     violations).

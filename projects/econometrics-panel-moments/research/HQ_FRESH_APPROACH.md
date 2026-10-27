@@ -24,7 +24,7 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | Q3 | T = 3, every Q: dim M_3 = Q, so (45) is a basis (DHW leave the upper bound open for Q >= 3) | PROVED (sec. 6.3) |
 | QD | dim M_T = ell(Q,T) for 3 <= T <= Q+1 (exact count; family a basis iff independent) | PROVED (sec. 6.5) |
 | QA | dim M_T = ell(Q,T) for EVERY T >= 3 and Q >= 3 (both halves of DHW's count) | PROVED, independently reviewed (research/GENERALQ_ALLT_PROOF.md, Theorem 1; sec. 6.7) |
-| QB | explicit basis of M_T for every (Q,T): DHW's index set (24)-(25) with generation orders (t,s1,s2,r,T), (t,s2,s1,r,T) | PROVED (same document, Theorem 2, sec. 7); review of sec. 7 pending |
+| QB | explicit basis of M_T for every (Q,T): DHW's index set (24)-(25) with generation orders (t,s1,s2,r,T), (t,s2,s1,r,T) | PROVED, independently reviewed (same document, Theorem 2; Corollary 4 re-proves QC) |
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible; equivalently DHW's new columns are invertible in the canonical basis of QB) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
@@ -912,7 +912,7 @@ Raw (24) family full rank (exploration/hq_fresh_generalQ.py) also at (Q,T) = (5,
 there the higher-head terms of the unitriangular expansion must be re-expressed in a smaller basis, producing
 the dense matrix R_n.
 
-### 6.7 Every T: the exact count and an explicit basis (27 Oct 2026; PROVED; count reviewed, basis section under review)
+### 6.7 Every T: the exact count and an explicit basis (27 Oct 2026; PROVED, independently reviewed in two rounds)
 
 research/GENERALQ_ALLT_PROOF.md (version 2); checker exploration/hq_fresh_generalQ_allT.py (all checks pass).
 Independent review of the count (secs. 1-6): proved after minor repairs, no mathematical gap. The repairs:
@@ -936,6 +936,12 @@ k <= 8 and Q = 4, k <= 5. Scope note: DHW's parsimonious specification (4) viola
   (t, s1, s2, r, T), (t, s2, s1, r, T). These moments are valid (another instance of DHW's Theorem 1). Their
   new-column images are exactly c(q) e_{q0}(I - K_{s2+1}), i.e. the canonical multi-heads, so the family is a
   basis of M_T for every (Q,T). EXACT-CHECKED: raw rank = ell at (Q,T) = (3,5), (3,6), (4,6).
+* **Witness caution (second review; important for L5).** The Lemma 2.1 witness of the general-Q proofs (all forms
+  tangent to one conic) satisfies (Gen), but there DHW's (3,5) family has rank 159 < 162; the non-lift matrix has
+  rank 60 < 63, and (3,6) inherits the deficit through the lifts. The canonical family is full rank there. This is
+  the same rank-3 drop as the old 'Vandermonde common conic 51/54' and as sec. 4.16 (conic all-ones: rank 51/54).
+  The common-conic locus lies in {Phi = 0} for n = 3. So any certificate or witness for L5 must avoid common-conic
+  points; the n <= 18 certificate (random g, u_t = (1,3,7)^t) does.
 * **What it means for L5.** DHW's family is a basis iff its new columns are invertible in this canonical basis.
   For Q = 3 that is exactly R_n (canonical E, B). So L5 is unchanged, but it is now the ONLY missing piece of DHW's
   Conjecture 1 for Q = 3. For general Q the analogous square matrix is unitriangular for T <= Q+1 (GENERALQ_PROOF)
