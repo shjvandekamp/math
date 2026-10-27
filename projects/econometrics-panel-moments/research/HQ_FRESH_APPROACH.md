@@ -23,8 +23,8 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | QC | DHW Conjecture 1 (both halves) for every 3 <= T <= Q + 1, Q >= 3 | PROVED, independently reviewed (research/GENERALQ_PROOF.md) |
 | Q3 | T = 3, every Q: dim M_3 = Q, so (45) is a basis (DHW leave the upper bound open for Q >= 3) | PROVED (sec. 6.3) |
 | QD | dim M_T = ell(Q,T) for 3 <= T <= Q+1 (exact count; family a basis iff independent) | PROVED (sec. 6.5) |
-| QA | dim M_T = ell(Q,T) for EVERY T >= 3 and Q >= 3 (both halves of DHW's count) | PROVED (research/GENERALQ_ALLT_PROOF.md, sec. 6.7); review pending |
-| QB | explicit basis of M_T for every (Q,T): DHW's index set (24)-(25) with generation orders (t,s1,s2,r,T), (t,s2,s1,r,T) | PROVED (same document, sec. 7); review pending |
+| QA | dim M_T = ell(Q,T) for EVERY T >= 3 and Q >= 3 (both halves of DHW's count) | PROVED, independently reviewed (research/GENERALQ_ALLT_PROOF.md, Theorem 1; sec. 6.7) |
+| QB | explicit basis of M_T for every (Q,T): DHW's index set (24)-(25) with generation orders (t,s1,s2,r,T), (t,s2,s1,r,T) | PROVED (same document, Theorem 2, sec. 7); review of sec. 7 pending |
 | L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible; equivalently DHW's new columns are invertible in the canonical basis of QB) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
@@ -912,9 +912,13 @@ Raw (24) family full rank (exploration/hq_fresh_generalQ.py) also at (Q,T) = (5,
 there the higher-head terms of the unitriangular expansion must be re-expressed in a smaller basis, producing
 the dense matrix R_n.
 
-### 6.7 Every T: the exact count and an explicit basis (27 Oct 2026; PROVED, review pending)
+### 6.7 Every T: the exact count and an explicit basis (27 Oct 2026; PROVED; count reviewed, basis section under review)
 
-research/GENERALQ_ALLT_PROOF.md; checker exploration/hq_fresh_generalQ_allT.py (all checks pass).
+research/GENERALQ_ALLT_PROOF.md (version 2); checker exploration/hq_fresh_generalQ_allT.py (all checks pass).
+Independent review of the count (secs. 1-6): proved after minor repairs, no mathematical gap. The repairs:
+(Gen) is stated for the labelled family, and (4.1) assumes independence of L with each stratum. The referee's
+exact checks: raw dim M_T = ell for Q = 3, T <= 9, Q = 4, T <= 6 and Q = 5, T <= 5; the fat ideal for Q = 3,
+k <= 8 and Q = 4, k <= 5. Scope note: DHW's parsimonious specification (4) violates (Gen) for Q >= 4.
 * **Capped fat-ideal lemma (PROVED).** Lemma 4.1 of GENERALQ_PROOF.md holds for ANY number k of blocks once the
   descending induction starts at depth min(k, Q-1), the largest depth of a nonempty flat (points for k >= Q):
   J_kQ has basis prod_{t in S} h_{t r_t} prod_{u not in S} D_u, |S| <= min(k,Q-1), so

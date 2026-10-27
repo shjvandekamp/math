@@ -1,19 +1,25 @@
-# The exact number of fixed-effect-free moments for every T (dynamic multinomial logit, Q ≥ 3)
+# The exact number of fixed-effect-free moments, and an explicit basis, for every T (dynamic multinomial logit, Q ≥ 3)
 
-Status (27 Oct 2026): complete paper proof, checked by the script of sec. 8. Independent review: sec. 9.
+Status (27 Oct 2026, version 2): complete paper proof, checked by the script of sec. 9.
+* Secs. 1–6 (Theorem 1): independently reviewed, sec. 10. This version repairs the two statements the reviewer
+  found too loose: (Gen) is now stated for the labelled family, and (4.1) has an explicit hypothesis. It also
+  fixes the minor points.
+* Sec. 7 (Theorem 2, explicit basis): added in this version; its review is in sec. 10.
+
 This extends Theorem A of research/GENERALQ_PROOF.md from 3 ≤ T ≤ Q + 1 to every T ≥ 3. The proof is
 self-contained; secs. 1–3 restate what is needed from GENERALQ_PROOF.md.
 
-## 0. Setting and result
+## 0. Setting and results
 
 Outcomes y_t ∈ [Q] = {1,…,Q} for t = 1,…,T, initial outcome y_0 fixed. For a fixed effect η ∈ (0,∞)^Q
 the model is the Markov chain with transition into period t
 
     K_t(a, i) = π_t(i, a) η_i / L_{ta}(η),      L_{ta}(η) = Σ_i π_t(i, a) η_i ,
 
-and path probability p_y(η) = Π_{t=1}^T K_t(y_{t−1}, y_t). The **economic domain** is
-π_t(q, r) = exp(γ_{qr} + x_t β_q) with (γ, β, x) in a real vector space (DHW's normalisations are
-irrelevant below). The **moment space** is M_T := {m ∈ R^{Q^T} : Σ_y m(y) p_y(η) = 0 for all η > 0}.
+and path probability p_y(η) = Π_{t=1}^T K_t(y_{t−1}, y_t). The **economic domain** (DHW (3)) is
+π_t(q, r) = exp(γ_{qr} + x_t β_q), with scalar covariates x_t and (γ, β, x) in a real vector space; DHW's
+normalisations are irrelevant below. Write g(q,r) := exp γ_{qr} and u_t(q) := exp(x_t β_q), so that
+π_t(q,r) = g(q,r) u_t(q). The **moment space** is M_T := {m ∈ R^{Q^T} : Σ_y m(y) p_y(η) = 0 for all η > 0}.
 DHW (arXiv:2610.17104, eq. (24)) construct ℓ(Q,T) moment functions, counted by their eq. (25):
 
     ℓ(Q,T) = Σ_{j=0}^{T−3} C(T−1−max(j−(Q−2),0), min(Q−2,j)) · (T−2−j) · Q^{j+1},
@@ -24,21 +30,33 @@ DHW write that for Q ≥ 3 both halves are open (the upper bound even for T = 3)
 **Generic** means: outside a proper analytic subset of the (connected) economic domain, i.e. on an
 open dense set whose complement has measure zero.
 
-**Theorem.** For every Q ≥ 3 and every T ≥ 3, generically on the economic domain and for every initial
-outcome, dim M_T = ℓ(Q,T).
+**Theorem 1 (exact count).** For every Q ≥ 3 and every T ≥ 3, generically on the economic domain and for
+every initial outcome, dim M_T = ℓ(Q,T).
 
-So the number of linearly independent fixed-effect-free moment conditions is exactly DHW's count, for
-every number of periods. Consequently, for each (Q,T), DHW's Conjecture 1 is equivalent to the linear
-independence of the family (24) alone (which is proved for T ≤ Q + 1 in GENERALQ_PROOF.md, Theorem B;
-it is open for T > Q + 1, including Q = 3, T ≥ 5). For Q = 3 the theorem reproves the project's
-Lean-checked dimension theorem dim M_T = 3^T − C(3T,2) + 6(T−1) by a different, uniform argument.
+**Theorem 2 (explicit basis).** Keep DHW's index set (24)–(25), and replace their pair of generation orders
+(t, s_1, r, s_2, T), (t, s_2, r, s_1, T) by (t, s_1, s_2, r, T), (t, s_2, s_1, r, T). The resulting ℓ(Q,T)
+moment functions (sec. 7) form a basis of M_T, for every Q ≥ 3 and every T ≥ 3, under the same genericity.
 
-*Form proved.* The theorem holds for every positive block system satisfying
+**Corollary 3.** Let Q ≥ 3 and T ≥ 4, and suppose DHW's family for T − 1 periods is a basis for every
+initial outcome. Then DHW's family for T periods is a basis iff a square matrix of size N_Q(T−2) is invertible
+(sec. 7). This is the matrix of DHW's new columns in the canonical basis. It is unitriangular for T ≤ Q + 1.
+For Q = 3 it is R_n, n = T − 2, of HQ_FRESH_APPROACH.md.
 
-(Gen) every set of at most Q distinct linear forms from {η_1,…,η_Q} ∪ {L_{tr}} is linearly independent,
+So the number of linearly independent fixed-effect-free moment conditions is exactly DHW's count for every
+number of periods. Their construction yields an explicit basis for every (Q,T). What remains of Conjecture 1
+for T > Q + 1 (including Q = 3, T ≥ 5) is the invertibility in Corollary 3, for DHW's particular choice of
+generation orders. For Q = 3, Theorem 1 reproves the project's Lean-checked dimension theorem
+dim M_T = 3^T − C(3T,2) + 6(T−1) by a uniform argument.
 
-which is inherited by subsystems of blocks; generic economic parameters satisfy (Gen) (sec. 2). All
-inductions are inductions on this statement.
+*Form proved.* Both theorems hold for every positive block system satisfying
+
+(Gen) every subfamily of at most Q members of the indexed family (η_1, …, η_Q; L_{tr} : t ≥ 2, r ∈ [Q]),
+with pairwise distinct indices, is linearly independent.
+
+(Gen) is about labelled forms. For example, two blocks with equal forms violate it; this is the case
+x_s = x_t, where dim M_T is larger than ℓ(Q,T), e.g. dim M_4 = 39 for Q = 3. (Gen) is inherited by subsystems
+of blocks, and generic economic parameters satisfy it (sec. 2). All inductions are inductions on this
+statement. Only the blocks t ≥ 2 enter: block 1 appears only through the cleared factor L_{1,y_0}.
 
 ## 1. Polynomial (tensor) form
 
@@ -60,16 +78,22 @@ sets h_{tr}. Its image is V_T := S_1 H_2 ⋯ H_T, so dim M_T = Q^T − dim V_T. 
 
 ## 2. Genericity
 
-Every condition used below has the form "a set of at most Q distinct forms from {η_i} ∪ {L_{tr}} is
-linearly independent", i.e. the nonvanishing of a minor, an analytic function on the connected economic
-domain. It therefore holds generically once it holds at one economic point.
+Each condition in (Gen) says that certain labelled forms are independent. That holds iff some maximal minor
+of their coefficient matrix is nonzero. Fix, for each condition, a minor that is nonzero at the witness below.
+Its nonvanishing is a real-analytic condition on the connected economic domain, and it implies the condition.
+It holds at the witness, so it holds on an open dense set with null complement. Finitely many such conditions
+then hold simultaneously generically. This is all the genericity used.
 
-**Lemma 2.1 (witness).** g(j,r) = w_r^{j−1}, u_t(j) = z_t^{j−1} with w_r = 2^{r−1}, z_t = 2^{tQ} (an economic
-point: γ_{jr} = (j−1)(r−1) log 2, β_j = (j−1) log 2, x_t = tQ) satisfies every such condition, for any
-number of blocks. *Proof.* L_{tr} has coefficient vector (x^0,…,x^{Q−1}) with node x = 2^{tQ+r−1};
-distinct (t,r) give distinct positive nodes. A set {η_i : i ∈ I} ∪ {L_{tr} : (t,r) ∈ P} is independent
-iff the |P| × (Q − |I|) matrix (x_k^{e−1})_{k∈P, e∉I} has rank |P|. Its |P|-square minors are generalised
-Vandermonde determinants with distinct positive nodes and distinct exponents, hence nonzero. ∎
+**Lemma 2.1 (witness).** Put w_r := 2^{r−1} and z_t := 2^{tQ}, and take g(j, r) := w_r^{j−1} and
+u_t(j) := z_t^{j−1} for j, r ∈ [Q]. This is an economic point: γ_{jr} = (j−1)(r−1) log 2,
+β_j = (j−1) log 2, x_t = tQ. It satisfies (Gen) for any number of blocks.
+
+*Proof.* L_{tr} has coefficient vector (ν^0, ν^1, …, ν^{Q−1}) with node ν = ν_{tr} := z_t w_r = 2^{tQ+r−1};
+distinct indices (t,r) give distinct positive nodes. A subfamily {η_i : i ∈ I} ∪ {L_{tr} : (t,r) ∈ P} is
+independent iff the |P| × (Q − |I|) matrix (ν_{tr}^{e−1})_{(t,r)∈P, e∉I} has rank |P|. Each |P|-square
+submatrix is a generalised Vandermonde matrix: distinct positive nodes, distinct nonnegative exponents. It is
+nonsingular, because by Descartes' rule of signs a nonzero real combination Σ_{k=1}^{m} c_k ν^{a_k}
+(a_1 < ⋯ < a_m) has at most m − 1 positive zeros (Pólya–Szegő, Problems and Theorems in Analysis II, Part V). ∎
 
 ## 3. One block
 
@@ -91,16 +115,21 @@ f − Σ_r c_r h_r vanishes on every Π_r, so it equals c·D with c ∈ S_{d−Q
 
 Let blocks 1,…,k carry the forms L_{tr} (relabelled), with base loci B_t. Define
 
-    𝔍 = 𝔍^{(k)} := { f ∈ S homogeneous : ord_x f ≥ #{t : x ∈ B_t} for every x ∈ P^{Q−1} }.
+    𝔍 = 𝔍^{(k)} := { f ∈ S homogeneous : ord_x f ≥ #{t : x ∈ B_t} for every x ∈ P^{Q−1}(C) }.
 
+Every stratum below is a real linear space, so it is the same to impose the conditions at real points.
 A *stratum* is a nonempty projective linear space Z that is an intersection of components of B_t for
 distinct t; m_Z := number of blocks involved. For homogeneous f, ord ≥ m_Z on Z means f ∈ I(Z)^{m_Z}
 (Z linear), and 𝔍 = ∩_Z I(Z)^{m_Z}, an intersection of I(Z)-primary ideals. Every product Π_t c_t with
-c_t ∈ I(B_t) lies in 𝔍. A stratum has at most Q − 1 distinct defining forms (Q distinct forms are
-independent by (Gen) and cut out the empty set). Hence:
+c_t ∈ I(B_t) lies in 𝔍. A stratum has at most Q − 1 distinct defining forms (Q of them are independent by
+(Gen) and cut out the empty set), and I(Z) is generated by them.
 
-(4.1) *If a linear form L is distinct from all defining forms of all strata, then for homogeneous g,
-L g ∈ 𝔍 implies g ∈ 𝔍* (by (Gen), L ∉ I(Z), so L is a nonzerodivisor modulo the I(Z)-primary I(Z)^{m_Z}).
+(4.1) *Let L be a linear form such that, for every stratum Z, L together with the defining forms of Z is a
+linearly independent set. Then for homogeneous g, L g ∈ 𝔍 implies g ∈ 𝔍.* Indeed L ∉ I(Z), so L is a
+nonzerodivisor modulo the I(Z)-primary ideal I(Z)^{m_Z}. (The hypothesis holds for L = L_{t'r} of any block t'
+outside the k blocks, when the larger system satisfies (Gen): Z's at most Q − 1 defining forms and L_{t'r} are
+at most Q members with distinct indices. Some hypothesis is needed: L_{ta} + L_{tb} vanishes on the stratum
+{L_{ta} = L_{tb} = 0}.)
 
 *Flats.* For S ⊆ [k] and r_S = (r_t)_{t∈S} put Λ(S, r_S) := ∩_{t∈S} {L_{t r_t} = 0}, of depth |S|. By (Gen)
 it is a nonempty projective linear space of codimension |S| iff |S| ≤ Q − 1, and empty if |S| ≥ Q.
@@ -125,8 +154,9 @@ i.e. distinct primes of the coordinate ring of Λ. So Π_{t∈S} h_{t r_t}|_Λ d
 
 (b) *The top depth m.* For every flat Λ = Λ(S, r_S) of depth |S| = m choose c̃_{S,r} ∈ S_{d−kQ} with
 c̃_{S,r} P(S,r_S) = f on Λ:
-  – if m = Q − 1, Λ is a point p and P(S, r_S)(p) ≠ 0, because each factor η_{r_t}, L_{ts} (t ∈ S),
-    L_{us} (u ∉ S) together with the Q − 1 forms defining p is a set of Q independent forms;
+  – if m = Q − 1, Λ is a point p and P(S, r_S)(p) ≠ 0. Each factor of P(S, r_S) — η_{r_t} and L_{ts}
+    (t ∈ S, s ≠ r_t), and L_{us} (u ∉ S, all s) — together with the Q − 1 forms defining p is a set of Q
+    members with distinct indices, hence independent;
   – if m = k ≤ Q − 2, then S = [k], f|_Λ = Π_t h_{t r_t}|_Λ · φ by (a), with deg φ = d − kQ ∈ {0,1};
     take c̃ a lift of φ.
 For (S', r') ≠ (S, r) of the same depth m, P(S', r') vanishes on Λ(S, r): if S' = S then r'_t ≠ r_t for
@@ -147,11 +177,16 @@ flats of depth ≥ j.
 (d) *Depth 0.* f_1 vanishes on every hyperplane {L_{tr} = 0}, so f_1 = c · Π_t D_t with deg c = d − kQ;
 subtracting c̃ P(∅) leaves 0.
 
-So f = Σ_{|S|≤m} c̃_{S,r} P(S, r_S) with c̃ ∈ S_{d−kQ}. For d = kQ the coefficients are constants, and
-they are determined by f: applying (b)–(d) to f = 0 forces every coefficient to vanish (at each depth the
-restriction to Λ(S, r) sees only the term P(S, r), whose restriction is not identically zero). So the
-products are a basis of 𝔍_{kQ}. For d = kQ + 1 the coefficients are linear forms, so 𝔍_{kQ+1} = S_1 𝔍_{kQ}.
-Finally S_1 P(S, r_S) ⊆ S_1 Π_t (H_t ⊕ ⟨D_t⟩) = S_1 H_1 ⋯ H_k, using η_s D_t = L_{ts} h_{ts}; and
+So f = Σ_{|S|≤m} c̃_{S,r} P(S, r_S) with c̃ ∈ S_{d−kQ}.
+
+*Uniqueness for d = kQ* (constant coefficients). Suppose Σ c_{S,r} P(S, r_S) = 0. Restrict to a flat
+Λ(S, r) of depth m. Every P(S', r') with |S'| < |S| vanishes there, because some u ∈ S ∖ S' has D_u
+containing L_{u r_u}. Every other P of depth m vanishes there as in (b). P(S, r) itself is not identically
+zero there. So c_{S,r} = 0. Descending in the depth in the same way, all coefficients vanish, so the products
+are a basis of 𝔍_{kQ}. For d = kQ + 1 the coefficients are linear forms, so 𝔍_{kQ+1} = S_1 𝔍_{kQ}.
+
+Finally S_1 P(S, r_S) ⊆ S_1 Π_t (H_t ⊕ ⟨D_t⟩) = S_1 H_1 ⋯ H_k. To see the equality, replace one factor D_t at a
+time: ℓ D_t = Σ_s ℓ_s η_s D_t = Σ_s ℓ_s L_{ts} h_{ts} for ℓ = Σ_s ℓ_s η_s. Conversely
 S_1 H_1 ⋯ H_k ⊆ 𝔍_{kQ+1} trivially. ∎
 
 ## 5. The quotient space and its canonical basis
@@ -242,7 +277,7 @@ It is zero-sum, so the linear form c·η vanishes on Λ (Π η_{q_u} ≢ 0 on Λ
 Λ are spanned by its defining forms, so c·η = Σ_{u∈U} λ_u L_{u q_u}. Comparing coefficient vectors,
 c = Σ_u λ_u π_u(·, q_u). Hence (c_i η_i)_i = Σ_u λ_u v_{u,q_u}, and (5.1) follows from (R1). ∎
 
-## 6. Proof of the theorem
+## 6. Proof of Theorem 1
 
 Let c_T denote dim M_T for a block system with blocks 2..T satisfying (Gen); we show c_T = ℓ(Q,T) for
 every T ≥ 2 (with ℓ(Q,2) = 0), by induction on T.
@@ -256,48 +291,176 @@ every T ≥ 2 (with ℓ(Q,2) = 0), by induction on T.
    (Gen). So ψ_r = L_{2r} g_r, and dividing by D_2 (L_{2r} h_{2r} = η_r D_2): Σ_r η_r g_r = 0.
 2. The linear map φ ↦ (g_r) has kernel {ψ_r = 0 for all r} = ⊕_r {relations (1.1) of the T-period system
    with blocks 3,…,T+1}. That system satisfies (Gen), so the kernel has dimension Q c_T.
-3. With 𝔍 := 𝔍^{(T−1)} for blocks 3,…,T+1: V' ⊆ 𝔍 and L_{2r} is distinct from all defining forms of the
-   strata, so g_r ∈ 𝔍_{(T−1)Q} by (4.1). Hence the image lies in K (sec. 5, for these T − 1 blocks).
+3. With 𝔍 := 𝔍^{(T−1)} for blocks 3,…,T+1: V' ⊆ 𝔍, and L_{2r} satisfies the hypothesis of (4.1) (it is a
+   form of block 2, outside blocks 3,…,T+1). So g_r ∈ 𝔍_{(T−1)Q} by (4.1), and the image lies in K
+   (sec. 5, for these T − 1 blocks).
    Conversely, for (g_r) ∈ K put ψ_r := L_{2r} g_r. It lies in 𝔍_{(T−1)Q+1}, which equals V' by Lemma 4.1.
    So ψ_r = Σ φ_{r,·} h_3 ⋯ for some φ_{r,·}, and Σ_r ψ_r h_{2r} = D_2 Σ_r η_r g_r = 0. So the image is all of K.
 4. By Lemma 5.2, dim K = N_Q(T−1). Therefore c_{T+1} = Q c_T + N_Q(T−1).
 
 **The count (25) satisfies the same recursion:** ℓ(Q,T+1) = Q ℓ(Q,T) + N_Q(T−1). Split DHW's index
-tuples (j, t, s_2, q) for T + 1 periods by whether t_1 = 1.
-  – *t_1 = 1.* Dropping period 1 (t' = (t ∖ {1}) − 1, s'_2 = s_2 − 1, q' = (q_0, q_2, …, q_j)) is a
+tuples (j, t, s_2, q) for T + 1 periods into two cases.
+  – *j ≥ 1 and t_1 = 1.* Dropping period 1 (t' = (t ∖ {1}) − 1, s'_2 = s_2 − 1, q' = (q_0, q_2, …, q_j)) is a
     bijection onto the index tuples for T periods, times the free value q_1 ∈ [Q]. Indeed
     s_1 = 1 + min([T−1] ∖ t'). The restriction "t_r = r for r ≤ j − (Q−2)" for (T+1, j) is equivalent
     to t_1 = 1 together with the restriction for (T, j − 1) on t'. This gives Q ℓ(Q,T) tuples.
-  – *t_1 ≠ 1.* The restriction forces j ≤ Q − 2. Then t ⊆ {2, …, T} with |t| = j ≤ T − 2, s_1 = 1, and
-    s_2 ∈ [T] ∖ (t ∪ {1}) (T − 1 − j choices), q ∈ [Q]^{j+1}. Count:
+  – *otherwise (j = 0, or t_1 ≥ 2).* The restriction forces j ≤ Q − 2. Then t ⊆ {2, …, T} with |t| = j ≤ T − 2,
+    s_1 = 1, and s_2 ∈ [T] ∖ (t ∪ {1}) (T − 1 − j choices), q ∈ [Q]^{j+1}. Count:
     Σ_{j=0}^{min(Q−2, T−2)} C(T−1, j)(T−1−j) Q^{j+1} = N_Q(T−1).
 Since c_2 = ℓ(Q,2) = 0, c_T = ℓ(Q,T) for all T ≥ 2. Genericity: every condition used is an instance of
 (Gen), which holds generically on the economic domain (Lemma 2.1, sec. 2). ∎
 
 *By-products.* dim 𝔍^{(k)}_{kQ} = Σ_{j≤min(k,Q−1)} C(k,j) Q^j and dim 𝔍^{(k)}_{kQ+1} = dim S_1 H_1 ⋯ H_k = Q^{k+1} − ℓ(Q,k+1).
 
-## 7. Remarks
+## 7. An explicit basis for every T: the canonical family (Theorem 2)
+
+DHW's family (24) is built from pairs of generation orders (cyclic permutations) that agree on the first
+j entries. Their footnote 7 fixes the pair τ_1 = (t, s_1, r, s_2, T), τ_2 = (t, s_2, r, s_1, T), where
+r = (r_1 < ⋯ < r_{T−j−3}) are the remaining periods. We keep DHW's index set (24)–(25) exactly, including the
+restriction t_r = r for r ≤ j − (Q−2), and change only the pair:
+
+    τ'_1 := (t_1, …, t_j, s_1, s_2, r_1, …, r_{T−j−3}, T),    τ'_2 := (t_1, …, t_j, s_2, s_1, r_1, …, r_{T−j−3}, T),
+
+    m^can_{j,t,s_2,q} := [Π_l 1{y_{t_l} = q_l}] · [ 1{y_{s_1} = q_0} S^{τ'_1} − 1{y_{s_2} = q_0} S^{τ'_2} ],
+
+with S^τ := p^τ / p and p^τ(y) := K_1(y_0, y_{τ(1)}) Π_{k≥2} K_{τ(k−1)+1}(y_{τ(k−1)}, y_{τ(k)}) (DHW (11), (13)).
+The new pair still agrees on the first j entries and differs at position j + 1, so this is another instance
+of DHW's Theorem 1. For T = 3 the two families coincide.
+
+**Lemma 7.1 (validity).** Each m^can lies in M_T.
+
+*Proof.* τ'_1 and τ'_2 are permutations of [T] ending with T. With τ(0) := 0, the blocks used are
+τ(k−1) + 1, k = 1,…,T, i.e. 1,…,T, each once, and block b = τ(k−1) + 1 is entered from y_{τ(k−1)} = y_{b−1},
+exactly as in p. So p^τ(y) and p(y) have the same denominators Π_b L_{b, y_{b−1}} and the same η-numerators
+Π_t η_{y_t}. Hence S^τ = Π_k π_{τ(k−1)+1}(y_{τ(k)}, y_{τ(k−1)}) / Π_b π_b(y_b, y_{b−1}) does not depend on η.
+Next, Σ_y m^can(y) p_y(η) = P^{τ'_1}(y_t = q, y_{s_1} = q_0) − P^{τ'_2}(y_t = q, y_{s_2} = q_0). Under p^τ the
+coordinates are generated one by one, in the order τ, by stochastic kernels. Both orders first generate
+y_{t_1}, …, y_{t_j} by K_1(y_0, ·), K_{t_1+1}, …, K_{t_{j−1}+1}, and then the (j+1)-th coordinate (y_{s_1},
+respectively y_{s_2}) from y_{t_j} by the same kernel K_{t_j+1} (K_1(y_0, ·) if j = 0). So both probabilities
+equal c(q) := K_1(y_0, q_1) Π_{l<j} K_{t_l+1}(q_l, q_{l+1}) K_{t_j+1}(q_j, q_0), with c(q) := K_1(y_0, q_0) if
+j = 0. ∎
+
+**Lemma 7.2 (lifts and quotient images).**
+(a) If j ≥ 1 and t_1 = 1, then m^can = 1{y_1 = q_1} m', where m' is the canonical moment of the (T−1)-period
+chain on periods 2,…,T started at y_1 = q_1, for the shifted tuple (j − 1, t' = (t ∖ {1}) − 1,
+s'_2 = s_2 − 1, q' = (q_0, q_2, …, q_j)). By the bijection of sec. 6 these lifts are exactly Q disjoint copies
+(q_1 ∈ [Q]) of the canonical (T−1)-period family.
+(b) Otherwise (s_1 = 1 and j ≤ Q − 2), the quotient map ρ(m)_i := Σ_{y : y_1 = i} m(y) p_y(η) gives
+
+    ρ(m^can) = c(q) · e_{q_0} (I − K_{s_2+1}) .                                              (7.1)
+
+*Proof.* (a) Both orders start with period 1, so p^{τ'} = K_1(y_0, y_1) p'^{τ''} and p = K_1(y_0, y_1) p', where
+τ'' is the order of the shorter chain. τ'' is the canonical order of the shifted tuple: s'_1 = s_1 − 1 is the
+minimum of the remaining periods, and the r's shift to r − 1. The restriction rule shifts as in sec. 6.
+(b) In the τ'_1-term, the fixed outcomes are generated, then y_1 = q_0 (forcing i = q_0), then the free
+outcomes; summing out the free outcomes leaves δ_{i q_0} c(q). In the τ'_2-term, the fixed outcomes and
+y_{s_2} = q_0 are generated. Next y_1 = i is generated from y_{s_2} by block s_2 + 1, and the free outcomes
+are summed out. This leaves c(q) K_{s_2+1}(q_0, i). ∎
+
+In the block notation of secs. 5–6 (sec. 6, steps 1 and 3, with T in place of T + 1), take a moment m of the
+T-period system and let g be the element of K, for the k = T − 2 blocks 3,…,T, that sec. 6 attaches to m. Then
+
+    ρ(m) = w(g) / L_{1,y_0},
+
+since ρ(m)_r = h_{2r} ψ_r / (L_{1,y_0} Π_{t≥2} D_t) and ψ_r = L_{2r} g_r. Since
+c(q) = κ · η_{q_1} ⋯ η_{q_j} η_{q_0} / (L_{1,y_0} Π_l L_{t_l+1, q_l}) with κ a nonzero product of π's,
+(7.1) reads
+
+    ρ(m^can) = (κ / L_{1,y_0}) · Ĉ(H, q_H; s, q_0),    H := {t_l + 1}, q_{t_l+1} := q_l, s := s_2 + 1.
+
+As (t, s_2, q) runs over the non-lift tuples (j = 0 or t_1 ≥ 2, hence j ≤ Q − 2), (H, q_H, s, q_0) runs
+bijectively over the index set of 𝒞 for the blocks 3,…,T (H ⊆ {3,…,T}, |H| ≤ Q − 2, s ∉ H).
+
+*Proof of Theorem 2.* Induction on T, for all (Gen) systems and all initial outcomes. ρ is linear, and its
+kernel is the space of lifts ⊕_{q_1} 1{y_1 = q_1} M_{T−1}(start q_1) (sec. 6, step 2). Its image lies in
+{w(g)/L_{1,y_0} : g ∈ K} (sec. 6, step 3, which uses only (4.1)). By Lemma 5.2 the image therefore has dimension
+at most |𝒞| = N_Q(T−2). By Lemma 7.2(b) the images of the non-lift canonical moments are nonzero multiples of
+the distinct members of 𝒞. By Lemma 5.1 they are independent, so they form a basis of the image (which is
+therefore all of {w(g)/L_{1,y_0} : g ∈ K}).
+For T = 3 there are no lifts, and so the Q canonical moments form a basis of M_3. For T ≥ 4, by induction the
+canonical (T−1)-families are bases of the M_{T−1}(start q_1), and by Lemma 7.2(a) their lifts are the lift
+members. Hence the canonical family is a basis of M_T, and dim M_T = Q ℓ(Q, T−1) + N_Q(T−2) = ℓ(Q,T)
+(sec. 6). This is a second proof of Theorem 1, which does not use Lemma 4.1. ∎
+
+*Proof of Corollary 3.* The same exact sequence applies to DHW's family: its lift members (t_1 = 1) are Q
+disjoint copies of its (T−1)-family (GENERALQ_PROOF.md sec. 6.1), and ρ kills them. So, given that the
+(T−1)-families are bases, DHW's family is a basis iff the images of its non-lift members span the image of ρ,
+i.e. iff the matrix of these images in the basis 𝒞 (Lemma 5.2) is invertible. There are N_Q(T−2) of them, so
+the matrix is square. The images are N(H, q_H; s, q_0) = (Π_{u∈H} μ^u_{q_u}) J^R_{s,q_0}, up to the same nonzero
+factors as above (GENERALQ_PROOF.md (6.1)). They expand unitriangularly over all canonical multi-heads
+(GENERALQ_PROOF.md sec. 6.2), with heads H ∪ {s, r_1, …} of size at most T − 3. For T ≤ Q + 1 all of these lie
+in 𝒞, so the matrix is unitriangular. For T > Q + 1 the multi-heads with |H| ≥ Q − 1 must be re-expressed in
+𝒞 by the procedure of Lemma 5.2. For Q = 3 the matrix is R_n, n = T − 2, of HQ_FRESH_APPROACH.md: up to
+constants, 𝒞 = {E_{s,a}} ∪ {B_{t,s,a,b}}. ∎
+
+## 8. Remarks
 
 * **Q = 3.** Strata are the 6k base points (m_Z = 1), so 𝔍 = I(Z) and Lemma 4.1 reads
-  dim I(Z)_{3k} = 1 + 3k + 9C(k,2) and I(Z)_{3k+1} = S_1 H_1 ⋯ H_k: the project's Lean theorem. K is the space W_k
-  of HQ_FRESH_APPROACH.md, and 𝒞 = {E_{s,a}} ∪ {canonical B_{t,s,a,b}} (up to constants): Lemma 5.2 is the
-  project's L2, now with a direct proof.
-* **What remains of Conjecture 1 for T > Q + 1.** The new (non-lift) images of DHW's columns are
-  N(H, q_H; s, q_0) = (Π_{u∈H} μ^u_{q_u}) J^R_{s,q_0} with |H| ≤ Q − 2 (GENERALQ_PROOF.md (6.1)). They expand
-  unitriangularly over all canonical multi-heads (GENERALQ_PROOF.md sec. 6.2), but the multi-heads with
-  |H| ≥ Q − 1 are not in 𝒞. The procedure in the proof of Lemma 5.2 re-expresses them in 𝒞; their
-  coefficients are values of the μ's at points of flats of depth Q − 1. Conjecture 1 for (Q,T) is
-  equivalent to the invertibility of the resulting square matrix, of size N_Q(T−2); for Q = 3 this is det R_n ≠ 0.
+  dim I(Z)_{3k} = 1 + 3k + 9C(k,2) and I(Z)_{3k+1} = S_1 H_1 ⋯ H_k. This is the core of the project's Lean
+  theorem. K is the space W_k of HQ_FRESH_APPROACH.md, and Lemma 5.2 is the project's L2, now with a direct
+  proof. The non-lift canonical moments have images E_{s,a} (j = 0) and B_{t,s,a,b} (j = 1), up to constants.
+* **Scope of (Gen).**
+  – (Gen) needs distinct time-varying covariates. With x_s = x_t, two blocks have equal labelled forms and
+    the dimension is larger, e.g. Q = 3: dim M_3 = 9 and dim M_4 = 39 instead of 3 and 33.
+  – DHW's parsimonious empirical specification (4), z_t(q, y_{t−1}) = γ_q 1{y_{t−1} = q} + X_{t,q} β, has
+    L_{tr} − L_{ts} ∈ span(η_r, η_s). So it violates (Gen) identically for Q ≥ 4, and the theorems say
+    nothing there; the reviewer found dim M_T = ℓ numerically for (Q,T) = (4,4), (4,5). For Q = 3, (Gen)
+    holds generically on (4).
+  – The economic domain of the theorems is DHW's general specification (3).
 
-## 8. Machine checks
+## 9. Machine checks
 
-`exploration/hq_fresh_generalQ_allT.py` (math/.venv; exact arithmetic mod p = 2^61 − 1 at the stated
-points) checks: (Gen) at the witness; Lemma 4.1 (the products P(S, r_S) lie in 𝔍, are independent, and
-span 𝔍_{kQ}, and S_1 𝔍_{kQ} = 𝔍_{kQ+1} = S_1 H_1 ⋯ H_k); Lemma 5.2 (𝒞 ⊆ K, rank N_Q(k),
-dim K = N_Q(k)) for (Q,k) with k ≥ Q among them; raw dim M_T = ℓ(Q,T) from path likelihoods for
-(Q,T) = (3,5), (3,6), (4,6) (all with T > Q + 1); and the recursion ℓ(Q,T+1) = Q ℓ(Q,T) + N_Q(T−1)
-against (25) and DHW's Table 1. These are checks at points, not part of the proof.
+`exploration/hq_fresh_generalQ_allT.py` (math/.venv; exact arithmetic mod p = 2^61 − 1, exact rationals where
+stated) checks:
+* the canonical family: the exact quotient images (7.1) of every non-lift member at (Q,T) = (3,5), (4,5);
+  raw rank ℓ(Q,T) with every row a valid moment at (3,5), (3,6), (4,6); DHW's family at (3,5), (3,6);
+* (Gen) at the witness;
+* Lemma 4.1: the products P(S, r_S) lie in 𝔍, are independent and span 𝔍_{kQ}, and
+  S_1 𝔍_{kQ} = 𝔍_{kQ+1} = S_1 H_1 ⋯ H_k;
+* Lemma 5.2: 𝒞 ⊆ K, rank N_Q(k), and dim K = N_Q(k), at the witness and at a random point, for
+  (Q,k) = (3,2..5), (4,3..5), including k ≥ Q;
+* raw dim M_T = ℓ(Q,T) from path likelihoods for (Q,T) = (3,5), (3,6), (4,6);
+* the recursion ℓ(Q,T+1) = Q ℓ(Q,T) + N_Q(T−1) against (25) and DHW's Table 1.
 
-## 9. Review
+All checks pass. They are checks at points, not part of the proof.
 
-(pending)
+## 10. Review
+
+**First review (secs. 0–6 and 8 of version 1; fresh referee given only this document and DHW's paper;
+27 Oct 2026).** Verdict: the document proves Theorem 1 after minor repairs; no mathematical gap.
+
+The referee checked every step by hand:
+* Lemma 4.1 for k ≥ Q;
+* Lemma 5.2 (numerators, (R1) with sign, the restriction identity for ρ, divisibility, the steps j = Q − 1 and
+  level 0, and the cases k = 1, Q − 1, Q, Q = 3);
+* every use of (Gen) (none needs more than Q forms);
+* the fibration;
+* the recursion against (25), including DHW's restriction.
+
+The referee's own exact checks (mod 2^61 − 1):
+* raw dim M_T = ℓ(Q,T) for Q = 3, T = 3..9, for Q = 4, T = 3..6, and for Q = 5, T = 3..5, at economic, general
+  and witness points;
+* the fat ideal from its definition for Q = 3, k = 1..8, and for Q = 4, k = 1..5: dim 𝔍_{kQ}, dim 𝔍_{kQ+1} and
+  dim K all as stated;
+* (Gen) at the witness exactly over Z, up to 174436 subsets;
+* stress tests: configurations with extra incidences that still satisfy (Gen) give the generic dimensions, and
+  configurations that break (Gen) move them;
+* all 56 Table 1 entries.
+
+Findings and their repair in this version:
+1. (Gen), read as "sets of distinct forms", is satisfied by two identical blocks, where the conclusion fails.
+   Repaired: (Gen) is stated for the labelled family with distinct indices; this is the version every step
+   uses, and the witness satisfies it.
+2. (4.1) is false for an arbitrary L distinct from the defining forms (e.g. L_{ta} + L_{tb}). Repaired: it now
+   assumes that L together with each stratum's defining forms is independent; this holds for L = L_{2r}, the
+   only use.
+3. Minor points, repaired:
+   – the index range in Lemma 4.1(b);
+   – the explicit vanishing of lower-depth products in the uniqueness step;
+   – "j ≥ 1 and t_1 = 1" in the split of sec. 6;
+   – Lemma 2.1: definitions, notation and a citation;
+   – the wording in sec. 2 and the field in sec. 4;
+   – the inductive form of the statement in Corollary 3;
+   – the scope remark of sec. 8.
+
+**Second review (sec. 7, Theorem 2 and Corollary 3).** (pending)
