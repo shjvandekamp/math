@@ -46,6 +46,5 @@ The original theorem was published and merged in
 [main-branch Lean CI passing](https://github.com/shjvandekamp/math/actions/runs/38745717506).
 The hidden-information extension is published through
 [GitHub PR #3](https://github.com/shjvandekamp/math/pull/3), with the expanded
-27-module verifier run by the same full Lean CI. Further research stopped at
-the user's request on 2026-10-15. Subsequent exploratory ideas are not included
-as results.
+27-module verifier run by the same full Lean CI. Research on this project
+closed on 2026-10-15. Later exploratory ideas are not included as results.

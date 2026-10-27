@@ -125,8 +125,8 @@ publication run. The compatibility extension is now published through
 [PR #3](https://github.com/shjvandekamp/math/pull/3). Its first
 [full 27-module Linux CI run](https://github.com/shjvandekamp/math/actions/runs/38753211263)
 passed on commit `916a761`; the PR records checks for the final publication
-head. Further research was stopped at the user's request; no subsequent
-exploratory theorem is included.
+head. Research on this project closed on 2026-10-15; no later exploratory
+theorem is included.
 
 CI pins checkout to `3d3c42e5aac5ba805825da76410c181273ba90b1`, installs the
 Lean 4.34.1 Linux archive, and checks its official SHA-256
