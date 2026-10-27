@@ -619,6 +619,39 @@ freedom of a new middle block (every position gives a Lambda-twisted step of siz
 under adjacent transpositions are dense and full rank.
 Also: E1 confirmed at n = 8 (series method, seed 33: delta_8 = 369 = 3(5n^2-9n-2)/2, eps L_B' ⊆ L_F' true).
 
+### 4.16 E1 step, second round, and five more probes (27 Oct 2026)
+
+**Agent PER2** (research/AGENT_PER2_NOTES.md, exploration/agent_per2_*.py; re-run: agent_per2_step --m 5 and
+agent_per2_headmap0 --n 4 reproduce dim T = 72, dim K0 = 54, rank S00 = 18, rank Lambda'(0) = 36, density 0.903).
+The E1 step E1(n) -> E1(n+1) is a square 18n x 18n first-order map (dim T = 18n, dim K0 = 15n - 6,
+rank S00 = 3n + 6), invertible for n = 4, 5, 6; its target is the top of the pole-order filtration. KILLED:
+Lambda'_n(0) has generic rank at every pole-order level; the step is not triangular for the natural split; the
+K0-part needs the old lattice mod eps^2. So E1 cannot be propagated with E1(n) + (*) alone.
+
+**Probes (scratch scripts; results only):**
+* *Embedding in Q' >= T - 1 states (PROVED, but no gain).* Restriction to paths in [3]^T, rho: M^(Q')_T -> M^(3)_T, is
+  well defined (put eta_q = 0 for q >= 3) and SURJECTIVE for T <= Q' + 1: induction on T through the quotient maps,
+  since the canonical E^(Q'), B^(Q') lie in the fat-ideal image K^(Q') (GENERALQ_PROOF sec. 5) and restrict to E, B,
+  which span W_n (L2). But rho maps the Q' family onto the UNRESTRICTED Q = 3 family (all head sets H). DHW's rule
+  t_l = l (l <= j - 1) keeps only |H| <= 1, so this only reproves that the unrestricted family spans, which is
+  trivial by unitriangularity. Killed.
+* *Persistence leading coefficient is not a product formula.* hq_fresh_univariate --mode persist (theta = u_{n-1}(1)):
+  n = 3: numerator [3]^3 [3]^3 [5]^3 (the cube); n = 4: numerator factors of degree 1, 4, 14, 21, 26 over F_10007
+  (denominator linear factors only). So E1, if true, has no closed-form leading term.
+* *Conic all-ones persistence point is degenerate at n = 3.* H = J - I, u_t = (1, z_t, z_t^2), eps = l: det R_3 = 0
+  exactly for z = (2,3,5), (2,3,7), (3,5,11); det R_4 != 0 at (2,3,5,7).
+* *A Lambda-free filtered family exists but is not DHW.* Fhat := {D_{t,s}} u {E_s Pi_{>s}} u {I^(<=m)_t Pi_{>m}}
+  (m = max(t,1)) is filtered by V_m (12-dimensional new pieces per level m >= 2, 21 at m = 1, 3 at m = 0) and is a
+  basis for n = 3, 4, 5. Identities: E_s Pi_{>s} = J^(>=s)_s - J^(>=s+1)_{s+1} (telescoping suffix j = 0 vectors),
+  I_t - I^(<=t)_t Pi_{>t} = h_t (I - Pi_{>t}) (the suffix system's I-vector). But the 12n x 12n matrix of DHW's
+  [E_s], [I_t] in the Fhat basis modulo span(D) is dense across ALL levels for every s, t < n - 1 (n = 3, 4, 5).
+  So Lambda re-enters through the suffix I-vectors. Killed as a shortcut.
+* *Multi-head relations are dense.* At n = 3 every |H| = 2 image N(H; s, q0) has all 63 coefficients nonzero in the
+  DHW basis.
+* *No order-free subspaces in the generic configuration.* span D, D + E, D + I and J all change under an adjacent
+  transposition of the time order (n = 4, 5; e.g. dim span(J u J') = 18 for dim J = 12). Only the cyclic S_0 is
+  order-free (sec. 4.15).
+
 ## 6. General Q (side results)
 
 ### 6.1 T = 4, every Q >= 3: independence (PROVED)
