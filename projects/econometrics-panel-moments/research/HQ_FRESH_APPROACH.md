@@ -7,7 +7,7 @@ equation-(24) family is a basis of the fixed-effect-free moment space M_T
 for (gamma, beta, x) in an open dense subset of the economic domain
 pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 
-**Lemma tree** (status 20 Oct 2026):
+**Lemma tree** (status 27 Oct 2026):
 
 | id | statement | status |
 |---|---|---|
@@ -23,15 +23,18 @@ pi_t(q,r) = exp(gamma_qr + x_t beta_q). Then: general Q (T = 4 first).
 | QC | DHW Conjecture 1 (both halves) for every 3 <= T <= Q + 1, Q >= 3 | PROVED, independently reviewed (research/GENERALQ_PROOF.md) |
 | Q3 | T = 3, every Q: dim M_3 = Q, so (45) is a basis (DHW leave the upper bound open for Q >= 3) | PROVED (sec. 6.3) |
 | QD | dim M_T = ell(Q,T) for 3 <= T <= Q+1 (exact count; family a basis iff independent) | PROVED (sec. 6.5) |
-| L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible) | CONJECTURE (the gap) |
+| QA | dim M_T = ell(Q,T) for EVERY T >= 3 and Q >= 3 (both halves of DHW's count) | PROVED (research/GENERALQ_ALLT_PROOF.md, sec. 6.7); review pending |
+| QB | explicit basis of M_T for every (Q,T): DHW's index set (24)-(25) with generation orders (t,s1,s2,r,T), (t,s2,s1,r,T) | PROVED (same document, sec. 7); review pending |
+| L5 | det R_n != 0 for all n (equivalently det C_n != 0; admissibility of the j=0 inputs; T invertible; equivalently DHW's new columns are invertible in the canonical basis of QB) | CONJECTURE (the gap) |
 
 **Next-steps queue** (top = next):
 1. L5 via E1 (sec. 4.14): build the 18n x 18n first-order new-column step (eps^2-truncated), with the
    leading head map Lambda'_n(0); find its structure (pole-order triangularity) and a closed form of
    Lambda'_n(0); propagate (*). In parallel: Q_cyc via the intrinsic S_0 (sec. 4.13, agent running).
 2. An inductive invariant for Lambda_n (the only obstruction found in every route).
-3. general Q: T = 4 DONE (sec. 6.4); dimension for T <= Q+1 DONE (sec. 6.5); open: dimension
-   for T > Q+1 (Q >= 4) and independence of (24) for T >= 5.
+3. general Q: the exact count for EVERY T and an explicit basis for every (Q,T) are DONE (sec. 6.7, QA, QB;
+   review pending). What remains of DHW Conjecture 1 is only the independence of their particular family (24)
+   for T > Q+1: one explicit square matrix per (Q,T) (for Q = 3 this is L5).
 
 **Tools.** math/.venv has python-flint 0.9, sympy 1.14, numpy (gitignored).
 
@@ -908,6 +911,31 @@ deficient for n = Q ((3,3): 63/144) -- which is exactly why Q = 3, T >= 5 (and g
 Raw (24) family full rank (exploration/hq_fresh_generalQ.py) also at (Q,T) = (5,5), (6,5), and (3,5);
 there the higher-head terms of the unitriangular expansion must be re-expressed in a smaller basis, producing
 the dense matrix R_n.
+
+### 6.7 Every T: the exact count and an explicit basis (27 Oct 2026; PROVED, review pending)
+
+research/GENERALQ_ALLT_PROOF.md; checker exploration/hq_fresh_generalQ_allT.py (all checks pass).
+* **Capped fat-ideal lemma (PROVED).** Lemma 4.1 of GENERALQ_PROOF.md holds for ANY number k of blocks once the
+  descending induction starts at depth min(k, Q-1), the largest depth of a nonempty flat (points for k >= Q):
+  J_kQ has basis prod_{t in S} h_{t r_t} prod_{u not in S} D_u, |S| <= min(k,Q-1), so
+  dim J_kQ = sum_{j<=min(k,Q-1)} C(k,j) Q^j; and J_{kQ+1} = S_1 J_kQ = S_1 H_1...H_k.
+  (The earlier note "for T > Q+1 the products are dependent" was right for all (Q+1)^k products,
+  not for the capped set.) For Q = 3: dim I(Z)_{3k} = 1 + 3k + 9C(k,2), the project's Lean count.
+* **Canonical basis of the quotient (PROVED).** For any k, the canonical multi-heads with |H| <= Q-2 form a
+  basis of K = {(g_r) in J_kQ^Q : sum eta_r g_r = 0}. Spanning goes by descending iterated residues at the flats
+  of depth j = min(k,Q-1), ..., 1. On a flat of depth j <= Q-2 the residue of any w in K with no deeper residues is
+  forced to be prod eta_{q_u} (c o eta) with c.eta in span{L_{u q_u}} (fat divisibility plus degree count),
+  i.e. a combination of the multi-head residues. For Q = 3 this is L2 ({E, B} basis of W_n) with a direct proof.
+* **Theorem (QA).** dim M_T = ell(Q,T) for every Q >= 3, T >= 3 (generic economic parameters).
+  Fibration: dim M_{T+1} = Q dim M_T + dim K = Q ell(Q,T) + N_Q(T-1), where (25) satisfies the same lift recursion.
+* **Theorem (QB), explicit basis.** Keep DHW's index set and replace their pair of generation orders by
+  (t, s1, s2, r, T), (t, s2, s1, r, T). These moments are valid (another instance of DHW's Theorem 1). Their
+  new-column images are exactly c(q) e_{q0}(I - K_{s2+1}), i.e. the canonical multi-heads, so the family is a
+  basis of M_T for every (Q,T). EXACT-CHECKED: raw rank = ell at (Q,T) = (3,5), (3,6), (4,6).
+* **What it means for L5.** DHW's family is a basis iff its new columns are invertible in this canonical basis.
+  For Q = 3 that is exactly R_n (canonical E, B). So L5 is unchanged, but it is now the ONLY missing piece of DHW's
+  Conjecture 1 for Q = 3. For general Q the analogous square matrix is unitriangular for T <= Q+1 (GENERALQ_PROOF)
+  and dense for T > Q+1.
 
 ## 5. Remaining obstruction
 
