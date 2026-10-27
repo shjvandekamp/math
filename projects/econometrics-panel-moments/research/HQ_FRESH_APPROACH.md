@@ -654,6 +654,18 @@ K0-part needs the old lattice mod eps^2. So E1 cannot be propagated with E1(n) +
 * *No order-free subspaces in the generic configuration.* span D, D + E, D + I and J all change under an adjacent
   transposition of the time order (n = 4, 5; e.g. dim span(J u J') = 18 for dim J = 12). Only the cyclic S_0 is
   order-free (sec. 4.15).
+* *The n = 3 cube is a corank-3 hypersurface* (scratch scripts, exact mod p ~ 10^6). Phi has degree 12 along
+  u_2(1), and its F_p-roots are rare (need p with a linear factor). On {Phi = 0} the 63 new columns
+  {E} u {F} have rank exactly 60: a 3-dimensional space of relations appears along a whole hypersurface.
+  – At generic points of {Phi = 0} the relations are dense. Deleting any one class kills all three: one head block,
+    one E-block, or just the three E_{s,c} of one colour c. Each relation uses all 54 F's, and its E-part
+    (3 x 3 in (s, c)) has full rank. The three 2-state subfamilies stay independent (30/30).
+  – On the common-conic locus (all 9 lines tangent to one conic, e.g. the general-Q witness) the three
+    relations instead live in the {0,2}-subfamily (E_{s,0}, E_{s,2}, F with a, b in {0,2}: 30 members of
+    rank 27).
+  – Interpolating word lengths (canonical -> one letter -> DHW) gives a different irreducible discriminant at
+    each stage (n = 3: degrees 12 and 25 at one letter, [11]^3 at full words). The cube is specific to DHW's
+    words.
 
 ## 6. General Q (side results)
 
