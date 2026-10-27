@@ -5,9 +5,8 @@ same-panel compatibility extension are complete and kernel checked. The
 same panel becomes compatible when hidden activity and fixing-time signals
 are allowed. Mathematical novelty remains provisional.
 
-Further research stopped at the user's request on 2026-10-15. No subsequent
-exploratory claim is included as a proved result, and no research process is
-running in the background.
+Research on this project closed on 2026-10-15. No later exploratory claim is
+included as a proved result.
 
 ## Published baseline
 
@@ -81,5 +80,4 @@ preserved.
 
 From this project directory, run `scripts/verify.sh`. The pinned toolchain,
 manifest, proof map, exact tables, discovery scripts, manuscript, statement
-audits and build logs are present. No background research or computation is
-promised after this session ends.
+audits and build logs are present.
