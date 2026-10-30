@@ -22,6 +22,11 @@ Genericity is joint in the normalized state-dependence coefficients, slopes,
 and covariates, not on every fixed-covariate or fixed-slope slice. No
 measure-zero exceptional-set or estimator-identification claim is made.
 
+Later written proofs, not yet formalized, extend the exact count to any
+number of choices and give an explicit basis for every T:
+[GENERALQ_ALLT_PROOF.md](research/GENERALQ_ALLT_PROOF.md) and
+[GENERALQ_PROOF.md](research/GENERALQ_PROOF.md).
+
 The bounded prior-art audit found **no matching public proof as of
 15 October 2026**. Priority and publication value remain provisional;
 [NOVELTY.md](NOVELTY.md) records the source comparisons and access limits.
@@ -85,8 +90,7 @@ and external initialization calculations are labeled separately; they do
 not silently extend the formal theorem statements. Dependency sources and
 compiled caches are not vendored.
 
-The GitHub branch is
-[`research/econometrics-panel-moments-20261015-01a13f56`](https://github.com/shjvandekamp/math/tree/research/econometrics-panel-moments-20261015-01a13f56/projects/econometrics-panel-moments).
+The full development history is in this repository's commit log.
 Development used an isolated worktree under `/Volumes/2tb/math/.worktrees/`.
 This repository snapshot is not a journal publication; no source authors have
 been contacted.
