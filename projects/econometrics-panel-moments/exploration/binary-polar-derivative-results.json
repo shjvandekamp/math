@@ -1,0 +1,463 @@
+{
+  "status": "External exact rational checks supporting a paper proof; not a Lean theorem.",
+  "scope": "Auxiliary shared-new polar derivative only; the full regular Schur complement remains open.",
+  "boundary": "Only the last old block leaks to state0, t1=0,t2=1, with row0 odds eta*c_i*z.",
+  "cases": [
+    {
+      "m": 2,
+      "rho": "2",
+      "eta": "3",
+      "c": [
+        "1",
+        "5"
+      ],
+      "constant_kernel_basis": [
+        [
+          "-9/5",
+          "8",
+          "1",
+          "0"
+        ],
+        [
+          "-4/5",
+          "3",
+          "0",
+          "1"
+        ]
+      ],
+      "constant_kernel_exactly_verified": true,
+      "four_shift_reductions_coefficientwise_verified": true,
+      "P": {
+        "0": "2",
+        "1": "2"
+      },
+      "Q": {
+        "0": "1/3",
+        "1": "2/3"
+      },
+      "quotient_determinant": "2/3",
+      "expected_determinant": "2/3",
+      "direct_product_derivative_points": [
+        "1/7",
+        "2/11",
+        "-1/13"
+      ],
+      "direct_product_derivatives_match_closed_expressions": true,
+      "row_zero_pole_subtraction_checked": true
+    },
+    {
+      "m": 2,
+      "rho": "3",
+      "eta": "2",
+      "c": [
+        "1",
+        "5"
+      ],
+      "constant_kernel_basis": [
+        [
+          "-7/5",
+          "6",
+          "1",
+          "0"
+        ],
+        [
+          "-2/5",
+          "1",
+          "0",
+          "1"
+        ]
+      ],
+      "constant_kernel_exactly_verified": true,
+      "four_shift_reductions_coefficientwise_verified": true,
+      "P": {
+        "0": "3/4",
+        "1": "3/4"
+      },
+      "Q": {
+        "0": "1/8",
+        "1": "3/8"
+      },
+      "quotient_determinant": "3/16",
+      "expected_determinant": "3/16",
+      "direct_product_derivative_points": [
+        "1/7",
+        "2/11",
+        "-1/13"
+      ],
+      "direct_product_derivatives_match_closed_expressions": true,
+      "row_zero_pole_subtraction_checked": true
+    },
+    {
+      "m": 4,
+      "rho": "2",
+      "eta": "3",
+      "c": [
+        "1",
+        "5",
+        "25",
+        "125"
+      ],
+      "constant_kernel_basis": [
+        [
+          "-9/5",
+          "200",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-4/125",
+          "3",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "1"
+        ]
+      ],
+      "constant_kernel_exactly_verified": true,
+      "four_shift_reductions_coefficientwise_verified": true,
+      "P": {
+        "0": "2",
+        "1": "50"
+      },
+      "Q": {
+        "0": "-47/75",
+        "1": "2/3"
+      },
+      "quotient_determinant": "98/3",
+      "expected_determinant": "98/3",
+      "direct_product_derivative_points": [
+        "1/7",
+        "2/11",
+        "-1/13"
+      ],
+      "direct_product_derivatives_match_closed_expressions": true,
+      "row_zero_pole_subtraction_checked": true
+    },
+    {
+      "m": 4,
+      "rho": "3",
+      "eta": "2",
+      "c": [
+        "1",
+        "5",
+        "25",
+        "125"
+      ],
+      "constant_kernel_basis": [
+        [
+          "-7/5",
+          "150",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-2/125",
+          "1",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "1"
+        ]
+      ],
+      "constant_kernel_exactly_verified": true,
+      "four_shift_reductions_coefficientwise_verified": true,
+      "P": {
+        "0": "3/4",
+        "1": "75/4"
+      },
+      "Q": {
+        "0": "-23/200",
+        "1": "3/8"
+      },
+      "quotient_determinant": "39/16",
+      "expected_determinant": "39/16",
+      "direct_product_derivative_points": [
+        "1/7",
+        "2/11",
+        "-1/13"
+      ],
+      "direct_product_derivatives_match_closed_expressions": true,
+      "row_zero_pole_subtraction_checked": true
+    },
+    {
+      "m": 6,
+      "rho": "2",
+      "eta": "3",
+      "c": [
+        "1",
+        "5",
+        "25",
+        "125",
+        "625",
+        "3125"
+      ],
+      "constant_kernel_basis": [
+        [
+          "-9/5",
+          "5000",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-4/3125",
+          "3",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "1"
+        ]
+      ],
+      "constant_kernel_exactly_verified": true,
+      "four_shift_reductions_coefficientwise_verified": true,
+      "P": {
+        "0": "2",
+        "1": "1250"
+      },
+      "Q": {
+        "0": "-1247/1875",
+        "1": "2/3"
+      },
+      "quotient_determinant": "2498/3",
+      "expected_determinant": "2498/3",
+      "direct_product_derivative_points": [
+        "1/7",
+        "2/11",
+        "-1/13"
+      ],
+      "direct_product_derivatives_match_closed_expressions": true,
+      "row_zero_pole_subtraction_checked": true
+    },
+    {
+      "m": 6,
+      "rho": "3",
+      "eta": "2",
+      "c": [
+        "1",
+        "5",
+        "25",
+        "125",
+        "625",
+        "3125"
+      ],
+      "constant_kernel_basis": [
+        [
+          "-7/5",
+          "3750",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-2/3125",
+          "1",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "1"
+        ]
+      ],
+      "constant_kernel_exactly_verified": true,
+      "four_shift_reductions_coefficientwise_verified": true,
+      "P": {
+        "0": "3/4",
+        "1": "1875/4"
+      },
+      "Q": {
+        "0": "-623/5000",
+        "1": "3/8"
+      },
+      "quotient_determinant": "939/16",
+      "expected_determinant": "939/16",
+      "direct_product_derivative_points": [
+        "1/7",
+        "2/11",
+        "-1/13"
+      ],
+      "direct_product_derivatives_match_closed_expressions": true,
+      "row_zero_pole_subtraction_checked": true
+    },
+    {
+      "m": 8,
+      "rho": "2",
+      "eta": "3",
+      "c": [
+        "1",
+        "5",
+        "25",
+        "125",
+        "625",
+        "3125",
+        "15625",
+        "78125"
+      ],
+      "constant_kernel_basis": [
+        [
+          "-9/5",
+          "125000",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-4/78125",
+          "3",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "1"
+        ]
+      ],
+      "constant_kernel_exactly_verified": true,
+      "four_shift_reductions_coefficientwise_verified": true,
+      "P": {
+        "0": "2",
+        "1": "31250"
+      },
+      "Q": {
+        "0": "-31247/46875",
+        "1": "2/3"
+      },
+      "quotient_determinant": "62498/3",
+      "expected_determinant": "62498/3",
+      "direct_product_derivative_points": [
+        "1/7",
+        "2/11",
+        "-1/13"
+      ],
+      "direct_product_derivatives_match_closed_expressions": true,
+      "row_zero_pole_subtraction_checked": true
+    },
+    {
+      "m": 8,
+      "rho": "3",
+      "eta": "2",
+      "c": [
+        "1",
+        "5",
+        "25",
+        "125",
+        "625",
+        "3125",
+        "15625",
+        "78125"
+      ],
+      "constant_kernel_basis": [
+        [
+          "-7/5",
+          "93750",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "6/5",
+          "0",
+          "-6/5",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "-2/78125",
+          "1",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "6",
+          "0",
+          "-6",
+          "0",
+          "1"
+        ]
+      ],
+      "constant_kernel_exactly_verified": true,
+      "four_shift_reductions_coefficientwise_verified": true,
+      "P": {
+        "0": "3/4",
+        "1": "46875/4"
+      },
+      "Q": {
+        "0": "-15623/125000",
+        "1": "3/8"
+      },
+      "quotient_determinant": "23439/16",
+      "expected_determinant": "23439/16",
+      "direct_product_derivative_points": [
+        "1/7",
+        "2/11",
+        "-1/13"
+      ],
+      "direct_product_derivatives_match_closed_expressions": true,
+      "row_zero_pole_subtraction_checked": true
+    }
+  ]
+}

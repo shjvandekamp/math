@@ -1,0 +1,6960 @@
+{
+  "scope": "One prescribed binary-terminal specialization, sector0, q=2,3,4; no search or full-source conclusion.",
+  "interpretation": "Singular M only diagnoses this terminal degeneration; it does not prove full paired dependence.",
+  "prime": 1000003,
+  "resource_limits": {
+    "seconds": 28,
+    "maximum_rss_bytes": 99614720
+  },
+  "cases": [
+    {
+      "q": 2,
+      "shorter_old_blocks": 1,
+      "sector": 0,
+      "fixture": {
+        "r": [
+          1,
+          1,
+          1
+        ],
+        "common_matrix": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "new_time": [
+          1,
+          1,
+          1
+        ],
+        "old_time_factors": [
+          [
+            1,
+            8,
+            64
+          ]
+        ],
+        "actual_coefficient_tables_mod_prime": [
+          [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          [
+            [
+              2,
+              8,
+              64
+            ],
+            [
+              1,
+              16,
+              64
+            ],
+            [
+              1,
+              8,
+              128
+            ]
+          ]
+        ],
+        "table_determinants_mod_prime": [
+          4,
+          2048
+        ],
+        "common_matrix_two_by_two_minors_mod_prime": [
+          3,
+          1,
+          1000002,
+          1,
+          3,
+          1,
+          1000002,
+          1,
+          3
+        ],
+        "all_parameters_positive_rational": true
+      },
+      "terminal_time": [
+        1,
+        0,
+        7
+      ],
+      "terminal_table": [
+        [
+          2,
+          0,
+          7
+        ],
+        [
+          1,
+          0,
+          7
+        ],
+        [
+          1,
+          0,
+          14
+        ]
+      ],
+      "common_matrix_inverse": [
+        [
+          750003,
+          750002,
+          750002
+        ],
+        [
+          750002,
+          750003,
+          750002
+        ],
+        [
+          750002,
+          750002,
+          750003
+        ]
+      ],
+      "common_inverse_certificate": {
+        "size": 3,
+        "determinant_mod_prime": 4,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "357566cae887a9bfc6647d7766ea6ea3e259070519d80c10e81a24de2118e945"
+      },
+      "shorter_geometry": {
+        "checks": {
+          "all_line_coefficients_nonzero": true,
+          "all_lines_distinct": true,
+          "all_pair_coordinates_nonzero": true,
+          "no_unintended_three_line_points": true,
+          "every_coordinate_edge_on_only_its_matching_line": true
+        },
+        "all_passed": true,
+        "denominator_lines": 6,
+        "pair_intersections_checked": 15,
+        "coordinate_edge_intersections_checked": 18,
+        "failures": []
+      },
+      "shorter_paired_matrix": {
+        "sector": 0,
+        "old_blocks": 1,
+        "row_labels": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "column_labels": [
+          [
+            "H",
+            1,
+            0
+          ],
+          [
+            "H",
+            1,
+            1
+          ],
+          [
+            "H",
+            1,
+            2
+          ],
+          [
+            "J",
+            1,
+            0
+          ],
+          [
+            "J",
+            1,
+            1
+          ],
+          [
+            "J",
+            1,
+            2
+          ]
+        ],
+        "residue_convention": "Res_L_ud(Y) at X=(normal cross A_u[d,:])/sum(cross); components 0,1, with component 2 their negative sum.",
+        "matrix": [
+          [
+            1000001,
+            0,
+            0,
+            999999,
+            0,
+            0
+          ],
+          [
+            18,
+            0,
+            0,
+            500006,
+            0,
+            0
+          ],
+          [
+            0,
+            229170,
+            0,
+            0,
+            458340,
+            0
+          ],
+          [
+            0,
+            298500,
+            0,
+            0,
+            268657,
+            0
+          ],
+          [
+            0,
+            0,
+            375001,
+            0,
+            0,
+            750002
+          ],
+          [
+            0,
+            0,
+            625004,
+            0,
+            0,
+            578127
+          ]
+        ],
+        "certificate": {
+          "shape": [
+            6,
+            6
+          ],
+          "sha256": "55bb829b8488e336759ce4233a21c617ead105978ddb72e967530d40b52a3393",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                2,
+                4,
+                1,
+                3,
+                5
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "determinant_mod_prime": 487858,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 512145
+          }
+        },
+        "head_certificate": {
+          "shape": [
+            6,
+            3
+          ],
+          "sha256": "8fa4e06fb34fb703b830d0fdfd2d60d18b4288b6b06c42033f36dd5b02e987b5",
+          "rank_certificate": {
+            "rank": 3,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 3,
+              "rows": [
+                0,
+                2,
+                4
+              ],
+              "columns": [
+                0,
+                1,
+                2
+              ],
+              "determinant_mod_prime": 557294,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "full_rank": true,
+        "paired_node_geometry_passed": true,
+        "node_records": [
+          {
+            "old_block": 1,
+            "state": 0,
+            "point": [
+              1000002,
+              250003,
+              750002
+            ],
+            "original_cross": [
+              56,
+              999877,
+              14
+            ],
+            "projective_scale": 910717,
+            "row_form_values": [
+              [
+                0,
+                250004,
+                750003
+              ],
+              [
+                0,
+                19,
+                999988
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                250003,
+                750002
+              ],
+              [
+                1000001,
+                18,
+                999987
+              ]
+            ],
+            "nonzero_remaining_denominator": 999718
+          },
+          {
+            "old_block": 1,
+            "state": 1,
+            "point": [
+              1000002,
+              229170,
+              770835
+            ],
+            "original_cross": [
+              48,
+              999876,
+              31
+            ],
+            "projective_scale": 895836,
+            "row_form_values": [
+              [
+                0,
+                229171,
+                770836
+              ],
+              [
+                166645,
+                0,
+                499939
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                229170,
+                770835
+              ],
+              [
+                1000002,
+                666711,
+                333293
+              ]
+            ],
+            "nonzero_remaining_denominator": 84719
+          },
+          {
+            "old_block": 1,
+            "state": 2,
+            "point": [
+              1000002,
+              625004,
+              375001
+            ],
+            "original_cross": [
+              120,
+              999748,
+              15
+            ],
+            "projective_scale": 558335,
+            "row_form_values": [
+              [
+                0,
+                625005,
+                375002
+              ],
+              [
+                7,
+                25,
+                0
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                625004,
+                375001
+              ],
+              [
+                1000002,
+                17,
+                999987
+              ]
+            ],
+            "nonzero_remaining_denominator": 175
+          }
+        ],
+        "polynomial_clearing_component_checks": 54,
+        "polynomial_clearing_identity": "D=product_(t,c) L_tc, C_t=diag(product_(h!=c)L_th) A_t diag(X). Res_L Y=(D Y)(X)/(D/L)(X).",
+        "zero_sum_vector_checks": 18
+      },
+      "shorter_inverse_certificate": {
+        "size": 6,
+        "determinant_mod_prime": 512145,
+        "pivot_rows_in_original_order": [
+          0,
+          2,
+          4,
+          1,
+          3,
+          5
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "463feaac002032f2bdc4c9593a6a3877df643ada84a230e4c1748d8b1e4574a2"
+      },
+      "terminal_pole_cancellations": [
+        {
+          "c": 0,
+          "point": [
+            1000002,
+            571432,
+            428573
+          ],
+          "terminal_row_forms": [
+            0,
+            1,
+            3
+          ],
+          "old_row_forms": {
+            "1": [
+              30,
+              571475,
+              428622
+            ]
+          },
+          "rho": 408612,
+          "r": 817224,
+          "terminal_residue_vector": [
+            545286,
+            0,
+            454717
+          ],
+          "missing_output_residue_zero": true
+        },
+        {
+          "c": 1,
+          "point": [
+            1000002,
+            285717,
+            714288
+          ],
+          "terminal_row_forms": [
+            1000002,
+            0,
+            1
+          ],
+          "old_row_forms": {
+            "1": [
+              22,
+              285753,
+              714320
+            ]
+          },
+          "rho": 178337,
+          "r": 178337,
+          "terminal_residue_vector": [
+            238295,
+            0,
+            761708
+          ],
+          "missing_output_residue_zero": true
+        },
+        {
+          "c": 2,
+          "point": [
+            1000002,
+            642861,
+            357144
+          ],
+          "terminal_row_forms": [
+            500000,
+            500001,
+            0
+          ],
+          "old_row_forms": {
+            "1": [
+              18,
+              142892,
+              857169
+            ]
+          },
+          "rho": 168608,
+          "r": 168608,
+          "terminal_residue_vector": [
+            586731,
+            0,
+            413272
+          ],
+          "missing_output_residue_zero": true
+        }
+      ],
+      "coordinate_edges": [
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          -2
+        ],
+        [
+          1,
+          -2,
+          0
+        ]
+      ],
+      "columns": [
+        {
+          "c": 0,
+          "edge_scalars": [
+            0,
+            572755,
+            291215
+          ],
+          "canonical_constants_s0_k_s2": [
+            143239,
+            463675,
+            966045
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              243046,
+              756957
+            ],
+            [
+              424980,
+              0,
+              575023
+            ],
+            [
+              788848,
+              211155,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 446527,
+              "z_residue": [
+                8,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                268883,
+                608461,
+                122659
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 950783,
+              "z_residue": [
+                0,
+                16,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                351073,
+                983702,
+                665231
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 759232,
+              "z_residue": [
+                0,
+                0,
+                8
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                454305,
+                67667,
+                478031
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            589586,
+            7922,
+            72340,
+            887990,
+            361597,
+            146616
+          ],
+          "polynomial_gauge_lambda": 276828,
+          "actual_headsum": [
+            589586,
+            7922,
+            72340
+          ],
+          "removed_head": [
+            143239,
+            0,
+            762297
+          ],
+          "response": [
+            0,
+            284750,
+            586874
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 631554,
+              "lifted_old_row": [
+                643368,
+                881985,
+                474653
+              ],
+              "actual_old_paired_combination": [
+                89712,
+                605157,
+                305134
+              ],
+              "reconstructed_row": [
+                643368,
+                881985,
+                474653
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 827356,
+              "lifted_old_row": [
+                765443,
+                405656,
+                828907
+              ],
+              "actual_old_paired_combination": [
+                211787,
+                852003,
+                936216
+              ],
+              "reconstructed_row": [
+                765443,
+                405656,
+                828907
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 842033,
+              "lifted_old_row": [
+                946490,
+                866571,
+                186945
+              ],
+              "actual_old_paired_combination": [
+                392834,
+                36087,
+                571082
+              ],
+              "reconstructed_row": [
+                946490,
+                866571,
+                186945
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 742416,
+              "lifted_old_row": [
+                719103,
+                967063,
+                313840
+              ],
+              "actual_old_paired_combination": [
+                165447,
+                859754,
+                974805
+              ],
+              "reconstructed_row": [
+                719103,
+                967063,
+                313840
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 888921,
+              "lifted_old_row": [
+                948451,
+                381943,
+                669612
+              ],
+              "actual_old_paired_combination": [
+                394795,
+                997809,
+                607402
+              ],
+              "reconstructed_row": [
+                948451,
+                381943,
+                669612
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 448929,
+              "lifted_old_row": [
+                582717,
+                392194,
+                25092
+              ],
+              "actual_old_paired_combination": [
+                29061,
+                731232,
+                239710
+              ],
+              "reconstructed_row": [
+                582717,
+                392194,
+                25092
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 5,
+          "distinct_control_points": 6
+        },
+        {
+          "c": 1,
+          "edge_scalars": [
+            292510,
+            1,
+            790602
+          ],
+          "canonical_constants_s0_k_s2": [
+            93904,
+            770778,
+            218427
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              785670,
+              214333
+            ],
+            [
+              971431,
+              0,
+              28572
+            ],
+            [
+              342950,
+              657053,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 607309,
+              "z_residue": [
+                8,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                493151,
+                315072,
+                191780
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 886306,
+              "z_residue": [
+                0,
+                16,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                919727,
+                76100,
+                4176
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 868776,
+              "z_residue": [
+                0,
+                0,
+                8
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                625571,
+                471714,
+                902721
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            269516,
+            322689,
+            409635,
+            991958,
+            977032,
+            792909
+          ],
+          "polynomial_gauge_lambda": 677314,
+          "actual_headsum": [
+            269516,
+            322689,
+            409635
+          ],
+          "removed_head": [
+            93904,
+            0,
+            528986
+          ],
+          "response": [
+            530237,
+            0,
+            557963
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 539141,
+              "lifted_old_row": [
+                672412,
+                87076,
+                240515
+              ],
+              "actual_old_paired_combination": [
+                317787,
+                409765,
+                272451
+              ],
+              "reconstructed_row": [
+                672412,
+                87076,
+                240515
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 751500,
+              "lifted_old_row": [
+                110478,
+                967812,
+                921716
+              ],
+              "actual_old_paired_combination": [
+                755856,
+                613187,
+                630963
+              ],
+              "reconstructed_row": [
+                110478,
+                967812,
+                921716
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 837238,
+              "lifted_old_row": [
+                599913,
+                849482,
+                550611
+              ],
+              "actual_old_paired_combination": [
+                245288,
+                817546,
+                937172
+              ],
+              "reconstructed_row": [
+                599913,
+                849482,
+                550611
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 993865,
+              "lifted_old_row": [
+                80375,
+                561228,
+                358400
+              ],
+              "actual_old_paired_combination": [
+                725753,
+                851981,
+                422272
+              ],
+              "reconstructed_row": [
+                80375,
+                561228,
+                358400
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 175976,
+              "lifted_old_row": [
+                963177,
+                335082,
+                701747
+              ],
+              "actual_old_paired_combination": [
+                608552,
+                948524,
+                442930
+              ],
+              "reconstructed_row": [
+                963177,
+                335082,
+                701747
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 999570,
+              "lifted_old_row": [
+                548624,
+                482099,
+                969283
+              ],
+              "actual_old_paired_combination": [
+                193999,
+                418227,
+                387777
+              ],
+              "reconstructed_row": [
+                548624,
+                482099,
+                969283
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 5,
+          "distinct_control_points": 6
+        },
+        {
+          "c": 2,
+          "edge_scalars": [
+            958696,
+            447233,
+            0
+          ],
+          "canonical_constants_s0_k_s2": [
+            393924,
+            68826,
+            154250
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              435174,
+              564829
+            ],
+            [
+              928310,
+              0,
+              71693
+            ],
+            [
+              914579,
+              85424,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 183461,
+              "z_residue": [
+                8,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                390507,
+                940890,
+                668609
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 478430,
+              "z_residue": [
+                0,
+                16,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                855481,
+                574745,
+                569780
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 83246,
+              "z_residue": [
+                0,
+                0,
+                8
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                627669,
+                554566,
+                817771
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            111442,
+            565420,
+            969991,
+            96653,
+            138799,
+            504339
+          ],
+          "polynomial_gauge_lambda": 109759,
+          "actual_headsum": [
+            111442,
+            565420,
+            969991
+          ],
+          "removed_head": [
+            393924,
+            0,
+            79747
+          ],
+          "response": [
+            937039,
+            675179,
+            0
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 674029,
+              "lifted_old_row": [
+                996090,
+                401931,
+                601985
+              ],
+              "actual_old_paired_combination": [
+                776572,
+                292172,
+                931262
+              ],
+              "reconstructed_row": [
+                996090,
+                401931,
+                601985
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 986485,
+              "lifted_old_row": [
+                713297,
+                919823,
+                366886
+              ],
+              "actual_old_paired_combination": [
+                493779,
+                700305,
+                805922
+              ],
+              "reconstructed_row": [
+                713297,
+                919823,
+                366886
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 491463,
+              "lifted_old_row": [
+                498585,
+                127862,
+                373556
+              ],
+              "actual_old_paired_combination": [
+                279067,
+                798588,
+                922351
+              ],
+              "reconstructed_row": [
+                498585,
+                127862,
+                373556
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 139837,
+              "lifted_old_row": [
+                582490,
+                547603,
+                869913
+              ],
+              "actual_old_paired_combination": [
+                362972,
+                108567,
+                528464
+              ],
+              "reconstructed_row": [
+                582490,
+                547603,
+                869913
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 569765,
+              "lifted_old_row": [
+                213849,
+                411140,
+                375014
+              ],
+              "actual_old_paired_combination": [
+                994334,
+                862348,
+                143324
+              ],
+              "reconstructed_row": [
+                213849,
+                411140,
+                375014
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 316696,
+              "lifted_old_row": [
+                60897,
+                365366,
+                573740
+              ],
+              "actual_old_paired_combination": [
+                841382,
+                706815,
+                451809
+              ],
+              "reconstructed_row": [
+                60897,
+                365366,
+                573740
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 5,
+          "distinct_control_points": 6
+        }
+      ],
+      "response_matrix": [
+        [
+          0,
+          530237,
+          937039
+        ],
+        [
+          284750,
+          0,
+          675179
+        ],
+        [
+          586874,
+          557963,
+          0
+        ]
+      ],
+      "response_certificate": {
+        "shape": [
+          3,
+          3
+        ],
+        "sha256": "a4eb11ce16f1ba6dd7e2747af6d37884c8e9747e1dc6918a45db02586066119d",
+        "rank_certificate": {
+          "rank": 3,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 3,
+            "rows": [
+              1,
+              0,
+              2
+            ],
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "determinant_mod_prime": 877103,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 122900
+        }
+      }
+    },
+    {
+      "q": 3,
+      "shorter_old_blocks": 2,
+      "sector": 0,
+      "fixture": {
+        "r": [
+          1,
+          1,
+          1
+        ],
+        "common_matrix": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "new_time": [
+          1,
+          1,
+          1
+        ],
+        "old_time_factors": [
+          [
+            1,
+            8,
+            64
+          ],
+          [
+            1,
+            64,
+            4096
+          ]
+        ],
+        "actual_coefficient_tables_mod_prime": [
+          [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          [
+            [
+              2,
+              8,
+              64
+            ],
+            [
+              1,
+              16,
+              64
+            ],
+            [
+              1,
+              8,
+              128
+            ]
+          ],
+          [
+            [
+              2,
+              64,
+              4096
+            ],
+            [
+              1,
+              128,
+              4096
+            ],
+            [
+              1,
+              64,
+              8192
+            ]
+          ]
+        ],
+        "table_determinants_mod_prime": [
+          4,
+          2048,
+          48573
+        ],
+        "common_matrix_two_by_two_minors_mod_prime": [
+          3,
+          1,
+          1000002,
+          1,
+          3,
+          1,
+          1000002,
+          1,
+          3
+        ],
+        "all_parameters_positive_rational": true
+      },
+      "terminal_time": [
+        1,
+        0,
+        7
+      ],
+      "terminal_table": [
+        [
+          2,
+          0,
+          7
+        ],
+        [
+          1,
+          0,
+          7
+        ],
+        [
+          1,
+          0,
+          14
+        ]
+      ],
+      "common_matrix_inverse": [
+        [
+          750003,
+          750002,
+          750002
+        ],
+        [
+          750002,
+          750003,
+          750002
+        ],
+        [
+          750002,
+          750002,
+          750003
+        ]
+      ],
+      "common_inverse_certificate": {
+        "size": 3,
+        "determinant_mod_prime": 4,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "357566cae887a9bfc6647d7766ea6ea3e259070519d80c10e81a24de2118e945"
+      },
+      "shorter_geometry": {
+        "checks": {
+          "all_line_coefficients_nonzero": true,
+          "all_lines_distinct": true,
+          "all_pair_coordinates_nonzero": true,
+          "no_unintended_three_line_points": true,
+          "every_coordinate_edge_on_only_its_matching_line": true
+        },
+        "all_passed": true,
+        "denominator_lines": 9,
+        "pair_intersections_checked": 36,
+        "coordinate_edge_intersections_checked": 27,
+        "failures": []
+      },
+      "shorter_paired_matrix": {
+        "sector": 0,
+        "old_blocks": 2,
+        "row_labels": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "column_labels": [
+          [
+            "H",
+            1,
+            0
+          ],
+          [
+            "H",
+            1,
+            1
+          ],
+          [
+            "H",
+            1,
+            2
+          ],
+          [
+            "H",
+            2,
+            0
+          ],
+          [
+            "H",
+            2,
+            1
+          ],
+          [
+            "H",
+            2,
+            2
+          ],
+          [
+            "J",
+            1,
+            0
+          ],
+          [
+            "J",
+            1,
+            1
+          ],
+          [
+            "J",
+            1,
+            2
+          ],
+          [
+            "J",
+            2,
+            0
+          ],
+          [
+            "J",
+            2,
+            1
+          ],
+          [
+            "J",
+            2,
+            2
+          ]
+        ],
+        "residue_convention": "Res_L_ud(Y) at X=(normal cross A_u[d,:])/sum(cross); components 0,1, with component 2 their negative sum.",
+        "matrix": [
+          [
+            658913,
+            0,
+            0,
+            929708,
+            608550,
+            946722,
+            414679,
+            0,
+            0,
+            859413,
+            217097,
+            893441
+          ],
+          [
+            531841,
+            0,
+            0,
+            632655,
+            523068,
+            479529,
+            533018,
+            0,
+            0,
+            265307,
+            46133,
+            959058
+          ],
+          [
+            0,
+            834379,
+            0,
+            245629,
+            360851,
+            875347,
+            0,
+            445912,
+            0,
+            38926,
+            120007,
+            248053
+          ],
+          [
+            0,
+            869984,
+            0,
+            935073,
+            390688,
+            277089,
+            0,
+            96120,
+            0,
+            685473,
+            253053,
+            832457
+          ],
+          [
+            0,
+            0,
+            576910,
+            338624,
+            547724,
+            343083,
+            0,
+            0,
+            594136,
+            218916,
+            280408,
+            875899
+          ],
+          [
+            0,
+            0,
+            343731,
+            243410,
+            688722,
+            167607,
+            0,
+            0,
+            834862,
+            278440,
+            233079,
+            109762
+          ],
+          [
+            61225,
+            938562,
+            961114,
+            450687,
+            0,
+            0,
+            122450,
+            877121,
+            922225,
+            22120,
+            0,
+            0
+          ],
+          [
+            20387,
+            993656,
+            527779,
+            998037,
+            0,
+            0,
+            40774,
+            987309,
+            55555,
+            133868,
+            0,
+            0
+          ],
+          [
+            520062,
+            110570,
+            148145,
+            0,
+            364586,
+            0,
+            630017,
+            131911,
+            643520,
+            0,
+            35459,
+            0
+          ],
+          [
+            457580,
+            268512,
+            275741,
+            0,
+            814524,
+            0,
+            114395,
+            16782,
+            159468,
+            0,
+            956717,
+            0
+          ],
+          [
+            180953,
+            518080,
+            411906,
+            0,
+            0,
+            291889,
+            411906,
+            8095,
+            331344,
+            0,
+            0,
+            163248
+          ],
+          [
+            657135,
+            167881,
+            864288,
+            0,
+            0,
+            260272,
+            864288,
+            955751,
+            256753,
+            0,
+            0,
+            754069
+          ]
+        ],
+        "certificate": {
+          "shape": [
+            12,
+            12
+          ],
+          "sha256": "297e598ad89237bfcb5bd624e83dd59b725bc58be00a861ac456f5b96b6155d4",
+          "rank_certificate": {
+            "rank": 12,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 12,
+              "rows": [
+                0,
+                2,
+                4,
+                3,
+                1,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11
+              ],
+              "determinant_mod_prime": 840657,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 840657
+          }
+        },
+        "head_certificate": {
+          "shape": [
+            12,
+            6
+          ],
+          "sha256": "7c4476f95ad78c1b33225aca7eff3eaa154d54e2b58afcc8e4ad9db8e70285af",
+          "rank_certificate": {
+            "rank": 6,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 6,
+              "rows": [
+                0,
+                2,
+                4,
+                3,
+                1,
+                5
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "determinant_mod_prime": 169880,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "full_rank": true,
+        "paired_node_geometry_passed": true,
+        "node_records": [
+          {
+            "old_block": 1,
+            "state": 0,
+            "point": [
+              1000002,
+              250003,
+              750002
+            ],
+            "original_cross": [
+              56,
+              999877,
+              14
+            ],
+            "projective_scale": 910717,
+            "row_form_values": [
+              [
+                0,
+                250004,
+                750003
+              ],
+              [
+                0,
+                19,
+                999988
+              ],
+              [
+                999121,
+                999266,
+                998098
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                250003,
+                750002
+              ],
+              [
+                1000001,
+                18,
+                999987
+              ]
+            ],
+            "nonzero_remaining_denominator": 650696
+          },
+          {
+            "old_block": 1,
+            "state": 1,
+            "point": [
+              1000002,
+              229170,
+              770835
+            ],
+            "original_cross": [
+              48,
+              999876,
+              31
+            ],
+            "projective_scale": 895836,
+            "row_form_values": [
+              [
+                0,
+                229171,
+                770836
+              ],
+              [
+                166645,
+                0,
+                499939
+              ],
+              [
+                997525,
+                664361,
+                328212
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                229170,
+                770835
+              ],
+              [
+                1000002,
+                666711,
+                333293
+              ]
+            ],
+            "nonzero_remaining_denominator": 357956
+          },
+          {
+            "old_block": 1,
+            "state": 2,
+            "point": [
+              1000002,
+              625004,
+              375001
+            ],
+            "original_cross": [
+              120,
+              999748,
+              15
+            ],
+            "projective_scale": 558335,
+            "row_form_values": [
+              [
+                0,
+                625005,
+                375002
+              ],
+              [
+                7,
+                25,
+                0
+              ],
+              [
+                999625,
+                999762,
+                999114
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                625004,
+                375001
+              ],
+              [
+                1000002,
+                17,
+                999987
+              ]
+            ],
+            "nonzero_remaining_denominator": 471169
+          },
+          {
+            "old_block": 2,
+            "state": 0,
+            "point": [
+              1000002,
+              656254,
+              343751
+            ],
+            "original_cross": [
+              4032,
+              991813,
+              126
+            ],
+            "projective_scale": 582095,
+            "row_form_values": [
+              [
+                0,
+                656255,
+                343752
+              ],
+              [
+                250013,
+                500031,
+                250012
+              ],
+              [
+                0,
+                131,
+                999876
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                656254,
+                343751
+              ],
+              [
+                1000001,
+                130,
+                999875
+              ]
+            ],
+            "nonzero_remaining_denominator": 894252
+          },
+          {
+            "old_block": 2,
+            "state": 1,
+            "point": [
+              1000002,
+              252775,
+              747230
+            ],
+            "original_cross": [
+              3968,
+              991812,
+              255
+            ],
+            "projective_scale": 865678,
+            "row_form_values": [
+              [
+                0,
+                252776,
+                747231
+              ],
+              [
+                844771,
+                866966,
+                667348
+              ],
+              [
+                822450,
+                0,
+                467348
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                252775,
+                747230
+              ],
+              [
+                1000002,
+                355104,
+                644900
+              ]
+            ],
+            "nonzero_remaining_denominator": 976610
+          },
+          {
+            "old_block": 2,
+            "state": 2,
+            "point": [
+              1000002,
+              328128,
+              671877
+            ],
+            "original_cross": [
+              8128,
+              983620,
+              127
+            ],
+            "projective_scale": 131275,
+            "row_form_values": [
+              [
+                0,
+                328129,
+                671878
+              ],
+              [
+                625015,
+                250031,
+                625015
+              ],
+              [
+                63,
+                193,
+                0
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                328128,
+                671877
+              ],
+              [
+                1000002,
+                129,
+                999875
+              ]
+            ],
+            "nonzero_remaining_denominator": 622507
+          }
+        ],
+        "polynomial_clearing_component_checks": 216,
+        "polynomial_clearing_identity": "D=product_(t,c) L_tc, C_t=diag(product_(h!=c)L_th) A_t diag(X). Res_L Y=(D Y)(X)/(D/L)(X).",
+        "zero_sum_vector_checks": 72
+      },
+      "shorter_inverse_certificate": {
+        "size": 12,
+        "determinant_mod_prime": 840657,
+        "pivot_rows_in_original_order": [
+          0,
+          2,
+          4,
+          3,
+          1,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "22bd23e7449e601be80711319b17509f45f4f905be6359b176e220cd6a524187"
+      },
+      "terminal_pole_cancellations": [
+        {
+          "c": 0,
+          "point": [
+            1000002,
+            571432,
+            428573
+          ],
+          "terminal_row_forms": [
+            0,
+            1,
+            3
+          ],
+          "old_row_forms": {
+            "1": [
+              30,
+              571475,
+              428622
+            ],
+            "2": [
+              1278,
+              572819,
+              431022
+            ]
+          },
+          "rho": 534617,
+          "r": 69231,
+          "terminal_residue_vector": [
+            659887,
+            0,
+            340116
+          ],
+          "missing_output_residue_zero": true
+        },
+        {
+          "c": 1,
+          "point": [
+            1000002,
+            285717,
+            714288
+          ],
+          "terminal_row_forms": [
+            1000002,
+            0,
+            1
+          ],
+          "old_row_forms": {
+            "1": [
+              22,
+              285753,
+              714320
+            ],
+            "2": [
+              702,
+              286537,
+              715576
+            ]
+          },
+          "rho": 797183,
+          "r": 797183,
+          "terminal_residue_vector": [
+            311047,
+            0,
+            688956
+          ],
+          "missing_output_residue_zero": true
+        },
+        {
+          "c": 2,
+          "point": [
+            1000002,
+            642861,
+            357144
+          ],
+          "terminal_row_forms": [
+            500000,
+            500001,
+            0
+          ],
+          "old_row_forms": {
+            "1": [
+              18,
+              142892,
+              857169
+            ],
+            "2": [
+              414,
+              143396,
+              857853
+            ]
+          },
+          "rho": 920443,
+          "r": 920443,
+          "terminal_residue_vector": [
+            791591,
+            0,
+            208412
+          ],
+          "missing_output_residue_zero": true
+        }
+      ],
+      "coordinate_edges": [
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          -2
+        ],
+        [
+          1,
+          -2,
+          0
+        ]
+      ],
+      "columns": [
+        {
+          "c": 0,
+          "edge_scalars": [
+            0,
+            727822,
+            169879
+          ],
+          "canonical_constants_s0_k_s2": [
+            746607,
+            700742,
+            539076
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              678948,
+              321055
+            ],
+            [
+              563147,
+              0,
+              436856
+            ],
+            [
+              331545,
+              668458,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 883387,
+              "z_residue": [
+                791931,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                609329,
+                259481,
+                131193
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 506267,
+              "z_residue": [
+                0,
+                220322,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                513225,
+                830633,
+                656148
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 922624,
+              "z_residue": [
+                0,
+                0,
+                117572
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                336867,
+                297437,
+                365699
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 0,
+              "point": [
+                1000002,
+                656254,
+                343751
+              ],
+              "scalar_residue": 404733,
+              "z_residue": [
+                40806,
+                847458,
+                822219
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                720815,
+                784015,
+                495176
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 1,
+              "point": [
+                1000002,
+                252775,
+                747230
+              ],
+              "scalar_residue": 559274,
+              "z_residue": [
+                432265,
+                244266,
+                889366
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                570649,
+                368605,
+                60749
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 2,
+              "point": [
+                1000002,
+                328128,
+                671877
+              ],
+              "scalar_residue": 424403,
+              "z_residue": [
+                419044,
+                256197,
+                838088
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                616040,
+                583586,
+                800380
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            356614,
+            202965,
+            280491,
+            785014,
+            33382,
+            491136,
+            774239,
+            610474,
+            867607,
+            291916,
+            768330,
+            543716
+          ],
+          "polynomial_gauge_lambda": 299960,
+          "actual_headsum": [
+            141625,
+            236347,
+            771627
+          ],
+          "removed_head": [
+            746607,
+            0,
+            773523
+          ],
+          "response": [
+            994941,
+            536307,
+            298064
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 639297,
+              "lifted_old_row": [
+                959956,
+                672131,
+                367919
+              ],
+              "actual_old_paired_combination": [
+                360036,
+                372171,
+                267796
+              ],
+              "reconstructed_row": [
+                959956,
+                672131,
+                367919
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 274310,
+              "lifted_old_row": [
+                963598,
+                816412,
+                219996
+              ],
+              "actual_old_paired_combination": [
+                363678,
+                216492,
+                419833
+              ],
+              "reconstructed_row": [
+                963598,
+                816412,
+                219996
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 235599,
+              "lifted_old_row": [
+                52919,
+                948354,
+                998733
+              ],
+              "actual_old_paired_combination": [
+                453002,
+                48474,
+                498527
+              ],
+              "reconstructed_row": [
+                52919,
+                948354,
+                998733
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 980338,
+              "lifted_old_row": [
+                943257,
+                764846,
+                291903
+              ],
+              "actual_old_paired_combination": [
+                343337,
+                565009,
+                91657
+              ],
+              "reconstructed_row": [
+                943257,
+                764846,
+                291903
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 136925,
+              "lifted_old_row": [
+                387742,
+                727774,
+                884490
+              ],
+              "actual_old_paired_combination": [
+                787825,
+                227977,
+                984204
+              ],
+              "reconstructed_row": [
+                387742,
+                727774,
+                884490
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 362434,
+              "lifted_old_row": [
+                853763,
+                927793,
+                218450
+              ],
+              "actual_old_paired_combination": [
+                253843,
+                128036,
+                618124
+              ],
+              "reconstructed_row": [
+                853763,
+                927793,
+                218450
+              ]
+            },
+            {
+              "z": 7,
+              "point": [
+                1,
+                7,
+                -9
+              ],
+              "scalar": 284035,
+              "lifted_old_row": [
+                665086,
+                863969,
+                470951
+              ],
+              "actual_old_paired_combination": [
+                65166,
+                764255,
+                170582
+              ],
+              "reconstructed_row": [
+                665086,
+                863969,
+                470951
+              ]
+            },
+            {
+              "z": 8,
+              "point": [
+                1,
+                8,
+                -10
+              ],
+              "scalar": 837849,
+              "lifted_old_row": [
+                503216,
+                943883,
+                552907
+              ],
+              "actual_old_paired_combination": [
+                903299,
+                544209,
+                552498
+              ],
+              "reconstructed_row": [
+                503216,
+                943883,
+                552907
+              ]
+            },
+            {
+              "z": 9,
+              "point": [
+                1,
+                9,
+                -11
+              ],
+              "scalar": 37755,
+              "lifted_old_row": [
+                788703,
+                666301,
+                545002
+              ],
+              "actual_old_paired_combination": [
+                188783,
+                966670,
+                844553
+              ],
+              "reconstructed_row": [
+                788703,
+                666301,
+                545002
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 8,
+          "distinct_control_points": 9
+        },
+        {
+          "c": 1,
+          "edge_scalars": [
+            49814,
+            1,
+            39684
+          ],
+          "canonical_constants_s0_k_s2": [
+            284828,
+            22373,
+            782297
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              511519,
+              488484
+            ],
+            [
+              434267,
+              0,
+              565736
+            ],
+            [
+              279763,
+              720240,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 502593,
+              "z_residue": [
+                791931,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                841323,
+                349096,
+                809587
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 596132,
+              "z_residue": [
+                0,
+                220322,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                257351,
+                780854,
+                961801
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 16862,
+              "z_residue": [
+                0,
+                0,
+                117572
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                175381,
+                961215,
+                863410
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 0,
+              "point": [
+                1000002,
+                656254,
+                343751
+              ],
+              "scalar_residue": 543657,
+              "z_residue": [
+                40806,
+                847458,
+                822219
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                112504,
+                504749,
+                382750
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 1,
+              "point": [
+                1000002,
+                252775,
+                747230
+              ],
+              "scalar_residue": 333898,
+              "z_residue": [
+                432265,
+                244266,
+                889366
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                77633,
+                16679,
+                905691
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 2,
+              "point": [
+                1000002,
+                328128,
+                671877
+              ],
+              "scalar_residue": 416992,
+              "z_residue": [
+                419044,
+                256197,
+                838088
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                155103,
+                221950,
+                622950
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            560068,
+            359995,
+            522675,
+            744094,
+            160017,
+            66667,
+            256604,
+            874778,
+            322302,
+            374649,
+            129024,
+            269131
+          ],
+          "polynomial_gauge_lambda": 980767,
+          "actual_headsum": [
+            304159,
+            520012,
+            589342
+          ],
+          "removed_head": [
+            284828,
+            0,
+            476064
+          ],
+          "response": [
+            980862,
+            500776,
+            94042
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 603793,
+              "lifted_old_row": [
+                403436,
+                56853,
+                539714
+              ],
+              "actual_old_paired_combination": [
+                441908,
+                76089,
+                482006
+              ],
+              "reconstructed_row": [
+                403436,
+                56853,
+                539714
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 424099,
+              "lifted_old_row": [
+                351983,
+                87959,
+                560061
+              ],
+              "actual_old_paired_combination": [
+                390455,
+                126431,
+                483117
+              ],
+              "reconstructed_row": [
+                351983,
+                87959,
+                560061
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 912998,
+              "lifted_old_row": [
+                163581,
+                781356,
+                55066
+              ],
+              "actual_old_paired_combination": [
+                202053,
+                839064,
+                958889
+              ],
+              "reconstructed_row": [
+                163581,
+                781356,
+                55066
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 458467,
+              "lifted_old_row": [
+                198310,
+                597789,
+                203904
+              ],
+              "actual_old_paired_combination": [
+                236782,
+                674733,
+                88488
+              ],
+              "reconstructed_row": [
+                198310,
+                597789,
+                203904
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 579317,
+              "lifted_old_row": [
+                813188,
+                855316,
+                331502
+              ],
+              "actual_old_paired_combination": [
+                851660,
+                951496,
+                196850
+              ],
+              "reconstructed_row": [
+                813188,
+                855316,
+                331502
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 36258,
+              "lifted_old_row": [
+                467834,
+                745599,
+                786573
+              ],
+              "actual_old_paired_combination": [
+                506306,
+                861015,
+                632685
+              ],
+              "reconstructed_row": [
+                467834,
+                745599,
+                786573
+              ]
+            },
+            {
+              "z": 7,
+              "point": [
+                1,
+                7,
+                -9
+              ],
+              "scalar": 205262,
+              "lifted_old_row": [
+                914255,
+                44608,
+                41140
+              ],
+              "actual_old_paired_combination": [
+                952727,
+                179260,
+                868019
+              ],
+              "reconstructed_row": [
+                914255,
+                44608,
+                41140
+              ]
+            },
+            {
+              "z": 8,
+              "point": [
+                1,
+                8,
+                -10
+              ],
+              "scalar": 753868,
+              "lifted_old_row": [
+                315946,
+                262501,
+                421556
+              ],
+              "actual_old_paired_combination": [
+                354418,
+                416389,
+                229196
+              ],
+              "reconstructed_row": [
+                315946,
+                262501,
+                421556
+              ]
+            },
+            {
+              "z": 9,
+              "point": [
+                1,
+                9,
+                -11
+              ],
+              "scalar": 30987,
+              "lifted_old_row": [
+                887835,
+                766199,
+                345972
+              ],
+              "actual_old_paired_combination": [
+                926307,
+                939323,
+                134376
+              ],
+              "reconstructed_row": [
+                887835,
+                766199,
+                345972
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 8,
+          "distinct_control_points": 9
+        },
+        {
+          "c": 2,
+          "edge_scalars": [
+            717386,
+            554735,
+            0
+          ],
+          "canonical_constants_s0_k_s2": [
+            692644,
+            347247,
+            13296
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              603917,
+              396086
+            ],
+            [
+              180594,
+              0,
+              819409
+            ],
+            [
+              333951,
+              666052,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 526369,
+              "z_residue": [
+                791931,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                819033,
+                398134,
+                782839
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 819561,
+              "z_residue": [
+                0,
+                220322,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                54574,
+                471611,
+                473818
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 657083,
+              "z_residue": [
+                0,
+                0,
+                117572
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                996476,
+                267771,
+                735759
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 0,
+              "point": [
+                1000002,
+                656254,
+                343751
+              ],
+              "scalar_residue": 388731,
+              "z_residue": [
+                40806,
+                847458,
+                822219
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                26564,
+                378762,
+                594677
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 1,
+              "point": [
+                1000002,
+                252775,
+                747230
+              ],
+              "scalar_residue": 635856,
+              "z_residue": [
+                432265,
+                244266,
+                889366
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                875687,
+                896059,
+                228260
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 2,
+              "point": [
+                1000002,
+                328128,
+                671877
+              ],
+              "scalar_residue": 765712,
+              "z_residue": [
+                419044,
+                256197,
+                838088
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                408709,
+                199595,
+                391699
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            20677,
+            966654,
+            957722,
+            386112,
+            674442,
+            690665,
+            915471,
+            723682,
+            402492,
+            664096,
+            377861,
+            818782
+          ],
+          "polynomial_gauge_lambda": 913663,
+          "actual_headsum": [
+            406789,
+            641093,
+            648384
+          ],
+          "removed_head": [
+            692644,
+            0,
+            93072
+          ],
+          "response": [
+            541468,
+            554753,
+            468972
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 266125,
+              "lifted_old_row": [
+                586127,
+                670865,
+                743014
+              ],
+              "actual_old_paired_combination": [
+                758807,
+                757205,
+                483994
+              ],
+              "reconstructed_row": [
+                586127,
+                670865,
+                743014
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 110197,
+              "lifted_old_row": [
+                139359,
+                498134,
+                362510
+              ],
+              "actual_old_paired_combination": [
+                312039,
+                670814,
+                17150
+              ],
+              "reconstructed_row": [
+                139359,
+                498134,
+                362510
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 93866,
+              "lifted_old_row": [
+                836669,
+                747878,
+                415459
+              ],
+              "actual_old_paired_combination": [
+                9346,
+                6895,
+                983762
+              ],
+              "reconstructed_row": [
+                836669,
+                747878,
+                415459
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 596955,
+              "lifted_old_row": [
+                896951,
+                298262,
+                804793
+              ],
+              "actual_old_paired_combination": [
+                69628,
+                643622,
+                286753
+              ],
+              "reconstructed_row": [
+                896951,
+                298262,
+                804793
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 800354,
+              "lifted_old_row": [
+                717773,
+                842260,
+                439973
+              ],
+              "actual_old_paired_combination": [
+                890453,
+                273957,
+                835596
+              ],
+              "reconstructed_row": [
+                717773,
+                842260,
+                439973
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 155304,
+              "lifted_old_row": [
+                280727,
+                773523,
+                945756
+              ],
+              "actual_old_paired_combination": [
+                453407,
+                291560,
+                255036
+              ],
+              "reconstructed_row": [
+                280727,
+                773523,
+                945756
+              ]
+            },
+            {
+              "z": 7,
+              "point": [
+                1,
+                7,
+                -9
+              ],
+              "scalar": 631266,
+              "lifted_old_row": [
+                5968,
+                58681,
+                935354
+              ],
+              "actual_old_paired_combination": [
+                178648,
+                663061,
+                158294
+              ],
+              "reconstructed_row": [
+                5968,
+                58681,
+                935354
+              ]
+            },
+            {
+              "z": 8,
+              "point": [
+                1,
+                8,
+                -10
+              ],
+              "scalar": 64267,
+              "lifted_old_row": [
+                795634,
+                618359,
+                586013
+              ],
+              "actual_old_paired_combination": [
+                968314,
+                309076,
+                722616
+              ],
+              "reconstructed_row": [
+                795634,
+                618359,
+                586013
+              ]
+            },
+            {
+              "z": 9,
+              "point": [
+                1,
+                9,
+                -11
+              ],
+              "scalar": 66598,
+              "lifted_old_row": [
+                894883,
+                176275,
+                928848
+              ],
+              "actual_old_paired_combination": [
+                67560,
+                953335,
+                979111
+              ],
+              "reconstructed_row": [
+                894883,
+                176275,
+                928848
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 8,
+          "distinct_control_points": 9
+        }
+      ],
+      "response_matrix": [
+        [
+          994941,
+          980862,
+          541468
+        ],
+        [
+          536307,
+          500776,
+          554753
+        ],
+        [
+          298064,
+          94042,
+          468972
+        ]
+      ],
+      "response_certificate": {
+        "shape": [
+          3,
+          3
+        ],
+        "sha256": "f02182f8a581f45a8aa50fea8363e2e0cd84cd10506763d59e8a2cd2bfd7d6ed",
+        "rank_certificate": {
+          "rank": 3,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 3,
+            "rows": [
+              0,
+              1,
+              2
+            ],
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "determinant_mod_prime": 147497,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 147497
+        }
+      }
+    },
+    {
+      "q": 4,
+      "shorter_old_blocks": 3,
+      "sector": 0,
+      "fixture": {
+        "r": [
+          1,
+          1,
+          1
+        ],
+        "common_matrix": [
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "new_time": [
+          1,
+          1,
+          1
+        ],
+        "old_time_factors": [
+          [
+            1,
+            8,
+            64
+          ],
+          [
+            1,
+            64,
+            4096
+          ],
+          [
+            1,
+            512,
+            262144
+          ]
+        ],
+        "actual_coefficient_tables_mod_prime": [
+          [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              1,
+              2
+            ]
+          ],
+          [
+            [
+              2,
+              8,
+              64
+            ],
+            [
+              1,
+              16,
+              64
+            ],
+            [
+              1,
+              8,
+              128
+            ]
+          ],
+          [
+            [
+              2,
+              64,
+              4096
+            ],
+            [
+              1,
+              128,
+              4096
+            ],
+            [
+              1,
+              64,
+              8192
+            ]
+          ],
+          [
+            [
+              2,
+              512,
+              262144
+            ],
+            [
+              1,
+              1024,
+              262144
+            ],
+            [
+              1,
+              512,
+              524288
+            ]
+          ]
+        ],
+        "table_determinants_mod_prime": [
+          4,
+          2048,
+          48573,
+          869304
+        ],
+        "common_matrix_two_by_two_minors_mod_prime": [
+          3,
+          1,
+          1000002,
+          1,
+          3,
+          1,
+          1000002,
+          1,
+          3
+        ],
+        "all_parameters_positive_rational": true
+      },
+      "terminal_time": [
+        1,
+        0,
+        7
+      ],
+      "terminal_table": [
+        [
+          2,
+          0,
+          7
+        ],
+        [
+          1,
+          0,
+          7
+        ],
+        [
+          1,
+          0,
+          14
+        ]
+      ],
+      "common_matrix_inverse": [
+        [
+          750003,
+          750002,
+          750002
+        ],
+        [
+          750002,
+          750003,
+          750002
+        ],
+        [
+          750002,
+          750002,
+          750003
+        ]
+      ],
+      "common_inverse_certificate": {
+        "size": 3,
+        "determinant_mod_prime": 4,
+        "pivot_rows_in_original_order": [
+          0,
+          1,
+          2
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "357566cae887a9bfc6647d7766ea6ea3e259070519d80c10e81a24de2118e945"
+      },
+      "shorter_geometry": {
+        "checks": {
+          "all_line_coefficients_nonzero": true,
+          "all_lines_distinct": true,
+          "all_pair_coordinates_nonzero": true,
+          "no_unintended_three_line_points": true,
+          "every_coordinate_edge_on_only_its_matching_line": true
+        },
+        "all_passed": true,
+        "denominator_lines": 12,
+        "pair_intersections_checked": 66,
+        "coordinate_edge_intersections_checked": 36,
+        "failures": []
+      },
+      "shorter_paired_matrix": {
+        "sector": 0,
+        "old_blocks": 3,
+        "row_labels": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        "column_labels": [
+          [
+            "H",
+            1,
+            0
+          ],
+          [
+            "H",
+            1,
+            1
+          ],
+          [
+            "H",
+            1,
+            2
+          ],
+          [
+            "H",
+            2,
+            0
+          ],
+          [
+            "H",
+            2,
+            1
+          ],
+          [
+            "H",
+            2,
+            2
+          ],
+          [
+            "H",
+            3,
+            0
+          ],
+          [
+            "H",
+            3,
+            1
+          ],
+          [
+            "H",
+            3,
+            2
+          ],
+          [
+            "J",
+            1,
+            0
+          ],
+          [
+            "J",
+            1,
+            1
+          ],
+          [
+            "J",
+            1,
+            2
+          ],
+          [
+            "J",
+            2,
+            0
+          ],
+          [
+            "J",
+            2,
+            1
+          ],
+          [
+            "J",
+            2,
+            2
+          ],
+          [
+            "J",
+            3,
+            0
+          ],
+          [
+            "J",
+            3,
+            1
+          ],
+          [
+            "J",
+            3,
+            2
+          ]
+        ],
+        "residue_convention": "Res_L_ud(Y) at X=(normal cross A_u[d,:])/sum(cross); components 0,1, with component 2 their negative sum.",
+        "matrix": [
+          [
+            760536,
+            0,
+            0,
+            419268,
+            899572,
+            759700,
+            980485,
+            476102,
+            888846,
+            540418,
+            0,
+            0,
+            838536,
+            799141,
+            519397,
+            960967,
+            952204,
+            777689
+          ],
+          [
+            876653,
+            0,
+            0,
+            390793,
+            142452,
+            850572,
+            525008,
+            705576,
+            671082,
+            667167,
+            0,
+            0,
+            781586,
+            284904,
+            701141,
+            50013,
+            411149,
+            342161
+          ],
+          [
+            0,
+            384181,
+            0,
+            452193,
+            270017,
+            250450,
+            943195,
+            1403,
+            13258,
+            0,
+            199677,
+            0,
+            670383,
+            666174,
+            910166,
+            968531,
+            897465,
+            285183
+          ],
+          [
+            0,
+            57603,
+            0,
+            764897,
+            975466,
+            293811,
+            758044,
+            953750,
+            939974,
+            0,
+            602384,
+            0,
+            680155,
+            398247,
+            738968,
+            299837,
+            577105,
+            122930
+          ],
+          [
+            0,
+            0,
+            736574,
+            838810,
+            542441,
+            120661,
+            573862,
+            963517,
+            538540,
+            0,
+            0,
+            216300,
+            954514,
+            163463,
+            921038,
+            600821,
+            544931,
+            907772
+          ],
+          [
+            0,
+            0,
+            174198,
+            788340,
+            36381,
+            99548,
+            717531,
+            954867,
+            608385,
+            0,
+            0,
+            368439,
+            314839,
+            492442,
+            1477,
+            875916,
+            454530,
+            11760
+          ],
+          [
+            976171,
+            788655,
+            824597,
+            748411,
+            0,
+            0,
+            294686,
+            548557,
+            293241,
+            952339,
+            577307,
+            649191,
+            121366,
+            0,
+            0,
+            591006,
+            543549,
+            373820
+          ],
+          [
+            645754,
+            189259,
+            378349,
+            741924,
+            0,
+            0,
+            845470,
+            343903,
+            939395,
+            291505,
+            378518,
+            756698,
+            808757,
+            0,
+            0,
+            584727,
+            669423,
+            701775
+          ],
+          [
+            173134,
+            720865,
+            148569,
+            0,
+            3280,
+            0,
+            785246,
+            835499,
+            442710,
+            543285,
+            357555,
+            643573,
+            0,
+            877553,
+            0,
+            89547,
+            113720,
+            771870
+          ],
+          [
+            440411,
+            171711,
+            825480,
+            0,
+            125495,
+            0,
+            840948,
+            853171,
+            379784,
+            860105,
+            698234,
+            103185,
+            0,
+            705183,
+            0,
+            597509,
+            694269,
+            697802
+          ],
+          [
+            189898,
+            546608,
+            568436,
+            0,
+            0,
+            804677,
+            222434,
+            449697,
+            399062,
+            568436,
+            758543,
+            35691,
+            0,
+            0,
+            964569,
+            169793,
+            399575,
+            903659
+          ],
+          [
+            268218,
+            284931,
+            70882,
+            0,
+            0,
+            630171,
+            306101,
+            989264,
+            521158,
+            70882,
+            988830,
+            78679,
+            0,
+            0,
+            429466,
+            96769,
+            454981,
+            428340
+          ],
+          [
+            156764,
+            663865,
+            862108,
+            76021,
+            320472,
+            394825,
+            986479,
+            0,
+            0,
+            659318,
+            694021,
+            791269,
+            236163,
+            720133,
+            611464,
+            839498,
+            0,
+            0
+          ],
+          [
+            580311,
+            438278,
+            739925,
+            1344,
+            598359,
+            455384,
+            439776,
+            0,
+            0,
+            770883,
+            968298,
+            80221,
+            848747,
+            572881,
+            319910,
+            702675,
+            0,
+            0
+          ],
+          [
+            889752,
+            683337,
+            121379,
+            372030,
+            136705,
+            494238,
+            0,
+            697762,
+            0,
+            782080,
+            840802,
+            164662,
+            132139,
+            553120,
+            340168,
+            0,
+            32643,
+            0
+          ],
+          [
+            898013,
+            350468,
+            367684,
+            980758,
+            794358,
+            412625,
+            0,
+            635394,
+            0,
+            654328,
+            285351,
+            384758,
+            970387,
+            636255,
+            458334,
+            0,
+            43471,
+            0
+          ],
+          [
+            732967,
+            753055,
+            19035,
+            157488,
+            300947,
+            925259,
+            0,
+            0,
+            541179,
+            523054,
+            484787,
+            391642,
+            415212,
+            114682,
+            194360,
+            0,
+            0,
+            629362
+          ],
+          [
+            711081,
+            120941,
+            489185,
+            575286,
+            530252,
+            612372,
+            0,
+            0,
+            862950,
+            871261,
+            94816,
+            568156,
+            408978,
+            451304,
+            781600,
+            0,
+            0,
+            413145
+          ]
+        ],
+        "certificate": {
+          "shape": [
+            18,
+            18
+          ],
+          "sha256": "6837efb46990a9fa9dbc4490ecc75eda770989381cdad7e36489a0f21d3d10a2",
+          "rank_certificate": {
+            "rank": 18,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 18,
+              "rows": [
+                0,
+                2,
+                4,
+                3,
+                1,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+              ],
+              "determinant_mod_prime": 835722,
+              "order": "Rows and columns in listed order."
+            },
+            "determinant_mod_prime": 835722
+          }
+        },
+        "head_certificate": {
+          "shape": [
+            18,
+            9
+          ],
+          "sha256": "40d1aea2bcf587343b9bd8eef62665766f9429173371e55f2b3941b9171c394e",
+          "rank_certificate": {
+            "rank": 9,
+            "full_rank": true,
+            "nonzero_minor": {
+              "size": 9,
+              "rows": [
+                0,
+                2,
+                4,
+                3,
+                1,
+                5,
+                6,
+                7,
+                8
+              ],
+              "columns": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              "determinant_mod_prime": 380527,
+              "order": "Rows and columns in listed order."
+            }
+          }
+        },
+        "full_rank": true,
+        "paired_node_geometry_passed": true,
+        "node_records": [
+          {
+            "old_block": 1,
+            "state": 0,
+            "point": [
+              1000002,
+              250003,
+              750002
+            ],
+            "original_cross": [
+              56,
+              999877,
+              14
+            ],
+            "projective_scale": 910717,
+            "row_form_values": [
+              [
+                0,
+                250004,
+                750003
+              ],
+              [
+                0,
+                19,
+                999988
+              ],
+              [
+                999121,
+                999266,
+                998098
+              ],
+              [
+                935617,
+                936770,
+                870082
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                250003,
+                750002
+              ],
+              [
+                1000001,
+                18,
+                999987
+              ]
+            ],
+            "nonzero_remaining_denominator": 827848
+          },
+          {
+            "old_block": 1,
+            "state": 1,
+            "point": [
+              1000002,
+              229170,
+              770835
+            ],
+            "original_cross": [
+              48,
+              999876,
+              31
+            ],
+            "projective_scale": 895836,
+            "row_form_values": [
+              [
+                0,
+                229171,
+                770836
+              ],
+              [
+                166645,
+                0,
+                499939
+              ],
+              [
+                997525,
+                664361,
+                328212
+              ],
+              [
+                498720,
+                833410,
+                662754
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                229170,
+                770835
+              ],
+              [
+                1000002,
+                666711,
+                333293
+              ]
+            ],
+            "nonzero_remaining_denominator": 694603
+          },
+          {
+            "old_block": 1,
+            "state": 2,
+            "point": [
+              1000002,
+              625004,
+              375001
+            ],
+            "original_cross": [
+              120,
+              999748,
+              15
+            ],
+            "projective_scale": 558335,
+            "row_form_values": [
+              [
+                0,
+                625005,
+                375002
+              ],
+              [
+                7,
+                25,
+                0
+              ],
+              [
+                999625,
+                999762,
+                999114
+              ],
+              [
+                968321,
+                969410,
+                935554
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                625004,
+                375001
+              ],
+              [
+                1000002,
+                17,
+                999987
+              ]
+            ],
+            "nonzero_remaining_denominator": 945862
+          },
+          {
+            "old_block": 2,
+            "state": 0,
+            "point": [
+              1000002,
+              656254,
+              343751
+            ],
+            "original_cross": [
+              4032,
+              991813,
+              126
+            ],
+            "projective_scale": 582095,
+            "row_form_values": [
+              [
+                0,
+                656255,
+                343752
+              ],
+              [
+                250013,
+                500031,
+                250012
+              ],
+              [
+                0,
+                131,
+                999876
+              ],
+              [
+                992849,
+                993890,
+                984658
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                656254,
+                343751
+              ],
+              [
+                1000001,
+                130,
+                999875
+              ]
+            ],
+            "nonzero_remaining_denominator": 167586
+          },
+          {
+            "old_block": 2,
+            "state": 1,
+            "point": [
+              1000002,
+              252775,
+              747230
+            ],
+            "original_cross": [
+              3968,
+              991812,
+              255
+            ],
+            "projective_scale": 865678,
+            "row_form_values": [
+              [
+                0,
+                252776,
+                747231
+              ],
+              [
+                844771,
+                866966,
+                667348
+              ],
+              [
+                822450,
+                0,
+                467348
+              ],
+              [
+                693888,
+                114299,
+                967366
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                252775,
+                747230
+              ],
+              [
+                1000002,
+                355104,
+                644900
+              ]
+            ],
+            "nonzero_remaining_denominator": 47314
+          },
+          {
+            "old_block": 2,
+            "state": 2,
+            "point": [
+              1000002,
+              328128,
+              671877
+            ],
+            "original_cross": [
+              8128,
+              983620,
+              127
+            ],
+            "projective_scale": 131275,
+            "row_form_values": [
+              [
+                0,
+                328129,
+                671878
+              ],
+              [
+                625015,
+                250031,
+                625015
+              ],
+              [
+                63,
+                193,
+                0
+              ],
+              [
+                996937,
+                997970,
+                992842
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                328128,
+                671877
+              ],
+              [
+                1000002,
+                129,
+                999875
+              ]
+            ],
+            "nonzero_remaining_denominator": 402124
+          },
+          {
+            "old_block": 3,
+            "state": 0,
+            "point": [
+              1000002,
+              582035,
+              417970
+            ],
+            "original_cross": [
+              261632,
+              475717,
+              1022
+            ],
+            "projective_scale": 82601,
+            "row_form_values": [
+              [
+                0,
+                582036,
+                417971
+              ],
+              [
+                406265,
+                62531,
+                156265
+              ],
+              [
+                250111,
+                500241,
+                250096
+              ],
+              [
+                0,
+                1027,
+                998980
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                582035,
+                417970
+              ],
+              [
+                1000001,
+                1026,
+                998979
+              ]
+            ],
+            "nonzero_remaining_denominator": 674644
+          },
+          {
+            "old_block": 3,
+            "state": 1,
+            "point": [
+              1000002,
+              876885,
+              123120
+            ],
+            "original_cross": [
+              261120,
+              475716,
+              2047
+            ],
+            "projective_scale": 755314,
+            "row_form_values": [
+              [
+                0,
+                876886,
+                123121
+              ],
+              [
+                894716,
+                909776,
+                774373
+              ],
+              [
+                418478,
+                538951,
+                716487
+              ],
+              [
+                36226,
+                0,
+                108682
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                876885,
+                123120
+              ],
+              [
+                1000002,
+                927549,
+                72455
+              ]
+            ],
+            "nonzero_remaining_denominator": 75745
+          },
+          {
+            "old_block": 3,
+            "state": 2,
+            "point": [
+              1000002,
+              791020,
+              208985
+            ],
+            "original_cross": [
+              523776,
+              951431,
+              1023
+            ],
+            "projective_scale": 839894,
+            "row_form_values": [
+              [
+                0,
+                791021,
+                208986
+              ],
+              [
+                703141,
+                31281,
+                78140
+              ],
+              [
+                625120,
+                250248,
+                625113
+              ],
+              [
+                511,
+                1537,
+                0
+              ]
+            ],
+            "new_and_old_residue_basis": [
+              [
+                1000001,
+                791020,
+                208985
+              ],
+              [
+                1000002,
+                1025,
+                998979
+              ]
+            ],
+            "nonzero_remaining_denominator": 572074
+          }
+        ],
+        "polynomial_clearing_component_checks": 486,
+        "polynomial_clearing_identity": "D=product_(t,c) L_tc, C_t=diag(product_(h!=c)L_th) A_t diag(X). Res_L Y=(D Y)(X)/(D/L)(X).",
+        "zero_sum_vector_checks": 162
+      },
+      "shorter_inverse_certificate": {
+        "size": 18,
+        "determinant_mod_prime": 835722,
+        "pivot_rows_in_original_order": [
+          0,
+          2,
+          4,
+          3,
+          1,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "pivot_columns": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "inverse_checked": true,
+        "inverse_sha256": "83aba843b1054336db3f6c3027036978874d02ce35ec5c1f1b3a4bfb7b5ca218"
+      },
+      "terminal_pole_cancellations": [
+        {
+          "c": 0,
+          "point": [
+            1000002,
+            571432,
+            428573
+          ],
+          "terminal_row_forms": [
+            0,
+            1,
+            3
+          ],
+          "old_row_forms": {
+            "1": [
+              30,
+              571475,
+              428622
+            ],
+            "2": [
+              1278,
+              572819,
+              431022
+            ],
+            "3": [
+              75774,
+              648083,
+              579246
+            ]
+          },
+          "rho": 146456,
+          "r": 292912,
+          "terminal_residue_vector": [
+            215441,
+            0,
+            784562
+          ],
+          "missing_output_residue_zero": true
+        },
+        {
+          "c": 1,
+          "point": [
+            1000002,
+            285717,
+            714288
+          ],
+          "terminal_row_forms": [
+            1000002,
+            0,
+            1
+          ],
+          "old_row_forms": {
+            "1": [
+              22,
+              285753,
+              714320
+            ],
+            "2": [
+              702,
+              286537,
+              715576
+            ],
+            "3": [
+              38398,
+              325065,
+              790136
+            ]
+          },
+          "rho": 582788,
+          "r": 582788,
+          "terminal_residue_vector": [
+            750446,
+            0,
+            249557
+          ],
+          "missing_output_residue_zero": true
+        },
+        {
+          "c": 2,
+          "point": [
+            1000002,
+            642861,
+            357144
+          ],
+          "terminal_row_forms": [
+            500000,
+            500001,
+            0
+          ],
+          "old_row_forms": {
+            "1": [
+              18,
+              142892,
+              857169
+            ],
+            "2": [
+              414,
+              143396,
+              857853
+            ],
+            "3": [
+              19710,
+              163556,
+              895581
+            ]
+          },
+          "rho": 304533,
+          "r": 304533,
+          "terminal_residue_vector": [
+            551184,
+            0,
+            448819
+          ],
+          "missing_output_residue_zero": true
+        }
+      ],
+      "coordinate_edges": [
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          -2
+        ],
+        [
+          1,
+          -2,
+          0
+        ]
+      ],
+      "columns": [
+        {
+          "c": 0,
+          "edge_scalars": [
+            0,
+            521561,
+            365086
+          ],
+          "canonical_constants_s0_k_s2": [
+            450103,
+            308933,
+            41373
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              11813,
+              988190
+            ],
+            [
+              885426,
+              0,
+              114577
+            ],
+            [
+              632646,
+              367357,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 813563,
+              "z_residue": [
+                500735,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                674789,
+                115469,
+                209745
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 97742,
+              "z_residue": [
+                0,
+                89732,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                226078,
+                748464,
+                25461
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 64001,
+              "z_residue": [
+                0,
+                0,
+                302862
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                860252,
+                621253,
+                518501
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 0,
+              "point": [
+                1000002,
+                656254,
+                343751
+              ],
+              "scalar_residue": 180352,
+              "z_residue": [
+                302525,
+                592475,
+                775821
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                899964,
+                164853,
+                935189
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 1,
+              "point": [
+                1000002,
+                252775,
+                747230
+              ],
+              "scalar_residue": 599468,
+              "z_residue": [
+                220309,
+                449311,
+                965306
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                177457,
+                18031,
+                804515
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 2,
+              "point": [
+                1000002,
+                328128,
+                671877
+              ],
+              "scalar_residue": 468765,
+              "z_residue": [
+                412140,
+                228408,
+                824280
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                100457,
+                597059,
+                302487
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 0,
+              "point": [
+                1000002,
+                582035,
+                417970
+              ],
+              "scalar_residue": 312982,
+              "z_residue": [
+                868539,
+                596349,
+                59609
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                58167,
+                90764,
+                851072
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 1,
+              "point": [
+                1000002,
+                876885,
+                123120
+              ],
+              "scalar_residue": 583248,
+              "z_residue": [
+                896688,
+                547706,
+                256111
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                945461,
+                726193,
+                328352
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 2,
+              "point": [
+                1000002,
+                791020,
+                208985
+              ],
+              "scalar_residue": 906697,
+              "z_residue": [
+                722024,
+                676351,
+                103930
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                428809,
+                283557,
+                287637
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            110696,
+            929801,
+            851577,
+            582644,
+            256773,
+            811521,
+            124528,
+            448609,
+            316341,
+            72480,
+            828702,
+            812658,
+            669973,
+            485816,
+            102444,
+            28797,
+            866331,
+            479495
+          ],
+          "polynomial_gauge_lambda": 233514,
+          "actual_headsum": [
+            817868,
+            635180,
+            979436
+          ],
+          "removed_head": [
+            450103,
+            0,
+            289611
+          ],
+          "response": [
+            834793,
+            868694,
+            923339
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 502839,
+              "lifted_old_row": [
+                811626,
+                719173,
+                469207
+              ],
+              "actual_old_paired_combination": [
+                344598,
+                485659,
+                169746
+              ],
+              "reconstructed_row": [
+                811626,
+                719173,
+                469207
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 289114,
+              "lifted_old_row": [
+                570868,
+                542964,
+                886174
+              ],
+              "actual_old_paired_combination": [
+                103840,
+                75936,
+                820227
+              ],
+              "reconstructed_row": [
+                570868,
+                542964,
+                886174
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 474192,
+              "lifted_old_row": [
+                538031,
+                292095,
+                169877
+              ],
+              "actual_old_paired_combination": [
+                71003,
+                591556,
+                337444
+              ],
+              "reconstructed_row": [
+                538031,
+                292095,
+                169877
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 634823,
+              "lifted_old_row": [
+                101891,
+                982799,
+                915316
+              ],
+              "actual_old_paired_combination": [
+                634866,
+                48743,
+                316394
+              ],
+              "reconstructed_row": [
+                101891,
+                982799,
+                915316
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 855870,
+              "lifted_old_row": [
+                893662,
+                35088,
+                71253
+              ],
+              "actual_old_paired_combination": [
+                426634,
+                867524,
+                705848
+              ],
+              "reconstructed_row": [
+                893662,
+                35088,
+                71253
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 84492,
+              "lifted_old_row": [
+                309464,
+                720960,
+                969582
+              ],
+              "actual_old_paired_combination": [
+                842439,
+                319879,
+                837688
+              ],
+              "reconstructed_row": [
+                309464,
+                720960,
+                969582
+              ]
+            },
+            {
+              "z": 7,
+              "point": [
+                1,
+                7,
+                -9
+              ],
+              "scalar": 837285,
+              "lifted_old_row": [
+                431545,
+                681124,
+                887337
+              ],
+              "actual_old_paired_combination": [
+                964520,
+                46529,
+                988957
+              ],
+              "reconstructed_row": [
+                431545,
+                681124,
+                887337
+              ]
+            },
+            {
+              "z": 8,
+              "point": [
+                1,
+                8,
+                -10
+              ],
+              "scalar": 568047,
+              "lifted_old_row": [
+                793334,
+                905646,
+                301026
+              ],
+              "actual_old_paired_combination": [
+                326306,
+                37537,
+                636160
+              ],
+              "reconstructed_row": [
+                793334,
+                905646,
+                301026
+              ]
+            },
+            {
+              "z": 9,
+              "point": [
+                1,
+                9,
+                -11
+              ],
+              "scalar": 386606,
+              "lifted_old_row": [
+                701263,
+                307589,
+                991154
+              ],
+              "actual_old_paired_combination": [
+                234235,
+                205969,
+                559799
+              ],
+              "reconstructed_row": [
+                701263,
+                307589,
+                991154
+              ]
+            },
+            {
+              "z": 10,
+              "point": [
+                1,
+                10,
+                -12
+              ],
+              "scalar": 362287,
+              "lifted_old_row": [
+                523242,
+                585225,
+                891539
+              ],
+              "actual_old_paired_combination": [
+                56214,
+                250091,
+                693698
+              ],
+              "reconstructed_row": [
+                523242,
+                585225,
+                891539
+              ]
+            },
+            {
+              "z": 11,
+              "point": [
+                1,
+                11,
+                -13
+              ],
+              "scalar": 195978,
+              "lifted_old_row": [
+                589606,
+                523215,
+                887185
+              ],
+              "actual_old_paired_combination": [
+                122578,
+                954570,
+                922858
+              ],
+              "reconstructed_row": [
+                589606,
+                523215,
+                887185
+              ]
+            },
+            {
+              "z": 12,
+              "point": [
+                1,
+                12,
+                -14
+              ],
+              "scalar": 762786,
+              "lifted_old_row": [
+                143293,
+                299067,
+                557643
+              ],
+              "actual_old_paired_combination": [
+                676268,
+                496908,
+                826830
+              ],
+              "reconstructed_row": [
+                143293,
+                299067,
+                557643
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 11,
+          "distinct_control_points": 12
+        },
+        {
+          "c": 1,
+          "edge_scalars": [
+            611773,
+            1,
+            419029
+          ],
+          "canonical_constants_s0_k_s2": [
+            410643,
+            257699,
+            362457
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              211794,
+              788209
+            ],
+            [
+              245953,
+              0,
+              754050
+            ],
+            [
+              314271,
+              685732,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 365481,
+              "z_residue": [
+                500735,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                469864,
+                566304,
+                963838
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 46603,
+              "z_residue": [
+                0,
+                89732,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                679238,
+                677342,
+                643426
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 256044,
+              "z_residue": [
+                0,
+                0,
+                302862
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                690971,
+                735063,
+                573972
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 0,
+              "point": [
+                1000002,
+                656254,
+                343751
+              ],
+              "scalar_residue": 369904,
+              "z_residue": [
+                302525,
+                592475,
+                775821
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                169820,
+                213115,
+                617068
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 1,
+              "point": [
+                1000002,
+                252775,
+                747230
+              ],
+              "scalar_residue": 357760,
+              "z_residue": [
+                220309,
+                449311,
+                965306
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                176048,
+                203539,
+                620416
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 2,
+              "point": [
+                1000002,
+                328128,
+                671877
+              ],
+              "scalar_residue": 421050,
+              "z_residue": [
+                412140,
+                228408,
+                824280
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                973278,
+                264389,
+                762339
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 0,
+              "point": [
+                1000002,
+                582035,
+                417970
+              ],
+              "scalar_residue": 154289,
+              "z_residue": [
+                868539,
+                596349,
+                59609
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                887624,
+                471421,
+                640961
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 1,
+              "point": [
+                1000002,
+                876885,
+                123120
+              ],
+              "scalar_residue": 217249,
+              "z_residue": [
+                896688,
+                547706,
+                256111
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                720493,
+                925594,
+                353919
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 2,
+              "point": [
+                1000002,
+                791020,
+                208985
+              ],
+              "scalar_residue": 665996,
+              "z_residue": [
+                722024,
+                676351,
+                103930
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                490900,
+                27809,
+                481294
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            240881,
+            763321,
+            979469,
+            832235,
+            166804,
+            142734,
+            527547,
+            479445,
+            269249,
+            304534,
+            328305,
+            464252,
+            244166,
+            362922,
+            640557,
+            389886,
+            918486,
+            653973
+          ],
+          "polynomial_gauge_lambda": 481221,
+          "actual_headsum": [
+            600660,
+            409567,
+            391449
+          ],
+          "removed_head": [
+            410643,
+            0,
+            537193
+          ],
+          "response": [
+            152456,
+            890788,
+            335477
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 807227,
+              "lifted_old_row": [
+                982241,
+                108354,
+                909411
+              ],
+              "actual_old_paired_combination": [
+                19799,
+                627136,
+                353068
+              ],
+              "reconstructed_row": [
+                982241,
+                108354,
+                909411
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 583346,
+              "lifted_old_row": [
+                95417,
+                62701,
+                841885
+              ],
+              "actual_old_paired_combination": [
+                132978,
+                100262,
+                766763
+              ],
+              "reconstructed_row": [
+                95417,
+                62701,
+                841885
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 787695,
+              "lifted_old_row": [
+                459291,
+                86137,
+                454575
+              ],
+              "actual_old_paired_combination": [
+                496852,
+                642480,
+                860674
+              ],
+              "reconstructed_row": [
+                459291,
+                86137,
+                454575
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 401223,
+              "lifted_old_row": [
+                516137,
+                837542,
+                646327
+              ],
+              "actual_old_paired_combination": [
+                553698,
+                912664,
+                533644
+              ],
+              "reconstructed_row": [
+                516137,
+                837542,
+                646327
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 846000,
+              "lifted_old_row": [
+                408484,
+                455874,
+                135645
+              ],
+              "actual_old_paired_combination": [
+                446045,
+                49775,
+                504183
+              ],
+              "reconstructed_row": [
+                408484,
+                455874,
+                135645
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 685704,
+              "lifted_old_row": [
+                912579,
+                35164,
+                52260
+              ],
+              "actual_old_paired_combination": [
+                950140,
+                147847,
+                902019
+              ],
+              "reconstructed_row": [
+                912579,
+                35164,
+                52260
+              ]
+            },
+            {
+              "z": 7,
+              "point": [
+                1,
+                7,
+                -9
+              ],
+              "scalar": 249187,
+              "lifted_old_row": [
+                440063,
+                587116,
+                972827
+              ],
+              "actual_old_paired_combination": [
+                477624,
+                218578,
+                303801
+              ],
+              "reconstructed_row": [
+                440063,
+                587116,
+                972827
+              ]
+            },
+            {
+              "z": 8,
+              "point": [
+                1,
+                8,
+                -10
+              ],
+              "scalar": 159173,
+              "lifted_old_row": [
+                104819,
+                237127,
+                658057
+              ],
+              "actual_old_paired_combination": [
+                142380,
+                387371,
+                470252
+              ],
+              "reconstructed_row": [
+                104819,
+                237127,
+                658057
+              ]
+            },
+            {
+              "z": 9,
+              "point": [
+                1,
+                9,
+                -11
+              ],
+              "scalar": 774307,
+              "lifted_old_row": [
+                863141,
+                135310,
+                1552
+              ],
+              "actual_old_paired_combination": [
+                900702,
+                804336,
+                294968
+              ],
+              "reconstructed_row": [
+                863141,
+                135310,
+                1552
+              ]
+            },
+            {
+              "z": 10,
+              "point": [
+                1,
+                10,
+                -12
+              ],
+              "scalar": 635383,
+              "lifted_old_row": [
+                926641,
+                52411,
+                20951
+              ],
+              "actual_old_paired_combination": [
+                964202,
+                240216,
+                795588
+              ],
+              "reconstructed_row": [
+                926641,
+                52411,
+                20951
+              ]
+            },
+            {
+              "z": 11,
+              "point": [
+                1,
+                11,
+                -13
+              ],
+              "scalar": 466996,
+              "lifted_old_row": [
+                881923,
+                22068,
+                96012
+              ],
+              "actual_old_paired_combination": [
+                919484,
+                728655,
+                351867
+              ],
+              "reconstructed_row": [
+                881923,
+                22068,
+                96012
+              ]
+            },
+            {
+              "z": 12,
+              "point": [
+                1,
+                12,
+                -14
+              ],
+              "scalar": 281547,
+              "lifted_old_row": [
+                336043,
+                982413,
+                681550
+              ],
+              "actual_old_paired_combination": [
+                373604,
+                207776,
+                418623
+              ],
+              "reconstructed_row": [
+                336043,
+                982413,
+                681550
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 11,
+          "distinct_control_points": 12
+        },
+        {
+          "c": 2,
+          "edge_scalars": [
+            130101,
+            909580,
+            0
+          ],
+          "canonical_constants_s0_k_s2": [
+            882870,
+            918162,
+            600344
+          ],
+          "edge_lifted_rows": [
+            [
+              0,
+              157748,
+              842255
+            ],
+            [
+              544439,
+              0,
+              455564
+            ],
+            [
+              317818,
+              682185,
+              0
+            ]
+          ],
+          "scalar_and_lifted_residues": [
+            {
+              "old_block": 1,
+              "state": 0,
+              "point": [
+                1000002,
+                250003,
+                750002
+              ],
+              "scalar_residue": 430677,
+              "z_residue": [
+                500735,
+                0,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                158742,
+                450770,
+                390491
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 1,
+              "point": [
+                1000002,
+                229170,
+                770835
+              ],
+              "scalar_residue": 179353,
+              "z_residue": [
+                0,
+                89732,
+                0
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                181577,
+                570758,
+                247668
+              ]
+            },
+            {
+              "old_block": 1,
+              "state": 2,
+              "point": [
+                1000002,
+                625004,
+                375001
+              ],
+              "scalar_residue": 380929,
+              "z_residue": [
+                0,
+                0,
+                302862
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                632460,
+                66930,
+                300613
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 0,
+              "point": [
+                1000002,
+                656254,
+                343751
+              ],
+              "scalar_residue": 29092,
+              "z_residue": [
+                302525,
+                592475,
+                775821
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                640115,
+                57842,
+                302046
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 1,
+              "point": [
+                1000002,
+                252775,
+                747230
+              ],
+              "scalar_residue": 400668,
+              "z_residue": [
+                220309,
+                449311,
+                965306
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                739740,
+                480288,
+                779978
+              ]
+            },
+            {
+              "old_block": 2,
+              "state": 2,
+              "point": [
+                1000002,
+                328128,
+                671877
+              ],
+              "scalar_residue": 954078,
+              "z_residue": [
+                412140,
+                228408,
+                824280
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                20312,
+                723510,
+                256181
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 0,
+              "point": [
+                1000002,
+                582035,
+                417970
+              ],
+              "scalar_residue": 584874,
+              "z_residue": [
+                868539,
+                596349,
+                59609
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                49269,
+                913542,
+                37192
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 1,
+              "point": [
+                1000002,
+                876885,
+                123120
+              ],
+              "scalar_residue": 929685,
+              "z_residue": [
+                896688,
+                547706,
+                256111
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                364332,
+                459747,
+                175924
+              ]
+            },
+            {
+              "old_block": 3,
+              "state": 2,
+              "point": [
+                1000002,
+                791020,
+                208985
+              ],
+              "scalar_residue": 959638,
+              "z_residue": [
+                722024,
+                676351,
+                103930
+              ],
+              "polynomial_clearing_verified": true,
+              "actual_H_minus_rho_J_scalar_residue_verified": true,
+              "lifted_old_row_residue": [
+                375302,
+                654373,
+                970331
+              ]
+            }
+          ],
+          "old_paired_coefficients": [
+            38908,
+            297578,
+            23510,
+            572565,
+            221640,
+            633248,
+            971140,
+            768521,
+            995573,
+            932084,
+            976257,
+            135729,
+            803265,
+            646893,
+            955809,
+            172346,
+            389838,
+            56674
+          ],
+          "polynomial_gauge_lambda": 874408,
+          "actual_headsum": [
+            582610,
+            287736,
+            652328
+          ],
+          "removed_head": [
+            882870,
+            0,
+            202396
+          ],
+          "response": [
+            448553,
+            162141,
+            324337
+          ],
+          "old_residue_solve_verified": true,
+          "reconstruction_controls": [
+            {
+              "z": 1,
+              "point": [
+                1,
+                1,
+                -3
+              ],
+              "scalar": 922650,
+              "lifted_old_row": [
+                368272,
+                196050,
+                435681
+              ],
+              "actual_old_paired_combination": [
+                619462,
+                321645,
+                58896
+              ],
+              "reconstructed_row": [
+                368272,
+                196050,
+                435681
+              ]
+            },
+            {
+              "z": 2,
+              "point": [
+                1,
+                2,
+                -4
+              ],
+              "scalar": 641652,
+              "lifted_old_row": [
+                57796,
+                574476,
+                367731
+              ],
+              "actual_old_paired_combination": [
+                308986,
+                825666,
+                865354
+              ],
+              "reconstructed_row": [
+                57796,
+                574476,
+                367731
+              ]
+            },
+            {
+              "z": 3,
+              "point": [
+                1,
+                3,
+                -5
+              ],
+              "scalar": 829916,
+              "lifted_old_row": [
+                359412,
+                968577,
+                672017
+              ],
+              "actual_old_paired_combination": [
+                610602,
+                345359,
+                44042
+              ],
+              "reconstructed_row": [
+                359412,
+                968577,
+                672017
+              ]
+            },
+            {
+              "z": 4,
+              "point": [
+                1,
+                4,
+                -6
+              ],
+              "scalar": 705307,
+              "lifted_old_row": [
+                130825,
+                968627,
+                900554
+              ],
+              "actual_old_paired_combination": [
+                382015,
+                471004,
+                146984
+              ],
+              "reconstructed_row": [
+                130825,
+                968627,
+                900554
+              ]
+            },
+            {
+              "z": 5,
+              "point": [
+                1,
+                5,
+                -7
+              ],
+              "scalar": 608479,
+              "lifted_old_row": [
+                761945,
+                160397,
+                77661
+              ],
+              "actual_old_paired_combination": [
+                13132,
+                788372,
+                198499
+              ],
+              "reconstructed_row": [
+                761945,
+                160397,
+                77661
+              ]
+            },
+            {
+              "z": 6,
+              "point": [
+                1,
+                6,
+                -8
+              ],
+              "scalar": 491161,
+              "lifted_old_row": [
+                8572,
+                990271,
+                1160
+              ],
+              "actual_old_paired_combination": [
+                259762,
+                743838,
+                996406
+              ],
+              "reconstructed_row": [
+                8572,
+                990271,
+                1160
+              ]
+            },
+            {
+              "z": 7,
+              "point": [
+                1,
+                7,
+                -9
+              ],
+              "scalar": 691558,
+              "lifted_old_row": [
+                70674,
+                862010,
+                67319
+              ],
+              "actual_old_paired_combination": [
+                321864,
+                741172,
+                936970
+              ],
+              "reconstructed_row": [
+                70674,
+                862010,
+                67319
+              ]
+            },
+            {
+              "z": 8,
+              "point": [
+                1,
+                8,
+                -10
+              ],
+              "scalar": 500247,
+              "lifted_old_row": [
+                590406,
+                67081,
+                342516
+              ],
+              "actual_old_paired_combination": [
+                841596,
+                71838,
+                86569
+              ],
+              "reconstructed_row": [
+                590406,
+                67081,
+                342516
+              ]
+            },
+            {
+              "z": 9,
+              "point": [
+                1,
+                9,
+                -11
+              ],
+              "scalar": 938651,
+              "lifted_old_row": [
+                222601,
+                657044,
+                120358
+              ],
+              "actual_old_paired_combination": [
+                473791,
+                787396,
+                738819
+              ],
+              "reconstructed_row": [
+                222601,
+                657044,
+                120358
+              ]
+            },
+            {
+              "z": 10,
+              "point": [
+                1,
+                10,
+                -12
+              ],
+              "scalar": 365771,
+              "lifted_old_row": [
+                51647,
+                897994,
+                50362
+              ],
+              "actual_old_paired_combination": [
+                302837,
+                153938,
+                543228
+              ],
+              "reconstructed_row": [
+                51647,
+                897994,
+                50362
+              ]
+            },
+            {
+              "z": 11,
+              "point": [
+                1,
+                11,
+                -13
+              ],
+              "scalar": 144869,
+              "lifted_old_row": [
+                554282,
+                882165,
+                563559
+              ],
+              "actual_old_paired_combination": [
+                805472,
+                263704,
+                930830
+              ],
+              "reconstructed_row": [
+                554282,
+                882165,
+                563559
+              ]
+            },
+            {
+              "z": 12,
+              "point": [
+                1,
+                12,
+                -14
+              ],
+              "scalar": 881721,
+              "lifted_old_row": [
+                844044,
+                723266,
+                432696
+              ],
+              "actual_old_paired_combination": [
+                95231,
+                230400,
+                674372
+              ],
+              "reconstructed_row": [
+                844044,
+                723266,
+                432696
+              ]
+            }
+          ],
+          "polynomial_identity_degree_bound": 11,
+          "distinct_control_points": 12
+        }
+      ],
+      "response_matrix": [
+        [
+          834793,
+          152456,
+          448553
+        ],
+        [
+          868694,
+          890788,
+          162141
+        ],
+        [
+          923339,
+          335477,
+          324337
+        ]
+      ],
+      "response_certificate": {
+        "shape": [
+          3,
+          3
+        ],
+        "sha256": "6f2734dacf67478437addd580eb42ec91852399b683fa867683796c8c8aedd9f",
+        "rank_certificate": {
+          "rank": 3,
+          "full_rank": true,
+          "nonzero_minor": {
+            "size": 3,
+            "rows": [
+              0,
+              1,
+              2
+            ],
+            "columns": [
+              0,
+              1,
+              2
+            ],
+            "determinant_mod_prime": 252967,
+            "order": "Rows and columns in listed order."
+          },
+          "determinant_mod_prime": 252967
+        }
+      }
+    }
+  ],
+  "status": "PASS: all prescribed scalar-residue and actual-old-row reconstruction checks completed.",
+  "elapsed_seconds": 0.058644417,
+  "maximum_rss_bytes": 17317888,
+  "resource_measurement_scope": "Calculation before JSON serialization; guard remains active during writing."
+}

@@ -1,0 +1,18 @@
+import PanelMoments.Model
+import PanelMoments.Polynomial
+import PanelMoments.Economic
+import PanelMoments.Degree
+
+#print axioms PanelMoments.denominator_pos
+#print axioms PanelMoments.transition_sum
+#print axioms PanelMoments.likelihood_pos
+#print axioms PanelMoments.likelihood_sum
+#print axioms PanelMoments.three_choice_four_period_path_count
+#print axioms PanelMoments.commonDenominator_mul_likelihood
+#print axioms PanelMoments.polynomial_eq_zero_iff_positive_evaluations
+#print axioms PanelMoments.isMoment_iff_coefficient_kernel
+#print axioms PanelMoments.transition_economic_logit
+#print axioms PanelMoments.isMoment_iff_additive_effects
+#print axioms PanelMoments.economic_moment_iff_coefficient_kernel
+#print axioms PanelMoments.totalDegree_clearedPathPoly_le
+#print axioms PanelMoments.isMoment_iff_bounded_coefficient_kernel

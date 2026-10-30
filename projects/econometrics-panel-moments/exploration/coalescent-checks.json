@@ -1,0 +1,1401 @@
+{
+  "status": "Exact rational identity spot-checks; not rank or determinant certificates.",
+  "coefficient_ring": "Q[epsilon]/(epsilon^3)",
+  "matrix_orientation": "G[lag][outcome]; row-vector transitions.",
+  "perturbation": "A_i=G diag(1,1+epsilon*delta_i,1+epsilon*zeta_i).",
+  "boundary_checks": {
+    "G": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "boundary_not_positive": true,
+    "curvature": {
+      "effect_point": [
+        1,
+        1,
+        1
+      ],
+      "directions": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "shared_outcome": 0,
+      "divergence_outcome": 0,
+      "prefix_exponent_j": 1,
+      "suffix_exponent_c": 0,
+      "value": [
+        "0/1",
+        "-1/54",
+        "1/54"
+      ],
+      "original_source_column_series_verified": true,
+      "determinant_K": "-1/12"
+    },
+    "tau_d_jacobian": {
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "variables": [
+        "X1",
+        "X2"
+      ],
+      "tau": "5/12",
+      "d": "-1/12",
+      "derivatives": [
+        "3/16",
+        "7/144",
+        "-1/48",
+        "1/144"
+      ],
+      "value": "1/432"
+    },
+    "scope": "The displayed G has zero entries; these exact boundary evaluations do not themselves provide a positive economic independence witness."
+  },
+  "triangle_checks": [
+    {
+      "n": 3,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "triangle_identities_checked": 9,
+      "nonzero_second_order_vectors": 9,
+      "first_order_edge_identities_checked": 18,
+      "prefix_grid_identities_checked": 0,
+      "suffix_grid_identities_checked": 0,
+      "nonzero_prefix_curvatures": 0,
+      "nonzero_suffix_curvatures": 0,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 4,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ]
+      ],
+      "triangle_identities_checked": 18,
+      "nonzero_second_order_vectors": 18,
+      "first_order_edge_identities_checked": 54,
+      "prefix_grid_identities_checked": 9,
+      "suffix_grid_identities_checked": 9,
+      "nonzero_prefix_curvatures": 9,
+      "nonzero_suffix_curvatures": 9,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 5,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ]
+      ],
+      "triangle_identities_checked": 27,
+      "nonzero_second_order_vectors": 27,
+      "first_order_edge_identities_checked": 108,
+      "prefix_grid_identities_checked": 27,
+      "suffix_grid_identities_checked": 27,
+      "nonzero_prefix_curvatures": 27,
+      "nonzero_suffix_curvatures": 27,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 6,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ],
+        [
+          6,
+          37
+        ]
+      ],
+      "triangle_identities_checked": 36,
+      "nonzero_second_order_vectors": 36,
+      "first_order_edge_identities_checked": 180,
+      "prefix_grid_identities_checked": 54,
+      "suffix_grid_identities_checked": 54,
+      "nonzero_prefix_curvatures": 54,
+      "nonzero_suffix_curvatures": 54,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 3,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        1,
+        2,
+        3
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "triangle_identities_checked": 9,
+      "nonzero_second_order_vectors": 9,
+      "first_order_edge_identities_checked": 18,
+      "prefix_grid_identities_checked": 0,
+      "suffix_grid_identities_checked": 0,
+      "nonzero_prefix_curvatures": 0,
+      "nonzero_suffix_curvatures": 0,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 4,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        1,
+        2,
+        3
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ]
+      ],
+      "triangle_identities_checked": 18,
+      "nonzero_second_order_vectors": 18,
+      "first_order_edge_identities_checked": 54,
+      "prefix_grid_identities_checked": 9,
+      "suffix_grid_identities_checked": 9,
+      "nonzero_prefix_curvatures": 9,
+      "nonzero_suffix_curvatures": 9,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 5,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        1,
+        2,
+        3
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ]
+      ],
+      "triangle_identities_checked": 27,
+      "nonzero_second_order_vectors": 27,
+      "first_order_edge_identities_checked": 108,
+      "prefix_grid_identities_checked": 27,
+      "suffix_grid_identities_checked": 27,
+      "nonzero_prefix_curvatures": 27,
+      "nonzero_suffix_curvatures": 27,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 6,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        1,
+        2,
+        3
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ],
+        [
+          6,
+          37
+        ]
+      ],
+      "triangle_identities_checked": 36,
+      "nonzero_second_order_vectors": 36,
+      "first_order_edge_identities_checked": 180,
+      "prefix_grid_identities_checked": 54,
+      "suffix_grid_identities_checked": 54,
+      "nonzero_prefix_curvatures": 54,
+      "nonzero_suffix_curvatures": 54,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 3,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        2,
+        3,
+        5
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "triangle_identities_checked": 9,
+      "nonzero_second_order_vectors": 9,
+      "first_order_edge_identities_checked": 18,
+      "prefix_grid_identities_checked": 0,
+      "suffix_grid_identities_checked": 0,
+      "nonzero_prefix_curvatures": 0,
+      "nonzero_suffix_curvatures": 0,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 4,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        2,
+        3,
+        5
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ]
+      ],
+      "triangle_identities_checked": 18,
+      "nonzero_second_order_vectors": 18,
+      "first_order_edge_identities_checked": 54,
+      "prefix_grid_identities_checked": 9,
+      "suffix_grid_identities_checked": 9,
+      "nonzero_prefix_curvatures": 9,
+      "nonzero_suffix_curvatures": 9,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 5,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        2,
+        3,
+        5
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ]
+      ],
+      "triangle_identities_checked": 27,
+      "nonzero_second_order_vectors": 27,
+      "first_order_edge_identities_checked": 108,
+      "prefix_grid_identities_checked": 27,
+      "suffix_grid_identities_checked": 27,
+      "nonzero_prefix_curvatures": 27,
+      "nonzero_suffix_curvatures": 27,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 6,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          4,
+          17
+        ]
+      ],
+      "effect_point": [
+        2,
+        3,
+        5
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ],
+        [
+          6,
+          37
+        ]
+      ],
+      "triangle_identities_checked": 36,
+      "nonzero_second_order_vectors": 36,
+      "first_order_edge_identities_checked": 180,
+      "prefix_grid_identities_checked": 54,
+      "suffix_grid_identities_checked": 54,
+      "nonzero_prefix_curvatures": 54,
+      "nonzero_suffix_curvatures": 54,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 3,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "triangle_identities_checked": 9,
+      "nonzero_second_order_vectors": 9,
+      "first_order_edge_identities_checked": 18,
+      "prefix_grid_identities_checked": 0,
+      "suffix_grid_identities_checked": 0,
+      "nonzero_prefix_curvatures": 0,
+      "nonzero_suffix_curvatures": 0,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 4,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ]
+      ],
+      "triangle_identities_checked": 18,
+      "nonzero_second_order_vectors": 18,
+      "first_order_edge_identities_checked": 54,
+      "prefix_grid_identities_checked": 9,
+      "suffix_grid_identities_checked": 9,
+      "nonzero_prefix_curvatures": 9,
+      "nonzero_suffix_curvatures": 9,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 5,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ]
+      ],
+      "triangle_identities_checked": 27,
+      "nonzero_second_order_vectors": 27,
+      "first_order_edge_identities_checked": 108,
+      "prefix_grid_identities_checked": 27,
+      "suffix_grid_identities_checked": 27,
+      "nonzero_prefix_curvatures": 27,
+      "nonzero_suffix_curvatures": 27,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 6,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        1,
+        1,
+        2
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ],
+        [
+          6,
+          37
+        ]
+      ],
+      "triangle_identities_checked": 36,
+      "nonzero_second_order_vectors": 36,
+      "first_order_edge_identities_checked": 180,
+      "prefix_grid_identities_checked": 54,
+      "suffix_grid_identities_checked": 54,
+      "nonzero_prefix_curvatures": 54,
+      "nonzero_suffix_curvatures": 54,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 3,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        1,
+        2,
+        3
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "triangle_identities_checked": 9,
+      "nonzero_second_order_vectors": 9,
+      "first_order_edge_identities_checked": 18,
+      "prefix_grid_identities_checked": 0,
+      "suffix_grid_identities_checked": 0,
+      "nonzero_prefix_curvatures": 0,
+      "nonzero_suffix_curvatures": 0,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 4,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        1,
+        2,
+        3
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ]
+      ],
+      "triangle_identities_checked": 18,
+      "nonzero_second_order_vectors": 18,
+      "first_order_edge_identities_checked": 54,
+      "prefix_grid_identities_checked": 9,
+      "suffix_grid_identities_checked": 9,
+      "nonzero_prefix_curvatures": 9,
+      "nonzero_suffix_curvatures": 9,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 5,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        1,
+        2,
+        3
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ]
+      ],
+      "triangle_identities_checked": 27,
+      "nonzero_second_order_vectors": 27,
+      "first_order_edge_identities_checked": 108,
+      "prefix_grid_identities_checked": 27,
+      "suffix_grid_identities_checked": 27,
+      "nonzero_prefix_curvatures": 27,
+      "nonzero_suffix_curvatures": 27,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 6,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        1,
+        2,
+        3
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ],
+        [
+          6,
+          37
+        ]
+      ],
+      "triangle_identities_checked": 36,
+      "nonzero_second_order_vectors": 36,
+      "first_order_edge_identities_checked": 180,
+      "prefix_grid_identities_checked": 54,
+      "suffix_grid_identities_checked": 54,
+      "nonzero_prefix_curvatures": 54,
+      "nonzero_suffix_curvatures": 54,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 3,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        2,
+        3,
+        5
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "triangle_identities_checked": 9,
+      "nonzero_second_order_vectors": 9,
+      "first_order_edge_identities_checked": 18,
+      "prefix_grid_identities_checked": 0,
+      "suffix_grid_identities_checked": 0,
+      "nonzero_prefix_curvatures": 0,
+      "nonzero_suffix_curvatures": 0,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 4,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        2,
+        3,
+        5
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ]
+      ],
+      "triangle_identities_checked": 18,
+      "nonzero_second_order_vectors": 18,
+      "first_order_edge_identities_checked": 54,
+      "prefix_grid_identities_checked": 9,
+      "suffix_grid_identities_checked": 9,
+      "nonzero_prefix_curvatures": 9,
+      "nonzero_suffix_curvatures": 9,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 5,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        2,
+        3,
+        5
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ]
+      ],
+      "triangle_identities_checked": 27,
+      "nonzero_second_order_vectors": 27,
+      "first_order_edge_identities_checked": 108,
+      "prefix_grid_identities_checked": 27,
+      "suffix_grid_identities_checked": 27,
+      "nonzero_prefix_curvatures": 27,
+      "nonzero_suffix_curvatures": 27,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    },
+    {
+      "n": 6,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          7,
+          11
+        ]
+      ],
+      "effect_point": [
+        2,
+        3,
+        5
+      ],
+      "directions": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          26
+        ],
+        [
+          6,
+          37
+        ]
+      ],
+      "triangle_identities_checked": 36,
+      "nonzero_second_order_vectors": 36,
+      "first_order_edge_identities_checked": 180,
+      "prefix_grid_identities_checked": 54,
+      "suffix_grid_identities_checked": 54,
+      "nonzero_prefix_curvatures": 54,
+      "nonzero_suffix_curvatures": 54,
+      "coefficients_zero_and_one_cancel": true,
+      "order_two_matches_curvature_formula": true,
+      "normalized_kernel_second_order_terms_retained": true
+    }
+  ]
+}

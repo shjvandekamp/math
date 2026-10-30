@@ -1,0 +1,125 @@
+{
+  "coefficient_minor": 48,
+  "moment_minor_sizes": {
+    "0": 33,
+    "1": 33,
+    "2": 33
+  },
+  "annihilation": "C0 K^T=0 and E C0=0 exactly",
+  "basepoint_separators": "18 nonzero diagonal entries",
+  "certificate_sha256": "1f314f167910b7d9a65e3567ddda625a6f6b8a839e79ffe0cdf84385c8945ca5",
+  "formal_status": "exact external discovery, not Lean-verified"
+}
+Verified 56 files: 48 evaluation rows; three 33-row source minors; modulus 11; 13 small data modules; 39 cached chunks with at most 4 rows each.
+Checking PanelMoments.Model
+Checking PanelMoments.Polynomial
+Checking PanelMoments.Economic
+Checking PanelMoments.Degree
+Checking PanelMoments.Geometry
+Checking PanelMoments.Genericity
+Checking PanelMoments.SourceMoments
+Checking PanelMoments.SourceAnalytic
+Checking PanelMoments.BasisCertificate
+PanelMoments/BasisCertificate.lean:70:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Checking PanelMoments.WitnessData.EvaluationPoints
+Checking PanelMoments.WitnessData.EvaluationPaths
+Checking PanelMoments.WitnessData.EvaluationResidue
+Checking PanelMoments.WitnessData.EvaluationInverse
+Checking PanelMoments.WitnessData.SourcePaths0
+Checking PanelMoments.WitnessData.SourceResidue0
+Checking PanelMoments.WitnessData.SourceInverse0
+Checking PanelMoments.WitnessData.SourcePaths1
+Checking PanelMoments.WitnessData.SourceResidue1
+Checking PanelMoments.WitnessData.SourceInverse1
+Checking PanelMoments.WitnessData.SourcePaths2
+Checking PanelMoments.WitnessData.SourceResidue2
+Checking PanelMoments.WitnessData.SourceInverse2
+Checking PanelMoments.WitnessData
+Checking PanelMoments.WitnessRows
+Checking PanelMoments.WitnessCore
+PanelMoments/WitnessCore.lean:144:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/WitnessCore.lean:144:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/WitnessCore.lean:159:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/WitnessCore.lean:159:41: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Checking PanelMoments.SourceRestrictions
+Checking PanelMoments.ModelAnalytic
+Checking PanelMoments.WitnessChunks.Evaluation00
+Checking PanelMoments.WitnessChunks.Evaluation01
+Checking PanelMoments.WitnessChunks.Evaluation02
+Checking PanelMoments.WitnessChunks.Evaluation03
+Checking PanelMoments.WitnessChunks.Evaluation04
+Checking PanelMoments.WitnessChunks.Evaluation05
+Checking PanelMoments.WitnessChunks.Evaluation06
+Checking PanelMoments.WitnessChunks.Evaluation07
+Checking PanelMoments.WitnessChunks.Evaluation08
+Checking PanelMoments.WitnessChunks.Evaluation09
+Checking PanelMoments.WitnessChunks.Evaluation10
+Checking PanelMoments.WitnessChunks.Evaluation11
+Checking PanelMoments.WitnessChunks.Source0_00
+Checking PanelMoments.WitnessChunks.Source0_01
+Checking PanelMoments.WitnessChunks.Source0_02
+Checking PanelMoments.WitnessChunks.Source0_03
+Checking PanelMoments.WitnessChunks.Source0_04
+Checking PanelMoments.WitnessChunks.Source0_05
+Checking PanelMoments.WitnessChunks.Source0_06
+Checking PanelMoments.WitnessChunks.Source0_07
+Checking PanelMoments.WitnessChunks.Source0_08
+Checking PanelMoments.WitnessChunks.Source1_00
+Checking PanelMoments.WitnessChunks.Source1_01
+Checking PanelMoments.WitnessChunks.Source1_02
+Checking PanelMoments.WitnessChunks.Source1_03
+Checking PanelMoments.WitnessChunks.Source1_04
+Checking PanelMoments.WitnessChunks.Source1_05
+Checking PanelMoments.WitnessChunks.Source1_06
+Checking PanelMoments.WitnessChunks.Source1_07
+Checking PanelMoments.WitnessChunks.Source1_08
+Checking PanelMoments.WitnessChunks.Source2_00
+Checking PanelMoments.WitnessChunks.Source2_01
+Checking PanelMoments.WitnessChunks.Source2_02
+Checking PanelMoments.WitnessChunks.Source2_03
+Checking PanelMoments.WitnessChunks.Source2_04
+Checking PanelMoments.WitnessChunks.Source2_05
+Checking PanelMoments.WitnessChunks.Source2_06
+Checking PanelMoments.WitnessChunks.Source2_07
+Checking PanelMoments.WitnessChunks.Source2_08
+Checking PanelMoments.WitnessEvaluation
+Checking PanelMoments.WitnessSource
+Checking PanelMoments.Witness
+Checking PanelMoments.FiniteCompleteness
+Checking PanelMoments.EconomicGenericity
+Checking PanelMoments
+PanelMoments.three_choice_four_period_generic_completeness :
+  PanelMoments.genericEconomicRegion.Nonempty ∧
+    IsOpen PanelMoments.genericEconomicRegion ∧
+      Dense PanelMoments.genericEconomicRegion ∧
+        ∀ θ ∈ PanelMoments.genericEconomicRegion,
+          ∀ (r : PanelMoments.State 2),
+            LinearIndependent ℝ (PanelMoments.sourceMoment (PanelMoments.parameterTable θ) r) ∧
+              PanelMoments.momentSubmodule (PanelMoments.parameterTable θ) 4 r =
+                  Submodule.span ℝ (Set.range (PanelMoments.sourceMoment (PanelMoments.parameterTable θ) r)) ∧
+                Module.finrank ℝ ↥(PanelMoments.momentSubmodule (PanelMoments.parameterTable θ) 4 r) = 33
+'PanelMoments.three_choice_four_period_generic_completeness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.sourceMoment_isMoment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.isMoment_iff_coefficient_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.isMoment_iff_additive_effects' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.parameterWitness_table' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.Witness.eval_clearedPathPoly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.Witness.sourceRows_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.Witness.evaluationMinor_real_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.Witness.sourceMinor_real_det_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.exceptionalDeterminant_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.genericEconomicRegion_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.source_basis_of_minors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.economic_source_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+Main theorem and audited dependencies use only permitted foundational axioms.
+Serial source verification completed. See VERIFICATION.md for the statement audit and scope.

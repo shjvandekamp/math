@@ -1,0 +1,9 @@
+import PanelMoments.Geometry
+
+#print axioms PanelMoments.Geometry.eval_blockFactor_pair
+#print axioms PanelMoments.Geometry.eval_blockFactor_diagonal
+#print axioms PanelMoments.Geometry.localSeparator_off_diagonal
+#print axioms PanelMoments.Geometry.localSeparator_diagonal_ne_zero
+#print axioms PanelMoments.Geometry.localSeparator_isHomogeneous
+#print axioms PanelMoments.Geometry.localPoint_blockFactor_zero
+#print axioms PanelMoments.Geometry.localEvaluation_linearIndependent

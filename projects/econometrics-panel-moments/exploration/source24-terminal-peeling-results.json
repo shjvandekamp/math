@@ -1,0 +1,2795 @@
+{
+  "status": "Bounded local algebra and finite-field sanity checks; no terminal-annihilator or all-length rank theorem.",
+  "indexing": "Prefix sizes q=2,3,4 are appended to m=q+1=3,4,5 so every raw family and T11/T12 seed check is nontrivial.",
+  "formulas_checked": "T3 raw append; normalized append correction; T4 coefficientwise rational cubic identity and actual-kernel clearing; T11 marked-seed append; T12 actual old-pair commutator; T13 ambient commutator.",
+  "limits": "No construction or check of the large ambient projection, epsilon compression, recursive annihilator, or T10 boundary determinant. Finite examples do not prove a uniform rank theorem.",
+  "elapsed_seconds": 0.758062334,
+  "maximum_rss_bytes": 20004864,
+  "bounded_limitation": null,
+  "cases": [
+    {
+      "prefix_blocks": 2,
+      "appended_blocks": 3,
+      "time_fixture": "economic",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ]
+      ],
+      "old_H4_constants": [
+        {
+          "t": 2,
+          "A": 0,
+          "r": 3,
+          "s": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 2,
+          "A": 1,
+          "r": 3,
+          "s": 2,
+          "c_tA": 141667
+        },
+        {
+          "t": 2,
+          "A": 2,
+          "r": 3,
+          "s": 2,
+          "c_tA": 731122
+        },
+        {
+          "t": 3,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 3,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 76107
+        },
+        {
+          "t": 3,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 751874
+        }
+      ],
+      "old_seed_constants_unchanged": true,
+      "rational_cubic_identity": {
+        "coefficient_field": "Q",
+        "cubic_matrix_times_actual_coefficient_inverse_is_diagonal": true,
+        "coefficient_identities_checked": 9,
+        "all_h_are_homogeneous_cubics": true,
+        "coefficient_matrix_determinant": 1476395008,
+        "coefficient_matrix_inverse": [
+          [
+            "30/11",
+            "1/11",
+            "-20/11"
+          ],
+          [
+            "1/704",
+            "1/5632",
+            "-9/5632"
+          ],
+          [
+            "-27/2883584",
+            "-1/1441792",
+            "29/2883584"
+          ]
+        ],
+        "h_coefficients": [
+          [
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "1374389534720"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "12079595520"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "23592960"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "3145728"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "16896"
+            ],
+            [
+              [
+                3,
+                0,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "137438953472"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "671088640"
+            ],
+            [
+              [
+                0,
+                3,
+                0
+              ],
+              "786432"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "786432"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "2048"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                0,
+                3
+              ],
+              "687194767360"
+            ],
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "5368709120"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "7864320"
+            ],
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "2883584"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "15872"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "1"
+            ]
+          ]
+        ]
+      },
+      "ordinary_append_checks": {
+        "ordinary_points": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ],
+        "raw_append_rows_checked": 54,
+        "normalized_append_rows_checked": 54,
+        "normalized_correction_nonzero_rows": 18,
+        "cleared_append_and_cubic_division_rows_checked": 54,
+        "marked_seed_append_rows_checked": 18,
+        "T3_raw_append_verified": true,
+        "normalized_append_correction_verified": true,
+        "T11_marked_seed_append_verified": true,
+        "raw_marked_seed_append_verified": true,
+        "cubic_kernel_evaluation_checks": [
+          {
+            "point": [
+              1,
+              2,
+              3
+            ],
+            "D": 695902,
+            "h": [
+              902270,
+              798547,
+              949334
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              2,
+              3,
+              5
+            ],
+            "D": 356765,
+            "h": [
+              145765,
+              348298,
+              747066
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              3,
+              5,
+              7
+            ],
+            "D": 623215,
+            "h": [
+              631720,
+              775456,
+              675664
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          }
+        ]
+      },
+      "actual_seed_commutator_checks": {
+        "old_geometry": {
+          "cross_line_points": 9,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "appended_geometry": {
+          "cross_line_points": 27,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "old_actual_source_sha256": "64baa741e2cb6d88b75847f910629e0d07f29a7c0c99aaed661c0dc5794342d9",
+        "appended_actual_source_sha256": "a6956189882b6b284c451a7b7db613ae836d32dfa6d51a0736cc2d3d8fb640cd",
+        "old_actual_seed_pair_sha256": "603568651aac3c8d6a494e00c58143bbfe2417f8814479c5c1c481d790497179",
+        "appended_actual_seed_pair_sha256": "1d25a2117e01add7ac3d5f17d805fbd72db0ed4e4fc02847e427b046b9daaf38",
+        "direct_completed_seed_pair_checks": 54,
+        "old_pair_seed_transport_verified": true,
+        "T12_actual_seed_checks": 162,
+        "nonzero_actual_seed_commutators": 42,
+        "first_nonzero_actual_seed_commutator": {
+          "old_pair": [
+            2,
+            3,
+            0,
+            0
+          ],
+          "point_mod_prime": [
+            28672,
+            995971,
+            56
+          ],
+          "seed": [
+            2,
+            0
+          ],
+          "coordinate_transfer_B": 0,
+          "actual_seed_pair_residue": [
+            191682,
+            274868,
+            533453
+          ],
+          "appended_seed_pair_residue": [
+            299332,
+            652580,
+            48091
+          ],
+          "actual_append_kernel": [
+            [
+              535149,
+              469389,
+              995469
+            ],
+            [
+              207363,
+              97264,
+              695377
+            ],
+            [
+              316441,
+              648951,
+              34612
+            ]
+          ],
+          "w": [
+            363635,
+            545456,
+            90912
+          ],
+          "commutator_matrix": [
+            [
+              283857,
+              909918,
+              806231
+            ],
+            [
+              656809,
+              419024,
+              924173
+            ],
+            [
+              522949,
+              179932,
+              297122
+            ]
+          ],
+          "left_difference": [
+            119783,
+            281589,
+            598631
+          ],
+          "right_commutator": [
+            119783,
+            281589,
+            598631
+          ]
+        },
+        "commutator_pair_coordinate_matrix_sha256": "ecacad9defda461f985a2a044313d69d0ed833463329c07d8f9321fcdf968153",
+        "T13_ambient_node_checks": 9,
+        "nonzero_ambient_node_commutators": 9,
+        "scope": "T12 is checked on actual marked-seed pair data and the nodewise coordinate-transfer map. The normalized ambient lifts themselves are not constructed."
+      },
+      "elapsed_seconds": 0.019574750000000002
+    },
+    {
+      "prefix_blocks": 3,
+      "appended_blocks": 4,
+      "time_fixture": "economic",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ]
+      ],
+      "old_H4_constants": [
+        {
+          "t": 2,
+          "A": 0,
+          "r": 3,
+          "s": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 2,
+          "A": 1,
+          "r": 3,
+          "s": 2,
+          "c_tA": 141667
+        },
+        {
+          "t": 2,
+          "A": 2,
+          "r": 3,
+          "s": 2,
+          "c_tA": 731122
+        },
+        {
+          "t": 3,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 3,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 76107
+        },
+        {
+          "t": 3,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 751874
+        },
+        {
+          "t": 4,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 4,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 640042
+        },
+        {
+          "t": 4,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 149576
+        }
+      ],
+      "old_seed_constants_unchanged": true,
+      "rational_cubic_identity": {
+        "coefficient_field": "Q",
+        "cubic_matrix_times_actual_coefficient_inverse_is_diagonal": true,
+        "coefficient_identities_checked": 9,
+        "all_h_are_homogeneous_cubics": true,
+        "coefficient_matrix_determinant": 755914244096,
+        "coefficient_matrix_inverse": [
+          [
+            "30/11",
+            "1/11",
+            "-20/11"
+          ],
+          [
+            "1/5632",
+            "1/45056",
+            "-9/45056"
+          ],
+          [
+            "-27/184549376",
+            "-1/92274688",
+            "29/184549376"
+          ]
+        ],
+        "h_coefficients": [
+          [
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "5629499534213120"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "6184752906240"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "1509949440"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "201326592"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "135168"
+            ],
+            [
+              [
+                3,
+                0,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "562949953421312"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "343597383680"
+            ],
+            [
+              [
+                0,
+                3,
+                0
+              ],
+              "50331648"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "50331648"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "16384"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                0,
+                3
+              ],
+              "2814749767106560"
+            ],
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "2748779069440"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "503316480"
+            ],
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "184549376"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "126976"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "1"
+            ]
+          ]
+        ]
+      },
+      "ordinary_append_checks": {
+        "ordinary_points": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ],
+        "raw_append_rows_checked": 162,
+        "normalized_append_rows_checked": 162,
+        "normalized_correction_nonzero_rows": 54,
+        "cleared_append_and_cubic_division_rows_checked": 162,
+        "marked_seed_append_rows_checked": 27,
+        "T3_raw_append_verified": true,
+        "normalized_append_correction_verified": true,
+        "T11_marked_seed_append_verified": true,
+        "raw_marked_seed_append_verified": true,
+        "cubic_kernel_evaluation_checks": [
+          {
+            "point": [
+              1,
+              2,
+              3
+            ],
+            "D": 69319,
+            "h": [
+              26807,
+              318517,
+              127161
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              2,
+              3,
+              5
+            ],
+            "D": 543433,
+            "h": [
+              970409,
+              309216,
+              482544
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              3,
+              5,
+              7
+            ],
+            "D": 149013,
+            "h": [
+              933816,
+              476045,
+              524229
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          }
+        ]
+      },
+      "actual_seed_commutator_checks": {
+        "old_geometry": {
+          "cross_line_points": 27,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "appended_geometry": {
+          "cross_line_points": 54,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "old_actual_source_sha256": "a6956189882b6b284c451a7b7db613ae836d32dfa6d51a0736cc2d3d8fb640cd",
+        "appended_actual_source_sha256": "026a36f9e968de2e0823feb25476798d14e92d0da4dd53ac3f277c89101d53b1",
+        "old_actual_seed_pair_sha256": "1d25a2117e01add7ac3d5f17d805fbd72db0ed4e4fc02847e427b046b9daaf38",
+        "appended_actual_seed_pair_sha256": "f9315eb7a6b6e82b93c265a0035627168d2f3de63b77a35ef82eba4964b7f603",
+        "direct_completed_seed_pair_checks": 243,
+        "old_pair_seed_transport_verified": true,
+        "T12_actual_seed_checks": 729,
+        "nonzero_actual_seed_commutators": 333,
+        "first_nonzero_actual_seed_commutator": {
+          "old_pair": [
+            2,
+            3,
+            0,
+            0
+          ],
+          "point_mod_prime": [
+            28672,
+            995971,
+            56
+          ],
+          "seed": [
+            2,
+            0
+          ],
+          "coordinate_transfer_B": 0,
+          "actual_seed_pair_residue": [
+            299332,
+            652580,
+            48091
+          ],
+          "appended_seed_pair_residue": [
+            766540,
+            645666,
+            587800
+          ],
+          "actual_append_kernel": [
+            [
+              582675,
+              380208,
+              37121
+            ],
+            [
+              906994,
+              190699,
+              902314
+            ],
+            [
+              804262,
+              239434,
+              956311
+            ]
+          ],
+          "w": [
+            363635,
+            545456,
+            90912
+          ],
+          "commutator_matrix": [
+            [
+              454341,
+              811435,
+              734230
+            ],
+            [
+              967057,
+              108671,
+              924278
+            ],
+            [
+              36574,
+              526438,
+              436991
+            ]
+          ],
+          "left_difference": [
+            668780,
+            288802,
+            42421
+          ],
+          "right_commutator": [
+            668780,
+            288802,
+            42421
+          ]
+        },
+        "commutator_pair_coordinate_matrix_sha256": "4088b2653e053fef6b3ba731ec0c0a5f8e40bc247056369c57a213f2b2562389",
+        "T13_ambient_node_checks": 27,
+        "nonzero_ambient_node_commutators": 27,
+        "scope": "T12 is checked on actual marked-seed pair data and the nodewise coordinate-transfer map. The normalized ambient lifts themselves are not constructed."
+      },
+      "elapsed_seconds": 0.08525825000000001
+    },
+    {
+      "prefix_blocks": 4,
+      "appended_blocks": 5,
+      "time_fixture": "economic",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          8,
+          64
+        ],
+        [
+          64,
+          4096
+        ],
+        [
+          512,
+          262144
+        ],
+        [
+          4096,
+          16777216
+        ],
+        [
+          32768,
+          1073741824
+        ]
+      ],
+      "old_H4_constants": [
+        {
+          "t": 2,
+          "A": 0,
+          "r": 3,
+          "s": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 2,
+          "A": 1,
+          "r": 3,
+          "s": 2,
+          "c_tA": 141667
+        },
+        {
+          "t": 2,
+          "A": 2,
+          "r": 3,
+          "s": 2,
+          "c_tA": 731122
+        },
+        {
+          "t": 3,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 3,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 76107
+        },
+        {
+          "t": 3,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 751874
+        },
+        {
+          "t": 4,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 4,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 640042
+        },
+        {
+          "t": 4,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 149576
+        },
+        {
+          "t": 5,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 5,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 294936
+        },
+        {
+          "t": 5,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 562536
+        }
+      ],
+      "old_seed_constants_unchanged": true,
+      "rational_cubic_identity": {
+        "coefficient_field": "Q",
+        "cubic_matrix_times_actual_coefficient_inverse_is_diagonal": true,
+        "coefficient_identities_checked": 9,
+        "all_h_are_homogeneous_cubics": true,
+        "coefficient_matrix_determinant": 387028092977152,
+        "coefficient_matrix_inverse": [
+          [
+            "30/11",
+            "1/11",
+            "-20/11"
+          ],
+          [
+            "1/45056",
+            "1/360448",
+            "-9/360448"
+          ],
+          [
+            "-27/11811160064",
+            "-1/5905580032",
+            "29/11811160064"
+          ]
+        ],
+        "h_coefficients": [
+          [
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "23058430092136939520"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "3166593487994880"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "96636764160"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "12884901888"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "1081344"
+            ],
+            [
+              [
+                3,
+                0,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "2305843009213693952"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "175921860444160"
+            ],
+            [
+              [
+                0,
+                3,
+                0
+              ],
+              "3221225472"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "3221225472"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "131072"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                0,
+                3
+              ],
+              "11529215046068469760"
+            ],
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "1407374883553280"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "32212254720"
+            ],
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "11811160064"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "1015808"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "1"
+            ]
+          ]
+        ]
+      },
+      "ordinary_append_checks": {
+        "ordinary_points": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ],
+        "raw_append_rows_checked": 324,
+        "normalized_append_rows_checked": 324,
+        "normalized_correction_nonzero_rows": 108,
+        "cleared_append_and_cubic_division_rows_checked": 324,
+        "marked_seed_append_rows_checked": 36,
+        "T3_raw_append_verified": true,
+        "normalized_append_correction_verified": true,
+        "T11_marked_seed_append_verified": true,
+        "raw_marked_seed_append_verified": true,
+        "cubic_kernel_evaluation_checks": [
+          {
+            "point": [
+              1,
+              2,
+              3
+            ],
+            "D": 824221,
+            "h": [
+              802096,
+              246593,
+              599660
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              2,
+              3,
+              5
+            ],
+            "D": 195383,
+            "h": [
+              482607,
+              680348,
+              688976
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              3,
+              5,
+              7
+            ],
+            "D": 911913,
+            "h": [
+              807508,
+              109437,
+              65643
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          }
+        ]
+      },
+      "actual_seed_commutator_checks": {
+        "old_geometry": {
+          "cross_line_points": 54,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "appended_geometry": {
+          "cross_line_points": 90,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "old_actual_source_sha256": "026a36f9e968de2e0823feb25476798d14e92d0da4dd53ac3f277c89101d53b1",
+        "appended_actual_source_sha256": "fc53b1220e88adb9e93b2c046874491cc28a97bac18cffde943adf4d0007faea",
+        "old_actual_seed_pair_sha256": "f9315eb7a6b6e82b93c265a0035627168d2f3de63b77a35ef82eba4964b7f603",
+        "appended_actual_seed_pair_sha256": "831cd49a5293374bd0b78058a6b9c7614b862c6d13f7e04b12d0b859164de271",
+        "direct_completed_seed_pair_checks": 648,
+        "old_pair_seed_transport_verified": true,
+        "T12_actual_seed_checks": 1944,
+        "nonzero_actual_seed_commutators": 1128,
+        "first_nonzero_actual_seed_commutator": {
+          "old_pair": [
+            2,
+            3,
+            0,
+            0
+          ],
+          "point_mod_prime": [
+            28672,
+            995971,
+            56
+          ],
+          "seed": [
+            2,
+            0
+          ],
+          "coordinate_transfer_B": 0,
+          "actual_seed_pair_residue": [
+            766540,
+            645666,
+            587800
+          ],
+          "appended_seed_pair_residue": [
+            388101,
+            417203,
+            194699
+          ],
+          "actual_append_kernel": [
+            [
+              701274,
+              539104,
+              759629
+            ],
+            [
+              68215,
+              986693,
+              945099
+            ],
+            [
+              656835,
+              940203,
+              402969
+            ]
+          ],
+          "w": [
+            363635,
+            545456,
+            90912
+          ],
+          "commutator_matrix": [
+            [
+              862737,
+              952798,
+              184471
+            ],
+            [
+              43855,
+              373620,
+              582528
+            ],
+            [
+              12953,
+              223401,
+              763649
+            ]
+          ],
+          "left_difference": [
+            439053,
+            172198,
+            388752
+          ],
+          "right_commutator": [
+            439053,
+            172198,
+            388752
+          ]
+        },
+        "commutator_pair_coordinate_matrix_sha256": "a5008a1d8b3d7160cf25f24d212368dfc720c2a2afb06b4fb1276c763c9e23de",
+        "T13_ambient_node_checks": 54,
+        "nonzero_ambient_node_commutators": 54,
+        "scope": "T12 is checked on actual marked-seed pair data and the nodewise coordinate-transfer map. The normalized ambient lifts themselves are not constructed."
+      },
+      "elapsed_seconds": 0.28560325
+    },
+    {
+      "prefix_blocks": 2,
+      "appended_blocks": 3,
+      "time_fixture": "independent",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          3271,
+          8209
+        ],
+        [
+          4787,
+          9815
+        ],
+        [
+          7749,
+          4464
+        ]
+      ],
+      "old_H4_constants": [
+        {
+          "t": 2,
+          "A": 0,
+          "r": 3,
+          "s": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 2,
+          "A": 1,
+          "r": 3,
+          "s": 2,
+          "c_tA": 760941
+        },
+        {
+          "t": 2,
+          "A": 2,
+          "r": 3,
+          "s": 2,
+          "c_tA": 776398
+        },
+        {
+          "t": 3,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 3,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 161994
+        },
+        {
+          "t": 3,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 116284
+        }
+      ],
+      "old_seed_constants_unchanged": true,
+      "rational_cubic_identity": {
+        "coefficient_field": "Q",
+        "cubic_matrix_times_actual_coefficient_inverse_is_diagonal": true,
+        "coefficient_identities_checked": 9,
+        "all_h_are_homogeneous_cubics": true,
+        "coefficient_matrix_determinant": 380506896,
+        "coefficient_matrix_inverse": [
+          [
+            "30/11",
+            "1/11",
+            "-20/11"
+          ],
+          [
+            "8/85239",
+            "1/85239",
+            "-1/9471"
+          ],
+          [
+            "-3/5456",
+            "-1/24552",
+            "29/49104"
+          ]
+        ],
+        "h_coefficients": [
+          [
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "398545920"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "3113238240"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "5404230090"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "53568"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "255717"
+            ],
+            [
+              [
+                3,
+                0,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "39854592"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "172957680"
+            ],
+            [
+              [
+                0,
+                3,
+                0
+              ],
+              "180141003"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "13392"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "30996"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                0,
+                3
+              ],
+              "199272960"
+            ],
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "1383661440"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "1801410030"
+            ],
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "49104"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "240219"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "1"
+            ]
+          ]
+        ]
+      },
+      "ordinary_append_checks": {
+        "ordinary_points": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ],
+        "raw_append_rows_checked": 54,
+        "normalized_append_rows_checked": 54,
+        "normalized_correction_nonzero_rows": 18,
+        "cleared_append_and_cubic_division_rows_checked": 54,
+        "marked_seed_append_rows_checked": 18,
+        "T3_raw_append_verified": true,
+        "normalized_append_correction_verified": true,
+        "T11_marked_seed_append_verified": true,
+        "raw_marked_seed_append_verified": true,
+        "cubic_kernel_evaluation_checks": [
+          {
+            "point": [
+              1,
+              2,
+              3
+            ],
+            "D": 871225,
+            "h": [
+              803570,
+              194476,
+              923741
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              2,
+              3,
+              5
+            ],
+            "D": 496456,
+            "h": [
+              92980,
+              909873,
+              211872
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              3,
+              5,
+              7
+            ],
+            "D": 75307,
+            "h": [
+              31848,
+              137661,
+              706804
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          }
+        ]
+      },
+      "actual_seed_commutator_checks": {
+        "old_geometry": {
+          "cross_line_points": 9,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "appended_geometry": {
+          "cross_line_points": 27,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "old_actual_source_sha256": "5f1467ca29679ff13263a32fe0fa4853cc18332b60dd1ad2575f171fc9e5a161",
+        "appended_actual_source_sha256": "de764295b689e6c39ac3144098a37c4eabb09d9bae697dad2e71cdc954387e26",
+        "old_actual_seed_pair_sha256": "6fe0b75b1eefcd16b76af3a80a4b7d7e5cbf4d92593128dc31e65470c07724fd",
+        "appended_actual_seed_pair_sha256": "10379e60f076fc3dcd9b28a9c59cf9e9af5b181a36a310d63c7decb6b63fc1d5",
+        "direct_completed_seed_pair_checks": 54,
+        "old_pair_seed_transport_verified": true,
+        "T12_actual_seed_checks": 162,
+        "nonzero_actual_seed_commutators": 42,
+        "first_nonzero_actual_seed_commutator": {
+          "old_pair": [
+            2,
+            3,
+            0,
+            0
+          ],
+          "point_mod_prime": [
+            808406,
+            998397,
+            1516
+          ],
+          "seed": [
+            2,
+            0
+          ],
+          "coordinate_transfer_B": 0,
+          "actual_seed_pair_residue": [
+            957758,
+            668393,
+            373855
+          ],
+          "appended_seed_pair_residue": [
+            171574,
+            577993,
+            250436
+          ],
+          "actual_append_kernel": [
+            [
+              195263,
+              244081,
+              560660
+            ],
+            [
+              819704,
+              415580,
+              764723
+            ],
+            [
+              922559,
+              622692,
+              454756
+            ]
+          ],
+          "w": [
+            363635,
+            545456,
+            90912
+          ],
+          "commutator_matrix": [
+            [
+              987478,
+              443518,
+              569010
+            ],
+            [
+              213868,
+              497325,
+              288810
+            ],
+            [
+              898092,
+              586711,
+              515203
+            ]
+          ],
+          "left_difference": [
+            446610,
+            365306,
+            188087
+          ],
+          "right_commutator": [
+            446610,
+            365306,
+            188087
+          ]
+        },
+        "commutator_pair_coordinate_matrix_sha256": "a71cae47b1237d3c9a98f0b00f1053cae4571c434a4cb265a48af5db2c790689",
+        "T13_ambient_node_checks": 9,
+        "nonzero_ambient_node_commutators": 9,
+        "scope": "T12 is checked on actual marked-seed pair data and the nodewise coordinate-transfer map. The normalized ambient lifts themselves are not constructed."
+      },
+      "elapsed_seconds": 0.018959500000000018
+    },
+    {
+      "prefix_blocks": 3,
+      "appended_blocks": 4,
+      "time_fixture": "independent",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          3271,
+          8209
+        ],
+        [
+          4787,
+          9815
+        ],
+        [
+          7749,
+          4464
+        ],
+        [
+          8787,
+          4365
+        ]
+      ],
+      "old_H4_constants": [
+        {
+          "t": 2,
+          "A": 0,
+          "r": 3,
+          "s": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 2,
+          "A": 1,
+          "r": 3,
+          "s": 2,
+          "c_tA": 760941
+        },
+        {
+          "t": 2,
+          "A": 2,
+          "r": 3,
+          "s": 2,
+          "c_tA": 776398
+        },
+        {
+          "t": 3,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 3,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 161994
+        },
+        {
+          "t": 3,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 116284
+        },
+        {
+          "t": 4,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 4,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 238966
+        },
+        {
+          "t": 4,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 79888
+        }
+      ],
+      "old_seed_constants_unchanged": true,
+      "rational_cubic_identity": {
+        "coefficient_field": "Q",
+        "cubic_matrix_times_actual_coefficient_inverse_is_diagonal": true,
+        "coefficient_identities_checked": 9,
+        "all_h_are_homogeneous_cubics": true,
+        "coefficient_matrix_determinant": 421907805,
+        "coefficient_matrix_inverse": [
+          [
+            "30/11",
+            "1/11",
+            "-20/11"
+          ],
+          [
+            "8/96657",
+            "1/96657",
+            "-3/32219"
+          ],
+          [
+            "-3/5335",
+            "-2/48015",
+            "29/48015"
+          ]
+        ],
+        "h_coefficients": [
+          [
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "381064500"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "3451972950"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "6949023210"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "52380"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "289971"
+            ],
+            [
+              [
+                3,
+                0,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "38106450"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "191776275"
+            ],
+            [
+              [
+                0,
+                3,
+                0
+              ],
+              "231634107"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "13095"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "35148"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                0,
+                3
+              ],
+              "190532250"
+            ],
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "1534210200"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "2316341070"
+            ],
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "48015"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "272397"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "1"
+            ]
+          ]
+        ]
+      },
+      "ordinary_append_checks": {
+        "ordinary_points": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ],
+        "raw_append_rows_checked": 162,
+        "normalized_append_rows_checked": 162,
+        "normalized_correction_nonzero_rows": 54,
+        "cleared_append_and_cubic_division_rows_checked": 162,
+        "marked_seed_append_rows_checked": 27,
+        "T3_raw_append_verified": true,
+        "normalized_append_correction_verified": true,
+        "T11_marked_seed_append_verified": true,
+        "raw_marked_seed_append_verified": true,
+        "cubic_kernel_evaluation_checks": [
+          {
+            "point": [
+              1,
+              2,
+              3
+            ],
+            "D": 108537,
+            "h": [
+              92309,
+              508900,
+              132036
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              2,
+              3,
+              5
+            ],
+            "D": 511440,
+            "h": [
+              615446,
+              9311,
+              487699
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              3,
+              5,
+              7
+            ],
+            "D": 684352,
+            "h": [
+              911673,
+              987308,
+              868075
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          }
+        ]
+      },
+      "actual_seed_commutator_checks": {
+        "old_geometry": {
+          "cross_line_points": 27,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "appended_geometry": {
+          "cross_line_points": 54,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "old_actual_source_sha256": "de764295b689e6c39ac3144098a37c4eabb09d9bae697dad2e71cdc954387e26",
+        "appended_actual_source_sha256": "94bad964e7926f649768e2162fe155f82a5327d55884ecff28a77083841276f4",
+        "old_actual_seed_pair_sha256": "10379e60f076fc3dcd9b28a9c59cf9e9af5b181a36a310d63c7decb6b63fc1d5",
+        "appended_actual_seed_pair_sha256": "f8d256ced7206a44e444ad80cbc1b8281ca06e349aaf3c6097a7a358b3fbbad0",
+        "direct_completed_seed_pair_checks": 243,
+        "old_pair_seed_transport_verified": true,
+        "T12_actual_seed_checks": 729,
+        "nonzero_actual_seed_commutators": 333,
+        "first_nonzero_actual_seed_commutator": {
+          "old_pair": [
+            2,
+            3,
+            0,
+            0
+          ],
+          "point_mod_prime": [
+            808406,
+            998397,
+            1516
+          ],
+          "seed": [
+            2,
+            0
+          ],
+          "coordinate_transfer_B": 0,
+          "actual_seed_pair_residue": [
+            171574,
+            577993,
+            250436
+          ],
+          "appended_seed_pair_residue": [
+            14020,
+            944912,
+            41071
+          ],
+          "actual_append_kernel": [
+            [
+              709648,
+              109194,
+              181162
+            ],
+            [
+              593533,
+              181377,
+              225094
+            ],
+            [
+              986432,
+              962847,
+              50728
+            ]
+          ],
+          "w": [
+            363635,
+            545456,
+            90912
+          ],
+          "commutator_matrix": [
+            [
+              646242,
+              603427,
+              750337
+            ],
+            [
+              811137,
+              504530,
+              684339
+            ],
+            [
+              942858,
+              207914,
+              849234
+            ]
+          ],
+          "left_difference": [
+            711887,
+            953881,
+            334238
+          ],
+          "right_commutator": [
+            711887,
+            953881,
+            334238
+          ]
+        },
+        "commutator_pair_coordinate_matrix_sha256": "22b486f7b19fb41b0094b21426efa4614614e764e0511205370ad7fe8e205ff4",
+        "T13_ambient_node_checks": 27,
+        "nonzero_ambient_node_commutators": 27,
+        "scope": "T12 is checked on actual marked-seed pair data and the nodewise coordinate-transfer map. The normalized ambient lifts themselves are not constructed."
+      },
+      "elapsed_seconds": 0.08146808300000002
+    },
+    {
+      "prefix_blocks": 4,
+      "appended_blocks": 5,
+      "time_fixture": "independent",
+      "prime": 1000003,
+      "G": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          30,
+          10
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "time_factors": [
+        [
+          3271,
+          8209
+        ],
+        [
+          4787,
+          9815
+        ],
+        [
+          7749,
+          4464
+        ],
+        [
+          8787,
+          4365
+        ],
+        [
+          7516,
+          7474
+        ]
+      ],
+      "old_H4_constants": [
+        {
+          "t": 2,
+          "A": 0,
+          "r": 3,
+          "s": 2,
+          "c_tA": 0
+        },
+        {
+          "t": 2,
+          "A": 1,
+          "r": 3,
+          "s": 2,
+          "c_tA": 760941
+        },
+        {
+          "t": 2,
+          "A": 2,
+          "r": 3,
+          "s": 2,
+          "c_tA": 776398
+        },
+        {
+          "t": 3,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 3,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 161994
+        },
+        {
+          "t": 3,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 116284
+        },
+        {
+          "t": 4,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 4,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 238966
+        },
+        {
+          "t": 4,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 79888
+        },
+        {
+          "t": 5,
+          "A": 0,
+          "r": 2,
+          "s": 3,
+          "c_tA": 0
+        },
+        {
+          "t": 5,
+          "A": 1,
+          "r": 2,
+          "s": 3,
+          "c_tA": 390416
+        },
+        {
+          "t": 5,
+          "A": 2,
+          "r": 2,
+          "s": 3,
+          "c_tA": 509903
+        }
+      ],
+      "old_seed_constants_unchanged": true,
+      "rational_cubic_identity": {
+        "coefficient_field": "Q",
+        "cubic_matrix_times_actual_coefficient_inverse_is_diagonal": true,
+        "coefficient_identities_checked": 9,
+        "all_h_are_homogeneous_cubics": true,
+        "coefficient_matrix_determinant": 617920424,
+        "coefficient_matrix_inverse": [
+          [
+            "30/11",
+            "1/11",
+            "-20/11"
+          ],
+          [
+            "2/20669",
+            "1/82676",
+            "-9/82676"
+          ],
+          [
+            "-27/82214",
+            "-1/41107",
+            "29/82214"
+          ]
+        ],
+        "h_coefficients": [
+          [
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "1117213520"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "5055712560"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "5084123040"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "89688"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "248028"
+            ],
+            [
+              [
+                3,
+                0,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "111721352"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "280872920"
+            ],
+            [
+              [
+                0,
+                3,
+                0
+              ],
+              "169470768"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "22422"
+            ],
+            [
+              [
+                1,
+                2,
+                0
+              ],
+              "30064"
+            ],
+            [
+              [
+                2,
+                1,
+                0
+              ],
+              "1"
+            ]
+          ],
+          [
+            [
+              [
+                0,
+                0,
+                3
+              ],
+              "558606760"
+            ],
+            [
+              [
+                0,
+                1,
+                2
+              ],
+              "2246983360"
+            ],
+            [
+              [
+                0,
+                2,
+                1
+              ],
+              "1694707680"
+            ],
+            [
+              [
+                1,
+                0,
+                2
+              ],
+              "82214"
+            ],
+            [
+              [
+                1,
+                1,
+                1
+              ],
+              "232996"
+            ],
+            [
+              [
+                2,
+                0,
+                1
+              ],
+              "1"
+            ]
+          ]
+        ]
+      },
+      "ordinary_append_checks": {
+        "ordinary_points": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            3,
+            5,
+            7
+          ]
+        ],
+        "raw_append_rows_checked": 324,
+        "normalized_append_rows_checked": 324,
+        "normalized_correction_nonzero_rows": 108,
+        "cleared_append_and_cubic_division_rows_checked": 324,
+        "marked_seed_append_rows_checked": 36,
+        "T3_raw_append_verified": true,
+        "normalized_append_correction_verified": true,
+        "T11_marked_seed_append_verified": true,
+        "raw_marked_seed_append_verified": true,
+        "cubic_kernel_evaluation_checks": [
+          {
+            "point": [
+              1,
+              2,
+              3
+            ],
+            "D": 85486,
+            "h": [
+              272143,
+              460099,
+              485467
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              2,
+              3,
+              5
+            ],
+            "D": 588416,
+            "h": [
+              140474,
+              230575,
+              599337
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          },
+          {
+            "point": [
+              3,
+              5,
+              7
+            ],
+            "D": 308657,
+            "h": [
+              16662,
+              654259,
+              319821
+            ],
+            "C_equals_D_tildeK": true,
+            "actual_kernel_inverse_verified": true
+          }
+        ]
+      },
+      "actual_seed_commutator_checks": {
+        "old_geometry": {
+          "cross_line_points": 54,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "appended_geometry": {
+          "cross_line_points": 90,
+          "coordinates_nonzero": true,
+          "no_third_denominator_line": true,
+          "two_residue_vectors_independent": true,
+          "local_pair_residue_blocks_invertible": true
+        },
+        "old_actual_source_sha256": "94bad964e7926f649768e2162fe155f82a5327d55884ecff28a77083841276f4",
+        "appended_actual_source_sha256": "cdfb24d955eb839662fc11bd0f3f021d817ec30ab00cd9e1a4ed01e0a742ccdb",
+        "old_actual_seed_pair_sha256": "f8d256ced7206a44e444ad80cbc1b8281ca06e349aaf3c6097a7a358b3fbbad0",
+        "appended_actual_seed_pair_sha256": "386e6702d65ce401792b77c68ac8bb5b26af907cd5ed76f1c2a2f3a93f0e794c",
+        "direct_completed_seed_pair_checks": 648,
+        "old_pair_seed_transport_verified": true,
+        "T12_actual_seed_checks": 1944,
+        "nonzero_actual_seed_commutators": 1128,
+        "first_nonzero_actual_seed_commutator": {
+          "old_pair": [
+            2,
+            3,
+            0,
+            0
+          ],
+          "point_mod_prime": [
+            808406,
+            998397,
+            1516
+          ],
+          "seed": [
+            2,
+            0
+          ],
+          "coordinate_transfer_B": 0,
+          "actual_seed_pair_residue": [
+            14020,
+            944912,
+            41071
+          ],
+          "appended_seed_pair_residue": [
+            963440,
+            915683,
+            120883
+          ],
+          "actual_append_kernel": [
+            [
+              981243,
+              532961,
+              485803
+            ],
+            [
+              591036,
+              915473,
+              493498
+            ],
+            [
+              204248,
+              575712,
+              220044
+            ]
+          ],
+          "w": [
+            363635,
+            545456,
+            90912
+          ],
+          "commutator_matrix": [
+            [
+              443943,
+              366219,
+              189841
+            ],
+            [
+              606874,
+              637548,
+              755584
+            ],
+            [
+              528293,
+              553198,
+              918515
+            ]
+          ],
+          "left_difference": [
+            550096,
+            378030,
+            71877
+          ],
+          "right_commutator": [
+            550096,
+            378030,
+            71877
+          ]
+        },
+        "commutator_pair_coordinate_matrix_sha256": "a49e7bfeebf402bb8f56ae6e66e88fca3662f14ddd2bb1e68272d8bcc4155da7",
+        "T13_ambient_node_checks": 54,
+        "nonzero_ambient_node_commutators": 54,
+        "scope": "T12 is checked on actual marked-seed pair data and the nodewise coordinate-transfer map. The normalized ambient lifts themselves are not constructed."
+      },
+      "elapsed_seconds": 0.26687266600000004
+    }
+  ]
+}

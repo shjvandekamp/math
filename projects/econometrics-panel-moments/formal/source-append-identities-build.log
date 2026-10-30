@@ -1,0 +1,21 @@
+PanelMoments/SourceAppendIdentities.lean:82:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+       19.38 real         2.29 user         3.10 sys
+          1802436608  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               84492  page reclaims
+              104961  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               16586  voluntary context switches
+               95537  involuntary context switches
+         28083724772  instructions retired
+         15957979889  cycles elapsed
+           364313216  peak memory footprint

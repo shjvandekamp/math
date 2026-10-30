@@ -1,0 +1,871 @@
+{
+  "status": "PASS: exact symbolic expansion; no discrepancy in p or determinant coefficient.",
+  "ring": "Q[kappa,B][epsilon]/(epsilon^4); encoded first_power is the power of kappa.",
+  "substitutions": {
+    "A": "4^m",
+    "B": "3^m",
+    "kappa": "3A/[4(A-1)]",
+    "A_over_t": "4*kappa"
+  },
+  "curves": [
+    {
+      "curve": "(1+epsilon,1,1)",
+      "matrix_epsilon_coefficients": [
+        [
+          [
+            [],
+            [],
+            [],
+            []
+          ],
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -8,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 4,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -8,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 3,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -3,
+                "denominator": 4
+              }
+            ]
+          ],
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -8,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 4,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -8,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 3,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -3,
+                "denominator": 4
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -4,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 6
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 11,
+                "denominator": 6
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 8,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 12
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -43,
+                "denominator": 12
+              }
+            ]
+          ],
+          [
+            [],
+            [],
+            [],
+            []
+          ],
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 12
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -13,
+                "denominator": 12
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 48
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -17,
+                "denominator": 16
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -4,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 6
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 11,
+                "denominator": 6
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 8,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 12
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -43,
+                "denominator": 12
+              }
+            ]
+          ],
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 12
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -13,
+                "denominator": 12
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 48
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -17,
+                "denominator": 16
+              }
+            ]
+          ],
+          [
+            [],
+            [],
+            [],
+            []
+          ]
+        ]
+      ],
+      "determinant_coefficients": [
+        [],
+        [],
+        [],
+        [
+          {
+            "first_power": 0,
+            "B_power": 3,
+            "numerator": -64,
+            "denominator": 27
+          },
+          {
+            "first_power": 1,
+            "B_power": 3,
+            "numerator": 32,
+            "denominator": 3
+          },
+          {
+            "first_power": 2,
+            "B_power": 1,
+            "numerator": 16,
+            "denominator": 27
+          },
+          {
+            "first_power": 2,
+            "B_power": 3,
+            "numerator": -16,
+            "denominator": 1
+          },
+          {
+            "first_power": 3,
+            "B_power": 1,
+            "numerator": -8,
+            "denominator": 9
+          },
+          {
+            "first_power": 3,
+            "B_power": 3,
+            "numerator": 8,
+            "denominator": 1
+          }
+        ]
+      ],
+      "claimed_first_matrix_verified": true,
+      "claimed_determinant_coefficient_verified": true
+    },
+    {
+      "curve": "(1+epsilon,1+epsilon^2,1+2epsilon^2)",
+      "matrix_epsilon_coefficients": [
+        [
+          [
+            [],
+            [],
+            [],
+            []
+          ],
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -8,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 4,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 4,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -3,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 8,
+                "denominator": 1
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 7,
+                "denominator": 6
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -119,
+                "denominator": 12
+              }
+            ]
+          ],
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -8,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 4,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 4,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -3,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 16,
+                "denominator": 1
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -7,
+                "denominator": 6
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -259,
+                "denominator": 12
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -4,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 5,
+                "denominator": 6
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 11,
+                "denominator": 6
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 14,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 6
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -13,
+                "denominator": 2
+              }
+            ]
+          ],
+          [
+            [],
+            [],
+            [],
+            []
+          ],
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -3,
+                "denominator": 4
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -13,
+                "denominator": 12
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -4,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -9,
+                "denominator": 16
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 89,
+                "denominator": 48
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -10,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 2
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 29,
+                "denominator": 6
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 20,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -26,
+                "denominator": 3
+              }
+            ]
+          ],
+          [
+            [],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": 2,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 1,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": -1,
+                "denominator": 1
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -4,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": -5,
+                "denominator": 12
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 23,
+                "denominator": 12
+              }
+            ],
+            [
+              {
+                "first_power": 0,
+                "B_power": 1,
+                "numerator": -10,
+                "denominator": 3
+              },
+              {
+                "first_power": 1,
+                "B_power": 0,
+                "numerator": 5,
+                "denominator": 48
+              },
+              {
+                "first_power": 1,
+                "B_power": 1,
+                "numerator": 265,
+                "denominator": 48
+              }
+            ]
+          ],
+          [
+            [],
+            [],
+            [],
+            []
+          ]
+        ]
+      ],
+      "determinant_coefficients": [
+        [],
+        [],
+        [],
+        [
+          {
+            "first_power": 0,
+            "B_power": 3,
+            "numerator": -64,
+            "denominator": 27
+          },
+          {
+            "first_power": 1,
+            "B_power": 3,
+            "numerator": 32,
+            "denominator": 3
+          },
+          {
+            "first_power": 2,
+            "B_power": 1,
+            "numerator": 16,
+            "denominator": 27
+          },
+          {
+            "first_power": 2,
+            "B_power": 3,
+            "numerator": -16,
+            "denominator": 1
+          },
+          {
+            "first_power": 3,
+            "B_power": 1,
+            "numerator": -8,
+            "denominator": 9
+          },
+          {
+            "first_power": 3,
+            "B_power": 3,
+            "numerator": 8,
+            "denominator": 1
+          }
+        ]
+      ],
+      "claimed_first_matrix_verified": true,
+      "claimed_determinant_coefficient_verified": true
+    }
+  ],
+  "second_coefficients_differ": true,
+  "rational_factors": {
+    "p": "B(A+8)/[4(A-1)]",
+    "ell": "[3A-(A+8)B]/[8(A-1)]",
+    "d": "[-3A-(A+8)B]/[8(A-1)]",
+    "determinant": "B(A+8)[(A+8)^2 B^2-9A^2]/[216(A-1)^3]"
+  },
+  "nonvanishing_argument": "For m>=1, A>=4 and B>=3. Thus p>0, ell<0, d<0: (A+8)B>=3A+24>3A. The displayed determinant coefficient is positive.",
+  "limitations": "Exact algebra of the supplied closed formula only. No actual-source limit identification or uniform source independence is established here.",
+  "elapsed_seconds": 0.031957124999999996,
+  "maximum_rss_bytes": 13778944,
+  "resource_limits": {
+    "seconds": 28,
+    "maximum_rss_bytes": 99614720
+  }
+}

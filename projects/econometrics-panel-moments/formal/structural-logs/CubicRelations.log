@@ -1,0 +1,21 @@
+PanelMoments/CubicRelations.lean:176:28: warning: This simp argument is unused:
+  smul_mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cubicCombination, Finset.smul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PanelMoments/CubicRelations.lean:197:10: warning: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PanelMoments/CubicRelations.lean:280:4: warning: This simp argument is unused:
+  nsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Module.finrank_pi_fintype, HomogeneousInterpolation.finrank_homogeneous]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

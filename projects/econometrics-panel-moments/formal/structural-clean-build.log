@@ -1,0 +1,185 @@
+Checking PanelMoments.Model
+Checking PanelMoments.Polynomial
+Checking PanelMoments.Economic
+Checking PanelMoments.Geometry
+Checking PanelMoments.Genericity
+Checking PanelMoments.BasisCertificate
+PanelMoments/BasisCertificate.lean:70:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Checking PanelMoments.HomogeneousInterpolation
+Checking PanelMoments.QuadraticSeparators
+Checking PanelMoments.GlobalInterpolation
+Checking PanelMoments.GeneralGeometry
+Checking PanelMoments.LinearFormAlgebra
+PanelMoments/LinearFormAlgebra.lean:45:50: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/LinearFormAlgebra.lean:99:2: warning: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PanelMoments/LinearFormAlgebra.lean:105:2: warning: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PanelMoments/LinearFormAlgebra.lean:130:2: warning: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+PanelMoments/LinearFormAlgebra.lean:136:2: warning: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Checking PanelMoments.CoordinateSyzygies
+Checking PanelMoments.CubicRelations
+PanelMoments/CubicRelations.lean:176:28: warning: This simp argument is unused:
+  smul_mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [cubicCombination, Finset.smul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PanelMoments/CubicRelations.lean:197:10: warning: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PanelMoments/CubicRelations.lean:280:4: warning: This simp argument is unused:
+  nsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Module.finrank_pi_fintype, HomogeneousInterpolation.finrank_homogeneous]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Checking PanelMoments.CubicIdeal
+Checking PanelMoments.PointSyzygies
+PanelMoments/PointSyzygies.lean:36:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/PointSyzygies.lean:37:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/PointSyzygies.lean:41:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/PointSyzygies.lean:47:28: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/PointSyzygies.lean:59:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/PointSyzygies.lean:60:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Checking PanelMoments.HomogeneousEvaluation
+PanelMoments/HomogeneousEvaluation.lean:76:6: warning: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Pi.smul_apply, smul_eq_mul, div_eq_mul_inv, hx, mul_left_comm, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PanelMoments/HomogeneousEvaluation.lean:76:31: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Pi.smul_apply, smul_eq_mul, div_eq_mul_inv, hx, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Checking PanelMoments.GeneralConicWitness
+PanelMoments/GeneralConicWitness.lean:67:11: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PanelMoments/GeneralConicWitness.lean:67:13: warning: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Checking PanelMoments.HomogeneousLikelihood
+PanelMoments/HomogeneousLikelihood.lean:75:42: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Checking PanelMoments.BlockExtension
+PanelMoments/BlockExtension.lean:103:78: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Checking PanelMoments.CubicProducts
+PanelMoments/CubicProducts.lean:56:64: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PanelMoments/CubicProducts.lean:221:37: warning: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PanelMoments/CubicProducts.lean:232:39: warning: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PanelMoments/CubicProducts.lean:221:37: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+PanelMoments/CubicProducts.lean:232:39: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Checking PanelMoments.EconomicFamily
+Checking PanelMoments.StructuralGenericity
+PanelMoments/StructuralGenericity.lean:306:11: warning: Variable name `r` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _r
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PanelMoments/StructuralGenericity.lean:306:13: warning: Variable name `s` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _s
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Checking PanelMoments.StructuralMoments
+Checking PanelMoments.StructuralCompleteness
+PanelMoments.StructuralCompleteness.three_choice_generic_moment_dimension (T : ℕ) (hT : 1 ≤ T) :
+  (PanelMoments.StructuralGenericity.genericRegion T).Nonempty ∧
+    IsOpen (PanelMoments.StructuralGenericity.genericRegion T) ∧
+      Dense (PanelMoments.StructuralGenericity.genericRegion T) ∧
+        ∀ θ ∈ PanelMoments.StructuralGenericity.genericRegion T,
+          ∀ (r : PanelMoments.State 2),
+            Module.finrank ℝ ↥(PanelMoments.momentSubmodule (PanelMoments.EconomicFamily.parameterTable θ) T r) =
+              3 ^ T + 6 * (T - 1) - (3 * T).choose 2
+PanelMoments.StructuralCompleteness.economic_moment_dimension_add_choose {T : ℕ} (hT : 1 ≤ T)
+  {θ : PanelMoments.EconomicFamily.EconomicParameter T} (hθ : θ ∈ PanelMoments.StructuralGenericity.genericRegion T)
+  (r : PanelMoments.State 2) :
+  Module.finrank ℝ ↥(PanelMoments.momentSubmodule (PanelMoments.EconomicFamily.parameterTable θ) T r) +
+      (3 * T).choose 2 =
+    3 ^ T + 6 * (T - 1)
+PanelMoments.StructuralCompleteness.four_period_moment_dimension {θ : PanelMoments.EconomicFamily.EconomicParameter 4}
+  (hθ : θ ∈ PanelMoments.StructuralGenericity.genericRegion 4) (r : PanelMoments.State 2) :
+  Module.finrank ℝ ↥(PanelMoments.momentSubmodule (PanelMoments.EconomicFamily.parameterTable θ) 4 r) = 33
+'PanelMoments.StructuralCompleteness.three_choice_generic_moment_dimension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralCompleteness.economic_moment_dimension_add_choose' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralCompleteness.four_period_moment_dimension' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralGenericity.exceptionalProduct_witness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralGenericity.genericRegion_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.CubicProducts.productSpan_eq_vanishingSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.CubicProducts.finrank_productSpan_add_six_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.StructuralMoments.momentSubmodule_eq_ker' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.StructuralMoments.restrictionMap_range_eq_productSpan' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.StructuralMoments.finrank_moment_add_choose' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PanelMoments.HomogeneousLikelihood.isMoment_iff_homogeneousMoment_eq_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'PanelMoments.HomogeneousEvaluation.dehomogenizeLinear_injective' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Structural theorem and 11 audited dependencies use only permitted foundational axioms.
+Serial structural source verification completed.

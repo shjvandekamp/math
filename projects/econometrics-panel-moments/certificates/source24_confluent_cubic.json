@@ -1,0 +1,143 @@
+{
+  "status": "passed",
+  "scope": "ordinary actual-source cubic minor, not paired-eliminated",
+  "curve": {
+    "u": "1+t",
+    "v": "1+t^2",
+    "G": "I+11^T",
+    "X": "(x,1,1)"
+  },
+  "exact_checks": 54,
+  "checks": [
+    "actual first Taylor coefficient 0,0",
+    "actual second Taylor coefficient 0,0",
+    "actual first Taylor coefficient 0,1",
+    "actual second Taylor coefficient 0,1",
+    "actual first Taylor coefficient 0,2",
+    "actual second Taylor coefficient 0,2",
+    "actual first Taylor coefficient 1,0",
+    "actual second Taylor coefficient 1,0",
+    "actual first Taylor coefficient 1,1",
+    "actual second Taylor coefficient 1,1",
+    "actual first Taylor coefficient 1,2",
+    "actual second Taylor coefficient 1,2",
+    "actual first Taylor coefficient 2,0",
+    "actual second Taylor coefficient 2,0",
+    "actual first Taylor coefficient 2,1",
+    "actual second Taylor coefficient 2,1",
+    "actual first Taylor coefficient 2,2",
+    "actual second Taylor coefficient 2,2",
+    "cubic row value 0,0",
+    "cubic row derivative 0,0",
+    "cubic row value 0,1",
+    "cubic row derivative 0,1",
+    "cubic row value 0,2",
+    "cubic row derivative 0,2",
+    "cubic row sum 0",
+    "cubic derivative row sum 0",
+    "cubic row value 1,0",
+    "cubic row derivative 1,0",
+    "cubic row value 1,1",
+    "cubic row derivative 1,1",
+    "cubic row value 1,2",
+    "cubic row derivative 1,2",
+    "cubic row sum 1",
+    "cubic derivative row sum 1",
+    "cubic row value 2,0",
+    "cubic row derivative 2,0",
+    "cubic row value 2,1",
+    "cubic row derivative 2,1",
+    "cubic row value 2,2",
+    "cubic row derivative 2,2",
+    "cubic row sum 2",
+    "cubic derivative row sum 2",
+    "ordinary cubic observation determinant",
+    "source cubic determinant coefficient at q=3",
+    "actual new empty-source observation 0,0",
+    "actual new empty-source observation 0,1",
+    "actual new empty-source observation 0,2",
+    "actual new empty-source observation 1,0",
+    "actual new empty-source observation 1,1",
+    "actual new empty-source observation 1,2",
+    "actual new empty-source observation 2,0",
+    "actual new empty-source observation 2,1",
+    "actual new empty-source observation 2,2",
+    "new empty-source observation determinant"
+  ],
+  "Y": [
+    [
+      "3/2048",
+      "-13/4096",
+      "7/4096"
+    ],
+    [
+      "7/4096",
+      "-3/1024",
+      "5/4096"
+    ],
+    [
+      "5/4096",
+      "-11/4096",
+      "3/2048"
+    ]
+  ],
+  "Y_derivative": [
+    [
+      "15/8192",
+      "-261/65536",
+      "141/65536"
+    ],
+    [
+      "29/65536",
+      "-1/1024",
+      "35/65536"
+    ],
+    [
+      "23/65536",
+      "-63/65536",
+      "5/8192"
+    ]
+  ],
+  "observation_matrix": [
+    [
+      "-13/4096",
+      "-3/1024",
+      "-11/4096"
+    ],
+    [
+      "7/4096",
+      "5/4096",
+      "3/2048"
+    ],
+    [
+      "-261/65536",
+      "-1/1024",
+      "-63/65536"
+    ]
+  ],
+  "observation_determinant": "397/137438953472",
+  "source_coefficient_q3": "-397/17179869184",
+  "new_empty_source_observation_matrix": [
+    [
+      "-1/4",
+      "1/2",
+      "-1/4"
+    ],
+    [
+      "-1/4",
+      "-1/4",
+      "1/2"
+    ],
+    [
+      "-1/8",
+      "1/8",
+      "1/16"
+    ]
+  ],
+  "new_empty_source_observation_determinant": "3/256",
+  "quotient_observation_obstruction": "These observations are already onto on actual new empty sources; no nonzero linear combination annihilates that subspace.",
+  "all_length_tail_factor": "4^(-3*(q-3)); justified separately by zero-sum row action",
+  "elapsed_seconds": 0.005281000000000008,
+  "max_rss_bytes": 15548416,
+  "source_sha256": "b123a734539989e3d2e546b84a810c57941b02ece6769719bc26a1d4c33d05bf"
+}
