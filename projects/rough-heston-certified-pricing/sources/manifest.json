@@ -1,0 +1,69 @@
+[
+  {
+    "file": "2609.00438v1.html",
+    "url": "https://arxiv.org/html/2609.00438v1",
+    "retrieved_date": "2026-10-15",
+    "sha256": "0a41559a1edcf45871eb1d3a6c1510eba7c227ed0f51da7ed826c38f8cc3d02f",
+    "bytes": 1517638
+  },
+  {
+    "file": "1609.02108v1.html",
+    "url": "https://arxiv.org/html/1609.02108v1",
+    "retrieved_date": "2026-10-15",
+    "sha256": "f6b10ecc8d4c04de2ea73bbf160e739d0263f80a93b0c2d6b34714859994dfcb",
+    "bytes": 883606
+  },
+  {
+    "file": "2508.15080v3.html",
+    "url": "https://arxiv.org/html/2508.15080v3",
+    "retrieved_date": "2026-10-15",
+    "sha256": "2560cf2edf90e990b28a97110a95a5901bf1e990ea605075b6852a309918a5e1",
+    "bytes": 1181435
+  },
+  {
+    "file": "1801.09458.html",
+    "url": "https://arxiv.org/html/1801.09458",
+    "retrieved_date": "2026-10-15",
+    "sha256": "d12ea3f133fc3974865ba0cc23e100612c6a5c0aa91cdfffebee2318d7d255d2",
+    "bytes": 736494
+  },
+  {
+    "file": "2309.07023.pdf",
+    "url": "https://arxiv.org/pdf/2309.07023",
+    "retrieved_date": "2026-10-15",
+    "sha256": "5f9c35e03f55bdcfd3d7c4df4d66620ee17f50f4585babe0a2e5fea04da40d9d",
+    "bytes": 972486
+  },
+  {
+    "file": "mathfin-SDEExistence.lean",
+    "url": "https://raw.githubusercontent.com/formal-applied-math/formal-mathfin/f1a3f3779bb4468af255594dbf270ae91cece443/MathFin/Foundations/SDEExistence.lean",
+    "retrieved_date": "2026-10-15",
+    "sha256": "998aaba90df96202a862be092ae2c38fdb8e222b114f069f80ca75f764162d82",
+    "bytes": 11288,
+    "role": "read_only_infrastructure_audit_not_a_proof_dependency"
+  },
+  {
+    "file": "mathfin-ItoLemma2D.lean",
+    "url": "https://raw.githubusercontent.com/formal-applied-math/formal-mathfin/f1a3f3779bb4468af255594dbf270ae91cece443/MathFin/Foundations/ItoLemma2D.lean",
+    "retrieved_date": "2026-10-15",
+    "sha256": "fdd039c179814e7bdba1253029dd849820b434a60a4d0f1135b8d27313a28d79",
+    "bytes": 9703,
+    "role": "read_only_infrastructure_audit_not_a_proof_dependency"
+  },
+  {
+    "file": "mathfin-lean-toolchain",
+    "url": "https://raw.githubusercontent.com/formal-applied-math/formal-mathfin/f1a3f3779bb4468af255594dbf270ae91cece443/lean-toolchain",
+    "retrieved_date": "2026-10-15",
+    "sha256": "62c2d9c0fc1ec4c67e151c11eff41ca004ef38e179cf9476c230406e6defedef",
+    "bytes": 29,
+    "role": "read_only_infrastructure_audit_not_a_proof_dependency"
+  },
+  {
+    "file": "mathfin-lake-manifest.json",
+    "url": "https://raw.githubusercontent.com/formal-applied-math/formal-mathfin/f1a3f3779bb4468af255594dbf270ae91cece443/lake-manifest.json",
+    "retrieved_date": "2026-10-15",
+    "sha256": "39890c571e66ee2ce5978e4ab454f602eb8d620ef8008ba0402b4c8671b077a9",
+    "bytes": 4781,
+    "role": "read_only_infrastructure_audit_not_a_proof_dependency"
+  }
+]
